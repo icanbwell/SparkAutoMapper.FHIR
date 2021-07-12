@@ -1,19 +1,10 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.fhir_types.fhir_reference import FhirReference
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
@@ -22,15 +13,21 @@ if TYPE_CHECKING:
     # id_ (string)
     # extension (Extension)
     from spark_auto_mapper_fhir.complex_types.extension import Extension
-    # name (code)
-    from spark_auto_mapper_fhir.complex_types.code import code
+
+    # name (generic_type)
+    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
     # use (OperationParameterUse)
-    from spark_auto_mapper_fhir.value_sets.operation_parameter_use import OperationParameterUseCode
+    from spark_auto_mapper_fhir.value_sets.operation_parameter_use import (
+        OperationParameterUseCode,
+    )
+
     # min (integer)
     # max (string)
     # documentation (string)
     # type_ (FHIRAllTypes)
     from spark_auto_mapper_fhir.value_sets.fhir_all_types import FHIRAllTypesCode
+
     # profile (canonical)
     from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
@@ -44,45 +41,46 @@ class ParameterDefinition(FhirComplexTypeBase):
         The parameters to the module. This collection specifies both the input and output parameters. Input parameters are provided by the caller as part of the $evaluate operation. Output parameters are included in the GuidanceResponse.
         If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
-        id_: Optional[FhirString ] = None,
-        extension: Optional[FhirList[Extension ]] = None,
-        name: Optional[code ] = None,
-        use: OperationParameterUseCode ,
-        min: Optional[FhirInteger ] = None,
-        max: Optional[FhirString ] = None,
-        documentation: Optional[FhirString ] = None,
-        type_: FHIRAllTypesCode ,
-        profile: Optional[FhirCanonical ] = None,
+        id_: Optional[FhirString] = None,
+        extension: Optional[FhirList[Extension]] = None,
+        name: Optional[GenericTypeCode] = None,
+        use: OperationParameterUseCode,
+        min: Optional[FhirInteger] = None,
+        max: Optional[FhirString] = None,
+        documentation: Optional[FhirString] = None,
+        type_: FHIRAllTypesCode,
+        profile: Optional[FhirCanonical] = None,
     ) -> None:
         """
-        The parameters to the module. This collection specifies both the input and
-    output parameters. Input parameters are provided by the caller as part of the
-    $evaluate operation. Output parameters are included in the GuidanceResponse.
-        If the element is present, it must have a value for at least one of the
-    defined elements, an @id referenced from the Narrative, or extensions
+            The parameters to the module. This collection specifies both the input and
+        output parameters. Input parameters are provided by the caller as part of the
+        $evaluate operation. Output parameters are included in the GuidanceResponse.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
-        :param id_: None
-        :param extension: May be used to represent additional information that is not part of the basic
-    definition of the element. To make the use of extensions safe and manageable,
-    there is a strict set of governance  applied to the definition and use of
-    extensions. Though any implementer can define an extension, there is a set of
-    requirements that SHALL be met as part of the definition of the extension.
-        :param name: The name of the parameter used to allow access to the value of the parameter
-    in evaluation contexts.
-        :param use: Whether the parameter is input or output for the module.
-        :param min: The minimum number of times this parameter SHALL appear in the request or
-    response.
-        :param max: The maximum number of times this element is permitted to appear in the request
-    or response.
-        :param documentation: A brief discussion of what the parameter is for and how it is used by the
-    module.
-        :param type_: The type of the parameter.
-        :param profile: If specified, this indicates a profile that the input data must conform to, or
-    that the output data will conform to.
+            :param id_: None
+            :param extension: May be used to represent additional information that is not part of the basic
+        definition of the element. To make the use of extensions safe and manageable,
+        there is a strict set of governance  applied to the definition and use of
+        extensions. Though any implementer can define an extension, there is a set of
+        requirements that SHALL be met as part of the definition of the extension.
+            :param name: The name of the parameter used to allow access to the value of the parameter
+        in evaluation contexts.
+            :param use: Whether the parameter is input or output for the module.
+            :param min: The minimum number of times this parameter SHALL appear in the request or
+        response.
+            :param max: The maximum number of times this element is permitted to appear in the request
+        or response.
+            :param documentation: A brief discussion of what the parameter is for and how it is used by the
+        module.
+            :param type_: The type of the parameter.
+            :param profile: If specified, this indicates a profile that the input data must conform to, or
+        that the output data will conform to.
         """
         super().__init__(
             id_=id_,

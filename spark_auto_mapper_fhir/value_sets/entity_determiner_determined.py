@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -26,13 +16,16 @@ class EntityDeterminerDetermined(GenericTypeCode):
     as a general description of a kind of thing that can be taken in whole, in
     part, or in multiples.
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     """
     http://terminology.hl7.org/ValueSet/v3-EntityDeterminerDetermined
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-EntityDeterminerDetermined"
+    codeset: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-EntityDeterminerDetermined"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-EntityDeterminer
     """
@@ -44,14 +37,15 @@ class EntityDeterminerDeterminedValues:
     Description:A determiner that specifies that the Entity object represents a
     particular physical thing (as opposed to a universal, kind, or class of
     physical thing).
-    
-    
+
+
                                Discussion: It does not matter whether an INSTANCE
     still exists as a whole at the point in time (or process) when we mention it,
     for example, a drug product lot is an INSTANCE even though it has been
     portioned out for retail purpose.
     From: http://terminology.hl7.org/CodeSystem/v3-EntityDeterminer in v3-codesystems.xml
     """
+
     Specific = EntityDeterminerDetermined("INSTANCE")
     """
     Description:A determiner that specifies that the Entity object represents a

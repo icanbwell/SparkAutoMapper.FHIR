@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -25,6 +15,7 @@ class DICOMControlledTerminologyDefinitionsCode(GenericTypeCode):
         DICOM Code Definitions (Coding Scheme Designator "DCM" Coding Scheme Version
     "01")
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -39,6 +30,7 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Archive device
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
+
     Archive = DICOMControlledTerminologyDefinitionsCode("ARCHIVE")
     """
     Autorefraction device
@@ -75,7 +67,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Computer Assisted Detection/Diagnosis device
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ComputerAssistedDetection_Diagnosis = DICOMControlledTerminologyDefinitionsCode("CAD")
+    ComputerAssistedDetection_Diagnosis = DICOMControlledTerminologyDefinitionsCode(
+        "CAD"
+    )
     """
     Image Capture Device, includes video capture
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -236,7 +230,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     coherence tomography
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    IntravascularOpticalCoherenceTomography = DICOMControlledTerminologyDefinitionsCode("IVOCT")
+    IntravascularOpticalCoherenceTomography = DICOMControlledTerminologyDefinitionsCode(
+        "IVOCT"
+    )
     """
     Intravascular Ultrasound device
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -484,7 +480,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Single-photon emission computed tomography (SPECT) device
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Single_photonEmissionComputedTomography = DICOMControlledTerminologyDefinitionsCode("ST")
+    Single_photonEmissionComputedTomography = DICOMControlledTerminologyDefinitionsCode(
+        "ST"
+    )
     """
     Thermography device
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -545,7 +543,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     A signal that is generated for each detection of a heart beat
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ECG_basedGatingSignal_Processed = DICOMControlledTerminologyDefinitionsCode("109002")
+    ECG_basedGatingSignal_Processed = DICOMControlledTerminologyDefinitionsCode(
+        "109002"
+    )
     """
     A signal transmitted by the Inter-Range Instrumentation Group for the purpose
     of synchronizing time clocks
@@ -583,7 +583,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     The voltage stimulus during cardiac pacing
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Pacing_electrical_Stimulus_Voltage = DICOMControlledTerminologyDefinitionsCode("109009")
+    Pacing_electrical_Stimulus_Voltage = DICOMControlledTerminologyDefinitionsCode(
+        "109009"
+    )
     """
     The power injected during RF ablation procedure
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -594,12 +596,16 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     equipped with multiple electrodes
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VoltageMeasurementByBasketCatheter = DICOMControlledTerminologyDefinitionsCode("109011")
+    VoltageMeasurementByBasketCatheter = DICOMControlledTerminologyDefinitionsCode(
+        "109011"
+    )
     """
     Electrophysiological signals acquired using a steerable catheter
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VoltageMeasurementByMappingCatheter = DICOMControlledTerminologyDefinitionsCode("109012")
+    VoltageMeasurementByMappingCatheter = DICOMControlledTerminologyDefinitionsCode(
+        "109012"
+    )
     """
     A voltage measurement not otherwise specified
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -681,7 +687,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     measurement
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PeakOfThermalCardiacOutputBolus = DICOMControlledTerminologyDefinitionsCode("109028")
+    PeakOfThermalCardiacOutputBolus = DICOMControlledTerminologyDefinitionsCode(
+        "109028"
+    )
     """
     The moment respiratory expiration begins
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -697,7 +705,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     a thermal cardiac output measurement
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    StartOfThermalCardiacOutputBolus = DICOMControlledTerminologyDefinitionsCode("109031")
+    StartOfThermalCardiacOutputBolus = DICOMControlledTerminologyDefinitionsCode(
+        "109031"
+    )
     """
     The average of several systolic blood pressure measurements
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -775,7 +785,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     The beginning of the second atrial contraction of two consecutive beats
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    StartOfAtrialContraction_subsequent_ = DICOMControlledTerminologyDefinitionsCode("109046")
+    StartOfAtrialContraction_subsequent_ = DICOMControlledTerminologyDefinitionsCode(
+        "109046"
+    )
     """
     The stimulation interval during cardiac stimulation first used in a pacing
     train
@@ -984,7 +996,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     integrity
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    EnhancedMulti_frameConversionEquipment = DICOMControlledTerminologyDefinitionsCode("109106")
+    EnhancedMulti_frameConversionEquipment = DICOMControlledTerminologyDefinitionsCode(
+        "109106"
+    )
     """
     The sound of a human's speech, recorded during a procedure
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -1128,7 +1142,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Canadian Border Collie Association
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    CanadianBorderCollieAssociation = DICOMControlledTerminologyDefinitionsCode("109207")
+    CanadianBorderCollieAssociation = DICOMControlledTerminologyDefinitionsCode(
+        "109207"
+    )
     """
     Canadian Kennel Club
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -1138,7 +1154,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Canadian Livestock Records Association
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    CanadianLivestockRecordsAssociation = DICOMControlledTerminologyDefinitionsCode("109209")
+    CanadianLivestockRecordsAssociation = DICOMControlledTerminologyDefinitionsCode(
+        "109209"
+    )
     """
     Canine Federation of Canada
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -1158,12 +1176,16 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Federation of International Canines
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    FederationOfInternationalCanines = DICOMControlledTerminologyDefinitionsCode("109213")
+    FederationOfInternationalCanines = DICOMControlledTerminologyDefinitionsCode(
+        "109213"
+    )
     """
     International Progressive Dog Breeders' Alliance
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    InternationalProgressiveDogBreeders_Alliance = DICOMControlledTerminologyDefinitionsCode("109214")
+    InternationalProgressiveDogBreeders_Alliance = (
+        DICOMControlledTerminologyDefinitionsCode("109214")
+    )
     """
     National Kennel Club
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -1173,7 +1195,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     North American Purebred Dog Registry
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    NorthAmericanPurebredDogRegistry = DICOMControlledTerminologyDefinitionsCode("109216")
+    NorthAmericanPurebredDogRegistry = DICOMControlledTerminologyDefinitionsCode(
+        "109216"
+    )
     """
     United All Breed Registry
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -1188,12 +1212,16 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Universal Kennel Club International
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    UniversalKennelClubInternational = DICOMControlledTerminologyDefinitionsCode("109219")
+    UniversalKennelClubInternational = DICOMControlledTerminologyDefinitionsCode(
+        "109219"
+    )
     """
     Working Canine Association of Canada
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    WorkingCanineAssociationOfCanada = DICOMControlledTerminologyDefinitionsCode("109220")
+    WorkingCanineAssociationOfCanada = DICOMControlledTerminologyDefinitionsCode(
+        "109220"
+    )
     """
     World Kennel Club
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -2152,7 +2180,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Audit event: Storage of DICOM Instances has begun
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    BeginTransferringDICOMInstances = DICOMControlledTerminologyDefinitionsCode("110102")
+    BeginTransferringDICOMInstances = DICOMControlledTerminologyDefinitionsCode(
+        "110102"
+    )
     """
     Audit event: DICOM Instances have been created, read, updated, or deleted
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -2292,7 +2322,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Audit event: Security attributes of an object have been changed
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ObjectSecurityAttributesChanged = DICOMControlledTerminologyDefinitionsCode("110135")
+    ObjectSecurityAttributesChanged = DICOMControlledTerminologyDefinitionsCode(
+        "110135"
+    )
     """
     Audit event: Security roles have been changed
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -2401,7 +2433,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     reaction)
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PatientAllergicToMedia_contrast = DICOMControlledTerminologyDefinitionsCode("110503")
+    PatientAllergicToMedia_contrast = DICOMControlledTerminologyDefinitionsCode(
+        "110503"
+    )
     """
     Procedure discontinued due to death of Patient
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -2411,12 +2445,16 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Procedure discontinued due to patient refusal to continue procedure
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PatientRefusedToContinueProcedure = DICOMControlledTerminologyDefinitionsCode("110505")
+    PatientRefusedToContinueProcedure = DICOMControlledTerminologyDefinitionsCode(
+        "110505"
+    )
     """
     Procedure discontinued due to patient being taken for treatment or surgery
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PatientTakenForTreatmentOrSurgery = DICOMControlledTerminologyDefinitionsCode("110506")
+    PatientTakenForTreatmentOrSurgery = DICOMControlledTerminologyDefinitionsCode(
+        "110506"
+    )
     """
     Patient did not arrive for procedure
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -2431,7 +2469,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Procedure discontinued to restart with new procedure code for correct charging
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ChangeOfProcedureForCorrectCharging = DICOMControlledTerminologyDefinitionsCode("110509")
+    ChangeOfProcedureForCorrectCharging = DICOMControlledTerminologyDefinitionsCode(
+        "110509"
+    )
     """
     Procedure discontinued due to duplicate orders received for same procedure
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -2451,7 +2491,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Procedure discontinued for unspecified reason
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    DiscontinuedForUnspecifiedReason = DICOMControlledTerminologyDefinitionsCode("110513")
+    DiscontinuedForUnspecifiedReason = DICOMControlledTerminologyDefinitionsCode(
+        "110513"
+    )
     """
     Procedure discontinued due to incorrect patient or procedure step selected
     from modality worklist
@@ -2462,7 +2504,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Patient condition prevented continuation of procedure
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PatientConditionPreventedContinuing = DICOMControlledTerminologyDefinitionsCode("110515")
+    PatientConditionPreventedContinuing = DICOMControlledTerminologyDefinitionsCode(
+        "110515"
+    )
     """
     Procedure step is discontinued to change to other equipment or modality
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -2515,13 +2559,17 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Step
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    DiscontinuedProcedureStepRescheduled = DICOMControlledTerminologyDefinitionsCode("110528")
+    DiscontinuedProcedureStepRescheduled = DICOMControlledTerminologyDefinitionsCode(
+        "110528"
+    )
     """
     It is recommended that a new Procedure Step be scheduled to replace the
     Discontinued Procedure Step
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    DiscontinuedProcedureStepReschedulingRecommended = DICOMControlledTerminologyDefinitionsCode("110529")
+    DiscontinuedProcedureStepReschedulingRecommended = (
+        DICOMControlledTerminologyDefinitionsCode("110529")
+    )
     """
     Ventral structures of the diencephalon that cannot readily be distinguished on
     MR imaging, including the hypothalamus, mammillary body, subthalamic nuclei,
@@ -2558,7 +2606,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Cerebral Cortex 15, no. 6 (June 1, 2005): 854-69. doi:10.1093/cercor/bhh186
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    SuperiorLongitudinalFasciculusI = DICOMControlledTerminologyDefinitionsCode("110703")
+    SuperiorLongitudinalFasciculusI = DICOMControlledTerminologyDefinitionsCode(
+        "110703"
+    )
     """
     The major component of the SLF, derived from the caudal-inferior parietal
     region corresponding to the angular gyrus in the human and terminating within
@@ -2568,7 +2618,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     2005): 854-69. doi:10.1093/cercor/bhh186
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    SuperiorLongitudinalFasciculusII = DICOMControlledTerminologyDefinitionsCode("110704")
+    SuperiorLongitudinalFasciculusII = DICOMControlledTerminologyDefinitionsCode(
+        "110704"
+    )
     """
     The ventral component of the SLF, originating from the supramarginal gyrus and
     terminating predominantly in the ventral premotor and prefrontal areas. See
@@ -2577,7 +2629,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Cerebral Cortex 15, no. 6 (June 1, 2005): 854-69. doi:10.1093/cercor/bhh186
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    SuperiorLongitudinalFasciculusIII = DICOMControlledTerminologyDefinitionsCode("110705")
+    SuperiorLongitudinalFasciculusIII = DICOMControlledTerminologyDefinitionsCode(
+        "110705"
+    )
     """
     White matter that surrounds a lesion of interest; e.g. to identify the
     otherwise unclassified white matter that surrounds a tumor to be surgically
@@ -2591,12 +2645,16 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     labeled arterial blood water as an endogenous tracer
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    SpinTaggingPerfusionMRSignalIntensity = DICOMControlledTerminologyDefinitionsCode("110800")
+    SpinTaggingPerfusionMRSignalIntensity = DICOMControlledTerminologyDefinitionsCode(
+        "110800"
+    )
     """
     Signal intensity of a Contrast Agent Angio MR image
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ContrastAgentAngioMRSignalIntensity = DICOMControlledTerminologyDefinitionsCode("110801")
+    ContrastAgentAngioMRSignalIntensity = DICOMControlledTerminologyDefinitionsCode(
+        "110801"
+    )
     """
     Signal intensity of a Time-of-flight (TOF) MR image. Time-of-flight (TOF) is
     based on the phenomenon of flow-related enhancement of spins entering into an
@@ -2604,14 +2662,18 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     that surrounding stationary spins
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    TimeOfFlightAngioMRSignalIntensity = DICOMControlledTerminologyDefinitionsCode("110802")
+    TimeOfFlightAngioMRSignalIntensity = DICOMControlledTerminologyDefinitionsCode(
+        "110802"
+    )
     """
     Signal intensity of a Proton Density Weighted MR image. All MR images have
     intensity proportional to proton density. Images with very little T1 or T2
     weighting are called 'PD-weighted'
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ProtonDensityWeightedMRSignalIntensity = DICOMControlledTerminologyDefinitionsCode("110803")
+    ProtonDensityWeightedMRSignalIntensity = DICOMControlledTerminologyDefinitionsCode(
+        "110803"
+    )
     """
     Signal intensity of T1 Weighted MR image. A T1 Weighted MR image is created
     typically by using short TE and TR times
@@ -2659,37 +2721,49 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     along the X axis
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VolumetricDiffusionDxxComponent = DICOMControlledTerminologyDefinitionsCode("110810")
+    VolumetricDiffusionDxxComponent = DICOMControlledTerminologyDefinitionsCode(
+        "110810"
+    )
     """
     Dxy Component of the diffusion tensor, quantifying the correlation of
     molecular displacements in the X and Y directions
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VolumetricDiffusionDxyComponent = DICOMControlledTerminologyDefinitionsCode("110811")
+    VolumetricDiffusionDxyComponent = DICOMControlledTerminologyDefinitionsCode(
+        "110811"
+    )
     """
     Dxz Component of the diffusion tensor, quantifying the correlation of
     molecular displacements in the X and Z directions
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VolumetricDiffusionDxzComponent = DICOMControlledTerminologyDefinitionsCode("110812")
+    VolumetricDiffusionDxzComponent = DICOMControlledTerminologyDefinitionsCode(
+        "110812"
+    )
     """
     Dyy Component of the diffusion tensor, quantifying the molecular mobility
     along the Y axis
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VolumetricDiffusionDyyComponent = DICOMControlledTerminologyDefinitionsCode("110813")
+    VolumetricDiffusionDyyComponent = DICOMControlledTerminologyDefinitionsCode(
+        "110813"
+    )
     """
     Dyz Component of the diffusion tensor, quantifying the correlation of
     molecular displacements in the Y and Z directions
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VolumetricDiffusionDyzComponent = DICOMControlledTerminologyDefinitionsCode("110814")
+    VolumetricDiffusionDyzComponent = DICOMControlledTerminologyDefinitionsCode(
+        "110814"
+    )
     """
     Dzz Component of the diffusion tensor, quantifying the molecular mobility
     along the Z axis
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VolumetricDiffusionDzzComponent = DICOMControlledTerminologyDefinitionsCode("110815")
+    VolumetricDiffusionDzzComponent = DICOMControlledTerminologyDefinitionsCode(
+        "110815"
+    )
     """
     Signal intensity of a T1 Weighted Dynamic Contrast Enhanced MR image. A T1
     Weighted Dynamic Contrast Enhanced MR image reflects the dynamics of diffusion
@@ -2699,21 +2773,27 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     surface area of the perfusing vessels
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    T1WeightedDynamicContrastEnhancedMRSignalIntensity = DICOMControlledTerminologyDefinitionsCode("110816")
+    T1WeightedDynamicContrastEnhancedMRSignalIntensity = (
+        DICOMControlledTerminologyDefinitionsCode("110816")
+    )
     """
     Signal intensity of a T2 Weighted Dynamic Contrast Enhanced MR image. A T2
     Weighted Dynamic Contrast Enhanced MR image reflects the T2 of tissue decrease
     as the Gd contrast agent bolus passes through the brain
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    T2WeightedDynamicContrastEnhancedMRSignalIntensity = DICOMControlledTerminologyDefinitionsCode("110817")
+    T2WeightedDynamicContrastEnhancedMRSignalIntensity = (
+        DICOMControlledTerminologyDefinitionsCode("110817")
+    )
     """
     Signal intensity of a T2* Weighted Dynamic Contrast Enhanced MR image. A T2*
     Weighted Dynamic Contrast Enhanced MR image reflects the T2* of tissue
     decrease as the Gd contrast agent bolus passes through the brain
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    T2_WeightedDynamicContrastEnhancedMRSignalIntensity = DICOMControlledTerminologyDefinitionsCode("110818")
+    T2_WeightedDynamicContrastEnhancedMRSignalIntensity = (
+        DICOMControlledTerminologyDefinitionsCode("110818")
+    )
     """
     Signal intensity of a Blood Oxygenation Level image. BOLD imaging is sensitive
     to blood oxygenation (but also to cerebral blood flow and volume). This
@@ -2725,13 +2805,17 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Accumulated decay event counts in a nuclear medicine projection image
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    NuclearMedicineProjectionActivity = DICOMControlledTerminologyDefinitionsCode("110820")
+    NuclearMedicineProjectionActivity = DICOMControlledTerminologyDefinitionsCode(
+        "110820"
+    )
     """
     Accumulated decay event counts in a Nuclear Medicine Tomographic image
     (including PET)
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    NuclearMedicineTomographicActivity = DICOMControlledTerminologyDefinitionsCode("110821")
+    NuclearMedicineTomographicActivity = DICOMControlledTerminologyDefinitionsCode(
+        "110821"
+    )
     """
     Spatial Displacement along axis X of a non-linear deformable spatial
     registration image. The X axis is defined in reference to the patient's
@@ -2918,12 +3002,16 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     spatial area defined by the voxel
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    FractionalProbabilisticSegmentation = DICOMControlledTerminologyDefinitionsCode("110854")
+    FractionalProbabilisticSegmentation = DICOMControlledTerminologyDefinitionsCode(
+        "110854"
+    )
     """
     Percentage of the voxel area occupied by the segmented property
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    FractionalOccupancySegmentation = DICOMControlledTerminologyDefinitionsCode("110855")
+    FractionalOccupancySegmentation = DICOMControlledTerminologyDefinitionsCode(
+        "110855"
+    )
     """
     Spatial dimension, denoting a linear displacement
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -3094,19 +3182,25 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     with respect to the patient-based coordinate system
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ImageOrientation_Patient_ColumnX = DICOMControlledTerminologyDefinitionsCode("110907")
+    ImageOrientation_Patient_ColumnX = DICOMControlledTerminologyDefinitionsCode(
+        "110907"
+    )
     """
     The y value of the first column direction cosine with respect to the patient,
     with respect to the patient-based coordinate system
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ImageOrientation_Patient_ColumnY = DICOMControlledTerminologyDefinitionsCode("110908")
+    ImageOrientation_Patient_ColumnY = DICOMControlledTerminologyDefinitionsCode(
+        "110908"
+    )
     """
     The z value of the first column direction cosine with respect to the patient,
     with respect to the patient-based coordinate system
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ImageOrientation_Patient_ColumnZ = DICOMControlledTerminologyDefinitionsCode("110909")
+    ImageOrientation_Patient_ColumnZ = DICOMControlledTerminologyDefinitionsCode(
+        "110909"
+    )
     """
     Number of rows in the pixel data of the image
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -3156,7 +3250,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     breast that includes the pectoral muscle tissue
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    BreastOutlineIncludingPectoralMuscleTissue = DICOMControlledTerminologyDefinitionsCode("111007")
+    BreastOutlineIncludingPectoralMuscleTissue = (
+        DICOMControlledTerminologyDefinitionsCode("111007")
+    )
     """
     The type of distribution associated with detected calcifications
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -3213,7 +3309,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     whether any findings resulted
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    CADProcessingAndFindingsSummary = DICOMControlledTerminologyDefinitionsCode("111017")
+    CADProcessingAndFindingsSummary = DICOMControlledTerminologyDefinitionsCode(
+        "111017"
+    )
     """
     The date the data creation started
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -3246,7 +3344,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     procedure and the current imaging procedure
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    DifferentialDiagnosis_Impression = DICOMControlledTerminologyDefinitionsCode("111023")
+    DifferentialDiagnosis_Impression = DICOMControlledTerminologyDefinitionsCode(
+        "111023"
+    )
     """
     A group of analysis algorithms that were attempted, but failed
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -3308,7 +3408,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     images and associated clinical information
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    IndividualImpression_Recommendation = DICOMControlledTerminologyDefinitionsCode("111034")
+    IndividualImpression_Recommendation = DICOMControlledTerminologyDefinitionsCode(
+        "111034"
+    )
     """
     The X-Ray attenuation of a lesion relative to the expected attenuation of an
     equal volume of fibroglandular breast tissue
@@ -3620,19 +3722,25 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     marker placement following a breast interventional procedure
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PostProcedureMammogramsForMarkerPlacement = DICOMControlledTerminologyDefinitionsCode("111120")
+    PostProcedureMammogramsForMarkerPlacement = (
+        DICOMControlledTerminologyDefinitionsCode("111120")
+    )
     """
     An indication that the patient should seek post procedural follow-up
     directives from a clinical health care provider
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Follow_upPostBiopsyAsDirectedByClinician = DICOMControlledTerminologyDefinitionsCode("111121")
+    Follow_upPostBiopsyAsDirectedByClinician = (
+        DICOMControlledTerminologyDefinitionsCode("111121")
+    )
     """
     A recommendation on a patient with known cancer to take steps appropriate to
     the diagnosis
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    KnownBiopsyProvenMalignancy_TakeAppropriateAction = DICOMControlledTerminologyDefinitionsCode("111122")
+    KnownBiopsyProvenMalignancy_TakeAppropriateAction = (
+        DICOMControlledTerminologyDefinitionsCode("111122")
+    )
     """
     Positioning of a radiopaque marker
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -3642,7 +3750,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Patient has previous diagnosis of breast cancer resulting in mastectomy
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PersonalHistoryOfBreastCancerWithMastectomy = DICOMControlledTerminologyDefinitionsCode("111124")
+    PersonalHistoryOfBreastCancerWithMastectomy = (
+        DICOMControlledTerminologyDefinitionsCode("111124")
+    )
     """
     Patient has had biopsy containing proven malignancy
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -3715,12 +3825,16 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     assessment
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    AnyDecisionToBiopsyShouldBeBasedOnClinicalAssessment = DICOMControlledTerminologyDefinitionsCode("111141")
+    AnyDecisionToBiopsyShouldBeBasedOnClinicalAssessment = (
+        DICOMControlledTerminologyDefinitionsCode("111141")
+    )
     """
     Follow-up at short interval (1-11 months)
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Follow_upAtShortInterval_1_11Months_ = DICOMControlledTerminologyDefinitionsCode("111142")
+    Follow_upAtShortInterval_1_11Months_ = DICOMControlledTerminologyDefinitionsCode(
+        "111142"
+    )
     """
     Tissue acquisition should be considered
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -3743,7 +3857,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     to urge a biopsy
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    SuggestiveOfMalignancy_TakeAppropriateAction = DICOMControlledTerminologyDefinitionsCode("111146")
+    SuggestiveOfMalignancy_TakeAppropriateAction = (
+        DICOMControlledTerminologyDefinitionsCode("111146")
+    )
     """
     Cellular analysis of specimen
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -3753,48 +3869,64 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Tissue acquisition should be strongly considered
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    BiopsyShouldBeStronglyConsidered = DICOMControlledTerminologyDefinitionsCode("111148")
+    BiopsyShouldBeStronglyConsidered = DICOMControlledTerminologyDefinitionsCode(
+        "111148"
+    )
     """
     Lesions have a high probability of being cancer, which require additional
     action
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    HighlySuggestiveOfMalignancy_TakeAppropriateAction = DICOMControlledTerminologyDefinitionsCode("111149")
+    HighlySuggestiveOfMalignancy_TakeAppropriateAction = (
+        DICOMControlledTerminologyDefinitionsCode("111149")
+    )
     """
     The producer of a report intends for a recipient of the report to present or
     display the associated content item
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PresentationRequired_RenderingDeviceIsExpectedToPresent = DICOMControlledTerminologyDefinitionsCode("111150")
+    PresentationRequired_RenderingDeviceIsExpectedToPresent = (
+        DICOMControlledTerminologyDefinitionsCode("111150")
+    )
     """
     The producer of a report considers the presentation or display of the
     associated content item by a recipient to be optional
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PresentationOptional_RenderingDeviceMayPresent = DICOMControlledTerminologyDefinitionsCode("111151")
+    PresentationOptional_RenderingDeviceMayPresent = (
+        DICOMControlledTerminologyDefinitionsCode("111151")
+    )
     """
     The producer of a report intends for a recipient of the report NOT to present
     or display the associated content item
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    NotForPresentation_RenderingDeviceExpectedNotToPresent = DICOMControlledTerminologyDefinitionsCode("111152")
+    NotForPresentation_RenderingDeviceExpectedNotToPresent = (
+        DICOMControlledTerminologyDefinitionsCode("111152")
+    )
     """
     The associated content items are identified as being the same finding or
     feature at different points in time
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    TargetContentItemsAreRelatedTemporally = DICOMControlledTerminologyDefinitionsCode("111153")
+    TargetContentItemsAreRelatedTemporally = DICOMControlledTerminologyDefinitionsCode(
+        "111153"
+    )
     """
     The associated content items are identified as being the same finding or
     feature on different projections taken at the same point in time
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    TargetContentItemsAreRelatedSpatially = DICOMControlledTerminologyDefinitionsCode("111154")
+    TargetContentItemsAreRelatedSpatially = DICOMControlledTerminologyDefinitionsCode(
+        "111154"
+    )
     """
     The associated content items are identified as being related side-to-side
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    TargetContentItemsAreRelatedContra_laterally = DICOMControlledTerminologyDefinitionsCode("111155")
+    TargetContentItemsAreRelatedContra_laterally = (
+        DICOMControlledTerminologyDefinitionsCode("111155")
+    )
     """
     There is one image in the interpreted data set
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -3804,17 +3936,23 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     There is more than one image of the same modality in the interpreted data set
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    FeatureDetectedOnOnlyOneOfTheImages = DICOMControlledTerminologyDefinitionsCode("111157")
+    FeatureDetectedOnOnlyOneOfTheImages = DICOMControlledTerminologyDefinitionsCode(
+        "111157"
+    )
     """
     There is more than one image of the same modality in the interpreted data set
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    FeatureDetectedOnMultipleImages = DICOMControlledTerminologyDefinitionsCode("111158")
+    FeatureDetectedOnMultipleImages = DICOMControlledTerminologyDefinitionsCode(
+        "111158"
+    )
     """
     The interpreted data set contains images from multiple modalities
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    FeatureDetectedOnImagesFromMultipleModalities = DICOMControlledTerminologyDefinitionsCode("111159")
+    FeatureDetectedOnImagesFromMultipleModalities = (
+        DICOMControlledTerminologyDefinitionsCode("111159")
+    )
     """
     The fibrous tissue replacing normal tissues destroyed by disease or injury
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -3861,42 +3999,58 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Image quality deficiency according to MQSA
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ViewAndLateralityMarkerIsMissing = DICOMControlledTerminologyDefinitionsCode("111177")
+    ViewAndLateralityMarkerIsMissing = DICOMControlledTerminologyDefinitionsCode(
+        "111177"
+    )
     """
     Image quality deficiency according to MQCM
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ViewAndLateralityMarkerDoesNotHaveBothViewAndLaterality = DICOMControlledTerminologyDefinitionsCode("111178")
+    ViewAndLateralityMarkerDoesNotHaveBothViewAndLaterality = (
+        DICOMControlledTerminologyDefinitionsCode("111178")
+    )
     """
     Image quality deficiency according to MQCM
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ViewAndLateralityMarkerDoesNotHaveApprovedCodes = DICOMControlledTerminologyDefinitionsCode("111179")
+    ViewAndLateralityMarkerDoesNotHaveApprovedCodes = (
+        DICOMControlledTerminologyDefinitionsCode("111179")
+    )
     """
     Image quality deficiency according to MQCM
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ViewAndLateralityMarkerIsNotNearTheAxilla = DICOMControlledTerminologyDefinitionsCode("111180")
+    ViewAndLateralityMarkerIsNotNearTheAxilla = (
+        DICOMControlledTerminologyDefinitionsCode("111180")
+    )
     """
     Image quality deficiency according to MQCM
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ViewAndLateralityMarkerOverlapsBreastTissue = DICOMControlledTerminologyDefinitionsCode("111181")
+    ViewAndLateralityMarkerOverlapsBreastTissue = (
+        DICOMControlledTerminologyDefinitionsCode("111181")
+    )
     """
     Image quality deficiency according to MQCM
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ViewAndLateralityMarkerIsPartiallyObscured = DICOMControlledTerminologyDefinitionsCode("111182")
+    ViewAndLateralityMarkerIsPartiallyObscured = (
+        DICOMControlledTerminologyDefinitionsCode("111182")
+    )
     """
     Image quality deficiency
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ViewAndLateralityMarkerIsIncorrect = DICOMControlledTerminologyDefinitionsCode("111183")
+    ViewAndLateralityMarkerIsIncorrect = DICOMControlledTerminologyDefinitionsCode(
+        "111183"
+    )
     """
     Image quality deficiency
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ViewAndLateralityMarkerIsOffImage = DICOMControlledTerminologyDefinitionsCode("111184")
+    ViewAndLateralityMarkerIsOffImage = DICOMControlledTerminologyDefinitionsCode(
+        "111184"
+    )
     """
     Image quality deficiency according to MQCM
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -3906,37 +4060,51 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Image quality deficiency according to MQSA
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    FlashIsIlligible_DoesNotFit_OrIsLopsided = DICOMControlledTerminologyDefinitionsCode("111186")
+    FlashIsIlligible_DoesNotFit_OrIsLopsided = (
+        DICOMControlledTerminologyDefinitionsCode("111186")
+    )
     """
     Image quality deficiency according to MQCM
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    FlashDoesn_tIncludePatientNameAndAdditionalPatientId = DICOMControlledTerminologyDefinitionsCode("111187")
+    FlashDoesn_tIncludePatientNameAndAdditionalPatientId = (
+        DICOMControlledTerminologyDefinitionsCode("111187")
+    )
     """
     Image quality deficiency according to MQCM
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    FlashDoesn_tIncludeDateOfExamination = DICOMControlledTerminologyDefinitionsCode("111188")
+    FlashDoesn_tIncludeDateOfExamination = DICOMControlledTerminologyDefinitionsCode(
+        "111188"
+    )
     """
     Image quality deficiency according to MQSA
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    FlashDoesn_tIncludeFacilityNameAndLocation = DICOMControlledTerminologyDefinitionsCode("111189")
+    FlashDoesn_tIncludeFacilityNameAndLocation = (
+        DICOMControlledTerminologyDefinitionsCode("111189")
+    )
     """
     Image quality deficiency according to MQCM
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    FlashDoesn_tIncludeTechnologistIdentification = DICOMControlledTerminologyDefinitionsCode("111190")
+    FlashDoesn_tIncludeTechnologistIdentification = (
+        DICOMControlledTerminologyDefinitionsCode("111190")
+    )
     """
     Image quality deficiency according to MQCM
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    FlashDoesn_tIncludeCassette_screen_detectorIdentification = DICOMControlledTerminologyDefinitionsCode("111191")
+    FlashDoesn_tIncludeCassette_screen_detectorIdentification = (
+        DICOMControlledTerminologyDefinitionsCode("111191")
+    )
     """
     Image quality deficiency according to MQCM
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    FlashDoesn_tIncludeMammographyUnitIdentification = DICOMControlledTerminologyDefinitionsCode("111192")
+    FlashDoesn_tIncludeMammographyUnitIdentification = (
+        DICOMControlledTerminologyDefinitionsCode("111192")
+    )
     """
     Image quality deficiency according to MQCM
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -3966,12 +4134,16 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Image quality deficiency according to MQCM
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    MLONoFatIsVisualizedPosteriorToFibroglandularTissues = DICOMControlledTerminologyDefinitionsCode("111198")
+    MLONoFatIsVisualizedPosteriorToFibroglandularTissues = (
+        DICOMControlledTerminologyDefinitionsCode("111198")
+    )
     """
     Image quality deficiency according to MQCM
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    MLOPoorSeparationOfDeepAndSuperficialBreastTissues = DICOMControlledTerminologyDefinitionsCode("111199")
+    MLOPoorSeparationOfDeepAndSuperficialBreastTissues = (
+        DICOMControlledTerminologyDefinitionsCode("111199")
+    )
     """
     Image quality deficiency according to MQCM
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -3996,7 +4168,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Image quality deficiency according to MQCM
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    CCPosteriorNippleLineDoesNotMeasureWithin1CmOfMLO = DICOMControlledTerminologyDefinitionsCode("111204")
+    CCPosteriorNippleLineDoesNotMeasureWithin1CmOfMLO = (
+        DICOMControlledTerminologyDefinitionsCode("111204")
+    )
     """
     Image quality deficiency
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -4006,7 +4180,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Image quality deficiency according to MQCM
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    InsufficientImplantDisplacementIncorrect = DICOMControlledTerminologyDefinitionsCode("111206")
+    InsufficientImplantDisplacementIncorrect = (
+        DICOMControlledTerminologyDefinitionsCode("111206")
+    )
     """
     Signals that do not faithfully reproduce actual anatomic structures because of
     distortion or of addition or deletion of information
@@ -4074,7 +4250,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     grid and image detector
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Artifact_s_OtherThanGridOrDetectorArtifact = DICOMControlledTerminologyDefinitionsCode("111215")
+    Artifact_s_OtherThanGridOrDetectorArtifact = (
+        DICOMControlledTerminologyDefinitionsCode("111215")
+    )
     """
     Failure of the device to operate according to mechanical design specifications
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -4130,37 +4308,49 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     inspection, to produce a summary impression and/or recommendation
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    IndividualImpression_RecommendationAnalysis = DICOMControlledTerminologyDefinitionsCode("111233")
+    IndividualImpression_RecommendationAnalysis = (
+        DICOMControlledTerminologyDefinitionsCode("111233")
+    )
     """
     Analysis of all groups of findings or features, to produce a single impression
     and/or recommendation
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    OverallImpression_RecommendationAnalysis = DICOMControlledTerminologyDefinitionsCode("111234")
+    OverallImpression_RecommendationAnalysis = (
+        DICOMControlledTerminologyDefinitionsCode("111234")
+    )
     """
     The usability of an image for diagnostic interpretation or CAD, based on a
     quality control standard
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Unusable_QualityRendersImageUnusable = DICOMControlledTerminologyDefinitionsCode("111235")
+    Unusable_QualityRendersImageUnusable = DICOMControlledTerminologyDefinitionsCode(
+        "111235"
+    )
     """
     The usability of an image for diagnostic interpretation or CAD, based on a
     quality control standard
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Usable_DoesNotMeetTheQualityControlStandard = DICOMControlledTerminologyDefinitionsCode("111236")
+    Usable_DoesNotMeetTheQualityControlStandard = (
+        DICOMControlledTerminologyDefinitionsCode("111236")
+    )
     """
     The usability of an image for diagnostic interpretation or CAD, based on a
     quality control standard
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Usable_MeetsTheQualityControlStandard = DICOMControlledTerminologyDefinitionsCode("111237")
+    Usable_MeetsTheQualityControlStandard = DICOMControlledTerminologyDefinitionsCode(
+        "111237"
+    )
     """
     An image quality control standard specified by the American College of
     Radiology
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    MammographyQualityControlManual1999_ACR = DICOMControlledTerminologyDefinitionsCode("111238")
+    MammographyQualityControlManual1999_ACR = DICOMControlledTerminologyDefinitionsCode(
+        "111238"
+    )
     """
     An image quality control standard in the US Code of Federal Regulations
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -4171,37 +4361,49 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     responsible for the document
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    InstitutionallyDefinedQualityControlStandard = DICOMControlledTerminologyDefinitionsCode("111240")
+    InstitutionallyDefinedQualityControlStandard = (
+        DICOMControlledTerminologyDefinitionsCode("111240")
+    )
     """
     No findings resulted upon successful completion of all attempted computer-
     aided detection and/or analysis
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    AllAlgorithmsSucceeded_WithoutFindings = DICOMControlledTerminologyDefinitionsCode("111241")
+    AllAlgorithmsSucceeded_WithoutFindings = DICOMControlledTerminologyDefinitionsCode(
+        "111241"
+    )
     """
     One or more findings resulted upon successful completion of all attempted
     computer-aided detection and/or analysis
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    AllAlgorithmsSucceeded_WithFindings = DICOMControlledTerminologyDefinitionsCode("111242")
+    AllAlgorithmsSucceeded_WithFindings = DICOMControlledTerminologyDefinitionsCode(
+        "111242"
+    )
     """
     No findings resulted from the attempted computer-aided detection and/or
     analysis, but one or more failures occurred in the process
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    NotAllAlgorithmsSucceeded_WithoutFindings = DICOMControlledTerminologyDefinitionsCode("111243")
+    NotAllAlgorithmsSucceeded_WithoutFindings = (
+        DICOMControlledTerminologyDefinitionsCode("111243")
+    )
     """
     One or more findings resulted from the attempted computer-aided detection
     and/or analysis, but one or more failures occurred in the process
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    NotAllAlgorithmsSucceeded_WithFindings = DICOMControlledTerminologyDefinitionsCode("111244")
+    NotAllAlgorithmsSucceeded_WithFindings = DICOMControlledTerminologyDefinitionsCode(
+        "111244"
+    )
     """
     All of the attempted computer-aided detection and/or analysis failed, so there
     could be no findings
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    NoAlgorithmsSucceeded_WithoutFindings = DICOMControlledTerminologyDefinitionsCode("111245")
+    NoAlgorithmsSucceeded_WithoutFindings = DICOMControlledTerminologyDefinitionsCode(
+        "111245"
+    )
     """
     A benign tumor having glandular characteristics but composed of fat, with the
     presence of normal mammary ducts
@@ -4314,7 +4516,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     subcutaneous
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Hemangioma_Nonparenchymal_Subcutaneous = DICOMControlledTerminologyDefinitionsCode("111271")
+    Hemangioma_Nonparenchymal_Subcutaneous = DICOMControlledTerminologyDefinitionsCode(
+        "111271"
+    )
     """
     Hyperplasia is also known as epithelial hyperplasia or proliferative breast
     disease. It's an overgrowth of the cells that line the ducts or the lobules.
@@ -4405,7 +4609,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     without cyst formation
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PseudoangiomatousStromalHyperplasia = DICOMControlledTerminologyDefinitionsCode("111292")
+    PseudoangiomatousStromalHyperplasia = DICOMControlledTerminologyDefinitionsCode(
+        "111292"
+    )
     """
     An nonencapsulated stellate lesion consisting of a fibroelastic core and
     radiating bands of fibrous connective tissue containing lobules manifesting
@@ -4478,7 +4684,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     be normal products of the breast
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    CarcinomaWithEndocrineDifferentiation = DICOMControlledTerminologyDefinitionsCode("111306")
+    CarcinomaWithEndocrineDifferentiation = DICOMControlledTerminologyDefinitionsCode(
+        "111306"
+    )
     """
     A basal cell carcinoma that arises in the nipple of the breast
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -4504,7 +4712,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Carcinoma of the breast presenting during pregnancy or lactation
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    CarcinomaInPregnancyAndLactation = DICOMControlledTerminologyDefinitionsCode("111310")
+    CarcinomaInPregnancyAndLactation = DICOMControlledTerminologyDefinitionsCode(
+        "111310"
+    )
     """
     A malignant neoplasm that contains elements of carcinoma and sarcoma, so
     extensively intermixed as to indicate neoplasia of epithelial and mesenchymal
@@ -4516,7 +4726,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Comedocarcinoma of a duct with areas of necrotic tissue
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    IntraductalComedocarcinomaWithNecrosis = DICOMControlledTerminologyDefinitionsCode("111312")
+    IntraductalComedocarcinomaWithNecrosis = DICOMControlledTerminologyDefinitionsCode(
+        "111312"
+    )
     """
     A non-invasive carcinoma restricted to the glandular lumen characterized by
     less aggressive malignant cytologic features and behavior
@@ -4531,7 +4743,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     dcis-3
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    IntraductalCarcinomaMicro_papillary = DICOMControlledTerminologyDefinitionsCode("111314")
+    IntraductalCarcinomaMicro_papillary = DICOMControlledTerminologyDefinitionsCode(
+        "111314"
+    )
     """
     A malignant neoplasm characterized by the formation of numerous, irregular,
     finger-like projections of fibrous stroma that is covered with a surface layer
@@ -4580,7 +4794,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     the axillary lymph nodes
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    OccultCarcinomaPresentingWithAxillaryLymphNodeMetastases = DICOMControlledTerminologyDefinitionsCode("111322")
+    OccultCarcinomaPresentingWithAxillaryLymphNodeMetastases = (
+        DICOMControlledTerminologyDefinitionsCode("111322")
+    )
     """
     A malignant lesion in the breast with morphologic patterns not typical of
     breast carcinoma arising from a non-mammary malignant neoplasm
@@ -4592,13 +4808,17 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     breast carcinoma arising from a neoplasm in the colon
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    MetastaticCancerToTheBreastFromTheColon = DICOMControlledTerminologyDefinitionsCode("111324")
+    MetastaticCancerToTheBreastFromTheColon = DICOMControlledTerminologyDefinitionsCode(
+        "111324"
+    )
     """
     A malignant lesion in the breast with morphologic patterns not typical of
     breast carcinoma arising from a neoplasm in the lung
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    MetastaticCancerToTheBreastFromTheLung = DICOMControlledTerminologyDefinitionsCode("111325")
+    MetastaticCancerToTheBreastFromTheLung = DICOMControlledTerminologyDefinitionsCode(
+        "111325"
+    )
     """
     A malignant lesion in the breast with morphologic patterns not typical of
     breast carcinoma arising from a melanoma
@@ -4610,7 +4830,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     breast carcinoma arising from a neoplasm in the ovary
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    MetastaticCancerToTheBreastFromTheOvary = DICOMControlledTerminologyDefinitionsCode("111327")
+    MetastaticCancerToTheBreastFromTheOvary = DICOMControlledTerminologyDefinitionsCode(
+        "111327"
+    )
     """
     A malignant lesion in the breast with morphologic patterns not typical of
     breast carcinoma arising from a sarcoma
@@ -4626,7 +4848,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     A malignant lesion in an axillary node arising from a non-axillary neoplasm
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    MetastaticDiseaseToAxillaryNode = DICOMControlledTerminologyDefinitionsCode("111330")
+    MetastaticDiseaseToAxillaryNode = DICOMControlledTerminologyDefinitionsCode(
+        "111330"
+    )
     """
     Pleomorphic undifferentiated sarcoma (abbreviated PUS), also undifferentiated
     pleomorphic sarcoma and previously malignant fibrous histiocytoma (abbreviated
@@ -4639,13 +4863,17 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Multiple sites of ductal carcinoma
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    MultifocalInvasiveDuctalCarcinoma = DICOMControlledTerminologyDefinitionsCode("111332")
+    MultifocalInvasiveDuctalCarcinoma = DICOMControlledTerminologyDefinitionsCode(
+        "111332"
+    )
     """
     A malignant lesion in a intramammary lymph node arising from a non-
     intramammary lymph node neoplasm
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    MetastasisToAnIntramammaryLymphNode = DICOMControlledTerminologyDefinitionsCode("111333")
+    MetastasisToAnIntramammaryLymphNode = DICOMControlledTerminologyDefinitionsCode(
+        "111333"
+    )
     """
     A malignant melanoma of the skin that arises in the nipple of the breast
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -4673,7 +4901,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Squamous cell carcinoma to the terminal portion of the alveolar
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    SquamousCellCarcinomaOfTheNipple = DICOMControlledTerminologyDefinitionsCode("111340")
+    SquamousCellCarcinomaOfTheNipple = DICOMControlledTerminologyDefinitionsCode(
+        "111340"
+    )
     """
     A non-invasive carcinoma restricted to the glandular lumen characterized by
     more aggressive malignant cytologic features and behavior
@@ -4735,7 +4965,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     layer of subcutaneous fat
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    HomogeneousFibroglandularEchotexture = DICOMControlledTerminologyDefinitionsCode("111352")
+    HomogeneousFibroglandularEchotexture = DICOMControlledTerminologyDefinitionsCode(
+        "111352"
+    )
     """
     The breast texture is characterized by multiple small areas of increased and
     decreased echogenicity
@@ -4836,12 +5068,16 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     More than one pattern of posterior attenuation, both shadowing and enhancement
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    CombinedPosteriorEnhancementAndShadowing = DICOMControlledTerminologyDefinitionsCode("111370")
+    CombinedPosteriorEnhancementAndShadowing = (
+        DICOMControlledTerminologyDefinitionsCode("111370")
+    )
     """
     Sonographic appearance of adjacent structures relative to a mass finding
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    IdentifiableEffectOnSurroundingTissues = DICOMControlledTerminologyDefinitionsCode("111371")
+    IdentifiableEffectOnSurroundingTissues = DICOMControlledTerminologyDefinitionsCode(
+        "111371"
+    )
     """
     Characterization of vascularization in region of interest
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -4866,13 +5102,17 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Vascularity on imaging is seen immediately adjacent to a lesion
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VascularityPresentImmediatelyAdjacentToLesion = DICOMControlledTerminologyDefinitionsCode("111376")
+    VascularityPresentImmediatelyAdjacentToLesion = (
+        DICOMControlledTerminologyDefinitionsCode("111376")
+    )
     """
     Vascularity on imaging is considered diffusely elevated within the surrounding
     breast tissue
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    DiffuselyIncreasedVascularityInSurroundingTissue = DICOMControlledTerminologyDefinitionsCode("111377")
+    DiffuselyIncreasedVascularityInSurroundingTissue = (
+        DICOMControlledTerminologyDefinitionsCode("111377")
+    )
     """
     Relationship of the new anomaly to other clinical or imaging anomalies
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -4883,13 +5123,17 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     clinical breast exam
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    CorrelatesToPhysicalExamFindings = DICOMControlledTerminologyDefinitionsCode("111381")
+    CorrelatesToPhysicalExamFindings = DICOMControlledTerminologyDefinitionsCode(
+        "111381"
+    )
     """
     An indication that the current imaging finding relates to a finding from a
     mammography exam
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    CorrelatesToMammographyFindings = DICOMControlledTerminologyDefinitionsCode("111382")
+    CorrelatesToMammographyFindings = DICOMControlledTerminologyDefinitionsCode(
+        "111382"
+    )
     """
     An indication that the current imaging finding relates to a finding from a
     breast MRI exam
@@ -4907,19 +5151,25 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     imaging exam
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    CorrelatesToOtherImagingFindings = DICOMControlledTerminologyDefinitionsCode("111385")
+    CorrelatesToOtherImagingFindings = DICOMControlledTerminologyDefinitionsCode(
+        "111385"
+    )
     """
     An indication that the current imaging finding has no relation to findings
     from any other imaging exam
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    NoCorrelationToOtherImagingFindings = DICOMControlledTerminologyDefinitionsCode("111386")
+    NoCorrelationToOtherImagingFindings = DICOMControlledTerminologyDefinitionsCode(
+        "111386"
+    )
     """
     An indication that the current imaging finding has no relation to any other
     clinical findings
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    NoCorrelationToClinicalFindings = DICOMControlledTerminologyDefinitionsCode("111387")
+    NoCorrelationToClinicalFindings = DICOMControlledTerminologyDefinitionsCode(
+        "111387"
+    )
     """
     Classification of the cancer as invasive, DCIS, or other
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -5070,19 +5320,25 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     a suspicious or questionable anatomic region
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    AdditionalEvaluationRequestedFromPriorStudy = DICOMControlledTerminologyDefinitionsCode("111415")
+    AdditionalEvaluationRequestedFromPriorStudy = (
+        DICOMControlledTerminologyDefinitionsCode("111415")
+    )
     """
     The prior study recommended a follow-up breast imaging exam in 1 to 11 months
     (generally in 6 months)
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Follow_upAtShortIntervalFromPriorStudy = DICOMControlledTerminologyDefinitionsCode("111416")
+    Follow_upAtShortIntervalFromPriorStudy = DICOMControlledTerminologyDefinitionsCode(
+        "111416"
+    )
     """
     Prior breast augmentation (breast enlargement) and is not presenting with any
     symptoms
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    HistoryOfBreastAugmentation_Asymptomatic = DICOMControlledTerminologyDefinitionsCode("111417")
+    HistoryOfBreastAugmentation_Asymptomatic = (
+        DICOMControlledTerminologyDefinitionsCode("111417")
+    )
     """
     Review or second opinion made on an image performed outside of the facility
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -5093,7 +5349,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     mammogram
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    AdditionalEvaluationRequestedFromAbnormalScreeningExam = DICOMControlledTerminologyDefinitionsCode("111419")
+    AdditionalEvaluationRequestedFromAbnormalScreeningExam = (
+        DICOMControlledTerminologyDefinitionsCode("111419")
+    )
     """
     Patient has had previous benign breast biopsies
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -5104,7 +5362,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     remove malignant breast tissue, but breast tissue remains
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PersonalHistoryOfBreastCancerWithBreastConservationTherapy = DICOMControlledTerminologyDefinitionsCode("111421")
+    PersonalHistoryOfBreastCancerWithBreastConservationTherapy = (
+        DICOMControlledTerminologyDefinitionsCode("111421")
+    )
     """
     The results of a physical examination performed on the patient, possibly
     including the results of inspection, palpation, auscultation, or percussion
@@ -5232,13 +5492,17 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     fully excised and is noted in the resultant biopsy specimen
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    TargetCompletelyContainedInTheSpecimen = DICOMControlledTerminologyDefinitionsCode("111443")
+    TargetCompletelyContainedInTheSpecimen = DICOMControlledTerminologyDefinitionsCode(
+        "111443"
+    )
     """
     An indicator that during an interventional procedure the area of interest was
     partially excised and is noted in the resultant biopsy specimen
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    TargetPartiallyObtainedInTheSpecimen = DICOMControlledTerminologyDefinitionsCode("111444")
+    TargetPartiallyObtainedInTheSpecimen = DICOMControlledTerminologyDefinitionsCode(
+        "111444"
+    )
     """
     An indicator that following an interventional procedure the area of interest
     is not seen in the resultant biopsy specimen
@@ -5343,7 +5607,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Supporting evidence for interpretation results of an interventional procedure
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    SupplementaryDataForIntervention = DICOMControlledTerminologyDefinitionsCode("111463")
+    SupplementaryDataForIntervention = DICOMControlledTerminologyDefinitionsCode(
+        "111463"
+    )
     """
     A descriptor that further qualifies or characterizes a type of procedure
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -5423,12 +5689,16 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     The visible emission of non-bloody fluid from the nipple
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Non_bloodyDischarge_fromNipple_ = DICOMControlledTerminologyDefinitionsCode("111478")
+    Non_bloodyDischarge_fromNipple_ = DICOMControlledTerminologyDefinitionsCode(
+        "111478"
+    )
     """
     The inability to discern normal versus abnormal breast tissue during palpation
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    DifficultPhysical_clinicalExamination = DICOMControlledTerminologyDefinitionsCode("111479")
+    DifficultPhysical_clinicalExamination = DICOMControlledTerminologyDefinitionsCode(
+        "111479"
+    )
     """
     An indication that a patient has or had a malignant occurrence in an area of
     the body other than the breast
@@ -5608,7 +5878,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     clinician
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RelevantPatientInformationForBreastImaging = DICOMControlledTerminologyDefinitionsCode("111511")
+    RelevantPatientInformationForBreastImaging = (
+        DICOMControlledTerminologyDefinitionsCode("111511")
+    )
     """
     Information regarding usage by the patient of certain medications, such as
     hormones
@@ -5649,7 +5921,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     The age of the patient at the first occurrence of menses
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    AgeWhenFirstMenstrualPeriodOccurred = DICOMControlledTerminologyDefinitionsCode("111518")
+    AgeWhenFirstMenstrualPeriodOccurred = DICOMControlledTerminologyDefinitionsCode(
+        "111518"
+    )
     """
     The age of the patient at the time of her first full term pregnancy
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -5783,7 +6057,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     contraceptive, estrogen, Tamoxifen
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    UnspecifiedGynecologicalHormone = DICOMControlledTerminologyDefinitionsCode("111542")
+    UnspecifiedGynecologicalHormone = DICOMControlledTerminologyDefinitionsCode(
+        "111542"
+    )
     """
     An indicator of whether or not a patient ever provided breast milk to her
     offspring
@@ -5845,7 +6121,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     pathologic evaluation
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    HistoryOfHighRiskLesionOnPreviousBiopsy = DICOMControlledTerminologyDefinitionsCode("111553")
+    HistoryOfHighRiskLesionOnPreviousBiopsy = DICOMControlledTerminologyDefinitionsCode(
+        "111553"
+    )
     """
     A female patient whose menstrual periods have ceased
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -5876,13 +6154,17 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     breast cancer. Definition from BI-RADS®
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    WeakFamilyHistoryOfBreastCancer = DICOMControlledTerminologyDefinitionsCode("111559")
+    WeakFamilyHistoryOfBreastCancer = DICOMControlledTerminologyDefinitionsCode(
+        "111559"
+    )
     """
     A patient's biological mother or sister was diagnosed with breast cancer after
     they had gone through menopause. Definition from BI-RADS®
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    IntermediateFamilyHistoryOfBreastCancer = DICOMControlledTerminologyDefinitionsCode("111560")
+    IntermediateFamilyHistoryOfBreastCancer = DICOMControlledTerminologyDefinitionsCode(
+        "111560"
+    )
     """
     A patient's biological mother or sister was diagnosed with breast cancer
     before they had gone through menopause, or more than one of the patient's
@@ -5890,7 +6172,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     breast cancer after they had gone through menopause. Definition from BI-RADS®
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VeryStrongFamilyHistoryOfBreastCancer = DICOMControlledTerminologyDefinitionsCode("111561")
+    VeryStrongFamilyHistoryOfBreastCancer = DICOMControlledTerminologyDefinitionsCode(
+        "111561"
+    )
     """
     Previous diagnosis of a malignancy of the prostate gland in a biological
     relative
@@ -5938,13 +6222,17 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     History of at least one prior pregnancy with fetal anatomic abnormality(s)
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PreviousFetalMalformation_syndrome = DICOMControlledTerminologyDefinitionsCode("111570")
+    PreviousFetalMalformation_syndrome = DICOMControlledTerminologyDefinitionsCode(
+        "111570"
+    )
     """
     History of delivering a Rhesis Isoimmunization affected child(ren) or a
     child(ren) with another blood disorder
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PreviousRHNegativeOrBloodDyscrasiaAtBirth = DICOMControlledTerminologyDefinitionsCode("111571")
+    PreviousRHNegativeOrBloodDyscrasiaAtBirth = (
+        DICOMControlledTerminologyDefinitionsCode("111571")
+    )
     """
     History of at least one pregnancy that contained more than one fetus; e.g.
     twins, triplets, etc.
@@ -5957,13 +6245,17 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     be present
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    CurrentPregnancy_KnownOrSuspectedMalformations_syndromes = DICOMControlledTerminologyDefinitionsCode("111573")
+    CurrentPregnancy_KnownOrSuspectedMalformations_syndromes = (
+        DICOMControlledTerminologyDefinitionsCode("111573")
+    )
     """
     Biological relatives have previously conceived a fetus with an anatomic
     abnormality(s)
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    FamilyHistory_FetalMalformation_syndrome = DICOMControlledTerminologyDefinitionsCode("111574")
+    FamilyHistory_FetalMalformation_syndrome = (
+        DICOMControlledTerminologyDefinitionsCode("111574")
+    )
     """
     A subjective descriptor for an elevated amount of exposure, use, or dosage,
     incurring high risk of adverse effects
@@ -6059,7 +6351,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     the patient or a healthcare professional at the time of the most recent exam
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RecallForPatientSymptoms_ClinicalFindings = DICOMControlledTerminologyDefinitionsCode("111592")
+    RecallForPatientSymptoms_ClinicalFindings = (
+        DICOMControlledTerminologyDefinitionsCode("111592")
+    )
     """
     Number of births with low birth weight or intrauterine growth restriction
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -6217,7 +6511,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Average Glandular Dose to a single breast accumulated over multiple images
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    AccumulatedAverageGlandularDose = DICOMControlledTerminologyDefinitionsCode("111637")
+    AccumulatedAverageGlandularDose = DICOMControlledTerminologyDefinitionsCode(
+        "111637"
+    )
     """
     Value of the control variable used to parametrize the Automatic Exposure
     Control (AEC) closed loop; e.g. "Water Value"
@@ -6347,12 +6643,16 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     an analytic tool described in PS3.1
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    MacularGridThicknessAndVolumeReport = DICOMControlledTerminologyDefinitionsCode("111690")
+    MacularGridThicknessAndVolumeReport = DICOMControlledTerminologyDefinitionsCode(
+        "111690"
+    )
     """
     Number of images used for the macular grid measurement
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    NumberOfImagesUsedForMacularMeasurements = DICOMControlledTerminologyDefinitionsCode("111691")
+    NumberOfImagesUsedForMacularMeasurements = (
+        DICOMControlledTerminologyDefinitionsCode("111691")
+    )
     """
     Number of samples used per Image for analysis
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -6380,7 +6680,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     (direction of gaze) during the acquisition
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VisualFixationQualityDuringAcquisition = DICOMControlledTerminologyDefinitionsCode("111696")
+    VisualFixationQualityDuringAcquisition = DICOMControlledTerminologyDefinitionsCode(
+        "111696"
+    )
     """
     The reason why the patient's visual fixation was not steady or was
     indeterminate
@@ -6427,7 +6729,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Assigning authority for parent specimen's identifier
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    IssuerOfParentSpecimenIdentifier = DICOMControlledTerminologyDefinitionsCode("111706")
+    IssuerOfParentSpecimenIdentifier = DICOMControlledTerminologyDefinitionsCode(
+        "111706"
+    )
     """
     Parent specimen type that gave rise to current specimen
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -6504,13 +6808,17 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     processing or examination
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    DissectionWithEntireSpecimenSubmission = DICOMControlledTerminologyDefinitionsCode("111726")
+    DissectionWithEntireSpecimenSubmission = DICOMControlledTerminologyDefinitionsCode(
+        "111726"
+    )
     """
     Dissection of specimen with submission of representative sections for further
     processing or examination
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    DissectionWithRepresentativeSectionsSubmission = DICOMControlledTerminologyDefinitionsCode("111727")
+    DissectionWithRepresentativeSectionsSubmission = (
+        DICOMControlledTerminologyDefinitionsCode("111727")
+    )
     """
     A workflow step, during which tissue specimens are stored in a climate-
     controlled environment
@@ -6556,12 +6864,16 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Differential interference contrast method for specimen microscopy
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    DifferentialInterferenceContrast = DICOMControlledTerminologyDefinitionsCode("111748")
+    DifferentialInterferenceContrast = DICOMControlledTerminologyDefinitionsCode(
+        "111748"
+    )
     """
     Total internal reflection fluorescence method for specimen microscopy
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    TotalInternalReflectionFluorescence = DICOMControlledTerminologyDefinitionsCode("111749")
+    TotalInternalReflectionFluorescence = DICOMControlledTerminologyDefinitionsCode(
+        "111749"
+    )
     """
     A method of obtaining ophthalmic axial measurements that uses ultrasound, and
     that requires applanation of the cornea
@@ -6731,12 +7043,16 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Refractive Measurements DICOM SOP Instance
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RefractiveMeasurementsSOPInstance = DICOMControlledTerminologyDefinitionsCode("111783")
+    RefractiveMeasurementsSOPInstance = DICOMControlledTerminologyDefinitionsCode(
+        "111783"
+    )
     """
     Standard Deviation is a simple measure of the variability of a data set
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    StandardDeviationOfMeasurementsUsed = DICOMControlledTerminologyDefinitionsCode("111786")
+    StandardDeviationOfMeasurementsUsed = DICOMControlledTerminologyDefinitionsCode(
+        "111786"
+    )
     """
     Signal to Noise Ratio of the data samples taken to create a measurement
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -6796,31 +7112,41 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     spread out radially from fixation
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VisualFieldCentral40PointTestPattern = DICOMControlledTerminologyDefinitionsCode("111805")
+    VisualFieldCentral40PointTestPattern = DICOMControlledTerminologyDefinitionsCode(
+        "111805"
+    )
     """
     Test pattern consisting of 76 test point locations within 30° of fixation a
     minimum of 3° from each meridian and placed 6° apart
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VisualFieldCentral76PointTestPattern = DICOMControlledTerminologyDefinitionsCode("111806")
+    VisualFieldCentral76PointTestPattern = DICOMControlledTerminologyDefinitionsCode(
+        "111806"
+    )
     """
     Test pattern consisting of 60 test point locations between 30° and 60° of
     fixation a minimum of 6° from each meridian and placed 12° apart
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VisualFieldPeripheral60PointTestPattern = DICOMControlledTerminologyDefinitionsCode("111807")
+    VisualFieldPeripheral60PointTestPattern = DICOMControlledTerminologyDefinitionsCode(
+        "111807"
+    )
     """
     Test pattern consisting of 81 test point locations within 60° of fixation that
     spread out radially from fixation
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VisualFieldFullField81PointTestPattern = DICOMControlledTerminologyDefinitionsCode("111808")
+    VisualFieldFullField81PointTestPattern = DICOMControlledTerminologyDefinitionsCode(
+        "111808"
+    )
     """
     Test pattern consisting of 120 test point locations within 60° of fixation
     that spread out radially from fixation, concentrated in the nasal hemisphere
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VisualFieldFullField120PointTestPattern = DICOMControlledTerminologyDefinitionsCode("111809")
+    VisualFieldFullField120PointTestPattern = DICOMControlledTerminologyDefinitionsCode(
+        "111809"
+    )
     """
     Test pattern for Glaucoma and general visual field assessment with 59 test
     locations of which 16 test locations are in the macular area (up to 10°
@@ -6869,12 +7195,16 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     1997, 75: 368-375
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VisualFieldSITA_StandardTestStrategy = DICOMControlledTerminologyDefinitionsCode("111815")
+    VisualFieldSITA_StandardTestStrategy = DICOMControlledTerminologyDefinitionsCode(
+        "111815"
+    )
     """
     Adaptation of SITA testing methods to Blue-Yellow testing
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VisualFieldSITA_SWAPTestStrategy = DICOMControlledTerminologyDefinitionsCode("111816")
+    VisualFieldSITA_SWAPTestStrategy = DICOMControlledTerminologyDefinitionsCode(
+        "111816"
+    )
     """
     Similar to SITA-Standard but with less strict criteria for closing test
     points. Intended for patients who must be tested in the shortest possible
@@ -6883,7 +7213,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     suspect glaucoma. Acta Ophthalmologica Scandinavica, 1998, 76: 431-437
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VisualFieldSITA_FastTestStrategy = DICOMControlledTerminologyDefinitionsCode("111817")
+    VisualFieldSITA_FastTestStrategy = DICOMControlledTerminologyDefinitionsCode(
+        "111817"
+    )
     """
     Threshold test algorithm that determines a patient's sensitivity at each test
     point in the threshold test pattern by adjusting intensity by 4 dB steps until
@@ -6895,7 +7227,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     to determine the starting values for neighboring points
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VisualFieldFullThresholdTestStrategy = DICOMControlledTerminologyDefinitionsCode("111818")
+    VisualFieldFullThresholdTestStrategy = DICOMControlledTerminologyDefinitionsCode(
+        "111818"
+    )
     """
     Similar to the Full Threshold algorithm except that it steps by 3 dB and only
     crosses the threshold only once. In: Flanagan JG, Wild JM, Trope GE.
@@ -6911,7 +7245,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Threshold test strategy
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VisualFieldFullFromPriorTestStrategy = DICOMControlledTerminologyDefinitionsCode("111820")
+    VisualFieldFullFromPriorTestStrategy = DICOMControlledTerminologyDefinitionsCode(
+        "111820"
+    )
     """
     Similar to FastPac except that the steps are pseudo-dynamic (differ based on
     the intensity of the last presentation)
@@ -6926,20 +7262,26 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     "seen"; otherwise it is marked as "not seen"
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VisualFieldTwo_ZoneTestStrategy = DICOMControlledTerminologyDefinitionsCode("111822")
+    VisualFieldTwo_ZoneTestStrategy = DICOMControlledTerminologyDefinitionsCode(
+        "111822"
+    )
     """
     An extension of the two-zone strategy in which test points where the second
     stimulus is not seen are presented with a third stimulus at maximum brightness
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VisualFieldThree_ZoneTestStrategy = DICOMControlledTerminologyDefinitionsCode("111823")
+    VisualFieldThree_ZoneTestStrategy = DICOMControlledTerminologyDefinitionsCode(
+        "111823"
+    )
     """
     An extension of the two-zone strategy, in which test points where the second
     stimulus is not seen receive threshold testing to quantify the depth of any
     detected scotomas
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VisualFieldQuantify_DefectsTestStrategy = DICOMControlledTerminologyDefinitionsCode("111824")
+    VisualFieldQuantify_DefectsTestStrategy = DICOMControlledTerminologyDefinitionsCode(
+        "111824"
+    )
     """
     Tendency Oriented Perimetry. Fast thresholding algorithm. Test strategy makes
     use of the interaction between neighboring test locations to reduce the test
@@ -7012,20 +7354,26 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     using the dynamic threshold strategy
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VisualField2LT_DynamicTestStrategy = DICOMControlledTerminologyDefinitionsCode("111833")
+    VisualField2LT_DynamicTestStrategy = DICOMControlledTerminologyDefinitionsCode(
+        "111833"
+    )
     """
     A test started as two level screening test. In the course of the test, the
     threshold of relative defects and/or normal test locations has been quantified
     using the normal full threshold strategy
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VisualField2LT_NormalTestStrategy = DICOMControlledTerminologyDefinitionsCode("111834")
+    VisualField2LT_NormalTestStrategy = DICOMControlledTerminologyDefinitionsCode(
+        "111834"
+    )
     """
     Takes neighborhood test point results into account and offers stimuli with an
     adapted value to save time
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VisualFieldFastThresholdTestStrategy = DICOMControlledTerminologyDefinitionsCode("111835")
+    VisualFieldFastThresholdTestStrategy = DICOMControlledTerminologyDefinitionsCode(
+        "111835"
+    )
     """
     Continuous Luminance Incremental Perimetry, which measures at first the
     individual reaction time of the patient and threshold values in every
@@ -7126,7 +7474,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Analysis Results identify Borderline and general reduction in sensitivity
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    BorderlineAndGeneralReductionInSensitivity = DICOMControlledTerminologyDefinitionsCode("111851")
+    BorderlineAndGeneralReductionInSensitivity = (
+        DICOMControlledTerminologyDefinitionsCode("111851")
+    )
     """
     Index of a patient's remaining visual field normalized for both age and
     generalized defect
@@ -7138,13 +7488,17 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     (i.e., spread evenly across all portions of the visual field)
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VisualFieldLossDueToDiffuseDefect = DICOMControlledTerminologyDefinitionsCode("111853")
+    VisualFieldLossDueToDiffuseDefect = DICOMControlledTerminologyDefinitionsCode(
+        "111853"
+    )
     """
     Estimate of the portion of a patient's visual field loss that is local (i.e.,
     not spread evenly across all portions of the visual field)
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VisualFieldLossDueToLocalDefect = DICOMControlledTerminologyDefinitionsCode("111854")
+    VisualFieldLossDueToLocalDefect = DICOMControlledTerminologyDefinitionsCode(
+        "111854"
+    )
     """
     An analysis of asymmetry between zones of the superior and inferior visual
     field. It is designed to be specific for defects due to glaucoma
@@ -7201,7 +7555,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     U.1.8 "Relative Image Position Definitions" in PS3.17
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Mid_peripheral_superiorTemporal = DICOMControlledTerminologyDefinitionsCode("111905")
+    Mid_peripheral_superiorTemporal = DICOMControlledTerminologyDefinitionsCode(
+        "111905"
+    )
     """
     An image of at least 15° angular subtend positioned between the central zone
     and the equator, and spanning both the superior-temporal and inferior-temporal
@@ -7216,7 +7572,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     U.1.8 "Relative Image Position Definitions" in PS3.17
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Mid_peripheral_inferiorTemporal = DICOMControlledTerminologyDefinitionsCode("111907")
+    Mid_peripheral_inferiorTemporal = DICOMControlledTerminologyDefinitionsCode(
+        "111907"
+    )
     """
     An image of at least 15° angular subtend positioned between the central zone
     and the equator, and spanning both the inferior-temporal and inferior-nasal
@@ -7328,7 +7686,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Algorithm to compensate for variability in corneal birefringence
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    CornealBirefringenceCompensation = DICOMControlledTerminologyDefinitionsCode("111923")
+    CornealBirefringenceCompensation = DICOMControlledTerminologyDefinitionsCode(
+        "111923"
+    )
     """
     Measurement of the retinal surface contour relative to an assigned datum plane
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -7340,7 +7700,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     fiber layer (RNFL); see Section III.6 "Retinal Thickness Definition" in PS3.17
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RetinalNerveFiberLayerThickness = DICOMControlledTerminologyDefinitionsCode("111925")
+    RetinalNerveFiberLayerThickness = DICOMControlledTerminologyDefinitionsCode(
+        "111925"
+    )
     """
     Measurement approximating the distance related to the structure between the
     ILM and the outer border of the inner plexiform layer (IPL), called the
@@ -7355,14 +7717,18 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Thickness Definition" in PS3.17
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    TotalRetinalThickness_ILMToIS_OS_ = DICOMControlledTerminologyDefinitionsCode("111927")
+    TotalRetinalThickness_ILMToIS_OS_ = DICOMControlledTerminologyDefinitionsCode(
+        "111927"
+    )
     """
     Measurement approximating the distance related to the structure between the
     ILM and the retinal pigment epithelium (RPE); see Section III.6 "Retinal
     Thickness Definition" in PS3.17
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    TotalRetinalThickness_ILMToRPE_ = DICOMControlledTerminologyDefinitionsCode("111928")
+    TotalRetinalThickness_ILMToRPE_ = DICOMControlledTerminologyDefinitionsCode(
+        "111928"
+    )
     """
     Measurement approximating the distance related to the structure between the
     ILM and the Bruch's membrane (BM); see Section III.6 "Retinal Thickness
@@ -7381,13 +7747,17 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     percentile) from a normative data set
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ThicknessDeviationCategoryFromNormativeData = DICOMControlledTerminologyDefinitionsCode("111931")
+    ThicknessDeviationCategoryFromNormativeData = (
+        DICOMControlledTerminologyDefinitionsCode("111931")
+    )
     """
     Ophthalmic Thickness map based upon deviation (such as microns) from a
     normative data set
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ThicknessDeviationFromNormativeData = DICOMControlledTerminologyDefinitionsCode("111932")
+    ThicknessDeviationFromNormativeData = DICOMControlledTerminologyDefinitionsCode(
+        "111932"
+    )
     """
     Ophthalmic Thickness Map related to another Ophthalmic Thickness Map or
     another SOP Instance
@@ -7480,7 +7850,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     instrument axis centered on the cornea vertex
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Elevation_basedCornealTomographer = DICOMControlledTerminologyDefinitionsCode("111945")
+    Elevation_basedCornealTomographer = DICOMControlledTerminologyDefinitionsCode(
+        "111945"
+    )
     """
     A reflection-based device that projects a pattern of light onto the cornea and
     an image of the reflection of that pattern from the tear film is recorded in
@@ -7490,7 +7862,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     recording
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Reflection_basedCornealTopographer = DICOMControlledTerminologyDefinitionsCode("111946")
+    Reflection_basedCornealTopographer = DICOMControlledTerminologyDefinitionsCode(
+        "111946"
+    )
     """
     An Interference-based device that projects a beam of light onto and through
     the cornea. Light reflected from within the cornea is combined with a
@@ -7499,7 +7873,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     anterior to posterior surfaces; e.g. swept source OCT
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Interferometry_basedCornealTomographer = DICOMControlledTerminologyDefinitionsCode("111947")
+    Interferometry_basedCornealTomographer = DICOMControlledTerminologyDefinitionsCode(
+        "111947"
+    )
     """
     A structured report containing the results of computer-aided detection or
     diagnosis applied to chest imaging and associated clinical information
@@ -7611,13 +7987,17 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     surrounding surface that it occupies
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    CalcificationExtentAsPercentOfSurface = DICOMControlledTerminologyDefinitionsCode("112018")
+    CalcificationExtentAsPercentOfSurface = DICOMControlledTerminologyDefinitionsCode(
+        "112018"
+    )
     """
     The extent of a detected calcification, represented as the percent of the
     surrounding volume that it occupies
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    CalcificationExtentAsPercentOfVolume = DICOMControlledTerminologyDefinitionsCode("112019")
+    CalcificationExtentAsPercentOfVolume = DICOMControlledTerminologyDefinitionsCode(
+        "112019"
+    )
     """
     A heading for the reporting of response evaluation for treatment of solid
     tumors
@@ -7668,7 +8048,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     surrounding anatomy
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    AbnormalDistributionOfAnatomicStructure = DICOMControlledTerminologyDefinitionsCode("112028")
+    AbnormalDistributionOfAnatomicStructure = DICOMControlledTerminologyDefinitionsCode(
+        "112028"
+    )
     """
     Response evaluation method as defined in chapter 5, "Reporting of Response" of
     the WHO Handbook for Reporting Results for Cancer Treatment; see Normative
@@ -7697,7 +8079,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     scoring
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ThresholdAttenuationCoefficient = DICOMControlledTerminologyDefinitionsCode("112032")
+    ThresholdAttenuationCoefficient = DICOMControlledTerminologyDefinitionsCode(
+        "112032"
+    )
     """
     An opacity that is not expected in a diagnostically normal radiograph
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -7714,7 +8098,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     and Adult Chest Radiography. In: Standards. Reston, Va: 2001:95-98
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PerformanceOfPediatricAndAdultChestRadiography_ACR = DICOMControlledTerminologyDefinitionsCode("112035")
+    PerformanceOfPediatricAndAdultChestRadiography_ACR = (
+        DICOMControlledTerminologyDefinitionsCode("112035")
+    )
     """
     American College of Radiology. ACR Position Statement for Quality Control and
     Improvement, Safety, Infection Control, and Patient Concerns. In: Practice
@@ -7777,19 +8163,25 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     level
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Non_TargetLesionCompleteResponse = DICOMControlledTerminologyDefinitionsCode("112045")
+    Non_TargetLesionCompleteResponse = DICOMControlledTerminologyDefinitionsCode(
+        "112045"
+    )
     """
     Persistence of one or more non-target lesions and/or maintenance of tumor
     marker level above the normal limits
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Non_TargetLesionIncompleteResponseOrStableDisease = DICOMControlledTerminologyDefinitionsCode("112046")
+    Non_TargetLesionIncompleteResponseOrStableDisease = (
+        DICOMControlledTerminologyDefinitionsCode("112046")
+    )
     """
     Appearance of one or more new lesions and/or unequivocal progression of
     existing non-target lesions
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Non_TargetLesionProgressiveDisease = DICOMControlledTerminologyDefinitionsCode("112047")
+    Non_TargetLesionProgressiveDisease = DICOMControlledTerminologyDefinitionsCode(
+        "112047"
+    )
     """
     The current response evaluation for treatment of solid tumors, according to a
     method such as RECIST
@@ -8643,28 +9035,36 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     the deviation from the mean is squared
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    StandardDeviationOfAttenuationCoefficient = DICOMControlledTerminologyDefinitionsCode("112183")
+    StandardDeviationOfAttenuationCoefficient = (
+        DICOMControlledTerminologyDefinitionsCode("112183")
+    )
     """
     American College of Radiology. ACR Standard for the Performance of Pediatric
     and Adult Thoracic Computed Tomography (CT). In: Standards. Reston, Va:
     2001:103-107
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PerformanceOfPediatricAndAdultThoracicCT = DICOMControlledTerminologyDefinitionsCode("112184")
+    PerformanceOfPediatricAndAdultThoracicCT = (
+        DICOMControlledTerminologyDefinitionsCode("112184")
+    )
     """
     American College of Radiology. ACR Standard for the Performance of Computed
     Tomography for the Detection of Pulmonary Embolism in Adults. In: Standards.
     Reston, Va: 2001:109-113
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PerformanceOfCTForDetectionOfPulmonaryEmbolismInAdults = DICOMControlledTerminologyDefinitionsCode("112185")
+    PerformanceOfCTForDetectionOfPulmonaryEmbolismInAdults = (
+        DICOMControlledTerminologyDefinitionsCode("112185")
+    )
     """
     American College of Radiology. ACR Standard for the Performance of High-
     Resolution Computed Tomography (HRCT) of the Lungs in Adults. In: Standards.
     Reston, Va: 2001:115-118
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PerformanceOfHigh_ResolutionCTOfTheLungsInAdults = DICOMControlledTerminologyDefinitionsCode("112186")
+    PerformanceOfHigh_ResolutionCTOfTheLungsInAdults = (
+        DICOMControlledTerminologyDefinitionsCode("112186")
+    )
     """
     The method of calculation of a measurement or other type of numeric value is
     not specified
@@ -8720,7 +9120,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     A measured or calculated percentage of vascular calcification
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PercentageOfVascularCalcification = DICOMControlledTerminologyDefinitionsCode("112198")
+    PercentageOfVascularCalcification = DICOMControlledTerminologyDefinitionsCode(
+        "112198"
+    )
     """
     A measured or calculated mass of vascular calcification
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -8731,13 +9133,17 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     a cluster
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    AverageCalcificationDistanceInACalcificationCluster = DICOMControlledTerminologyDefinitionsCode("112200")
+    AverageCalcificationDistanceInACalcificationCluster = (
+        DICOMControlledTerminologyDefinitionsCode("112200")
+    )
     """
     The standard deviation of nearest neighbor distance of all individual
     microcalcifications in a cluster
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    StandardDeviationDistanceOfCalcificationsInACluster = DICOMControlledTerminologyDefinitionsCode("112201")
+    StandardDeviationDistanceOfCalcificationsInACluster = (
+        DICOMControlledTerminologyDefinitionsCode("112201")
+    )
     """
     A structured report containing the results of computer-aided detection or
     diagnosis applied to colon imaging and associated clinical information
@@ -8775,7 +9181,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Patient orientation with respect to downward direction (gravity)
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RecumbentPatientPositionWithRespectToGravity = DICOMControlledTerminologyDefinitionsCode("112228")
+    RecumbentPatientPositionWithRespectToGravity = (
+        DICOMControlledTerminologyDefinitionsCode("112228")
+    )
     """
     Distinguishes a part of a segmentation
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -8806,7 +9214,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Proposal", Radiology, July 2005; 236:3-9
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    C0_InadequateStudy_AwaitingPriorComparisons = DICOMControlledTerminologyDefinitionsCode("112240")
+    C0_InadequateStudy_AwaitingPriorComparisons = (
+        DICOMControlledTerminologyDefinitionsCode("112240")
+    )
     """
     The study has a normal colon or benign lesion, with the recommendation to
     continue routine screening. The study has no visible abnormalities of the
@@ -8827,7 +9237,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     2005; 236:3-9
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    C2_IntermediatePolypOrIndeterminateFinding = DICOMControlledTerminologyDefinitionsCode("112242")
+    C2_IntermediatePolypOrIndeterminateFinding = (
+        DICOMControlledTerminologyDefinitionsCode("112242")
+    )
     """
     The study has a polyp, possibly advanced adenoma, and a follow-up colonoscopy
     is recommended. The study has a polyp greater than or equal to ten millimeters
@@ -8836,7 +9248,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Proposal", Radiology, July 2005; 236:3-9
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    C3_Polyp_PossiblyAdvancedAdenoma = DICOMControlledTerminologyDefinitionsCode("112243")
+    C3_Polyp_PossiblyAdvancedAdenoma = DICOMControlledTerminologyDefinitionsCode(
+        "112243"
+    )
     """
     The study has a colonic mass, likely malignant, and surgical consultation is
     recommended. The lesion compromises bowel lumen and demonstrates extracolonic
@@ -8851,7 +9265,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Technical Standards.Reston, Va: American College of Radiology;2006:371-376
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ACRGuideline_PerformanceOfAdultCTColonography = DICOMControlledTerminologyDefinitionsCode("112248")
+    ACRGuideline_PerformanceOfAdultCTColonography = (
+        DICOMControlledTerminologyDefinitionsCode("112248")
+    )
     """
     American College of Radiology Technical Standard for Diagnostic Medical
     Physics Performance Monitoring of Computed Tomography (CT) Equipment. In:
@@ -8859,7 +9275,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Radiology;2006:945-948
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ACRStandard_CTMedicalPhysicsPerformanceMonitoring = DICOMControlledTerminologyDefinitionsCode("112249")
+    ACRStandard_CTMedicalPhysicsPerformanceMonitoring = (
+        DICOMControlledTerminologyDefinitionsCode("112249")
+    )
     """
     View Orientation Modifier indicates that the view orientation of the imaging
     plane is rotated +45° along the cranial-caudal axis
@@ -8962,7 +9380,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     femoral head where only the surface is replaced
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    FemoralHeadResurfacingComponent = DICOMControlledTerminologyDefinitionsCode("112317")
+    FemoralHeadResurfacingComponent = DICOMControlledTerminologyDefinitionsCode(
+        "112317"
+    )
     """
     Fixation using a pin
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -9003,18 +9423,24 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Planning of a Hip Replacement, by an unspecified method
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    GenericPlanningForHipReplacement = DICOMControlledTerminologyDefinitionsCode("112342")
+    GenericPlanningForHipReplacement = DICOMControlledTerminologyDefinitionsCode(
+        "112342"
+    )
     """
     Planning of Knee Replacement, by an unspecified method
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    GenericPlanningForKneeReplacement = DICOMControlledTerminologyDefinitionsCode("112343")
+    GenericPlanningForKneeReplacement = DICOMControlledTerminologyDefinitionsCode(
+        "112343"
+    )
     """
     Planning of Hip Replacement according to the procedure of M. E. Müller [Eggli
     et. al.1998]
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    M_llerMethodPlanningForHipReplacement = DICOMControlledTerminologyDefinitionsCode("112344")
+    M_llerMethodPlanningForHipReplacement = DICOMControlledTerminologyDefinitionsCode(
+        "112344"
+    )
     """
     A Report containing the results of an Implantation Planning Activity
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -9113,7 +9539,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     but are somehow related
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RelatedPatientDataNotUsedDuringPlanning = DICOMControlledTerminologyDefinitionsCode("112364")
+    RelatedPatientDataNotUsedDuringPlanning = DICOMControlledTerminologyDefinitionsCode(
+        "112364"
+    )
     """
     Implantation Reports that are somehow related; e.g. contemporaneous
     implantations that are independent
@@ -9129,7 +9557,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Information that is intended to be used intra-operatively
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PlanningInformationForIntraoperativeUsage = DICOMControlledTerminologyDefinitionsCode("112367")
+    PlanningInformationForIntraoperativeUsage = (
+        DICOMControlledTerminologyDefinitionsCode("112367")
+    )
     """
     Position of the patient on the operating room table
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -9164,7 +9594,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     One Implant Component that is connected to another Implant Component
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ConnectedImplantationPlanComponent = DICOMControlledTerminologyDefinitionsCode("112374")
+    ConnectedImplantationPlanComponent = DICOMControlledTerminologyDefinitionsCode(
+        "112374"
+    )
     """
     The method used for planning
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -9174,38 +9606,52 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Defines the exact value that was planned for translation
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    DegreeOfFreedomExactTranslationalValue = DICOMControlledTerminologyDefinitionsCode("112376")
+    DegreeOfFreedomExactTranslationalValue = DICOMControlledTerminologyDefinitionsCode(
+        "112376"
+    )
     """
     Defines the minimum value that was planned for translation
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    DegreeOfFreedomMinimumTranslationalValue = DICOMControlledTerminologyDefinitionsCode("112377")
+    DegreeOfFreedomMinimumTranslationalValue = (
+        DICOMControlledTerminologyDefinitionsCode("112377")
+    )
     """
     Defines the maximum value that was planned for translation
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    DegreeOfFreedomMaximumTranslationalValue = DICOMControlledTerminologyDefinitionsCode("112378")
+    DegreeOfFreedomMaximumTranslationalValue = (
+        DICOMControlledTerminologyDefinitionsCode("112378")
+    )
     """
     Defines the exact value that was planned for rotation
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    DegreeOfFreedomExactRotationalTranslationValue = DICOMControlledTerminologyDefinitionsCode("112379")
+    DegreeOfFreedomExactRotationalTranslationValue = (
+        DICOMControlledTerminologyDefinitionsCode("112379")
+    )
     """
     Defines the minimum value that was planned for rotation
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    DegreeOfFreedomMinimumRotationalValue = DICOMControlledTerminologyDefinitionsCode("112380")
+    DegreeOfFreedomMinimumRotationalValue = DICOMControlledTerminologyDefinitionsCode(
+        "112380"
+    )
     """
     Defines the maximum value that was planned for rotation
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    DegreeOfFreedomMaximumRotationalValue = DICOMControlledTerminologyDefinitionsCode("112381")
+    DegreeOfFreedomMaximumRotationalValue = DICOMControlledTerminologyDefinitionsCode(
+        "112381"
+    )
     """
     Procedure step protocol for photographic imaging of surgical procedures,
     including photography of specimens collected
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Peri_operativePhotographicImaging = DICOMControlledTerminologyDefinitionsCode("112700")
+    Peri_operativePhotographicImaging = DICOMControlledTerminologyDefinitionsCode(
+        "112700"
+    )
     """
     Procedure step protocol for imaging gross specimens, typically with a
     photographic camera (modality XC), and planning further dissection
@@ -9320,7 +9766,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     imaged for suppression from inclusion in image object
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    HighThresholdEmptyTileSuppression = DICOMControlledTerminologyDefinitionsCode("112720")
+    HighThresholdEmptyTileSuppression = DICOMControlledTerminologyDefinitionsCode(
+        "112720"
+    )
     """
     Tiles without tissue imaged are not suppressed from inclusion in image object
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -9491,7 +9939,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     referenced securely with either Digital Signatures or MACs
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    SignedCompleteAcquisitionContent = DICOMControlledTerminologyDefinitionsCode("113035")
+    SignedCompleteAcquisitionContent = DICOMControlledTerminologyDefinitionsCode(
+        "113035"
+    )
     """
     A list of frames or single-frame or entire multi-frame instances that together
     constitute a set for some purpose, such as might be displayed together in the
@@ -9505,7 +9955,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     improperly labeled image could lead to dangerous surgical decisions
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RejectedForPatientSafetyReasons = DICOMControlledTerminologyDefinitionsCode("113037")
+    RejectedForPatientSafetyReasons = DICOMControlledTerminologyDefinitionsCode(
+        "113037"
+    )
     """
     List of objects that were acquired using an incorrect modality worklist entry,
     and that should not be used, since they may be incorrectly identified
@@ -9575,7 +10027,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     metabolites (i.e, at specific frequencies)
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    MetaboliteMapsFromSpectroscopyData = DICOMControlledTerminologyDefinitionsCode("113050")
+    MetaboliteMapsFromSpectroscopyData = DICOMControlledTerminologyDefinitionsCode(
+        "113050"
+    )
     """
     Values are derived by calculating the pixel by pixel minimum of two or more
     images
@@ -9748,7 +10202,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Creatine resonance peaks
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    N_acetylaspartate_CreatineRatio = DICOMControlledTerminologyDefinitionsCode("113082")
+    N_acetylaspartate_CreatineRatio = DICOMControlledTerminologyDefinitionsCode(
+        "113082"
+    )
     """
     For single-proton MR spectroscopy, the ratio between the N-acetylaspartate and
     Choline resonance peaks
@@ -9790,19 +10246,25 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     referenced 3D volume data set
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Spatially_relatedFramesExtractedFromTheVolume = DICOMControlledTerminologyDefinitionsCode("113091")
+    Spatially_relatedFramesExtractedFromTheVolume = (
+        DICOMControlledTerminologyDefinitionsCode("113091")
+    )
     """
     Temporally-related frames in this image are representative frames from the
     referenced 3D volume data set
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Temporally_relatedFramesExtractedFromTheSetOfVolumes = DICOMControlledTerminologyDefinitionsCode("113092")
+    Temporally_relatedFramesExtractedFromTheSetOfVolumes = (
+        DICOMControlledTerminologyDefinitionsCode("113092")
+    )
     """
     Conversion of a polar coordinate image to rectangular (Cartesian) coordinate
     image
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PolarToRectangularScanConversion = DICOMControlledTerminologyDefinitionsCode("113093")
+    PolarToRectangularScanConversion = DICOMControlledTerminologyDefinitionsCode(
+        "113093"
+    )
     """
     For single-proton MR spectroscopy, the resonance peak corresponding to
     creatine and choline
@@ -9826,7 +10288,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     at distinct X-Ray energies
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Multi_energyProportionalWeighting = DICOMControlledTerminologyDefinitionsCode("113097")
+    Multi_energyProportionalWeighting = DICOMControlledTerminologyDefinitionsCode(
+        "113097"
+    )
     """
     De-identification using a profile defined in PS3.15 that requires removing all
     information related to the identity and demographic characteristics of the
@@ -9838,7 +10302,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     including graphics or overlays
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    BasicApplicationConfidentialityProfile = DICOMControlledTerminologyDefinitionsCode("113100")
+    BasicApplicationConfidentialityProfile = DICOMControlledTerminologyDefinitionsCode(
+        "113100"
+    )
     """
     Additional de-identification according to an option defined in PS3.15 that
     requires any information burned in to the Pixel Data corresponding to the
@@ -9854,7 +10320,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     or a reconstruction of a set of instances
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    CleanRecognizableVisualFeaturesOption = DICOMControlledTerminologyDefinitionsCode("113102")
+    CleanRecognizableVisualFeaturesOption = DICOMControlledTerminologyDefinitionsCode(
+        "113102"
+    )
     """
     Additional de-identification according to an option defined in PS3.15 that
     requires that any information encoded in graphics, text annotations or
@@ -9885,7 +10353,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     dates and times be retained,
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RetainLongitudinalTemporalInformationFullDatesOption = DICOMControlledTerminologyDefinitionsCode("113106")
+    RetainLongitudinalTemporalInformationFullDatesOption = (
+        DICOMControlledTerminologyDefinitionsCode("113106")
+    )
     """
     Retention of information that would otherwise be removed during de-
     identification according to an option defined in PS3.15 that requires that any
@@ -9893,7 +10363,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     e.g. Study Date and Time
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RetainLongitudinalTemporalInformationModifiedDatesOption = DICOMControlledTerminologyDefinitionsCode("113107")
+    RetainLongitudinalTemporalInformationModifiedDatesOption = (
+        DICOMControlledTerminologyDefinitionsCode("113107")
+    )
     """
     Retention of information that would otherwise be removed during de-
     identification according to an option defined in PS3.15 that requires that any
@@ -9902,7 +10374,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     (height) and Weight
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RetainPatientCharacteristicsOption = DICOMControlledTerminologyDefinitionsCode("113108")
+    RetainPatientCharacteristicsOption = DICOMControlledTerminologyDefinitionsCode(
+        "113108"
+    )
     """
     Retention of information that would otherwise be removed during de-
     identification according to an option defined in PS3.15 that requires that any
@@ -9929,22 +10403,30 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     The procedure report is a Radiopharmaceutical Radiation Dose report
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RadiopharmaceuticalRadiationDoseReport = DICOMControlledTerminologyDefinitionsCode("113500")
+    RadiopharmaceuticalRadiationDoseReport = DICOMControlledTerminologyDefinitionsCode(
+        "113500"
+    )
     """
     Information pertaining to the administration of a radiopharmaceutical
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RadiopharmaceuticalAdministration = DICOMControlledTerminologyDefinitionsCode("113502")
+    RadiopharmaceuticalAdministration = DICOMControlledTerminologyDefinitionsCode(
+        "113502"
+    )
     """
     Unique identification of a single radiopharmaceutical administration event
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RadiopharmaceuticalAdministrationEventUID = DICOMControlledTerminologyDefinitionsCode("113503")
+    RadiopharmaceuticalAdministrationEventUID = (
+        DICOMControlledTerminologyDefinitionsCode("113503")
+    )
     """
     Initial signs or symptoms of extravasation
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    IntravenousExtravasationSymptoms = DICOMControlledTerminologyDefinitionsCode("113505")
+    IntravenousExtravasationSymptoms = DICOMControlledTerminologyDefinitionsCode(
+        "113505"
+    )
     """
     The estimated percentage of administered activity lost at the injection site.
     The estimation includes extravasation, paravenous administration and leakage
@@ -9966,12 +10448,16 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     administration
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Pre_AdministrationMeasuredActivity = DICOMControlledTerminologyDefinitionsCode("113508")
+    Pre_AdministrationMeasuredActivity = DICOMControlledTerminologyDefinitionsCode(
+        "113508"
+    )
     """
     Radioactivity measurement of radiopharmaceutical after the administration
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Post_AdministrationMeasuredActivity = DICOMControlledTerminologyDefinitionsCode("113509")
+    Post_AdministrationMeasuredActivity = DICOMControlledTerminologyDefinitionsCode(
+        "113509"
+    )
     """
     Registered drug establishment code for product, coding scheme example is NDC
     or RxNorm
@@ -9984,14 +10470,18 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     radiation dose measure) to be administered to the patient
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RadiopharmaceuticalDispenseUnitIdentifier = DICOMControlledTerminologyDefinitionsCode("113511")
+    RadiopharmaceuticalDispenseUnitIdentifier = (
+        DICOMControlledTerminologyDefinitionsCode("113511")
+    )
     """
     Identifies the vial, batch or lot number from which the individual dispense
     radiopharmaceutical quantity (dose) is produced. The Radiopharmaceutical
     Dispense Unit Identifier records the identification for each individual dose
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RadiopharmaceuticalLotIdentifier = DICOMControlledTerminologyDefinitionsCode("113512")
+    RadiopharmaceuticalLotIdentifier = DICOMControlledTerminologyDefinitionsCode(
+        "113512"
+    )
     """
     Identifies the lot or unit serial number for the reagent component for the
     radiopharmaceutical
@@ -10071,7 +10561,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     institution itself
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    InstitutionallyApprovedEstimates = DICOMControlledTerminologyDefinitionsCode("113529")
+    InstitutionallyApprovedEstimates = DICOMControlledTerminologyDefinitionsCode(
+        "113529"
+    )
     """
     Reference authority The reported organ dose is based on an Investigation new
     drug
@@ -10146,7 +10638,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Formula
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Cockroft_GaultFormulaEstimationOfGFR = DICOMControlledTerminologyDefinitionsCode("113570")
+    Cockroft_GaultFormulaEstimationOfGFR = DICOMControlledTerminologyDefinitionsCode(
+        "113570"
+    )
     """
     The measurement method of the Glomerular Filtration Rate is CKD-EPI Formula
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -10161,29 +10655,39 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     The measurement method of the Glomerular Filtration Rate is non-black MDRD
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    GlomerularFiltrationRateNon_black_MDRD_ = DICOMControlledTerminologyDefinitionsCode("113573")
+    GlomerularFiltrationRateNon_black_MDRD_ = DICOMControlledTerminologyDefinitionsCode(
+        "113573"
+    )
     """
     The measurement method of the Glomerular Filtration Rate is black (MDRD)
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    GlomerularFiltrationRateBlack_MDRD_ = DICOMControlledTerminologyDefinitionsCode("113574")
+    GlomerularFiltrationRateBlack_MDRD_ = DICOMControlledTerminologyDefinitionsCode(
+        "113574"
+    )
     """
     The measurement method of the Glomerular Filtration Rate is female (MDRD)
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    GlomerularFiltrationRateFemale_MDRD_ = DICOMControlledTerminologyDefinitionsCode("113575")
+    GlomerularFiltrationRateFemale_MDRD_ = DICOMControlledTerminologyDefinitionsCode(
+        "113575"
+    )
     """
     The measurement method of the Glomerular Filtration Rate is Cystatin-based
     formula
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    GlomerularFiltrationRateCystatin_basedFormula = DICOMControlledTerminologyDefinitionsCode("113576")
+    GlomerularFiltrationRateCystatin_basedFormula = (
+        DICOMControlledTerminologyDefinitionsCode("113576")
+    )
     """
     The measurement method of the Glomerular Filtration Rate is Creatinine-based
     formula (Schwartz)
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    GlomerularFiltrationRateCreatinine_basedFormula_Schwartz_ = DICOMControlledTerminologyDefinitionsCode("113577")
+    GlomerularFiltrationRateCreatinine_basedFormula_Schwartz_ = (
+        DICOMControlledTerminologyDefinitionsCode("113577")
+    )
     """
     Small body thickness for calcium scoring adjustment. Lateral thickness is
     measured from skin-to-skin, at the level of the proximal ascending aorta, from
@@ -10197,7 +10701,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     an A/P localizer image
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Medium_32_0_38_0CmLateralThickness = DICOMControlledTerminologyDefinitionsCode("113602")
+    Medium_32_0_38_0CmLateralThickness = DICOMControlledTerminologyDefinitionsCode(
+        "113602"
+    )
     """
     Large body thickness for calcium scoring adjustment. Lateral thickness is
     measured from skin-to-skin, at the level of the proximal ascending aorta, from
@@ -10335,13 +10841,17 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     finding on an orthogonal view
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    OrthogonalLocationArcInnerMargin = DICOMControlledTerminologyDefinitionsCode("113670")
+    OrthogonalLocationArcInnerMargin = DICOMControlledTerminologyDefinitionsCode(
+        "113670"
+    )
     """
     Connected line segments indicating the outer location of a finding on an
     orthogonal view
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    OrthogonalLocationArcOuterMargin = DICOMControlledTerminologyDefinitionsCode("113671")
+    OrthogonalLocationArcOuterMargin = DICOMControlledTerminologyDefinitionsCode(
+        "113671"
+    )
     """
     This procedure is intended to gather data that is used for calibration or
     other quality control purposes
@@ -10368,13 +10878,17 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     A phantom acceptable for the ACR Mammography Accreditation program
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ACRAccreditationPhantom_Mammography = DICOMControlledTerminologyDefinitionsCode("113684")
+    ACRAccreditationPhantom_Mammography = DICOMControlledTerminologyDefinitionsCode(
+        "113684"
+    )
     """
     A phantom acceptable for the ACR Stereotactic Breast Biopsy Accreditation
     program
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ACRAccreditationPhantom_StereotacticBreastBiopsy = DICOMControlledTerminologyDefinitionsCode("113685")
+    ACRAccreditationPhantom_StereotacticBreastBiopsy = (
+        DICOMControlledTerminologyDefinitionsCode("113685")
+    )
     """
     A phantom acceptable for the ACR SPECT Accreditation program (but not for PET)
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -10390,13 +10904,17 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Accreditation programs
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ACRAccreditationPhantom_ECT_PET = DICOMControlledTerminologyDefinitionsCode("113688")
+    ACRAccreditationPhantom_ECT_PET = DICOMControlledTerminologyDefinitionsCode(
+        "113688"
+    )
     """
     A PET faceplate (made to fit an existing flangeless or flanged ECT phantom)
     acceptable for the ACR PET Accreditation program
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ACRAccreditationPhantom_PETFaceplate = DICOMControlledTerminologyDefinitionsCode("113689")
+    ACRAccreditationPhantom_PETFaceplate = DICOMControlledTerminologyDefinitionsCode(
+        "113689"
+    )
     """
     A phantom used for CTDI measurement in head modes according to IEC 60601-2-44,
     Ed.2.1 (Head 16 cm diameter Polymethyl methacrylate PMMA)
@@ -10493,7 +11011,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     of the including report)
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    AcquisitionDoseAreaProductTotal = DICOMControlledTerminologyDefinitionsCode("113727")
+    AcquisitionDoseAreaProductTotal = DICOMControlledTerminologyDefinitionsCode(
+        "113727"
+    )
     """
     Dose applied in Fluoroscopy Modes, related to Reference Point (RP). (in the
     scope of the including report)
@@ -10518,7 +11038,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     from irradiation events performed with high dose (acquisition)
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    TotalNumberOfRadiographicFrames = DICOMControlledTerminologyDefinitionsCode("113731")
+    TotalNumberOfRadiographicFrames = DICOMControlledTerminologyDefinitionsCode(
+        "113731"
+    )
     """
     Mode of application of X-Rays during Fluoroscopy
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -10779,14 +11301,18 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     ratio is derived by means of Monte Carlo computations
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    DLPToEConversionViaMCComputation = DICOMControlledTerminologyDefinitionsCode("113800")
+    DLPToEConversionViaMCComputation = DICOMControlledTerminologyDefinitionsCode(
+        "113800"
+    )
     """
     Effective Dose evaluation from the product of the Mean CTDIfreeair and the
     ratio E/CTDIfreeair (mSv/mGy), where the ratio is derived by means of Monte
     Carlo computations
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    CTDIfreeairToEConversionViaMCComputation = DICOMControlledTerminologyDefinitionsCode("113801")
+    CTDIfreeairToEConversionViaMCComputation = (
+        DICOMControlledTerminologyDefinitionsCode("113801")
+    )
     """
     Effective Dose evaluation from the product of Dose Length Product (DLP) and
     the Effective Dose Conversion Factor (E/DLP in units of mSv/mGy-cm), where the
@@ -10801,7 +11327,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     dosimetric measurements with an anthropomorphic phantom
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    CTDIfreeairToEConversionViaMeasurement = DICOMControlledTerminologyDefinitionsCode("113803")
+    CTDIfreeairToEConversionViaMeasurement = DICOMControlledTerminologyDefinitionsCode(
+        "113803"
+    )
     """
     The CT acquisition was performed by acquiring single or multi detector data
     while rotating the source about the gantry while the table is not moving.
@@ -11127,7 +11655,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     (7)
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    _30cmInFrontOfImageInputSurface = DICOMControlledTerminologyDefinitionsCode("113861")
+    _30cmInFrontOfImageInputSurface = DICOMControlledTerminologyDefinitionsCode(
+        "113861"
+    )
     """
     1cm above the patient tabletop or cradle; See FDA Federal Performance Standard
     for Diagnostic X-Ray Systems §1020.32(d) (7)
@@ -11155,7 +11685,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     see 900.2(uu)
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    EntranceExposureToA4_2CmBreastThickness = DICOMControlledTerminologyDefinitionsCode("113865")
+    EntranceExposureToA4_2CmBreastThickness = DICOMControlledTerminologyDefinitionsCode(
+        "113865"
+    )
     """
     The data is copied from information present in the image attributes; e.g. dose
     attributes such as CTDIvol (0018,9345)
@@ -11175,7 +11707,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     as images by the irradiating device
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    DerivedFromHuman_ReadableReports = DICOMControlledTerminologyDefinitionsCode("113868")
+    DerivedFromHuman_ReadableReports = DICOMControlledTerminologyDefinitionsCode(
+        "113868"
+    )
     """
     The name of a specific person
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -11253,14 +11787,18 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     defined by a specified Frame of Reference
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    TopZLocationOfReconstructableVolume = DICOMControlledTerminologyDefinitionsCode("113895")
+    TopZLocationOfReconstructableVolume = DICOMControlledTerminologyDefinitionsCode(
+        "113895"
+    )
     """
     The Z location that is the bottom (lowest Z value) of the Reconstructable
     Volume. Specified as the Z component within the Patient Coordinate System
     defined by a specified Frame of Reference
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    BottomZLocationOfReconstructableVolume = DICOMControlledTerminologyDefinitionsCode("113896")
+    BottomZLocationOfReconstructableVolume = DICOMControlledTerminologyDefinitionsCode(
+        "113896"
+    )
     """
     The Z location that is the top (highest Z value) of the scanning length.
     Specified as the Z component within the Patient Coordinate System defined by a
@@ -11274,7 +11812,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     specified Frame of Reference
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    BottomZLocationOfScanningLength = DICOMControlledTerminologyDefinitionsCode("113898")
+    BottomZLocationOfScanningLength = DICOMControlledTerminologyDefinitionsCode(
+        "113898"
+    )
     """
     The range along the z axis of the total volume irradiated, per IEC 60601-2-44,
     Ed. 3, 203.115(b). The start and stop of loading corresponding to the outer
@@ -11322,7 +11862,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Dose Check Standard
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    AccumulatedCTDIvolForwardEstimate = DICOMControlledTerminologyDefinitionsCode("113906")
+    AccumulatedCTDIvolForwardEstimate = DICOMControlledTerminologyDefinitionsCode(
+        "113906"
+    )
     """
     Reason provided for proceeding with a procedure that is projected to exceed a
     configured dose value
@@ -11343,7 +11885,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Flag denoting whether a CTDIvol Notification Value was configured
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    CTDIvolNotificationValueConfigured = DICOMControlledTerminologyDefinitionsCode("113910")
+    CTDIvolNotificationValueConfigured = DICOMControlledTerminologyDefinitionsCode(
+        "113910"
+    )
     """
     Dose Length Product value configured to trigger a notification for a given
     protocol element
@@ -11377,14 +11921,18 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Type, amount and route of radioactive substance administered
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RadioactiveSubstanceAdministered = DICOMControlledTerminologyDefinitionsCode("113922")
+    RadioactiveSubstanceAdministered = DICOMControlledTerminologyDefinitionsCode(
+        "113922"
+    )
     """
     Exposure to ionizing radiation and associated preventive measures used to
     reduce the exposure of parts of the body like lead apron or eye, thyroid gland
     or gonad protection
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RadiationExposureAndProtectionInformation = DICOMControlledTerminologyDefinitionsCode("113923")
+    RadiationExposureAndProtectionInformation = (
+        DICOMControlledTerminologyDefinitionsCode("113923")
+    )
     """
     The Size-Specific Dose Estimate is a patient dose estimate that takes into
     account the size of the patient, such as described in AAPM Report 204 by using
@@ -11429,14 +11977,18 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Table 2A (16cm phantom) of AAPM Report 204
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    AAPM204SumOfLateralAndAPDimension = DICOMControlledTerminologyDefinitionsCode("113936")
+    AAPM204SumOfLateralAndAPDimension = DICOMControlledTerminologyDefinitionsCode(
+        "113936"
+    )
     """
     The Size Specific Dose Estimation is computed using Table 1D (32cm phantom) or
     Table 2D (16cm phantom) using an effective diameter estimated from the
     patient's age using Table 3 of AAPM Report 204
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    AAPM204EffectiveDiameterEstimatedFromPatientAge = DICOMControlledTerminologyDefinitionsCode("113937")
+    AAPM204EffectiveDiameterEstimatedFromPatientAge = (
+        DICOMControlledTerminologyDefinitionsCode("113937")
+    )
     """
     Values calculated from other existing parameters
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -11535,20 +12087,26 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     An integrated projection radiography system capable of fluoroscopy
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Fluoroscopy_GuidedProjectionRadiographySystem = DICOMControlledTerminologyDefinitionsCode("113957")
+    Fluoroscopy_GuidedProjectionRadiographySystem = (
+        DICOMControlledTerminologyDefinitionsCode("113957")
+    )
     """
     A projection radiography system where the X-Ray detector, X-Ray Source and
     gantry components are integrated and the managing system is able to access
     details of each component
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    IntegratedProjectionRadiographySystem = DICOMControlledTerminologyDefinitionsCode("113958")
+    IntegratedProjectionRadiographySystem = DICOMControlledTerminologyDefinitionsCode(
+        "113958"
+    )
     """
     A projection radiography system where the X-Ray detector, X-Ray Source and
     gantry components are not integrated; e.g. cassette-based CR and DR systems
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Cassette_basedProjectionRadiographySystem = DICOMControlledTerminologyDefinitionsCode("113959")
+    Cassette_basedProjectionRadiographySystem = (
+        DICOMControlledTerminologyDefinitionsCode("113959")
+    )
     """
     Description of the algorithm used when reconstructing the image from the data
     acquired during the acquisition process
@@ -11766,18 +12324,24 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     the context of the current observation
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PersonObserver_sOrganizationName = DICOMControlledTerminologyDefinitionsCode("121009")
+    PersonObserver_sOrganizationName = DICOMControlledTerminologyDefinitionsCode(
+        "121009"
+    )
     """
     Organizational role of human observer for the context of the current
     observation
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PersonObserver_sRoleInTheOrganization = DICOMControlledTerminologyDefinitionsCode("121010")
+    PersonObserver_sRoleInTheOrganization = DICOMControlledTerminologyDefinitionsCode(
+        "121010"
+    )
     """
     Procedural role of human observer for the context of the current observation
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PersonObserver_sRoleInThisProcedure = DICOMControlledTerminologyDefinitionsCode("121011")
+    PersonObserver_sRoleInThisProcedure = DICOMControlledTerminologyDefinitionsCode(
+        "121011"
+    )
     """
     Unique identifier of automated device that created the observations
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -11811,7 +12375,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     observations were being made
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    DeviceObserverPhysicalLocationDuringObservation = DICOMControlledTerminologyDefinitionsCode("121017")
+    DeviceObserverPhysicalLocationDuringObservation = (
+        DICOMControlledTerminologyDefinitionsCode("121017")
+    )
     """
     Unique identifier for the Study or Requested Procedure
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -11976,7 +12542,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     its descendants
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    LanguageOfContentItemAndDescendants = DICOMControlledTerminologyDefinitionsCode("121049")
+    LanguageOfContentItemAndDescendants = DICOMControlledTerminologyDefinitionsCode(
+        "121049"
+    )
     """
     The human readable meaning of the name component of a name-value pair that is
     equivalent to the post-coordinated meaning conveyed by the coded name and its
@@ -12334,12 +12902,16 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     SOP Instance UID of a Performed Procedure Step
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PerformedProcedureStepSOPInstanceUID = DICOMControlledTerminologyDefinitionsCode("121126")
+    PerformedProcedureStepSOPInstanceUID = DICOMControlledTerminologyDefinitionsCode(
+        "121126"
+    )
     """
     SOP Class UID of a Performed Procedure Step
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PerformedProcedureStepSOPClassUID = DICOMControlledTerminologyDefinitionsCode("121127")
+    PerformedProcedureStepSOPClassUID = DICOMControlledTerminologyDefinitionsCode(
+        "121127"
+    )
     """
     Duration of a step, action, or phase of a procedure
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -12455,7 +13027,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Person administering drug/contrast
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PersonAdministeringDrug_contrast = DICOMControlledTerminologyDefinitionsCode("121152")
+    PersonAdministeringDrug_contrast = DICOMControlledTerminologyDefinitionsCode(
+        "121152"
+    )
     """
     Assessment of the risk a coronary lesion presents to the health of a patient
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -12604,7 +13178,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     observations
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    DeviceSubjectPhysicalLocationDuringObservation = DICOMControlledTerminologyDefinitionsCode("121197")
+    DeviceSubjectPhysicalLocationDuringObservation = (
+        DICOMControlledTerminologyDefinitionsCode("121197")
+    )
     """
     Unique Identifier of a device that is the subject of observations
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -12663,25 +13239,33 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     dimensional region in a single image
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VolumeEstimatedFromSingle2DRegion = DICOMControlledTerminologyDefinitionsCode("121216")
+    VolumeEstimatedFromSingle2DRegion = DICOMControlledTerminologyDefinitionsCode(
+        "121216"
+    )
     """
     A three-dimensional numeric measurement that is approximate, based on three or
     more non-coplanar two-dimensional image regions
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VolumeEstimatedFromThreeOrMoreNon_coplanar2DRegions = DICOMControlledTerminologyDefinitionsCode("121217")
+    VolumeEstimatedFromThreeOrMoreNon_coplanar2DRegions = (
+        DICOMControlledTerminologyDefinitionsCode("121217")
+    )
     """
     A three-dimensional numeric measurement that is approximate, based on two non-
     coplanar two-dimensional image regions
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VolumeEstimatedFromTwoNon_coplanar2DRegions = DICOMControlledTerminologyDefinitionsCode("121218")
+    VolumeEstimatedFromTwoNon_coplanar2DRegions = (
+        DICOMControlledTerminologyDefinitionsCode("121218")
+    )
     """
     A three-dimensional numeric measurement of the bounding region of a three-
     dimensional region of interest in an image set
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VolumeOfBoundingThreeDimensionalRegion = DICOMControlledTerminologyDefinitionsCode("121219")
+    VolumeOfBoundingThreeDimensionalRegion = DICOMControlledTerminologyDefinitionsCode(
+        "121219"
+    )
     """
     A three-dimensional numeric measurement of the bounding sphere of a three-
     dimensional region of interest in an image set
@@ -12741,7 +13325,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Patient exposure to ionizing radiation (procedure)
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PatientExposureToIonizingRadiation = DICOMControlledTerminologyDefinitionsCode("121290")
+    PatientExposureToIonizingRadiation = DICOMControlledTerminologyDefinitionsCode(
+        "121290"
+    )
     """
     The act of communicating actionable findings to a responsible receiver
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -12773,19 +13359,25 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     activity, measured simultaneously with the acquisition of this Image
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    SimultaneousRespiratoryWaveform = DICOMControlledTerminologyDefinitionsCode("121305")
+    SimultaneousRespiratoryWaveform = DICOMControlledTerminologyDefinitionsCode(
+        "121305"
+    )
     """
     Arterial pulse waveform obtained simultaneously with acquisition of a
     referencing image
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    SimultaneousArterialPulseWaveform = DICOMControlledTerminologyDefinitionsCode("121306")
+    SimultaneousArterialPulseWaveform = DICOMControlledTerminologyDefinitionsCode(
+        "121306"
+    )
     """
     Phonocardiographic waveform obtained simultaneously with acquisition of a
     referencing image
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    SimultaneousPhonocardiographicWaveform = DICOMControlledTerminologyDefinitionsCode("121307")
+    SimultaneousPhonocardiographicWaveform = DICOMControlledTerminologyDefinitionsCode(
+        "121307"
+    )
     """
     Image providing an anatomical reference on the patient under examination, for
     the purpose of defining the location of the ensuing imaging
@@ -12820,7 +13412,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Image related to a non-image information object
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ImagesRelatedToStandaloneObject = DICOMControlledTerminologyDefinitionsCode("121316")
+    ImagesRelatedToStandaloneObject = DICOMControlledTerminologyDefinitionsCode(
+        "121316"
+    )
     """
     Image where signals are identified and separated according to their
     frequencies; e.g. to identify individual chemicals, or individual nuclei in a
@@ -12833,7 +13427,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     the phase signal of the Water
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    SpectroscopyDataForWaterPhaseCorrection = DICOMControlledTerminologyDefinitionsCode("121318")
+    SpectroscopyDataForWaterPhaseCorrection = DICOMControlledTerminologyDefinitionsCode(
+        "121318"
+    )
     """
     An image that has not already been lossy compressed that is used as the source
     for creation of a lossy compressed image
@@ -12844,17 +13440,23 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Image used as the mask for an image processing operation, such as subtraction
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    MaskImageForImageProcessingOperation = DICOMControlledTerminologyDefinitionsCode("121321")
+    MaskImageForImageProcessingOperation = DICOMControlledTerminologyDefinitionsCode(
+        "121321"
+    )
     """
     Image used as the source for an image processing operation
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    SourceImageForImageProcessingOperation = DICOMControlledTerminologyDefinitionsCode("121322")
+    SourceImageForImageProcessingOperation = DICOMControlledTerminologyDefinitionsCode(
+        "121322"
+    )
     """
     Series used as the source for an image processing operation
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    SourceSeriesForImageProcessingOperation = DICOMControlledTerminologyDefinitionsCode("121323")
+    SourceSeriesForImageProcessingOperation = DICOMControlledTerminologyDefinitionsCode(
+        "121323"
+    )
     """
     Image used as the source for a derived or compressed image
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -12879,7 +13481,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Image encoded with a different photometric interpretation
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    AlternatePhotometricInterpretationImage = DICOMControlledTerminologyDefinitionsCode("121328")
+    AlternatePhotometricInterpretationImage = DICOMControlledTerminologyDefinitionsCode(
+        "121328"
+    )
     """
     Image used as a source for a montage (stitched) image
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -12902,20 +13506,26 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Instance
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    CompleteRenderingForPresentation = DICOMControlledTerminologyDefinitionsCode("121332")
+    CompleteRenderingForPresentation = DICOMControlledTerminologyDefinitionsCode(
+        "121332"
+    )
     """
     Instance that contains a displayable partial rendering of the referencing
     Instance
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PartialRenderingForPresentation = DICOMControlledTerminologyDefinitionsCode("121333")
+    PartialRenderingForPresentation = DICOMControlledTerminologyDefinitionsCode(
+        "121333"
+    )
     """
     Instance that contains a displayable complete rendering of the referencing
     Instance, plus additional content such as inline rendering of referenced
     images
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ExtendedRenderingForPresentation = DICOMControlledTerminologyDefinitionsCode("121334")
+    ExtendedRenderingForPresentation = DICOMControlledTerminologyDefinitionsCode(
+        "121334"
+    )
     """
     Document whose content has been wholly or partially transformed to create the
     referencing document
@@ -12955,12 +13565,16 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     referencing 3D volume data set was derived
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    AcquisitionFramesCorrespondingToVolume = DICOMControlledTerminologyDefinitionsCode("121346")
+    AcquisitionFramesCorrespondingToVolume = DICOMControlledTerminologyDefinitionsCode(
+        "121346"
+    )
     """
     3D Volume containing the spatially-related frames in the referencing instance
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VolumeCorrespondingToSpatially_relatedAcquisitionFrames = DICOMControlledTerminologyDefinitionsCode("121347")
+    VolumeCorrespondingToSpatially_relatedAcquisitionFrames = (
+        DICOMControlledTerminologyDefinitionsCode("121347")
+    )
     """
     Instance acquired prior to the referencing instance in a set of consecutively
     acquired instances
@@ -12978,25 +13592,33 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     acquisition process
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    SameAcquisitionAtLowerResolution = DICOMControlledTerminologyDefinitionsCode("121350")
+    SameAcquisitionAtLowerResolution = DICOMControlledTerminologyDefinitionsCode(
+        "121350"
+    )
     """
     Image of the same target area at higher resolution acquired in the same
     acquisition process
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    SameAcquisitionAtHigherResolution = DICOMControlledTerminologyDefinitionsCode("121351")
+    SameAcquisitionAtHigherResolution = DICOMControlledTerminologyDefinitionsCode(
+        "121351"
+    )
     """
     Image of the same target area at different focal depth (Z-plane) acquired in
     the same acquisition process
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    SameAcquisitionAtDifferentFocalDepth = DICOMControlledTerminologyDefinitionsCode("121352")
+    SameAcquisitionAtDifferentFocalDepth = DICOMControlledTerminologyDefinitionsCode(
+        "121352"
+    )
     """
     Image of the same target area at different spectral band acquired in the same
     acquisition process
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    SameAcquisitionAtDifferentSpectralBand = DICOMControlledTerminologyDefinitionsCode("121353")
+    SameAcquisitionAtDifferentSpectralBand = DICOMControlledTerminologyDefinitionsCode(
+        "121353"
+    )
     """
     Image specifically targeting the container label
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -13043,19 +13665,25 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     The newly calculated dose may or may not exist as an independent object
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ComposedFromPriorDosesAndCurrentPlan = DICOMControlledTerminologyDefinitionsCode("121371")
+    ComposedFromPriorDosesAndCurrentPlan = DICOMControlledTerminologyDefinitionsCode(
+        "121371"
+    )
     """
     RT Dose Instances used as source for calculated dose
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    SourceDoseForComposingCurrentDose = DICOMControlledTerminologyDefinitionsCode("121372")
+    SourceDoseForComposingCurrentDose = DICOMControlledTerminologyDefinitionsCode(
+        "121372"
+    )
     """
     Concentration of the chemically or physically interesting (active) ingredient
     of a drug or contrast agent as delivered in product form from the
     manufacturer, typically in mg/ml
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ActiveIngredientUndilutedConcentration = DICOMControlledTerminologyDefinitionsCode("121380")
+    ActiveIngredientUndilutedConcentration = DICOMControlledTerminologyDefinitionsCode(
+        "121380"
+    )
     """
     X-Ray absorption of the active ingredient of a contrast agent ingredient is
     greater than the absorption of water (tissue)
@@ -13242,7 +13870,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Cardiac stress test using pharmacologic and exercise stressors
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PharmacologicAndExerciseStressTest = DICOMControlledTerminologyDefinitionsCode("121437")
+    PharmacologicAndExerciseStressTest = DICOMControlledTerminologyDefinitionsCode(
+        "121437"
+    )
     """
     Cardiac stress test using an implanted or external cardiac pacing device
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -13252,7 +13882,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Procedure for correction of congenital cardiovascular deformity
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    CorrectionOfCongenitalCardiovascularDeformity = DICOMControlledTerminologyDefinitionsCode("121439")
+    CorrectionOfCongenitalCardiovascularDeformity = (
+        DICOMControlledTerminologyDefinitionsCode("121439")
+    )
     """
     Process of placing patient in the anticipated treatment position, including
     specification and location of positioning aids, and other treatment delivery
@@ -13265,121 +13897,161 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     using single-plane megavoltage imaging
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RTPatientPositionAcquisition_SinglePlaneMV = DICOMControlledTerminologyDefinitionsCode("121702")
+    RTPatientPositionAcquisition_SinglePlaneMV = (
+        DICOMControlledTerminologyDefinitionsCode("121702")
+    )
     """
     Acquisition of patient positioning information prior to treatment delivery,
     using dual-plane megavoltage imaging
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RTPatientPositionAcquisition_DualPlaneMV = DICOMControlledTerminologyDefinitionsCode("121703")
+    RTPatientPositionAcquisition_DualPlaneMV = (
+        DICOMControlledTerminologyDefinitionsCode("121703")
+    )
     """
     Acquisition of patient positioning information prior to treatment delivery,
     using single-plane kilovoltage imaging
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RTPatientPositionAcquisition_SinglePlaneKV = DICOMControlledTerminologyDefinitionsCode("121704")
+    RTPatientPositionAcquisition_SinglePlaneKV = (
+        DICOMControlledTerminologyDefinitionsCode("121704")
+    )
     """
     Acquisition of patient positioning information prior to treatment delivery,
     using dual-plane kilovoltage imaging
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RTPatientPositionAcquisition_DualPlaneKV = DICOMControlledTerminologyDefinitionsCode("121705")
+    RTPatientPositionAcquisition_DualPlaneKV = (
+        DICOMControlledTerminologyDefinitionsCode("121705")
+    )
     """
     Acquisition of patient positioning information prior to treatment delivery,
     using dual-plane combination kilovoltage and megavoltage imaging
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RTPatientPositionAcquisition_DualPlaneKV_MV = DICOMControlledTerminologyDefinitionsCode("121706")
+    RTPatientPositionAcquisition_DualPlaneKV_MV = (
+        DICOMControlledTerminologyDefinitionsCode("121706")
+    )
     """
     Acquisition of patient positioning information prior to treatment delivery,
     using kilovoltage CT imaging
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RTPatientPositionAcquisition_CTKV = DICOMControlledTerminologyDefinitionsCode("121707")
+    RTPatientPositionAcquisition_CTKV = DICOMControlledTerminologyDefinitionsCode(
+        "121707"
+    )
     """
     Acquisition of patient positioning information prior to treatment delivery,
     using megavoltage CT imaging
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RTPatientPositionAcquisition_CTMV = DICOMControlledTerminologyDefinitionsCode("121708")
+    RTPatientPositionAcquisition_CTMV = DICOMControlledTerminologyDefinitionsCode(
+        "121708"
+    )
     """
     Acquisition of patient positioning information prior to treatment delivery,
     using optical imaging
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RTPatientPositionAcquisition_Optical = DICOMControlledTerminologyDefinitionsCode("121709")
+    RTPatientPositionAcquisition_Optical = DICOMControlledTerminologyDefinitionsCode(
+        "121709"
+    )
     """
     Acquisition of patient positioning information prior to treatment delivery,
     using ultrasound imaging
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RTPatientPositionAcquisition_Ultrasound = DICOMControlledTerminologyDefinitionsCode("121710")
+    RTPatientPositionAcquisition_Ultrasound = DICOMControlledTerminologyDefinitionsCode(
+        "121710"
+    )
     """
     Acquisition of patient positioning information prior to treatment delivery,
     using spatial fiducials
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RTPatientPositionAcquisition_SpatialFiducials = DICOMControlledTerminologyDefinitionsCode("121711")
+    RTPatientPositionAcquisition_SpatialFiducials = (
+        DICOMControlledTerminologyDefinitionsCode("121711")
+    )
     """
     Registration of intended and actual patient position prior to treatment
     delivery, using single-plane images
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RTPatientPositionRegistration_SinglePlane = DICOMControlledTerminologyDefinitionsCode("121712")
+    RTPatientPositionRegistration_SinglePlane = (
+        DICOMControlledTerminologyDefinitionsCode("121712")
+    )
     """
     Registration of intended and actual patient position prior to treatment
     delivery, using dual-plane images
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RTPatientPositionRegistration_DualPlane = DICOMControlledTerminologyDefinitionsCode("121713")
+    RTPatientPositionRegistration_DualPlane = DICOMControlledTerminologyDefinitionsCode(
+        "121713"
+    )
     """
     Registration of intended and actual patient position prior to treatment
     delivery, using 3D CT images and an unspecified registration approach
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RTPatientPositionRegistration_3DCTGeneral = DICOMControlledTerminologyDefinitionsCode("121714")
+    RTPatientPositionRegistration_3DCTGeneral = (
+        DICOMControlledTerminologyDefinitionsCode("121714")
+    )
     """
     Registration of intended and actual patient position prior to treatment
     delivery, using 3D CT images and a marker-based registration approach
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RTPatientPositionRegistration_3DCTMarker_based = DICOMControlledTerminologyDefinitionsCode("121715")
+    RTPatientPositionRegistration_3DCTMarker_based = (
+        DICOMControlledTerminologyDefinitionsCode("121715")
+    )
     """
     Registration of intended and actual patient position prior to treatment
     delivery, using 3D CT images and a volume-based registration approach
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RTPatientPositionRegistration_3DCTVolume_based = DICOMControlledTerminologyDefinitionsCode("121716")
+    RTPatientPositionRegistration_3DCTVolume_based = (
+        DICOMControlledTerminologyDefinitionsCode("121716")
+    )
     """
     Registration of intended and actual patient position prior to treatment
     delivery, using 3D verification images and 2D reference images
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RTPatientPositionRegistration_3DOn2DReference = DICOMControlledTerminologyDefinitionsCode("121717")
+    RTPatientPositionRegistration_3DOn2DReference = (
+        DICOMControlledTerminologyDefinitionsCode("121717")
+    )
     """
     Registration of intended and actual patient position prior to treatment
     delivery, using 2D verification images and 3D reference images
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RTPatientPositionRegistration_2DOn3DReference = DICOMControlledTerminologyDefinitionsCode("121718")
+    RTPatientPositionRegistration_2DOn3DReference = (
+        DICOMControlledTerminologyDefinitionsCode("121718")
+    )
     """
     Registration of intended and actual patient position prior to treatment
     delivery, using optical images
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RTPatientPositionRegistration_Optical = DICOMControlledTerminologyDefinitionsCode("121719")
+    RTPatientPositionRegistration_Optical = DICOMControlledTerminologyDefinitionsCode(
+        "121719"
+    )
     """
     Registration of intended and actual patient position prior to treatment
     delivery, using ultrasound images
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RTPatientPositionRegistration_Ultrasound = DICOMControlledTerminologyDefinitionsCode("121720")
+    RTPatientPositionRegistration_Ultrasound = (
+        DICOMControlledTerminologyDefinitionsCode("121720")
+    )
     """
     Registration of intended and actual patient position prior to treatment
     delivery, using spatial fiducials
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RTPatientPositionRegistration_SpatialFiducials = DICOMControlledTerminologyDefinitionsCode("121721")
+    RTPatientPositionRegistration_SpatialFiducials = (
+        DICOMControlledTerminologyDefinitionsCode("121721")
+    )
     """
     Adjustment of patient position such that the patient is correctly positioned
     for treatment
@@ -13391,43 +14063,57 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     treatment session
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RTPatientPositionIn_treatment_sessionReview = DICOMControlledTerminologyDefinitionsCode("121723")
+    RTPatientPositionIn_treatment_sessionReview = (
+        DICOMControlledTerminologyDefinitionsCode("121723")
+    )
     """
     Simulated radiotherapy treatment delivery using verification integral to the
     Treatment Delivery System
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RTTreatmentSimulationWithInternalVerification = DICOMControlledTerminologyDefinitionsCode("121724")
+    RTTreatmentSimulationWithInternalVerification = (
+        DICOMControlledTerminologyDefinitionsCode("121724")
+    )
     """
     Simulated radiotherapy treatment delivery using verification by a external
     Machine Parameter Verifier
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RTTreatmentSimulationWithExternalVerification = DICOMControlledTerminologyDefinitionsCode("121725")
+    RTTreatmentSimulationWithExternalVerification = (
+        DICOMControlledTerminologyDefinitionsCode("121725")
+    )
     """
     Radiotherapy treatment delivery using verification integral to the Treatment
     Delivery System
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RTTreatmentWithInternalVerification = DICOMControlledTerminologyDefinitionsCode("121726")
+    RTTreatmentWithInternalVerification = DICOMControlledTerminologyDefinitionsCode(
+        "121726"
+    )
     """
     Radiotherapy treatment delivery using verification by an external Machine
     Parameter Verifier
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RTTreatmentWithExternalVerification = DICOMControlledTerminologyDefinitionsCode("121727")
+    RTTreatmentWithExternalVerification = DICOMControlledTerminologyDefinitionsCode(
+        "121727"
+    )
     """
     Quality assurance of a radiotherapy treatment delivery using verification
     integral to the Treatment Delivery System
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RTTreatmentQAWithInternalVerification = DICOMControlledTerminologyDefinitionsCode("121728")
+    RTTreatmentQAWithInternalVerification = DICOMControlledTerminologyDefinitionsCode(
+        "121728"
+    )
     """
     Quality assurance of a radiotherapy treatment delivery using verification by
     an external Machine Parameter Verifier
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RTTreatmentQAWithExternalVerification = DICOMControlledTerminologyDefinitionsCode("121729")
+    RTTreatmentQAWithExternalVerification = DICOMControlledTerminologyDefinitionsCode(
+        "121729"
+    )
     """
     Quality assurance of a Treatment Delivery Device
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -13444,19 +14130,25 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     quality-assessed RT Plans with the current RT Plan
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RTTreatmentQAByRTPlanDifferenceCheck = DICOMControlledTerminologyDefinitionsCode("121732")
+    RTTreatmentQAByRTPlanDifferenceCheck = DICOMControlledTerminologyDefinitionsCode(
+        "121732"
+    )
     """
     Perform Quality Assurance on an RT Ion Plan by evaluating dosimetric content
     of the current RT Ion Plan
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RTTreatmentQAByRTIonPlanDoseCheck = DICOMControlledTerminologyDefinitionsCode("121733")
+    RTTreatmentQAByRTIonPlanDoseCheck = DICOMControlledTerminologyDefinitionsCode(
+        "121733"
+    )
     """
     Perform Quality Assurance on an RT Ion Plan by comparing the content of
     previously quality-assessed RT Ion Plans with the current RT Ion Plan
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RTTreatmentQAWithRTIonPlanDifferenceCheck = DICOMControlledTerminologyDefinitionsCode("121734")
+    RTTreatmentQAWithRTIonPlanDifferenceCheck = (
+        DICOMControlledTerminologyDefinitionsCode("121734")
+    )
     """
     Indicates whether the treatment to be delivered is a complete fraction or a
     continuation of previous incompletely treated fraction
@@ -13477,7 +14169,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Patient given pre-procedure instruction
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PatientGivenPre_procedureInstruction = DICOMControlledTerminologyDefinitionsCode("122003")
+    PatientGivenPre_procedureInstruction = DICOMControlledTerminologyDefinitionsCode(
+        "122003"
+    )
     """
     Patient informed consent given
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -13507,12 +14201,16 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Patient connected to continuous monitoring
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PatientConnectedToContinuousMonitoring = DICOMControlledTerminologyDefinitionsCode("122009")
+    PatientConnectedToContinuousMonitoring = DICOMControlledTerminologyDefinitionsCode(
+        "122009"
+    )
     """
     Patient transferred to holding area
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PatientTransferredToHoldingArea = DICOMControlledTerminologyDefinitionsCode("122010")
+    PatientTransferredToHoldingArea = DICOMControlledTerminologyDefinitionsCode(
+        "122010"
+    )
     """
     Patient transferred to surgery
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -13577,7 +14275,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Patient has respiratory difficulty
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PatientHasRespiratoryDifficulty = DICOMControlledTerminologyDefinitionsCode("122030")
+    PatientHasRespiratoryDifficulty = DICOMControlledTerminologyDefinitionsCode(
+        "122030"
+    )
     """
     Patient coughed
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -13587,7 +14287,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Patient disconnected from continuous monitoring
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PatientDisconnectedFromContinuousMonitoring = DICOMControlledTerminologyDefinitionsCode("122032")
+    PatientDisconnectedFromContinuousMonitoring = (
+        DICOMControlledTerminologyDefinitionsCode("122032")
+    )
     """
     Hemostasis achieved
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -13602,17 +14304,23 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Hemostasis not achieved - actively bleeding
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    HemostasisNotAchieved_ActivelyBleeding = DICOMControlledTerminologyDefinitionsCode("122035")
+    HemostasisNotAchieved_ActivelyBleeding = DICOMControlledTerminologyDefinitionsCode(
+        "122035"
+    )
     """
     Patient given post-procedure instruction
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PatientGivenPost_procedureInstruction = DICOMControlledTerminologyDefinitionsCode("122036")
+    PatientGivenPost_procedureInstruction = DICOMControlledTerminologyDefinitionsCode(
+        "122036"
+    )
     """
     Patient discharged from department or laboratory
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PatientDischargedFromDepartment = DICOMControlledTerminologyDefinitionsCode("122037")
+    PatientDischargedFromDepartment = DICOMControlledTerminologyDefinitionsCode(
+        "122037"
+    )
     """
     Patient pronounced dead
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -13657,7 +14365,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Equipment brought to procedure room
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    EquipmentBroughtToProcedureRoom = DICOMControlledTerminologyDefinitionsCode("122047")
+    EquipmentBroughtToProcedureRoom = DICOMControlledTerminologyDefinitionsCode(
+        "122047"
+    )
     """
     Equipment ready for procedure
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -13717,7 +14427,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Percutaneous Coronary Intervention
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PercutaneousCoronaryIntervention = DICOMControlledTerminologyDefinitionsCode("122061")
+    PercutaneousCoronaryIntervention = DICOMControlledTerminologyDefinitionsCode(
+        "122061"
+    )
     """
     15-Lead electrocardiography
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -13839,7 +14551,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Volume of Drug, Contrast agent, or Infusate unadministered or discarded
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VolumeUnadministeredOrDiscarded = DICOMControlledTerminologyDefinitionsCode("122096")
+    VolumeUnadministeredOrDiscarded = DICOMControlledTerminologyDefinitionsCode(
+        "122096"
+    )
     """
     Numeric parameter of Curvature of Catheter
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -13867,7 +14581,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     the subject of the finding
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    GraftToCitedSegment_ProximalSection = DICOMControlledTerminologyDefinitionsCode("122102")
+    GraftToCitedSegment_ProximalSection = DICOMControlledTerminologyDefinitionsCode(
+        "122102"
+    )
     """
     Anatomic term modifier indicating mid section of graft to cited vessel is the
     subject of the finding
@@ -13879,7 +14595,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     the subject of the finding
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    GraftToCitedSegment_DistalSection = DICOMControlledTerminologyDefinitionsCode("122104")
+    GraftToCitedSegment_DistalSection = DICOMControlledTerminologyDefinitionsCode(
+        "122104"
+    )
     """
     DateTime of Intervention
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -13899,7 +14617,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Lesion stenosis measured after an interventional procedure
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Post_InterventionStenosisMeasurement = DICOMControlledTerminologyDefinitionsCode("122108")
+    Post_InterventionStenosisMeasurement = DICOMControlledTerminologyDefinitionsCode(
+        "122108"
+    )
     """
     Assessment of perfusion across a coronary lesion measured prior to any
     interventional procedure
@@ -13947,7 +14667,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Ventricular pressure measurements, report section
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VentricularPressureMeasurements = DICOMControlledTerminologyDefinitionsCode("122122")
+    VentricularPressureMeasurements = DICOMControlledTerminologyDefinitionsCode(
+        "122122"
+    )
     """
     Gradient assessment, report section
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -14135,7 +14857,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     current hospital admission
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    CoronaryArteryBypassDuringThisAdmission = DICOMControlledTerminologyDefinitionsCode("122164")
+    CoronaryArteryBypassDuringThisAdmission = DICOMControlledTerminologyDefinitionsCode(
+        "122164"
+    )
     """
     Date of Death
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -14177,7 +14901,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Number of lesion interventions attempted during current procedure
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    NumberOfLesionInterventionsAttempted = DICOMControlledTerminologyDefinitionsCode("122175")
+    NumberOfLesionInterventionsAttempted = DICOMControlledTerminologyDefinitionsCode(
+        "122175"
+    )
     """
     Number of lesion interventions successful during current procedure, where the
     residual post intervention stenosis is less than or equal to 50% of the
@@ -14185,7 +14911,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     was 20%
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    NumberOfLesionInterventionsSuccessful = DICOMControlledTerminologyDefinitionsCode("122176")
+    NumberOfLesionInterventionsSuccessful = DICOMControlledTerminologyDefinitionsCode(
+        "122176"
+    )
     """
     Overall success of interventional procedure
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -14250,7 +14978,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Ventricular End Diastolic pressure
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VentricularEndDiastolicPressure = DICOMControlledTerminologyDefinitionsCode("122191")
+    VentricularEndDiastolicPressure = DICOMControlledTerminologyDefinitionsCode(
+        "122191"
+    )
     """
     Elapsed time from injection of an indicator bolus until it is observed at
     another location
@@ -14266,7 +14996,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Ventricular Systolic blood pressure
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VentricularSystolicBloodPressure = DICOMControlledTerminologyDefinitionsCode("122194")
+    VentricularSystolicBloodPressure = DICOMControlledTerminologyDefinitionsCode(
+        "122194"
+    )
     """
     Pulse Strength; palpable strength of systolic flow
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -14382,7 +15114,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Diastolic/Systolic velocity ratio
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Diastolic_SystolicVelocityRatio = DICOMControlledTerminologyDefinitionsCode("122218")
+    Diastolic_SystolicVelocityRatio = DICOMControlledTerminologyDefinitionsCode(
+        "122218"
+    )
     """
     Hyperemic ratio
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -14402,7 +15136,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Environmental characteristics in the procedure room
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ProcedureEnvironmentalCharacteristics = DICOMControlledTerminologyDefinitionsCode("122222")
+    ProcedureEnvironmentalCharacteristics = DICOMControlledTerminologyDefinitionsCode(
+        "122222"
+    )
     """
     Oxygen concentration in the procedure room
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -14442,7 +15178,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Framingham Study Comparative Average10 Year CHD Risk
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ComparativeAverage10YearCHDRisk = DICOMControlledTerminologyDefinitionsCode("122231")
+    ComparativeAverage10YearCHDRisk = DICOMControlledTerminologyDefinitionsCode(
+        "122231"
+    )
     """
     Framingham Study Comparative Low10 Year CHD Risk
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -14457,17 +15195,23 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Framingham Study LDL Cholesterol Score Sheet for Women
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    LDLCholesterolScoreSheetForWomen = DICOMControlledTerminologyDefinitionsCode("122234")
+    LDLCholesterolScoreSheetForWomen = DICOMControlledTerminologyDefinitionsCode(
+        "122234"
+    )
     """
     Framingham Study Total Cholesterol Score Sheet for Men
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    TotalCholesterolScoreSheetForMen = DICOMControlledTerminologyDefinitionsCode("122235")
+    TotalCholesterolScoreSheetForMen = DICOMControlledTerminologyDefinitionsCode(
+        "122235"
+    )
     """
     Framingham Study Total Cholesterol Score Sheet for Women
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    TotalCholesterolScoreSheetForWomen = DICOMControlledTerminologyDefinitionsCode("122236")
+    TotalCholesterolScoreSheetForWomen = DICOMControlledTerminologyDefinitionsCode(
+        "122236"
+    )
     """
     Corrected Sinus Node Recovery Time
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -14477,7 +15221,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Max volume normalized to 50mmHg pulse pressure
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    MaxVolumeNormalizedTo50mmHgPulsePressure = DICOMControlledTerminologyDefinitionsCode("122238")
+    MaxVolumeNormalizedTo50mmHgPulsePressure = (
+        DICOMControlledTerminologyDefinitionsCode("122238")
+    )
     """
     Oxygen Consumption
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -14490,7 +15236,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Press, 1935, eq. (36) ]
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    BSA_3_207_WT_0_7285_0_0188Log_WT_HT_0_3 = DICOMControlledTerminologyDefinitionsCode("122240")
+    BSA_3_207_WT_0_7285_0_0188Log_WT_HT_0_3 = DICOMControlledTerminologyDefinitionsCode(
+        "122240"
+    )
     """
     Body Surface Area computed from patient height and weight: BSA = 0.007184*
     WT[kg] ^ 0.425*HT[cm] ^ 0.725 [Dubois and Dubois, Arch Int Med 1916 17:863-71]
@@ -14504,7 +15252,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     54:225-35]
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    BSA_0_0235_WT_0_51456_HT_0_42246 = DICOMControlledTerminologyDefinitionsCode("122242")
+    BSA_0_0235_WT_0_51456_HT_0_42246 = DICOMControlledTerminologyDefinitionsCode(
+        "122242"
+    )
     """
     Body Surface Area computed from patient height and weight: BSA = 0.024265 *
     WT[kg] ^ 0.5378 * HT[cm] ^ 0.3964 [Haycock G.B., Schwartz G.J., Wisotsky D.H.
@@ -14513,7 +15263,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     93:1:62-66]
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    BSA_0_024265_WT_0_5378_HT_0_3964 = DICOMControlledTerminologyDefinitionsCode("122243")
+    BSA_0_024265_WT_0_5378_HT_0_3964 = DICOMControlledTerminologyDefinitionsCode(
+        "122243"
+    )
     """
     Body Surface Area computed from patient height and weight: BSA = (HT[m] *
     WT[kg] / 36) ^ 0.5 [Mosteller, R.D. 'Simplified Calculation of Body Surface
@@ -14536,19 +15288,25 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Press), Greenwood Press, Westport, Connecticut, 1975, p. 102.Equation (35)
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    BSA_0_0004688_WT_0_8168_0_0154_Log_WT_ = DICOMControlledTerminologyDefinitionsCode("122246")
+    BSA_0_0004688_WT_0_8168_0_0154_Log_WT_ = DICOMControlledTerminologyDefinitionsCode(
+        "122246"
+    )
     """
     Equation for estimated oxygen consumption: VO2male = BSA (138.1 - 11.49 *
     loge(age) + 0.378 * HRf)
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VO2male_BSA_138_1_11_49_Loge_age_0_378_HRf_ = DICOMControlledTerminologyDefinitionsCode("122247")
+    VO2male_BSA_138_1_11_49_Loge_age_0_378_HRf_ = (
+        DICOMControlledTerminologyDefinitionsCode("122247")
+    )
     """
     Equation for estimated oxygen consumption: VO2female = BSA (138.1 - 17.04 *
     loge(age) + 0.378 * HRf)
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VO2female_BSA_138_1_17_04_Loge_age_0_378_HRf_ = DICOMControlledTerminologyDefinitionsCode("122248")
+    VO2female_BSA_138_1_17_04_Loge_age_0_378_HRf_ = (
+        DICOMControlledTerminologyDefinitionsCode("122248")
+    )
     """
     Equation for estimated oxygen consumption: VO2 = VeSTPD * 10 * (FIO2 - FE02)
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -14625,13 +15383,17 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     44.5 * sqrt(Gradient[mmHg]) [Gorlin and Gorlin, Am Heart J, 1951]
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Area_Flow_44_5_Sqrt_Gradient_mmHg_ = DICOMControlledTerminologyDefinitionsCode("122262")
+    Area_Flow_44_5_Sqrt_Gradient_mmHg_ = DICOMControlledTerminologyDefinitionsCode(
+        "122262"
+    )
     """
     Mitral valve area computed from flow and pressure gradient: Mitral valve Area
     = Flow / 38.0 * sqrt(Gradient[mmHg]) [Gorlin and Gorlin, Am Heart J, 1951]
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    MVA_Flow_38_0_Sqrt_Gradient_mmHg_ = DICOMControlledTerminologyDefinitionsCode("122263")
+    MVA_Flow_38_0_Sqrt_Gradient_mmHg_ = DICOMControlledTerminologyDefinitionsCode(
+        "122263"
+    )
     """
     Body Mass Index computed from weight and height: BMI = Wt/Ht^2
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -14737,22 +15499,30 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Quantitative Arteriography Report
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    QuantitativeArteriographyReport = DICOMControlledTerminologyDefinitionsCode("122291")
+    QuantitativeArteriographyReport = DICOMControlledTerminologyDefinitionsCode(
+        "122291"
+    )
     """
     Quantitative Ventriculography Report
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    QuantitativeVentriculographyReport = DICOMControlledTerminologyDefinitionsCode("122292")
+    QuantitativeVentriculographyReport = DICOMControlledTerminologyDefinitionsCode(
+        "122292"
+    )
     """
     Guidewire crossing lesion unsuccessful
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    GuidewireCrossingLesionUnsuccessful = DICOMControlledTerminologyDefinitionsCode("122301")
+    GuidewireCrossingLesionUnsuccessful = DICOMControlledTerminologyDefinitionsCode(
+        "122301"
+    )
     """
     Guidewire crossing lesion successful
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    GuidewireCrossingLesionSuccessful = DICOMControlledTerminologyDefinitionsCode("122302")
+    GuidewireCrossingLesionSuccessful = DICOMControlledTerminologyDefinitionsCode(
+        "122302"
+    )
     """
     Angioplasty balloon inflated
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -14792,7 +15562,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Interventional device placement unsuccessful
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    InterventionalDevicePlacementUnsuccessful = DICOMControlledTerminologyDefinitionsCode("122310")
+    InterventionalDevicePlacementUnsuccessful = (
+        DICOMControlledTerminologyDefinitionsCode("122310")
+    )
     """
     Interventional device placed
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -14866,19 +15638,25 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     sectional area
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PlaquePlusMediaCross_SectionalArea = DICOMControlledTerminologyDefinitionsCode("122334")
+    PlaquePlusMediaCross_SectionalArea = DICOMControlledTerminologyDefinitionsCode(
+        "122334"
+    )
     """
     Measurement of in-stent restenosis. In-Stent Intimal Area = Stent cross-
     sectional area - vessel lumen cross-sectional area
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    In_StentNeointimalCross_SectionalArea = DICOMControlledTerminologyDefinitionsCode("122335")
+    In_StentNeointimalCross_SectionalArea = DICOMControlledTerminologyDefinitionsCode(
+        "122335"
+    )
     """
     Longitudinal extent of the Vascular Volume Measurement. This is the distance
     from the distal edge to the proximal edge of the Volume measurement
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VascularVolumeMeasurementLength = DICOMControlledTerminologyDefinitionsCode("122336")
+    VascularVolumeMeasurementLength = DICOMControlledTerminologyDefinitionsCode(
+        "122336"
+    )
     """
     Longitudinal distance from the closest edge of a fiducial feature or reference
     location to the start of the vascular measurement. This value will be a
@@ -14917,7 +15695,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     minimum Plaque plus media thickness) / maximum Plaque plus media thickness
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PlaquePlusMediaEccentricityIndex = DICOMControlledTerminologyDefinitionsCode("122344")
+    PlaquePlusMediaEccentricityIndex = DICOMControlledTerminologyDefinitionsCode(
+        "122344"
+    )
     """
     Measurement of increase or decrease in EEM area that occurs during the
     development of atherosclerosis. Remodeling Index = Lesion EEM area / reference
@@ -15200,7 +15980,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Left Atrial Ejection Fraction by Angiography
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    LeftAtrialEjectionFractionByAngiography = DICOMControlledTerminologyDefinitionsCode("122406")
+    LeftAtrialEjectionFractionByAngiography = DICOMControlledTerminologyDefinitionsCode(
+        "122406"
+    )
     """
     Left Atrial End Diastolic Volume
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -15384,14 +16166,18 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     and 59 -80 (hyperkinetic). [Sheehan, 1986]
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    MultipleLADRegionInRAOProjection = DICOMControlledTerminologyDefinitionsCode("122468")
+    MultipleLADRegionInRAOProjection = DICOMControlledTerminologyDefinitionsCode(
+        "122468"
+    )
     """
     Based on a total number of chords of 100 and RAO projection the range of
     chords belonging to this regional extent lies between 59 - 80 (hypokinetic)
     and 10 - 58 (hyperkinetic). [Sheehan, 1986]
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    MultipleRCARegionInRAOProjection = DICOMControlledTerminologyDefinitionsCode("122469")
+    MultipleRCARegionInRAOProjection = DICOMControlledTerminologyDefinitionsCode(
+        "122469"
+    )
     """
     Based on a total number of chords of 100 and LAO projection the range of
     chords belonging to this regional extent lies between 50 -100 (hypokinetic)
@@ -15507,7 +16293,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     based wall motion method
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RegionalContributionToEjectionFraction = DICOMControlledTerminologyDefinitionsCode("122495")
+    RegionalContributionToEjectionFraction = DICOMControlledTerminologyDefinitionsCode(
+        "122495"
+    )
     """
     The reduction of area between End Systolic and End Diastolic based on radial
     wall motion analysis
@@ -15519,12 +16307,16 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     [Slager]
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    LandmarkBasedWallMotionAnalysis = DICOMControlledTerminologyDefinitionsCode("122497")
+    LandmarkBasedWallMotionAnalysis = DICOMControlledTerminologyDefinitionsCode(
+        "122497"
+    )
     """
     Contribution to the ejection fraction of a specific slice region [Slager]
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    SliceContributionToEjectionFraction = DICOMControlledTerminologyDefinitionsCode("122498")
+    SliceContributionToEjectionFraction = DICOMControlledTerminologyDefinitionsCode(
+        "122498"
+    )
     """
     Method to calculate volumes of heart chambers for every image in a range
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -15552,7 +16344,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     for inner angles
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    IntegrationOfSumOfClosedAreasOnContiguousSlices = DICOMControlledTerminologyDefinitionsCode("122503")
+    IntegrationOfSumOfClosedAreasOnContiguousSlices = (
+        DICOMControlledTerminologyDefinitionsCode("122503")
+    )
     """
     Procedure used to calibrate measurements or measurement devices
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -15595,7 +16389,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     method
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    DensitometricLuminalCross_sectionalAreaGraph = DICOMControlledTerminologyDefinitionsCode("122517")
+    DensitometricLuminalCross_sectionalAreaGraph = (
+        DICOMControlledTerminologyDefinitionsCode("122517")
+    )
     """
     Position of proximal border of segment relative to the contour start (proximal
     end of analysis area)
@@ -15727,7 +16523,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Left ventricular posterobasal segment
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    LeftVentricularPosterobasalSegment = DICOMControlledTerminologyDefinitionsCode("122582")
+    LeftVentricularPosterobasalSegment = DICOMControlledTerminologyDefinitionsCode(
+        "122582"
+    )
     """
     Report of a Cardiovascular Analysis, typically from a CT or MR study
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -15772,12 +16570,16 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Section Heading for absolute values of ventricular measurements
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    AbsoluteValuesOfVentricularMeasurements = DICOMControlledTerminologyDefinitionsCode("122608")
+    AbsoluteValuesOfVentricularMeasurements = DICOMControlledTerminologyDefinitionsCode(
+        "122608"
+    )
     """
     Results of normalizing ventricular measurements
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    NormalizedValuesOfVentricularMeasurements = DICOMControlledTerminologyDefinitionsCode("122609")
+    NormalizedValuesOfVentricularMeasurements = (
+        DICOMControlledTerminologyDefinitionsCode("122609")
+    )
     """
     Reference Point of a measurement
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -15824,7 +16626,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     wall thickness
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    WallThicknessRatioEnd_systolicToEnd_diastolic = DICOMControlledTerminologyDefinitionsCode("122624")
+    WallThicknessRatioEnd_systolicToEnd_diastolic = (
+        DICOMControlledTerminologyDefinitionsCode("122624")
+    )
     """
     The method to smooth a ventricular volume as a function of time
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -15963,7 +16767,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Time interval since injection of contrast media
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    TimeIntervalSinceInjectionOfContrastMedia = DICOMControlledTerminologyDefinitionsCode("122665")
+    TimeIntervalSinceInjectionOfContrastMedia = (
+        DICOMControlledTerminologyDefinitionsCode("122665")
+    )
     """
     Time relative to R-wave peak
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -15973,17 +16779,23 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Relationship between blood velocity and time relative to R-wave peak
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    BloodVelocityVs_TimeOfCardiacCycle = DICOMControlledTerminologyDefinitionsCode("122667")
+    BloodVelocityVs_TimeOfCardiacCycle = DICOMControlledTerminologyDefinitionsCode(
+        "122667"
+    )
     """
     Time interval since detection of contrast bolus
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    TimeIntervalSinceDetectionOfContrastBolus = DICOMControlledTerminologyDefinitionsCode("122668")
+    TimeIntervalSinceDetectionOfContrastBolus = (
+        DICOMControlledTerminologyDefinitionsCode("122668")
+    )
     """
     Indicates if the papillary muscle was included or excluded in the measurement
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PapillaryMuscleIncluded_Excluded = DICOMControlledTerminologyDefinitionsCode("122670")
+    PapillaryMuscleIncluded_Excluded = DICOMControlledTerminologyDefinitionsCode(
+        "122670"
+    )
     """
     Anterior to Posterior direction
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -16035,7 +16847,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Indications for Pharmacological Stress
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    IndicationsForPharmacologicalStress = DICOMControlledTerminologyDefinitionsCode("122700")
+    IndicationsForPharmacologicalStress = DICOMControlledTerminologyDefinitionsCode(
+        "122700"
+    )
     """
     Reference time for measurement of elapsed time in a procedure
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -16060,7 +16874,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Pharmacological Stress Agent Dose Rate
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PharmacologicalStressAgentDoseRate = DICOMControlledTerminologyDefinitionsCode("122705")
+    PharmacologicalStressAgentDoseRate = DICOMControlledTerminologyDefinitionsCode(
+        "122705"
+    )
     """
     Rating of Perceived Exertion
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -16090,7 +16906,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Exercise duration after stress agent injection
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ExerciseDurationAfterStressAgentInjection = DICOMControlledTerminologyDefinitionsCode("122711")
+    ExerciseDurationAfterStressAgentInjection = (
+        DICOMControlledTerminologyDefinitionsCode("122711")
+    )
     """
     Imaging Start Time
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -16135,12 +16953,16 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Attenuation correction not based on image-based attenuation maps
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    AlgorithmicAttenuationCorrection = DICOMControlledTerminologyDefinitionsCode("122726")
+    AlgorithmicAttenuationCorrection = DICOMControlledTerminologyDefinitionsCode(
+        "122726"
+    )
     """
     NM transmission attenuation correction
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    NMTransmissionAttenuationCorrection = DICOMControlledTerminologyDefinitionsCode("122727")
+    NMTransmissionAttenuationCorrection = DICOMControlledTerminologyDefinitionsCode(
+        "122727"
+    )
     """
     CT-based attenuation correction
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -16237,12 +17059,16 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     ECG is non-diagnostic due to resting ST abnormalities
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Non_diagnostic_RestingSTAbnormalities = DICOMControlledTerminologyDefinitionsCode("122751")
+    Non_diagnostic_RestingSTAbnormalities = DICOMControlledTerminologyDefinitionsCode(
+        "122751"
+    )
     """
     ECG is non-diagnostic due to ventricular pacing or Left Bundle Branch Block
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Non_diagnostic_VentricularPacingOrLBBB = DICOMControlledTerminologyDefinitionsCode("122752")
+    Non_diagnostic_VentricularPacingOrLBBB = DICOMControlledTerminologyDefinitionsCode(
+        "122752"
+    )
     """
     ECG is non-diagnostic for presence of acute coronary syndrome
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -16282,7 +17108,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Number of diseased vessel territories
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    NumberOfDiseasedVesselTerritories = DICOMControlledTerminologyDefinitionsCode("122762")
+    NumberOfDiseasedVesselTerritories = DICOMControlledTerminologyDefinitionsCode(
+        "122762"
+    )
     """
     Patient weight exceeds equipment limit
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -16302,12 +17130,16 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Ratio of achieved to predicted maximal oxygen consumption
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RatioOfAchievedToPredictedMaximalOxygenConsumption = DICOMControlledTerminologyDefinitionsCode("122770")
+    RatioOfAchievedToPredictedMaximalOxygenConsumption = (
+        DICOMControlledTerminologyDefinitionsCode("122770")
+    )
     """
     Ratio of achieved to predicted functional capacity
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RatioOfAchievedToPredictedFunctionalCapacity = DICOMControlledTerminologyDefinitionsCode("122771")
+    RatioOfAchievedToPredictedFunctionalCapacity = (
+        DICOMControlledTerminologyDefinitionsCode("122771")
+    )
     """
     Workload (Watts) at target heart rate divided by body weight
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -16335,22 +17167,30 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Nuclear Medicine Rest thallium/stress technetium procedure
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RestThallium_stressTechnetiumProcedure = DICOMControlledTerminologyDefinitionsCode("122781")
+    RestThallium_stressTechnetiumProcedure = DICOMControlledTerminologyDefinitionsCode(
+        "122781"
+    )
     """
     Nuclear Medicine Rest technetium/stress technetium 1 day procedure
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RestTechnetium_stressTechnetium1DayProcedure = DICOMControlledTerminologyDefinitionsCode("122782")
+    RestTechnetium_stressTechnetium1DayProcedure = (
+        DICOMControlledTerminologyDefinitionsCode("122782")
+    )
     """
     Nuclear Medicine Rest technetium/stress technetium 2 day procedure
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RestTechnetium_stressTechnetium2DayProcedure = DICOMControlledTerminologyDefinitionsCode("122783")
+    RestTechnetium_stressTechnetium2DayProcedure = (
+        DICOMControlledTerminologyDefinitionsCode("122783")
+    )
     """
     Nuclear Medicine Stress technetium/rest technetium 1 day procedure
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    StressTechnetium_restTechnetium1DayProcedure = DICOMControlledTerminologyDefinitionsCode("122784")
+    StressTechnetium_restTechnetium1DayProcedure = (
+        DICOMControlledTerminologyDefinitionsCode("122784")
+    )
     """
     Nuclear Medicine Myocardial Viability procedure
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -16360,32 +17200,44 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Positron Emission Tomography Perfusion Imaging procedure, rest only
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PETMyocardialPerfusion_RestOnly = DICOMControlledTerminologyDefinitionsCode("122791")
+    PETMyocardialPerfusion_RestOnly = DICOMControlledTerminologyDefinitionsCode(
+        "122791"
+    )
     """
     Positron Emission Tomography Perfusion Imaging procedure, stress only
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PETMyocardialPerfusion_StressOnly = DICOMControlledTerminologyDefinitionsCode("122792")
+    PETMyocardialPerfusion_StressOnly = DICOMControlledTerminologyDefinitionsCode(
+        "122792"
+    )
     """
     Positron Emission Tomography Perfusion Imaging procedure, rest and stress
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PETMyocardialPerfusion_RestAndStress = DICOMControlledTerminologyDefinitionsCode("122793")
+    PETMyocardialPerfusion_RestAndStress = DICOMControlledTerminologyDefinitionsCode(
+        "122793"
+    )
     """
     Positron Emission Tomography Myocardial Viability procedure, rest only
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PETMyocardialViability_RestOnly = DICOMControlledTerminologyDefinitionsCode("122795")
+    PETMyocardialViability_RestOnly = DICOMControlledTerminologyDefinitionsCode(
+        "122795"
+    )
     """
     Positron Emission Tomography Myocardial Viability procedure, stress only
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PETMyocardialViability_StressOnly = DICOMControlledTerminologyDefinitionsCode("122796")
+    PETMyocardialViability_StressOnly = DICOMControlledTerminologyDefinitionsCode(
+        "122796"
+    )
     """
     Positron Emission Tomography Myocardial Viability procedure, rest and stress
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PETMyocardialViability_RestAndStress = DICOMControlledTerminologyDefinitionsCode("122797")
+    PETMyocardialViability_RestAndStress = DICOMControlledTerminologyDefinitionsCode(
+        "122797"
+    )
     """
     Group of symptoms heralding angina pectoris that does not include chest pain
     (dyspnea, diaphoresis, profuse vomiting in a diabetic patient, or arm or jaw
@@ -16425,7 +17277,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Time
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RadiopharmaceuticalSpecificActivity = DICOMControlledTerminologyDefinitionsCode("123007")
+    RadiopharmaceuticalSpecificActivity = DICOMControlledTerminologyDefinitionsCode(
+        "123007"
+    )
     """
     Pre-injection syringe acquisition count rate
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -16435,7 +17289,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Syringe acquisition count rate following patient injection
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RadionuclideResidualSyringeCounts = DICOMControlledTerminologyDefinitionsCode("123010")
+    RadionuclideResidualSyringeCounts = DICOMControlledTerminologyDefinitionsCode(
+        "123010"
+    )
     """
     Contrast or bolus agent
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -16469,7 +17325,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     defined per Smallwood et al
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Caudal10DegreeDistal_cranioproximalOblique = DICOMControlledTerminologyDefinitionsCode("123019")
+    Caudal10DegreeDistal_cranioproximalOblique = (
+        DICOMControlledTerminologyDefinitionsCode("123019")
+    )
     """
     Surface processing utilizing predefined weighting factors (i.e., kernels)
     applied to different data values depending on their location relative to other
@@ -16509,7 +17367,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     deformable models
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Multi_Scale_ResolutionFiltering = DICOMControlledTerminologyDefinitionsCode("123106")
+    Multi_Scale_ResolutionFiltering = DICOMControlledTerminologyDefinitionsCode(
+        "123106"
+    )
     """
     Surface processing accomplished by combining data values based on their
     relative location within their domain or value distribution. Includes K- and
@@ -16545,7 +17405,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Document Title of OB-GYN procedure report
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    OB_GYNUltrasoundProcedureReport = DICOMControlledTerminologyDefinitionsCode("125000")
+    OB_GYNUltrasoundProcedureReport = DICOMControlledTerminologyDefinitionsCode(
+        "125000"
+    )
     """
     Report section for assessment of fetal growth using ratios and indexes
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -16735,7 +17597,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Root Document Title for ultrasound vascular evidence reports (worksheets)
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    VascularUltrasoundProcedureReport = DICOMControlledTerminologyDefinitionsCode("125100")
+    VascularUltrasoundProcedureReport = DICOMControlledTerminologyDefinitionsCode(
+        "125100"
+    )
     """
     The particular vessel branch, such as the inferior, medial or lateral
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -16769,7 +17633,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Pediatric Cardiac Ultrasound Report (document title)
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PediatricCardiacUltrasoundReport = DICOMControlledTerminologyDefinitionsCode("125195")
+    PediatricCardiacUltrasoundReport = DICOMControlledTerminologyDefinitionsCode(
+        "125195"
+    )
     """
     Fetal Cardiac Ultrasound Report (document title)
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -16779,12 +17645,16 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Adult Congenital Cardiac Ultrasound Report (document title)
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    AdultCongenitalCardiacUltrasoundReport = DICOMControlledTerminologyDefinitionsCode("125197")
+    AdultCongenitalCardiacUltrasoundReport = DICOMControlledTerminologyDefinitionsCode(
+        "125197"
+    )
     """
     Document title of adult echocardiography procedure (evidence) report
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    AdultEchocardiographyProcedureReport = DICOMControlledTerminologyDefinitionsCode("125200")
+    AdultEchocardiographyProcedureReport = DICOMControlledTerminologyDefinitionsCode(
+        "125200"
+    )
     """
     An image that is a pictorial representation of findings. The concept is
     typically used as a purpose of reference to an image, such as a depiction of
@@ -16867,19 +17737,25 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     where V is the mean velocity
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ContinuityEquationByMeanVelocity = DICOMControlledTerminologyDefinitionsCode("125213")
+    ContinuityEquationByMeanVelocity = DICOMControlledTerminologyDefinitionsCode(
+        "125213"
+    )
     """
     For conduits in series ("in continuity"), volume flow is equal: A1*V1 = A2*V2.
     where V is the peak velocity
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ContinuityEquationByPeakVelocity = DICOMControlledTerminologyDefinitionsCode("125214")
+    ContinuityEquationByPeakVelocity = DICOMControlledTerminologyDefinitionsCode(
+        "125214"
+    )
     """
     For conduits in series ("in continuity"), volume flow is equal: A1*V1 = A2*V2.
     where V is the velocity time integral
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    ContinuityEquationByVelocityTimeIntegral = DICOMControlledTerminologyDefinitionsCode("125215")
+    ContinuityEquationByVelocityTimeIntegral = (
+        DICOMControlledTerminologyDefinitionsCode("125215")
+    )
     """
     Utilizes aliasing velocity (by color Doppler) of flow into an orifice (often
     regurgitant or stenotic) to measure instantaneous flow rate, orifice area, and
@@ -16929,7 +17805,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     American Society of Echocardiography 2:364, 1989.
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    LeftVentricleMassByTruncatedEllipse = DICOMControlledTerminologyDefinitionsCode("125222")
+    LeftVentricleMassByTruncatedEllipse = DICOMControlledTerminologyDefinitionsCode(
+        "125222"
+    )
     """
     A four point, echocardiographic numeric scoring scheme of myocardium segments
     based on evaluation of wall motion and ventricle morphology. Recommendations
@@ -16954,7 +17832,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Echocardiography, 2:358-367, 1989
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    _5PointSegmentFindingScaleWithGradedHypokinesis = DICOMControlledTerminologyDefinitionsCode("125225")
+    _5PointSegmentFindingScaleWithGradedHypokinesis = (
+        DICOMControlledTerminologyDefinitionsCode("125225")
+    )
     """
     Method of estimating volume from a planar ellipse. Equivalent to Biplane
     Ellipse with an assumption that the ellipse in the orthogonal plane has
@@ -16999,7 +17879,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Onset of contrast agent administration
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    StartOfContrastAgentAdministration = DICOMControlledTerminologyDefinitionsCode("125234")
+    StartOfContrastAgentAdministration = DICOMControlledTerminologyDefinitionsCode(
+        "125234"
+    )
     """
     Destruction of ultrasonic contrast microbubbles by a high-energy ultrasound
     pulse
@@ -17049,36 +17931,48 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     or CW Doppler scanning
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Non_imagingDopplerUltrasoundTransducerGeometry = DICOMControlledTerminologyDefinitionsCode("125251")
+    Non_imagingDopplerUltrasoundTransducerGeometry = (
+        DICOMControlledTerminologyDefinitionsCode("125251")
+    )
     """
     Ultrasonic transducer geometry characterized by parallel lines
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    LinearUltrasoundTransducerGeometry = DICOMControlledTerminologyDefinitionsCode("125252")
+    LinearUltrasoundTransducerGeometry = DICOMControlledTerminologyDefinitionsCode(
+        "125252"
+    )
     """
     Ultrasonic transducer geometry characterized by radial lines normal to the
     outside of a curved surface
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    CurvedLinearUltrasoundTransducerGeometry = DICOMControlledTerminologyDefinitionsCode("125253")
+    CurvedLinearUltrasoundTransducerGeometry = (
+        DICOMControlledTerminologyDefinitionsCode("125253")
+    )
     """
     Ultrasonic transducer geometry characterized by lines originating from a
     common apex
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    SectorUltrasoundTransducerGeometry = DICOMControlledTerminologyDefinitionsCode("125254")
+    SectorUltrasoundTransducerGeometry = DICOMControlledTerminologyDefinitionsCode(
+        "125254"
+    )
     """
     Ultrasonic transducer geometry characterized by lines emanating radially from
     a single point
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RadialUltrasoundTransducerGeometry = DICOMControlledTerminologyDefinitionsCode("125255")
+    RadialUltrasoundTransducerGeometry = DICOMControlledTerminologyDefinitionsCode(
+        "125255"
+    )
     """
     Ultrasonic transducer geometry characterized by a circular ring of transducer
     elements
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RingUltrasoundTransducerGeometry = DICOMControlledTerminologyDefinitionsCode("125256")
+    RingUltrasoundTransducerGeometry = DICOMControlledTerminologyDefinitionsCode(
+        "125256"
+    )
     """
     Ultrasonic steering technique consisting of a single beam normal to the
     transducer face steered by the orientation of the probe
@@ -17144,7 +18038,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Cincinnati, Ohio
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    LeftVentricleMassByM_mode_AdjustedByHeight = DICOMControlledTerminologyDefinitionsCode("125271")
+    LeftVentricleMassByM_mode_AdjustedByHeight = (
+        DICOMControlledTerminologyDefinitionsCode("125271")
+    )
     """
     Equation = Left Ventricle Mass by Truncated Ellipse / Height^2.7 Reference:
     Giovanni De Simone, et al. "Effect of Growth on Variability of Left
@@ -17153,7 +18049,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Cincinnati, Ohio
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    LeftVentricleMassByTruncatedEllipse_AdjustedByHeight = DICOMControlledTerminologyDefinitionsCode("125272")
+    LeftVentricleMassByTruncatedEllipse_AdjustedByHeight = (
+        DICOMControlledTerminologyDefinitionsCode("125272")
+    )
     """
     Equation = Left Ventricle Mass by Area Length / Height^2.7 Reference: Giovanni
     De Simone, et al. "Effect of Growth on Variability of Left Ventricular Mass:
@@ -17161,7 +18059,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Predict Cardiovascular Risk". New York, New York and Cincinnati, Ohio
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    LeftVentricleMassByAreaLength_AdjustedByHeight = DICOMControlledTerminologyDefinitionsCode("125273")
+    LeftVentricleMassByAreaLength_AdjustedByHeight = (
+        DICOMControlledTerminologyDefinitionsCode("125273")
+    )
     """
     CARDIOsphere ultrasonic contrast agent produced by POINT Biomedical
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -17220,7 +18120,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     analysis of DCE-MR
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    DynamicContrastMRMeasurementReport = DICOMControlledTerminologyDefinitionsCode("126002")
+    DynamicContrastMRMeasurementReport = DICOMControlledTerminologyDefinitionsCode(
+        "126002"
+    )
     """
     A structured report containing the quantitative results of human or machine
     analysis of PET images
@@ -17319,7 +18221,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     39:1441-1448
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    StandardizedAddedMetabolicActivity_SAM_ = DICOMControlledTerminologyDefinitionsCode("126037")
+    StandardizedAddedMetabolicActivity_SAM_ = DICOMControlledTerminologyDefinitionsCode(
+        "126037"
+    )
     """
     The background value (VOI2-VOI1) used to calculate Standardized Added
     Metabolic Activity (SAM). SAM is calculated by drawing a volume of interest
@@ -17330,7 +18234,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Imaging (2012) 39:1441-1448
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    StandardizedAddedMetabolicActivity_SAM_Background = DICOMControlledTerminologyDefinitionsCode("126038")
+    StandardizedAddedMetabolicActivity_SAM_Background = (
+        DICOMControlledTerminologyDefinitionsCode("126038")
+    )
     """
     The ratio of the SUV within a tumor to the SUV of a pre-defined background
     region. Need reference(s). A more general concept than Tumor to Background
@@ -17343,7 +18249,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Background SUV Ratio. Need reference(s)
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    BackgroundForLesionToBackgroundSUVRatio = DICOMControlledTerminologyDefinitionsCode("126040")
+    BackgroundForLesionToBackgroundSUVRatio = DICOMControlledTerminologyDefinitionsCode(
+        "126040"
+    )
     """
     A statistical index of complexity comparing how detail in a fractal pattern
     changes with the scale at which it is measured; a ratio of the change in
@@ -17412,7 +18320,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     occur in an image. See http://www.fp.ucalgary.ca/mhallbey/the_glcm.htm
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    GrayLevelCo_occurrenceMatrix_GLCM_ = DICOMControlledTerminologyDefinitionsCode("126067")
+    GrayLevelCo_occurrenceMatrix_GLCM_ = DICOMControlledTerminologyDefinitionsCode(
+        "126067"
+    )
     """
     An identifier of a specific time point in a continuum, which is unique within
     an appropriate local context (such as an entire organization, system or
@@ -17468,7 +18378,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     values before their use for a measurement
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    RealWorldValueMapUsedForMeasurement = DICOMControlledTerminologyDefinitionsCode("126100")
+    RealWorldValueMapUsedForMeasurement = DICOMControlledTerminologyDefinitionsCode(
+        "126100"
+    )
     """
     A container that groups common information about a set of images used as
     evidence to produce a report
@@ -17500,32 +18412,44 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Perfusion analysis by Stable Xenon CT technique
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PerfusionAnalysisByStableXenonCTTechnique = DICOMControlledTerminologyDefinitionsCode("126300")
+    PerfusionAnalysisByStableXenonCTTechnique = (
+        DICOMControlledTerminologyDefinitionsCode("126300")
+    )
     """
     Perfusion analysis by IV Iodinated Contrast CT technique
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PerfusionAnalysisByIVIodinatedContrastCTTechnique = DICOMControlledTerminologyDefinitionsCode("126301")
+    PerfusionAnalysisByIVIodinatedContrastCTTechnique = (
+        DICOMControlledTerminologyDefinitionsCode("126301")
+    )
     """
     Perfusion analysis by Arterial Spin Labeling (ASL) MR technique
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PerfusionAnalysisByArterialSpinLabelingMRTechnique = DICOMControlledTerminologyDefinitionsCode("126302")
+    PerfusionAnalysisByArterialSpinLabelingMRTechnique = (
+        DICOMControlledTerminologyDefinitionsCode("126302")
+    )
     """
     Perfusion analysis by Susceptibility (T2*) MR technique
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    PerfusionAnalysisBySusceptibilityMRTechnique = DICOMControlledTerminologyDefinitionsCode("126303")
+    PerfusionAnalysisBySusceptibilityMRTechnique = (
+        DICOMControlledTerminologyDefinitionsCode("126303")
+    )
     """
     Least Mean Square (LMS) deconvolution
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    LeastMeanSquare_LMS_Deconvolution = DICOMControlledTerminologyDefinitionsCode("126310")
+    LeastMeanSquare_LMS_Deconvolution = DICOMControlledTerminologyDefinitionsCode(
+        "126310"
+    )
     """
     Singular Value Decomposition (SVD) deconvolution
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    SingularValueDecomposition_SVD_Deconvolution = DICOMControlledTerminologyDefinitionsCode("126311")
+    SingularValueDecomposition_SVD_Deconvolution = (
+        DICOMControlledTerminologyDefinitionsCode("126311")
+    )
     """
     Ktrans, the volume transfer constant of a tracer diffusion kinetic model,
     specifically the volume transfer constant between blood plasma and
@@ -17607,7 +18531,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     compute the initial area under the curve
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    Model_freeConcentration_timeQuantitification = DICOMControlledTerminologyDefinitionsCode("126342")
+    Model_freeConcentration_timeQuantitification = (
+        DICOMControlledTerminologyDefinitionsCode("126342")
+    )
     """
     A tracer diffusion kinetic model that accounts for the tumor leakage profile
     during the first pass of contrast. See Li, Ka-Loh, Xiao Ping Zhu, John
@@ -17704,7 +18630,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     doi: 10.1118/1.1288669
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    TimeOfLeadingHalf_PeakConcentration = DICOMControlledTerminologyDefinitionsCode("126372")
+    TimeOfLeadingHalf_PeakConcentration = DICOMControlledTerminologyDefinitionsCode(
+        "126372"
+    )
     """
     A method of determining BAT that involves computing the temporal derivative of
     the concentration-time curve and selecting the time when the temporal
@@ -17712,7 +18640,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     10.1118/1.1288669
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    TemporalDerivativeExceedsThreshold = DICOMControlledTerminologyDefinitionsCode("126373")
+    TemporalDerivativeExceedsThreshold = DICOMControlledTerminologyDefinitionsCode(
+        "126373"
+    )
     """
     A threshold applied to the temporal derivative of the concentration-time
     curve; e.g. used to establish BAT. See Shpilfoygel Med Phys 2008. doi:
@@ -17852,7 +18782,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     1999 at http://radiology.rsna.org/content/213/2/521
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    SUVLeanBodyMassCalculationMethod = DICOMControlledTerminologyDefinitionsCode("126411")
+    SUVLeanBodyMassCalculationMethod = DICOMControlledTerminologyDefinitionsCode(
+        "126411"
+    )
     """
     Method of calculating Standardized Uptake Value using body surface area. The
     patient size correction factor for males and females is weight^ 0.425 *
@@ -17861,7 +18793,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Correction.Radiology, 1999 at http://radiology.rsna.org/content/213/2/521
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    SUVBodySurfaceAreaCalculationMethod = DICOMControlledTerminologyDefinitionsCode("126412")
+    SUVBodySurfaceAreaCalculationMethod = DICOMControlledTerminologyDefinitionsCode(
+        "126412"
+    )
     """
     Method of calculating Standardized Uptake Value using ideal body weight. The
     patient size correction factor for males is 48.0 + 1.06 * (height - 152) and
@@ -17871,7 +18805,9 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     http://radiology.rsna.org/content/213/2/521
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    SUVIdealBodyWeightCalculationMethod = DICOMControlledTerminologyDefinitionsCode("126413")
+    SUVIdealBodyWeightCalculationMethod = DICOMControlledTerminologyDefinitionsCode(
+        "126413"
+    )
     """
     A beta-amyloid PET radiotracer that is an analog of thioflavin T
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -18072,30 +19008,40 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     61217]
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    IEC6127PatientSupportContinuousAngle = DICOMControlledTerminologyDefinitionsCode("126801")
+    IEC6127PatientSupportContinuousAngle = DICOMControlledTerminologyDefinitionsCode(
+        "126801"
+    )
     """
     Table Top Continuous Pitch Angle in the direction of the IEC TABLE TOP
     Coordinate System [IEC 61217]
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    IEC6127TableTopContinuousPitchAngle = DICOMControlledTerminologyDefinitionsCode("126802")
+    IEC6127TableTopContinuousPitchAngle = DICOMControlledTerminologyDefinitionsCode(
+        "126802"
+    )
     """
     Table Top Continuous Roll Angle in the direction of the IEC TABLE TOP
     Coordinate System [IEC 61217]
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    IEC6127TableTopContinuousRollAngle = DICOMControlledTerminologyDefinitionsCode("126803")
+    IEC6127TableTopContinuousRollAngle = DICOMControlledTerminologyDefinitionsCode(
+        "126803"
+    )
     """
     Table Top Eccentric Axis Distance [IEC 61217]
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    IEC6127TableTopEccentricAxisDistance = DICOMControlledTerminologyDefinitionsCode("126804")
+    IEC6127TableTopEccentricAxisDistance = DICOMControlledTerminologyDefinitionsCode(
+        "126804"
+    )
     """
     Table Top Continuous Eccentric Angle in the direction of the IEC TABLE TOP
     ECCENTRIC Coordinate System [IEC 61217]
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    IEC6127TableTopContinuousEccentricAngle = DICOMControlledTerminologyDefinitionsCode("126805")
+    IEC6127TableTopContinuousEccentricAngle = DICOMControlledTerminologyDefinitionsCode(
+        "126805"
+    )
     """
     Table Top Lateral Position IEC TABLE TOP Coordinate System [IEC 61217]
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
@@ -18105,27 +19051,37 @@ class DICOMControlledTerminologyDefinitionsCodeValues:
     Table Top Longitudinal Position IEC TABLE TOP Coordinate System [IEC 61217]
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    IEC6127TableTopLongitudinalPosition = DICOMControlledTerminologyDefinitionsCode("126807")
+    IEC6127TableTopLongitudinalPosition = DICOMControlledTerminologyDefinitionsCode(
+        "126807"
+    )
     """
     Table Top Vertical Position in IEC TABLE TOP Coordinate System [IEC 61217]
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    IEC6127TableTopVerticalPosition = DICOMControlledTerminologyDefinitionsCode("126808")
+    IEC6127TableTopVerticalPosition = DICOMControlledTerminologyDefinitionsCode(
+        "126808"
+    )
     """
     Gantry Continuous Roll Angle in degrees of the radiation source, i.e., the
     rotation about the Y-axis of the IEC GANTRY coordinate system [IEC 61217]
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    IEC6127GantryContinuousRollAngle = DICOMControlledTerminologyDefinitionsCode("126809")
+    IEC6127GantryContinuousRollAngle = DICOMControlledTerminologyDefinitionsCode(
+        "126809"
+    )
     """
     Gantry Pitch Continuous Angle in degrees of the radiation source, i.e., the
     rotation about the X-axis of the IEC GANTRY coordinate system [IEC 61217]
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    IEC6127GantryContinuousPitchAngle = DICOMControlledTerminologyDefinitionsCode("126810")
+    IEC6127GantryContinuousPitchAngle = DICOMControlledTerminologyDefinitionsCode(
+        "126810"
+    )
     """
     Gantry Yaw Continuous Angle in degrees of the radiation source, i.e., about
     the Z-axis of the IEC GANTRY coordinate system [IEC 61217]
     From: http://dicom.nema.org/resources/ontology/DCM in valuesets.xml
     """
-    IEC6127GantryContinuousYawAngle = DICOMControlledTerminologyDefinitionsCode("126811")
+    IEC6127GantryContinuousYawAngle = DICOMControlledTerminologyDefinitionsCode(
+        "126811"
+    )

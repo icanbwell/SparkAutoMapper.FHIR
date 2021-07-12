@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -24,6 +14,7 @@ class DiscriminatorTypeCode(GenericTypeCode):
     From: http://hl7.org/fhir/discriminator-type in valuesets.xml
         How an element value is interpreted when discrimination is evaluated.
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -38,6 +29,7 @@ class DiscriminatorTypeCodeValues:
     The slices have different values in the nominated element.
     From: http://hl7.org/fhir/discriminator-type in valuesets.xml
     """
+
     Value = DiscriminatorTypeCode("value")
     """
     The slices are differentiated by the presence or absence of the nominated

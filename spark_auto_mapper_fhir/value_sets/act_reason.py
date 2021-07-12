@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -29,6 +19,7 @@ class ActReason(GenericTypeCode):
     "routine requirement", "infectious disease reporting requirement", "on patient
     request", "required by law".
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -47,6 +38,7 @@ class ActReasonValues:
     Identifies the reason the patient is assigned to this accommodation type
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
+
     ActAccommodationReason = ActReason("_ActAccommodationReason")
     """
     Description:Codes used to specify reasons or criteria relating to coverage
@@ -115,7 +107,9 @@ class ActReasonValues:
     Description:Indicates why the prescription should be suspended.
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
-    CombinedPharmacyOrderSuspendReasonCode = ActReason("_CombinedPharmacyOrderSuspendReasonCode")
+    CombinedPharmacyOrderSuspendReasonCode = ActReason(
+        "_CombinedPharmacyOrderSuspendReasonCode"
+    )
     """
     Description:Identifies reasons for nullifying (retracting) a particular
     control act.
@@ -126,7 +120,9 @@ class ActReasonValues:
     Description: Reasons to refuse a transaction to be undone.
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
-    ControlActNullificationRefusalReasonType = ActReason("_ControlActNullificationRefusalReasonType")
+    ControlActNullificationRefusalReasonType = ActReason(
+        "_ControlActNullificationRefusalReasonType"
+    )
     """
     Identifies why a specific query, request, or other trigger event occurred.
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
@@ -148,7 +144,9 @@ class ActReasonValues:
     dispensing facility to another has been refused.
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
-    PharmacySupplyRequestFulfillerRevisionRefusalReasonCode = ActReason("_PharmacySupplyRequestFulfillerRevisionRefusalReasonCode")
+    PharmacySupplyRequestFulfillerRevisionRefusalReasonCode = ActReason(
+        "_PharmacySupplyRequestFulfillerRevisionRefusalReasonCode"
+    )
     """
     Description: Identifies why a request to add (or activate) a record is being
     refused.  Examples include the receiving system not able to match the
@@ -172,13 +170,17 @@ class ActReasonValues:
     a medication has been refused.
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
-    SubstanceAdministrationPermissionRefusalReasonCode = ActReason("_SubstanceAdministrationPermissionRefusalReasonCode")
+    SubstanceAdministrationPermissionRefusalReasonCode = ActReason(
+        "_SubstanceAdministrationPermissionRefusalReasonCode"
+    )
     """
     Reasons why substitution of a substance administration request is not
     permitted.
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
-    SubstanceAdminSubstitutionNotAllowedReason = ActReason("_SubstanceAdminSubstitutionNotAllowedReason")
+    SubstanceAdminSubstitutionNotAllowedReason = ActReason(
+        "_SubstanceAdminSubstitutionNotAllowedReason"
+    )
     """
     SubstanceAdminSubstitutionReason
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml

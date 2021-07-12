@@ -1,19 +1,11 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
-from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.fhir_types.fhir_reference import FhirReference
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
@@ -22,10 +14,10 @@ if TYPE_CHECKING:
     # id_ (string)
     # extension (Extension)
     from spark_auto_mapper_fhir.complex_types.extension import Extension
+
     # system (uri)
     # version (string)
-    # code (code)
-    from spark_auto_mapper_fhir.complex_types.code import code
+    # code (generic_type)
     # display (string)
     # userSelected (boolean)
 
@@ -34,6 +26,7 @@ if TYPE_CHECKING:
 # noinspection PyPep8Naming
 from typing import TypeVar, Generic
 from spark_auto_mapper_fhir.base_types.FhirValueSetBase import FhirValueSetBase
+
 _T = TypeVar("_T", bound=Union[FhirValueSetBase])
 
 
@@ -44,44 +37,44 @@ class Coding(FhirComplexTypeBase, Generic[_T]):
         A reference to a code defined by a terminology system.
         If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
-        id_: Optional[FhirString ] = None,
-        extension: Optional[FhirList[Extension ]] = None,
-        system: Optional[FhirUri ] = None,
-        version: Optional[FhirString ] = None,
+        id_: Optional[FhirString] = None,
+        extension: Optional[FhirList[Extension]] = None,
+        system: Optional[FhirUri] = None,
+        version: Optional[FhirString] = None,
         code: Optional[_T] = None,
-
-        display: Optional[FhirString ] = None,
-        userSelected: Optional[FhirBoolean ] = None,
+        display: Optional[FhirString] = None,
+        userSelected: Optional[FhirBoolean] = None,
     ) -> None:
         """
-        A reference to a code defined by a terminology system.
-        If the element is present, it must have a value for at least one of the
-    defined elements, an @id referenced from the Narrative, or extensions
+            A reference to a code defined by a terminology system.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
-        :param id_: None
-        :param extension: May be used to represent additional information that is not part of the basic
-    definition of the element. To make the use of extensions safe and manageable,
-    there is a strict set of governance  applied to the definition and use of
-    extensions. Though any implementer can define an extension, there is a set of
-    requirements that SHALL be met as part of the definition of the extension.
-        :param system: The identification of the code system that defines the meaning of the symbol
-    in the code.
-        :param version: The version of the code system which was used when choosing this code. Note
-    that a well-maintained code system does not need the version reported, because
-    the meaning of codes is consistent across versions. However this cannot
-    consistently be assured, and when the meaning is not guaranteed to be
-    consistent, the version SHOULD be exchanged.
-        :param code: A symbol in syntax defined by the system. The symbol may be a predefined code
-    or an expression in a syntax defined by the coding system (e.g. post-
-    coordination).
-        :param display: A representation of the meaning of the code in the system, following the rules
-    of the system.
-        :param userSelected: Indicates that this coding was chosen by a user directly - e.g. off a pick
-    list of available items (codes or displays).
+            :param id_: None
+            :param extension: May be used to represent additional information that is not part of the basic
+        definition of the element. To make the use of extensions safe and manageable,
+        there is a strict set of governance  applied to the definition and use of
+        extensions. Though any implementer can define an extension, there is a set of
+        requirements that SHALL be met as part of the definition of the extension.
+            :param system: The identification of the code system that defines the meaning of the symbol
+        in the code.
+            :param version: The version of the code system which was used when choosing this code. Note
+        that a well-maintained code system does not need the version reported, because
+        the meaning of codes is consistent across versions. However this cannot
+        consistently be assured, and when the meaning is not guaranteed to be
+        consistent, the version SHOULD be exchanged.
+            :param code: A symbol in syntax defined by the system. The symbol may be a predefined code
+        or an expression in a syntax defined by the coding system (e.g. post-
+        coordination).
+            :param display: A representation of the meaning of the code in the system, following the rules
+        of the system.
+            :param userSelected: Indicates that this coding was chosen by a user directly - e.g. off a pick
+        list of available items (codes or displays).
         """
         super().__init__(
             id_=id_,

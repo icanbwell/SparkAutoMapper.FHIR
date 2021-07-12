@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -24,6 +14,7 @@ class CommonUCUMUnitsCode(GenericTypeCode):
     From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
         Commonly encountered UCUM units (for purposes of helping populate look ups.
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -37,6 +28,7 @@ class CommonUCUMUnitsCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
     """
+
     Percent = CommonUCUMUnitsCode("%")
     """
     From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
@@ -1409,7 +1401,9 @@ class CommonUCUMUnitsCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
     """
-    _theNumberTenForArbitraryPowers_3_Polarization_U = CommonUCUMUnitsCode("10*-3{Polarization'U}")
+    _theNumberTenForArbitraryPowers_3_Polarization_U = CommonUCUMUnitsCode(
+        "10*-3{Polarization'U}"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
     """
@@ -1457,7 +1451,9 @@ class CommonUCUMUnitsCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
     """
-    _theNumberTenForArbitraryPowers_6_Immunofluorescence_U = CommonUCUMUnitsCode("10*-6{Immunofluorescence'U}")
+    _theNumberTenForArbitraryPowers_6_Immunofluorescence_U = CommonUCUMUnitsCode(
+        "10*-6{Immunofluorescence'U}"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
     """
@@ -2185,7 +2181,9 @@ class CommonUCUMUnitsCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
     """
-    Milligram_Day_173_theNumberTenForArbitraryPowers_2_meter_2_ = CommonUCUMUnitsCode("mg/d/(173.10*-2.m2)")
+    Milligram_Day_173_theNumberTenForArbitraryPowers_2_meter_2_ = CommonUCUMUnitsCode(
+        "mg/d/(173.10*-2.m2)"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
     """
@@ -2377,7 +2375,9 @@ class CommonUCUMUnitsCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
     """
-    Milliliter_Minute_173_theNumberTenForArbitraryPowers_2_meter_2_ = CommonUCUMUnitsCode("mL/min/(173.10*-2.m2)")
+    Milliliter_Minute_173_theNumberTenForArbitraryPowers_2_meter_2_ = (
+        CommonUCUMUnitsCode("mL/min/(173.10*-2.m2)")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
     """
@@ -2881,7 +2881,9 @@ class CommonUCUMUnitsCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
     """
-    NanomolePerMinutePerMilligramOfHemoglobin = CommonUCUMUnitsCode("nmol/min/mg{hemoglobin}")
+    NanomolePerMinutePerMilligramOfHemoglobin = CommonUCUMUnitsCode(
+        "nmol/min/mg{hemoglobin}"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
     """
@@ -3557,7 +3559,9 @@ class CommonUCUMUnitsCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
     """
-    _10MicronewtonSecondPerCentimeterToTheFifthPowerPerSquareMeter = CommonUCUMUnitsCode("10.uN.s/(cm5.m2)")
+    _10MicronewtonSecondPerCentimeterToTheFifthPowerPerSquareMeter = (
+        CommonUCUMUnitsCode("10.uN.s/(cm5.m2)")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
     """
@@ -3701,7 +3705,9 @@ class CommonUCUMUnitsCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
     """
-    FemtomolePerMilligramOfCytosolProtein = CommonUCUMUnitsCode("fmol/mg{cytosol_protein}")
+    FemtomolePerMilligramOfCytosolProtein = CommonUCUMUnitsCode(
+        "fmol/mg{cytosol_protein}"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
     """
@@ -4265,11 +4271,15 @@ class CommonUCUMUnitsCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
     """
-    NanomoleBoneCollagenEquivalentPerMillimoleOfCreatinine = CommonUCUMUnitsCode("nmol{BCE}/mmol{creat}")
+    NanomoleBoneCollagenEquivalentPerMillimoleOfCreatinine = CommonUCUMUnitsCode(
+        "nmol{BCE}/mmol{creat}"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
     """
-    NanomoleOf1_2CystinePerMilligramOfProtein = CommonUCUMUnitsCode("nmol{1/2cys}/mg{protein}")
+    NanomoleOf1_2CystinePerMilligramOfProtein = CommonUCUMUnitsCode(
+        "nmol{1/2cys}/mg{protein}"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
     """
@@ -5177,7 +5187,9 @@ class CommonUCUMUnitsCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
     """
-    EhrlichUnitsPerDeciLiter_ArbitraryConcentrationUnits_ = CommonUCUMUnitsCode("{EhrlichU}/dL")
+    EhrlichUnitsPerDeciLiter_ArbitraryConcentrationUnits_ = CommonUCUMUnitsCode(
+        "{EhrlichU}/dL"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
     """
@@ -5185,7 +5197,9 @@ class CommonUCUMUnitsCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
     """
-    ElisaUnitsPerMilliLiter_ArbitraryConcentrationUnits_ = CommonUCUMUnitsCode("{ElisaU}/mL")
+    ElisaUnitsPerMilliLiter_ArbitraryConcentrationUnits_ = CommonUCUMUnitsCode(
+        "{ElisaU}/mL"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
     """

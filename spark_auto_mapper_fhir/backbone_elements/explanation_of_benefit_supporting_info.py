@@ -1,17 +1,11 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
-from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.resources.resource import Resource
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -22,37 +16,52 @@ if TYPE_CHECKING:
     # id_ (string)
     # extension (Extension)
     from spark_auto_mapper_fhir.complex_types.extension import Extension
+
     # modifierExtension (Extension)
     # sequence (positiveInt)
     from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
+
     # category (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # End Import for References for category
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.claim_information_category_codes import ClaimInformationCategoryCodesCode
+    from spark_auto_mapper_fhir.value_sets.claim_information_category_codes import (
+        ClaimInformationCategoryCodesCode,
+    )
+
     # End Import for CodeableConcept for category
     # code (CodeableConcept)
     # End Import for References for code
     # Import for CodeableConcept for code
     from spark_auto_mapper_fhir.value_sets.exception_codes import ExceptionCodesCode
+
     # End Import for CodeableConcept for code
     # timingDate (date)
     # timingPeriod (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
+
     # valueBoolean (boolean)
     # valueString (string)
     # valueQuantity (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
+
     # valueAttachment (Attachment)
     from spark_auto_mapper_fhir.complex_types.attachment import Attachment
+
     # valueReference (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for valueReference
     # reason (Coding)
     from spark_auto_mapper_fhir.complex_types.coding import Coding
+
     # End Import for References for reason
     # Import for CodeableConcept for reason
-    from spark_auto_mapper_fhir.value_sets.missing_tooth_reason_codes import MissingToothReasonCodesCode
+    from spark_auto_mapper_fhir.value_sets.missing_tooth_reason_codes import (
+        MissingToothReasonCodesCode,
+    )
+
     # End Import for CodeableConcept for reason
 
 
@@ -63,64 +72,65 @@ class ExplanationOfBenefitSupportingInfo(FhirBackboneElementBase):
     ExplanationOfBenefit.SupportingInfo
         This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided.
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
-        id_: Optional[FhirString ] = None,
-        extension: Optional[FhirList[Extension ]] = None,
-        modifierExtension: Optional[FhirList[Extension ]] = None,
-        sequence: FhirPositiveInt ,
-        category: CodeableConcept[ClaimInformationCategoryCodesCode] ,
-        code: Optional[CodeableConcept[ExceptionCodesCode] ] = None,
-        timingDate: Optional[FhirDate ] = None,
-        timingPeriod: Optional[Period ] = None,
-        valueBoolean: Optional[FhirBoolean ] = None,
-        valueString: Optional[FhirString ] = None,
-        valueQuantity: Optional[Quantity ] = None,
-        valueAttachment: Optional[Attachment ] = None,
-        valueReference: Optional[Reference [Union[Resource]]] = None,
-        reason: Optional[Coding[MissingToothReasonCodesCode] ] = None,
+        id_: Optional[FhirString] = None,
+        extension: Optional[FhirList[Extension]] = None,
+        modifierExtension: Optional[FhirList[Extension]] = None,
+        sequence: FhirPositiveInt,
+        category: CodeableConcept[ClaimInformationCategoryCodesCode],
+        code: Optional[CodeableConcept[ExceptionCodesCode]] = None,
+        timingDate: Optional[FhirDate] = None,
+        timingPeriod: Optional[Period] = None,
+        valueBoolean: Optional[FhirBoolean] = None,
+        valueString: Optional[FhirString] = None,
+        valueQuantity: Optional[Quantity] = None,
+        valueAttachment: Optional[Attachment] = None,
+        valueReference: Optional[Reference[Union[Resource]]] = None,
+        reason: Optional[Coding[MissingToothReasonCodesCode]] = None,
     ) -> None:
         """
-        This resource provides: the claim details; adjudication details from the
-    processing of a Claim; and optionally account balance information, for
-    informing the subscriber of the benefits provided.
+            This resource provides: the claim details; adjudication details from the
+        processing of a Claim; and optionally account balance information, for
+        informing the subscriber of the benefits provided.
 
-        :param id_: None
-        :param extension: May be used to represent additional information that is not part of the basic
-    definition of the element. To make the use of extensions safe and manageable,
-    there is a strict set of governance  applied to the definition and use of
-    extensions. Though any implementer can define an extension, there is a set of
-    requirements that SHALL be met as part of the definition of the extension.
-        :param modifierExtension: May be used to represent additional information that is not part of the basic
-    definition of the element and that modifies the understanding of the element
-    in which it is contained and/or the understanding of the containing element's
-    descendants. Usually modifier elements provide negation or qualification. To
-    make the use of extensions safe and manageable, there is a strict set of
-    governance applied to the definition and use of extensions. Though any
-    implementer can define an extension, there is a set of requirements that SHALL
-    be met as part of the definition of the extension. Applications processing a
-    resource are required to check for modifier extensions.
-    
-    Modifier extensions SHALL NOT change the meaning of any elements on Resource
-    or DomainResource (including cannot change the meaning of modifierExtension
-    itself).
-        :param sequence: A number to uniquely identify supporting information entries.
-        :param category: The general class of the information supplied: information; exception;
-    accident, employment; onset, etc.
-        :param code: System and code pertaining to the specific information regarding special
-    conditions relating to the setting, treatment or patient  for which care is
-    sought.
-        :param timingDate: None
-        :param timingPeriod: None
-        :param valueBoolean: None
-        :param valueString: None
-        :param valueQuantity: None
-        :param valueAttachment: None
-        :param valueReference: None
-        :param reason: Provides the reason in the situation where a reason code is required in
-    addition to the content.
+            :param id_: None
+            :param extension: May be used to represent additional information that is not part of the basic
+        definition of the element. To make the use of extensions safe and manageable,
+        there is a strict set of governance  applied to the definition and use of
+        extensions. Though any implementer can define an extension, there is a set of
+        requirements that SHALL be met as part of the definition of the extension.
+            :param modifierExtension: May be used to represent additional information that is not part of the basic
+        definition of the element and that modifies the understanding of the element
+        in which it is contained and/or the understanding of the containing element's
+        descendants. Usually modifier elements provide negation or qualification. To
+        make the use of extensions safe and manageable, there is a strict set of
+        governance applied to the definition and use of extensions. Though any
+        implementer can define an extension, there is a set of requirements that SHALL
+        be met as part of the definition of the extension. Applications processing a
+        resource are required to check for modifier extensions.
+
+        Modifier extensions SHALL NOT change the meaning of any elements on Resource
+        or DomainResource (including cannot change the meaning of modifierExtension
+        itself).
+            :param sequence: A number to uniquely identify supporting information entries.
+            :param category: The general class of the information supplied: information; exception;
+        accident, employment; onset, etc.
+            :param code: System and code pertaining to the specific information regarding special
+        conditions relating to the setting, treatment or patient  for which care is
+        sought.
+            :param timingDate: None
+            :param timingPeriod: None
+            :param valueBoolean: None
+            :param valueString: None
+            :param valueQuantity: None
+            :param valueAttachment: None
+            :param valueReference: None
+            :param reason: Provides the reason in the situation where a reason code is required in
+        addition to the content.
         """
         super().__init__(
             id_=id_,

@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -25,6 +15,7 @@ class HL7StandardVersionCode(GenericTypeCode):
          This code system holds version codes for the Version 3 standards. Values are
     to be determined by HL7 and added with each new version of the HL7 Standard.
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -35,7 +26,9 @@ class HL7StandardVersionCode(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-HL7StandardVersionCode
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-HL7StandardVersionCode"
+    codeset_2: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-HL7StandardVersionCode"
+    )
 
 
 class HL7StandardVersionCodeValues:
@@ -44,6 +37,7 @@ class HL7StandardVersionCodeValues:
     artifacts as published in the ballot whose ballot cycle ended in January 2008.
     From: http://terminology.hl7.org/CodeSystem/v3-HL7StandardVersionCode in v3-codesystems.xml
     """
+
     Ballot2008January = HL7StandardVersionCode("Ballot2008Jan")
     """
     The complete set of normative, DSTU, proposed (under ballot) and draft

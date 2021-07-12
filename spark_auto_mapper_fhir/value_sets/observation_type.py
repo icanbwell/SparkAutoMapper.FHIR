@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -24,6 +14,7 @@ class ObservationType(GenericTypeCode):
     From: http://terminology.hl7.org/ValueSet/v3-ObservationType in v3-codesystems.xml
          Identifies the kinds of observations that can be performed
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -45,6 +36,7 @@ class ObservationTypeValues:
     Cash.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
+
     ActAccountCode = ObservationType("_ActAccountCode")
     """
     Includes coded responses that will occur as a result of the adjudication of an
@@ -58,7 +50,9 @@ class ObservationTypeValues:
     information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActAdjudicationResultActionCode = ObservationType("_ActAdjudicationResultActionCode")
+    ActAdjudicationResultActionCode = ObservationType(
+        "_ActAdjudicationResultActionCode"
+    )
     """
     Definition:An identifying modifier code for healthcare interventions or
     procedures.
@@ -172,7 +166,9 @@ class ObservationTypeValues:
     patient health information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActInformationAccessContextCode = ObservationType("_ActInformationAccessContextCode")
+    ActInformationAccessContextCode = ObservationType(
+        "_ActInformationAccessContextCode"
+    )
     """
     Definition:Indicates the set of information types which may be manipulated or
     referenced, such as for recommending access restrictions.
@@ -216,7 +212,9 @@ class ObservationTypeValues:
     other than diagnosis and symptoms.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActNonObservationIndicationCode = ObservationType("_ActNonObservationIndicationCode")
+    ActNonObservationIndicationCode = ObservationType(
+        "_ActNonObservationIndicationCode"
+    )
     """
     Identifies the type of verification investigation being undertaken with
     respect to the subject of the verification activity.

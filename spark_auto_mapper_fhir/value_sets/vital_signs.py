@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -29,6 +19,7 @@ class VitalSignsCode(GenericTypeCode):
     (85354-9) is used to group the component observations Systolic blood pressure
     (8480-6) and Diastolic blood pressure (8462-4).
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -42,6 +33,7 @@ class VitalSignsCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/observation-vitalsignresult in valuesets.xml
     """
+
     _85353_1 = VitalSignsCode("85353-1")
     """
     From: http://hl7.org/fhir/ValueSet/observation-vitalsignresult in valuesets.xml

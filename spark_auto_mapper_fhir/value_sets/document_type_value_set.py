@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -28,6 +18,7 @@ class DocumentTypeValueSetCode(GenericTypeCode):
     2-144 Document Class Value Set Definition above used for Document Class,  and
     all LOINC values whose SCALE is DOC in the LOINC database.
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -41,6 +32,7 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
+
     AddendumDocument = DocumentTypeValueSetCode("55107-7")
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
@@ -65,7 +57,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    EmergencyMedicineEmergencyDepartmentAdmissionEvaluationNote = DocumentTypeValueSetCode("68552-9")
+    EmergencyMedicineEmergencyDepartmentAdmissionEvaluationNote = (
+        DocumentTypeValueSetCode("68552-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -77,15 +71,21 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CardiologyMedicalStudentHospitalAdmissionEvaluationNote = DocumentTypeValueSetCode("68483-7")
+    CardiologyMedicalStudentHospitalAdmissionEvaluationNote = DocumentTypeValueSetCode(
+        "68483-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CriticalCareMedicineHospitalAdmissionEvaluationNote = DocumentTypeValueSetCode("64058-1")
+    CriticalCareMedicineHospitalAdmissionEvaluationNote = DocumentTypeValueSetCode(
+        "64058-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CriticalCareMedicineMedicalStudentHospitalAdmissionEvaluationNote = DocumentTypeValueSetCode("64070-6")
+    CriticalCareMedicineMedicalStudentHospitalAdmissionEvaluationNote = (
+        DocumentTypeValueSetCode("64070-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -93,11 +93,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    GeneralMedicineMedicalStudentHospitalAdmissionEvaluationNote = DocumentTypeValueSetCode("64054-0")
+    GeneralMedicineMedicalStudentHospitalAdmissionEvaluationNote = (
+        DocumentTypeValueSetCode("64054-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    GeneralMedicinePhysicianAttendingHospitalAdmissionEvaluationNote = DocumentTypeValueSetCode("34862-3")
+    GeneralMedicinePhysicianAttendingHospitalAdmissionEvaluationNote = (
+        DocumentTypeValueSetCode("34862-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -105,11 +109,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PulmonaryMedicalStudentHospitalAdmissionEvaluationNote = DocumentTypeValueSetCode("64078-9")
+    PulmonaryMedicalStudentHospitalAdmissionEvaluationNote = DocumentTypeValueSetCode(
+        "64078-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SurgeryMedicalStudentHospitalAdmissionEvaluationNote = DocumentTypeValueSetCode("64066-4")
+    SurgeryMedicalStudentHospitalAdmissionEvaluationNote = DocumentTypeValueSetCode(
+        "64066-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -117,7 +125,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ThoracicSurgeryMedicalStudentHospitalAdmissionEvaluationNote = DocumentTypeValueSetCode("64074-8")
+    ThoracicSurgeryMedicalStudentHospitalAdmissionEvaluationNote = (
+        DocumentTypeValueSetCode("64074-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -133,7 +143,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CardiologyHospitalAdmissionHistoryAndPhysicalNote = DocumentTypeValueSetCode("34094-3")
+    CardiologyHospitalAdmissionHistoryAndPhysicalNote = DocumentTypeValueSetCode(
+        "34094-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -197,7 +209,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CommunicationOfCriticalResults_Description_Document = DocumentTypeValueSetCode("73568-8")
+    CommunicationOfCriticalResults_Description_Document = DocumentTypeValueSetCode(
+        "73568-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -213,7 +227,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    NursingFacilityComprehensiveHistoryAndPhysicalNote = DocumentTypeValueSetCode("34096-8")
+    NursingFacilityComprehensiveHistoryAndPhysicalNote = DocumentTypeValueSetCode(
+        "34096-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -453,7 +469,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ChildAndAdolescentPsychiatryHospitalConsultNote = DocumentTypeValueSetCode("68648-5")
+    ChildAndAdolescentPsychiatryHospitalConsultNote = DocumentTypeValueSetCode(
+        "68648-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -465,7 +483,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CriticalCareMedicineMedicalStudentHospitalConsultNote = DocumentTypeValueSetCode("64072-2")
+    CriticalCareMedicineMedicalStudentHospitalConsultNote = DocumentTypeValueSetCode(
+        "64072-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -473,11 +493,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Developmental_behavioralPediatricsHospitalConsultNote = DocumentTypeValueSetCode("68670-9")
+    Developmental_behavioralPediatricsHospitalConsultNote = DocumentTypeValueSetCode(
+        "68670-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    GeneralMedicineMedicalStudentHospitalConsultNote = DocumentTypeValueSetCode("64056-5")
+    GeneralMedicineMedicalStudentHospitalConsultNote = DocumentTypeValueSetCode(
+        "64056-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -493,7 +517,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    NeurologyWithSpecialQualificationsInChildNeurologyHospitalConsultNote = DocumentTypeValueSetCode("68705-3")
+    NeurologyWithSpecialQualificationsInChildNeurologyHospitalConsultNote = (
+        DocumentTypeValueSetCode("68705-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -533,7 +559,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PediatricHematology_oncologyHospitalConsultNote = DocumentTypeValueSetCode("68757-4")
+    PediatricHematology_oncologyHospitalConsultNote = DocumentTypeValueSetCode(
+        "68757-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -561,7 +589,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PediatricTransplantHepatologyHospitalConsultNote = DocumentTypeValueSetCode("68864-8")
+    PediatricTransplantHepatologyHospitalConsultNote = DocumentTypeValueSetCode(
+        "68864-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -605,7 +635,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ThoracicSurgeryMedicalStudentHospitalConsultNote = DocumentTypeValueSetCode("64076-3")
+    ThoracicSurgeryMedicalStudentHospitalConsultNote = DocumentTypeValueSetCode(
+        "64076-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -669,7 +701,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    DemographicInformation_HistoryOfOccupationDocument = DocumentTypeValueSetCode("74208-0")
+    DemographicInformation_HistoryOfOccupationDocument = DocumentTypeValueSetCode(
+        "74208-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -685,7 +719,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    DiagnosticInterventionalStudyReportInterventionalRadiology = DocumentTypeValueSetCode("47048-4")
+    DiagnosticInterventionalStudyReportInterventionalRadiology = (
+        DocumentTypeValueSetCode("47048-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -705,7 +741,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ChildAndAdolescentPsychiatryDiagnosticStudyNote = DocumentTypeValueSetCode("68641-0")
+    ChildAndAdolescentPsychiatryDiagnosticStudyNote = DocumentTypeValueSetCode(
+        "68641-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -725,7 +763,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    NeurologyWithSpecialQualificationsInChildNeurologyDiagnosticStudyNote = DocumentTypeValueSetCode("68696-4")
+    NeurologyWithSpecialQualificationsInChildNeurologyDiagnosticStudyNote = (
+        DocumentTypeValueSetCode("68696-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -745,7 +785,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PediatricHematology_oncologyDiagnosticStudyNote = DocumentTypeValueSetCode("68748-3")
+    PediatricHematology_oncologyDiagnosticStudyNote = DocumentTypeValueSetCode(
+        "68748-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -761,7 +803,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PediatricTransplantHepatologyDiagnosticStudyNote = DocumentTypeValueSetCode("68855-6")
+    PediatricTransplantHepatologyDiagnosticStudyNote = DocumentTypeValueSetCode(
+        "68855-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -777,11 +821,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    NeurologyWithSpecialQualificationsInChildNeurologyHospitalDiagnosticStudyNote = DocumentTypeValueSetCode("68706-1")
+    NeurologyWithSpecialQualificationsInChildNeurologyHospitalDiagnosticStudyNote = (
+        DocumentTypeValueSetCode("68706-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PediatricPulmonologyHospitalDiagnosticStudyNote = DocumentTypeValueSetCode("68788-9")
+    PediatricPulmonologyHospitalDiagnosticStudyNote = DocumentTypeValueSetCode(
+        "68788-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -821,7 +869,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Developmental_behavioralPediatricsDischargeSummary = DocumentTypeValueSetCode("68663-4")
+    Developmental_behavioralPediatricsDischargeSummary = DocumentTypeValueSetCode(
+        "68663-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -833,7 +883,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    NeurologyWithSpecialQualificationsInChildNeurologyDischargeSummary = DocumentTypeValueSetCode("68697-2")
+    NeurologyWithSpecialQualificationsInChildNeurologyDischargeSummary = (
+        DocumentTypeValueSetCode("68697-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -985,7 +1037,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HospitalEvaluationAndManagementOfSmokingCessation = DocumentTypeValueSetCode("64142-3")
+    HospitalEvaluationAndManagementOfSmokingCessation = DocumentTypeValueSetCode(
+        "64142-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -993,7 +1047,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    EvaluationOfMentalAndPhysicalIncapacityCertificateDocument = DocumentTypeValueSetCode("72267-8")
+    EvaluationOfMentalAndPhysicalIncapacityCertificateDocument = (
+        DocumentTypeValueSetCode("72267-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -1061,7 +1117,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AdvancedHeartFailureAndTransplantCardiologyHistoryAndPhysicalNote = DocumentTypeValueSetCode("68622-0")
+    AdvancedHeartFailureAndTransplantCardiologyHistoryAndPhysicalNote = (
+        DocumentTypeValueSetCode("68622-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -1073,7 +1131,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ChildAndAdolescentPsychiatryHistoryAndPhysicalNote = DocumentTypeValueSetCode("68644-4")
+    ChildAndAdolescentPsychiatryHistoryAndPhysicalNote = DocumentTypeValueSetCode(
+        "68644-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -1081,7 +1141,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Developmental_behavioralPediatricsHistoryAndPhysicalNote = DocumentTypeValueSetCode("68665-9")
+    Developmental_behavioralPediatricsHistoryAndPhysicalNote = DocumentTypeValueSetCode(
+        "68665-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -1089,7 +1151,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    NeonatalPerinatalMedicineHistoryAndPhysicalNote = DocumentTypeValueSetCode("68683-2")
+    NeonatalPerinatalMedicineHistoryAndPhysicalNote = DocumentTypeValueSetCode(
+        "68683-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -1097,7 +1161,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    NeurologyWithSpecialQualificationsInChildNeurologyHistoryAndPhysicalNote = DocumentTypeValueSetCode("68699-8")
+    NeurologyWithSpecialQualificationsInChildNeurologyHistoryAndPhysicalNote = (
+        DocumentTypeValueSetCode("68699-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -1129,15 +1195,21 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PediatricGastroenterologyHistoryAndPhysicalNote = DocumentTypeValueSetCode("68740-0")
+    PediatricGastroenterologyHistoryAndPhysicalNote = DocumentTypeValueSetCode(
+        "68740-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PediatricHematology_oncologyHistoryAndPhysicalNote = DocumentTypeValueSetCode("68751-7")
+    PediatricHematology_oncologyHistoryAndPhysicalNote = DocumentTypeValueSetCode(
+        "68751-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PediatricInfectiousDiseasesHistoryAndPhysicalNote = DocumentTypeValueSetCode("68760-8")
+    PediatricInfectiousDiseasesHistoryAndPhysicalNote = DocumentTypeValueSetCode(
+        "68760-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -1161,7 +1233,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PediatricTransplantHepatologyHistoryAndPhysicalNote = DocumentTypeValueSetCode("68858-0")
+    PediatricTransplantHepatologyHistoryAndPhysicalNote = DocumentTypeValueSetCode(
+        "68858-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -1237,7 +1311,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Hematology_MedicalOncologyInitialAssessmentNote = DocumentTypeValueSetCode("68553-7")
+    Hematology_MedicalOncologyInitialAssessmentNote = DocumentTypeValueSetCode(
+        "68553-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -1253,7 +1329,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    RespiratoryTherapyHospitalInitialAssessmentNote = DocumentTypeValueSetCode("68470-4")
+    RespiratoryTherapyHospitalInitialAssessmentNote = DocumentTypeValueSetCode(
+        "68470-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -1281,19 +1359,27 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    InterRAICommunityHealthAssessment_AssistedLivingSupplement_CHA_AL_Document = DocumentTypeValueSetCode("74191-8")
+    InterRAICommunityHealthAssessment_AssistedLivingSupplement_CHA_AL_Document = (
+        DocumentTypeValueSetCode("74191-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    InterRAICommunityHealthAssessment_DeafblindSupplement_CHA_Db_Document = DocumentTypeValueSetCode("74190-0")
+    InterRAICommunityHealthAssessment_DeafblindSupplement_CHA_Db_Document = (
+        DocumentTypeValueSetCode("74190-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    InterRAICommunityHealthAssessment_FunctionalSupplement_CHA_FS_Document = DocumentTypeValueSetCode("74193-4")
+    InterRAICommunityHealthAssessment_FunctionalSupplement_CHA_FS_Document = (
+        DocumentTypeValueSetCode("74193-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    InterRAICommunityHealthAssessment_MentalHealthSupplement_CHA_MH_Document = DocumentTypeValueSetCode("74192-6")
+    InterRAICommunityHealthAssessment_MentalHealthSupplement_CHA_MH_Document = (
+        DocumentTypeValueSetCode("74192-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -1301,7 +1387,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    InterRAIEmergencyScreenerForPsychiatry_ESP_Document = DocumentTypeValueSetCode("74187-6")
+    InterRAIEmergencyScreenerForPsychiatry_ESP_Document = DocumentTypeValueSetCode(
+        "74187-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -1333,7 +1421,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LaborAndDeliveryAdmissionHistoryAndPhysicalNote = DocumentTypeValueSetCode("57056-4")
+    LaborAndDeliveryAdmissionHistoryAndPhysicalNote = DocumentTypeValueSetCode(
+        "57056-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -1369,7 +1459,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AdvancedHeartFailureAndTransplantCardiologyHospitalLetter = DocumentTypeValueSetCode("68624-6")
+    AdvancedHeartFailureAndTransplantCardiologyHospitalLetter = (
+        DocumentTypeValueSetCode("68624-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -1385,7 +1477,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Developmental_behavioralPediatricsHospitalLetter = DocumentTypeValueSetCode("68671-7")
+    Developmental_behavioralPediatricsHospitalLetter = DocumentTypeValueSetCode(
+        "68671-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -1405,7 +1499,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    NeurologyWithSpecialQualificationsInChildNeurologyHospitalLetter = DocumentTypeValueSetCode("68707-9")
+    NeurologyWithSpecialQualificationsInChildNeurologyHospitalLetter = (
+        DocumentTypeValueSetCode("68707-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -1529,7 +1625,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MedicationPharmaceuticalAdvice_extendedDocument = DocumentTypeValueSetCode("61356-2")
+    MedicationPharmaceuticalAdvice_extendedDocument = DocumentTypeValueSetCode(
+        "61356-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -1557,7 +1655,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AdvancedHeartFailureAndTransplantCardiologyNote = DocumentTypeValueSetCode("68621-2")
+    AdvancedHeartFailureAndTransplantCardiologyNote = DocumentTypeValueSetCode(
+        "68621-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -1673,7 +1773,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    NeurologyWithSpecialQualificationsInChildNeurologyNote = DocumentTypeValueSetCode("68700-4")
+    NeurologyWithSpecialQualificationsInChildNeurologyNote = DocumentTypeValueSetCode(
+        "68700-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -1889,7 +1991,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CriticalCareMedicinePhysicianAttendingHospitalNote = DocumentTypeValueSetCode("64069-8")
+    CriticalCareMedicinePhysicianAttendingHospitalNote = DocumentTypeValueSetCode(
+        "64069-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -2009,27 +2113,39 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    OphthalmologyPostoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("67861-5")
+    OphthalmologyPostoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
+        "67861-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SurgeryPostoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("34875-5")
+    SurgeryPostoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
+        "34875-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SurgeryNursePostoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("34880-5")
+    SurgeryNursePostoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
+        "34880-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HospitalPostoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68610-5")
+    HospitalPostoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
+        "68610-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SurgeryHospitalPostoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68606-3")
+    SurgeryHospitalPostoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
+        "68606-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    OphthalmologyOutpatientPostoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("34867-2")
+    OphthalmologyOutpatientPostoperativeEvaluationAndManagementNote = (
+        DocumentTypeValueSetCode("34867-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -2045,39 +2161,57 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AdolescentMedicinePreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68616-2")
+    AdolescentMedicinePreoperativeEvaluationAndManagementNote = (
+        DocumentTypeValueSetCode("68616-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AdvancedHeartFailureAndTransplantCardiologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68623-8")
+    AdvancedHeartFailureAndTransplantCardiologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
+        "68623-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AnesthesiologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("34751-8")
+    AnesthesiologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
+        "34751-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AudiologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68638-6")
+    AudiologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
+        "68638-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ClinicalGeneticsPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68657-6")
+    ClinicalGeneticsPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
+        "68657-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    DermatologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68550-3")
+    DermatologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
+        "68550-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Multi_specialtyProgramPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68678-2")
+    Multi_specialtyProgramPreoperativeEvaluationAndManagementNote = (
+        DocumentTypeValueSetCode("68678-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    NeurologicalSurgeryPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68691-5")
+    NeurologicalSurgeryPreoperativeEvaluationAndManagementNote = (
+        DocumentTypeValueSetCode("68691-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    NeurologyWithSpecialQualificationsInChildNeurologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68701-2")
+    NeurologyWithSpecialQualificationsInChildNeurologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
+        "68701-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -2085,87 +2219,129 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ObstetricsAndGynecologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68562-8")
+    ObstetricsAndGynecologyPreoperativeEvaluationAndManagementNote = (
+        DocumentTypeValueSetCode("68562-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    OphthalmologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("34809-4")
+    OphthalmologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
+        "34809-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    OrthopaedicSurgeryPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68581-8")
+    OrthopaedicSurgeryPreoperativeEvaluationAndManagementNote = (
+        DocumentTypeValueSetCode("68581-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PainMedicinePreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68713-7")
+    PainMedicinePreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
+        "68713-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PediatricCardiologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68723-6")
+    PediatricCardiologyPreoperativeEvaluationAndManagementNote = (
+        DocumentTypeValueSetCode("68723-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PediatricDermatologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68732-7")
+    PediatricDermatologyPreoperativeEvaluationAndManagementNote = (
+        DocumentTypeValueSetCode("68732-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PediatricEndocrinologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68736-8")
+    PediatricEndocrinologyPreoperativeEvaluationAndManagementNote = (
+        DocumentTypeValueSetCode("68736-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PediatricGastroenterologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68742-6")
+    PediatricGastroenterologyPreoperativeEvaluationAndManagementNote = (
+        DocumentTypeValueSetCode("68742-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PediatricHematology_oncologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68753-3")
+    PediatricHematology_oncologyPreoperativeEvaluationAndManagementNote = (
+        DocumentTypeValueSetCode("68753-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PediatricInfectiousDiseasesPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68762-4")
+    PediatricInfectiousDiseasesPreoperativeEvaluationAndManagementNote = (
+        DocumentTypeValueSetCode("68762-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PediatricNephrologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68771-5")
+    PediatricNephrologyPreoperativeEvaluationAndManagementNote = (
+        DocumentTypeValueSetCode("68771-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PediatricOtolaryngologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68776-4")
+    PediatricOtolaryngologyPreoperativeEvaluationAndManagementNote = (
+        DocumentTypeValueSetCode("68776-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PediatricPulmonologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68783-0")
+    PediatricPulmonologyPreoperativeEvaluationAndManagementNote = (
+        DocumentTypeValueSetCode("68783-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PediatricRheumatologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68792-1")
+    PediatricRheumatologyPreoperativeEvaluationAndManagementNote = (
+        DocumentTypeValueSetCode("68792-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PediatricSurgeryPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68798-8")
+    PediatricSurgeryPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
+        "68798-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PediatricTransplantHepatologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68860-6")
+    PediatricTransplantHepatologyPreoperativeEvaluationAndManagementNote = (
+        DocumentTypeValueSetCode("68860-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PediatricUrologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68808-5")
+    PediatricUrologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
+        "68808-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PediatricsPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68819-2")
+    PediatricsPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
+        "68819-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PlasticSurgeryPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68594-1")
+    PlasticSurgeryPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
+        "68594-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PrimaryCarePreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68835-8")
+    PrimaryCarePreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
+        "68835-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Speech_languagePathologyPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68844-0")
+    Speech_languagePathologyPreoperativeEvaluationAndManagementNote = (
+        DocumentTypeValueSetCode("68844-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -2173,23 +2349,33 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SurgeryNursePreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("34881-3")
+    SurgeryNursePreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
+        "34881-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    TransplantSurgeryPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68850-7")
+    TransplantSurgeryPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode(
+        "68850-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AnesthesiologyHospitalPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("34123-0")
+    AnesthesiologyHospitalPreoperativeEvaluationAndManagementNote = (
+        DocumentTypeValueSetCode("34123-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PediatricsHospitalPreoperativeEvaluationAndManagementNote = DocumentTypeValueSetCode("68828-3")
+    PediatricsHospitalPreoperativeEvaluationAndManagementNote = (
+        DocumentTypeValueSetCode("68828-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PrescriptionForDiagnosticOrSpecialistCareDocument = DocumentTypeValueSetCode("57832-8")
+    PrescriptionForDiagnosticOrSpecialistCareDocument = DocumentTypeValueSetCode(
+        "57832-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -2197,7 +2383,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PrescriptionForMedicalEquipmentOrProductDocument = DocumentTypeValueSetCode("57829-4")
+    PrescriptionForMedicalEquipmentOrProductDocument = DocumentTypeValueSetCode(
+        "57829-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -2213,7 +2401,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PrescriptionRequestPharmacyDocumentFromPharmacist = DocumentTypeValueSetCode("73709-8")
+    PrescriptionRequestPharmacyDocumentFromPharmacist = DocumentTypeValueSetCode(
+        "73709-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -2241,7 +2431,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Developmental_behavioralPediatricsProcedureNote = DocumentTypeValueSetCode("68667-5")
+    Developmental_behavioralPediatricsProcedureNote = DocumentTypeValueSetCode(
+        "68667-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -2249,7 +2441,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    NeurologyWithSpecialQualificationsInChildNeurologyProcedureNote = DocumentTypeValueSetCode("68702-0")
+    NeurologyWithSpecialQualificationsInChildNeurologyProcedureNote = (
+        DocumentTypeValueSetCode("68702-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -2321,7 +2515,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PediatricCriticalCareMedicineHospitalProcedureNote = DocumentTypeValueSetCode("68729-3")
+    PediatricCriticalCareMedicineHospitalProcedureNote = DocumentTypeValueSetCode(
+        "68729-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -2389,7 +2585,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    NeurologyWithSpecialQualificationsInChildNeurologyProgressNote = DocumentTypeValueSetCode("68703-8")
+    NeurologyWithSpecialQualificationsInChildNeurologyProgressNote = (
+        DocumentTypeValueSetCode("68703-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -2521,7 +2719,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CardiologyPhysicianAttendingHospitalProgressNote = DocumentTypeValueSetCode("68484-5")
+    CardiologyPhysicianAttendingHospitalProgressNote = DocumentTypeValueSetCode(
+        "68484-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -2529,19 +2729,27 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CriticalCareMedicineMedicalStudentHospitalProgressNote = DocumentTypeValueSetCode("64071-4")
+    CriticalCareMedicineMedicalStudentHospitalProgressNote = DocumentTypeValueSetCode(
+        "64071-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CriticalCareMedicinePhysicianAttendingHospitalProgressNote = DocumentTypeValueSetCode("68473-8")
+    CriticalCareMedicinePhysicianAttendingHospitalProgressNote = (
+        DocumentTypeValueSetCode("68473-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    GeneralMedicineMedicalStudentHospitalProgressNote = DocumentTypeValueSetCode("64055-7")
+    GeneralMedicineMedicalStudentHospitalProgressNote = DocumentTypeValueSetCode(
+        "64055-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    GeneralMedicinePhysicianAttendingHospitalProgressNote = DocumentTypeValueSetCode("68475-3")
+    GeneralMedicinePhysicianAttendingHospitalProgressNote = DocumentTypeValueSetCode(
+        "68475-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -2557,7 +2765,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PulmonaryPhysicianAttendingHospitalProgressNote = DocumentTypeValueSetCode("68478-7")
+    PulmonaryPhysicianAttendingHospitalProgressNote = DocumentTypeValueSetCode(
+        "68478-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -2581,11 +2791,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ThoracicSurgeryMedicalStudentHospitalProgressNote = DocumentTypeValueSetCode("64075-5")
+    ThoracicSurgeryMedicalStudentHospitalProgressNote = DocumentTypeValueSetCode(
+        "64075-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ThoracicSurgeryPhysicianAttendingHospitalProgressNote = DocumentTypeValueSetCode("68481-1")
+    ThoracicSurgeryPhysicianAttendingHospitalProgressNote = DocumentTypeValueSetCode(
+        "68481-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -2637,7 +2851,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    RadiationExposureAndProtectionInformation_Description_DocumentDiagnosticImaging = DocumentTypeValueSetCode("73569-6")
+    RadiationExposureAndProtectionInformation_Description_DocumentDiagnosticImaging = (
+        DocumentTypeValueSetCode("73569-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -2897,7 +3113,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SummaryOfEpisodeNoteEmergencyDepartment_Hospital = DocumentTypeValueSetCode("74211-4")
+    SummaryOfEpisodeNoteEmergencyDepartment_Hospital = DocumentTypeValueSetCode(
+        "74211-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -2913,11 +3131,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CardiologyPhysicianAttendingOutpatientSupervisoryNote = DocumentTypeValueSetCode("34135-4")
+    CardiologyPhysicianAttendingOutpatientSupervisoryNote = DocumentTypeValueSetCode(
+        "34135-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    GastroenterologyPhysicianAttendingOutpatientSupervisoryNote = DocumentTypeValueSetCode("34136-2")
+    GastroenterologyPhysicianAttendingOutpatientSupervisoryNote = (
+        DocumentTypeValueSetCode("34136-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -2977,7 +3199,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ChildAndAdolescentPsychiatryTransferSummaryNote = DocumentTypeValueSetCode("68647-7")
+    ChildAndAdolescentPsychiatryTransferSummaryNote = DocumentTypeValueSetCode(
+        "68647-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -2989,7 +3213,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Developmental_behavioralPediatricsTransferSummaryNote = DocumentTypeValueSetCode("68669-1")
+    Developmental_behavioralPediatricsTransferSummaryNote = DocumentTypeValueSetCode(
+        "68669-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -3001,7 +3227,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    NeurologyWithSpecialQualificationsInChildNeurologyTransferSummaryNote = DocumentTypeValueSetCode("68704-6")
+    NeurologyWithSpecialQualificationsInChildNeurologyTransferSummaryNote = (
+        DocumentTypeValueSetCode("68704-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -3037,7 +3265,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PediatricHematology_oncologyTransferSummaryNote = DocumentTypeValueSetCode("68756-6")
+    PediatricHematology_oncologyTransferSummaryNote = DocumentTypeValueSetCode(
+        "68756-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -3065,7 +3295,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PediatricTransplantHepatologyTransferSummaryNote = DocumentTypeValueSetCode("68863-0")
+    PediatricTransplantHepatologyTransferSummaryNote = DocumentTypeValueSetCode(
+        "68863-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -3105,71 +3337,105 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationAcromegaly = DocumentTypeValueSetCode("38932-0")
+    VACompensationAndPension_CAndP_ExaminationAcromegaly = DocumentTypeValueSetCode(
+        "38932-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationAidAndAttendance_housebound = DocumentTypeValueSetCode("38933-8")
+    VACompensationAndPension_CAndP_ExaminationAidAndAttendance_housebound = (
+        DocumentTypeValueSetCode("38933-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationArrhythmias = DocumentTypeValueSetCode("38934-6")
+    VACompensationAndPension_CAndP_ExaminationArrhythmias = DocumentTypeValueSetCode(
+        "38934-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationAudio = DocumentTypeValueSetCode("38936-1")
+    VACompensationAndPension_CAndP_ExaminationAudio = DocumentTypeValueSetCode(
+        "38936-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationBonesFractures_boneDisease = DocumentTypeValueSetCode("38937-9")
+    VACompensationAndPension_CAndP_ExaminationBonesFractures_boneDisease = (
+        DocumentTypeValueSetCode("38937-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationBrain_spinalCord = DocumentTypeValueSetCode("38938-7")
+    VACompensationAndPension_CAndP_ExaminationBrain_spinalCord = (
+        DocumentTypeValueSetCode("38938-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationChronicFatigueSyndrome = DocumentTypeValueSetCode("38939-5")
+    VACompensationAndPension_CAndP_ExaminationChronicFatigueSyndrome = (
+        DocumentTypeValueSetCode("38939-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationColdInjuryProtocol = DocumentTypeValueSetCode("38940-3")
+    VACompensationAndPension_CAndP_ExaminationColdInjuryProtocol = (
+        DocumentTypeValueSetCode("38940-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationCranialNerves = DocumentTypeValueSetCode("38941-1")
+    VACompensationAndPension_CAndP_ExaminationCranialNerves = DocumentTypeValueSetCode(
+        "38941-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationCushingsSyndrome = DocumentTypeValueSetCode("38942-9")
+    VACompensationAndPension_CAndP_ExaminationCushingsSyndrome = (
+        DocumentTypeValueSetCode("38942-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationDental_oral = DocumentTypeValueSetCode("38943-7")
+    VACompensationAndPension_CAndP_ExaminationDental_oral = DocumentTypeValueSetCode(
+        "38943-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationDiabetesMellitus = DocumentTypeValueSetCode("38944-5")
+    VACompensationAndPension_CAndP_ExaminationDiabetesMellitus = (
+        DocumentTypeValueSetCode("38944-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationDisabilityInGulfWarVeterans = DocumentTypeValueSetCode("38956-9")
+    VACompensationAndPension_CAndP_ExaminationDisabilityInGulfWarVeterans = (
+        DocumentTypeValueSetCode("38956-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationEarDisease = DocumentTypeValueSetCode("38946-0")
+    VACompensationAndPension_CAndP_ExaminationEarDisease = DocumentTypeValueSetCode(
+        "38946-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationEpilepsy_narcolepsy = DocumentTypeValueSetCode("38949-4")
+    VACompensationAndPension_CAndP_ExaminationEpilepsy_narcolepsy = (
+        DocumentTypeValueSetCode("38949-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationEsophagus_hiatalHernia = DocumentTypeValueSetCode("38950-2")
+    VACompensationAndPension_CAndP_ExaminationEsophagus_hiatalHernia = (
+        DocumentTypeValueSetCode("38950-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationExtremityJoints = DocumentTypeValueSetCode("38966-8")
+    VACompensationAndPension_CAndP_ExaminationExtremityJoints = (
+        DocumentTypeValueSetCode("38966-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -3181,155 +3447,231 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationFibromyalgia = DocumentTypeValueSetCode("38953-6")
+    VACompensationAndPension_CAndP_ExaminationFibromyalgia = DocumentTypeValueSetCode(
+        "38953-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationGeneralMedical = DocumentTypeValueSetCode("38954-4")
+    VACompensationAndPension_CAndP_ExaminationGeneralMedical = DocumentTypeValueSetCode(
+        "38954-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationGeneralMentalDisorders = DocumentTypeValueSetCode("38969-2")
+    VACompensationAndPension_CAndP_ExaminationGeneralMentalDisorders = (
+        DocumentTypeValueSetCode("38969-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationGenitourinary = DocumentTypeValueSetCode("38955-1")
+    VACompensationAndPension_CAndP_ExaminationGenitourinary = DocumentTypeValueSetCode(
+        "38955-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationGynecologicalConditions_disordersOfTheBreast = DocumentTypeValueSetCode("38957-7")
+    VACompensationAndPension_CAndP_ExaminationGynecologicalConditions_disordersOfTheBreast = DocumentTypeValueSetCode(
+        "38957-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationHand_thumb_fingers = DocumentTypeValueSetCode("38958-5")
+    VACompensationAndPension_CAndP_ExaminationHand_thumb_fingers = (
+        DocumentTypeValueSetCode("38958-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationHeart = DocumentTypeValueSetCode("38959-3")
+    VACompensationAndPension_CAndP_ExaminationHeart = DocumentTypeValueSetCode(
+        "38959-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationHemicDisorders = DocumentTypeValueSetCode("38960-1")
+    VACompensationAndPension_CAndP_ExaminationHemicDisorders = DocumentTypeValueSetCode(
+        "38960-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationHIV_relatedIllness = DocumentTypeValueSetCode("38961-9")
+    VACompensationAndPension_CAndP_ExaminationHIV_relatedIllness = (
+        DocumentTypeValueSetCode("38961-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationHypertension = DocumentTypeValueSetCode("38962-7")
+    VACompensationAndPension_CAndP_ExaminationHypertension = DocumentTypeValueSetCode(
+        "38962-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationInfectious_immune_nutritionalDisabilities = DocumentTypeValueSetCode("38963-5")
+    VACompensationAndPension_CAndP_ExaminationInfectious_immune_nutritionalDisabilities = DocumentTypeValueSetCode(
+        "38963-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationInitialEvaluationPost_traumaticStressDisorder = DocumentTypeValueSetCode("38964-3")
+    VACompensationAndPension_CAndP_ExaminationInitialEvaluationPost_traumaticStressDisorder = DocumentTypeValueSetCode(
+        "38964-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationLarge_smallIntestines = DocumentTypeValueSetCode("38965-0")
+    VACompensationAndPension_CAndP_ExaminationLarge_smallIntestines = (
+        DocumentTypeValueSetCode("38965-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationLiver_gallBladder_pancreas = DocumentTypeValueSetCode("38967-6")
+    VACompensationAndPension_CAndP_ExaminationLiver_gallBladder_pancreas = (
+        DocumentTypeValueSetCode("38967-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationLymphaticDisorders = DocumentTypeValueSetCode("38968-4")
+    VACompensationAndPension_CAndP_ExaminationLymphaticDisorders = (
+        DocumentTypeValueSetCode("38968-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationMentalHealthEatingDisorders = DocumentTypeValueSetCode("38947-8")
+    VACompensationAndPension_CAndP_ExaminationMentalHealthEatingDisorders = (
+        DocumentTypeValueSetCode("38947-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationMiscellaneousArteries_veins = DocumentTypeValueSetCode("38935-3")
+    VACompensationAndPension_CAndP_ExaminationMiscellaneousArteries_veins = (
+        DocumentTypeValueSetCode("38935-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationMiscellaneousDigestiveConditions = DocumentTypeValueSetCode("38945-2")
+    VACompensationAndPension_CAndP_ExaminationMiscellaneousDigestiveConditions = (
+        DocumentTypeValueSetCode("38945-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationMiscellaneousEndocrineDiseases = DocumentTypeValueSetCode("38948-6")
+    VACompensationAndPension_CAndP_ExaminationMiscellaneousEndocrineDiseases = (
+        DocumentTypeValueSetCode("38948-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationMiscellaneousNeurologicalDisorders = DocumentTypeValueSetCode("38972-6")
+    VACompensationAndPension_CAndP_ExaminationMiscellaneousNeurologicalDisorders = (
+        DocumentTypeValueSetCode("38972-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationMiscellaneousRespiratoryDiseases = DocumentTypeValueSetCode("38980-9")
+    VACompensationAndPension_CAndP_ExaminationMiscellaneousRespiratoryDiseases = (
+        DocumentTypeValueSetCode("38980-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationMouth_lips_tongue = DocumentTypeValueSetCode("38970-0")
+    VACompensationAndPension_CAndP_ExaminationMouth_lips_tongue = (
+        DocumentTypeValueSetCode("38970-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationMuscles = DocumentTypeValueSetCode("38971-8")
+    VACompensationAndPension_CAndP_ExaminationMuscles = DocumentTypeValueSetCode(
+        "38971-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationNose_sinus_larynx_pharynx = DocumentTypeValueSetCode("38973-4")
+    VACompensationAndPension_CAndP_ExaminationNose_sinus_larynx_pharynx = (
+        DocumentTypeValueSetCode("38973-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationObstructive_restrictive_interstitialRespiratoryDiseases = DocumentTypeValueSetCode("38979-1")
+    VACompensationAndPension_CAndP_ExaminationObstructive_restrictive_interstitialRespiratoryDiseases = DocumentTypeValueSetCode(
+        "38979-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationPeripheralNerves = DocumentTypeValueSetCode("38974-2")
+    VACompensationAndPension_CAndP_ExaminationPeripheralNerves = (
+        DocumentTypeValueSetCode("38974-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationPrisonerOfWarProtocol = DocumentTypeValueSetCode("38975-9")
+    VACompensationAndPension_CAndP_ExaminationPrisonerOfWarProtocol = (
+        DocumentTypeValueSetCode("38975-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationPulmonaryTuberculosis_mycobacterialDiseases = DocumentTypeValueSetCode("38976-7")
+    VACompensationAndPension_CAndP_ExaminationPulmonaryTuberculosis_mycobacterialDiseases = DocumentTypeValueSetCode(
+        "38976-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationRectum_anus = DocumentTypeValueSetCode("38977-5")
+    VACompensationAndPension_CAndP_ExaminationRectum_anus = DocumentTypeValueSetCode(
+        "38977-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationResidualsOfAmputations = DocumentTypeValueSetCode("38978-3")
+    VACompensationAndPension_CAndP_ExaminationResidualsOfAmputations = (
+        DocumentTypeValueSetCode("38978-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationReviewEvaluationPost_traumaticStressDisorder = DocumentTypeValueSetCode("38981-7")
+    VACompensationAndPension_CAndP_ExaminationReviewEvaluationPost_traumaticStressDisorder = DocumentTypeValueSetCode(
+        "38981-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationScars = DocumentTypeValueSetCode("38982-5")
+    VACompensationAndPension_CAndP_ExaminationScars = DocumentTypeValueSetCode(
+        "38982-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationSenseOfSmell_taste = DocumentTypeValueSetCode("38983-3")
+    VACompensationAndPension_CAndP_ExaminationSenseOfSmell_taste = (
+        DocumentTypeValueSetCode("38983-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationSkinDiseasesOtherThanScars = DocumentTypeValueSetCode("38984-1")
+    VACompensationAndPension_CAndP_ExaminationSkinDiseasesOtherThanScars = (
+        DocumentTypeValueSetCode("38984-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationSocial_industrialSurvey = DocumentTypeValueSetCode("38985-8")
+    VACompensationAndPension_CAndP_ExaminationSocial_industrialSurvey = (
+        DocumentTypeValueSetCode("38985-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationSpine = DocumentTypeValueSetCode("38986-6")
+    VACompensationAndPension_CAndP_ExaminationSpine = DocumentTypeValueSetCode(
+        "38986-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationStomach_duodenum_peritonealAdhesions = DocumentTypeValueSetCode("38987-4")
+    VACompensationAndPension_CAndP_ExaminationStomach_duodenum_peritonealAdhesions = (
+        DocumentTypeValueSetCode("38987-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VACompensationAndPension_CAndP_ExaminationThyroid_parathyroidDiseases = DocumentTypeValueSetCode("38988-2")
+    VACompensationAndPension_CAndP_ExaminationThyroid_parathyroidDiseases = (
+        DocumentTypeValueSetCode("38988-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -3345,15 +3687,21 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AdministrationOfVasodilatorIntoCatheterOfVein_Bilateral = DocumentTypeValueSetCode("26376-4")
+    AdministrationOfVasodilatorIntoCatheterOfVein_Bilateral = DocumentTypeValueSetCode(
+        "26376-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AdministrationOfVasodilatorIntoCatheterOfVein_Left = DocumentTypeValueSetCode("26377-2")
+    AdministrationOfVasodilatorIntoCatheterOfVein_Left = DocumentTypeValueSetCode(
+        "26377-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AdministrationOfVasodilatorIntoCatheterOfVein_Right = DocumentTypeValueSetCode("26378-0")
+    AdministrationOfVasodilatorIntoCatheterOfVein_Right = DocumentTypeValueSetCode(
+        "26378-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -3365,139 +3713,207 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PeripheralArteryFluoroscopicAngiogramAdditionalAngioplastyWContrastIA = DocumentTypeValueSetCode("30649-8")
+    PeripheralArteryFluoroscopicAngiogramAdditionalAngioplastyWContrastIA = (
+        DocumentTypeValueSetCode("30649-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VeinFluoroscopicAngiogramAdditionalAngioplastyWContrastIV = DocumentTypeValueSetCode("30641-5")
+    VeinFluoroscopicAngiogramAdditionalAngioplastyWContrastIV = (
+        DocumentTypeValueSetCode("30641-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AVShuntFluoroscopicAngiogramAngioplastyWContrast = DocumentTypeValueSetCode("36760-7")
+    AVShuntFluoroscopicAngiogramAngioplastyWContrast = DocumentTypeValueSetCode(
+        "36760-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ExtremityVesselFluoroscopicAngiogramAngioplastyWContrast = DocumentTypeValueSetCode("36762-3")
+    ExtremityVesselFluoroscopicAngiogramAngioplastyWContrast = DocumentTypeValueSetCode(
+        "36762-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UnspecifiedBodyRegionFluoroscopicAngiogramAngioplastyWContrast = DocumentTypeValueSetCode("69067-7")
+    UnspecifiedBodyRegionFluoroscopicAngiogramAngioplastyWContrast = (
+        DocumentTypeValueSetCode("69067-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AortaFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("24543-1")
+    AortaFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode(
+        "24543-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    BrachiocephalicArteryFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("24580-3")
+    BrachiocephalicArteryFluoroscopicAngiogramAngioplastyWContrastIA = (
+        DocumentTypeValueSetCode("24580-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    BrachiocephalicArtery_LeftFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("26368-1")
+    BrachiocephalicArtery_LeftFluoroscopicAngiogramAngioplastyWContrastIA = (
+        DocumentTypeValueSetCode("26368-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    BrachiocephalicArtery_RightFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("26369-9")
+    BrachiocephalicArtery_RightFluoroscopicAngiogramAngioplastyWContrastIA = (
+        DocumentTypeValueSetCode("26369-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CarotidArteryExtracranialFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("24614-0")
+    CarotidArteryExtracranialFluoroscopicAngiogramAngioplastyWContrastIA = (
+        DocumentTypeValueSetCode("24614-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CarotidArteryIntracranialFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("24615-7")
+    CarotidArteryIntracranialFluoroscopicAngiogramAngioplastyWContrastIA = (
+        DocumentTypeValueSetCode("24615-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ExtremityArteryFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("35881-2")
+    ExtremityArteryFluoroscopicAngiogramAngioplastyWContrastIA = (
+        DocumentTypeValueSetCode("35881-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FemoralArteryFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("24698-3")
+    FemoralArteryFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode(
+        "24698-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FemoralArteryAndPoplitealArteryFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("36763-1")
+    FemoralArteryAndPoplitealArteryFluoroscopicAngiogramAngioplastyWContrastIA = (
+        DocumentTypeValueSetCode("36763-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    IliacArteryFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("24766-8")
+    IliacArteryFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode(
+        "24766-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    IliacArtery_BilateralFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("26370-7")
+    IliacArtery_BilateralFluoroscopicAngiogramAngioplastyWContrastIA = (
+        DocumentTypeValueSetCode("26370-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    IliacArtery_LeftFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("26371-5")
+    IliacArtery_LeftFluoroscopicAngiogramAngioplastyWContrastIA = (
+        DocumentTypeValueSetCode("26371-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    IliacArtery_RightFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("26372-3")
+    IliacArtery_RightFluoroscopicAngiogramAngioplastyWContrastIA = (
+        DocumentTypeValueSetCode("26372-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MesentericArteryFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("24832-8")
+    MesentericArteryFluoroscopicAngiogramAngioplastyWContrastIA = (
+        DocumentTypeValueSetCode("24832-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PeripheralArteryFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("30648-0")
+    PeripheralArteryFluoroscopicAngiogramAngioplastyWContrastIA = (
+        DocumentTypeValueSetCode("30648-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    RenalVesselFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("25081-1")
+    RenalVesselFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode(
+        "25081-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    TibialArteryFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("25012-6")
+    TibialArteryFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode(
+        "25012-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    TibialArtery_BilateralFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("26373-1")
+    TibialArtery_BilateralFluoroscopicAngiogramAngioplastyWContrastIA = (
+        DocumentTypeValueSetCode("26373-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    TibialArtery_LeftFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("26374-9")
+    TibialArtery_LeftFluoroscopicAngiogramAngioplastyWContrastIA = (
+        DocumentTypeValueSetCode("26374-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    TibialArtery_RightFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("26375-6")
+    TibialArtery_RightFluoroscopicAngiogramAngioplastyWContrastIA = (
+        DocumentTypeValueSetCode("26375-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    TibioperonealArteriesFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("43793-9")
+    TibioperonealArteriesFluoroscopicAngiogramAngioplastyWContrastIA = (
+        DocumentTypeValueSetCode("43793-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    TibioperonealArteries_BilateralFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("43794-7")
+    TibioperonealArteries_BilateralFluoroscopicAngiogramAngioplastyWContrastIA = (
+        DocumentTypeValueSetCode("43794-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    TibioperonealArteries_LeftFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("43795-4")
+    TibioperonealArteries_LeftFluoroscopicAngiogramAngioplastyWContrastIA = (
+        DocumentTypeValueSetCode("43795-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    TibioperonealArteries_RightFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("43792-1")
+    TibioperonealArteries_RightFluoroscopicAngiogramAngioplastyWContrastIA = (
+        DocumentTypeValueSetCode("43792-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VesselFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("25064-7")
+    VesselFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode(
+        "25064-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VisceralArteryFluoroscopicAngiogramAngioplastyWContrastIA = DocumentTypeValueSetCode("30836-1")
+    VisceralArteryFluoroscopicAngiogramAngioplastyWContrastIA = (
+        DocumentTypeValueSetCode("30836-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LowerExtremityVeinFluoroscopicAngiogramAngioplastyWContrastIV = DocumentTypeValueSetCode("37426-4")
+    LowerExtremityVeinFluoroscopicAngiogramAngioplastyWContrastIV = (
+        DocumentTypeValueSetCode("37426-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VeinFluoroscopicAngiogramAngioplastyWContrastIV = DocumentTypeValueSetCode("30640-7")
+    VeinFluoroscopicAngiogramAngioplastyWContrastIV = DocumentTypeValueSetCode(
+        "30640-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    InferiorVenaCavaFluoroscopicAngiogramAngioplastyWContrastIV = DocumentTypeValueSetCode("35882-0")
+    InferiorVenaCavaFluoroscopicAngiogramAngioplastyWContrastIV = (
+        DocumentTypeValueSetCode("35882-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -3505,31 +3921,45 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FemoralVesselAndPoplitealArteryFluoroscopicAngiogramAtherectomyWContrast = DocumentTypeValueSetCode("36764-9")
+    FemoralVesselAndPoplitealArteryFluoroscopicAngiogramAtherectomyWContrast = (
+        DocumentTypeValueSetCode("36764-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    IliacArteryFluoroscopicAngiogramAtherectomyWContrast = DocumentTypeValueSetCode("69135-2")
+    IliacArteryFluoroscopicAngiogramAtherectomyWContrast = DocumentTypeValueSetCode(
+        "69135-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    RenalVesselsFluoroscopicAngiogramAtherectomyWContrast = DocumentTypeValueSetCode("69253-3")
+    RenalVesselsFluoroscopicAngiogramAtherectomyWContrast = DocumentTypeValueSetCode(
+        "69253-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VesselFluoroscopicAngiogramAtherectomyWContrast = DocumentTypeValueSetCode("36765-6")
+    VesselFluoroscopicAngiogramAtherectomyWContrast = DocumentTypeValueSetCode(
+        "36765-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AortaFluoroscopicAngiogramAtherectomyWContrastIA = DocumentTypeValueSetCode("35883-8")
+    AortaFluoroscopicAngiogramAtherectomyWContrastIA = DocumentTypeValueSetCode(
+        "35883-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CoronaryArteriesFluoroscopicAngiogramAtherectomyWContrastIA = DocumentTypeValueSetCode("36766-4")
+    CoronaryArteriesFluoroscopicAngiogramAtherectomyWContrastIA = (
+        DocumentTypeValueSetCode("36766-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AVFistulaFluoroscopicAngiogramAtherectomyWContrastIV = DocumentTypeValueSetCode("24568-8")
+    AVFistulaFluoroscopicAngiogramAtherectomyWContrastIV = DocumentTypeValueSetCode(
+        "24568-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -3545,7 +3975,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    BiliaryDuctsFluoroscopyBalloonDilatationWContrast = DocumentTypeValueSetCode("36761-5")
+    BiliaryDuctsFluoroscopyBalloonDilatationWContrast = DocumentTypeValueSetCode(
+        "36761-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -3573,7 +4005,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UnspecifiedBodyRegionFluoroscopyCentralVeinCatheterPlacementCheck = DocumentTypeValueSetCode("24631-4")
+    UnspecifiedBodyRegionFluoroscopyCentralVeinCatheterPlacementCheck = (
+        DocumentTypeValueSetCode("24631-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -3581,7 +4015,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ChemotherapyEffectivenessPanel_Identifier_BloodOrTissue = DocumentTypeValueSetCode("54095-5")
+    ChemotherapyEffectivenessPanel_Identifier_BloodOrTissue = DocumentTypeValueSetCode(
+        "54095-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -3645,7 +4081,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CytologyReportOfBreastFineNeedleAspirateCytoStain = DocumentTypeValueSetCode("47521-0")
+    CytologyReportOfBreastFineNeedleAspirateCytoStain = DocumentTypeValueSetCode(
+        "47521-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -3653,11 +4091,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CytologyReportOfCervicalOrVaginalSmearOrScrapingCytoStain = DocumentTypeValueSetCode("47528-5")
+    CytologyReportOfCervicalOrVaginalSmearOrScrapingCytoStain = (
+        DocumentTypeValueSetCode("47528-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CytologyReportOfCervicalOrVaginalSmearOrScrapingCytoStain_thinPrep = DocumentTypeValueSetCode("47527-7")
+    CytologyReportOfCervicalOrVaginalSmearOrScrapingCytoStain_thinPrep = (
+        DocumentTypeValueSetCode("47527-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -3669,7 +4111,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CytologyReportOfThyroidFineNeedleAspirateCytoStain = DocumentTypeValueSetCode("47524-4")
+    CytologyReportOfThyroidFineNeedleAspirateCytoStain = DocumentTypeValueSetCode(
+        "47524-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -3677,7 +4121,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CytologyReportOfTissueFineNeedleAspirateCytoStain = DocumentTypeValueSetCode("33718-8")
+    CytologyReportOfTissueFineNeedleAspirateCytoStain = DocumentTypeValueSetCode(
+        "33718-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -3725,19 +4171,27 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ExtracranialVesselsFluoroscopicAngiogramEmbolectomyWContrastIA = DocumentTypeValueSetCode("24684-3")
+    ExtracranialVesselsFluoroscopicAngiogramEmbolectomyWContrastIA = (
+        DocumentTypeValueSetCode("24684-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PulmonaryArteryFluoroscopicAngiogramEmbolectomyWContrastIA = DocumentTypeValueSetCode("24887-2")
+    PulmonaryArteryFluoroscopicAngiogramEmbolectomyWContrastIA = (
+        DocumentTypeValueSetCode("24887-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VesselIntracranialFluoroscopicAngiogramEmbolectomyWContrastIV = DocumentTypeValueSetCode("24553-0")
+    VesselIntracranialFluoroscopicAngiogramEmbolectomyWContrastIV = (
+        DocumentTypeValueSetCode("24553-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ArteryFluoroscopicAngiogramEmbolizationWContrastIA = DocumentTypeValueSetCode("24554-8")
+    ArteryFluoroscopicAngiogramEmbolizationWContrastIA = DocumentTypeValueSetCode(
+        "24554-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -3753,11 +4207,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SmallBowelCTViewsEnteroclysisWContrastPOViaDuodenalIntubation = DocumentTypeValueSetCode("30600-1")
+    SmallBowelCTViewsEnteroclysisWContrastPOViaDuodenalIntubation = (
+        DocumentTypeValueSetCode("30600-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SmallBowelFluoroscopyViewsEnteroclysisWContrastPOViaDuodenalIntubation = DocumentTypeValueSetCode("24923-5")
+    SmallBowelFluoroscopyViewsEnteroclysisWContrastPOViaDuodenalIntubation = (
+        DocumentTypeValueSetCode("24923-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -3781,7 +4239,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FullNewbornScreeningSummaryReportForDisplayOrPrinting = DocumentTypeValueSetCode("57129-9")
+    FullNewbornScreeningSummaryReportForDisplayOrPrinting = DocumentTypeValueSetCode(
+        "57129-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -3793,7 +4253,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    GeneticAnalysisSummaryReportInBloodOrTissueDocumentByMolecularGeneticsMethod = DocumentTypeValueSetCode("51969-4")
+    GeneticAnalysisSummaryReportInBloodOrTissueDocumentByMolecularGeneticsMethod = (
+        DocumentTypeValueSetCode("51969-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -3817,11 +4279,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidanceForAblationOfTissueOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("58747-7")
+    CTGuidanceForAblationOfTissueOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
+        "58747-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    USGuidanceForAblationOfTissueOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("58743-6")
+    USGuidanceForAblationOfTissueOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
+        "58743-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -3865,7 +4331,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForAbscessDrainageOfPancreas = DocumentTypeValueSetCode("69122-0")
+    FluoroscopyGuidanceForAbscessDrainageOfPancreas = DocumentTypeValueSetCode(
+        "69122-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -3885,7 +4353,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForAbscessDrainageOfPleuralSpace = DocumentTypeValueSetCode("69123-8")
+    FluoroscopyGuidanceForAbscessDrainageOfPleuralSpace = DocumentTypeValueSetCode(
+        "69123-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -3897,15 +4367,21 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidanceForAbscessDrainageOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("30578-9")
+    CTGuidanceForAbscessDrainageOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
+        "30578-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    USGuidanceForAbscessDrainageOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("39451-0")
+    USGuidanceForAbscessDrainageOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
+        "39451-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForAbscessDrainageOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("35885-3")
+    FluoroscopyGuidanceForAbscessDrainageOfUnspecifiedBodyRegion = (
+        DocumentTypeValueSetCode("35885-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -3925,15 +4401,21 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    USGuidanceForAmbulatoryPhlebectomyOfExtremityVein_Left = DocumentTypeValueSetCode("72533-3")
+    USGuidanceForAmbulatoryPhlebectomyOfExtremityVein_Left = DocumentTypeValueSetCode(
+        "72533-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    USGuidanceForAmbulatoryPhlebectomyOfExtremityVein_Right = DocumentTypeValueSetCode("72532-5")
+    USGuidanceForAmbulatoryPhlebectomyOfExtremityVein_Right = DocumentTypeValueSetCode(
+        "72532-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidanceForAnestheticBlockInjectionOfCeliacPlexus = DocumentTypeValueSetCode("24623-1")
+    CTGuidanceForAnestheticBlockInjectionOfCeliacPlexus = DocumentTypeValueSetCode(
+        "24623-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -4021,7 +4503,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForAspirationOfSpineLumbarSpace = DocumentTypeValueSetCode("24973-0")
+    FluoroscopyGuidanceForAspirationOfSpineLumbarSpace = DocumentTypeValueSetCode(
+        "24973-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -4037,7 +4521,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidanceForAspirationAndPlacementOfDrainageTubeOfAbdomen = DocumentTypeValueSetCode("36926-4")
+    CTGuidanceForAspirationAndPlacementOfDrainageTubeOfAbdomen = (
+        DocumentTypeValueSetCode("36926-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -4061,15 +4547,21 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MammogramGuidanceForAspirationOfCystOfBreast_Bilateral = DocumentTypeValueSetCode("26343-4")
+    MammogramGuidanceForAspirationOfCystOfBreast_Bilateral = DocumentTypeValueSetCode(
+        "26343-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    USGuidanceForAspirationOfCystOfBreast_Bilateral = DocumentTypeValueSetCode("38012-1")
+    USGuidanceForAspirationOfCystOfBreast_Bilateral = DocumentTypeValueSetCode(
+        "38012-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MammogramGuidanceForAspirationOfCystOfBreast_Left = DocumentTypeValueSetCode("26344-2")
+    MammogramGuidanceForAspirationOfCystOfBreast_Left = DocumentTypeValueSetCode(
+        "26344-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -4077,7 +4569,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MammogramGuidanceForAspirationOfCystOfBreast_Right = DocumentTypeValueSetCode("26345-9")
+    MammogramGuidanceForAspirationOfCystOfBreast_Right = DocumentTypeValueSetCode(
+        "26345-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -4101,31 +4595,45 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidanceForAspirationOfCystOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("35887-9")
+    CTGuidanceForAspirationOfCystOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
+        "35887-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    USGuidanceForAspirationOfCystOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("30698-5")
+    USGuidanceForAspirationOfCystOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
+        "30698-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForAspirationOfCystOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("24671-0")
+    FluoroscopyGuidanceForAspirationOfCystOfUnspecifiedBodyRegion = (
+        DocumentTypeValueSetCode("24671-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidanceForAspirationOrBiopsyOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("25042-3")
+    CTGuidanceForAspirationOrBiopsyOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
+        "25042-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidanceForAspirationOrBiopsyOfUnspecifiedBodyRegion_WContrastIV = DocumentTypeValueSetCode("25041-5")
+    CTGuidanceForAspirationOrBiopsyOfUnspecifiedBodyRegion_WContrastIV = (
+        DocumentTypeValueSetCode("25041-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidanceForAspirationOrInjectionOfCystOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("46281-2")
+    CTGuidanceForAspirationOrInjectionOfCystOfUnspecifiedBodyRegion = (
+        DocumentTypeValueSetCode("46281-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    USGuidanceForAspirationOrInjectionOfCystOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("46282-0")
+    USGuidanceForAspirationOrInjectionOfCystOfUnspecifiedBodyRegion = (
+        DocumentTypeValueSetCode("46282-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -4133,15 +4641,21 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidanceForFineNeedleAspirationOfAbdomenRetroperitoneum = DocumentTypeValueSetCode("44107-1")
+    CTGuidanceForFineNeedleAspirationOfAbdomenRetroperitoneum = (
+        DocumentTypeValueSetCode("44107-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidanceForFineNeedleAspirationOfAdrenalGland = DocumentTypeValueSetCode("44108-9")
+    CTGuidanceForFineNeedleAspirationOfAdrenalGland = DocumentTypeValueSetCode(
+        "44108-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MammogramGuidanceForFineNeedleAspirationOfBreast = DocumentTypeValueSetCode("46387-7")
+    MammogramGuidanceForFineNeedleAspirationOfBreast = DocumentTypeValueSetCode(
+        "46387-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -4149,7 +4663,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MammogramGuidanceForFineNeedleAspirationOfBreast_Left = DocumentTypeValueSetCode("46284-6")
+    MammogramGuidanceForFineNeedleAspirationOfBreast_Left = DocumentTypeValueSetCode(
+        "46284-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -4157,11 +4673,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MammogramGuidanceForFineNeedleAspirationOfBreast_Right = DocumentTypeValueSetCode("46283-8")
+    MammogramGuidanceForFineNeedleAspirationOfBreast_Right = DocumentTypeValueSetCode(
+        "46283-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    USGuidanceForFineNeedleAspirationOfBreast_Right = DocumentTypeValueSetCode("38033-7")
+    USGuidanceForFineNeedleAspirationOfBreast_Right = DocumentTypeValueSetCode(
+        "38033-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -4169,7 +4689,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForFineNeedleAspirationOfDeepTissue = DocumentTypeValueSetCode("44221-0")
+    FluoroscopyGuidanceForFineNeedleAspirationOfDeepTissue = DocumentTypeValueSetCode(
+        "44221-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -4181,11 +4703,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForFineNeedleAspirationOfKidney = DocumentTypeValueSetCode("44217-8")
+    FluoroscopyGuidanceForFineNeedleAspirationOfKidney = DocumentTypeValueSetCode(
+        "44217-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidanceForFineNeedleAspirationOfKidney_Bilateral = DocumentTypeValueSetCode("30608-4")
+    CTGuidanceForFineNeedleAspirationOfKidney_Bilateral = DocumentTypeValueSetCode(
+        "30608-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -4197,7 +4723,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForFineNeedleAspirationOfLiver = DocumentTypeValueSetCode("44220-2")
+    FluoroscopyGuidanceForFineNeedleAspirationOfLiver = DocumentTypeValueSetCode(
+        "44220-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -4209,7 +4737,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForFineNeedleAspirationOfLymphNode = DocumentTypeValueSetCode("44219-4")
+    FluoroscopyGuidanceForFineNeedleAspirationOfLymphNode = DocumentTypeValueSetCode(
+        "44219-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -4229,7 +4759,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForFineNeedleAspirationOfPancreas = DocumentTypeValueSetCode("44218-6")
+    FluoroscopyGuidanceForFineNeedleAspirationOfPancreas = DocumentTypeValueSetCode(
+        "44218-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -4249,11 +4781,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    USGuidanceForFineNeedleAspirationOfSuperficialTissue = DocumentTypeValueSetCode("38136-8")
+    USGuidanceForFineNeedleAspirationOfSuperficialTissue = DocumentTypeValueSetCode(
+        "38136-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForFineNeedleAspirationOfSuperficialTissue = DocumentTypeValueSetCode("69124-6")
+    FluoroscopyGuidanceForFineNeedleAspirationOfSuperficialTissue = (
+        DocumentTypeValueSetCode("69124-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -4261,35 +4797,51 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForFineNeedleAspirationOfThyroid = DocumentTypeValueSetCode("44216-0")
+    FluoroscopyGuidanceForFineNeedleAspirationOfThyroid = DocumentTypeValueSetCode(
+        "44216-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidanceForFineNeedleAspirationOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("30580-5")
+    CTGuidanceForFineNeedleAspirationOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
+        "30580-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    USGuidanceForFineNeedleAspirationOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("38018-8")
+    USGuidanceForFineNeedleAspirationOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
+        "38018-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForFineNeedleAspirationOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("44215-2")
+    FluoroscopyGuidanceForFineNeedleAspirationOfUnspecifiedBodyRegion = (
+        DocumentTypeValueSetCode("44215-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForAtherectomyOfVein_WContrastIV = DocumentTypeValueSetCode("24755-1")
+    FluoroscopicAngiogramGuidanceForAtherectomyOfVein_WContrastIV = (
+        DocumentTypeValueSetCode("24755-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForAtherectomyOfVein_Bilateral_WContrastIV = DocumentTypeValueSetCode("26298-0")
+    FluoroscopicAngiogramGuidanceForAtherectomyOfVein_Bilateral_WContrastIV = (
+        DocumentTypeValueSetCode("26298-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForAtherectomyOfVein_Left_WContrastIV = DocumentTypeValueSetCode("26299-8")
+    FluoroscopicAngiogramGuidanceForAtherectomyOfVein_Left_WContrastIV = (
+        DocumentTypeValueSetCode("26299-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForAtherectomyOfVein_Right_WContrastIV = DocumentTypeValueSetCode("26300-4")
+    FluoroscopicAngiogramGuidanceForAtherectomyOfVein_Right_WContrastIV = (
+        DocumentTypeValueSetCode("26300-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -4649,11 +5201,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForBiopsyOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("25069-6")
+    FluoroscopyGuidanceForBiopsyOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
+        "25069-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    USGuidanceForBiopsyOfCystOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("24670-2")
+    USGuidanceForBiopsyOfCystOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
+        "24670-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -4673,11 +5229,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    USGuidanceForCoreNeedleBiopsyOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("38024-6")
+    USGuidanceForCoreNeedleBiopsyOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
+        "38024-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForCoreNeedleBiopsyOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("69073-5")
+    FluoroscopyGuidanceForCoreNeedleBiopsyOfUnspecifiedBodyRegion = (
+        DocumentTypeValueSetCode("69073-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -4745,7 +5305,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForNeedleBiopsyOfChest_pleura = DocumentTypeValueSetCode("69127-9")
+    FluoroscopyGuidanceForNeedleBiopsyOfChest_pleura = DocumentTypeValueSetCode(
+        "69127-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -4853,7 +5415,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForNeedleBiopsyOfSalivaryGland = DocumentTypeValueSetCode("69128-7")
+    FluoroscopyGuidanceForNeedleBiopsyOfSalivaryGland = DocumentTypeValueSetCode(
+        "69128-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -4889,19 +5453,27 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidanceForNeedleBiopsyOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("46287-9")
+    CTGuidanceForNeedleBiopsyOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
+        "46287-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    USGuidanceForNeedleBiopsyOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("30700-9")
+    USGuidanceForNeedleBiopsyOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
+        "30700-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForNeedleBiopsyOfLiver_WContrastIV = DocumentTypeValueSetCode("44225-1")
+    FluoroscopyGuidanceForNeedleBiopsyOfLiver_WContrastIV = DocumentTypeValueSetCode(
+        "44225-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForTransjugularBiopsyOfLiver_WContrastIV = DocumentTypeValueSetCode("24718-9")
+    FluoroscopyGuidanceForTransjugularBiopsyOfLiver_WContrastIV = (
+        DocumentTypeValueSetCode("24718-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -4909,7 +5481,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidanceForBiopsyOfUnspecifiedBodyRegion_WAndWOContrastIV = DocumentTypeValueSetCode("46289-5")
+    CTGuidanceForBiopsyOfUnspecifiedBodyRegion_WAndWOContrastIV = (
+        DocumentTypeValueSetCode("46289-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -4921,7 +5495,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidanceForBiopsyOfUnspecifiedBodyRegion_WContrastIV = DocumentTypeValueSetCode("42260-0")
+    CTGuidanceForBiopsyOfUnspecifiedBodyRegion_WContrastIV = DocumentTypeValueSetCode(
+        "42260-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -4949,7 +5525,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidanceForBiopsyOfUnspecifiedBodyRegion_WOContrast = DocumentTypeValueSetCode("46290-3")
+    CTGuidanceForBiopsyOfUnspecifiedBodyRegion_WOContrast = DocumentTypeValueSetCode(
+        "46290-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -4957,39 +5535,57 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForCatheterizationOfFallopianTube_Left_Transcervical = DocumentTypeValueSetCode("64998-8")
+    FluoroscopyGuidanceForCatheterizationOfFallopianTube_Left_Transcervical = (
+        DocumentTypeValueSetCode("64998-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForCatheterizationOfFallopianTube_right_Transcervical = DocumentTypeValueSetCode("64999-6")
+    FluoroscopyGuidanceForCatheterizationOfFallopianTube_right_Transcervical = (
+        DocumentTypeValueSetCode("64999-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForCatheterizationOfFallopianTubes_Transcervical = DocumentTypeValueSetCode("30818-9")
+    FluoroscopyGuidanceForCatheterizationOfFallopianTubes_Transcervical = (
+        DocumentTypeValueSetCode("30818-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForCatheterizationOfBiliaryDuctsAndPancreaticDuct_WContrastRetrograde = DocumentTypeValueSetCode("30892-4")
+    FluoroscopyGuidanceForCatheterizationOfBiliaryDuctsAndPancreaticDuct_WContrastRetrograde = DocumentTypeValueSetCode(
+        "30892-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForChangeOfCentralCatheterInCentralVein_WContrastIV = DocumentTypeValueSetCode("24624-9")
+    FluoroscopicAngiogramGuidanceForChangeOfCentralCatheterInCentralVein_WContrastIV = (
+        DocumentTypeValueSetCode("24624-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForChangeOfCentralCatheterInCentralVein_Bilateral_WContrastIV = DocumentTypeValueSetCode("26331-9")
+    FluoroscopicAngiogramGuidanceForChangeOfCentralCatheterInCentralVein_Bilateral_WContrastIV = DocumentTypeValueSetCode(
+        "26331-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForChangeOfCentralCatheterInCentralVein_Left_WContrastIV = DocumentTypeValueSetCode("26332-7")
+    FluoroscopicAngiogramGuidanceForChangeOfCentralCatheterInCentralVein_Left_WContrastIV = DocumentTypeValueSetCode(
+        "26332-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForChangeOfCentralCatheterInCentralVein_Right_WContrastIV = DocumentTypeValueSetCode("26333-5")
+    FluoroscopicAngiogramGuidanceForChangeOfCentralCatheterInCentralVein_Right_WContrastIV = DocumentTypeValueSetCode(
+        "26333-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForChangeOfDialysisCatheterInUnspecifiedBodyRegion_WContrastIV = DocumentTypeValueSetCode("43558-6")
+    FluoroscopyGuidanceForChangeOfDialysisCatheterInUnspecifiedBodyRegion_WContrastIV = DocumentTypeValueSetCode(
+        "43558-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -4997,15 +5593,21 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForChangeOfPercutaneousNephrostomyTubeInKidney_Bilateral_WContrast = DocumentTypeValueSetCode("24781-7")
+    FluoroscopyGuidanceForChangeOfPercutaneousNephrostomyTubeInKidney_Bilateral_WContrast = DocumentTypeValueSetCode(
+        "24781-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    X_rayGuidanceForChangeOfPercutaneousTubeInUnspecifiedBodyRegion_WContrast = DocumentTypeValueSetCode("46371-1")
+    X_rayGuidanceForChangeOfPercutaneousTubeInUnspecifiedBodyRegion_WContrast = (
+        DocumentTypeValueSetCode("46371-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForChangeOfTubeInSinusTract_WContrast = DocumentTypeValueSetCode("30646-4")
+    FluoroscopyGuidanceForChangeOfTubeInSinusTract_WContrast = DocumentTypeValueSetCode(
+        "30646-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -5057,7 +5659,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidanceForDrainageOfBiliaryDuctsAndGallbladder = DocumentTypeValueSetCode("36770-6")
+    CTGuidanceForDrainageOfBiliaryDuctsAndGallbladder = DocumentTypeValueSetCode(
+        "36770-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -5153,7 +5757,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForDrainageOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("43537-0")
+    FluoroscopyGuidanceForDrainageOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
+        "43537-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -5161,7 +5767,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidanceForDrainageOfUnspecifiedBodyRegion_WAndWOContrastIV = DocumentTypeValueSetCode("46291-1")
+    CTGuidanceForDrainageOfUnspecifiedBodyRegion_WAndWOContrastIV = (
+        DocumentTypeValueSetCode("46291-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -5169,7 +5777,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidanceForDrainageOfUnspecifiedBodyRegion_WContrastIV = DocumentTypeValueSetCode("46292-9")
+    CTGuidanceForDrainageOfUnspecifiedBodyRegion_WContrastIV = DocumentTypeValueSetCode(
+        "46292-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -5177,7 +5787,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidanceForDrainageOfUnspecifiedBodyRegion_WOContrast = DocumentTypeValueSetCode("46293-7")
+    CTGuidanceForDrainageOfUnspecifiedBodyRegion_WOContrast = DocumentTypeValueSetCode(
+        "46293-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -5185,27 +5797,39 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForEndoscopyOfBiliaryDuctsAndPancreaticDuct_1_5HoursPostContrastRetrograde = DocumentTypeValueSetCode("43478-7")
+    FluoroscopyGuidanceForEndoscopyOfBiliaryDuctsAndPancreaticDuct_1_5HoursPostContrastRetrograde = DocumentTypeValueSetCode(
+        "43478-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForEndoscopyOfBiliaryDuctsAndPancreaticDuct_15MinutesPostContrastRetrograde = DocumentTypeValueSetCode("43474-6")
+    FluoroscopyGuidanceForEndoscopyOfBiliaryDuctsAndPancreaticDuct_15MinutesPostContrastRetrograde = DocumentTypeValueSetCode(
+        "43474-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForEndoscopyOfBiliaryDuctsAndPancreaticDuct_1HourPostContrastRetrograde = DocumentTypeValueSetCode("43477-9")
+    FluoroscopyGuidanceForEndoscopyOfBiliaryDuctsAndPancreaticDuct_1HourPostContrastRetrograde = DocumentTypeValueSetCode(
+        "43477-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForEndoscopyOfBiliaryDuctsAndPancreaticDuct_2HoursPostContrastRetrograde = DocumentTypeValueSetCode("43473-8")
+    FluoroscopyGuidanceForEndoscopyOfBiliaryDuctsAndPancreaticDuct_2HoursPostContrastRetrograde = DocumentTypeValueSetCode(
+        "43473-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForEndoscopyOfBiliaryDuctsAndPancreaticDuct_30MinutesPostContrastRetrograde = DocumentTypeValueSetCode("43475-3")
+    FluoroscopyGuidanceForEndoscopyOfBiliaryDuctsAndPancreaticDuct_30MinutesPostContrastRetrograde = DocumentTypeValueSetCode(
+        "43475-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForEndoscopyOfBiliaryDuctsAndPancreaticDuct_45MinutesPostContrastRetrograde = DocumentTypeValueSetCode("43476-1")
+    FluoroscopyGuidanceForEndoscopyOfBiliaryDuctsAndPancreaticDuct_45MinutesPostContrastRetrograde = DocumentTypeValueSetCode(
+        "43476-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -5213,15 +5837,21 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForEndoscopyOfBiliaryDucts_WContrastRetrograde = DocumentTypeValueSetCode("44214-5")
+    FluoroscopyGuidanceForEndoscopyOfBiliaryDucts_WContrastRetrograde = (
+        DocumentTypeValueSetCode("44214-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForEndoscopyOfBiliaryDuctsAndPancreaticDuct_WContrastRetrograde = DocumentTypeValueSetCode("30815-5")
+    FluoroscopyGuidanceForEndoscopyOfBiliaryDuctsAndPancreaticDuct_WContrastRetrograde = DocumentTypeValueSetCode(
+        "30815-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForEndoscopyOfPancreaticDuct_WContrastRetrograde = DocumentTypeValueSetCode("44213-7")
+    FluoroscopyGuidanceForEndoscopyOfPancreaticDuct_WContrastRetrograde = (
+        DocumentTypeValueSetCode("44213-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -5229,15 +5859,21 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForFacetJointDenervationOfSpineCervical = DocumentTypeValueSetCode("72541-6")
+    FluoroscopyGuidanceForFacetJointDenervationOfSpineCervical = (
+        DocumentTypeValueSetCode("72541-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForFacetJointDenervationOfSpineLumbar = DocumentTypeValueSetCode("72542-4")
+    FluoroscopyGuidanceForFacetJointDenervationOfSpineLumbar = DocumentTypeValueSetCode(
+        "72542-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForFacetJointDenervationOfSpine = DocumentTypeValueSetCode("72540-8")
+    FluoroscopyGuidanceForFacetJointDenervationOfSpine = DocumentTypeValueSetCode(
+        "72540-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -5253,7 +5889,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForInjectionOfMammaryArtery_internal_Left = DocumentTypeValueSetCode("42334-3")
+    FluoroscopyGuidanceForInjectionOfMammaryArtery_internal_Left = (
+        DocumentTypeValueSetCode("42334-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -5265,11 +5903,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForInjectionOfSacroiliacJoint = DocumentTypeValueSetCode("35927-3")
+    FluoroscopyGuidanceForInjectionOfSacroiliacJoint = DocumentTypeValueSetCode(
+        "35927-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidanceForInjectionOfSacroiliacJoint_Bilateral = DocumentTypeValueSetCode("26319-4")
+    CTGuidanceForInjectionOfSacroiliacJoint_Bilateral = DocumentTypeValueSetCode(
+        "26319-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -5281,7 +5923,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForInjectionOfSalivaryGland_Bilateral = DocumentTypeValueSetCode("48435-2")
+    FluoroscopyGuidanceForInjectionOfSalivaryGland_Bilateral = DocumentTypeValueSetCode(
+        "48435-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -5297,19 +5941,27 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForInjectionOfSpineFacetJoint = DocumentTypeValueSetCode("24931-8")
+    FluoroscopyGuidanceForInjectionOfSpineFacetJoint = DocumentTypeValueSetCode(
+        "24931-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForInjectionOfSpineFacetJoint_Bilateral = DocumentTypeValueSetCode("26322-8")
+    FluoroscopyGuidanceForInjectionOfSpineFacetJoint_Bilateral = (
+        DocumentTypeValueSetCode("26322-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForInjectionOfSpineFacetJoint_Left = DocumentTypeValueSetCode("26323-6")
+    FluoroscopyGuidanceForInjectionOfSpineFacetJoint_Left = DocumentTypeValueSetCode(
+        "26323-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForInjectionOfSpineFacetJoint_Right = DocumentTypeValueSetCode("26324-4")
+    FluoroscopyGuidanceForInjectionOfSpineFacetJoint_Right = DocumentTypeValueSetCode(
+        "26324-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -5317,7 +5969,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForInjectionOfSpineCervicalFacetJoint = DocumentTypeValueSetCode("30812-2")
+    FluoroscopyGuidanceForInjectionOfSpineCervicalFacetJoint = DocumentTypeValueSetCode(
+        "30812-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -5329,7 +5983,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForInjectionOfSpineLumbarFacetJoint = DocumentTypeValueSetCode("30817-1")
+    FluoroscopyGuidanceForInjectionOfSpineLumbarFacetJoint = DocumentTypeValueSetCode(
+        "30817-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -5337,7 +5993,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForInjectionOfSpineThoracicFacetJoint = DocumentTypeValueSetCode("30814-8")
+    FluoroscopyGuidanceForInjectionOfSpineThoracicFacetJoint = DocumentTypeValueSetCode(
+        "30814-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -5357,31 +6015,45 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    USGuidanceForInjectionOfSclerosingAgentOfExtremityVein_Bilateral = DocumentTypeValueSetCode("72537-4")
+    USGuidanceForInjectionOfSclerosingAgentOfExtremityVein_Bilateral = (
+        DocumentTypeValueSetCode("72537-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    USGuidanceForInjectionOfSclerosingAgentOfExtremityVein_Left = DocumentTypeValueSetCode("72645-5")
+    USGuidanceForInjectionOfSclerosingAgentOfExtremityVein_Left = (
+        DocumentTypeValueSetCode("72645-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    USGuidanceForInjectionOfSclerosingAgentOfExtremityVein_Right = DocumentTypeValueSetCode("72644-8")
+    USGuidanceForInjectionOfSclerosingAgentOfExtremityVein_Right = (
+        DocumentTypeValueSetCode("72644-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    USGuidanceForInjectionOfSclerosingAgentOfExtremityVeins_Bilateral = DocumentTypeValueSetCode("72536-6")
+    USGuidanceForInjectionOfSclerosingAgentOfExtremityVeins_Bilateral = (
+        DocumentTypeValueSetCode("72536-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    USGuidanceForInjectionOfSclerosingAgentOfExtremityVeins_Left = DocumentTypeValueSetCode("72643-0")
+    USGuidanceForInjectionOfSclerosingAgentOfExtremityVeins_Left = (
+        DocumentTypeValueSetCode("72643-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    USGuidanceForInjectionOfSclerosingAgentOfExtremityVeins_Right = DocumentTypeValueSetCode("72642-2")
+    USGuidanceForInjectionOfSclerosingAgentOfExtremityVeins_Right = (
+        DocumentTypeValueSetCode("72642-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForIntercostalNerveDevervationOfSpineThoracic = DocumentTypeValueSetCode("72543-2")
+    FluoroscopyGuidanceForIntercostalNerveDevervationOfSpineThoracic = (
+        DocumentTypeValueSetCode("72543-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -5389,15 +6061,21 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForKyphoplastyOfSpineThoracic = DocumentTypeValueSetCode("72553-1")
+    FluoroscopyGuidanceForKyphoplastyOfSpineThoracic = DocumentTypeValueSetCode(
+        "72553-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    USGuidanceForLaserAblationOfVein_s_OfExtremityVein_Left = DocumentTypeValueSetCode("72535-8")
+    USGuidanceForLaserAblationOfVein_s_OfExtremityVein_Left = DocumentTypeValueSetCode(
+        "72535-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    USGuidanceForLaserAblationOfVein_s_OfExtremityVein_Right = DocumentTypeValueSetCode("72534-1")
+    USGuidanceForLaserAblationOfVein_s_OfExtremityVein_Right = DocumentTypeValueSetCode(
+        "72534-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -5449,11 +6127,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ScanGuidanceForLocalizationOfTumorLimited_WTc_99mSestamibiIV = DocumentTypeValueSetCode("39761-2")
+    ScanGuidanceForLocalizationOfTumorLimited_WTc_99mSestamibiIV = (
+        DocumentTypeValueSetCode("39761-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ScanGuidanceForLocalizationOfTumorMultipleAreas = DocumentTypeValueSetCode("39953-5")
+    ScanGuidanceForLocalizationOfTumorMultipleAreas = DocumentTypeValueSetCode(
+        "39953-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -5477,11 +6159,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MammogramGuidanceForNeedleLocalizationOfBreast_Bilateral = DocumentTypeValueSetCode("69068-5")
+    MammogramGuidanceForNeedleLocalizationOfBreast_Bilateral = DocumentTypeValueSetCode(
+        "69068-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    USGuidanceForNeedleLocalizationOfBreast_Bilateral = DocumentTypeValueSetCode("26313-7")
+    USGuidanceForNeedleLocalizationOfBreast_Bilateral = DocumentTypeValueSetCode(
+        "26313-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -5505,39 +6191,57 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidanceForNeedleLocalizationOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("39026-0")
+    CTGuidanceForNeedleLocalizationOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
+        "39026-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MRIGuidanceForNeedleLocalizationOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("39028-6")
+    MRIGuidanceForNeedleLocalizationOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
+        "39028-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    USGuidanceForNeedleLocalizationOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("38032-9")
+    USGuidanceForNeedleLocalizationOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
+        "38032-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForNeedleLocalizationOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("39027-8")
+    FluoroscopyGuidanceForNeedleLocalizationOfUnspecifiedBodyRegion = (
+        DocumentTypeValueSetCode("39027-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MammogramGuidanceForNeedleLocalizationOfMassOfBreast = DocumentTypeValueSetCode("24595-1")
+    MammogramGuidanceForNeedleLocalizationOfMassOfBreast = DocumentTypeValueSetCode(
+        "24595-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MammogramGuidanceForNeedleLocalizationOfMassOfBreast_Bilateral = DocumentTypeValueSetCode("26315-2")
+    MammogramGuidanceForNeedleLocalizationOfMassOfBreast_Bilateral = (
+        DocumentTypeValueSetCode("26315-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MammogramGuidanceForNeedleLocalizationOfMassOfBreast_Left = DocumentTypeValueSetCode("26316-0")
+    MammogramGuidanceForNeedleLocalizationOfMassOfBreast_Left = (
+        DocumentTypeValueSetCode("26316-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MammogramGuidanceForNeedleLocalizationOfMassOfBreast_Right = DocumentTypeValueSetCode("26317-8")
+    MammogramGuidanceForNeedleLocalizationOfMassOfBreast_Right = (
+        DocumentTypeValueSetCode("26317-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidanceForNeedleLocalizationOfBreast_WAndWOContrastIV = DocumentTypeValueSetCode("44118-8")
+    CTGuidanceForNeedleLocalizationOfBreast_WAndWOContrastIV = DocumentTypeValueSetCode(
+        "44118-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -5561,7 +6265,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForPercutaneousBiopsyOfAbdomen = DocumentTypeValueSetCode("69240-0")
+    FluoroscopyGuidanceForPercutaneousBiopsyOfAbdomen = DocumentTypeValueSetCode(
+        "69240-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -5569,51 +6275,75 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MammogramGuidanceForCoreNeedlePercutaneousBiopsyOfBreast = DocumentTypeValueSetCode("24609-0")
+    MammogramGuidanceForCoreNeedlePercutaneousBiopsyOfBreast = DocumentTypeValueSetCode(
+        "24609-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MammogramGuidanceForCoreNeedlePercutaneousBiopsyOfBreast_Bilateral = DocumentTypeValueSetCode("26334-3")
+    MammogramGuidanceForCoreNeedlePercutaneousBiopsyOfBreast_Bilateral = (
+        DocumentTypeValueSetCode("26334-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MammogramGuidanceForCoreNeedlePercutaneousBiopsyOfBreast_Left = DocumentTypeValueSetCode("26335-0")
+    MammogramGuidanceForCoreNeedlePercutaneousBiopsyOfBreast_Left = (
+        DocumentTypeValueSetCode("26335-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    USGuidanceForCoreNeedlePercutaneousBiopsyOfBreast_Left = DocumentTypeValueSetCode("38023-8")
+    USGuidanceForCoreNeedlePercutaneousBiopsyOfBreast_Left = DocumentTypeValueSetCode(
+        "38023-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MammogramGuidanceForCoreNeedlePercutaneousBiopsyOfBreast_Right = DocumentTypeValueSetCode("26336-8")
+    MammogramGuidanceForCoreNeedlePercutaneousBiopsyOfBreast_Right = (
+        DocumentTypeValueSetCode("26336-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    USGuidanceForCoreNeedlePercutaneousBiopsyOfBreast_Right = DocumentTypeValueSetCode("38025-3")
+    USGuidanceForCoreNeedlePercutaneousBiopsyOfBreast_Right = DocumentTypeValueSetCode(
+        "38025-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MammogramGuidanceForPercutaneousNeedleBiopsyOfBreast = DocumentTypeValueSetCode("44121-2")
+    MammogramGuidanceForPercutaneousNeedleBiopsyOfBreast = DocumentTypeValueSetCode(
+        "44121-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForPercutaneousNeedleBiopsyOfKidney = DocumentTypeValueSetCode("69245-9")
+    FluoroscopyGuidanceForPercutaneousNeedleBiopsyOfKidney = DocumentTypeValueSetCode(
+        "69245-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForPercutaneousNeedleBiopsyOfLiver = DocumentTypeValueSetCode("69246-7")
+    FluoroscopyGuidanceForPercutaneousNeedleBiopsyOfLiver = DocumentTypeValueSetCode(
+        "69246-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForPercutaneousNeedleBiopsyOfLung = DocumentTypeValueSetCode("44204-6")
+    FluoroscopyGuidanceForPercutaneousNeedleBiopsyOfLung = DocumentTypeValueSetCode(
+        "44204-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForPercutaneousNeedleBiopsyOfSalivaryGland = DocumentTypeValueSetCode("69247-5")
+    FluoroscopyGuidanceForPercutaneousNeedleBiopsyOfSalivaryGland = (
+        DocumentTypeValueSetCode("69247-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForPercutaneousDrainageOfBiliaryDucts = DocumentTypeValueSetCode("46372-9")
+    FluoroscopyGuidanceForPercutaneousDrainageOfBiliaryDucts = DocumentTypeValueSetCode(
+        "46372-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -5621,43 +6351,63 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForPercutaneousDrainageOfCavity = DocumentTypeValueSetCode("24621-5")
+    FluoroscopyGuidanceForPercutaneousDrainageOfCavity = DocumentTypeValueSetCode(
+        "24621-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForPercutaneousDrainageOfAbscessOfAbdomen = DocumentTypeValueSetCode("69241-8")
+    FluoroscopyGuidanceForPercutaneousDrainageOfAbscessOfAbdomen = (
+        DocumentTypeValueSetCode("69241-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForPercutaneousDrainageOfAbscessOfAppendix = DocumentTypeValueSetCode("69242-6")
+    FluoroscopyGuidanceForPercutaneousDrainageOfAbscessOfAppendix = (
+        DocumentTypeValueSetCode("69242-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForPercutaneousDrainageOfAbscessOfBreast = DocumentTypeValueSetCode("42422-6")
+    FluoroscopyGuidanceForPercutaneousDrainageOfAbscessOfBreast = (
+        DocumentTypeValueSetCode("42422-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidanceForPercutaneousDrainageOfAbscessOfCavity = DocumentTypeValueSetCode("43444-9")
+    CTGuidanceForPercutaneousDrainageOfAbscessOfCavity = DocumentTypeValueSetCode(
+        "43444-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForPercutaneousDrainageOfAbscessOfChest = DocumentTypeValueSetCode("42423-4")
+    FluoroscopyGuidanceForPercutaneousDrainageOfAbscessOfChest = (
+        DocumentTypeValueSetCode("42423-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForPercutaneousDrainageOfAbscessOfLung = DocumentTypeValueSetCode("69243-4")
+    FluoroscopyGuidanceForPercutaneousDrainageOfAbscessOfLung = (
+        DocumentTypeValueSetCode("69243-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForPercutaneousDrainageOfAbscessOfOvary = DocumentTypeValueSetCode("44223-6")
+    FluoroscopyGuidanceForPercutaneousDrainageOfAbscessOfOvary = (
+        DocumentTypeValueSetCode("44223-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForPercutaneousDrainageOfAbscessOfPelvis = DocumentTypeValueSetCode("69244-2")
+    FluoroscopyGuidanceForPercutaneousDrainageOfAbscessOfPelvis = (
+        DocumentTypeValueSetCode("69244-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForPercutaneousDrainageOfAbscessOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("42421-8")
+    FluoroscopyGuidanceForPercutaneousDrainageOfAbscessOfUnspecifiedBodyRegion = (
+        DocumentTypeValueSetCode("42421-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -5665,31 +6415,45 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForPercutaneousVertebroplastyOfSpine = DocumentTypeValueSetCode("35936-4")
+    FluoroscopyGuidanceForPercutaneousVertebroplastyOfSpine = DocumentTypeValueSetCode(
+        "35936-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForPercutaneousVertebroplastyOfSpineCervical = DocumentTypeValueSetCode("70923-8")
+    FluoroscopyGuidanceForPercutaneousVertebroplastyOfSpineCervical = (
+        DocumentTypeValueSetCode("70923-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidanceForPercutaneousVertebroplastyOfSpineLumbar = DocumentTypeValueSetCode("35934-9")
+    CTGuidanceForPercutaneousVertebroplastyOfSpineLumbar = DocumentTypeValueSetCode(
+        "35934-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForPercutaneousVertebroplastyOfSpineLumbar = DocumentTypeValueSetCode("70924-6")
+    FluoroscopyGuidanceForPercutaneousVertebroplastyOfSpineLumbar = (
+        DocumentTypeValueSetCode("70924-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidanceForPercutaneousVertebroplastyOfSpineThoracic = DocumentTypeValueSetCode("35935-6")
+    CTGuidanceForPercutaneousVertebroplastyOfSpineThoracic = DocumentTypeValueSetCode(
+        "35935-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForPercutaneousVertebroplastyOfSpineThoracic = DocumentTypeValueSetCode("70925-3")
+    FluoroscopyGuidanceForPercutaneousVertebroplastyOfSpineThoracic = (
+        DocumentTypeValueSetCode("70925-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForPeripheralNerveDenervationOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("72539-0")
+    FluoroscopyGuidanceForPeripheralNerveDenervationOfUnspecifiedBodyRegion = (
+        DocumentTypeValueSetCode("72539-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -5697,107 +6461,159 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForPlacementOfCatheterInUnspecifiedBodyRegion = DocumentTypeValueSetCode("35912-5")
+    FluoroscopyGuidanceForPlacementOfCatheterInUnspecifiedBodyRegion = (
+        DocumentTypeValueSetCode("35912-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForPlacementOfCatheterForAdminstrationOfThrombolyticInVessel = DocumentTypeValueSetCode("25028-2")
+    FluoroscopicAngiogramGuidanceForPlacementOfCatheterForAdminstrationOfThrombolyticInVessel = DocumentTypeValueSetCode(
+        "25028-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForPlacementOfCatheterForVasoconstrictorInfusionInVessels = DocumentTypeValueSetCode("25029-0")
+    FluoroscopicAngiogramGuidanceForPlacementOfCatheterForVasoconstrictorInfusionInVessels = DocumentTypeValueSetCode(
+        "25029-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForPlacementOfCatheterInArteryInCentralCardiovascularArtery = DocumentTypeValueSetCode("24613-2")
+    FluoroscopicAngiogramGuidanceForPlacementOfCatheterInArteryInCentralCardiovascularArtery = DocumentTypeValueSetCode(
+        "24613-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    USGuidanceForPlacementOfCatheterInCentralVein_Tunneled = DocumentTypeValueSetCode("30644-9")
+    USGuidanceForPlacementOfCatheterInCentralVein_Tunneled = DocumentTypeValueSetCode(
+        "30644-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForPlacementOfCatheterInHepaticArtery_WContrastIA = DocumentTypeValueSetCode("25077-9")
+    FluoroscopicAngiogramGuidanceForPlacementOfCatheterInHepaticArtery_WContrastIA = (
+        DocumentTypeValueSetCode("25077-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForPlacementOfCatheterInCentralVein_WContrastIV = DocumentTypeValueSetCode("24625-6")
+    FluoroscopicAngiogramGuidanceForPlacementOfCatheterInCentralVein_WContrastIV = (
+        DocumentTypeValueSetCode("24625-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForPlacementOfCatheterInCentralVein_Bilateral_WContrastIV = DocumentTypeValueSetCode("26310-3")
+    FluoroscopicAngiogramGuidanceForPlacementOfCatheterInCentralVein_Bilateral_WContrastIV = DocumentTypeValueSetCode(
+        "26310-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForPlacementOfCatheterInCentralVein_Left_WContrastIV = DocumentTypeValueSetCode("26311-1")
+    FluoroscopicAngiogramGuidanceForPlacementOfCatheterInCentralVein_Left_WContrastIV = DocumentTypeValueSetCode(
+        "26311-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForPlacementOfCatheterInCentralVein_Right_WContrastIV = DocumentTypeValueSetCode("26312-9")
+    FluoroscopicAngiogramGuidanceForPlacementOfCatheterInCentralVein_Right_WContrastIV = DocumentTypeValueSetCode(
+        "26312-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForPlacementOfCatheterInPortalVein_WContrastIV = DocumentTypeValueSetCode("41801-2")
+    FluoroscopicAngiogramGuidanceForPlacementOfCatheterInPortalVein_WContrastIV = (
+        DocumentTypeValueSetCode("41801-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForPlacementOfDecompressionTubeInGastrointestine = DocumentTypeValueSetCode("24716-3")
+    FluoroscopyGuidanceForPlacementOfDecompressionTubeInGastrointestine = (
+        DocumentTypeValueSetCode("24716-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForPlacementOfIlio_iliacTubeEndoprosthesisInIliacArtery_Left_WContrastIA = DocumentTypeValueSetCode("62491-6")
+    FluoroscopicAngiogramGuidanceForPlacementOfIlio_iliacTubeEndoprosthesisInIliacArtery_Left_WContrastIA = DocumentTypeValueSetCode(
+        "62491-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForPlacementOfIlio_iliacTubeEndoprosthesisInIliacArtery_Right_WContrastIA = DocumentTypeValueSetCode("62492-4")
+    FluoroscopicAngiogramGuidanceForPlacementOfIlio_iliacTubeEndoprosthesisInIliacArtery_Right_WContrastIA = DocumentTypeValueSetCode(
+        "62492-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    GuidanceForPlacementOfInfusionPortInUnspecifiedBodyRegion = DocumentTypeValueSetCode("25072-0")
+    GuidanceForPlacementOfInfusionPortInUnspecifiedBodyRegion = (
+        DocumentTypeValueSetCode("25072-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForPlacementOfIntraperitonealCatheterInAbdomen = DocumentTypeValueSetCode("62450-2")
+    FluoroscopicAngiogramGuidanceForPlacementOfIntraperitonealCatheterInAbdomen = (
+        DocumentTypeValueSetCode("62450-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForPlacementOfIVCFilterInInferiorVenaCava_WContrastIV = DocumentTypeValueSetCode("25026-6")
+    FluoroscopicAngiogramGuidanceForPlacementOfIVCFilterInInferiorVenaCava_WContrastIV = DocumentTypeValueSetCode(
+        "25026-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    GuidanceForPlacementOfLargeBoreCatheterIntoVesselInCentralVein = DocumentTypeValueSetCode("25027-4")
+    GuidanceForPlacementOfLargeBoreCatheterIntoVesselInCentralVein = (
+        DocumentTypeValueSetCode("25027-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    GuidanceForPlacementOfLargeBoreCatheterIntoVesselInCentralVein_Bilateral = DocumentTypeValueSetCode("26307-9")
+    GuidanceForPlacementOfLargeBoreCatheterIntoVesselInCentralVein_Bilateral = (
+        DocumentTypeValueSetCode("26307-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    GuidanceForPlacementOfLargeBoreCatheterIntoVesselInCentralVein_Left = DocumentTypeValueSetCode("26308-7")
+    GuidanceForPlacementOfLargeBoreCatheterIntoVesselInCentralVein_Left = (
+        DocumentTypeValueSetCode("26308-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    GuidanceForPlacementOfLargeBoreCatheterIntoVesselInCentralVein_Right = DocumentTypeValueSetCode("26309-5")
+    GuidanceForPlacementOfLargeBoreCatheterIntoVesselInCentralVein_Right = (
+        DocumentTypeValueSetCode("26309-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForPlacementOfLongtermPeripheralCatheterInCentralVein = DocumentTypeValueSetCode("25024-1")
+    FluoroscopicAngiogramGuidanceForPlacementOfLongtermPeripheralCatheterInCentralVein = DocumentTypeValueSetCode(
+        "25024-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForPlacementOfLongtermPeripheralCatheterInCentralVein_Bilateral = DocumentTypeValueSetCode("26304-6")
+    FluoroscopicAngiogramGuidanceForPlacementOfLongtermPeripheralCatheterInCentralVein_Bilateral = DocumentTypeValueSetCode(
+        "26304-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForPlacementOfLongtermPeripheralCatheterInCentralVein_Left = DocumentTypeValueSetCode("26305-3")
+    FluoroscopicAngiogramGuidanceForPlacementOfLongtermPeripheralCatheterInCentralVein_Left = DocumentTypeValueSetCode(
+        "26305-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForPlacementOfLongtermPeripheralCatheterInCentralVein_Right = DocumentTypeValueSetCode("26306-1")
+    FluoroscopicAngiogramGuidanceForPlacementOfLongtermPeripheralCatheterInCentralVein_Right = DocumentTypeValueSetCode(
+        "26306-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    USGuidanceForPlacementOfNeedleInUnspecifiedBodyRegion = DocumentTypeValueSetCode("64993-9")
+    USGuidanceForPlacementOfNeedleInUnspecifiedBodyRegion = DocumentTypeValueSetCode(
+        "64993-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -5805,63 +6621,93 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidanceForPlacementOfNephrostomyTubeInKidney = DocumentTypeValueSetCode("36772-2")
+    CTGuidanceForPlacementOfNephrostomyTubeInKidney = DocumentTypeValueSetCode(
+        "36772-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForPlacementOfPercutaneousNephrostomyInKidney_Bilateral_WContrastViaTube = DocumentTypeValueSetCode("24779-1")
+    FluoroscopyGuidanceForPlacementOfPercutaneousNephrostomyInKidney_Bilateral_WContrastViaTube = DocumentTypeValueSetCode(
+        "24779-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForPlacementOfPercutaneousNephroureteralStentInKidney_Bilateral = DocumentTypeValueSetCode("24782-5")
+    FluoroscopyGuidanceForPlacementOfPercutaneousNephroureteralStentInKidney_Bilateral = DocumentTypeValueSetCode(
+        "24782-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidanceForPlacementOfRadiationTherapyFieldsInUnspecifiedBodyRegion = DocumentTypeValueSetCode("35937-2")
+    CTGuidanceForPlacementOfRadiationTherapyFieldsInUnspecifiedBodyRegion = (
+        DocumentTypeValueSetCode("35937-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    USGuidanceForPlacementOfRadiationTherapyFieldsInUnspecifiedBodyRegion = DocumentTypeValueSetCode("43487-8")
+    USGuidanceForPlacementOfRadiationTherapyFieldsInUnspecifiedBodyRegion = (
+        DocumentTypeValueSetCode("43487-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForPlacementOfStentInArtery_Left = DocumentTypeValueSetCode("65797-3")
+    FluoroscopicAngiogramGuidanceForPlacementOfStentInArtery_Left = (
+        DocumentTypeValueSetCode("65797-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForPlacementOfStentInArtery_Right = DocumentTypeValueSetCode("65798-1")
+    FluoroscopicAngiogramGuidanceForPlacementOfStentInArtery_Right = (
+        DocumentTypeValueSetCode("65798-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForPlacementOfStentInIliacArtery = DocumentTypeValueSetCode("69134-5")
+    FluoroscopicAngiogramGuidanceForPlacementOfStentInIliacArtery = (
+        DocumentTypeValueSetCode("69134-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForPlacementOfStentInIntrahepaticPortalSystem = DocumentTypeValueSetCode("25078-7")
+    FluoroscopyGuidanceForPlacementOfStentInIntrahepaticPortalSystem = (
+        DocumentTypeValueSetCode("25078-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForPlacementOfStentInVein = DocumentTypeValueSetCode("24756-9")
+    FluoroscopicAngiogramGuidanceForPlacementOfStentInVein = DocumentTypeValueSetCode(
+        "24756-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForPlacementOfStentInVein_Bilateral = DocumentTypeValueSetCode("26301-2")
+    FluoroscopicAngiogramGuidanceForPlacementOfStentInVein_Bilateral = (
+        DocumentTypeValueSetCode("26301-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForPlacementOfStentInVein_Left = DocumentTypeValueSetCode("26302-0")
+    FluoroscopicAngiogramGuidanceForPlacementOfStentInVein_Left = (
+        DocumentTypeValueSetCode("26302-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForPlacementOfStentInVein_Right = DocumentTypeValueSetCode("26303-8")
+    FluoroscopicAngiogramGuidanceForPlacementOfStentInVein_Right = (
+        DocumentTypeValueSetCode("26303-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForPlacementOfStentInArtery = DocumentTypeValueSetCode("24555-5")
+    FluoroscopicAngiogramGuidanceForPlacementOfStentInArtery = DocumentTypeValueSetCode(
+        "24555-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForPlacementOfTransjugularIntrahepaticPortosystemicShuntInPortalVeinAndHepaticVein = DocumentTypeValueSetCode("51391-1")
+    FluoroscopicAngiogramGuidanceForPlacementOfTransjugularIntrahepaticPortosystemicShuntInPortalVeinAndHepaticVein = DocumentTypeValueSetCode(
+        "51391-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -5877,7 +6723,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForPlacementOfTubeInGastrointestine = DocumentTypeValueSetCode("30637-3")
+    FluoroscopyGuidanceForPlacementOfTubeInGastrointestine = DocumentTypeValueSetCode(
+        "30637-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -5889,7 +6737,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForPlacementOfTubeInUnspecifiedBodyRegion = DocumentTypeValueSetCode("44224-4")
+    FluoroscopyGuidanceForPlacementOfTubeInUnspecifiedBodyRegion = (
+        DocumentTypeValueSetCode("44224-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -5905,31 +6755,45 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForProcedureOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("30629-0")
+    FluoroscopyGuidanceForProcedureOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
+        "30629-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidanceForRadiationTreatmentOfUnspecifiedBodyRegion_WContrastIV = DocumentTypeValueSetCode("30581-3")
+    CTGuidanceForRadiationTreatmentOfUnspecifiedBodyRegion_WContrastIV = (
+        DocumentTypeValueSetCode("30581-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MRIGuidanceForRadiationTreatmentOfUnspecifiedBodyRegion_WContrastIV = DocumentTypeValueSetCode("30664-7")
+    MRIGuidanceForRadiationTreatmentOfUnspecifiedBodyRegion_WContrastIV = (
+        DocumentTypeValueSetCode("30664-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidanceForRadiationTreatmentOfUnspecifiedBodyRegion_WOContrast = DocumentTypeValueSetCode("30582-1")
+    CTGuidanceForRadiationTreatmentOfUnspecifiedBodyRegion_WOContrast = (
+        DocumentTypeValueSetCode("30582-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MRIGuidanceForRadiationTreatmentOfUnspecifiedBodyRegion_WOContrast = DocumentTypeValueSetCode("30665-4")
+    MRIGuidanceForRadiationTreatmentOfUnspecifiedBodyRegion_WOContrast = (
+        DocumentTypeValueSetCode("30665-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidanceForRadiosurgeryOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("25053-0")
+    CTGuidanceForRadiosurgeryOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
+        "25053-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidanceForRadiosurgeryOfUnspecifiedBodyRegion_WContrastIV = DocumentTypeValueSetCode("25054-8")
+    CTGuidanceForRadiosurgeryOfUnspecifiedBodyRegion_WContrastIV = (
+        DocumentTypeValueSetCode("25054-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -5937,23 +6801,33 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    USGuidanceForRemovalOfCatheterFromCentralVein_Tunneled = DocumentTypeValueSetCode("42141-2")
+    USGuidanceForRemovalOfCatheterFromCentralVein_Tunneled = DocumentTypeValueSetCode(
+        "42141-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForRemovalOfCatheterFromCentralVein_Tunneled = DocumentTypeValueSetCode("72549-9")
+    FluoroscopyGuidanceForRemovalOfCatheterFromCentralVein_Tunneled = (
+        DocumentTypeValueSetCode("72549-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForRemovalOfCatheterFromCentralVein_WContrastIV = DocumentTypeValueSetCode("72548-1")
+    FluoroscopicAngiogramGuidanceForRemovalOfCatheterFromCentralVein_WContrastIV = (
+        DocumentTypeValueSetCode("72548-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForRemovalOfCVADeviceObstructionFromCentralVein = DocumentTypeValueSetCode("72547-3")
+    FluoroscopyGuidanceForRemovalOfCVADeviceObstructionFromCentralVein = (
+        DocumentTypeValueSetCode("72547-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForRemovalOfCVALumenObstructionFromCentralVein = DocumentTypeValueSetCode("72546-5")
+    FluoroscopyGuidanceForRemovalOfCVALumenObstructionFromCentralVein = (
+        DocumentTypeValueSetCode("72546-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -5969,15 +6843,21 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForRemovalOfForeignBodyFromUnspecifiedBodyRegion = DocumentTypeValueSetCode("30628-2")
+    FluoroscopyGuidanceForRemovalOfForeignBodyFromUnspecifiedBodyRegion = (
+        DocumentTypeValueSetCode("30628-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForRemovalOfLongtermPeripheralCatheterFromCentralVein = DocumentTypeValueSetCode("72538-2")
+    FluoroscopicAngiogramGuidanceForRemovalOfLongtermPeripheralCatheterFromCentralVein = DocumentTypeValueSetCode(
+        "72538-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForRemovalOfPercutaneousNephrostomyTubeFromKidney_Bilateral_WContrast = DocumentTypeValueSetCode("72544-0")
+    FluoroscopyGuidanceForRemovalOfPercutaneousNephrostomyTubeFromKidney_Bilateral_WContrast = DocumentTypeValueSetCode(
+        "72544-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -5985,95 +6865,141 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForRepairOfCVACatheterWithPortOrPumpOfCentralVein = DocumentTypeValueSetCode("72550-7")
+    FluoroscopyGuidanceForRepairOfCVACatheterWithPortOrPumpOfCentralVein = (
+        DocumentTypeValueSetCode("72550-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForRepairOfCVACatheterWithoutPortOrPumpOfCentralVein = DocumentTypeValueSetCode("72551-5")
+    FluoroscopyGuidanceForRepairOfCVACatheterWithoutPortOrPumpOfCentralVein = (
+        DocumentTypeValueSetCode("72551-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForReplacementOfPercutaneousCholecystostomyInAbdomen = DocumentTypeValueSetCode("42017-4")
+    FluoroscopyGuidanceForReplacementOfPercutaneousCholecystostomyInAbdomen = (
+        DocumentTypeValueSetCode("42017-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidanceForReplacementOfPercutaneousDrainageTubeInAbdomen = DocumentTypeValueSetCode("52790-3")
+    CTGuidanceForReplacementOfPercutaneousDrainageTubeInAbdomen = (
+        DocumentTypeValueSetCode("52790-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForReplacementOfPercutaneousDrainageTubeInBiliaryDuctsAndGallbladder = DocumentTypeValueSetCode("72545-7")
+    FluoroscopyGuidanceForReplacementOfPercutaneousDrainageTubeInBiliaryDuctsAndGallbladder = DocumentTypeValueSetCode(
+        "72545-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidanceForReplacementOfPercutaneousDrainageTubeInPelvis = DocumentTypeValueSetCode("52791-1")
+    CTGuidanceForReplacementOfPercutaneousDrainageTubeInPelvis = (
+        DocumentTypeValueSetCode("52791-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForReplacementOfPercutaneousDrainageTubeInStomach = DocumentTypeValueSetCode("46294-5")
+    FluoroscopyGuidanceForReplacementOfPercutaneousDrainageTubeInStomach = (
+        DocumentTypeValueSetCode("46294-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForReplacementOfPercutaneousGastrostomyInStomach = DocumentTypeValueSetCode("24996-1")
+    FluoroscopyGuidanceForReplacementOfPercutaneousGastrostomyInStomach = (
+        DocumentTypeValueSetCode("24996-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForRepositionOfCatheterInCentralVein_WContrastIV = DocumentTypeValueSetCode("24626-4")
+    FluoroscopicAngiogramGuidanceForRepositionOfCatheterInCentralVein_WContrastIV = (
+        DocumentTypeValueSetCode("24626-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForRepositionOfCatheterInCentralVein_Bilateral_WContrastIV = DocumentTypeValueSetCode("26295-6")
+    FluoroscopicAngiogramGuidanceForRepositionOfCatheterInCentralVein_Bilateral_WContrastIV = DocumentTypeValueSetCode(
+        "26295-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForRepositionOfCatheterInCentralVein_Left_WContrastIV = DocumentTypeValueSetCode("26296-4")
+    FluoroscopicAngiogramGuidanceForRepositionOfCatheterInCentralVein_Left_WContrastIV = DocumentTypeValueSetCode(
+        "26296-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForRepositionOfCatheterInCentralVein_Right_WContrastIV = DocumentTypeValueSetCode("26297-2")
+    FluoroscopicAngiogramGuidanceForRepositionOfCatheterInCentralVein_Right_WContrastIV = DocumentTypeValueSetCode(
+        "26297-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MammogramGuidanceForSentinelLymphNodeInjectionOfBreast = DocumentTypeValueSetCode("48740-5")
+    MammogramGuidanceForSentinelLymphNodeInjectionOfBreast = DocumentTypeValueSetCode(
+        "48740-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MammogramGuidanceForSentinelLymphNodeInjectionOfBreast_Left = DocumentTypeValueSetCode("48736-3")
+    MammogramGuidanceForSentinelLymphNodeInjectionOfBreast_Left = (
+        DocumentTypeValueSetCode("48736-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MammogramGuidanceForSentinelLymphNodeInjectionOfBreast_Right = DocumentTypeValueSetCode("48739-7")
+    MammogramGuidanceForSentinelLymphNodeInjectionOfBreast_Right = (
+        DocumentTypeValueSetCode("48739-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForStoneRemovalOfBiliaryDuctCommon_WContrastIntraBiliaryDuct = DocumentTypeValueSetCode("24570-4")
+    FluoroscopyGuidanceForStoneRemovalOfBiliaryDuctCommon_WContrastIntraBiliaryDuct = (
+        DocumentTypeValueSetCode("24570-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForThrombectomyOfVein_WContrastIV = DocumentTypeValueSetCode("43763-2")
+    FluoroscopicAngiogramGuidanceForThrombectomyOfVein_WContrastIV = (
+        DocumentTypeValueSetCode("43763-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForThrombectomyOfVein_Bilateral_WContrastIV = DocumentTypeValueSetCode("43761-6")
+    FluoroscopicAngiogramGuidanceForThrombectomyOfVein_Bilateral_WContrastIV = (
+        DocumentTypeValueSetCode("43761-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForThrombectomyOfVein_Left_WContrastIV = DocumentTypeValueSetCode("43762-4")
+    FluoroscopicAngiogramGuidanceForThrombectomyOfVein_Left_WContrastIV = (
+        DocumentTypeValueSetCode("43762-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForThrombectomyOfVein_Right_WContrastIV = DocumentTypeValueSetCode("43764-0")
+    FluoroscopicAngiogramGuidanceForThrombectomyOfVein_Right_WContrastIV = (
+        DocumentTypeValueSetCode("43764-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopyGuidanceForTriggerPointInjectionOfMuscle = DocumentTypeValueSetCode("72554-9")
+    FluoroscopyGuidanceForTriggerPointInjectionOfMuscle = DocumentTypeValueSetCode(
+        "72554-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FluoroscopicAngiogramGuidanceForVascularAccessOfVessel = DocumentTypeValueSetCode("39138-3")
+    FluoroscopicAngiogramGuidanceForVascularAccessOfVessel = DocumentTypeValueSetCode(
+        "39138-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    USGuidanceForVascularAccessOfUnspecifiedBodyRegion = DocumentTypeValueSetCode("39139-1")
+    USGuidanceForVascularAccessOfUnspecifiedBodyRegion = DocumentTypeValueSetCode(
+        "39139-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -6081,19 +7007,27 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MammogramGuidance_stereotacticForBiopsyOfBreast = DocumentTypeValueSetCode("24603-3")
+    MammogramGuidance_stereotacticForBiopsyOfBreast = DocumentTypeValueSetCode(
+        "24603-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MammogramGuidance_stereotacticForBiopsyOfBreast_Bilateral = DocumentTypeValueSetCode("26292-3")
+    MammogramGuidance_stereotacticForBiopsyOfBreast_Bilateral = (
+        DocumentTypeValueSetCode("26292-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MammogramGuidance_stereotacticForBiopsyOfBreast_Left = DocumentTypeValueSetCode("26293-1")
+    MammogramGuidance_stereotacticForBiopsyOfBreast_Left = DocumentTypeValueSetCode(
+        "26293-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MammogramGuidance_stereotacticForBiopsyOfBreast_Right = DocumentTypeValueSetCode("26294-9")
+    MammogramGuidance_stereotacticForBiopsyOfBreast_Right = DocumentTypeValueSetCode(
+        "26294-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -6101,39 +7035,57 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MammogramGuidance_stereotacticForCoreNeedleBiopsyOfBreast = DocumentTypeValueSetCode("46296-0")
+    MammogramGuidance_stereotacticForCoreNeedleBiopsyOfBreast = (
+        DocumentTypeValueSetCode("46296-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MammogramGuidance_stereotacticForCoreNeedleBiopsyOfBreast_Left = DocumentTypeValueSetCode("46295-2")
+    MammogramGuidance_stereotacticForCoreNeedleBiopsyOfBreast_Left = (
+        DocumentTypeValueSetCode("46295-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MammogramGuidance_stereotacticForCoreNeedleBiopsyOfBreast_Right = DocumentTypeValueSetCode("42433-3")
+    MammogramGuidance_stereotacticForCoreNeedleBiopsyOfBreast_Right = (
+        DocumentTypeValueSetCode("42433-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MammogramGuidance_stereotacticForNeedleBiopsyOfBreast = DocumentTypeValueSetCode("69160-0")
+    MammogramGuidance_stereotacticForNeedleBiopsyOfBreast = DocumentTypeValueSetCode(
+        "69160-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidance_stereotacticForBiopsyOfHead_WContrastIV = DocumentTypeValueSetCode("24585-2")
+    CTGuidance_stereotacticForBiopsyOfHead_WContrastIV = DocumentTypeValueSetCode(
+        "24585-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CTGuidance_stereotacticForBiopsyOfHead_WOContrast = DocumentTypeValueSetCode("36929-8")
+    CTGuidance_stereotacticForBiopsyOfHead_WOContrast = DocumentTypeValueSetCode(
+        "36929-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MRIGuidance_stereotacticForLocalizationInBrain_WAndWOContrastIV = DocumentTypeValueSetCode("44122-0")
+    MRIGuidance_stereotacticForLocalizationInBrain_WAndWOContrastIV = (
+        DocumentTypeValueSetCode("44122-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MRIGuidance_stereotacticForLocalizationInBrain_WContrastIV = DocumentTypeValueSetCode("30656-3")
+    MRIGuidance_stereotacticForLocalizationInBrain_WContrastIV = (
+        DocumentTypeValueSetCode("30656-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MRIGuidance_stereotacticForLocalizationInBrain_WOContrast = DocumentTypeValueSetCode("30800-7")
+    MRIGuidance_stereotacticForLocalizationInBrain_WOContrast = (
+        DocumentTypeValueSetCode("30800-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -6181,15 +7133,21 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    InhalationChallengeTestReportDocument_WMethacholineInhaled = DocumentTypeValueSetCode("65806-2")
+    InhalationChallengeTestReportDocument_WMethacholineInhaled = (
+        DocumentTypeValueSetCode("65806-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    OccupationalTherapyInitialAssessmentNoteAtFirstEncounter = DocumentTypeValueSetCode("11500-6")
+    OccupationalTherapyInitialAssessmentNoteAtFirstEncounter = DocumentTypeValueSetCode(
+        "11500-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PhysicalTherapyInitialAssessmentNoteAtFirstEncounter = DocumentTypeValueSetCode("11495-9")
+    PhysicalTherapyInitialAssessmentNoteAtFirstEncounter = DocumentTypeValueSetCode(
+        "11495-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -6201,11 +7159,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PsychologyInitialAssessmentNoteAtFirstEncounter = DocumentTypeValueSetCode("11497-5")
+    PsychologyInitialAssessmentNoteAtFirstEncounter = DocumentTypeValueSetCode(
+        "11497-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SocialWorkInitialAssessmentNoteAtFirstEncounter = DocumentTypeValueSetCode("11498-3")
+    SocialWorkInitialAssessmentNoteAtFirstEncounter = DocumentTypeValueSetCode(
+        "11498-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -6673,7 +7635,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CeliacVesselsAndSuperiorMesentericVesselsMRIAngiogram = DocumentTypeValueSetCode("30865-0")
+    CeliacVesselsAndSuperiorMesentericVesselsMRIAngiogram = DocumentTypeValueSetCode(
+        "30865-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -8761,7 +9725,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VenaCava_inferiorAndLowerExtremityVeinsMRIAngiogram = DocumentTypeValueSetCode("36790-4")
+    VenaCava_inferiorAndLowerExtremityVeinsMRIAngiogram = DocumentTypeValueSetCode(
+        "36790-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -8913,11 +9879,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CoronaryArteriesCTAngiogramAnd3DReconstructionWContrastIV = DocumentTypeValueSetCode("58745-1")
+    CoronaryArteriesCTAngiogramAnd3DReconstructionWContrastIV = (
+        DocumentTypeValueSetCode("58745-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LeftAtriumAndPulmonaryVeinsCTAngiogramAnd3DReconstructionWContrastIV = DocumentTypeValueSetCode("59255-0")
+    LeftAtriumAndPulmonaryVeinsCTAngiogramAnd3DReconstructionWContrastIV = (
+        DocumentTypeValueSetCode("59255-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -8929,11 +9899,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ExtremityArteries_BilateralUS_dopplerMultisectionAndPhysiologicArteryStudy = DocumentTypeValueSetCode("72830-3")
+    ExtremityArteries_BilateralUS_dopplerMultisectionAndPhysiologicArteryStudy = (
+        DocumentTypeValueSetCode("72830-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ExtremityArteries_BilateralUS_dopplerMultisectionAndPhysiologicArteryStudyAtRestAndWithExercise = DocumentTypeValueSetCode("72832-9")
+    ExtremityArteries_BilateralUS_dopplerMultisectionAndPhysiologicArteryStudyAtRestAndWithExercise = DocumentTypeValueSetCode(
+        "72832-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -8945,7 +9919,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Kidney_BilateralX_rayTomograph3ViewsWContrastIV = DocumentTypeValueSetCode("30760-3")
+    Kidney_BilateralX_rayTomograph3ViewsWContrastIV = DocumentTypeValueSetCode(
+        "30760-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -8977,7 +9953,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartMRICineForBloodFlowVelocityMappingWContrastIV = DocumentTypeValueSetCode("44126-1")
+    HeartMRICineForBloodFlowVelocityMappingWContrastIV = DocumentTypeValueSetCode(
+        "44126-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -8997,15 +9975,21 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Breast_BilateralFFDMammogram_tomosynthesisDiagnostic = DocumentTypeValueSetCode("72139-9")
+    Breast_BilateralFFDMammogram_tomosynthesisDiagnostic = DocumentTypeValueSetCode(
+        "72139-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Breast_LeftFFDMammogram_tomosynthesisDiagnostic = DocumentTypeValueSetCode("72138-1")
+    Breast_LeftFFDMammogram_tomosynthesisDiagnostic = DocumentTypeValueSetCode(
+        "72138-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Breast_RightFFDMammogram_tomosynthesisDiagnostic = DocumentTypeValueSetCode("72137-3")
+    Breast_RightFFDMammogram_tomosynthesisDiagnostic = DocumentTypeValueSetCode(
+        "72137-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -9153,7 +10137,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartSPECTGatedAndEjectionFractionAtRestAndWStressAndWRadionuclideIV = DocumentTypeValueSetCode("46395-0")
+    HeartSPECTGatedAndEjectionFractionAtRestAndWStressAndWRadionuclideIV = (
+        DocumentTypeValueSetCode("46395-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -9409,11 +10395,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UpperExtremityArtery_BilateralUS_dopplerLimited = DocumentTypeValueSetCode("46302-6")
+    UpperExtremityArtery_BilateralUS_dopplerLimited = DocumentTypeValueSetCode(
+        "46302-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UpperExtremityVesselGraft_BilateralUS_dopplerLimited = DocumentTypeValueSetCode("44237-6")
+    UpperExtremityVesselGraft_BilateralUS_dopplerLimited = DocumentTypeValueSetCode(
+        "44237-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -9445,7 +10435,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ExtremityArteries_BilateralUS_dopplerMultisectionLimitedAndPhysiologicArteryStudy = DocumentTypeValueSetCode("72831-1")
+    ExtremityArteries_BilateralUS_dopplerMultisectionLimitedAndPhysiologicArteryStudy = DocumentTypeValueSetCode(
+        "72831-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -9573,15 +10565,21 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartSPECTPerfusionAndWallMotionAtRestAndWStressAndWTl_201IVAndWTc_99mSestamibiIV = DocumentTypeValueSetCode("49569-7")
+    HeartSPECTPerfusionAndWallMotionAtRestAndWStressAndWTl_201IVAndWTc_99mSestamibiIV = DocumentTypeValueSetCode(
+        "49569-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartSPECTPerfusionQualitativeAtRestAndWRadionuclideIV = DocumentTypeValueSetCode("43659-2")
+    HeartSPECTPerfusionQualitativeAtRestAndWRadionuclideIV = DocumentTypeValueSetCode(
+        "43659-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartSPECTPerfusionAtRestAndWAdenosineAndWTl_201IV = DocumentTypeValueSetCode("39725-7")
+    HeartSPECTPerfusionAtRestAndWAdenosineAndWTl_201IV = DocumentTypeValueSetCode(
+        "39725-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -9589,15 +10587,21 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartSPECTPerfusionAtRestAndWStressAndWRadionuclideIV = DocumentTypeValueSetCode("39724-0")
+    HeartSPECTPerfusionAtRestAndWStressAndWRadionuclideIV = DocumentTypeValueSetCode(
+        "39724-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartSPECTPerfusionAtRestAndWStressAndWTl_201IV = DocumentTypeValueSetCode("39723-2")
+    HeartSPECTPerfusionAtRestAndWStressAndWTl_201IV = DocumentTypeValueSetCode(
+        "39723-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartSPECTPerfusionAtRestAndWStressAndWTl_201IVAndWTc_99mSestamibiIV = DocumentTypeValueSetCode("49568-9")
+    HeartSPECTPerfusionAtRestAndWStressAndWTl_201IVAndWTc_99mSestamibiIV = (
+        DocumentTypeValueSetCode("49568-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -9605,11 +10609,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartSPECTPerfusionWAdenosineAndWRadionuclideIV = DocumentTypeValueSetCode("39700-0")
+    HeartSPECTPerfusionWAdenosineAndWRadionuclideIV = DocumentTypeValueSetCode(
+        "39700-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartSPECTPerfusionWAdenosineAndWTc_99mSestamibiIV = DocumentTypeValueSetCode("49567-1")
+    HeartSPECTPerfusionWAdenosineAndWTc_99mSestamibiIV = DocumentTypeValueSetCode(
+        "49567-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -9625,7 +10633,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartSPECTPerfusionWStressAndWTc_99mSestamibiIV = DocumentTypeValueSetCode("39736-4")
+    HeartSPECTPerfusionWStressAndWTc_99mSestamibiIV = DocumentTypeValueSetCode(
+        "39736-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -9645,7 +10655,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UnspecifiedBodyRegionCT3DSagittalAndCoronalDisarticulation = DocumentTypeValueSetCode("25050-6")
+    UnspecifiedBodyRegionCT3DSagittalAndCoronalDisarticulation = (
+        DocumentTypeValueSetCode("25050-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -9653,7 +10665,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Breast_BilateralFFDMammogram_tomosynthesisScreening = DocumentTypeValueSetCode("72142-3")
+    Breast_BilateralFFDMammogram_tomosynthesisScreening = DocumentTypeValueSetCode(
+        "72142-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -9661,7 +10675,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Breast_RightFFDMammogram_tomosynthesisScreening = DocumentTypeValueSetCode("72140-7")
+    Breast_RightFFDMammogram_tomosynthesisScreening = DocumentTypeValueSetCode(
+        "72140-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -9705,11 +10721,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LungSPECTVentilationAndPerfusionWRadionuclideInhaledAndWRadionuclideIV = DocumentTypeValueSetCode("39838-8")
+    LungSPECTVentilationAndPerfusionWRadionuclideInhaledAndWRadionuclideIV = (
+        DocumentTypeValueSetCode("39838-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LungSPECTVentilationWRadionuclideAerosolInhaled = DocumentTypeValueSetCode("39898-2")
+    LungSPECTVentilationWRadionuclideAerosolInhaled = DocumentTypeValueSetCode(
+        "39898-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -9753,7 +10773,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartSPECTAtRestAndWStressAndWTc_99mSestamibiIV = DocumentTypeValueSetCode("39662-2")
+    HeartSPECTAtRestAndWStressAndWTc_99mSestamibiIV = DocumentTypeValueSetCode(
+        "39662-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -9917,7 +10939,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AortaAndFemoralArtery_BilateralCTAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("30806-4")
+    AortaAndFemoralArtery_BilateralCTAngiogramWAndWOContrastIV = (
+        DocumentTypeValueSetCode("30806-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -9933,7 +10957,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    BiliaryDuctsAndPancreaticDuctMRIWAndWOContrastIV = DocumentTypeValueSetCode("36944-7")
+    BiliaryDuctsAndPancreaticDuctMRIWAndWOContrastIV = DocumentTypeValueSetCode(
+        "36944-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -9945,11 +10971,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    BrainAndInternalAuditoryCanalMRIWAndWOContrastIV = DocumentTypeValueSetCode("43769-9")
+    BrainAndInternalAuditoryCanalMRIWAndWOContrastIV = DocumentTypeValueSetCode(
+        "43769-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    BrainAndPituitaryAndSellaTurcicaMRIWAndWOContrastIV = DocumentTypeValueSetCode("42392-1")
+    BrainAndPituitaryAndSellaTurcicaMRIWAndWOContrastIV = DocumentTypeValueSetCode(
+        "42392-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -10265,7 +11295,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    InternalAuditoryCanalAndPosteriorFossaMRIWAndWOContrastIV = DocumentTypeValueSetCode("24740-3")
+    InternalAuditoryCanalAndPosteriorFossaMRIWAndWOContrastIV = (
+        DocumentTypeValueSetCode("24740-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -10345,39 +11377,57 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LowerExtremityVeinsMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("36416-6")
+    LowerExtremityVeinsMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
+        "36416-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LowerExtremityVeins_LeftMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("36849-8")
+    LowerExtremityVeins_LeftMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
+        "36849-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LowerExtremityVeins_RightMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("36850-6")
+    LowerExtremityVeins_RightMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
+        "36850-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LowerExtremityVesselsCTAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("30807-2")
+    LowerExtremityVesselsCTAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
+        "30807-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LowerExtremityVesselsMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("44128-7")
+    LowerExtremityVesselsMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
+        "44128-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LowerExtremityVessels_LeftCTAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("46308-3")
+    LowerExtremityVessels_LeftCTAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
+        "46308-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LowerExtremityVessels_LeftMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("36858-9")
+    LowerExtremityVessels_LeftMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
+        "36858-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LowerExtremityVessels_RightCTAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("46307-5")
+    LowerExtremityVessels_RightCTAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
+        "46307-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LowerExtremityVessels_RightMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("36859-7")
+    LowerExtremityVessels_RightMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
+        "36859-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -10637,11 +11687,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ShoulderVessels_LeftMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("36864-7")
+    ShoulderVessels_LeftMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
+        "36864-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ShoulderVessels_RightMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("36865-4")
+    ShoulderVessels_RightMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
+        "36865-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -10705,15 +11759,21 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CervicalSpineVesselsMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("37506-3")
+    CervicalSpineVesselsMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
+        "37506-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineCervicalAndSpineThoracicMRIWAndWOContrastIV = DocumentTypeValueSetCode("43456-3")
+    SpineCervicalAndSpineThoracicMRIWAndWOContrastIV = DocumentTypeValueSetCode(
+        "43456-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineCervicalAndThoracicAndLumbarMRIWAndWOContrastIV = DocumentTypeValueSetCode("30855-1")
+    SpineCervicalAndThoracicAndLumbarMRIWAndWOContrastIV = DocumentTypeValueSetCode(
+        "30855-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -10737,7 +11797,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ThoracicSpineVesselsMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("37508-9")
+    ThoracicSpineVesselsMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
+        "37508-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -10757,7 +11819,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SuperiorMesentericVesselsMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("44231-9")
+    SuperiorMesentericVesselsMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
+        "44231-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -10773,7 +11837,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    TemporomandibularJoint_BilateralMRIWAndWOContrastIV = DocumentTypeValueSetCode("37269-8")
+    TemporomandibularJoint_BilateralMRIWAndWOContrastIV = DocumentTypeValueSetCode(
+        "37269-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -10781,7 +11847,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    TemporomandibularJoint_RightMRIWAndWOContrastIV = DocumentTypeValueSetCode("37271-4")
+    TemporomandibularJoint_RightMRIWAndWOContrastIV = DocumentTypeValueSetCode(
+        "37271-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -10865,39 +11933,57 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UpperExtremityVeinsMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("36417-4")
+    UpperExtremityVeinsMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
+        "36417-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UpperExtremityVeins_LeftMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("36851-4")
+    UpperExtremityVeins_LeftMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
+        "36851-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UpperExtremityVeins_RightMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("36852-2")
+    UpperExtremityVeins_RightMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
+        "36852-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UpperExtremityVesselsCTAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("36421-6")
+    UpperExtremityVesselsCTAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
+        "36421-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UpperExtremityVesselsMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("36422-4")
+    UpperExtremityVesselsMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
+        "36422-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UpperExtremityVessels_LeftCTAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("46312-5")
+    UpperExtremityVessels_LeftCTAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
+        "46312-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UpperExtremityVessels_LeftMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("36860-5")
+    UpperExtremityVessels_LeftMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
+        "36860-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UpperExtremityVessels_RightCTAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("46309-1")
+    UpperExtremityVessels_RightCTAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
+        "46309-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UpperExtremityVessels_RightMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode("36861-3")
+    UpperExtremityVessels_RightMRIAngiogramWAndWOContrastIV = DocumentTypeValueSetCode(
+        "36861-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -10997,7 +12083,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FacialBonesAndMaxillaCTWAndWOReducedContrastVolumeIV = DocumentTypeValueSetCode("46315-8")
+    FacialBonesAndMaxillaCTWAndWOReducedContrastVolumeIV = DocumentTypeValueSetCode(
+        "46315-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -11005,7 +12093,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    InternalAuditoryCanalCTWAndWOReducedContrastVolumeIV = DocumentTypeValueSetCode("46314-1")
+    InternalAuditoryCanalCTWAndWOReducedContrastVolumeIV = DocumentTypeValueSetCode(
+        "46314-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -11061,11 +12151,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PulmonaryArtery_BilateralMRIAngiogramWContrastIA = DocumentTypeValueSetCode("69162-6")
+    PulmonaryArtery_BilateralMRIAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "69162-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UrinaryBladderAndUrethraSPECTWContrastIntraBladderDuringVoiding = DocumentTypeValueSetCode("69238-4")
+    UrinaryBladderAndUrethraSPECTWContrastIntraBladderDuringVoiding = (
+        DocumentTypeValueSetCode("69238-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -11297,7 +12391,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AbdominalVesselsAndPelvisVesselsCTAngiogramWContrastIV = DocumentTypeValueSetCode("69908-2")
+    AbdominalVesselsAndPelvisVesselsCTAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "69908-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -11353,11 +12449,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AortaAndFemoralArtery_BilateralCTAngiogramWContrastIV = DocumentTypeValueSetCode("72255-3")
+    AortaAndFemoralArtery_BilateralCTAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "72255-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AortaAndLowerExtremityVesselsCTAngiogramWContrastIV = DocumentTypeValueSetCode("43503-2")
+    AortaAndLowerExtremityVesselsCTAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "43503-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -11689,7 +12789,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeadVesselsAndNeckVesselsCTAngiogramWContrastIV = DocumentTypeValueSetCode("37498-3")
+    HeadVesselsAndNeckVesselsCTAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "37498-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -11841,7 +12943,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LowerExtremityVessels_BilateralMRIAngiogramWContrastIV = DocumentTypeValueSetCode("44135-2")
+    LowerExtremityVessels_BilateralMRIAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "44135-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -11893,7 +12997,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LowerLegVessels_BilateralMRIAngiogramWContrastIV = DocumentTypeValueSetCode("43512-3")
+    LowerLegVessels_BilateralMRIAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "43512-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -12165,7 +13271,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineCervicalAndSpineThoracicAndSpineLumbarAndSacrumMRIWContrastIV = DocumentTypeValueSetCode("38061-8")
+    SpineCervicalAndSpineThoracicAndSpineLumbarAndSacrumMRIWContrastIV = (
+        DocumentTypeValueSetCode("38061-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -12269,15 +13377,21 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ThoracicOutletVessels_BilateralMRIAngiogramWContrastIV = DocumentTypeValueSetCode("26181-8")
+    ThoracicOutletVessels_BilateralMRIAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "26181-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ThoracicOutletVessels_LeftMRIAngiogramWContrastIV = DocumentTypeValueSetCode("26182-6")
+    ThoracicOutletVessels_LeftMRIAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "26182-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ThoracicOutletVessels_RightMRIAngiogramWContrastIV = DocumentTypeValueSetCode("26183-4")
+    ThoracicOutletVessels_RightMRIAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "26183-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -12445,7 +13559,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AbdomenAndPelvisMRIWContrastPOAndWAndWOContrastIV = DocumentTypeValueSetCode("72246-2")
+    AbdomenAndPelvisMRIWContrastPOAndWAndWOContrastIV = DocumentTypeValueSetCode(
+        "72246-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -12457,7 +13573,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PelvisMRIWContrastPRAtRestAndMaxmalSphincterContractionDuringStrainingAndDefecation = DocumentTypeValueSetCode("72245-4")
+    PelvisMRIWContrastPRAtRestAndMaxmalSphincterContractionDuringStrainingAndDefecation = DocumentTypeValueSetCode(
+        "72245-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -12577,7 +13695,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FacialBonesAndMaxillaCTWReducedContrastVolumeIV = DocumentTypeValueSetCode("46326-5")
+    FacialBonesAndMaxillaCTWReducedContrastVolumeIV = DocumentTypeValueSetCode(
+        "46326-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -12585,7 +13705,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    InternalAuditoryCanalCTWReducedContrastVolumeIV = DocumentTypeValueSetCode("46325-7")
+    InternalAuditoryCanalCTWReducedContrastVolumeIV = DocumentTypeValueSetCode(
+        "46325-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -13201,15 +14323,21 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LowerExtremityVessels_BilateralMRIAngiogramWOContrast = DocumentTypeValueSetCode("36450-5")
+    LowerExtremityVessels_BilateralMRIAngiogramWOContrast = DocumentTypeValueSetCode(
+        "36450-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LowerExtremityVessels_LeftMRIAngiogramWOContrast = DocumentTypeValueSetCode("36882-9")
+    LowerExtremityVessels_LeftMRIAngiogramWOContrast = DocumentTypeValueSetCode(
+        "36882-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LowerExtremityVessels_RightMRIAngiogramWOContrast = DocumentTypeValueSetCode("38773-8")
+    LowerExtremityVessels_RightMRIAngiogramWOContrast = DocumentTypeValueSetCode(
+        "38773-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -13569,7 +14697,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SuperiorMesentericVesselsMRIAngiogramWOContrast = DocumentTypeValueSetCode("44230-1")
+    SuperiorMesentericVesselsMRIAngiogramWOContrast = DocumentTypeValueSetCode(
+        "44230-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -13793,7 +14923,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Kidney_BilateralX_rayTomographWOContrastAnd10MPostContrastIV = DocumentTypeValueSetCode("24787-4")
+    Kidney_BilateralX_rayTomographWOContrastAnd10MPostContrastIV = (
+        DocumentTypeValueSetCode("24787-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -13841,7 +14973,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    NoticeOfDischargeMedicareAppealRights_NODMAR_Form = DocumentTypeValueSetCode("52066-8")
+    NoticeOfDischargeMedicareAppealRights_NODMAR_Form = DocumentTypeValueSetCode(
+        "52066-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -13877,7 +15011,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CatheterFluoroscopyPatencyCheckWContrastViaCatheter = DocumentTypeValueSetCode("24620-7")
+    CatheterFluoroscopyPatencyCheckWContrastViaCatheter = DocumentTypeValueSetCode(
+        "24620-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -13901,23 +15037,33 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PoplitealArteryFluoroscopicAngiogramPercutaneousTransluminalAngioplastyOfVesselWContrastIA = DocumentTypeValueSetCode("24882-3")
+    PoplitealArteryFluoroscopicAngiogramPercutaneousTransluminalAngioplastyOfVesselWContrastIA = DocumentTypeValueSetCode(
+        "24882-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PulmonaryArteryFluoroscopicAngiogramPercutaneousTransluminalAngioplastyOfVesselWContrastIA = DocumentTypeValueSetCode("69252-5")
+    PulmonaryArteryFluoroscopicAngiogramPercutaneousTransluminalAngioplastyOfVesselWContrastIA = DocumentTypeValueSetCode(
+        "69252-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    RenalArteryFluoroscopicAngiogramPercutaneousTransluminalAngioplastyOfVesselWContrastIA = DocumentTypeValueSetCode("69248-3")
+    RenalArteryFluoroscopicAngiogramPercutaneousTransluminalAngioplastyOfVesselWContrastIA = DocumentTypeValueSetCode(
+        "69248-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VeinFluoroscopicAngiogramPercutaneousTransluminalAngioplastyOfVesselWContrastIA = DocumentTypeValueSetCode("42018-2")
+    VeinFluoroscopicAngiogramPercutaneousTransluminalAngioplastyOfVesselWContrastIA = (
+        DocumentTypeValueSetCode("42018-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UpperExtremityVeinFluoroscopicAngiogramPercutaneousTransluminalAngioplastyOfVesselWContrastIV = DocumentTypeValueSetCode("69301-0")
+    UpperExtremityVeinFluoroscopicAngiogramPercutaneousTransluminalAngioplastyOfVesselWContrastIV = DocumentTypeValueSetCode(
+        "69301-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -13937,15 +15083,21 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PharmacogeneticAnalysisReportInBloodOrTissueDocumentByMolecularGeneticsMethod = DocumentTypeValueSetCode("51965-2")
+    PharmacogeneticAnalysisReportInBloodOrTissueDocumentByMolecularGeneticsMethod = (
+        DocumentTypeValueSetCode("51965-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PhysicalFindingsOfHeadAndEarsAndEyesAndNoseAndThroat = DocumentTypeValueSetCode("51850-6")
+    PhysicalFindingsOfHeadAndEarsAndEyesAndNoseAndThroat = DocumentTypeValueSetCode(
+        "51850-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PlacementCheckOfGastrostomyTubeWContrastViaGITube = DocumentTypeValueSetCode("24998-7")
+    PlacementCheckOfGastrostomyTubeWContrastViaGITube = DocumentTypeValueSetCode(
+        "24998-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -13993,15 +15145,21 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    QualityReportingDocumentArchitectureCalculatedSummaryReportPopulationDocument = DocumentTypeValueSetCode("55184-6")
+    QualityReportingDocumentArchitectureCalculatedSummaryReportPopulationDocument = (
+        DocumentTypeValueSetCode("55184-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    QualityReportingDocumentArchitectureIncidenceReportDocument = DocumentTypeValueSetCode("55182-0")
+    QualityReportingDocumentArchitectureIncidenceReportDocument = (
+        DocumentTypeValueSetCode("55182-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    QualityReportingDocumentArchitecturePatientListReportPopulationDocument = DocumentTypeValueSetCode("55183-8")
+    QualityReportingDocumentArchitecturePatientListReportPopulationDocument = (
+        DocumentTypeValueSetCode("55183-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -14041,7 +15199,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ColonFluoroscopyReductionWViewsWBariumContrastPR = DocumentTypeValueSetCode("44226-9")
+    ColonFluoroscopyReductionWViewsWBariumContrastPR = DocumentTypeValueSetCode(
+        "44226-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -14089,7 +15249,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VesselFluoroscopicAngiogramRemovalOfForeignBodyFromVascularSpace = DocumentTypeValueSetCode("25073-8")
+    VesselFluoroscopicAngiogramRemovalOfForeignBodyFromVascularSpace = (
+        DocumentTypeValueSetCode("25073-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -14097,7 +15259,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UpperGITractReplacementOfPercutaneousGastrojejunostomy = DocumentTypeValueSetCode("25015-9")
+    UpperGITractReplacementOfPercutaneousGastrojejunostomy = DocumentTypeValueSetCode(
+        "25015-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -14265,7 +15429,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SubscriberInformationIncludingRetroactiveAndPresumptiveEligibility = DocumentTypeValueSetCode("52038-7")
+    SubscriberInformationIncludingRetroactiveAndPresumptiveEligibility = (
+        DocumentTypeValueSetCode("52038-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -14301,7 +15467,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    TranscutaneousElectricalNeuralStimulation_TENS_ = DocumentTypeValueSetCode("52062-7")
+    TranscutaneousElectricalNeuralStimulation_TENS_ = DocumentTypeValueSetCode(
+        "52062-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -14345,7 +15513,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UnspecifiedBodyRegionFluoroscopyGreaterThan1Hour = DocumentTypeValueSetCode("42702-1")
+    UnspecifiedBodyRegionFluoroscopyGreaterThan1Hour = DocumentTypeValueSetCode(
+        "42702-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -14657,23 +15827,33 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VesselFluoroscopicAngiogramSingleViewWContrastIA = DocumentTypeValueSetCode("25063-9")
+    VesselFluoroscopicAngiogramSingleViewWContrastIA = DocumentTypeValueSetCode(
+        "25063-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    BreastDuctMammogramSingleViewWContrastIntraDuct = DocumentTypeValueSetCode("69268-1")
+    BreastDuctMammogramSingleViewWContrastIntraDuct = DocumentTypeValueSetCode(
+        "69268-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    BreastDuct_LeftMammogramSingleViewWContrastIntraDuct = DocumentTypeValueSetCode("49510-1")
+    BreastDuct_LeftMammogramSingleViewWContrastIntraDuct = DocumentTypeValueSetCode(
+        "49510-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    BreastDuct_RightMammogramSingleViewWContrastIntraDuct = DocumentTypeValueSetCode("49509-3")
+    BreastDuct_RightMammogramSingleViewWContrastIntraDuct = DocumentTypeValueSetCode(
+        "49509-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    GastrointestineUpperFluoroscopySingleViewWContrastPO = DocumentTypeValueSetCode("24715-5")
+    GastrointestineUpperFluoroscopySingleViewWContrastPO = DocumentTypeValueSetCode(
+        "24715-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -14689,7 +15869,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AcromioclavicularJointX_ray10DegreeCephalicAngle = DocumentTypeValueSetCode("37467-8")
+    AcromioclavicularJointX_ray10DegreeCephalicAngle = DocumentTypeValueSetCode(
+        "37467-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -14853,7 +16035,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineCervicalOdontoidAndCervicalAxisX_rayAPSingleView = DocumentTypeValueSetCode("24948-2")
+    SpineCervicalOdontoidAndCervicalAxisX_rayAPSingleView = DocumentTypeValueSetCode(
+        "24948-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -14881,7 +16065,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ShoulderX_rayAP_WInternalRotationAndWExternalRotation_ = DocumentTypeValueSetCode("39402-3")
+    ShoulderX_rayAP_WInternalRotationAndWExternalRotation_ = DocumentTypeValueSetCode(
+        "39402-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -14925,7 +16111,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineCervicalOdontoidAndCervicalAxisX_rayAPPortableSingleView = DocumentTypeValueSetCode("30729-8")
+    SpineCervicalOdontoidAndCervicalAxisX_rayAPPortableSingleView = (
+        DocumentTypeValueSetCode("30729-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -14973,7 +16161,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LowerExtremity_BilateralX_rayAPSingleViewStanding = DocumentTypeValueSetCode("44177-4")
+    LowerExtremity_BilateralX_rayAPSingleViewStanding = DocumentTypeValueSetCode(
+        "44177-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -15105,7 +16295,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Kidney_BilateralFluoroscopyViewForCystExamination = DocumentTypeValueSetCode("65799-9")
+    Kidney_BilateralFluoroscopyViewForCystExamination = DocumentTypeValueSetCode(
+        "65799-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -15121,7 +16313,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    GastrointestinalSystemAndRespiratorySystemX_rayForForeignBody = DocumentTypeValueSetCode("39149-0")
+    GastrointestinalSystemAndRespiratorySystemX_rayForForeignBody = (
+        DocumentTypeValueSetCode("39149-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -15453,7 +16647,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineLumbosacralJunctionX_rayLateralSpotStanding = DocumentTypeValueSetCode("37516-2")
+    SpineLumbosacralJunctionX_rayLateralSpotStanding = DocumentTypeValueSetCode(
+        "37516-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -15669,7 +16865,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineLumbarX_rayObliqueViewAnd_viewsWRightBendingAndWLeftBending_ = DocumentTypeValueSetCode("44178-2")
+    SpineLumbarX_rayObliqueViewAnd_viewsWRightBendingAndWLeftBending_ = (
+        DocumentTypeValueSetCode("44178-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -15825,23 +17023,33 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FemoralArteryFluoroscopicAngiogramRunoffWAndWOContrastIA = DocumentTypeValueSetCode("49511-9")
+    FemoralArteryFluoroscopicAngiogramRunoffWAndWOContrastIA = DocumentTypeValueSetCode(
+        "49511-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FemoralArteryFluoroscopicAngiogramRunoffWContrastIA = DocumentTypeValueSetCode("24699-1")
+    FemoralArteryFluoroscopicAngiogramRunoffWContrastIA = DocumentTypeValueSetCode(
+        "24699-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FemoralArtery_BilateralFluoroscopicAngiogramRunoffWContrastIA = DocumentTypeValueSetCode("26178-4")
+    FemoralArtery_BilateralFluoroscopicAngiogramRunoffWContrastIA = (
+        DocumentTypeValueSetCode("26178-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FemoralArtery_LeftFluoroscopicAngiogramRunoffWContrastIA = DocumentTypeValueSetCode("26179-2")
+    FemoralArtery_LeftFluoroscopicAngiogramRunoffWContrastIA = DocumentTypeValueSetCode(
+        "26179-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FemoralArtery_RightFluoroscopicAngiogramRunoffWContrastIA = DocumentTypeValueSetCode("26180-0")
+    FemoralArtery_RightFluoroscopicAngiogramRunoffWContrastIA = (
+        DocumentTypeValueSetCode("26180-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -15877,19 +17085,27 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineThoracicAndLumbarX_rayScoliosisAPStandingAndInBrace = DocumentTypeValueSetCode("42428-3")
+    SpineThoracicAndLumbarX_rayScoliosisAPStandingAndInBrace = DocumentTypeValueSetCode(
+        "42428-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineThoracicAndLumbarX_rayScoliosisAPStandingAndWRightBending = DocumentTypeValueSetCode("42429-1")
+    SpineThoracicAndLumbarX_rayScoliosisAPStandingAndWRightBending = (
+        DocumentTypeValueSetCode("42429-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineThoracicAndLumbarX_rayScoliosisLateralSitting = DocumentTypeValueSetCode("42427-5")
+    SpineThoracicAndLumbarX_rayScoliosisLateralSitting = DocumentTypeValueSetCode(
+        "42427-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineThoracicAndLumbarX_rayScoliosisLateralStanding = DocumentTypeValueSetCode("37660-8")
+    SpineThoracicAndLumbarX_rayScoliosisLateralStanding = DocumentTypeValueSetCode(
+        "37660-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -15897,7 +17113,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SternoclavicularJoint_BilateralX_raySerendipity = DocumentTypeValueSetCode("37298-7")
+    SternoclavicularJoint_BilateralX_raySerendipity = DocumentTypeValueSetCode(
+        "37298-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -16257,7 +17475,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    RectumFluoroscopyPostContrastPRDuringDefecation = DocumentTypeValueSetCode("24893-0")
+    RectumFluoroscopyPostContrastPRDuringDefecation = DocumentTypeValueSetCode(
+        "24893-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -16297,7 +17517,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UpperGastrointestineAndSmallBowelFluoroscopyWAirContrastPO = DocumentTypeValueSetCode("41795-6")
+    UpperGastrointestineAndSmallBowelFluoroscopyWAirContrastPO = (
+        DocumentTypeValueSetCode("41795-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -16313,15 +17535,21 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    GastrointestineUpperAndGallbladderFluoroscopyWContrastPO = DocumentTypeValueSetCode("42470-5")
+    GastrointestineUpperAndGallbladderFluoroscopyWContrastPO = DocumentTypeValueSetCode(
+        "42470-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UpperGastrointestineAndSmallBowelFluoroscopyWContrastPO = DocumentTypeValueSetCode("30809-8")
+    UpperGastrointestineAndSmallBowelFluoroscopyWContrastPO = DocumentTypeValueSetCode(
+        "30809-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    GastrointestineUpperAndSmallBowelAndGallbladderFluoroscopyWContrastPO = DocumentTypeValueSetCode("42469-7")
+    GastrointestineUpperAndSmallBowelAndGallbladderFluoroscopyWContrastPO = (
+        DocumentTypeValueSetCode("42469-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -17185,7 +18413,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineLumbarAndSacrumAndSacroiliacJointAndCoccyxX_ray = DocumentTypeValueSetCode("37342-3")
+    SpineLumbarAndSacrumAndSacroiliacJointAndCoccyxX_ray = DocumentTypeValueSetCode(
+        "37342-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -17405,11 +18635,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    GastrointestineUpperFluoroscopyAndAPWContrastPO = DocumentTypeValueSetCode("30635-7")
+    GastrointestineUpperFluoroscopyAndAPWContrastPO = DocumentTypeValueSetCode(
+        "30635-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    GastrointestineUpperFluoroscopyAndAPWWaterSolubleContrastPO = DocumentTypeValueSetCode("42162-8")
+    GastrointestineUpperFluoroscopyAndAPWWaterSolubleContrastPO = (
+        DocumentTypeValueSetCode("42162-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -17553,19 +18787,27 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    KneeX_ray_AP_standing_And_lateral_WHyperextension_ = DocumentTypeValueSetCode("42405-1")
+    KneeX_ray_AP_standing_And_lateral_WHyperextension_ = DocumentTypeValueSetCode(
+        "42405-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineLumbarX_ray_APWR_bendingAndWL_bendingAndWOBending_AndLateral = DocumentTypeValueSetCode("42401-0")
+    SpineLumbarX_ray_APWR_bendingAndWL_bendingAndWOBending_AndLateral = (
+        DocumentTypeValueSetCode("42401-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineLumbarX_ray_AP_WR_bendingAndWL_bending_And_lateral_WFlexionAndWExtension_ = DocumentTypeValueSetCode("42411-9")
+    SpineLumbarX_ray_AP_WR_bendingAndWL_bending_And_lateral_WFlexionAndWExtension_ = (
+        DocumentTypeValueSetCode("42411-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Shoulder_RightX_ray_WInternalRotationAndWExternalRotation_AndAxillary = DocumentTypeValueSetCode("39392-6")
+    Shoulder_RightX_ray_WInternalRotationAndWExternalRotation_AndAxillary = (
+        DocumentTypeValueSetCode("39392-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -18441,7 +19683,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineLumbarAndSacrumAndSacroiliacJointAndCoccyxX_ray3Views = DocumentTypeValueSetCode("37261-5")
+    SpineLumbarAndSacrumAndSacroiliacJointAndCoccyxX_ray3Views = (
+        DocumentTypeValueSetCode("37261-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -18573,7 +19817,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Kidney_BilateralX_ray3ViewsSerialWAndWOContrastIV = DocumentTypeValueSetCode("24778-3")
+    Kidney_BilateralX_ray3ViewsSerialWAndWOContrastIV = DocumentTypeValueSetCode(
+        "24778-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -18865,7 +20111,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineLumbarAndSacrumAndSacroiliacJointAndCoccyxX_ray5Views = DocumentTypeValueSetCode("37357-1")
+    SpineLumbarAndSacrumAndSacroiliacJointAndCoccyxX_ray5Views = (
+        DocumentTypeValueSetCode("37357-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -18977,7 +20225,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AbdomenX_rayAPAndAPLeftLateral_decubitusPortable = DocumentTypeValueSetCode("24792-4")
+    AbdomenX_rayAPAndAPLeftLateral_decubitusPortable = DocumentTypeValueSetCode(
+        "24792-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -18985,7 +20235,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ChestX_rayAPAndAPRightLateral_decubitusPortable = DocumentTypeValueSetCode("24654-6")
+    ChestX_rayAPAndAPRightLateral_decubitusPortable = DocumentTypeValueSetCode(
+        "24654-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -19005,15 +20257,21 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Shoulder_BilateralX_rayAPAndAxillaryAndOutletAnd30DegreeCaudalAngle = DocumentTypeValueSetCode("39339-7")
+    Shoulder_BilateralX_rayAPAndAxillaryAndOutletAnd30DegreeCaudalAngle = (
+        DocumentTypeValueSetCode("39339-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Shoulder_LeftX_rayAPAndAxillaryAndOutletAndZanca = DocumentTypeValueSetCode("37083-3")
+    Shoulder_LeftX_rayAPAndAxillaryAndOutletAndZanca = DocumentTypeValueSetCode(
+        "37083-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Shoulder_RightX_rayAPAndAxillaryAndOutletAndZanca = DocumentTypeValueSetCode("38782-9")
+    Shoulder_RightX_rayAPAndAxillaryAndOutletAndZanca = DocumentTypeValueSetCode(
+        "38782-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -19257,7 +20515,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Radius_BilateralAndUlna_BilateralX_rayAPAndLateral = DocumentTypeValueSetCode("36699-7")
+    Radius_BilateralAndUlna_BilateralX_rayAPAndLateral = DocumentTypeValueSetCode(
+        "36699-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -19313,7 +20573,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineCervicalAndThoracicAndLumbarX_rayAPAndLateral = DocumentTypeValueSetCode("39067-4")
+    SpineCervicalAndThoracicAndLumbarX_rayAPAndLateral = DocumentTypeValueSetCode(
+        "39067-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -19341,7 +20603,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Tibia_BilateralAndFibula_BilateralX_rayAPAndLateral = DocumentTypeValueSetCode("36717-7")
+    Tibia_BilateralAndFibula_BilateralX_rayAPAndLateral = DocumentTypeValueSetCode(
+        "36717-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -19529,11 +20793,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineCervicalX_rayAPAndLateralAndObliqueAndOdontoid = DocumentTypeValueSetCode("37099-9")
+    SpineCervicalX_rayAPAndLateralAndObliqueAndOdontoid = DocumentTypeValueSetCode(
+        "37099-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineCervicalX_rayAPAndLateralAndObliqueAndOdontoidAndSwimmer = DocumentTypeValueSetCode("38083-2")
+    SpineCervicalX_rayAPAndLateralAndObliqueAndOdontoidAndSwimmer = (
+        DocumentTypeValueSetCode("38083-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -19541,15 +20809,21 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineLumbarX_rayAPAndLateralAndObliqueAndSpotStanding = DocumentTypeValueSetCode("42410-1")
+    SpineLumbarX_rayAPAndLateralAndObliqueAndSpotStanding = DocumentTypeValueSetCode(
+        "42410-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Knee_BilateralX_rayAPAndLateralAndObliqueAndSunrise = DocumentTypeValueSetCode("37102-1")
+    Knee_BilateralX_rayAPAndLateralAndObliqueAndSunrise = DocumentTypeValueSetCode(
+        "37102-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Knee_BilateralX_rayAPAndLateralAndObliqueAndSunriseAndTunnel = DocumentTypeValueSetCode("37118-7")
+    Knee_BilateralX_rayAPAndLateralAndObliqueAndSunriseAndTunnel = (
+        DocumentTypeValueSetCode("37118-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -19573,15 +20847,21 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Ankle_BilateralX_rayAPAndLateralAndObliqueWManualStress = DocumentTypeValueSetCode("42417-6")
+    Ankle_BilateralX_rayAPAndLateralAndObliqueWManualStress = DocumentTypeValueSetCode(
+        "42417-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Ankle_LeftX_rayAPAndLateralAndObliqueWManualStress = DocumentTypeValueSetCode("42418-4")
+    Ankle_LeftX_rayAPAndLateralAndObliqueWManualStress = DocumentTypeValueSetCode(
+        "42418-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Ankle_RightX_rayAPAndLateralAndObliqueWManualStress = DocumentTypeValueSetCode("39369-4")
+    Ankle_RightX_rayAPAndLateralAndObliqueWManualStress = DocumentTypeValueSetCode(
+        "39369-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -19589,23 +20869,33 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineCervicalX_rayAPAndLateralAndOdontoidPortable = DocumentTypeValueSetCode("37079-1")
+    SpineCervicalX_rayAPAndLateralAndOdontoidPortable = DocumentTypeValueSetCode(
+        "37079-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ChestX_rayAPAndLateralAndRightObliqueAndLeftOblique = DocumentTypeValueSetCode("39074-0")
+    ChestX_rayAPAndLateralAndRightObliqueAndLeftOblique = DocumentTypeValueSetCode(
+        "39074-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    KneeX_rayAPAndLateralAndRightObliqueAndLeftOblique = DocumentTypeValueSetCode("39073-2")
+    KneeX_rayAPAndLateralAndRightObliqueAndLeftOblique = DocumentTypeValueSetCode(
+        "39073-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Knee_LeftX_rayAPAndLateralAndRightObliqueAndLeftOblique = DocumentTypeValueSetCode("69147-7")
+    Knee_LeftX_rayAPAndLateralAndRightObliqueAndLeftOblique = DocumentTypeValueSetCode(
+        "69147-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Knee_RightX_rayAPAndLateralAndRightObliqueAndLeftOblique = DocumentTypeValueSetCode("39388-4")
+    Knee_RightX_rayAPAndLateralAndRightObliqueAndLeftOblique = DocumentTypeValueSetCode(
+        "39388-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -19645,7 +20935,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Knee_BilateralX_rayAPAndLateralAndSunriseAndTunnel = DocumentTypeValueSetCode("37116-1")
+    Knee_BilateralX_rayAPAndLateralAndSunriseAndTunnel = DocumentTypeValueSetCode(
+        "37116-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -19753,7 +21045,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PelvisAndHip_RightX_rayAPAndLateralFrogPortable = DocumentTypeValueSetCode("41776-6")
+    PelvisAndHip_RightX_rayAPAndLateralFrogPortable = DocumentTypeValueSetCode(
+        "41776-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -19861,15 +21155,21 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineCervicalX_rayAPAndObliqueAndLateralWFlexionAndWExtension = DocumentTypeValueSetCode("37098-1")
+    SpineCervicalX_rayAPAndObliqueAndLateralWFlexionAndWExtension = (
+        DocumentTypeValueSetCode("37098-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineCervicalX_rayAPAndObliqueAndOdontoidAndLateralPortableWFlexionAndWExtension = DocumentTypeValueSetCode("44187-3")
+    SpineCervicalX_rayAPAndObliqueAndOdontoidAndLateralPortableWFlexionAndWExtension = (
+        DocumentTypeValueSetCode("44187-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineCervicalX_rayAPAndObliqueAndOdontoidAndLateralWFlexionAndWExtension = DocumentTypeValueSetCode("37100-5")
+    SpineCervicalX_rayAPAndObliqueAndOdontoidAndLateralWFlexionAndWExtension = (
+        DocumentTypeValueSetCode("37100-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -19877,11 +21177,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineCervicalX_rayAPAndOdontoidAndLateralCrosstable = DocumentTypeValueSetCode("37120-3")
+    SpineCervicalX_rayAPAndOdontoidAndLateralCrosstable = DocumentTypeValueSetCode(
+        "37120-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineCervicalX_rayAPAndOdontoidAndLateralWFlexionAndWExtension = DocumentTypeValueSetCode("37104-7")
+    SpineCervicalX_rayAPAndOdontoidAndLateralWFlexionAndWExtension = (
+        DocumentTypeValueSetCode("37104-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -19981,15 +21285,21 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AbdomenX_rayAP_leftLateral_decubitusAndRightLateral_decubitus_ = DocumentTypeValueSetCode("24562-1")
+    AbdomenX_rayAP_leftLateral_decubitusAndRightLateral_decubitus_ = (
+        DocumentTypeValueSetCode("24562-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ChestX_rayAP_rightLateral_decubitusAndLeftLateral_decubitus_ = DocumentTypeValueSetCode("24650-4")
+    ChestX_rayAP_rightLateral_decubitusAndLeftLateral_decubitus_ = (
+        DocumentTypeValueSetCode("24650-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ChestX_rayAP_rightLateral_decubitusAndLeftLateral_decubitus_Portable = DocumentTypeValueSetCode("24649-6")
+    ChestX_rayAP_rightLateral_decubitusAndLeftLateral_decubitus_Portable = (
+        DocumentTypeValueSetCode("24649-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -19997,7 +21307,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AbdomenX_rayAP_supineAndLateral_decubitus_Portable = DocumentTypeValueSetCode("37076-7")
+    AbdomenX_rayAP_supineAndLateral_decubitus_Portable = DocumentTypeValueSetCode(
+        "37076-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -20005,7 +21317,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ChestAndAbdomenX_rayAP_supineAndUpright_AndPAChest = DocumentTypeValueSetCode("43463-9")
+    ChestAndAbdomenX_rayAP_supineAndUpright_AndPAChest = DocumentTypeValueSetCode(
+        "43463-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -20017,67 +21331,99 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Shoulder_BilateralX_rayAP_WInternalRotationAndWExternalRotation_ = DocumentTypeValueSetCode("39329-8")
+    Shoulder_BilateralX_rayAP_WInternalRotationAndWExternalRotation_ = (
+        DocumentTypeValueSetCode("39329-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Shoulder_LeftX_rayAP_WInternalRotationAndWExternalRotation_ = DocumentTypeValueSetCode("39328-0")
+    Shoulder_LeftX_rayAP_WInternalRotationAndWExternalRotation_ = (
+        DocumentTypeValueSetCode("39328-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Shoulder_RightX_rayAP_WInternalRotationAndWExternalRotation_ = DocumentTypeValueSetCode("39395-9")
+    Shoulder_RightX_rayAP_WInternalRotationAndWExternalRotation_ = (
+        DocumentTypeValueSetCode("39395-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ShoulderX_rayAP_WInternalRotationAndWExternalRotation_AndAxillary = DocumentTypeValueSetCode("39321-5")
+    ShoulderX_rayAP_WInternalRotationAndWExternalRotation_AndAxillary = (
+        DocumentTypeValueSetCode("39321-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Shoulder_BilateralX_rayAP_WInternalRotationAndWExternalRotation_AndAxillary = DocumentTypeValueSetCode("39336-3")
+    Shoulder_BilateralX_rayAP_WInternalRotationAndWExternalRotation_AndAxillary = (
+        DocumentTypeValueSetCode("39336-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Shoulder_LeftX_rayAP_WInternalRotationAndWExternalRotation_AndAxillary = DocumentTypeValueSetCode("39335-5")
+    Shoulder_LeftX_rayAP_WInternalRotationAndWExternalRotation_AndAxillary = (
+        DocumentTypeValueSetCode("39335-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Shoulder_BilateralX_rayAP_WInternalRotationAndWExternalRotation_AndAxillaryAndOutlet = DocumentTypeValueSetCode("39337-1")
+    Shoulder_BilateralX_rayAP_WInternalRotationAndWExternalRotation_AndAxillaryAndOutlet = DocumentTypeValueSetCode(
+        "39337-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Shoulder_BilateralX_rayAP_WInternalRotationAndWExternalRotation_AndAxillaryAndY = DocumentTypeValueSetCode("39344-7")
+    Shoulder_BilateralX_rayAP_WInternalRotationAndWExternalRotation_AndAxillaryAndY = (
+        DocumentTypeValueSetCode("39344-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Shoulder_LeftX_rayAP_WInternalRotationAndWExternalRotation_AndAxillaryAndY = DocumentTypeValueSetCode("39338-9")
+    Shoulder_LeftX_rayAP_WInternalRotationAndWExternalRotation_AndAxillaryAndY = (
+        DocumentTypeValueSetCode("39338-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Shoulder_RightX_rayAP_WInternalRotationAndWExternalRotation_AndWestPoint = DocumentTypeValueSetCode("39397-5")
+    Shoulder_RightX_rayAP_WInternalRotationAndWExternalRotation_AndWestPoint = (
+        DocumentTypeValueSetCode("39397-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Shoulder_BilateralX_rayAP_WInternalRotationAndWExternalRotation_AndY = DocumentTypeValueSetCode("39343-9")
+    Shoulder_BilateralX_rayAP_WInternalRotationAndWExternalRotation_AndY = (
+        DocumentTypeValueSetCode("39343-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Shoulder_LeftX_rayAP_WInternalRotationAndWExternalRotation_AndY = DocumentTypeValueSetCode("39348-8")
+    Shoulder_LeftX_rayAP_WInternalRotationAndWExternalRotation_AndY = (
+        DocumentTypeValueSetCode("39348-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Shoulder_LeftX_rayAP_WInternalRotation_AndGrasheyAndAxillaryAndOutlet = DocumentTypeValueSetCode("39325-6")
+    Shoulder_LeftX_rayAP_WInternalRotation_AndGrasheyAndAxillaryAndOutlet = (
+        DocumentTypeValueSetCode("39325-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Shoulder_BilateralX_rayAP_WInternalRotation_AndWestPoint = DocumentTypeValueSetCode("39346-2")
+    Shoulder_BilateralX_rayAP_WInternalRotation_AndWestPoint = DocumentTypeValueSetCode(
+        "39346-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Shoulder_LeftX_rayAP_WInternalRotation_AndWestPoint = DocumentTypeValueSetCode("39347-0")
+    Shoulder_LeftX_rayAP_WInternalRotation_AndWestPoint = DocumentTypeValueSetCode(
+        "39347-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Shoulder_RightX_rayAP_WInternalRotation_AndWestPoint = DocumentTypeValueSetCode("39396-7")
+    Shoulder_RightX_rayAP_WInternalRotation_AndWestPoint = DocumentTypeValueSetCode(
+        "39396-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -20125,11 +21471,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineLumbarX_rayAPWRightBendingAndWLeftBendingAndWOBending = DocumentTypeValueSetCode("42408-5")
+    SpineLumbarX_rayAPWRightBendingAndWLeftBendingAndWOBending = (
+        DocumentTypeValueSetCode("42408-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineThoracicX_rayAPWRightBendingAndWLeftBendingAndWOBending = DocumentTypeValueSetCode("42444-0")
+    SpineThoracicX_rayAPWRightBendingAndWLeftBendingAndWOBending = (
+        DocumentTypeValueSetCode("42444-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -20325,7 +21675,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartScanFirstPassAndEjectionFractionAtRestAndWRadionuclideIV = DocumentTypeValueSetCode("39887-5")
+    HeartScanFirstPassAndEjectionFractionAtRestAndWRadionuclideIV = (
+        DocumentTypeValueSetCode("39887-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -20337,23 +21689,33 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartScanFirstPassAndWallMotionAndEjectionFraction = DocumentTypeValueSetCode("39910-5")
+    HeartScanFirstPassAndWallMotionAndEjectionFraction = DocumentTypeValueSetCode(
+        "39910-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartScanFirstPassAndWallMotionAndVentricularVolumeAndEjectionFraction = DocumentTypeValueSetCode("39912-1")
+    HeartScanFirstPassAndWallMotionAndVentricularVolumeAndEjectionFraction = (
+        DocumentTypeValueSetCode("39912-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartScanFirstPassAndWallMotionAndVentricularVolumeAndEjectionFractionWStressAndWRadionuclideIV = DocumentTypeValueSetCode("39909-7")
+    HeartScanFirstPassAndWallMotionAndVentricularVolumeAndEjectionFractionWStressAndWRadionuclideIV = DocumentTypeValueSetCode(
+        "39909-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartScanFirstPassAndWallMotionAndVentricularVolumeWStressAndWRadionuclideIV = DocumentTypeValueSetCode("39908-9")
+    HeartScanFirstPassAndWallMotionAndVentricularVolumeWStressAndWRadionuclideIV = (
+        DocumentTypeValueSetCode("39908-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartScanFirstPassAndWallMotionAtRestAndWRadionuclideIV = DocumentTypeValueSetCode("39886-7")
+    HeartScanFirstPassAndWallMotionAtRestAndWRadionuclideIV = DocumentTypeValueSetCode(
+        "39886-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -20361,7 +21723,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartScanFirstPassAndWallMotionWStressAndWRadionuclideIV = DocumentTypeValueSetCode("39888-3")
+    HeartScanFirstPassAndWallMotionWStressAndWRadionuclideIV = DocumentTypeValueSetCode(
+        "39888-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -20369,7 +21733,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartScanFirstPassAtRestAndWStressAndWRadionuclideIV = DocumentTypeValueSetCode("39863-6")
+    HeartScanFirstPassAtRestAndWStressAndWRadionuclideIV = DocumentTypeValueSetCode(
+        "39863-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -20465,7 +21831,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Kidney_BilateralAndRenalVesselsScanFlowWTc_99mGlucoheptonateIV = DocumentTypeValueSetCode("43666-7")
+    Kidney_BilateralAndRenalVesselsScanFlowWTc_99mGlucoheptonateIV = (
+        DocumentTypeValueSetCode("43666-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -20493,7 +21861,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SkullAndFacialBonesAndMandibleX_rayForDentalMeasurement = DocumentTypeValueSetCode("43787-1")
+    SkullAndFacialBonesAndMandibleX_rayForDentalMeasurement = DocumentTypeValueSetCode(
+        "43787-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -20501,7 +21871,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ScanForEndocrineTumorMultipleAreasWIn_111PentetreotideIV = DocumentTypeValueSetCode("43649-3")
+    ScanForEndocrineTumorMultipleAreasWIn_111PentetreotideIV = DocumentTypeValueSetCode(
+        "43649-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -20509,7 +21881,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ScanForEndocrineTumorWholeBodyWIn_111PentetreotideIV = DocumentTypeValueSetCode("39828-9")
+    ScanForEndocrineTumorWholeBodyWIn_111PentetreotideIV = DocumentTypeValueSetCode(
+        "39828-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -20537,11 +21911,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    StomachScanForGastricEmptyingLiquidPhaseWRadionuclidePO = DocumentTypeValueSetCode("39767-9")
+    StomachScanForGastricEmptyingLiquidPhaseWRadionuclidePO = DocumentTypeValueSetCode(
+        "39767-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    StomachScanForGastricEmptyingSolidPhaseWTc_99mSCPO = DocumentTypeValueSetCode("24997-9")
+    StomachScanForGastricEmptyingSolidPhaseWTc_99mSCPO = DocumentTypeValueSetCode(
+        "24997-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -20613,11 +21991,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    BiliaryDuctsAndGallbladderScanForPatencyOfBiliaryStructuresAndEjectionFractionWSincalideAndWRadionuclideIV = DocumentTypeValueSetCode("24571-2")
+    BiliaryDuctsAndGallbladderScanForPatencyOfBiliaryStructuresAndEjectionFractionWSincalideAndWRadionuclideIV = DocumentTypeValueSetCode(
+        "24571-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    BiliaryDuctsAndGallbladderScanForPatencyOfBiliaryStructuresWTc_99mIV = DocumentTypeValueSetCode("24572-0")
+    BiliaryDuctsAndGallbladderScanForPatencyOfBiliaryStructuresWTc_99mIV = (
+        DocumentTypeValueSetCode("24572-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -20625,7 +22007,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LiverAndBiliaryDuctsAndGallbladderScanForPatencyWTc_99mIV = DocumentTypeValueSetCode("43789-7")
+    LiverAndBiliaryDuctsAndGallbladderScanForPatencyWTc_99mIV = (
+        DocumentTypeValueSetCode("43789-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -20649,15 +22033,21 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PeritoneovenousShuntScanForPatencyWRadionuclideIT = DocumentTypeValueSetCode("39849-5")
+    PeritoneovenousShuntScanForPatencyWRadionuclideIT = DocumentTypeValueSetCode(
+        "39849-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PeritoneovenousShuntScanForPatencyWTc_99mDTPAIT = DocumentTypeValueSetCode("24876-5")
+    PeritoneovenousShuntScanForPatencyWTc_99mDTPAIT = DocumentTypeValueSetCode(
+        "24876-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PeritoneovenousShuntScanForPatencyWTc_99mMAAInj = DocumentTypeValueSetCode("44149-3")
+    PeritoneovenousShuntScanForPatencyWTc_99mMAAInj = DocumentTypeValueSetCode(
+        "44149-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -20709,7 +22099,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartScanGatedAndEjectionFractionAtRestAndWRadionuclideIV = DocumentTypeValueSetCode("39923-8")
+    HeartScanGatedAndEjectionFractionAtRestAndWRadionuclideIV = (
+        DocumentTypeValueSetCode("39923-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -20721,7 +22113,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartScanGatedAndWallMotionAndEjectionFractionAtRestAndWRadionuclideIV = DocumentTypeValueSetCode("39925-3")
+    HeartScanGatedAndWallMotionAndEjectionFractionAtRestAndWRadionuclideIV = (
+        DocumentTypeValueSetCode("39925-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -20733,7 +22127,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartScanGatedAndWallMotionWStressAndWRadionuclideIV = DocumentTypeValueSetCode("39929-5")
+    HeartScanGatedAndWallMotionWStressAndWRadionuclideIV = DocumentTypeValueSetCode(
+        "39929-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -20741,7 +22137,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartScanGatedAtRestAndWStressAndWRadionuclideIV = DocumentTypeValueSetCode("39924-6")
+    HeartScanGatedAtRestAndWStressAndWRadionuclideIV = DocumentTypeValueSetCode(
+        "39924-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -20937,7 +22335,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Ribs_UnilateralAndChestX_rayGe3AndPAChestPortableViews = DocumentTypeValueSetCode("44239-2")
+    Ribs_UnilateralAndChestX_rayGe3AndPAChestPortableViews = DocumentTypeValueSetCode(
+        "44239-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -21005,7 +22405,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineLumbarX_rayGE5ViewsWRightBendingAndWLeftBending = DocumentTypeValueSetCode("44196-4")
+    SpineLumbarX_rayGE5ViewsWRightBendingAndWLeftBending = DocumentTypeValueSetCode(
+        "44196-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -21029,7 +22431,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Shoulder_BilateralX_rayGrasheyAndAxillaryAndOutletAndZanca = DocumentTypeValueSetCode("37161-7")
+    Shoulder_BilateralX_rayGrasheyAndAxillaryAndOutletAndZanca = (
+        DocumentTypeValueSetCode("37161-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -21053,15 +22457,21 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Shoulder_BilateralX_rayGrasheyAndOutletAndSerendipity = DocumentTypeValueSetCode("39350-4")
+    Shoulder_BilateralX_rayGrasheyAndOutletAndSerendipity = DocumentTypeValueSetCode(
+        "39350-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Shoulder_LeftX_rayGrasheyAndOutletAndSerendipity = DocumentTypeValueSetCode("37162-5")
+    Shoulder_LeftX_rayGrasheyAndOutletAndSerendipity = DocumentTypeValueSetCode(
+        "37162-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Shoulder_RightX_rayGrasheyAndOutletAndSerendipity = DocumentTypeValueSetCode("38794-4")
+    Shoulder_RightX_rayGrasheyAndOutletAndSerendipity = DocumentTypeValueSetCode(
+        "38794-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -21113,11 +22523,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FacialBonesX_rayLateralAndCaldwellAndWatersAndSubmentovertex = DocumentTypeValueSetCode("37165-8")
+    FacialBonesX_rayLateralAndCaldwellAndWatersAndSubmentovertex = (
+        DocumentTypeValueSetCode("37165-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FacialBonesX_rayLateralAndCaldwellAndWatersAndSubmentovertexAndTowne = DocumentTypeValueSetCode("37166-6")
+    FacialBonesX_rayLateralAndCaldwellAndWatersAndSubmentovertexAndTowne = (
+        DocumentTypeValueSetCode("37166-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -21137,7 +22551,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Ankle_LeftX_rayLateralAndMortiseAndBrodenWManualStress = DocumentTypeValueSetCode("42382-2")
+    Ankle_LeftX_rayLateralAndMortiseAndBrodenWManualStress = DocumentTypeValueSetCode(
+        "42382-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -21161,7 +22577,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ChestX_rayLateralAndPAWInspirationAndExpiration = DocumentTypeValueSetCode("39341-3")
+    ChestX_rayLateralAndPAWInspirationAndExpiration = DocumentTypeValueSetCode(
+        "39341-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -21169,7 +22587,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SternumX_rayLateralAndRightObliqueAndLeftOblique = DocumentTypeValueSetCode("39405-6")
+    SternumX_rayLateralAndRightObliqueAndLeftOblique = DocumentTypeValueSetCode(
+        "39405-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -21197,7 +22617,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineLumbarX_rayLateralStandingAndWFlexionAndWExtension = DocumentTypeValueSetCode("39340-5")
+    SpineLumbarX_rayLateralStandingAndWFlexionAndWExtension = DocumentTypeValueSetCode(
+        "39340-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -21237,7 +22659,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Mastoid_BilateralX_rayLawAndMayerAndStenverAndTowne = DocumentTypeValueSetCode("37541-0")
+    Mastoid_BilateralX_rayLawAndMayerAndStenverAndTowne = DocumentTypeValueSetCode(
+        "37541-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -21337,7 +22761,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineCervicalAndThoracicAndLumbarFluoroscopyLimitedWContrastIT = DocumentTypeValueSetCode("38125-1")
+    SpineCervicalAndThoracicAndLumbarFluoroscopyLimitedWContrastIT = (
+        DocumentTypeValueSetCode("38125-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -21437,7 +22863,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ProstateScanMultipleAreasWTc_99mCapromabPendatideIV = DocumentTypeValueSetCode("39950-1")
+    ProstateScanMultipleAreasWTc_99mCapromabPendatideIV = DocumentTypeValueSetCode(
+        "39950-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -21545,7 +22973,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineCervicalX_rayObliqueAndLateralWFlexionAndWExtension = DocumentTypeValueSetCode("37139-3")
+    SpineCervicalX_rayObliqueAndLateralWFlexionAndWExtension = DocumentTypeValueSetCode(
+        "37139-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -21565,19 +22995,27 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    TemporomandibularJoint_BilateralX_rayOpenAndClosedMouth = DocumentTypeValueSetCode("37546-9")
+    TemporomandibularJoint_BilateralX_rayOpenAndClosedMouth = DocumentTypeValueSetCode(
+        "37546-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    TemporomandibularJoint_LeftX_rayOpenAndClosedMouth = DocumentTypeValueSetCode("48491-5")
+    TemporomandibularJoint_LeftX_rayOpenAndClosedMouth = DocumentTypeValueSetCode(
+        "48491-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    TemporomandibularJoint_RightX_rayOpenAndClosedMouth = DocumentTypeValueSetCode("48490-7")
+    TemporomandibularJoint_RightX_rayOpenAndClosedMouth = DocumentTypeValueSetCode(
+        "48490-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    TemporomandibularJoint_UnilateralX_rayOpenAndClosedMouth = DocumentTypeValueSetCode("48699-3")
+    TemporomandibularJoint_UnilateralX_rayOpenAndClosedMouth = DocumentTypeValueSetCode(
+        "48699-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -21641,11 +23079,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ChestX_rayPAAndLateralAndAPLeftLateral_decubitus = DocumentTypeValueSetCode("37144-3")
+    ChestX_rayPAAndLateralAndAPLeftLateral_decubitus = DocumentTypeValueSetCode(
+        "37144-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ChestX_rayPAAndLateralAndAPRightLateral_decubitus = DocumentTypeValueSetCode("37145-0")
+    ChestX_rayPAAndLateralAndAPRightLateral_decubitus = DocumentTypeValueSetCode(
+        "37145-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -21713,11 +23155,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ChestX_rayPAAndLateralAndRightObliqueAndLeftOblique = DocumentTypeValueSetCode("30742-1")
+    ChestX_rayPAAndLateralAndRightObliqueAndLeftOblique = DocumentTypeValueSetCode(
+        "30742-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ChestX_rayPAAndLateralAndRightObliqueAndLeftObliquePortable = DocumentTypeValueSetCode("30743-9")
+    ChestX_rayPAAndLateralAndRightObliqueAndLeftObliquePortable = (
+        DocumentTypeValueSetCode("30743-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -21725,7 +23171,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ChestX_rayPAAndLateralAndRightOr_leftObliqueUpright = DocumentTypeValueSetCode("24643-9")
+    ChestX_rayPAAndLateralAndRightOr_leftObliqueUpright = DocumentTypeValueSetCode(
+        "24643-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -21769,19 +23217,27 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SkullX_rayPAAndRightLateralAndLeftLateralAndCaldwellAndTowne = DocumentTypeValueSetCode("39521-0")
+    SkullX_rayPAAndRightLateralAndLeftLateralAndCaldwellAndTowne = (
+        DocumentTypeValueSetCode("39521-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SkullX_rayPAAndRightLateralAndLeftLateralAndTowne = DocumentTypeValueSetCode("39520-2")
+    SkullX_rayPAAndRightLateralAndLeftLateralAndTowne = DocumentTypeValueSetCode(
+        "39520-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ChestX_rayPAAndRightLateralAndRightObliqueAndLeftObliqueUpright = DocumentTypeValueSetCode("24646-2")
+    ChestX_rayPAAndRightLateralAndRightObliqueAndLeftObliqueUpright = (
+        DocumentTypeValueSetCode("24646-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ChestX_rayPAAndRightLateralAndRightObliqueAndLeftObliqueUprightPortable = DocumentTypeValueSetCode("24645-4")
+    ChestX_rayPAAndRightLateralAndRightObliqueAndLeftObliqueUprightPortable = (
+        DocumentTypeValueSetCode("24645-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -21797,11 +23253,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartScanPerfusionQualitativeAtRestAndWRadionuclideIV = DocumentTypeValueSetCode("43660-0")
+    HeartScanPerfusionQualitativeAtRestAndWRadionuclideIV = DocumentTypeValueSetCode(
+        "43660-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartScanPerfusionQuantitativeAtRestAndWRadionuclideIV = DocumentTypeValueSetCode("43661-8")
+    HeartScanPerfusionQuantitativeAtRestAndWRadionuclideIV = DocumentTypeValueSetCode(
+        "43661-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -21813,19 +23273,27 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartScanPerfusionAtRestAndWAdenosineAndWRadionuclideIV = DocumentTypeValueSetCode("39719-0")
+    HeartScanPerfusionAtRestAndWAdenosineAndWRadionuclideIV = DocumentTypeValueSetCode(
+        "39719-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartScanPerfusionAtRestAndWAdenosineAndWTl_201IV = DocumentTypeValueSetCode("43777-2")
+    HeartScanPerfusionAtRestAndWAdenosineAndWTl_201IV = DocumentTypeValueSetCode(
+        "43777-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartScanPerfusionAtRestAndWDipyridamoleAndWRadionuclideIV = DocumentTypeValueSetCode("39722-4")
+    HeartScanPerfusionAtRestAndWDipyridamoleAndWRadionuclideIV = (
+        DocumentTypeValueSetCode("39722-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartScanPerfusionAtRestAndWDipyridamoleAndWTc_99mSestamibiIV = DocumentTypeValueSetCode("39720-8")
+    HeartScanPerfusionAtRestAndWDipyridamoleAndWTc_99mSestamibiIV = (
+        DocumentTypeValueSetCode("39720-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -21833,11 +23301,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartScanPerfusionAtRestAndWStressAndWRadionuclideIV = DocumentTypeValueSetCode("39726-5")
+    HeartScanPerfusionAtRestAndWStressAndWRadionuclideIV = DocumentTypeValueSetCode(
+        "39726-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartScanPerfusionAtRestAndWStressAndWTc_99mSestamibiIV = DocumentTypeValueSetCode("39727-3")
+    HeartScanPerfusionAtRestAndWStressAndWTc_99mSestamibiIV = DocumentTypeValueSetCode(
+        "39727-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -21849,7 +23321,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartScanPerfusionWAdenosineAndWTc_99mSestamibiIV = DocumentTypeValueSetCode("39731-5")
+    HeartScanPerfusionWAdenosineAndWTc_99mSestamibiIV = DocumentTypeValueSetCode(
+        "39731-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -21857,7 +23331,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartScanPerfusionWDipyridamoleAndWRadionuclideIV = DocumentTypeValueSetCode("39708-3")
+    HeartScanPerfusionWDipyridamoleAndWRadionuclideIV = DocumentTypeValueSetCode(
+        "39708-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -21865,7 +23341,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartScanPerfusionWDipyridamoleAndWTc_99mSestamibiIV = DocumentTypeValueSetCode("39705-9")
+    HeartScanPerfusionWDipyridamoleAndWTc_99mSestamibiIV = DocumentTypeValueSetCode(
+        "39705-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -21873,11 +23351,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartScanPerfusionWDobutamineAndWRadionuclideIV = DocumentTypeValueSetCode("39703-4")
+    HeartScanPerfusionWDobutamineAndWRadionuclideIV = DocumentTypeValueSetCode(
+        "39703-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartScanPerfusionWDobutamineAndWTc_99mSestamibiIV = DocumentTypeValueSetCode("39702-6")
+    HeartScanPerfusionWDobutamineAndWTc_99mSestamibiIV = DocumentTypeValueSetCode(
+        "39702-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -21921,7 +23403,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartScanPerfusionWTl_201IVAndTc_99mTetrofosminIV = DocumentTypeValueSetCode("39713-3")
+    HeartScanPerfusionWTl_201IVAndTc_99mTetrofosminIV = DocumentTypeValueSetCode(
+        "39713-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -22113,7 +23597,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ChestX_rayRightObliqueAndLeftObliqueWNippleMarkers = DocumentTypeValueSetCode("42414-3")
+    ChestX_rayRightObliqueAndLeftObliqueWNippleMarkers = DocumentTypeValueSetCode(
+        "42414-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -22137,19 +23623,27 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AortaAbdominalFluoroscopicAngiogramRunoffWContrastIA = DocumentTypeValueSetCode("43479-5")
+    AortaAbdominalFluoroscopicAngiogramRunoffWContrastIA = DocumentTypeValueSetCode(
+        "43479-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AortaAndFemoralArtery_BilateralFluoroscopicAngiogramRunoffWContrastIA = DocumentTypeValueSetCode("30838-7")
+    AortaAndFemoralArtery_BilateralFluoroscopicAngiogramRunoffWContrastIA = (
+        DocumentTypeValueSetCode("30838-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AortaAndFemoralArtery_LeftFluoroscopicAngiogramRunoffWContrastIA = DocumentTypeValueSetCode("37364-7")
+    AortaAndFemoralArtery_LeftFluoroscopicAngiogramRunoffWContrastIA = (
+        DocumentTypeValueSetCode("37364-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AortaAndFemoralArtery_RightFluoroscopicAngiogramRunoffWContrastIA = DocumentTypeValueSetCode("38799-3")
+    AortaAndFemoralArtery_RightFluoroscopicAngiogramRunoffWContrastIA = (
+        DocumentTypeValueSetCode("38799-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -22173,27 +23667,39 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineThoracicAndLumbarX_rayScoliosisAPAndLateral = DocumentTypeValueSetCode("30715-7")
+    SpineThoracicAndLumbarX_rayScoliosisAPAndLateral = DocumentTypeValueSetCode(
+        "30715-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineThoracicAndLumbarX_rayScoliosisAPAndLateralSitting = DocumentTypeValueSetCode("42424-2")
+    SpineThoracicAndLumbarX_rayScoliosisAPAndLateralSitting = DocumentTypeValueSetCode(
+        "42424-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineThoracicAndLumbarX_rayScoliosisAPAndLateralStanding = DocumentTypeValueSetCode("39367-8")
+    SpineThoracicAndLumbarX_rayScoliosisAPAndLateralStanding = DocumentTypeValueSetCode(
+        "39367-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineThoracicAndLumbarX_rayScoliosisAPInTraction = DocumentTypeValueSetCode("42472-1")
+    SpineThoracicAndLumbarX_rayScoliosisAPInTraction = DocumentTypeValueSetCode(
+        "42472-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineThoracicAndLumbarX_rayScoliosisAPStandingAndWRightBendingAndWLeftBendingAndWOBending = DocumentTypeValueSetCode("42425-9")
+    SpineThoracicAndLumbarX_rayScoliosisAPStandingAndWRightBendingAndWLeftBendingAndWOBending = DocumentTypeValueSetCode(
+        "42425-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineThoracicAndLumbarX_rayScoliosisAPUprightAndSupine = DocumentTypeValueSetCode("43569-3")
+    SpineThoracicAndLumbarX_rayScoliosisAPUprightAndSupine = DocumentTypeValueSetCode(
+        "43569-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -22205,7 +23711,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineThoracicAndLumbarX_rayScoliosisWFlexionAndWExtension = DocumentTypeValueSetCode("24929-2")
+    SpineThoracicAndLumbarX_rayScoliosisWFlexionAndWExtension = (
+        DocumentTypeValueSetCode("24929-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -22449,15 +23957,21 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Wrist_BilateralX_rayUlnarDeviationAndRadialDeviation = DocumentTypeValueSetCode("69072-7")
+    Wrist_BilateralX_rayUlnarDeviationAndRadialDeviation = DocumentTypeValueSetCode(
+        "69072-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Wrist_LeftX_rayUlnarDeviationAndRadialDeviation = DocumentTypeValueSetCode("37555-0")
+    Wrist_LeftX_rayUlnarDeviationAndRadialDeviation = DocumentTypeValueSetCode(
+        "37555-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Wrist_RightX_rayUlnarDeviationAndRadialDeviation = DocumentTypeValueSetCode("38808-2")
+    Wrist_RightX_rayUlnarDeviationAndRadialDeviation = DocumentTypeValueSetCode(
+        "38808-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -22465,35 +23979,51 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LungScanVentilationAndEquilibriumAndWashoutWRadionuclideInhaled = DocumentTypeValueSetCode("39944-4")
+    LungScanVentilationAndEquilibriumAndWashoutWRadionuclideInhaled = (
+        DocumentTypeValueSetCode("39944-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LungScanVentilationAndEquilibriumAndWashoutWRadionuclideInhaledSingleBreath = DocumentTypeValueSetCode("39948-5")
+    LungScanVentilationAndEquilibriumAndWashoutWRadionuclideInhaledSingleBreath = (
+        DocumentTypeValueSetCode("39948-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LungScanVentilationAndEquilibriumWRadionuclideInhaledSingleBreath = DocumentTypeValueSetCode("39947-7")
+    LungScanVentilationAndEquilibriumWRadionuclideInhaledSingleBreath = (
+        DocumentTypeValueSetCode("39947-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LungScanVentilationAndPerfusionAndDifferentialWRadionuclideInhaledAndWRadionuclideIV = DocumentTypeValueSetCode("39946-9")
+    LungScanVentilationAndPerfusionAndDifferentialWRadionuclideInhaledAndWRadionuclideIV = DocumentTypeValueSetCode(
+        "39946-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LungScanVentilationAndPerfusionWRadionuclideInhaledAndWParticulateRadionuclideIV = DocumentTypeValueSetCode("39943-6")
+    LungScanVentilationAndPerfusionWRadionuclideInhaledAndWParticulateRadionuclideIV = (
+        DocumentTypeValueSetCode("39943-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PulmonarySystemScanVentilationAndPerfusionWRadionuclideInhaledAndWRadionuclideIV = DocumentTypeValueSetCode("30697-7")
+    PulmonarySystemScanVentilationAndPerfusionWRadionuclideInhaledAndWRadionuclideIV = (
+        DocumentTypeValueSetCode("30697-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LungScanVentilationAndPerfusionWRadionuclideInhaledSingleBreathAndWParticulateRadionuclideIV = DocumentTypeValueSetCode("39942-8")
+    LungScanVentilationAndPerfusionWRadionuclideInhaledSingleBreathAndWParticulateRadionuclideIV = DocumentTypeValueSetCode(
+        "39942-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PulmonarySystemScanVentilationAndPerfusionWXe_133InhaledAndWTc_99mMAAIV = DocumentTypeValueSetCode("24888-0")
+    PulmonarySystemScanVentilationAndPerfusionWXe_133InhaledAndWTc_99mMAAIV = (
+        DocumentTypeValueSetCode("24888-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -22505,7 +24035,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LungScanVentilationWRadionuclideGaseousInhaledSingleBreath = DocumentTypeValueSetCode("39945-1")
+    LungScanVentilationWRadionuclideGaseousInhaledSingleBreath = (
+        DocumentTypeValueSetCode("39945-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -22565,11 +24097,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartScanAtRestAndWDipyridamoleAndWRadionuclideIV = DocumentTypeValueSetCode("39660-6")
+    HeartScanAtRestAndWDipyridamoleAndWRadionuclideIV = DocumentTypeValueSetCode(
+        "39660-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeartScanAtRestAndWDobutamineAndWRadionuclideIV = DocumentTypeValueSetCode("39661-4")
+    HeartScanAtRestAndWDobutamineAndWRadionuclideIV = DocumentTypeValueSetCode(
+        "39661-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -22601,11 +24137,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    BiliaryDuctsAndGallbladderFluoroscopyDuringSurgeryWContrastBiliaryDuct = DocumentTypeValueSetCode("24574-6")
+    BiliaryDuctsAndGallbladderFluoroscopyDuringSurgeryWContrastBiliaryDuct = (
+        DocumentTypeValueSetCode("24574-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    BreastDuctMammogramDuringSurgeryWContrastIntraDuct = DocumentTypeValueSetCode("46352-1")
+    BreastDuctMammogramDuringSurgeryWContrastIntraDuct = DocumentTypeValueSetCode(
+        "46352-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -22749,7 +24289,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AcromioclavicularJoint_BilateralX_rayWAndWOWeight = DocumentTypeValueSetCode("37580-8")
+    AcromioclavicularJoint_BilateralX_rayWAndWOWeight = DocumentTypeValueSetCode(
+        "37580-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -22773,7 +24315,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    GastrointestineUpperFluoroscopyWAirAndBariumContrastPO = DocumentTypeValueSetCode("39059-1")
+    GastrointestineUpperFluoroscopyWAirAndBariumContrastPO = DocumentTypeValueSetCode(
+        "39059-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -22789,11 +24333,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    GastrointestineUpperFluoroscopyWBariumContrastPO = DocumentTypeValueSetCode("42683-3")
+    GastrointestineUpperFluoroscopyWBariumContrastPO = DocumentTypeValueSetCode(
+        "42683-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UpperGastrointestineAndSmallBowelFluoroscopyWBariumContrastPO = DocumentTypeValueSetCode("43574-3")
+    UpperGastrointestineAndSmallBowelFluoroscopyWBariumContrastPO = (
+        DocumentTypeValueSetCode("43574-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -22801,19 +24349,27 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UnspecifiedBodyRegionFluoroscopyWBariumContrastViaFistula = DocumentTypeValueSetCode("37565-9")
+    UnspecifiedBodyRegionFluoroscopyWBariumContrastViaFistula = (
+        DocumentTypeValueSetCode("37565-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UrinaryBladderFluoroscopyWChainAndContrastIntraBladder = DocumentTypeValueSetCode("38092-3")
+    UrinaryBladderFluoroscopyWChainAndContrastIntraBladder = DocumentTypeValueSetCode(
+        "38092-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    GallbladderScanWCholecystokininAndWRadionuclideIV = DocumentTypeValueSetCode("41770-9")
+    GallbladderScanWCholecystokininAndWRadionuclideIV = DocumentTypeValueSetCode(
+        "41770-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LiverAndBiliaryDuctsAndGallbladderScanWCholecystokininAndWRadionuclideIV = DocumentTypeValueSetCode("43650-1")
+    LiverAndBiliaryDuctsAndGallbladderScanWCholecystokininAndWRadionuclideIV = (
+        DocumentTypeValueSetCode("43650-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -22821,7 +24377,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    IntercranialVesselAndNeckVesselFluoroscopicAngiogramWContrast = DocumentTypeValueSetCode("30824-7")
+    IntercranialVesselAndNeckVesselFluoroscopicAngiogramWContrast = (
+        DocumentTypeValueSetCode("30824-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -22829,11 +24387,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LowerExtremityVessels_LeftFluoroscopicAngiogramWContrast = DocumentTypeValueSetCode("38853-8")
+    LowerExtremityVessels_LeftFluoroscopicAngiogramWContrast = DocumentTypeValueSetCode(
+        "38853-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LowerExtremityVessels_RightFluoroscopicAngiogramWContrast = DocumentTypeValueSetCode("37765-5")
+    LowerExtremityVessels_RightFluoroscopicAngiogramWContrast = (
+        DocumentTypeValueSetCode("37765-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -22841,7 +24403,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PeripheralVesselsFluoroscopicAngiogramWContrast = DocumentTypeValueSetCode("37936-2")
+    PeripheralVesselsFluoroscopicAngiogramWContrast = DocumentTypeValueSetCode(
+        "37936-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -22849,11 +24413,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    RenalVessels_LeftFluoroscopicAngiogramWContrast = DocumentTypeValueSetCode("64140-7")
+    RenalVessels_LeftFluoroscopicAngiogramWContrast = DocumentTypeValueSetCode(
+        "64140-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    RenalVessels_RightFluoroscopicAngiogramWContrast = DocumentTypeValueSetCode("64141-5")
+    RenalVessels_RightFluoroscopicAngiogramWContrast = DocumentTypeValueSetCode(
+        "64141-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -22873,7 +24441,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UpperExtremityVesselsFluoroscopicAngiogramWContrast = DocumentTypeValueSetCode("37976-8")
+    UpperExtremityVesselsFluoroscopicAngiogramWContrast = DocumentTypeValueSetCode(
+        "37976-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -22901,7 +24471,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UrinaryBladderAndUrethraFluoroscopyWContrastAntegrade = DocumentTypeValueSetCode("38100-4")
+    UrinaryBladderAndUrethraFluoroscopyWContrastAntegrade = DocumentTypeValueSetCode(
+        "38100-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -22909,7 +24481,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AbdominalArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("25030-8")
+    AbdominalArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "25030-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -22917,23 +24491,33 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AdrenalArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("30831-2")
+    AdrenalArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "30831-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AdrenalArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37387-8")
+    AdrenalArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "37387-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AdrenalArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37939-6")
+    AdrenalArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "37939-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AnkleArteries_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("38861-1")
+    AnkleArteries_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "38861-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AnkleArteries_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37941-2")
+    AnkleArteries_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "37941-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -22945,11 +24529,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AortaArchAndNeckFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("24546-4")
+    AortaArchAndNeckFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "24546-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AbdominalAortaAndArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37366-2")
+    AbdominalAortaAndArteriesFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("37366-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -22957,71 +24545,105 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AorticArchAndBrachialArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37380-3")
+    AorticArchAndBrachialArteryFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("37380-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AorticArchAndCarotidArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37381-1")
+    AorticArchAndCarotidArteryFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("37381-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AorticArchAndCarotidArtery_BilateralAndVertebralArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37587-3")
+    AorticArchAndCarotidArtery_BilateralAndVertebralArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "37587-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AorticArchAndCarotidArtery_common_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37588-1")
+    AorticArchAndCarotidArtery_common_BilateralFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("37588-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AorticArchAndCarotidArtery_common_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37589-9")
+    AorticArchAndCarotidArtery_common_LeftFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("37589-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AorticArchAndCarotidArtery_common_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37590-7")
+    AorticArchAndCarotidArtery_common_RightFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("37590-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AorticArchAndCarotidArtery_external_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37591-5")
+    AorticArchAndCarotidArtery_external_BilateralFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("37591-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AorticArchAndCarotidArtery_external_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37592-3")
+    AorticArchAndCarotidArtery_external_LeftFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("37592-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AorticArchAndCarotidArtery_external_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37593-1")
+    AorticArchAndCarotidArtery_external_RightFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("37593-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AorticArchAndCarotidArteryAndVertebralArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37594-9")
+    AorticArchAndCarotidArteryAndVertebralArteryFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("37594-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AorticArchAndSubclavianArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37382-9")
+    AorticArchAndSubclavianArteryFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("37382-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AorticArchAndSubclavianArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37383-7")
+    AorticArchAndSubclavianArtery_LeftFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("37383-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AorticArchAndSubclavianArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("38800-9")
+    AorticArchAndSubclavianArtery_RightFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("38800-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AorticArchAndUpperExtremityArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37379-5")
+    AorticArchAndUpperExtremityArteryFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("37379-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AorticArchAndVertebralArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37384-5")
+    AorticArchAndVertebralArteryFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("37384-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AorticArchAndVertebralArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37385-2")
+    AorticArchAndVertebralArtery_LeftFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("37385-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AorticArchAndVertebralArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37386-0")
+    AorticArchAndVertebralArtery_RightFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("37386-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23033,19 +24655,27 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    BrachialArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37388-6")
+    BrachialArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "37388-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    BrachialArteryAndSubclavianArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("24581-1")
+    BrachialArteryAndSubclavianArteryFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("24581-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    BrachiocephalicArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("69077-6")
+    BrachiocephalicArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "69077-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    BronchialArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37389-4")
+    BronchialArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "37389-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23053,95 +24683,141 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CarotidArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("26079-4")
+    CarotidArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "26079-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CarotidArtery_BilateralAndCerebralArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("39097-1")
+    CarotidArtery_BilateralAndCerebralArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "39097-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CarotidArtery_cervicalFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("39094-8")
+    CarotidArtery_cervicalFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "39094-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CarotidArtery_cervical_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("39098-9")
+    CarotidArtery_cervical_BilateralFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("39098-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CarotidArtery_cervical_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("38863-7")
+    CarotidArtery_cervical_LeftFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("38863-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CarotidArtery_cervical_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37945-3")
+    CarotidArtery_cervical_RightFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("37945-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CarotidArtery_externalFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("30821-3")
+    CarotidArtery_externalFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "30821-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CarotidArtery_external_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("30820-5")
+    CarotidArtery_external_BilateralFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("30820-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CarotidArtery_external_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37390-2")
+    CarotidArtery_external_LeftFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("37390-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CarotidArtery_external_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37948-7")
+    CarotidArtery_external_RightFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("37948-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CarotidArtery_internal_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("38864-5")
+    CarotidArtery_internal_LeftFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("38864-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CarotidArtery_internal_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37952-9")
+    CarotidArtery_internal_RightFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("37952-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CarotidArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("26080-2")
+    CarotidArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "26080-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CarotidArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("26081-0")
+    CarotidArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "26081-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CarotidArteryAndCerebralArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("39095-5")
+    CarotidArteryAndCerebralArteryFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("39095-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CarotidArteryAndCerebralArteryInternal_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("38865-2")
+    CarotidArteryAndCerebralArteryInternal_LeftFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("38865-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CarotidArteryAndCerebralArteryInternal_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37953-7")
+    CarotidArteryAndCerebralArteryInternal_RightFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("37953-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CarotidArteryAndCerebralArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("38862-9")
+    CarotidArteryAndCerebralArtery_LeftFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("38862-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CarotidArteryAndCerebralArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37944-6")
+    CarotidArteryAndCerebralArtery_RightFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("37944-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CarotidArteryAndVertebralArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37391-0")
+    CarotidArteryAndVertebralArteryFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("37391-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CarotidArteryAndVertebralArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37392-8")
+    CarotidArteryAndVertebralArtery_BilateralFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("37392-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CarotidArtery_VertebralArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37393-6")
+    CarotidArtery_VertebralArtery_LeftFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("37393-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CarotidArtery_VertebralArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37943-8")
+    CarotidArtery_VertebralArtery_RightFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("37943-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23149,11 +24825,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CeliacArteryAndGastricArtery_LeftAndSuperiorMesentericArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37403-3")
+    CeliacArteryAndGastricArtery_LeftAndSuperiorMesentericArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "37403-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CeliacArteryAndSuperiorMesentericArteryAndInferiorMesentericArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37394-4")
+    CeliacArteryAndSuperiorMesentericArteryAndInferiorMesentericArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "37394-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23161,11 +24841,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CervicocerebralArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("30891-6")
+    CervicocerebralArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "30891-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    CoronaryArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37174-0")
+    CoronaryArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "37174-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23173,19 +24857,27 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ExtremityArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("30848-6")
+    ExtremityArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "30848-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ExtremityArteries_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("30849-4")
+    ExtremityArteries_BilateralFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("30849-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ExtremityArteries_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37395-1")
+    ExtremityArteries_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "37395-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ExtremityArteries_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37949-5")
+    ExtremityArteries_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "37949-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23193,7 +24885,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FemoralArteryAndPoplitealArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37176-5")
+    FemoralArteryAndPoplitealArteryFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("37176-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23201,31 +24895,45 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    GastricArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37398-5")
+    GastricArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "37398-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    GastricArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("38801-7")
+    GastricArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "38801-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    GastroduodenalArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37399-3")
+    GastroduodenalArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "37399-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeadArtery_BilateralAndNeckArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("30822-1")
+    HeadArtery_BilateralAndNeckArtery_BilateralFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("30822-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeadArtery_left_NeckArtery_leftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("62448-6")
+    HeadArtery_left_NeckArtery_leftFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("62448-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeadArtery_right_NeckArtery_rightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("62449-4")
+    HeadArtery_right_NeckArtery_rightFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("62449-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HeadArteryAndNeckArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("30823-9")
+    HeadArteryAndNeckArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "30823-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23237,23 +24945,33 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    IliacArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37177-3")
+    IliacArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "37177-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    IliacArteryInternalFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("24862-5")
+    IliacArteryInternalFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "24862-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    IliacArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37178-1")
+    IliacArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "37178-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    IliacArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37739-0")
+    IliacArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "37739-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    InferiorMesentericArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37179-9")
+    InferiorMesentericArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "37179-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23261,39 +24979,57 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LowerExtremityArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37487-6")
+    LowerExtremityArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "37487-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LowerExtremityArteries_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("47986-5")
+    LowerExtremityArteries_LeftFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("47986-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LowerExtremityArteries_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("47987-3")
+    LowerExtremityArteries_RightFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("47987-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    InternalMammaryArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("30829-6")
+    InternalMammaryArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "30829-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MammaryArtery_internal_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("64995-4")
+    MammaryArtery_internal_LeftFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("64995-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MammaryArtery_internal_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("65000-2")
+    MammaryArtery_internal_RightFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("65000-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MaxillaryArtery_internalFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37401-7")
+    MaxillaryArtery_internalFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "37401-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    MesentericArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("24833-6")
+    MesentericArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "24833-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PancreaticArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("24860-9")
+    PancreaticArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "24860-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23301,59 +25037,87 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PelvisArteriesAndLowerExtremityArteries_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37935-4")
+    PelvisArteriesAndLowerExtremityArteries_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "37935-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PeripheralArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("24874-0")
+    PeripheralArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "24874-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PeripheralArteries_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("44240-0")
+    PeripheralArteries_BilateralFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("44240-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PoplitealArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("69249-1")
+    PoplitealArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "69249-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PoplitealArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37181-5")
+    PoplitealArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "37181-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PoplitealArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37778-8")
+    PoplitealArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "37778-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PudendalArtery_internalFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37404-1")
+    PudendalArtery_internalFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "37404-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PulmonaryArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("39057-5")
+    PulmonaryArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "39057-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PulmonaryArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("30830-4")
+    PulmonaryArtery_BilateralFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("30830-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PulmonaryArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37182-3")
+    PulmonaryArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "37182-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PulmonaryArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37779-6")
+    PulmonaryArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "37779-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    RenalArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("30834-6")
+    RenalArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "30834-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    RenalArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("62446-0")
+    RenalArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "62446-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    RenalArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("62447-8")
+    RenalArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "62447-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23361,15 +25125,21 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpinalArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("26082-8")
+    SpinalArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "26082-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpinalArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("26083-6")
+    SpinalArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "26083-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpinalArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("26084-4")
+    SpinalArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "26084-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23377,31 +25147,45 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SplenicVeinAndPortalVeinFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("24991-2")
+    SplenicVeinAndPortalVeinFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "24991-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SubclavianArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37886-9")
+    SubclavianArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "37886-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SubclavianArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37405-8")
+    SubclavianArtery_BilateralFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("37405-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SubclavianArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37406-6")
+    SubclavianArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "37406-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SubclavianArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37966-9")
+    SubclavianArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "37966-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SuperiorMesentericArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37180-7")
+    SuperiorMesentericArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "37180-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SuperiorMesentericArteryAndInferiorMesentericArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37402-5")
+    SuperiorMesentericArteryAndInferiorMesentericArteryFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "37402-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23413,27 +25197,39 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    TibioperonealArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37489-2")
+    TibioperonealArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "37489-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UpperExtremityArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37977-6")
+    UpperExtremityArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "37977-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UpperExtremityArteries_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37396-9")
+    UpperExtremityArteries_BilateralFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("37396-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UpperExtremityArteries_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37488-4")
+    UpperExtremityArteries_LeftFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("37488-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UpperExtremityArteries_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37967-7")
+    UpperExtremityArteries_RightFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("37967-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UrinaryBladderArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("24576-1")
+    UrinaryBladderArteriesFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "24576-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23441,15 +25237,21 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VertebralArtery_BilateralFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37407-4")
+    VertebralArtery_BilateralFluoroscopicAngiogramWContrastIA = (
+        DocumentTypeValueSetCode("37407-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VertebralArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37490-0")
+    VertebralArtery_LeftFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "37490-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VertebralArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode("37968-5")
+    VertebralArtery_RightFluoroscopicAngiogramWContrastIA = DocumentTypeValueSetCode(
+        "37968-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23457,11 +25259,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UrinaryBladderAndUrethraFluoroscopyWContrastIntraBladder = DocumentTypeValueSetCode("25017-5")
+    UrinaryBladderAndUrethraFluoroscopyWContrastIntraBladder = DocumentTypeValueSetCode(
+        "25017-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UrinaryBladderAndUrethraFluoroscopyWContrastIntraBladderDuringVoiding = DocumentTypeValueSetCode("43559-4")
+    UrinaryBladderAndUrethraFluoroscopyWContrastIntraBladderDuringVoiding = (
+        DocumentTypeValueSetCode("43559-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23473,7 +25279,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    BreastDuct_BilateralMammogramWContrastIntraDuct = DocumentTypeValueSetCode("38095-6")
+    BreastDuct_BilateralMammogramWContrastIntraDuct = DocumentTypeValueSetCode(
+        "38095-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23485,19 +25293,27 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LacrimalDuctFluoroscopyWContrastIntraLacrimalDuct = DocumentTypeValueSetCode("30810-6")
+    LacrimalDuctFluoroscopyWContrastIntraLacrimalDuct = DocumentTypeValueSetCode(
+        "30810-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LacrimalDuct_BilateralFluoroscopyWContrastIntraLacrimalDuct = DocumentTypeValueSetCode("38098-0")
+    LacrimalDuct_BilateralFluoroscopyWContrastIntraLacrimalDuct = (
+        DocumentTypeValueSetCode("38098-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LacrimalDuct_LeftFluoroscopyWContrastIntraLacrimalDuct = DocumentTypeValueSetCode("38099-8")
+    LacrimalDuct_LeftFluoroscopyWContrastIntraLacrimalDuct = DocumentTypeValueSetCode(
+        "38099-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LacrimalDuct_RightFluoroscopyWContrastIntraLacrimalDuct = DocumentTypeValueSetCode("38827-2")
+    LacrimalDuct_RightFluoroscopyWContrastIntraLacrimalDuct = DocumentTypeValueSetCode(
+        "38827-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23505,19 +25321,27 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ExtremityLymphaticsFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode("30850-2")
+    ExtremityLymphaticsFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode(
+        "30850-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ExtremityLymphatics_BilateralFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode("30851-0")
+    ExtremityLymphatics_BilateralFluoroscopyWContrastIntraLymphatic = (
+        DocumentTypeValueSetCode("30851-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ExtremityLymphatics_LeftFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode("37599-8")
+    ExtremityLymphatics_LeftFluoroscopyWContrastIntraLymphatic = (
+        DocumentTypeValueSetCode("37599-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ExtremityLymphatics_RightFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode("38812-4")
+    ExtremityLymphatics_RightFluoroscopyWContrastIntraLymphatic = (
+        DocumentTypeValueSetCode("38812-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23525,43 +25349,63 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LymphaticsAbdominalFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode("30839-5")
+    LymphaticsAbdominalFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode(
+        "30839-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LymphaticsAbdominal_BilateralFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode("30840-3")
+    LymphaticsAbdominal_BilateralFluoroscopyWContrastIntraLymphatic = (
+        DocumentTypeValueSetCode("30840-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LymphaticsAbdominalAndLymphaticsPelvicFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode("37597-2")
+    LymphaticsAbdominalAndLymphaticsPelvicFluoroscopyWContrastIntraLymphatic = (
+        DocumentTypeValueSetCode("37597-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LymphaticsAbdominalAndLymphaticsPelvic_BilateralFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode("37598-0")
+    LymphaticsAbdominalAndLymphaticsPelvic_BilateralFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode(
+        "37598-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LymphaticsAbdominalAndLymphaticsPelvic_LeftFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode("37596-4")
+    LymphaticsAbdominalAndLymphaticsPelvic_LeftFluoroscopyWContrastIntraLymphatic = (
+        DocumentTypeValueSetCode("37596-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LymphaticsAbdominalAndLymphaticsPelvic_RightFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode("38811-6")
+    LymphaticsAbdominalAndLymphaticsPelvic_RightFluoroscopyWContrastIntraLymphatic = (
+        DocumentTypeValueSetCode("38811-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Lymphatics_LeftFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode("37600-4")
+    Lymphatics_LeftFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode(
+        "37600-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LymphaticsPelvicFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode("39510-3")
+    LymphaticsPelvicFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode(
+        "39510-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LymphaticsPelvic_BilateralFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode("37601-2")
+    LymphaticsPelvic_BilateralFluoroscopyWContrastIntraLymphatic = (
+        DocumentTypeValueSetCode("37601-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Lymphatics_RightFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode("38813-2")
+    Lymphatics_RightFluoroscopyWContrastIntraLymphatic = DocumentTypeValueSetCode(
+        "38813-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23569,63 +25413,93 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    BreastDuct_BilateralMammogramWContrastIntraMultipleDucts = DocumentTypeValueSetCode("39146-6")
+    BreastDuct_BilateralMammogramWContrastIntraMultipleDucts = DocumentTypeValueSetCode(
+        "39146-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    BreastDuct_LeftMammogramWContrastIntraMultipleDucts = DocumentTypeValueSetCode("39145-8")
+    BreastDuct_LeftMammogramWContrastIntraMultipleDucts = DocumentTypeValueSetCode(
+        "39145-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    BreastDuct_RightMammogramWContrastIntraMultipleDucts = DocumentTypeValueSetCode("39147-4")
+    BreastDuct_RightMammogramWContrastIntraMultipleDucts = DocumentTypeValueSetCode(
+        "39147-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PleuralSpaceFluoroscopyWContrastIntraPleuralSpace = DocumentTypeValueSetCode("24661-1")
+    PleuralSpaceFluoroscopyWContrastIntraPleuralSpace = DocumentTypeValueSetCode(
+        "24661-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ParotidGlandFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode("38116-0")
+    ParotidGlandFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode(
+        "38116-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ParotidGland_LeftFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode("38097-2")
+    ParotidGland_LeftFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode(
+        "38097-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ParotidGland_RightFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode("38826-4")
+    ParotidGland_RightFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode(
+        "38826-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SalivaryGlandFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode("24902-9")
+    SalivaryGlandFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode(
+        "24902-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SalivaryGland_BilateralFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode("26067-9")
+    SalivaryGland_BilateralFluoroscopyWContrastIntraSalivaryDuct = (
+        DocumentTypeValueSetCode("26067-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SalivaryGland_LeftFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode("26068-7")
+    SalivaryGland_LeftFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode(
+        "26068-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SalivaryGland_RightFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode("26069-5")
+    SalivaryGland_RightFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode(
+        "26069-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SubmandibularGlandFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode("38153-3")
+    SubmandibularGlandFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode(
+        "38153-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SubmandibularGland_BilateralFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode("48698-5")
+    SubmandibularGland_BilateralFluoroscopyWContrastIntraSalivaryDuct = (
+        DocumentTypeValueSetCode("48698-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SubmandibularGland_LeftFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode("42460-6")
+    SubmandibularGland_LeftFluoroscopyWContrastIntraSalivaryDuct = (
+        DocumentTypeValueSetCode("42460-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SubmandibularGland_RightFluoroscopyWContrastIntraSalivaryDuct = DocumentTypeValueSetCode("48696-9")
+    SubmandibularGland_RightFluoroscopyWContrastIntraSalivaryDuct = (
+        DocumentTypeValueSetCode("48696-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23641,7 +25515,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    VasDeferensFluoroscopyWContrastIntraVasDeferens = DocumentTypeValueSetCode("39151-6")
+    VasDeferensFluoroscopyWContrastIntraVasDeferens = DocumentTypeValueSetCode(
+        "39151-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23649,7 +25525,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Ankle_BilateralFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("37184-9")
+    Ankle_BilateralFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode(
+        "37184-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23665,7 +25543,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Elbow_BilateralFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("37187-2")
+    Elbow_BilateralFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode(
+        "37187-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23681,7 +25561,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Hip_BilateralFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("26070-3")
+    Hip_BilateralFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode(
+        "26070-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23697,7 +25579,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Knee_BilateralFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("26073-7")
+    Knee_BilateralFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode(
+        "26073-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23709,19 +25593,27 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SacroiliacJointFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("37647-5")
+    SacroiliacJointFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode(
+        "37647-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SacroiliacJoint_BilateralFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("37189-8")
+    SacroiliacJoint_BilateralFluoroscopyWContrastIntraarticular = (
+        DocumentTypeValueSetCode("37189-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SacroiliacJoint_LeftFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("37190-6")
+    SacroiliacJoint_LeftFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode(
+        "37190-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SacroiliacJoint_RightFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("37785-3")
+    SacroiliacJoint_RightFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode(
+        "37785-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23729,31 +25621,45 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Shoulder_BilateralFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("26076-0")
+    Shoulder_BilateralFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode(
+        "26076-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Shoulder_LeftFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("26077-8")
+    Shoulder_LeftFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode(
+        "26077-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Shoulder_RightFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("26078-6")
+    Shoulder_RightFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode(
+        "26078-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    TemporomandibularJointFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("37901-6")
+    TemporomandibularJointFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode(
+        "37901-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    TemporomandibularJoint_BilateralFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("37409-0")
+    TemporomandibularJoint_BilateralFluoroscopyWContrastIntraarticular = (
+        DocumentTypeValueSetCode("37409-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    TemporomandibularJoint_LeftFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("37410-8")
+    TemporomandibularJoint_LeftFluoroscopyWContrastIntraarticular = (
+        DocumentTypeValueSetCode("37410-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    TemporomandibularJoint_RightFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("37818-2")
+    TemporomandibularJoint_RightFluoroscopyWContrastIntraarticular = (
+        DocumentTypeValueSetCode("37818-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23761,7 +25667,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Wrist_BilateralFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode("37570-9")
+    Wrist_BilateralFluoroscopyWContrastIntraarticular = DocumentTypeValueSetCode(
+        "37570-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23809,7 +25717,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UterusAndFallopianTubesFluoroscopyWContrastIntrauterine = DocumentTypeValueSetCode("25022-5")
+    UterusAndFallopianTubesFluoroscopyWContrastIntrauterine = DocumentTypeValueSetCode(
+        "25022-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23825,11 +25735,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineCervicalAndSpineLumbarFluoroscopyWContrastIT = DocumentTypeValueSetCode("38103-8")
+    SpineCervicalAndSpineLumbarFluoroscopyWContrastIT = DocumentTypeValueSetCode(
+        "38103-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SpineCervicalAndThoracicAndLumbarFluoroscopyWContrastIT = DocumentTypeValueSetCode("30808-0")
+    SpineCervicalAndThoracicAndLumbarFluoroscopyWContrastIT = DocumentTypeValueSetCode(
+        "30808-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23845,7 +25759,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AbdominalVesselsFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("69066-9")
+    AbdominalVesselsFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "69066-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23853,15 +25769,21 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AdrenalVeinLeftFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37602-0")
+    AdrenalVeinLeftFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "37602-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AdrenalVein_BilateralFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("30844-5")
+    AdrenalVein_BilateralFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "30844-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    AdrenalVein_RightFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37940-4")
+    AdrenalVein_RightFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "37940-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23893,19 +25815,27 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ExtremityVeins_BilateralFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37412-4")
+    ExtremityVeins_BilateralFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "37412-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ExtremityVeins_LeftFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37413-2")
+    ExtremityVeins_LeftFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "37413-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ExtremityVeins_RightFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37950-3")
+    ExtremityVeins_RightFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "37950-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ExtremityVesselsFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("42157-8")
+    ExtremityVesselsFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "42157-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23917,11 +25847,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    InferiorMesentericVeinFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37421-5")
+    InferiorMesentericVeinFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "37421-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    IntraosseousVeinsFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37419-9")
+    IntraosseousVeinsFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "37419-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23929,11 +25863,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    JugularVein_LeftFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37420-7")
+    JugularVein_LeftFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "37420-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    JugularVein_RightFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37954-5")
+    JugularVein_RightFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "37954-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23945,19 +25883,27 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LowerExtremityVeins_BilateralFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37414-0")
+    LowerExtremityVeins_BilateralFluoroscopicAngiogramWContrastIV = (
+        DocumentTypeValueSetCode("37414-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LowerExtremityVeins_LeftFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37196-3")
+    LowerExtremityVeins_LeftFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "37196-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LowerExtremityVeins_RightFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37767-1")
+    LowerExtremityVeins_RightFluoroscopicAngiogramWContrastIV = (
+        DocumentTypeValueSetCode("37767-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LowerExtremityVesselsFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37574-1")
+    LowerExtremityVesselsFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "37574-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23965,19 +25911,27 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    OrbitVeins_LeftFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37422-3")
+    OrbitVeins_LeftFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "37422-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    OrbitVeins_RightFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37958-6")
+    OrbitVeins_RightFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "37958-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PeripheralVeins_BilateralFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("30852-8")
+    PeripheralVeins_BilateralFluoroscopicAngiogramWContrastIV = (
+        DocumentTypeValueSetCode("30852-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PeripheralVeinsFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("24685-0")
+    PeripheralVeinsFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "24685-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23989,7 +25943,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    RenalVein_BilateralFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("30846-0")
+    RenalVein_BilateralFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "30846-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -23997,31 +25953,45 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    RenalVein_RightFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37959-4")
+    RenalVein_RightFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "37959-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SagittalSinusVeinFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("30827-0")
+    SagittalSinusVeinFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "30827-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SagittalSinusVein_LeftFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("65803-9")
+    SagittalSinusVein_LeftFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "65803-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SagittalSinusAndJugularVeins_LeftFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("65802-1")
+    SagittalSinusAndJugularVeins_LeftFluoroscopicAngiogramWContrastIV = (
+        DocumentTypeValueSetCode("65802-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SagittalSinusVein_RightFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("65804-7")
+    SagittalSinusVein_RightFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "65804-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SagittalSinusAndJugularVeins_RightFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("65805-4")
+    SagittalSinusAndJugularVeins_RightFluoroscopicAngiogramWContrastIV = (
+        DocumentTypeValueSetCode("65805-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SagittalSinusAndJugularVeinsFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("30826-2")
+    SagittalSinusAndJugularVeinsFluoroscopicAngiogramWContrastIV = (
+        DocumentTypeValueSetCode("30826-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -24037,23 +26007,33 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SuperiorMesentericVeinFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37972-7")
+    SuperiorMesentericVeinFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "37972-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UpperExtremityVeinsFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("24550-6")
+    UpperExtremityVeinsFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "24550-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UpperExtremityVeins_BilateralFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37415-7")
+    UpperExtremityVeins_BilateralFluoroscopicAngiogramWContrastIV = (
+        DocumentTypeValueSetCode("37415-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UpperExtremityVeins_LeftFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("38859-5")
+    UpperExtremityVeins_LeftFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "38859-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UpperExtremityVeins_RightFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("37824-0")
+    UpperExtremityVeins_RightFluoroscopicAngiogramWContrastIV = (
+        DocumentTypeValueSetCode("37824-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -24077,11 +26057,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    InferiorVenaCavaFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("30845-2")
+    InferiorVenaCavaFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "30845-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    SuperiorVenaCavaFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode("30645-6")
+    SuperiorVenaCavaFluoroscopicAngiogramWContrastIV = DocumentTypeValueSetCode(
+        "30645-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -24089,23 +26073,33 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    HepaticVeinsFluoroscopicAngiogramWContrastIVAndWHemodynamics = DocumentTypeValueSetCode("39096-3")
+    HepaticVeinsFluoroscopicAngiogramWContrastIVAndWHemodynamics = (
+        DocumentTypeValueSetCode("39096-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    RenalVeinFluoroscopicAngiogramWContrastIVAndWReninSampling = DocumentTypeValueSetCode("43783-0")
+    RenalVeinFluoroscopicAngiogramWContrastIVAndWReninSampling = (
+        DocumentTypeValueSetCode("43783-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    RenalVein_BilateralFluoroscopicAngiogramWContrastIVAndWReninSampling = DocumentTypeValueSetCode("25080-3")
+    RenalVein_BilateralFluoroscopicAngiogramWContrastIVAndWReninSampling = (
+        DocumentTypeValueSetCode("25080-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PeritoneumFluoroscopicAngiogramWContrastPercutaneous = DocumentTypeValueSetCode("30816-3")
+    PeritoneumFluoroscopicAngiogramWContrastPercutaneous = DocumentTypeValueSetCode(
+        "30816-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    BiliaryDuctsAndGallbladderFluoroscopyWContrastPercutaneousTranshepatic = DocumentTypeValueSetCode("24575-3")
+    BiliaryDuctsAndGallbladderFluoroscopyWContrastPercutaneousTranshepatic = (
+        DocumentTypeValueSetCode("24575-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -24137,11 +26131,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    DuodenumFluoroscopyWContrastPOAndHypotonicAgentPerNg = DocumentTypeValueSetCode("24673-6")
+    DuodenumFluoroscopyWContrastPOAndHypotonicAgentPerNg = DocumentTypeValueSetCode(
+        "24673-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    EsophagusAndHypopharynxFluoroscopyVideoWContrastPODuringSwallowing = DocumentTypeValueSetCode("24681-9")
+    EsophagusAndHypopharynxFluoroscopyVideoWContrastPODuringSwallowing = (
+        DocumentTypeValueSetCode("24681-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -24149,7 +26147,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    RectumAndUrinaryBladderFluoroscopyWContrastPRAndIntraBladderDuringDefecationAndVoiding = DocumentTypeValueSetCode("24894-8")
+    RectumAndUrinaryBladderFluoroscopyWContrastPRAndIntraBladderDuringDefecationAndVoiding = DocumentTypeValueSetCode(
+        "24894-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -24165,31 +26165,45 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Kidney_BilateralFluoroscopyWContrastRetrogradeViaUrethra = DocumentTypeValueSetCode("30761-1")
+    Kidney_BilateralFluoroscopyWContrastRetrogradeViaUrethra = DocumentTypeValueSetCode(
+        "30761-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Kidney_LeftAndCollectingSystemFluoroscopyWContrastRetrogradeViaUrethra = DocumentTypeValueSetCode("38873-6")
+    Kidney_LeftAndCollectingSystemFluoroscopyWContrastRetrogradeViaUrethra = (
+        DocumentTypeValueSetCode("38873-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Kidney_RightAndCollectingSystemFluoroscopyWContrastRetrogradeViaUrethra = DocumentTypeValueSetCode("38113-7")
+    Kidney_RightAndCollectingSystemFluoroscopyWContrastRetrogradeViaUrethra = (
+        DocumentTypeValueSetCode("38113-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UrinaryBladderAndUrethraFluoroscopyWContrastRetrogradeViaUrethra = DocumentTypeValueSetCode("25020-9")
+    UrinaryBladderAndUrethraFluoroscopyWContrastRetrogradeViaUrethra = (
+        DocumentTypeValueSetCode("25020-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PortalVeinFluoroscopicAngiogramWContrastTranshepatic = DocumentTypeValueSetCode("30841-1")
+    PortalVeinFluoroscopicAngiogramWContrastTranshepatic = DocumentTypeValueSetCode(
+        "30841-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PortalVeinFluoroscopicAngiogramWContrastTranshepaticAndWHemodynamics = DocumentTypeValueSetCode("30842-9")
+    PortalVeinFluoroscopicAngiogramWContrastTranshepaticAndWHemodynamics = (
+        DocumentTypeValueSetCode("30842-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UnspecifiedBodyRegionFluoroscopyWContrastViaCatheter = DocumentTypeValueSetCode("37566-7")
+    UnspecifiedBodyRegionFluoroscopyWContrastViaCatheter = DocumentTypeValueSetCode(
+        "37566-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -24197,7 +26211,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UnspecifiedBodyRegionFluoroscopyWContrastViaFistula = DocumentTypeValueSetCode("37568-3")
+    UnspecifiedBodyRegionFluoroscopyWContrastViaFistula = DocumentTypeValueSetCode(
+        "37568-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -24205,23 +26221,33 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Kidney_BilateralFluoroscopyWContrastViaNephrostomyTube = DocumentTypeValueSetCode("24780-9")
+    Kidney_BilateralFluoroscopyWContrastViaNephrostomyTube = DocumentTypeValueSetCode(
+        "24780-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Kidney_LeftAndCollectingSystemFluoroscopyWContrastViaNephrostomyTube = DocumentTypeValueSetCode("38872-8")
+    Kidney_LeftAndCollectingSystemFluoroscopyWContrastViaNephrostomyTube = (
+        DocumentTypeValueSetCode("38872-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Kidney_RightAndCollectingSystemFluoroscopyWContrastViaNephrostomyTube = DocumentTypeValueSetCode("38112-9")
+    Kidney_RightAndCollectingSystemFluoroscopyWContrastViaNephrostomyTube = (
+        DocumentTypeValueSetCode("38112-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UrinaryBladderFluoroscopyWContrastViaSuprapubicTube = DocumentTypeValueSetCode("37569-1")
+    UrinaryBladderFluoroscopyWContrastViaSuprapubicTube = DocumentTypeValueSetCode(
+        "37569-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    BiliaryDuctsAndGallbladderFluoroscopyWContrastViaT_tube = DocumentTypeValueSetCode("30647-2")
+    BiliaryDuctsAndGallbladderFluoroscopyWContrastViaT_tube = DocumentTypeValueSetCode(
+        "30647-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -24261,7 +26287,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Kidney_BilateralScanWFurosemideAndWRadionuclideIV = DocumentTypeValueSetCode("43461-3")
+    Kidney_BilateralScanWFurosemideAndWRadionuclideIV = DocumentTypeValueSetCode(
+        "43461-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -24281,7 +26309,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    UnspecifiedBodyRegionFluoroscopyWGastrografinViaFistula = DocumentTypeValueSetCode("37576-6")
+    UnspecifiedBodyRegionFluoroscopyWGastrografinViaFistula = DocumentTypeValueSetCode(
+        "37576-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -24329,7 +26359,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    EsophagusAndHypopharynxFluoroscopyVideoWLiquidAndPasteContrastPODuringSwallowing = DocumentTypeValueSetCode("24682-7")
+    EsophagusAndHypopharynxFluoroscopyVideoWLiquidAndPasteContrastPODuringSwallowing = (
+        DocumentTypeValueSetCode("24682-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -24397,11 +26429,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    BreastLymphatics_LeftScanWRadionuclideIntraLymphatic = DocumentTypeValueSetCode("64051-6")
+    BreastLymphatics_LeftScanWRadionuclideIntraLymphatic = DocumentTypeValueSetCode(
+        "64051-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    BreastLymphatics_RightScanWRadionuclideIntraLymphatic = DocumentTypeValueSetCode("64052-4")
+    BreastLymphatics_RightScanWRadionuclideIntraLymphatic = DocumentTypeValueSetCode(
+        "64052-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -24549,7 +26585,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Kidney_BilateralScanWRadionuclideTransplantScan = DocumentTypeValueSetCode("24773-4")
+    Kidney_BilateralScanWRadionuclideTransplantScan = DocumentTypeValueSetCode(
+        "24773-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -24561,7 +26599,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    LiverAndBiliaryDuctsAndGallbladderScanWSincalideAndWRadionuclideIV = DocumentTypeValueSetCode("43651-9")
+    LiverAndBiliaryDuctsAndGallbladderScanWSincalideAndWRadionuclideIV = (
+        DocumentTypeValueSetCode("43651-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -24609,7 +26649,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Kidney_BilateralAndRenalVesselsScanWTc_99mDTPAIV = DocumentTypeValueSetCode("43667-5")
+    Kidney_BilateralAndRenalVesselsScanWTc_99mDTPAIV = DocumentTypeValueSetCode(
+        "43667-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -24669,15 +26711,21 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ScrotumAndTesticle_BilateralScanWTc_99mPertechnetateIV = DocumentTypeValueSetCode("26091-9")
+    ScrotumAndTesticle_BilateralScanWTc_99mPertechnetateIV = DocumentTypeValueSetCode(
+        "26091-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ScrotumAndTesticle_LeftScanWTc_99mPertechnetateIV = DocumentTypeValueSetCode("26092-7")
+    ScrotumAndTesticle_LeftScanWTc_99mPertechnetateIV = DocumentTypeValueSetCode(
+        "26092-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ScrotumAndTesticle_RightScanWTc_99mPertechnetateIV = DocumentTypeValueSetCode("26093-5")
+    ScrotumAndTesticle_RightScanWTc_99mPertechnetateIV = DocumentTypeValueSetCode(
+        "26093-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -24737,7 +26785,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    GastrointestineUpperFluoroscopyWWaterSolubleContrastPO = DocumentTypeValueSetCode("42012-5")
+    GastrointestineUpperFluoroscopyWWaterSolubleContrastPO = DocumentTypeValueSetCode(
+        "42012-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -24785,11 +26835,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FDAPackageInsertPMI_StopTakingAndCallYourDoctorSection = DocumentTypeValueSetCode("71683-7")
+    FDAPackageInsertPMI_StopTakingAndCallYourDoctorSection = DocumentTypeValueSetCode(
+        "71683-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FDAPackageInsertPMI_TellYourDoctorBeforeTakingSection = DocumentTypeValueSetCode("71685-2")
+    FDAPackageInsertPMI_TellYourDoctorBeforeTakingSection = DocumentTypeValueSetCode(
+        "71685-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -24813,7 +26867,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FDAPackageInsertAnimalPharmacology_toxicologySection = DocumentTypeValueSetCode("34091-9")
+    FDAPackageInsertAnimalPharmacology_toxicologySection = DocumentTypeValueSetCode(
+        "34091-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -24821,7 +26877,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FDAPackageInsertAssemblyOrInstallationInstructions = DocumentTypeValueSetCode("60556-8")
+    FDAPackageInsertAssemblyOrInstallationInstructions = DocumentTypeValueSetCode(
+        "60556-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -24833,7 +26891,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ClinicalTrialProtocolBackgroundInformationSection = DocumentTypeValueSetCode("35511-5")
+    ClinicalTrialProtocolBackgroundInformationSection = DocumentTypeValueSetCode(
+        "35511-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -24849,7 +26909,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FDAPackageInsertCarcinogenesisAndMutagenesisAndImpairmentOfFertilitySection = DocumentTypeValueSetCode("34083-6")
+    FDAPackageInsertCarcinogenesisAndMutagenesisAndImpairmentOfFertilitySection = (
+        DocumentTypeValueSetCode("34083-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -24857,7 +26919,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FDAPackageInsertCleaning_Disinfecting_AndSterilizationInstructions = DocumentTypeValueSetCode("60558-4")
+    FDAPackageInsertCleaning_Disinfecting_AndSterilizationInstructions = (
+        DocumentTypeValueSetCode("60558-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -24901,7 +26965,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ClinicalTrialProtocolDataHandlingAndRecordKeepingSection = DocumentTypeValueSetCode("35524-8")
+    ClinicalTrialProtocolDataHandlingAndRecordKeepingSection = DocumentTypeValueSetCode(
+        "35524-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -24917,7 +26983,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ClinicalTrialProtocolDirectAccessToSourceData_documentsSection = DocumentTypeValueSetCode("35521-4")
+    ClinicalTrialProtocolDirectAccessToSourceData_documentsSection = (
+        DocumentTypeValueSetCode("35521-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -24933,7 +27001,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FDAPackageInsertDrug_laboratoryTestInteractionsSection = DocumentTypeValueSetCode("34074-5")
+    FDAPackageInsertDrug_laboratoryTestInteractionsSection = DocumentTypeValueSetCode(
+        "34074-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -24969,7 +27039,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ClinicalTrialProtocolFinancingAndInsuranceSection = DocumentTypeValueSetCode("35525-5")
+    ClinicalTrialProtocolFinancingAndInsuranceSection = DocumentTypeValueSetCode(
+        "35525-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -24981,7 +27053,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FDAProductLabelGenericDrugFacilityIdentificationSubmission = DocumentTypeValueSetCode("71743-9")
+    FDAProductLabelGenericDrugFacilityIdentificationSubmission = (
+        DocumentTypeValueSetCode("71743-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -25009,7 +27083,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FDAProductLabelIdentificationOfCBER_regulatedGenericDrugFacility = DocumentTypeValueSetCode("72090-4")
+    FDAProductLabelIdentificationOfCBER_regulatedGenericDrugFacility = (
+        DocumentTypeValueSetCode("72090-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -25201,11 +27277,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FDAPackageInsertPMI_GetEmergencyMedicalHelpSection = DocumentTypeValueSetCode("71682-9")
+    FDAPackageInsertPMI_GetEmergencyMedicalHelpSection = DocumentTypeValueSetCode(
+        "71682-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FDAPackageInsertPMI_ImportantInformationSection = DocumentTypeValueSetCode("71687-8")
+    FDAPackageInsertPMI_ImportantInformationSection = DocumentTypeValueSetCode(
+        "71687-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -25269,7 +27349,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ClinicalTrialProtocolQualityControlAndQualityAssuranceSection = DocumentTypeValueSetCode("35522-2")
+    ClinicalTrialProtocolQualityControlAndQualityAssuranceSection = (
+        DocumentTypeValueSetCode("35522-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -25293,27 +27375,39 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FDAPackageInsertStructuredProductLabellingIndexingDataElementsSection = DocumentTypeValueSetCode("48779-3")
+    FDAPackageInsertStructuredProductLabellingIndexingDataElementsSection = (
+        DocumentTypeValueSetCode("48779-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FDAPackageInsertStructuredProductLabellingListingDataElementsSection = DocumentTypeValueSetCode("48780-1")
+    FDAPackageInsertStructuredProductLabellingListingDataElementsSection = (
+        DocumentTypeValueSetCode("48780-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FDAPackageInsertStructuredProductLabellingMedguideSection = DocumentTypeValueSetCode("42231-1")
+    FDAPackageInsertStructuredProductLabellingMedguideSection = (
+        DocumentTypeValueSetCode("42231-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FDAPackageInsertStructuredProductLaballingPatientPackageInsertSection = DocumentTypeValueSetCode("42230-3")
+    FDAPackageInsertStructuredProductLaballingPatientPackageInsertSection = (
+        DocumentTypeValueSetCode("42230-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FDAPackageInsertStructuredProductLaballingSupplementalPatientMaterial = DocumentTypeValueSetCode("38056-8")
+    FDAPackageInsertStructuredProductLaballingSupplementalPatientMaterial = (
+        DocumentTypeValueSetCode("38056-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FDAPackageInsertStructuredPatientLabellingUnclassifiedSection = DocumentTypeValueSetCode("42229-5")
+    FDAPackageInsertStructuredPatientLabellingUnclassifiedSection = (
+        DocumentTypeValueSetCode("42229-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -25329,11 +27423,15 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ClinicalTrialProtocolSubjectParticipation_EpochsSection = DocumentTypeValueSetCode("35515-6")
+    ClinicalTrialProtocolSubjectParticipation_EpochsSection = DocumentTypeValueSetCode(
+        "35515-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ClinicalTrialProtocolSubjectSelectionAndWithdrawalSection = DocumentTypeValueSetCode("35514-9")
+    ClinicalTrialProtocolSubjectSelectionAndWithdrawalSection = (
+        DocumentTypeValueSetCode("35514-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -25353,7 +27451,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ClinicalTrialProtocolTreatmentOfSubjects_EpochsSection = DocumentTypeValueSetCode("35516-4")
+    ClinicalTrialProtocolTreatmentOfSubjects_EpochsSection = DocumentTypeValueSetCode(
+        "35516-4"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -25365,7 +27465,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ClinicalTrialProtocolTrialObjectivesAndPurposeSection = DocumentTypeValueSetCode("35512-3")
+    ClinicalTrialProtocolTrialObjectivesAndPurposeSection = DocumentTypeValueSetCode(
+        "35512-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -25373,7 +27475,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    FDAPackageInsertUseInSpecificPopulationsSection = DocumentTypeValueSetCode("43684-0")
+    FDAPackageInsertUseInSpecificPopulationsSection = DocumentTypeValueSetCode(
+        "43684-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -25393,7 +27497,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ClinicalDocumentKindOfDocumentFromLOINCDocumentOntology = DocumentTypeValueSetCode("74477-1")
+    ClinicalDocumentKindOfDocumentFromLOINCDocumentOntology = DocumentTypeValueSetCode(
+        "74477-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -25401,19 +27507,27 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ClinicalDocumentSettingFromLOINCDocumentOntology = DocumentTypeValueSetCode("74476-3")
+    ClinicalDocumentSettingFromLOINCDocumentOntology = DocumentTypeValueSetCode(
+        "74476-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ClinicalDocumentSubjectMatterDomainFromLOINCDocumentOntology = DocumentTypeValueSetCode("74480-5")
+    ClinicalDocumentSubjectMatterDomainFromLOINCDocumentOntology = (
+        DocumentTypeValueSetCode("74480-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ClinicalDocumentTypeOfServiceFromLOINCDocumentOntology = DocumentTypeValueSetCode("74478-9")
+    ClinicalDocumentTypeOfServiceFromLOINCDocumentOntology = DocumentTypeValueSetCode(
+        "74478-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ContributingFactorCommunication_DocumentationMERSTH = DocumentTypeValueSetCode("42566-0")
+    ContributingFactorCommunication_DocumentationMERSTH = DocumentTypeValueSetCode(
+        "42566-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -25449,7 +27563,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _11_Deoxycorticosterone_Presence_InSerumOrPlasma = DocumentTypeValueSetCode("40811-2")
+    _11_Deoxycorticosterone_Presence_InSerumOrPlasma = DocumentTypeValueSetCode(
+        "40811-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -25461,7 +27577,9 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PermissionToReleaseImmunizationDataFromSchoolRecord = DocumentTypeValueSetCode("72169-6")
+    PermissionToReleaseImmunizationDataFromSchoolRecord = DocumentTypeValueSetCode(
+        "72169-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -25469,35 +27587,51 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _18_Hydroxydeoxycorticosterone_Mass_volume_InSerumOrPlasma = DocumentTypeValueSetCode("11206-0")
+    _18_Hydroxydeoxycorticosterone_Mass_volume_InSerumOrPlasma = (
+        DocumentTypeValueSetCode("11206-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _18_Hydroxydeoxycorticosterone_Mass_time_In24HourUrine = DocumentTypeValueSetCode("26988-6")
+    _18_Hydroxydeoxycorticosterone_Mass_time_In24HourUrine = DocumentTypeValueSetCode(
+        "26988-6"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _18_Hydroxydeoxycorticosterone_Moles_volume_InSerumOrPlasma = DocumentTypeValueSetCode("50081-9")
+    _18_Hydroxydeoxycorticosterone_Moles_volume_InSerumOrPlasma = (
+        DocumentTypeValueSetCode("50081-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _18_Hydroxydeoxycorticosterone_Moles_volume_InSerumOrPlasma_1HourPostDoseCorticotropin = DocumentTypeValueSetCode("57553-0")
+    _18_Hydroxydeoxycorticosterone_Moles_volume_InSerumOrPlasma_1HourPostDoseCorticotropin = DocumentTypeValueSetCode(
+        "57553-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _18_Hydroxydeoxycorticosterone_Moles_volume_InSerumOrPlasma_30MinutesPostDoseCorticotropin = DocumentTypeValueSetCode("57552-2")
+    _18_Hydroxydeoxycorticosterone_Moles_volume_InSerumOrPlasma_30MinutesPostDoseCorticotropin = DocumentTypeValueSetCode(
+        "57552-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _18_Hydroxydeoxycorticosterone_Moles_volume_InSerumOrPlasma_preDoseCorticotropin = DocumentTypeValueSetCode("57551-4")
+    _18_Hydroxydeoxycorticosterone_Moles_volume_InSerumOrPlasma_preDoseCorticotropin = (
+        DocumentTypeValueSetCode("57551-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _11_Deoxycorticosterone_Mass_volume_InDriedBloodSpot = DocumentTypeValueSetCode("53347-1")
+    _11_Deoxycorticosterone_Mass_volume_InDriedBloodSpot = DocumentTypeValueSetCode(
+        "53347-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma = DocumentTypeValueSetCode("1656-8")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma = DocumentTypeValueSetCode(
+        "1656-8"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
@@ -25505,140 +27639,210 @@ class DocumentTypeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _11_Deoxycorticosterone_Mass_time_In24HourUrine = DocumentTypeValueSetCode("16110-9")
+    _11_Deoxycorticosterone_Mass_time_In24HourUrine = DocumentTypeValueSetCode(
+        "16110-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _11_Deoxycorticosterone_Moles_volume_In24HourUrine = DocumentTypeValueSetCode("40818-7")
+    _11_Deoxycorticosterone_Moles_volume_In24HourUrine = DocumentTypeValueSetCode(
+        "40818-7"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _11_Deoxycorticosterone_Moles_volume_InDriedBloodSpot = DocumentTypeValueSetCode("53348-9")
+    _11_Deoxycorticosterone_Moles_volume_InDriedBloodSpot = DocumentTypeValueSetCode(
+        "53348-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _11_Deoxycorticosterone_Moles_volume_InSerumOrPlasma = DocumentTypeValueSetCode("25561-2")
+    _11_Deoxycorticosterone_Moles_volume_InSerumOrPlasma = DocumentTypeValueSetCode(
+        "25561-2"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _11_Deoxycorticosterone_Moles_time_In24HourUrine = DocumentTypeValueSetCode("55808-0")
+    _11_Deoxycorticosterone_Moles_time_In24HourUrine = DocumentTypeValueSetCode(
+        "55808-0"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_1_5HoursPostXXXChallenge = DocumentTypeValueSetCode("56611-7")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_1_5HoursPostXXXChallenge = (
+        DocumentTypeValueSetCode("56611-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_15MinutesPostXXXChallenge = DocumentTypeValueSetCode("56608-3")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_15MinutesPostXXXChallenge = (
+        DocumentTypeValueSetCode("56608-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _11_Deoxycorticosterone_Moles_volume_InSerumOrPlasma_1HourPost250UgCorticotropin = DocumentTypeValueSetCode("57493-9")
+    _11_Deoxycorticosterone_Moles_volume_InSerumOrPlasma_1HourPost250UgCorticotropin = (
+        DocumentTypeValueSetCode("57493-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_1HourPostXXXChallenge = DocumentTypeValueSetCode("40816-1")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_1HourPostXXXChallenge = (
+        DocumentTypeValueSetCode("40816-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_1stSpecimenPostXXXChallenge = DocumentTypeValueSetCode("56602-6")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_1stSpecimenPostXXXChallenge = (
+        DocumentTypeValueSetCode("56602-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_2_5HoursPostXXXChallenge = DocumentTypeValueSetCode("56613-3")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_2_5HoursPostXXXChallenge = (
+        DocumentTypeValueSetCode("56613-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_20MinutesPostXXXChallenge = DocumentTypeValueSetCode("56609-1")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_20MinutesPostXXXChallenge = (
+        DocumentTypeValueSetCode("56609-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_2HoursPostXXXChallenge = DocumentTypeValueSetCode("56612-5")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_2HoursPostXXXChallenge = (
+        DocumentTypeValueSetCode("56612-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_2ndSpecimenPostXXXChallenge = DocumentTypeValueSetCode("56603-4")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_2ndSpecimenPostXXXChallenge = (
+        DocumentTypeValueSetCode("56603-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _11_Deoxycorticosterone_Moles_volume_InSerumOrPlasma_30MinutesPost250UgCorticotropin = DocumentTypeValueSetCode("57492-1")
+    _11_Deoxycorticosterone_Moles_volume_InSerumOrPlasma_30MinutesPost250UgCorticotropin = DocumentTypeValueSetCode(
+        "57492-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_30MinutesPostXXXChallenge = DocumentTypeValueSetCode("56556-4")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_30MinutesPostXXXChallenge = (
+        DocumentTypeValueSetCode("56556-4")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_3rdSpecimenPostXXXChallenge = DocumentTypeValueSetCode("56604-2")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_3rdSpecimenPostXXXChallenge = (
+        DocumentTypeValueSetCode("56604-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_40MinutesPostXXXChallenge = DocumentTypeValueSetCode("56610-9")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_40MinutesPostXXXChallenge = (
+        DocumentTypeValueSetCode("56610-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_4thSpecimenPostXXXChallenge = DocumentTypeValueSetCode("56605-9")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_4thSpecimenPostXXXChallenge = (
+        DocumentTypeValueSetCode("56605-9")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_5thSpecimenPostXXXChallenge = DocumentTypeValueSetCode("59987-8")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_5thSpecimenPostXXXChallenge = (
+        DocumentTypeValueSetCode("59987-8")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_6thSpecimenPostXXXChallenge = DocumentTypeValueSetCode("59986-0")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_6thSpecimenPostXXXChallenge = (
+        DocumentTypeValueSetCode("59986-0")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_7thSpecimenPostXXXChallenge = DocumentTypeValueSetCode("59985-2")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_7thSpecimenPostXXXChallenge = (
+        DocumentTypeValueSetCode("59985-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_8thSpecimenPostXXXChallenge = DocumentTypeValueSetCode("59984-5")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_8thSpecimenPostXXXChallenge = (
+        DocumentTypeValueSetCode("59984-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_baseline = DocumentTypeValueSetCode("56555-6")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_baseline = (
+        DocumentTypeValueSetCode("56555-6")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_postXXXChallenge = DocumentTypeValueSetCode("16294-1")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_postXXXChallenge = (
+        DocumentTypeValueSetCode("16294-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _11_Deoxycorticosterone_Moles_volume_InSerumOrPlasma_pre250UgCorticotropin = DocumentTypeValueSetCode("57491-3")
+    _11_Deoxycorticosterone_Moles_volume_InSerumOrPlasma_pre250UgCorticotropin = (
+        DocumentTypeValueSetCode("57491-3")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_preXXXChallenge = DocumentTypeValueSetCode("56606-7")
+    _11_Deoxycorticosterone_Mass_volume_InSerumOrPlasma_preXXXChallenge = (
+        DocumentTypeValueSetCode("56606-7")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _18_Hydroxydeoxycortisol_Creatinine_MassRatio_InUrine = DocumentTypeValueSetCode("13480-9")
+    _18_Hydroxydeoxycortisol_Creatinine_MassRatio_InUrine = DocumentTypeValueSetCode(
+        "13480-9"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    Progesterone_11_Deoxycorticosterone_MassRatio_InSerumOrPlasma = DocumentTypeValueSetCode("44729-2")
+    Progesterone_11_Deoxycorticosterone_MassRatio_InSerumOrPlasma = (
+        DocumentTypeValueSetCode("44729-2")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _21_Deoxycorticosterone_Moles_volume_InSerumOrPlasma = DocumentTypeValueSetCode("69799-5")
+    _21_Deoxycorticosterone_Moles_volume_InSerumOrPlasma = DocumentTypeValueSetCode(
+        "69799-5"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _21_Deoxycorticosterone_Moles_volume_InSerumOrPlasma_1HourPostDoseCorticotropin = DocumentTypeValueSetCode("57562-1")
+    _21_Deoxycorticosterone_Moles_volume_InSerumOrPlasma_1HourPostDoseCorticotropin = (
+        DocumentTypeValueSetCode("57562-1")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _21_Deoxycorticosterone_Moles_volume_InSerumOrPlasma_30MinutesPostDoseCorticotropin = DocumentTypeValueSetCode("57561-3")
+    _21_Deoxycorticosterone_Moles_volume_InSerumOrPlasma_30MinutesPostDoseCorticotropin = DocumentTypeValueSetCode(
+        "57561-3"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    _21_Deoxycorticosterone_Moles_volume_InSerumOrPlasma_preDoseCorticotropin = DocumentTypeValueSetCode("57560-5")
+    _21_Deoxycorticosterone_Moles_volume_InSerumOrPlasma_preDoseCorticotropin = (
+        DocumentTypeValueSetCode("57560-5")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    PerformanceRateReportingPeriodPopulationCalculated = DocumentTypeValueSetCode("72510-1")
+    PerformanceRateReportingPeriodPopulationCalculated = DocumentTypeValueSetCode(
+        "72510-1"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-doc-typecodes in valuesets.xml
     """
-    ReportingRateReportingPeriodPopulationCalculated = DocumentTypeValueSetCode("72509-3")
+    ReportingRateReportingPeriodPopulationCalculated = DocumentTypeValueSetCode(
+        "72509-3"
+    )

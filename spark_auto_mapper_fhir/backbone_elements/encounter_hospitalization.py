@@ -1,17 +1,8 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
-from spark_auto_mapper_fhir.resources.resource import Resource
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -22,46 +13,61 @@ if TYPE_CHECKING:
     # id_ (string)
     # extension (Extension)
     from spark_auto_mapper_fhir.complex_types.extension import Extension
+
     # modifierExtension (Extension)
     # preAdmissionIdentifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
     # origin (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for origin
     from spark_auto_mapper_fhir.resources.location import Location
     from spark_auto_mapper_fhir.resources.organization import Organization
+
     # admitSource (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # End Import for References for admitSource
     # Import for CodeableConcept for admitSource
     from spark_auto_mapper_fhir.value_sets.admit_source import AdmitSourceCode
+
     # End Import for CodeableConcept for admitSource
     # reAdmission (CodeableConcept)
     # End Import for References for reAdmission
     # Import for CodeableConcept for reAdmission
     from spark_auto_mapper_fhir.value_sets.v2_0092 import V2_0092
+
     # End Import for CodeableConcept for reAdmission
     # dietPreference (CodeableConcept)
     # End Import for References for dietPreference
     # Import for CodeableConcept for dietPreference
     from spark_auto_mapper_fhir.value_sets.diet import DietCode
+
     # End Import for CodeableConcept for dietPreference
     # specialCourtesy (CodeableConcept)
     # End Import for References for specialCourtesy
     # Import for CodeableConcept for specialCourtesy
     from spark_auto_mapper_fhir.value_sets.special_courtesy import SpecialCourtesyCode
+
     # End Import for CodeableConcept for specialCourtesy
     # specialArrangement (CodeableConcept)
     # End Import for References for specialArrangement
     # Import for CodeableConcept for specialArrangement
-    from spark_auto_mapper_fhir.value_sets.special_arrangements import SpecialArrangementsCode
+    from spark_auto_mapper_fhir.value_sets.special_arrangements import (
+        SpecialArrangementsCode,
+    )
+
     # End Import for CodeableConcept for specialArrangement
     # destination (Reference)
     # Imports for References for destination
     # dischargeDisposition (CodeableConcept)
     # End Import for References for dischargeDisposition
     # Import for CodeableConcept for dischargeDisposition
-    from spark_auto_mapper_fhir.value_sets.discharge_disposition import DischargeDispositionCode
+    from spark_auto_mapper_fhir.value_sets.discharge_disposition import (
+        DischargeDispositionCode,
+    )
+
     # End Import for CodeableConcept for dischargeDisposition
 
 
@@ -72,56 +78,63 @@ class EncounterHospitalization(FhirBackboneElementBase):
     Encounter.Hospitalization
         An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
-        id_: Optional[FhirString ] = None,
-        extension: Optional[FhirList[Extension ]] = None,
-        modifierExtension: Optional[FhirList[Extension ]] = None,
-        preAdmissionIdentifier: Optional[Identifier ] = None,
-        origin: Optional[Reference [Union[Location, Organization]]] = None,
-        admitSource: Optional[CodeableConcept[AdmitSourceCode] ] = None,
-        reAdmission: Optional[CodeableConcept[V2_0092] ] = None,
-        dietPreference: Optional[FhirList[CodeableConcept[DietCode] ]] = None,
-        specialCourtesy: Optional[FhirList[CodeableConcept[SpecialCourtesyCode] ]] = None,
-        specialArrangement: Optional[FhirList[CodeableConcept[SpecialArrangementsCode] ]] = None,
-        destination: Optional[Reference [Union[Location, Organization]]] = None,
-        dischargeDisposition: Optional[CodeableConcept[DischargeDispositionCode] ] = None,
+        id_: Optional[FhirString] = None,
+        extension: Optional[FhirList[Extension]] = None,
+        modifierExtension: Optional[FhirList[Extension]] = None,
+        preAdmissionIdentifier: Optional[Identifier] = None,
+        origin: Optional[Reference[Union[Location, Organization]]] = None,
+        admitSource: Optional[CodeableConcept[AdmitSourceCode]] = None,
+        reAdmission: Optional[CodeableConcept[V2_0092]] = None,
+        dietPreference: Optional[FhirList[CodeableConcept[DietCode]]] = None,
+        specialCourtesy: Optional[
+            FhirList[CodeableConcept[SpecialCourtesyCode]]
+        ] = None,
+        specialArrangement: Optional[
+            FhirList[CodeableConcept[SpecialArrangementsCode]]
+        ] = None,
+        destination: Optional[Reference[Union[Location, Organization]]] = None,
+        dischargeDisposition: Optional[
+            CodeableConcept[DischargeDispositionCode]
+        ] = None,
     ) -> None:
         """
-        An interaction between a patient and healthcare provider(s) for the purpose of
-    providing healthcare service(s) or assessing the health status of a patient.
+            An interaction between a patient and healthcare provider(s) for the purpose of
+        providing healthcare service(s) or assessing the health status of a patient.
 
-        :param id_: None
-        :param extension: May be used to represent additional information that is not part of the basic
-    definition of the element. To make the use of extensions safe and manageable,
-    there is a strict set of governance  applied to the definition and use of
-    extensions. Though any implementer can define an extension, there is a set of
-    requirements that SHALL be met as part of the definition of the extension.
-        :param modifierExtension: May be used to represent additional information that is not part of the basic
-    definition of the element and that modifies the understanding of the element
-    in which it is contained and/or the understanding of the containing element's
-    descendants. Usually modifier elements provide negation or qualification. To
-    make the use of extensions safe and manageable, there is a strict set of
-    governance applied to the definition and use of extensions. Though any
-    implementer can define an extension, there is a set of requirements that SHALL
-    be met as part of the definition of the extension. Applications processing a
-    resource are required to check for modifier extensions.
-    
-    Modifier extensions SHALL NOT change the meaning of any elements on Resource
-    or DomainResource (including cannot change the meaning of modifierExtension
-    itself).
-        :param preAdmissionIdentifier: Pre-admission identifier.
-        :param origin: The location/organization from which the patient came before admission.
-        :param admitSource: From where patient was admitted (physician referral, transfer).
-        :param reAdmission: Whether this hospitalization is a readmission and why if known.
-        :param dietPreference: Diet preferences reported by the patient.
-        :param specialCourtesy: Special courtesies (VIP, board member).
-        :param specialArrangement: Any special requests that have been made for this hospitalization encounter,
-    such as the provision of specific equipment or other things.
-        :param destination: Location/organization to which the patient is discharged.
-        :param dischargeDisposition: Category or kind of location after discharge.
+            :param id_: None
+            :param extension: May be used to represent additional information that is not part of the basic
+        definition of the element. To make the use of extensions safe and manageable,
+        there is a strict set of governance  applied to the definition and use of
+        extensions. Though any implementer can define an extension, there is a set of
+        requirements that SHALL be met as part of the definition of the extension.
+            :param modifierExtension: May be used to represent additional information that is not part of the basic
+        definition of the element and that modifies the understanding of the element
+        in which it is contained and/or the understanding of the containing element's
+        descendants. Usually modifier elements provide negation or qualification. To
+        make the use of extensions safe and manageable, there is a strict set of
+        governance applied to the definition and use of extensions. Though any
+        implementer can define an extension, there is a set of requirements that SHALL
+        be met as part of the definition of the extension. Applications processing a
+        resource are required to check for modifier extensions.
+
+        Modifier extensions SHALL NOT change the meaning of any elements on Resource
+        or DomainResource (including cannot change the meaning of modifierExtension
+        itself).
+            :param preAdmissionIdentifier: Pre-admission identifier.
+            :param origin: The location/organization from which the patient came before admission.
+            :param admitSource: From where patient was admitted (physician referral, transfer).
+            :param reAdmission: Whether this hospitalization is a readmission and why if known.
+            :param dietPreference: Diet preferences reported by the patient.
+            :param specialCourtesy: Special courtesies (VIP, board member).
+            :param specialArrangement: Any special requests that have been made for this hospitalization encounter,
+        such as the provision of specific equipment or other things.
+            :param destination: Location/organization to which the patient is discharged.
+            :param dischargeDisposition: Category or kind of location after discharge.
         """
         super().__init__(
             id_=id_,

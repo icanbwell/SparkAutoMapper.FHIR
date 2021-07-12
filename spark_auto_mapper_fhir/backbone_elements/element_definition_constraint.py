@@ -1,17 +1,9 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
-from spark_auto_mapper_fhir.resources.resource import Resource
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -22,11 +14,15 @@ if TYPE_CHECKING:
     # id_ (string)
     # extension (Extension)
     from spark_auto_mapper_fhir.complex_types.extension import Extension
+
     # modifierExtension (Extension)
     # key (id)
     # requirements (string)
     # severity (ConstraintSeverity)
-    from spark_auto_mapper_fhir.value_sets.constraint_severity import ConstraintSeverityCode
+    from spark_auto_mapper_fhir.value_sets.constraint_severity import (
+        ConstraintSeverityCode,
+    )
+
     # human (string)
     # expression (string)
     # xpath (string)
@@ -42,60 +38,61 @@ class ElementDefinitionConstraint(FhirBackboneElementBase):
         Captures constraints on each element within the resource, profile, or extension.
         If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
-        id_: Optional[FhirString ] = None,
-        extension: Optional[FhirList[Extension ]] = None,
-        modifierExtension: Optional[FhirList[Extension ]] = None,
-        key: FhirId ,
-        requirements: Optional[FhirString ] = None,
-        severity: ConstraintSeverityCode ,
-        human: FhirString ,
-        expression: Optional[FhirString ] = None,
-        xpath: Optional[FhirString ] = None,
-        source: Optional[FhirCanonical ] = None,
+        id_: Optional[FhirString] = None,
+        extension: Optional[FhirList[Extension]] = None,
+        modifierExtension: Optional[FhirList[Extension]] = None,
+        key: FhirId,
+        requirements: Optional[FhirString] = None,
+        severity: ConstraintSeverityCode,
+        human: FhirString,
+        expression: Optional[FhirString] = None,
+        xpath: Optional[FhirString] = None,
+        source: Optional[FhirCanonical] = None,
     ) -> None:
         """
-        Captures constraints on each element within the resource, profile, or
-    extension.
-        If the element is present, it must have a value for at least one of the
-    defined elements, an @id referenced from the Narrative, or extensions
+            Captures constraints on each element within the resource, profile, or
+        extension.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
-        :param id_: None
-        :param extension: May be used to represent additional information that is not part of the basic
-    definition of the element. To make the use of extensions safe and manageable,
-    there is a strict set of governance  applied to the definition and use of
-    extensions. Though any implementer can define an extension, there is a set of
-    requirements that SHALL be met as part of the definition of the extension.
-        :param modifierExtension: May be used to represent additional information that is not part of the basic
-    definition of the element and that modifies the understanding of the element
-    in which it is contained and/or the understanding of the containing element's
-    descendants. Usually modifier elements provide negation or qualification. To
-    make the use of extensions safe and manageable, there is a strict set of
-    governance applied to the definition and use of extensions. Though any
-    implementer can define an extension, there is a set of requirements that SHALL
-    be met as part of the definition of the extension. Applications processing a
-    resource are required to check for modifier extensions.
-    
-    Modifier extensions SHALL NOT change the meaning of any elements on Resource
-    or DomainResource (including cannot change the meaning of modifierExtension
-    itself).
-        :param key: Allows identification of which elements have their cardinalities impacted by
-    the constraint.  Will not be referenced for constraints that do not affect
-    cardinality.
-        :param requirements: Description of why this constraint is necessary or appropriate.
-        :param severity: Identifies the impact constraint violation has on the conformance of the
-    instance.
-        :param human: Text that can be used to describe the constraint in messages identifying that
-    the constraint has been violated.
-        :param expression: A [FHIRPath](fhirpath.html) expression of constraint that can be executed to
-    see if this constraint is met.
-        :param xpath: An XPath expression of constraint that can be executed to see if this
-    constraint is met.
-        :param source: A reference to the original source of the constraint, for traceability
-    purposes.
+            :param id_: None
+            :param extension: May be used to represent additional information that is not part of the basic
+        definition of the element. To make the use of extensions safe and manageable,
+        there is a strict set of governance  applied to the definition and use of
+        extensions. Though any implementer can define an extension, there is a set of
+        requirements that SHALL be met as part of the definition of the extension.
+            :param modifierExtension: May be used to represent additional information that is not part of the basic
+        definition of the element and that modifies the understanding of the element
+        in which it is contained and/or the understanding of the containing element's
+        descendants. Usually modifier elements provide negation or qualification. To
+        make the use of extensions safe and manageable, there is a strict set of
+        governance applied to the definition and use of extensions. Though any
+        implementer can define an extension, there is a set of requirements that SHALL
+        be met as part of the definition of the extension. Applications processing a
+        resource are required to check for modifier extensions.
+
+        Modifier extensions SHALL NOT change the meaning of any elements on Resource
+        or DomainResource (including cannot change the meaning of modifierExtension
+        itself).
+            :param key: Allows identification of which elements have their cardinalities impacted by
+        the constraint.  Will not be referenced for constraints that do not affect
+        cardinality.
+            :param requirements: Description of why this constraint is necessary or appropriate.
+            :param severity: Identifies the impact constraint violation has on the conformance of the
+        instance.
+            :param human: Text that can be used to describe the constraint in messages identifying that
+        the constraint has been violated.
+            :param expression: A [FHIRPath](fhirpath.html) expression of constraint that can be executed to
+        see if this constraint is met.
+            :param xpath: An XPath expression of constraint that can be executed to see if this
+        constraint is met.
+            :param source: A reference to the original source of the constraint, for traceability
+        purposes.
         """
         super().__init__(
             id_=id_,

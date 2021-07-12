@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -29,6 +19,7 @@ class MilitaryRoleType(GenericTypeCode):
     class code is either "program eligible" or "subscriber" and the person's
     status as a member of the military meets jurisdictional or program criteria
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -47,12 +38,13 @@ class MilitaryRoleTypeValues:
     Concepts characterizing the type of association formed by player and scoper
     when there is a recognized Affiliate role by which the two parties are
     related.
-    
-    
+
+
                                Examples: Business Partner, Business Associate,
     Colleague
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
+
     AffiliationRoleType = MilitaryRoleType("_AffiliationRoleType")
     """
     AssignedRoleType
@@ -99,7 +91,9 @@ class MilitaryRoleTypeValues:
     Class, etc.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    MedicationGeneralizationRoleType = MilitaryRoleType("_MedicationGeneralizationRoleType")
+    MedicationGeneralizationRoleType = MilitaryRoleType(
+        "_MedicationGeneralizationRoleType"
+    )
     """
     Types of membership for Role code "MBR"
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
@@ -158,7 +152,9 @@ class MilitaryRoleTypeValues:
     semantic comparability.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    PolicyOrProgramCoverageRoleType = MilitaryRoleType("_PolicyOrProgramCoverageRoleType")
+    PolicyOrProgramCoverageRoleType = MilitaryRoleType(
+        "_PolicyOrProgramCoverageRoleType"
+    )
     """
     Specifies the administrative functionality within a formal experimental design
     for which the ResearchSubject role was established.  Examples: screening -
@@ -173,7 +169,9 @@ class MilitaryRoleTypeValues:
     road side, work site, community location) in which services are delivered.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    ServiceDeliveryLocationRoleType = MilitaryRoleType("_ServiceDeliveryLocationRoleType")
+    ServiceDeliveryLocationRoleType = MilitaryRoleType(
+        "_ServiceDeliveryLocationRoleType"
+    )
     """
     SpecimenRoleType
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml

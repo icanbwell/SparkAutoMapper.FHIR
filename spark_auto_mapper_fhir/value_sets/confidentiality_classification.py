@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -26,13 +16,16 @@ class ConfidentialityClassification(GenericTypeCode):
     attribute in accordance with the definition for concept domain
     "Confidentiality".
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     """
     http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification"
+    codeset: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-Confidentiality
     """
@@ -46,6 +39,7 @@ class ConfidentialityClassificationValues:
     with the definition for concept domain "Confidentiality".
     From: http://terminology.hl7.org/CodeSystem/v3-Confidentiality in v3-codesystems.xml
     """
+
     Confidentiality = ConfidentialityClassification("_Confidentiality")
     """
     Description: By accessing subject / role and relationship based  rights
@@ -57,7 +51,9 @@ class ConfidentialityClassificationValues:
     confidentiality codes under ActCode
     From: http://terminology.hl7.org/CodeSystem/v3-Confidentiality in v3-codesystems.xml
     """
-    ConfidentialityByAccessKind = ConfidentialityClassification("_ConfidentialityByAccessKind")
+    ConfidentialityByAccessKind = ConfidentialityClassification(
+        "_ConfidentialityByAccessKind"
+    )
     """
     Description: By information type, only for service catalog entries (multiples
     allowed). Not to be used with actual patient data!
@@ -67,7 +63,9 @@ class ConfidentialityClassificationValues:
     confidentiality codes under ActCode
     From: http://terminology.hl7.org/CodeSystem/v3-Confidentiality in v3-codesystems.xml
     """
-    ConfidentialityByInfoType = ConfidentialityClassification("_ConfidentialityByInfoType")
+    ConfidentialityByInfoType = ConfidentialityClassification(
+        "_ConfidentialityByInfoType"
+    )
     """
     Description: Modifiers of role based access rights  (multiple allowed)
     
@@ -76,4 +74,6 @@ class ConfidentialityClassificationValues:
     confidentiality codes under ActCode
     From: http://terminology.hl7.org/CodeSystem/v3-Confidentiality in v3-codesystems.xml
     """
-    ConfidentialityModifiers = ConfidentialityClassification("_ConfidentialityModifiers")
+    ConfidentialityModifiers = ConfidentialityClassification(
+        "_ConfidentialityModifiers"
+    )

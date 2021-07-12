@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -25,13 +15,16 @@ class ActRelationshipHasComponent(GenericTypeCode):
          A collection of sub-services as steps or subtasks performed for the source
     service. Services may be performed sequentially or concurrently.
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     """
     http://terminology.hl7.org/ValueSet/v3-ActRelationshipHasComponent
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ActRelationshipHasComponent"
+    codeset: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-ActRelationshipHasComponent"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType
     """
@@ -41,12 +34,13 @@ class ActRelationshipHasComponent(GenericTypeCode):
 class ActRelationshipHasComponentValues:
     """
     Description: A directed association between a source Act and a target Act.
-    
-    
+
+
                                Usage Note: This code should never be transmitted
     in an instance as the value of ActRelationship.typeCode (attribute)
     From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType in v3-codesystems.xml
     """
+
     ActRelationshipType = ActRelationshipHasComponent("ART")
     """
     curative indication

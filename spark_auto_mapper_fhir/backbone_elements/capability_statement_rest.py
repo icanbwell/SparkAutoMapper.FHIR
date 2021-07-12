@@ -1,17 +1,8 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
-from spark_auto_mapper_fhir.resources.resource import Resource
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -22,21 +13,41 @@ if TYPE_CHECKING:
     # id_ (string)
     # extension (Extension)
     from spark_auto_mapper_fhir.complex_types.extension import Extension
+
     # modifierExtension (Extension)
     # mode (RestfulCapabilityMode)
-    from spark_auto_mapper_fhir.value_sets.restful_capability_mode import RestfulCapabilityModeCode
+    from spark_auto_mapper_fhir.value_sets.restful_capability_mode import (
+        RestfulCapabilityModeCode,
+    )
+
     # documentation (markdown)
     from spark_auto_mapper_fhir.fhir_types.markdown import FhirMarkdown
+
     # security (CapabilityStatement.Security)
-    from spark_auto_mapper_fhir.backbone_elements.capability_statement_security import CapabilityStatementSecurity
+    from spark_auto_mapper_fhir.backbone_elements.capability_statement_security import (
+        CapabilityStatementSecurity,
+    )
+
     # resource (CapabilityStatement.Resource)
-    from spark_auto_mapper_fhir.backbone_elements.capability_statement_resource import CapabilityStatementResource
+    from spark_auto_mapper_fhir.backbone_elements.capability_statement_resource import (
+        CapabilityStatementResource,
+    )
+
     # interaction (CapabilityStatement.Interaction1)
-    from spark_auto_mapper_fhir.backbone_elements.capability_statement_interaction1 import CapabilityStatementInteraction1
+    from spark_auto_mapper_fhir.backbone_elements.capability_statement_interaction1 import (
+        CapabilityStatementInteraction1,
+    )
+
     # searchParam (CapabilityStatement.SearchParam)
-    from spark_auto_mapper_fhir.backbone_elements.capability_statement_search_param import CapabilityStatementSearchParam
+    from spark_auto_mapper_fhir.backbone_elements.capability_statement_search_param import (
+        CapabilityStatementSearchParam,
+    )
+
     # operation (CapabilityStatement.Operation)
-    from spark_auto_mapper_fhir.backbone_elements.capability_statement_operation import CapabilityStatementOperation
+    from spark_auto_mapper_fhir.backbone_elements.capability_statement_operation import (
+        CapabilityStatementOperation,
+    )
+
     # compartment (canonical)
     from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
 
@@ -48,65 +59,66 @@ class CapabilityStatementRest(FhirBackboneElementBase):
     CapabilityStatement.Rest
         A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
-        id_: Optional[FhirString ] = None,
-        extension: Optional[FhirList[Extension ]] = None,
-        modifierExtension: Optional[FhirList[Extension ]] = None,
-        mode: RestfulCapabilityModeCode ,
-        documentation: Optional[FhirMarkdown ] = None,
-        security: Optional[CapabilityStatementSecurity ] = None,
-        resource: Optional[FhirList[CapabilityStatementResource ]] = None,
-        interaction: Optional[FhirList[CapabilityStatementInteraction1 ]] = None,
-        searchParam: Optional[FhirList[CapabilityStatementSearchParam ]] = None,
-        operation: Optional[FhirList[CapabilityStatementOperation ]] = None,
-        compartment: Optional[FhirList[FhirCanonical ]] = None,
+        id_: Optional[FhirString] = None,
+        extension: Optional[FhirList[Extension]] = None,
+        modifierExtension: Optional[FhirList[Extension]] = None,
+        mode: RestfulCapabilityModeCode,
+        documentation: Optional[FhirMarkdown] = None,
+        security: Optional[CapabilityStatementSecurity] = None,
+        resource: Optional[FhirList[CapabilityStatementResource]] = None,
+        interaction: Optional[FhirList[CapabilityStatementInteraction1]] = None,
+        searchParam: Optional[FhirList[CapabilityStatementSearchParam]] = None,
+        operation: Optional[FhirList[CapabilityStatementOperation]] = None,
+        compartment: Optional[FhirList[FhirCanonical]] = None,
     ) -> None:
         """
-        A Capability Statement documents a set of capabilities (behaviors) of a FHIR
-    Server for a particular version of FHIR that may be used as a statement of
-    actual server functionality or a statement of required or desired server
-    implementation.
+            A Capability Statement documents a set of capabilities (behaviors) of a FHIR
+        Server for a particular version of FHIR that may be used as a statement of
+        actual server functionality or a statement of required or desired server
+        implementation.
 
-        :param id_: None
-        :param extension: May be used to represent additional information that is not part of the basic
-    definition of the element. To make the use of extensions safe and manageable,
-    there is a strict set of governance  applied to the definition and use of
-    extensions. Though any implementer can define an extension, there is a set of
-    requirements that SHALL be met as part of the definition of the extension.
-        :param modifierExtension: May be used to represent additional information that is not part of the basic
-    definition of the element and that modifies the understanding of the element
-    in which it is contained and/or the understanding of the containing element's
-    descendants. Usually modifier elements provide negation or qualification. To
-    make the use of extensions safe and manageable, there is a strict set of
-    governance applied to the definition and use of extensions. Though any
-    implementer can define an extension, there is a set of requirements that SHALL
-    be met as part of the definition of the extension. Applications processing a
-    resource are required to check for modifier extensions.
-    
-    Modifier extensions SHALL NOT change the meaning of any elements on Resource
-    or DomainResource (including cannot change the meaning of modifierExtension
-    itself).
-        :param mode: Identifies whether this portion of the statement is describing the ability to
-    initiate or receive restful operations.
-        :param documentation: Information about the system's restful capabilities that apply across all
-    applications, such as security.
-        :param security: Information about security implementation from an interface perspective - what
-    a client needs to know.
-        :param resource: A specification of the restful capabilities of the solution for a specific
-    resource type.
-        :param interaction: A specification of restful operations supported by the system.
-        :param searchParam: Search parameters that are supported for searching all resources for
-    implementations to support and/or make use of - either references to ones
-    defined in the specification, or additional ones defined for/by the
-    implementation.
-        :param operation: Definition of an operation or a named query together with its parameters and
-    their meaning and type.
-        :param compartment: An absolute URI which is a reference to the definition of a compartment that
-    the system supports. The reference is to a CompartmentDefinition resource by
-    its canonical URL .
+            :param id_: None
+            :param extension: May be used to represent additional information that is not part of the basic
+        definition of the element. To make the use of extensions safe and manageable,
+        there is a strict set of governance  applied to the definition and use of
+        extensions. Though any implementer can define an extension, there is a set of
+        requirements that SHALL be met as part of the definition of the extension.
+            :param modifierExtension: May be used to represent additional information that is not part of the basic
+        definition of the element and that modifies the understanding of the element
+        in which it is contained and/or the understanding of the containing element's
+        descendants. Usually modifier elements provide negation or qualification. To
+        make the use of extensions safe and manageable, there is a strict set of
+        governance applied to the definition and use of extensions. Though any
+        implementer can define an extension, there is a set of requirements that SHALL
+        be met as part of the definition of the extension. Applications processing a
+        resource are required to check for modifier extensions.
+
+        Modifier extensions SHALL NOT change the meaning of any elements on Resource
+        or DomainResource (including cannot change the meaning of modifierExtension
+        itself).
+            :param mode: Identifies whether this portion of the statement is describing the ability to
+        initiate or receive restful operations.
+            :param documentation: Information about the system's restful capabilities that apply across all
+        applications, such as security.
+            :param security: Information about security implementation from an interface perspective - what
+        a client needs to know.
+            :param resource: A specification of the restful capabilities of the solution for a specific
+        resource type.
+            :param interaction: A specification of restful operations supported by the system.
+            :param searchParam: Search parameters that are supported for searching all resources for
+        implementations to support and/or make use of - either references to ones
+        defined in the specification, or additional ones defined for/by the
+        implementation.
+            :param operation: Definition of an operation or a named query together with its parameters and
+        their meaning and type.
+            :param compartment: An absolute URI which is a reference to the definition of a compartment that
+        the system supports. The reference is to a CompartmentDefinition resource by
+        its canonical URL .
         """
         super().__init__(
             id_=id_,

@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -25,6 +15,7 @@ class QuestionnaireItemUIControlCodesCode(GenericTypeCode):
         Starter set of user interface control/display mechanisms that might be used
     when rendering an item in a questionnaire.
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -39,6 +30,7 @@ class QuestionnaireItemUIControlCodesCodeValues:
     UI controls relevant to organizing groups of questions
     From: http://hl7.org/fhir/questionnaire-item-control in valuesets.xml
     """
+
     Group = QuestionnaireItemUIControlCodesCode("group")
     """
     UI controls relevant to rendering questionnaire text items

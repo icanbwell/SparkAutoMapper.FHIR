@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -24,6 +14,7 @@ class ActPharmacySupplyType(GenericTypeCode):
     From: http://terminology.hl7.org/ValueSet/v3-ActPharmacySupplyType in v3-codesystems.xml
          Identifies types of dispensing events
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -45,6 +36,7 @@ class ActPharmacySupplyTypeValues:
     Cash.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
+
     ActAccountCode = ActPharmacySupplyType("_ActAccountCode")
     """
     Includes coded responses that will occur as a result of the adjudication of an
@@ -58,7 +50,9 @@ class ActPharmacySupplyTypeValues:
     information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActAdjudicationResultActionCode = ActPharmacySupplyType("_ActAdjudicationResultActionCode")
+    ActAdjudicationResultActionCode = ActPharmacySupplyType(
+        "_ActAdjudicationResultActionCode"
+    )
     """
     Definition:An identifying modifier code for healthcare interventions or
     procedures.
@@ -87,7 +81,9 @@ class ActPharmacySupplyTypeValues:
     claim.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActClaimAttachmentCategoryCode = ActPharmacySupplyType("_ActClaimAttachmentCategoryCode")
+    ActClaimAttachmentCategoryCode = ActPharmacySupplyType(
+        "_ActClaimAttachmentCategoryCode"
+    )
     """
     Definition: The type of consent directive, e.g., to consent or dissent to
     collect, access, or use in specific ways within an EHRS or for health
@@ -100,7 +96,9 @@ class ActPharmacySupplyTypeValues:
     Constrains the ActCode to the domain of Container Registration
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActContainerRegistrationCode = ActPharmacySupplyType("_ActContainerRegistrationCode")
+    ActContainerRegistrationCode = ActPharmacySupplyType(
+        "_ActContainerRegistrationCode"
+    )
     """
     An observation form that determines parameters or attributes of an Act.
     Examples are the settings of a ventilator machine as parameters of a
@@ -141,7 +139,9 @@ class ActPharmacySupplyTypeValues:
     Codes dealing with the management of Detected Issue observations
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActDetectedIssueManagementCode = ActPharmacySupplyType("_ActDetectedIssueManagementCode")
+    ActDetectedIssueManagementCode = ActPharmacySupplyType(
+        "_ActDetectedIssueManagementCode"
+    )
     """
     Concepts that identify the type or nature of exposure interaction.  Examples
     include "household", "care giver", "intimate partner", "common space", "common
@@ -172,7 +172,9 @@ class ActPharmacySupplyTypeValues:
     patient health information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActInformationAccessContextCode = ActPharmacySupplyType("_ActInformationAccessContextCode")
+    ActInformationAccessContextCode = ActPharmacySupplyType(
+        "_ActInformationAccessContextCode"
+    )
     """
     Definition:Indicates the set of information types which may be manipulated or
     referenced, such as for recommending access restrictions.
@@ -193,7 +195,9 @@ class ActPharmacySupplyTypeValues:
     providers and payors.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActInvoiceElementSummaryCode = ActPharmacySupplyType("_ActInvoiceElementSummaryCode")
+    ActInvoiceElementSummaryCode = ActPharmacySupplyType(
+        "_ActInvoiceElementSummaryCode"
+    )
     """
     Includes coded responses that will occur as a result of the adjudication of an
     electronic invoice at a summary level and provides guidance on interpretation
@@ -216,7 +220,9 @@ class ActPharmacySupplyTypeValues:
     other than diagnosis and symptoms.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActNonObservationIndicationCode = ActPharmacySupplyType("_ActNonObservationIndicationCode")
+    ActNonObservationIndicationCode = ActPharmacySupplyType(
+        "_ActNonObservationIndicationCode"
+    )
     """
     Identifies the type of verification investigation being undertaken with
     respect to the subject of the verification activity.
@@ -264,7 +270,9 @@ class ActPharmacySupplyTypeValues:
     National Provider Data Bank, Health Integrity Protection Data Base (HIPDB)
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActObservationVerification = ActPharmacySupplyType("_ActObservationVerificationType")
+    ActObservationVerification = ActPharmacySupplyType(
+        "_ActObservationVerificationType"
+    )
     """
     Code identifying the method or the movement of payment instructions.
     
@@ -306,7 +314,9 @@ class ActPharmacySupplyTypeValues:
     associated role or entity to carry such information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActSubstanceAdministrationCode = ActPharmacySupplyType("_ActSubstanceAdministrationCode")
+    ActSubstanceAdministrationCode = ActPharmacySupplyType(
+        "_ActSubstanceAdministrationCode"
+    )
     """
     Description: A task or action that a user may perform in a clinical
     information system (e.g., medication order entry, laboratory test results

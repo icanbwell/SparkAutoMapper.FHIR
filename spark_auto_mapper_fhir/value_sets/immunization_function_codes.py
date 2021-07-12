@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -27,6 +17,7 @@ class ImmunizationFunctionCodesCode(GenericTypeCode):
     support describing the function a practitioner or organization may play in the
     immunization event. This value set is provided as a suggestive example.
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -40,6 +31,7 @@ class ImmunizationFunctionCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
     """
+
     Admitting = ImmunizationFunctionCodesCode("AD")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
@@ -68,7 +60,9 @@ class ImmunizationFunctionCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
     """
-    EnteringProvider_probablyNotTheSameAsTranscriptionist_ = ImmunizationFunctionCodesCode("EP")
+    EnteringProvider_probablyNotTheSameAsTranscriptionist_ = (
+        ImmunizationFunctionCodesCode("EP")
+    )
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
     """
@@ -88,7 +82,9 @@ class ImmunizationFunctionCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
     """
-    Pharmacist_notSureHowToDissectPharmacist_TreatmentSupplier_sVerifierID_ = ImmunizationFunctionCodesCode("PH")
+    Pharmacist_notSureHowToDissectPharmacist_TreatmentSupplier_sVerifierID_ = (
+        ImmunizationFunctionCodesCode("PH")
+    )
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
     """
@@ -124,11 +120,15 @@ class ImmunizationFunctionCodesCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
     """
-    VerifyingPharmaceuticalSupplier_notSureHowToDissectPharmacist_TreatmentSupplier_sVerifierID_ = ImmunizationFunctionCodesCode("VPS")
+    VerifyingPharmaceuticalSupplier_notSureHowToDissectPharmacist_TreatmentSupplier_sVerifierID_ = ImmunizationFunctionCodesCode(
+        "VPS"
+    )
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
     """
-    VerifyingTreatmentSupplier_notSureHowToDissectPharmacist_TreatmentSupplier_sVerifierID_ = ImmunizationFunctionCodesCode("VTS")
+    VerifyingTreatmentSupplier_notSureHowToDissectPharmacist_TreatmentSupplier_sVerifierID_ = ImmunizationFunctionCodesCode(
+        "VTS"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/immunization-function in valuesets.xml
     """

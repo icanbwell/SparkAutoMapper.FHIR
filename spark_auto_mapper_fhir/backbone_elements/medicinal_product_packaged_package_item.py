@@ -1,17 +1,8 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
-from spark_auto_mapper_fhir.resources.resource import Resource
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -22,17 +13,22 @@ if TYPE_CHECKING:
     # id_ (string)
     # extension (Extension)
     from spark_auto_mapper_fhir.complex_types.extension import Extension
+
     # modifierExtension (Extension)
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # End Import for References for type_
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
     # End Import for CodeableConcept for type_
     # quantity (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
+
     # material (CodeableConcept)
     # End Import for References for material
     # Import for CodeableConcept for material
@@ -43,19 +39,30 @@ if TYPE_CHECKING:
     # End Import for CodeableConcept for alternateMaterial
     # device (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for device
     from spark_auto_mapper_fhir.resources.device_definition import DeviceDefinition
+
     # manufacturedItem (Reference)
     # Imports for References for manufacturedItem
-    from spark_auto_mapper_fhir.resources.medicinal_product_manufactured import MedicinalProductManufactured
+    from spark_auto_mapper_fhir.resources.medicinal_product_manufactured import (
+        MedicinalProductManufactured,
+    )
+
     # physicalCharacteristics (ProdCharacteristic)
-    from spark_auto_mapper_fhir.backbone_elements.prod_characteristic import ProdCharacteristic
+    from spark_auto_mapper_fhir.backbone_elements.prod_characteristic import (
+        ProdCharacteristic,
+    )
+
     # otherCharacteristics (CodeableConcept)
     # End Import for References for otherCharacteristics
     # Import for CodeableConcept for otherCharacteristics
     # End Import for CodeableConcept for otherCharacteristics
     # shelfLifeStorage (ProductShelfLife)
-    from spark_auto_mapper_fhir.backbone_elements.product_shelf_life import ProductShelfLife
+    from spark_auto_mapper_fhir.backbone_elements.product_shelf_life import (
+        ProductShelfLife,
+    )
+
     # manufacturer (Reference)
     # Imports for References for manufacturer
     from spark_auto_mapper_fhir.resources.organization import Organization
@@ -68,61 +75,66 @@ class MedicinalProductPackagedPackageItem(FhirBackboneElementBase):
     MedicinalProductPackaged.PackageItem
         A medicinal product in a container or package.
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
-        id_: Optional[FhirString ] = None,
-        extension: Optional[FhirList[Extension ]] = None,
-        modifierExtension: Optional[FhirList[Extension ]] = None,
-        identifier: Optional[FhirList[Identifier ]] = None,
-        type_: CodeableConcept[GenericTypeCode] ,
-        quantity: Quantity ,
-        material: Optional[FhirList[CodeableConcept[GenericTypeCode] ]] = None,
-        alternateMaterial: Optional[FhirList[CodeableConcept[GenericTypeCode] ]] = None,
-        device: Optional[FhirList[Reference [Union[DeviceDefinition]]]] = None,
-        manufacturedItem: Optional[FhirList[Reference [Union[MedicinalProductManufactured]]]] = None,
-        packageItem: Optional[FhirList[MedicinalProductPackagedPackageItem ]] = None,
-        physicalCharacteristics: Optional[ProdCharacteristic ] = None,
-        otherCharacteristics: Optional[FhirList[CodeableConcept[GenericTypeCode] ]] = None,
-        shelfLifeStorage: Optional[FhirList[ProductShelfLife ]] = None,
-        manufacturer: Optional[FhirList[Reference [Union[Organization]]]] = None,
+        id_: Optional[FhirString] = None,
+        extension: Optional[FhirList[Extension]] = None,
+        modifierExtension: Optional[FhirList[Extension]] = None,
+        identifier: Optional[FhirList[Identifier]] = None,
+        type_: CodeableConcept[GenericTypeCode],
+        quantity: Quantity,
+        material: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
+        alternateMaterial: Optional[FhirList[CodeableConcept[GenericTypeCode]]] = None,
+        device: Optional[FhirList[Reference[Union[DeviceDefinition]]]] = None,
+        manufacturedItem: Optional[
+            FhirList[Reference[Union[MedicinalProductManufactured]]]
+        ] = None,
+        packageItem: Optional[FhirList[MedicinalProductPackagedPackageItem]] = None,
+        physicalCharacteristics: Optional[ProdCharacteristic] = None,
+        otherCharacteristics: Optional[
+            FhirList[CodeableConcept[GenericTypeCode]]
+        ] = None,
+        shelfLifeStorage: Optional[FhirList[ProductShelfLife]] = None,
+        manufacturer: Optional[FhirList[Reference[Union[Organization]]]] = None,
     ) -> None:
         """
-        A medicinal product in a container or package.
+            A medicinal product in a container or package.
 
-        :param id_: None
-        :param extension: May be used to represent additional information that is not part of the basic
-    definition of the element. To make the use of extensions safe and manageable,
-    there is a strict set of governance  applied to the definition and use of
-    extensions. Though any implementer can define an extension, there is a set of
-    requirements that SHALL be met as part of the definition of the extension.
-        :param modifierExtension: May be used to represent additional information that is not part of the basic
-    definition of the element and that modifies the understanding of the element
-    in which it is contained and/or the understanding of the containing element's
-    descendants. Usually modifier elements provide negation or qualification. To
-    make the use of extensions safe and manageable, there is a strict set of
-    governance applied to the definition and use of extensions. Though any
-    implementer can define an extension, there is a set of requirements that SHALL
-    be met as part of the definition of the extension. Applications processing a
-    resource are required to check for modifier extensions.
-    
-    Modifier extensions SHALL NOT change the meaning of any elements on Resource
-    or DomainResource (including cannot change the meaning of modifierExtension
-    itself).
-        :param identifier: Including possibly Data Carrier Identifier.
-        :param type_: The physical type of the container of the medicine.
-        :param quantity: The quantity of this package in the medicinal product, at the current level of
-    packaging. The outermost is always 1.
-        :param material: Material type of the package item.
-        :param alternateMaterial: A possible alternate material for the packaging.
-        :param device: A device accompanying a medicinal product.
-        :param manufacturedItem: The manufactured item as contained in the packaged medicinal product.
-        :param packageItem: Allows containers within containers.
-        :param physicalCharacteristics: Dimensions, color etc.
-        :param otherCharacteristics: Other codeable characteristics.
-        :param shelfLifeStorage: Shelf Life and storage information.
-        :param manufacturer: Manufacturer of this Package Item.
+            :param id_: None
+            :param extension: May be used to represent additional information that is not part of the basic
+        definition of the element. To make the use of extensions safe and manageable,
+        there is a strict set of governance  applied to the definition and use of
+        extensions. Though any implementer can define an extension, there is a set of
+        requirements that SHALL be met as part of the definition of the extension.
+            :param modifierExtension: May be used to represent additional information that is not part of the basic
+        definition of the element and that modifies the understanding of the element
+        in which it is contained and/or the understanding of the containing element's
+        descendants. Usually modifier elements provide negation or qualification. To
+        make the use of extensions safe and manageable, there is a strict set of
+        governance applied to the definition and use of extensions. Though any
+        implementer can define an extension, there is a set of requirements that SHALL
+        be met as part of the definition of the extension. Applications processing a
+        resource are required to check for modifier extensions.
+
+        Modifier extensions SHALL NOT change the meaning of any elements on Resource
+        or DomainResource (including cannot change the meaning of modifierExtension
+        itself).
+            :param identifier: Including possibly Data Carrier Identifier.
+            :param type_: The physical type of the container of the medicine.
+            :param quantity: The quantity of this package in the medicinal product, at the current level of
+        packaging. The outermost is always 1.
+            :param material: Material type of the package item.
+            :param alternateMaterial: A possible alternate material for the packaging.
+            :param device: A device accompanying a medicinal product.
+            :param manufacturedItem: The manufactured item as contained in the packaged medicinal product.
+            :param packageItem: Allows containers within containers.
+            :param physicalCharacteristics: Dimensions, color etc.
+            :param otherCharacteristics: Other codeable characteristics.
+            :param shelfLifeStorage: Shelf Life and storage information.
+            :param manufacturer: Manufacturer of this Package Item.
         """
         super().__init__(
             id_=id_,

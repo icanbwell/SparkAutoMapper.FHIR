@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -28,17 +18,22 @@ class ObservationInterpretation(GenericTypeCode):
     set is intended to be for ANY use where coded representation of an
     interpretation is needed.
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     """
     http://terminology.hl7.org/ValueSet/v3-ObservationInterpretation
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ObservationInterpretation"
+    codeset: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-ObservationInterpretation"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
+    codeset_2: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
+    )
 
 
 class ObservationInterpretationValues:
@@ -47,32 +42,43 @@ class ObservationInterpretationValues:
     "negative", "carrier", "responsive", etc.
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation in v3-codesystems.xml
     """
-    GeneticObservationInterpretation = ObservationInterpretation("_GeneticObservationInterpretation")
+
+    GeneticObservationInterpretation = ObservationInterpretation(
+        "_GeneticObservationInterpretation"
+    )
     """
     Interpretations of change of quantity and/or severity. At most one of B or W
     and one of U or D allowed.
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation in v3-codesystems.xml
     """
-    ObservationInterpretationChange = ObservationInterpretation("_ObservationInterpretationChange")
+    ObservationInterpretationChange = ObservationInterpretation(
+        "_ObservationInterpretationChange"
+    )
     """
     Technical exceptions resulting in the inability to provide an interpretation.
     At most one allowed. Does not imply normality or severity.
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation in v3-codesystems.xml
     """
-    ObservationInterpretationExceptions = ObservationInterpretation("_ObservationInterpretationExceptions")
+    ObservationInterpretationExceptions = ObservationInterpretation(
+        "_ObservationInterpretationExceptions"
+    )
     """
     Interpretation of normality or degree of abnormality (including critical or
     "alert" level). Concepts in this category are mutually exclusive, i.e., at
     most one is allowed.
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation in v3-codesystems.xml
     """
-    ObservationInterpretationNormality = ObservationInterpretation("_ObservationInterpretationNormality")
+    ObservationInterpretationNormality = ObservationInterpretation(
+        "_ObservationInterpretationNormality"
+    )
     """
     Interpretations of anti-microbial susceptibility testing results
     (microbiology). At most one allowed.
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation in v3-codesystems.xml
     """
-    ObservationInterpretationSusceptibility = ObservationInterpretation("_ObservationInterpretationSusceptibility")
+    ObservationInterpretationSusceptibility = ObservationInterpretation(
+        "_ObservationInterpretationSusceptibility"
+    )
     """
     The observation/test result is interpreted as being outside the inclusion
     range for a particular protocol within which the result is being reported.
@@ -120,14 +126,18 @@ class ObservationInterpretationValues:
     observation.
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation in v3-codesystems.xml
     """
-    ObservationInterpretationDetection = ObservationInterpretation("ObservationInterpretationDetection")
+    ObservationInterpretationDetection = ObservationInterpretation(
+        "ObservationInterpretationDetection"
+    )
     """
     Interpretation of the observed result taking into account additional
     information (contraindicators) about the patient's situation. Concepts in this
     category are mutually exclusive, i.e., at most one is allowed.
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation in v3-codesystems.xml
     """
-    ObservationInterpretationExpectation = ObservationInterpretation("ObservationInterpretationExpectation")
+    ObservationInterpretationExpectation = ObservationInterpretation(
+        "ObservationInterpretationExpectation"
+    )
     """
     Interpretation qualifiers in separate OBX segments
     
@@ -143,4 +153,6 @@ class ObservationInterpretationValues:
     component / analyte with the reagent in the performed laboratory test.
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation in v3-codesystems.xml
     """
-    ReactivityObservationInterpretation = ObservationInterpretation("ReactivityObservationInterpretation")
+    ReactivityObservationInterpretation = ObservationInterpretation(
+        "ReactivityObservationInterpretation"
+    )

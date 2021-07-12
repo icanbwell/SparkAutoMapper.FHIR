@@ -1,16 +1,8 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
-from spark_auto_mapper_fhir.resources.resource import Resource
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
@@ -22,16 +14,23 @@ if TYPE_CHECKING:
     # id_ (string)
     # extension (Extension)
     from spark_auto_mapper_fhir.complex_types.extension import Extension
+
     # modifierExtension (Extension)
     # link (Bundle.Link)
     from spark_auto_mapper_fhir.backbone_elements.bundle_link import BundleLink
+
     # fullUrl (uri)
     # resource (ResourceContainer)
-    from spark_auto_mapper_fhir.complex_types.resource_container import ResourceContainer
+    from spark_auto_mapper_fhir.complex_types.resource_container import (
+        ResourceContainer,
+    )
+
     # search (Bundle.Search)
     from spark_auto_mapper_fhir.backbone_elements.bundle_search import BundleSearch
+
     # request (Bundle.Request)
     from spark_auto_mapper_fhir.backbone_elements.bundle_request import BundleRequest
+
     # response (Bundle.Response)
     from spark_auto_mapper_fhir.backbone_elements.bundle_response import BundleResponse
 
@@ -43,60 +42,61 @@ class BundleEntry(FhirBackboneElementBase):
     Bundle.Entry
         A container for a collection of resources.
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
-        id_: Optional[FhirString ] = None,
-        extension: Optional[FhirList[Extension ]] = None,
-        modifierExtension: Optional[FhirList[Extension ]] = None,
-        link: Optional[FhirList[BundleLink ]] = None,
-        fullUrl: Optional[FhirUri ] = None,
-        resource: Optional[ResourceContainer ] = None,
-        search: Optional[BundleSearch ] = None,
-        request: Optional[BundleRequest ] = None,
-        response: Optional[BundleResponse ] = None,
+        id_: Optional[FhirString] = None,
+        extension: Optional[FhirList[Extension]] = None,
+        modifierExtension: Optional[FhirList[Extension]] = None,
+        link: Optional[FhirList[BundleLink]] = None,
+        fullUrl: Optional[FhirUri] = None,
+        resource: Optional[ResourceContainer] = None,
+        search: Optional[BundleSearch] = None,
+        request: Optional[BundleRequest] = None,
+        response: Optional[BundleResponse] = None,
     ) -> None:
         """
-        A container for a collection of resources.
+            A container for a collection of resources.
 
-        :param id_: None
-        :param extension: May be used to represent additional information that is not part of the basic
-    definition of the element. To make the use of extensions safe and manageable,
-    there is a strict set of governance  applied to the definition and use of
-    extensions. Though any implementer can define an extension, there is a set of
-    requirements that SHALL be met as part of the definition of the extension.
-        :param modifierExtension: May be used to represent additional information that is not part of the basic
-    definition of the element and that modifies the understanding of the element
-    in which it is contained and/or the understanding of the containing element's
-    descendants. Usually modifier elements provide negation or qualification. To
-    make the use of extensions safe and manageable, there is a strict set of
-    governance applied to the definition and use of extensions. Though any
-    implementer can define an extension, there is a set of requirements that SHALL
-    be met as part of the definition of the extension. Applications processing a
-    resource are required to check for modifier extensions.
-    
-    Modifier extensions SHALL NOT change the meaning of any elements on Resource
-    or DomainResource (including cannot change the meaning of modifierExtension
-    itself).
-        :param link: A series of links that provide context to this entry.
-        :param fullUrl: The Absolute URL for the resource.  The fullUrl SHALL NOT disagree with the id
-    in the resource - i.e. if the fullUrl is not a urn:uuid, the URL shall be
-    version-independent URL consistent with the Resource.id. The fullUrl is a
-    version independent reference to the resource. The fullUrl element SHALL have
-    a value except that:
-    * fullUrl can be empty on a POST (although it does not need to when specifying
-    a temporary id for reference in the bundle)
-    * Results from operations might involve resources that are not identified.
-        :param resource: The Resource for the entry. The purpose/meaning of the resource is determined
-    by the Bundle.type.
-        :param search: Information about the search process that lead to the creation of this entry.
-        :param request: Additional information about how this entry should be processed as part of a
-    transaction or batch.  For history, it shows how the entry was processed to
-    create the version contained in the entry.
-        :param response: Indicates the results of processing the corresponding 'request' entry in the
-    batch or transaction being responded to or what the results of an operation
-    where when returning history.
+            :param id_: None
+            :param extension: May be used to represent additional information that is not part of the basic
+        definition of the element. To make the use of extensions safe and manageable,
+        there is a strict set of governance  applied to the definition and use of
+        extensions. Though any implementer can define an extension, there is a set of
+        requirements that SHALL be met as part of the definition of the extension.
+            :param modifierExtension: May be used to represent additional information that is not part of the basic
+        definition of the element and that modifies the understanding of the element
+        in which it is contained and/or the understanding of the containing element's
+        descendants. Usually modifier elements provide negation or qualification. To
+        make the use of extensions safe and manageable, there is a strict set of
+        governance applied to the definition and use of extensions. Though any
+        implementer can define an extension, there is a set of requirements that SHALL
+        be met as part of the definition of the extension. Applications processing a
+        resource are required to check for modifier extensions.
+
+        Modifier extensions SHALL NOT change the meaning of any elements on Resource
+        or DomainResource (including cannot change the meaning of modifierExtension
+        itself).
+            :param link: A series of links that provide context to this entry.
+            :param fullUrl: The Absolute URL for the resource.  The fullUrl SHALL NOT disagree with the id
+        in the resource - i.e. if the fullUrl is not a urn:uuid, the URL shall be
+        version-independent URL consistent with the Resource.id. The fullUrl is a
+        version independent reference to the resource. The fullUrl element SHALL have
+        a value except that:
+        * fullUrl can be empty on a POST (although it does not need to when specifying
+        a temporary id for reference in the bundle)
+        * Results from operations might involve resources that are not identified.
+            :param resource: The Resource for the entry. The purpose/meaning of the resource is determined
+        by the Bundle.type.
+            :param search: Information about the search process that lead to the creation of this entry.
+            :param request: Additional information about how this entry should be processed as part of a
+        transaction or batch.  For history, it shows how the entry was processed to
+        create the version contained in the entry.
+            :param response: Indicates the results of processing the corresponding 'request' entry in the
+        batch or transaction being responded to or what the results of an operation
+        where when returning history.
         """
         super().__init__(
             id_=id_,

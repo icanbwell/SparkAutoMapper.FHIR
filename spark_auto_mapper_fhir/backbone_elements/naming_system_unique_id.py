@@ -1,17 +1,9 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
-from spark_auto_mapper_fhir.resources.resource import Resource
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -22,9 +14,13 @@ if TYPE_CHECKING:
     # id_ (string)
     # extension (Extension)
     from spark_auto_mapper_fhir.complex_types.extension import Extension
+
     # modifierExtension (Extension)
     # type_ (NamingSystemIdentifierType)
-    from spark_auto_mapper_fhir.value_sets.naming_system_identifier_type import NamingSystemIdentifierTypeCode
+    from spark_auto_mapper_fhir.value_sets.naming_system_identifier_type import (
+        NamingSystemIdentifierTypeCode,
+    )
+
     # value (string)
     # preferred (boolean)
     # comment (string)
@@ -39,51 +35,52 @@ class NamingSystemUniqueId(FhirBackboneElementBase):
     NamingSystem.UniqueId
         A curated namespace that issues unique symbols within that namespace for the identification of concepts, people, devices, etc.  Represents a "System" used within the Identifier and Coding data types.
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
-        id_: Optional[FhirString ] = None,
-        extension: Optional[FhirList[Extension ]] = None,
-        modifierExtension: Optional[FhirList[Extension ]] = None,
-        type_: NamingSystemIdentifierTypeCode ,
-        value: FhirString ,
-        preferred: Optional[FhirBoolean ] = None,
-        comment: Optional[FhirString ] = None,
-        period: Optional[Period ] = None,
+        id_: Optional[FhirString] = None,
+        extension: Optional[FhirList[Extension]] = None,
+        modifierExtension: Optional[FhirList[Extension]] = None,
+        type_: NamingSystemIdentifierTypeCode,
+        value: FhirString,
+        preferred: Optional[FhirBoolean] = None,
+        comment: Optional[FhirString] = None,
+        period: Optional[Period] = None,
     ) -> None:
         """
-        A curated namespace that issues unique symbols within that namespace for the
-    identification of concepts, people, devices, etc.  Represents a "System" used
-    within the Identifier and Coding data types.
+            A curated namespace that issues unique symbols within that namespace for the
+        identification of concepts, people, devices, etc.  Represents a "System" used
+        within the Identifier and Coding data types.
 
-        :param id_: None
-        :param extension: May be used to represent additional information that is not part of the basic
-    definition of the element. To make the use of extensions safe and manageable,
-    there is a strict set of governance  applied to the definition and use of
-    extensions. Though any implementer can define an extension, there is a set of
-    requirements that SHALL be met as part of the definition of the extension.
-        :param modifierExtension: May be used to represent additional information that is not part of the basic
-    definition of the element and that modifies the understanding of the element
-    in which it is contained and/or the understanding of the containing element's
-    descendants. Usually modifier elements provide negation or qualification. To
-    make the use of extensions safe and manageable, there is a strict set of
-    governance applied to the definition and use of extensions. Though any
-    implementer can define an extension, there is a set of requirements that SHALL
-    be met as part of the definition of the extension. Applications processing a
-    resource are required to check for modifier extensions.
-    
-    Modifier extensions SHALL NOT change the meaning of any elements on Resource
-    or DomainResource (including cannot change the meaning of modifierExtension
-    itself).
-        :param type_: Identifies the unique identifier scheme used for this particular identifier.
-        :param value: The string that should be sent over the wire to identify the code system or
-    identifier system.
-        :param preferred: Indicates whether this identifier is the "preferred" identifier of this type.
-        :param comment: Notes about the past or intended usage of this identifier.
-        :param period: Identifies the period of time over which this identifier is considered
-    appropriate to refer to the naming system.  Outside of this window, the
-    identifier might be non-deterministic.
+            :param id_: None
+            :param extension: May be used to represent additional information that is not part of the basic
+        definition of the element. To make the use of extensions safe and manageable,
+        there is a strict set of governance  applied to the definition and use of
+        extensions. Though any implementer can define an extension, there is a set of
+        requirements that SHALL be met as part of the definition of the extension.
+            :param modifierExtension: May be used to represent additional information that is not part of the basic
+        definition of the element and that modifies the understanding of the element
+        in which it is contained and/or the understanding of the containing element's
+        descendants. Usually modifier elements provide negation or qualification. To
+        make the use of extensions safe and manageable, there is a strict set of
+        governance applied to the definition and use of extensions. Though any
+        implementer can define an extension, there is a set of requirements that SHALL
+        be met as part of the definition of the extension. Applications processing a
+        resource are required to check for modifier extensions.
+
+        Modifier extensions SHALL NOT change the meaning of any elements on Resource
+        or DomainResource (including cannot change the meaning of modifierExtension
+        itself).
+            :param type_: Identifies the unique identifier scheme used for this particular identifier.
+            :param value: The string that should be sent over the wire to identify the code system or
+        identifier system.
+            :param preferred: Indicates whether this identifier is the "preferred" identifier of this type.
+            :param comment: Notes about the past or intended usage of this identifier.
+            :param period: Identifies the period of time over which this identifier is considered
+        appropriate to refer to the naming system.  Outside of this window, the
+        identifier might be non-deterministic.
         """
         super().__init__(
             id_=id_,

@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -27,6 +17,7 @@ class EnteralFormulaTypeCodesCode(GenericTypeCode):
     SCTID 470581016 (Enteral+supplement feeds hierarchy (product)) and is provided
     as a suggestive example.
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -40,6 +31,7 @@ class EnteralFormulaTypeCodesCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
     """
+
     AdultCriticalCareFormula = EnteralFormulaTypeCodesCode("443031000124106")
     """
     From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
@@ -104,7 +96,9 @@ class EnteralFormulaTypeCodesCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
     """
-    PediatricHighEnergyFormulaWithIncreasedFiber = EnteralFormulaTypeCodesCode("443501000124106")
+    PediatricHighEnergyFormulaWithIncreasedFiber = EnteralFormulaTypeCodesCode(
+        "443501000124106"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
     """
@@ -152,7 +146,9 @@ class EnteralFormulaTypeCodesCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
     """
-    DiabeticHighCalorieHighProteinEnteralFormulaWithFiber = EnteralFormulaTypeCodesCode("441601000124106")
+    DiabeticHighCalorieHighProteinEnteralFormulaWithFiber = EnteralFormulaTypeCodesCode(
+        "441601000124106"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
     """
@@ -164,7 +160,9 @@ class EnteralFormulaTypeCodesCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
     """
-    HydrolyzedPeptide_basedHighProteinEnteralFormula = EnteralFormulaTypeCodesCode("441671000124100")
+    HydrolyzedPeptide_basedHighProteinEnteralFormula = EnteralFormulaTypeCodesCode(
+        "441671000124100"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
     """

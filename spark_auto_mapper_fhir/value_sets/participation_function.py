@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -25,6 +15,7 @@ class ParticipationFunction(GenericTypeCode):
          This code is used to specify the exact function an actor had in a service in
     all necessary detail. This domain may include local extensions (CWE).
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -35,7 +26,9 @@ class ParticipationFunction(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction"
+    codeset_2: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction"
+    )
 
 
 class ParticipationFunctionValues:
@@ -44,13 +37,18 @@ class ParticipationFunctionValues:
     in a service in all necessary detail.
     From: http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction in v3-codesystems.xml
     """
-    AuthorizedParticipationFunction = ParticipationFunction("_AuthorizedParticipationFunction")
+
+    AuthorizedParticipationFunction = ParticipationFunction(
+        "_AuthorizedParticipationFunction"
+    )
     """
     Definition: Set of codes indicating the manner in which sponsors,
     underwriters, and payers participate in a policy or program.
     From: http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction in v3-codesystems.xml
     """
-    CoverageParticipationFunction = ParticipationFunction("_CoverageParticipationFunction")
+    CoverageParticipationFunction = ParticipationFunction(
+        "_CoverageParticipationFunction"
+    )
     """
     A physician who admitted a patient to a hospital or other care unit that is
     the context of this service.

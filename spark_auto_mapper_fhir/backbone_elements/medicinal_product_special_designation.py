@@ -1,17 +1,9 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
-from spark_auto_mapper_fhir.resources.resource import Resource
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -22,14 +14,18 @@ if TYPE_CHECKING:
     # id_ (string)
     # extension (Extension)
     from spark_auto_mapper_fhir.complex_types.extension import Extension
+
     # modifierExtension (Extension)
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # End Import for References for type_
     # Import for CodeableConcept for type_
     from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
+
     # End Import for CodeableConcept for type_
     # intendedUse (CodeableConcept)
     # End Import for References for intendedUse
@@ -41,8 +37,12 @@ if TYPE_CHECKING:
     # End Import for CodeableConcept for indicationCodeableConcept
     # indicationReference (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for indicationReference
-    from spark_auto_mapper_fhir.resources.medicinal_product_indication import MedicinalProductIndication
+    from spark_auto_mapper_fhir.resources.medicinal_product_indication import (
+        MedicinalProductIndication,
+    )
+
     # status (CodeableConcept)
     # End Import for References for status
     # Import for CodeableConcept for status
@@ -61,53 +61,56 @@ class MedicinalProductSpecialDesignation(FhirBackboneElementBase):
     MedicinalProduct.SpecialDesignation
         Detailed definition of a medicinal product, typically for uses other than direct patient care (e.g. regulatory use).
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
-        id_: Optional[FhirString ] = None,
-        extension: Optional[FhirList[Extension ]] = None,
-        modifierExtension: Optional[FhirList[Extension ]] = None,
-        identifier: Optional[FhirList[Identifier ]] = None,
-        type_: Optional[CodeableConcept[GenericTypeCode] ] = None,
-        intendedUse: Optional[CodeableConcept[GenericTypeCode] ] = None,
-        indicationCodeableConcept: Optional[CodeableConcept[GenericTypeCode] ] = None,
-        indicationReference: Optional[Reference [Union[MedicinalProductIndication]]] = None,
-        status: Optional[CodeableConcept[GenericTypeCode] ] = None,
-        date: Optional[FhirDateTime ] = None,
-        species: Optional[CodeableConcept[GenericTypeCode] ] = None,
+        id_: Optional[FhirString] = None,
+        extension: Optional[FhirList[Extension]] = None,
+        modifierExtension: Optional[FhirList[Extension]] = None,
+        identifier: Optional[FhirList[Identifier]] = None,
+        type_: Optional[CodeableConcept[GenericTypeCode]] = None,
+        intendedUse: Optional[CodeableConcept[GenericTypeCode]] = None,
+        indicationCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,
+        indicationReference: Optional[
+            Reference[Union[MedicinalProductIndication]]
+        ] = None,
+        status: Optional[CodeableConcept[GenericTypeCode]] = None,
+        date: Optional[FhirDateTime] = None,
+        species: Optional[CodeableConcept[GenericTypeCode]] = None,
     ) -> None:
         """
-        Detailed definition of a medicinal product, typically for uses other than
-    direct patient care (e.g. regulatory use).
+            Detailed definition of a medicinal product, typically for uses other than
+        direct patient care (e.g. regulatory use).
 
-        :param id_: None
-        :param extension: May be used to represent additional information that is not part of the basic
-    definition of the element. To make the use of extensions safe and manageable,
-    there is a strict set of governance  applied to the definition and use of
-    extensions. Though any implementer can define an extension, there is a set of
-    requirements that SHALL be met as part of the definition of the extension.
-        :param modifierExtension: May be used to represent additional information that is not part of the basic
-    definition of the element and that modifies the understanding of the element
-    in which it is contained and/or the understanding of the containing element's
-    descendants. Usually modifier elements provide negation or qualification. To
-    make the use of extensions safe and manageable, there is a strict set of
-    governance applied to the definition and use of extensions. Though any
-    implementer can define an extension, there is a set of requirements that SHALL
-    be met as part of the definition of the extension. Applications processing a
-    resource are required to check for modifier extensions.
-    
-    Modifier extensions SHALL NOT change the meaning of any elements on Resource
-    or DomainResource (including cannot change the meaning of modifierExtension
-    itself).
-        :param identifier: Identifier for the designation, or procedure number.
-        :param type_: The type of special designation, e.g. orphan drug, minor use.
-        :param intendedUse: The intended use of the product, e.g. prevention, treatment.
-        :param indicationCodeableConcept: None
-        :param indicationReference: None
-        :param status: For example granted, pending, expired or withdrawn.
-        :param date: Date when the designation was granted.
-        :param species: Animal species for which this applies.
+            :param id_: None
+            :param extension: May be used to represent additional information that is not part of the basic
+        definition of the element. To make the use of extensions safe and manageable,
+        there is a strict set of governance  applied to the definition and use of
+        extensions. Though any implementer can define an extension, there is a set of
+        requirements that SHALL be met as part of the definition of the extension.
+            :param modifierExtension: May be used to represent additional information that is not part of the basic
+        definition of the element and that modifies the understanding of the element
+        in which it is contained and/or the understanding of the containing element's
+        descendants. Usually modifier elements provide negation or qualification. To
+        make the use of extensions safe and manageable, there is a strict set of
+        governance applied to the definition and use of extensions. Though any
+        implementer can define an extension, there is a set of requirements that SHALL
+        be met as part of the definition of the extension. Applications processing a
+        resource are required to check for modifier extensions.
+
+        Modifier extensions SHALL NOT change the meaning of any elements on Resource
+        or DomainResource (including cannot change the meaning of modifierExtension
+        itself).
+            :param identifier: Identifier for the designation, or procedure number.
+            :param type_: The type of special designation, e.g. orphan drug, minor use.
+            :param intendedUse: The intended use of the product, e.g. prevention, treatment.
+            :param indicationCodeableConcept: None
+            :param indicationReference: None
+            :param status: For example granted, pending, expired or withdrawn.
+            :param date: Date when the designation was granted.
+            :param species: Animal species for which this applies.
         """
         super().__init__(
             id_=id_,

@@ -1,19 +1,10 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.fhir_types.fhir_reference import FhirReference
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
@@ -22,6 +13,7 @@ if TYPE_CHECKING:
     # id_ (string)
     # extension (Extension)
     from spark_auto_mapper_fhir.complex_types.extension import Extension
+
     # start (dateTime)
     # end (dateTime)
 
@@ -35,31 +27,32 @@ class Period(FhirComplexTypeBase):
         A time period defined by a start and end date and optionally time.
         If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
-        id_: Optional[FhirString ] = None,
-        extension: Optional[FhirList[Extension ]] = None,
-        start: Optional[FhirDateTime ] = None,
-        end: Optional[FhirDateTime ] = None,
+        id_: Optional[FhirString] = None,
+        extension: Optional[FhirList[Extension]] = None,
+        start: Optional[FhirDateTime] = None,
+        end: Optional[FhirDateTime] = None,
     ) -> None:
         """
-        A time period defined by a start and end date and optionally time.
-        If the element is present, it must have a value for at least one of the
-    defined elements, an @id referenced from the Narrative, or extensions
+            A time period defined by a start and end date and optionally time.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
-        :param id_: None
-        :param extension: May be used to represent additional information that is not part of the basic
-    definition of the element. To make the use of extensions safe and manageable,
-    there is a strict set of governance  applied to the definition and use of
-    extensions. Though any implementer can define an extension, there is a set of
-    requirements that SHALL be met as part of the definition of the extension.
-        :param start: The start of the period. The boundary is inclusive.
-        :param end: The end of the period. If the end of the period is missing, it means no end
-    was known or planned at the time the instance was created. The start may be in
-    the past, and the end date in the future, which means that period is
-    expected/planned to end at that time.
+            :param id_: None
+            :param extension: May be used to represent additional information that is not part of the basic
+        definition of the element. To make the use of extensions safe and manageable,
+        there is a strict set of governance  applied to the definition and use of
+        extensions. Though any implementer can define an extension, there is a set of
+        requirements that SHALL be met as part of the definition of the extension.
+            :param start: The start of the period. The boundary is inclusive.
+            :param end: The end of the period. If the end of the period is missing, it means no end
+        was known or planned at the time the instance was created. The start may be in
+        the past, and the end date in the future, which means that period is
+        expected/planned to end at that time.
         """
         super().__init__(
             id_=id_,

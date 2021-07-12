@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -24,13 +14,16 @@ class MedicationDispenseStatusReasonCodesCode(GenericTypeCode):
     From: http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason in valuesets.xml
         MedicationDispense Status Codes
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     """
     http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason
     """
-    codeset: FhirUri = "http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason"
+    codeset: FhirUri = (
+        "http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason"
+    )
 
 
 class MedicationDispenseStatusReasonCodesCodeValues:
@@ -39,6 +32,7 @@ class MedicationDispenseStatusReasonCodesCodeValues:
     captured electronically. Example: A verbal stop, a fax, etc.
     From: http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason in valuesets.xml
     """
+
     OrderStopped = MedicationDispenseStatusReasonCodesCode("frr01")
     """
     Order has not been fulfilled within a reasonable amount of time, and might not
@@ -81,7 +75,9 @@ class MedicationDispenseStatusReasonCodesCodeValues:
     Clarification is required before the order can be acted upon.
     From: http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason in valuesets.xml
     """
-    Prescription_RequestRequiresClarification = MedicationDispenseStatusReasonCodesCode("clarif")
+    Prescription_RequestRequiresClarification = MedicationDispenseStatusReasonCodesCode(
+        "clarif"
+    )
     """
     The current level of the medication in the patient's system is too high. The
     medication is suspended to allow the level to subside to a safer level.

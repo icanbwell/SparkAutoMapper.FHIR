@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -24,13 +14,16 @@ class SecurityIntegrityObservationValue(GenericTypeCode):
     From: http://terminology.hl7.org/ValueSet/v3-SecurityIntegrityObservationValue in v3-codesystems.xml
         No Description Provided
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     """
     http://terminology.hl7.org/ValueSet/v3-SecurityIntegrityObservationValue
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-SecurityIntegrityObservationValue"
+    codeset: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-SecurityIntegrityObservationValue"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-ObservationValue
     """
@@ -45,7 +38,10 @@ class SecurityIntegrityObservationValueValues:
     observation values.
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
     """
-    ActCoverageAssessmentObservationValue = SecurityIntegrityObservationValue("_ActCoverageAssessmentObservationValue")
+
+    ActCoverageAssessmentObservationValue = SecurityIntegrityObservationValue(
+        "_ActCoverageAssessmentObservationValue"
+    )
     """
     Indicates the result of a particular allergy test.  E.g. Negative, Mild,
     Moderate, Severe
@@ -57,13 +53,17 @@ class SecurityIntegrityObservationValueValues:
     combine the component measure results included in an composite measure.
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
     """
-    CompositeMeasureScoring = SecurityIntegrityObservationValue("_CompositeMeasureScoring")
+    CompositeMeasureScoring = SecurityIntegrityObservationValue(
+        "_CompositeMeasureScoring"
+    )
     """
     Description:Coded observation values for coverage limitations, for e.g., types
     of claims or types of parties covered under a policy or program.
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
     """
-    CoverageLimitObservationValue = SecurityIntegrityObservationValue("_CoverageLimitObservationValue")
+    CoverageLimitObservationValue = SecurityIntegrityObservationValue(
+        "_CoverageLimitObservationValue"
+    )
     """
     A clinical judgment as to the worst case result of a future exposure
     (including substance administration). When the worst case result is assessed
@@ -71,7 +71,9 @@ class SecurityIntegrityObservationValueValues:
     considered to be of high criticality.
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
     """
-    CriticalityObservationValue = SecurityIntegrityObservationValue("_CriticalityObservationValue")
+    CriticalityObservationValue = SecurityIntegrityObservationValue(
+        "_CriticalityObservationValue"
+    )
     """
     Concepts representing whether a person does or does not currently have a job
     or is not currently in the labor pool seeking employment.
@@ -83,35 +85,47 @@ class SecurityIntegrityObservationValueValues:
     e.g. Homozygote, Heterozygote, etc.
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
     """
-    GeneticObservationValue = SecurityIntegrityObservationValue("_GeneticObservationValue")
+    GeneticObservationValue = SecurityIntegrityObservationValue(
+        "_GeneticObservationValue"
+    )
     """
     Observation values used to indicate the type of scoring (e.g. proportion,
     ratio) used by a health quality measure.
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
     """
-    ObservationMeasureScoring = SecurityIntegrityObservationValue("_ObservationMeasureScoring")
+    ObservationMeasureScoring = SecurityIntegrityObservationValue(
+        "_ObservationMeasureScoring"
+    )
     """
     Observation values used to indicate what kind of health quality measure is
     used.
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
     """
-    ObservationMeasureType = SecurityIntegrityObservationValue("_ObservationMeasureType")
+    ObservationMeasureType = SecurityIntegrityObservationValue(
+        "_ObservationMeasureType"
+    )
     """
     Observation values used to assert various populations that a subject falls
     into.
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
     """
-    ObservationPopulationInclusion = SecurityIntegrityObservationValue("_ObservationPopulationInclusion")
+    ObservationPopulationInclusion = SecurityIntegrityObservationValue(
+        "_ObservationPopulationInclusion"
+    )
     """
     PartialCompletionScale
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
     """
-    PartialCompletionScale = SecurityIntegrityObservationValue("_PartialCompletionScale")
+    PartialCompletionScale = SecurityIntegrityObservationValue(
+        "_PartialCompletionScale"
+    )
     """
     Observation values used to indicate security observation metadata.
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
     """
-    SecurityObservationValue = SecurityIntegrityObservationValue("_SecurityObservationValue")
+    SecurityObservationValue = SecurityIntegrityObservationValue(
+        "_SecurityObservationValue"
+    )
     """
     Potential values for observations of severity.
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
@@ -150,7 +164,9 @@ class SecurityIntegrityObservationValueValues:
     observations.
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
     """
-    CommonClinicalObservation = SecurityIntegrityObservationValue("_CommonClinicalObservationValue")
+    CommonClinicalObservation = SecurityIntegrityObservationValue(
+        "_CommonClinicalObservationValue"
+    )
     """
     This domain is established as a parent to a variety of value domains being
     defined to support the communication of Individual Case Safety Reports to
@@ -158,7 +174,9 @@ class SecurityIntegrityObservationValueValues:
     the grouping will facilitate the management of these domains.
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
     """
-    IndividualCaseSafetyReportValueDomains = SecurityIntegrityObservationValue("_IndividualCaseSafetyReportValueDomains")
+    IndividualCaseSafetyReportValueDomains = SecurityIntegrityObservationValue(
+        "_IndividualCaseSafetyReportValueDomains"
+    )
     """
     Indicates the specific observation result which is the reason for the action
     (prescription, lab test, etc.). E.g. Headache, Ear infection, planned

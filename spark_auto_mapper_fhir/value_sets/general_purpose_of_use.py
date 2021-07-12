@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -24,6 +14,7 @@ class GeneralPurposeOfUse(GenericTypeCode):
     From: http://terminology.hl7.org/ValueSet/v3-GeneralPurposeOfUse in v3-codesystems.xml
          Supports communication of purpose of use at a general level.
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -42,6 +33,7 @@ class GeneralPurposeOfUseValues:
     Identifies the reason the patient is assigned to this accommodation type
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
+
     ActAccommodationReason = GeneralPurposeOfUse("_ActAccommodationReason")
     """
     Description:Codes used to specify reasons or criteria relating to coverage
@@ -58,7 +50,9 @@ class GeneralPurposeOfUseValues:
     enterprise data retention policy.
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
-    ActInformationManagementReason = GeneralPurposeOfUse("_ActInformationManagementReason")
+    ActInformationManagementReason = GeneralPurposeOfUse(
+        "_ActInformationManagementReason"
+    )
     """
     Description: Types of reasons why a substance is invalid for use.
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
@@ -86,7 +80,9 @@ class GeneralPurposeOfUseValues:
                             (used when capturing 'refusal to fill' annotations)
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
-    ActSupplyFulfillmentRefusalReason = GeneralPurposeOfUse("_ActSupplyFulfillmentRefusalReason")
+    ActSupplyFulfillmentRefusalReason = GeneralPurposeOfUse(
+        "_ActSupplyFulfillmentRefusalReason"
+    )
     """
     Definition:Specifies the reason that an event occurred in a clinical research
     study.
@@ -105,23 +101,31 @@ class GeneralPurposeOfUseValues:
     specifications.
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
-    ClinicalResearchObservationReason = GeneralPurposeOfUse("_ClinicalResearchObservationReason")
+    ClinicalResearchObservationReason = GeneralPurposeOfUse(
+        "_ClinicalResearchObservationReason"
+    )
     """
     Description:Indicates why the prescription should be suspended.
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
-    CombinedPharmacyOrderSuspendReasonCode = GeneralPurposeOfUse("_CombinedPharmacyOrderSuspendReasonCode")
+    CombinedPharmacyOrderSuspendReasonCode = GeneralPurposeOfUse(
+        "_CombinedPharmacyOrderSuspendReasonCode"
+    )
     """
     Description:Identifies reasons for nullifying (retracting) a particular
     control act.
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
-    ControlActNullificationReasonCode = GeneralPurposeOfUse("_ControlActNullificationReasonCode")
+    ControlActNullificationReasonCode = GeneralPurposeOfUse(
+        "_ControlActNullificationReasonCode"
+    )
     """
     Description: Reasons to refuse a transaction to be undone.
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
-    ControlActNullificationRefusalReasonType = GeneralPurposeOfUse("_ControlActNullificationRefusalReasonType")
+    ControlActNullificationRefusalReasonType = GeneralPurposeOfUse(
+        "_ControlActNullificationRefusalReasonType"
+    )
     """
     Identifies why a specific query, request, or other trigger event occurred.
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
@@ -143,7 +147,9 @@ class GeneralPurposeOfUseValues:
     dispensing facility to another has been refused.
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
-    PharmacySupplyRequestFulfillerRevisionRefusalReasonCode = GeneralPurposeOfUse("_PharmacySupplyRequestFulfillerRevisionRefusalReasonCode")
+    PharmacySupplyRequestFulfillerRevisionRefusalReasonCode = GeneralPurposeOfUse(
+        "_PharmacySupplyRequestFulfillerRevisionRefusalReasonCode"
+    )
     """
     Description: Identifies why a request to add (or activate) a record is being
     refused.  Examples include the receiving system not able to match the
@@ -161,24 +167,32 @@ class GeneralPurposeOfUseValues:
     Indicates why the act revision (status update) is being refused.
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
-    StatusRevisionRefusalReasonCode = GeneralPurposeOfUse("_StatusRevisionRefusalReasonCode")
+    StatusRevisionRefusalReasonCode = GeneralPurposeOfUse(
+        "_StatusRevisionRefusalReasonCode"
+    )
     """
     Definition:Indicates why the requested authorization to prescribe or dispense
     a medication has been refused.
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
-    SubstanceAdministrationPermissionRefusalReasonCode = GeneralPurposeOfUse("_SubstanceAdministrationPermissionRefusalReasonCode")
+    SubstanceAdministrationPermissionRefusalReasonCode = GeneralPurposeOfUse(
+        "_SubstanceAdministrationPermissionRefusalReasonCode"
+    )
     """
     Reasons why substitution of a substance administration request is not
     permitted.
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
-    SubstanceAdminSubstitutionNotAllowedReason = GeneralPurposeOfUse("_SubstanceAdminSubstitutionNotAllowedReason")
+    SubstanceAdminSubstitutionNotAllowedReason = GeneralPurposeOfUse(
+        "_SubstanceAdminSubstitutionNotAllowedReason"
+    )
     """
     SubstanceAdminSubstitutionReason
     From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
     """
-    SubstanceAdminSubstitutionReason = GeneralPurposeOfUse("_SubstanceAdminSubstitutionReason")
+    SubstanceAdminSubstitutionReason = GeneralPurposeOfUse(
+        "_SubstanceAdminSubstitutionReason"
+    )
     """
     The explanation for why a patient is moved from one location to another within
     the organization

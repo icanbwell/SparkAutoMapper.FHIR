@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -28,6 +18,7 @@ class ProvenanceActivityTypeCode(GenericTypeCode):
     Lifecycle Event codes for which there are agreed upon definitions, and non-
     duplicated codes from the HL7 Security and Privacy Ontology Operations codes.
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -59,6 +50,7 @@ class ProvenanceActivityTypeCodeValues:
     authentication, usually by the assigned individual.
     From: http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion in v3-codesystems.xml
     """
+
     Authenticated = ProvenanceActivityTypeCode("AU")
     """
     A completion status in which information has been orally recorded but not yet
@@ -135,7 +127,9 @@ class ProvenanceActivityTypeCodeValues:
     information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActAdjudicationResultActionCode = ProvenanceActivityTypeCode("_ActAdjudicationResultActionCode")
+    ActAdjudicationResultActionCode = ProvenanceActivityTypeCode(
+        "_ActAdjudicationResultActionCode"
+    )
     """
     Definition:An identifying modifier code for healthcare interventions or
     procedures.
@@ -164,7 +158,9 @@ class ProvenanceActivityTypeCodeValues:
     claim.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActClaimAttachmentCategoryCode = ProvenanceActivityTypeCode("_ActClaimAttachmentCategoryCode")
+    ActClaimAttachmentCategoryCode = ProvenanceActivityTypeCode(
+        "_ActClaimAttachmentCategoryCode"
+    )
     """
     Definition: The type of consent directive, e.g., to consent or dissent to
     collect, access, or use in specific ways within an EHRS or for health
@@ -177,7 +173,9 @@ class ProvenanceActivityTypeCodeValues:
     Constrains the ActCode to the domain of Container Registration
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActContainerRegistrationCode = ProvenanceActivityTypeCode("_ActContainerRegistrationCode")
+    ActContainerRegistrationCode = ProvenanceActivityTypeCode(
+        "_ActContainerRegistrationCode"
+    )
     """
     An observation form that determines parameters or attributes of an Act.
     Examples are the settings of a ventilator machine as parameters of a
@@ -202,7 +200,9 @@ class ProvenanceActivityTypeCodeValues:
     Response to an insurance coverage eligibility query or authorization request.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActCoverageConfirmationCode = ProvenanceActivityTypeCode("_ActCoverageConfirmationCode")
+    ActCoverageConfirmationCode = ProvenanceActivityTypeCode(
+        "_ActCoverageConfirmationCode"
+    )
     """
     Criteria that are applicable to the authorized coverage.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
@@ -218,7 +218,9 @@ class ProvenanceActivityTypeCodeValues:
     Codes dealing with the management of Detected Issue observations
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActDetectedIssueManagementCode = ProvenanceActivityTypeCode("_ActDetectedIssueManagementCode")
+    ActDetectedIssueManagementCode = ProvenanceActivityTypeCode(
+        "_ActDetectedIssueManagementCode"
+    )
     """
     Concepts that identify the type or nature of exposure interaction.  Examples
     include "household", "care giver", "intimate partner", "common space", "common
@@ -230,7 +232,9 @@ class ProvenanceActivityTypeCodeValues:
     ActFinancialTransactionCode
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActFinancialTransactionCode = ProvenanceActivityTypeCode("_ActFinancialTransactionCode")
+    ActFinancialTransactionCode = ProvenanceActivityTypeCode(
+        "_ActFinancialTransactionCode"
+    )
     """
     Set of codes indicating the type of incident or accident.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
@@ -249,13 +253,17 @@ class ProvenanceActivityTypeCodeValues:
     patient health information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActInformationAccessContextCode = ProvenanceActivityTypeCode("_ActInformationAccessContextCode")
+    ActInformationAccessContextCode = ProvenanceActivityTypeCode(
+        "_ActInformationAccessContextCode"
+    )
     """
     Definition:Indicates the set of information types which may be manipulated or
     referenced, such as for recommending access restrictions.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActInformationCategoryCode = ProvenanceActivityTypeCode("_ActInformationCategoryCode")
+    ActInformationCategoryCode = ProvenanceActivityTypeCode(
+        "_ActInformationCategoryCode"
+    )
     """
     Type of invoice element that is used to assist in describing an Invoice that
     is either submitted for adjudication or for which is returned on adjudication
@@ -270,7 +278,9 @@ class ProvenanceActivityTypeCodeValues:
     providers and payors.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActInvoiceElementSummaryCode = ProvenanceActivityTypeCode("_ActInvoiceElementSummaryCode")
+    ActInvoiceElementSummaryCode = ProvenanceActivityTypeCode(
+        "_ActInvoiceElementSummaryCode"
+    )
     """
     Includes coded responses that will occur as a result of the adjudication of an
     electronic invoice at a summary level and provides guidance on interpretation
@@ -293,7 +303,9 @@ class ProvenanceActivityTypeCodeValues:
     other than diagnosis and symptoms.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActNonObservationIndicationCode = ProvenanceActivityTypeCode("_ActNonObservationIndicationCode")
+    ActNonObservationIndicationCode = ProvenanceActivityTypeCode(
+        "_ActNonObservationIndicationCode"
+    )
     """
     Identifies the type of verification investigation being undertaken with
     respect to the subject of the verification activity.
@@ -341,7 +353,9 @@ class ProvenanceActivityTypeCodeValues:
     National Provider Data Bank, Health Integrity Protection Data Base (HIPDB)
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActObservationVerification = ProvenanceActivityTypeCode("_ActObservationVerificationType")
+    ActObservationVerification = ProvenanceActivityTypeCode(
+        "_ActObservationVerificationType"
+    )
     """
     Code identifying the method or the movement of payment instructions.
     
@@ -383,7 +397,9 @@ class ProvenanceActivityTypeCodeValues:
     associated role or entity to carry such information.
     From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
     """
-    ActSubstanceAdministrationCode = ProvenanceActivityTypeCode("_ActSubstanceAdministrationCode")
+    ActSubstanceAdministrationCode = ProvenanceActivityTypeCode(
+        "_ActSubstanceAdministrationCode"
+    )
     """
     Description: A task or action that a user may perform in a clinical
     information system (e.g., medication order entry, laboratory test results

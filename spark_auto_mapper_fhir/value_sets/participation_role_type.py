@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -38,6 +28,7 @@ class ParticipationRoleTypeCode(GenericTypeCode):
     custodian codes not included in this value set.            If no source is
     indicated in the definition comments, then these are example FHIR codes.
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -60,7 +51,9 @@ class ParticipationRoleTypeCode(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction
     """
-    codeset_5: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction"
+    codeset_5: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-ParticipationType
     """
@@ -68,7 +61,9 @@ class ParticipationRoleTypeCode(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/extra-security-role-type
     """
-    codeset_7: FhirUri = "http://terminology.hl7.org/CodeSystem/extra-security-role-type"
+    codeset_7: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/extra-security-role-type"
+    )
     """
     http://dicom.nema.org/resources/ontology/DCM
     """
@@ -79,6 +74,7 @@ class ParticipationRoleTypeCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/participation-role-type in valuesets.xml
     """
+
     AMENDER = ParticipationRoleTypeCode("AMENDER")
     """
     From: http://hl7.org/fhir/ValueSet/participation-role-type in valuesets.xml
@@ -257,7 +253,9 @@ class ParticipationRoleTypeCodeValues:
     Code indicating the primary use for which a living subject is bred or grown
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    LivingSubjectProductionClass = ParticipationRoleTypeCode("_LivingSubjectProductionClass")
+    LivingSubjectProductionClass = ParticipationRoleTypeCode(
+        "_LivingSubjectProductionClass"
+    )
     """
     Identifies the specific hierarchical relationship between the playing and
     scoping medications.
@@ -267,7 +265,9 @@ class ParticipationRoleTypeCodeValues:
     Class, etc.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    MedicationGeneralizationRoleType = ParticipationRoleTypeCode("_MedicationGeneralizationRoleType")
+    MedicationGeneralizationRoleType = ParticipationRoleTypeCode(
+        "_MedicationGeneralizationRoleType"
+    )
     """
     Types of membership for Role code "MBR"
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
@@ -277,7 +277,9 @@ class ParticipationRoleTypeCodeValues:
     PersonalRelationshipRoleType
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    PersonalRelationshipRoleType = ParticipationRoleTypeCode("_PersonalRelationshipRoleType")
+    PersonalRelationshipRoleType = ParticipationRoleTypeCode(
+        "_PersonalRelationshipRoleType"
+    )
     """
     Description: A role recognized through the eligibility of an identified party
     for benefits covered under an insurance policy or a program based on meeting
@@ -326,7 +328,9 @@ class ParticipationRoleTypeCodeValues:
     semantic comparability.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    PolicyOrProgramCoverageRoleType = ParticipationRoleTypeCode("_PolicyOrProgramCoverageRoleType")
+    PolicyOrProgramCoverageRoleType = ParticipationRoleTypeCode(
+        "_PolicyOrProgramCoverageRoleType"
+    )
     """
     Specifies the administrative functionality within a formal experimental design
     for which the ResearchSubject role was established.  Examples: screening -
@@ -341,7 +345,9 @@ class ParticipationRoleTypeCodeValues:
     road side, work site, community location) in which services are delivered.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    ServiceDeliveryLocationRoleType = ParticipationRoleTypeCode("_ServiceDeliveryLocationRoleType")
+    ServiceDeliveryLocationRoleType = ParticipationRoleTypeCode(
+        "_ServiceDeliveryLocationRoleType"
+    )
     """
     SpecimenRoleType
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
@@ -568,7 +574,9 @@ class ParticipationRoleTypeCodeValues:
     Code indicating the primary use for which a living subject is bred or grown
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    LivingSubjectProductionClass = ParticipationRoleTypeCode("_LivingSubjectProductionClass")
+    LivingSubjectProductionClass = ParticipationRoleTypeCode(
+        "_LivingSubjectProductionClass"
+    )
     """
     Identifies the specific hierarchical relationship between the playing and
     scoping medications.
@@ -578,7 +586,9 @@ class ParticipationRoleTypeCodeValues:
     Class, etc.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    MedicationGeneralizationRoleType = ParticipationRoleTypeCode("_MedicationGeneralizationRoleType")
+    MedicationGeneralizationRoleType = ParticipationRoleTypeCode(
+        "_MedicationGeneralizationRoleType"
+    )
     """
     Types of membership for Role code "MBR"
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
@@ -588,7 +598,9 @@ class ParticipationRoleTypeCodeValues:
     PersonalRelationshipRoleType
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    PersonalRelationshipRoleType = ParticipationRoleTypeCode("_PersonalRelationshipRoleType")
+    PersonalRelationshipRoleType = ParticipationRoleTypeCode(
+        "_PersonalRelationshipRoleType"
+    )
     """
     Description: A role recognized through the eligibility of an identified party
     for benefits covered under an insurance policy or a program based on meeting
@@ -637,7 +649,9 @@ class ParticipationRoleTypeCodeValues:
     semantic comparability.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    PolicyOrProgramCoverageRoleType = ParticipationRoleTypeCode("_PolicyOrProgramCoverageRoleType")
+    PolicyOrProgramCoverageRoleType = ParticipationRoleTypeCode(
+        "_PolicyOrProgramCoverageRoleType"
+    )
     """
     Specifies the administrative functionality within a formal experimental design
     for which the ResearchSubject role was established.  Examples: screening -
@@ -652,7 +666,9 @@ class ParticipationRoleTypeCodeValues:
     road side, work site, community location) in which services are delivered.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    ServiceDeliveryLocationRoleType = ParticipationRoleTypeCode("_ServiceDeliveryLocationRoleType")
+    ServiceDeliveryLocationRoleType = ParticipationRoleTypeCode(
+        "_ServiceDeliveryLocationRoleType"
+    )
     """
     SpecimenRoleType
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
@@ -762,13 +778,17 @@ class ParticipationRoleTypeCodeValues:
     in a service in all necessary detail.
     From: http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction in v3-codesystems.xml
     """
-    AuthorizedParticipationFunction = ParticipationRoleTypeCode("_AuthorizedParticipationFunction")
+    AuthorizedParticipationFunction = ParticipationRoleTypeCode(
+        "_AuthorizedParticipationFunction"
+    )
     """
     Definition: Set of codes indicating the manner in which sponsors,
     underwriters, and payers participate in a policy or program.
     From: http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction in v3-codesystems.xml
     """
-    CoverageParticipationFunction = ParticipationRoleTypeCode("_CoverageParticipationFunction")
+    CoverageParticipationFunction = ParticipationRoleTypeCode(
+        "_CoverageParticipationFunction"
+    )
     """
     A physician who admitted a patient to a hospital or other care unit that is
     the context of this service.

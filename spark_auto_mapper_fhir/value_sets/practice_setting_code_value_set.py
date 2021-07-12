@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -28,6 +18,7 @@ class PracticeSettingCodeValueSetCode(GenericTypeCode):
     to the value set reproduced from HITSP C80 Table 2-149 Clinical Specialty
     Value Set Definition.
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -41,6 +32,7 @@ class PracticeSettingCodeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
+
     AdultMentalIllness = PracticeSettingCodeValueSetCode("408467006")
     """
     From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
@@ -65,7 +57,9 @@ class PracticeSettingCodeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
-    ClinicalCytogeneticsAndMolecularGenetics = PracticeSettingCodeValueSetCode("394804000")
+    ClinicalCytogeneticsAndMolecularGenetics = PracticeSettingCodeValueSetCode(
+        "394804000"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
@@ -265,7 +259,9 @@ class PracticeSettingCodeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
-    Pediatric_ChildAndAdolescent_Psychiatry = PracticeSettingCodeValueSetCode("394588006")
+    Pediatric_ChildAndAdolescent_Psychiatry = PracticeSettingCodeValueSetCode(
+        "394588006"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
@@ -325,7 +321,9 @@ class PracticeSettingCodeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
-    PediatricSurgery_boneMarrowTransplantation = PracticeSettingCodeValueSetCode("420112009")
+    PediatricSurgery_boneMarrowTransplantation = PracticeSettingCodeValueSetCode(
+        "420112009"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
@@ -401,7 +399,9 @@ class PracticeSettingCodeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
-    Surgery_Dental_OralAndMaxillofacialSurgery = PracticeSettingCodeValueSetCode("408465003")
+    Surgery_Dental_OralAndMaxillofacialSurgery = PracticeSettingCodeValueSetCode(
+        "408465003"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
@@ -417,15 +417,21 @@ class PracticeSettingCodeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
-    Surgery_Dental_ProstheticDentistry_Prosthodontics_ = PracticeSettingCodeValueSetCode("408460008")
+    Surgery_Dental_ProstheticDentistry_Prosthodontics_ = (
+        PracticeSettingCodeValueSetCode("408460008")
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
-    Surgery_Dental_surgical_Prosthodontics = PracticeSettingCodeValueSetCode("408460008")
+    Surgery_Dental_surgical_Prosthodontics = PracticeSettingCodeValueSetCode(
+        "408460008"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
-    Surgery_Dentistry_RestorativeDentistry = PracticeSettingCodeValueSetCode("394606000")
+    Surgery_Dentistry_RestorativeDentistry = PracticeSettingCodeValueSetCode(
+        "394606000"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
@@ -433,7 +439,9 @@ class PracticeSettingCodeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
-    Surgery_Dentistry_surgical_Orthodontics = PracticeSettingCodeValueSetCode("394608004")
+    Surgery_Dentistry_surgical_Orthodontics = PracticeSettingCodeValueSetCode(
+        "394608004"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
@@ -449,7 +457,9 @@ class PracticeSettingCodeValueSetCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """
-    Surgery_HepatobiliaryAndPancreaticSurgery = PracticeSettingCodeValueSetCode("408474001")
+    Surgery_HepatobiliaryAndPancreaticSurgery = PracticeSettingCodeValueSetCode(
+        "408474001"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
     """

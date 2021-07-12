@@ -1,17 +1,8 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
-from spark_auto_mapper_fhir.resources.resource import Resource
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -22,44 +13,64 @@ if TYPE_CHECKING:
     # id_ (string)
     # extension (Extension)
     from spark_auto_mapper_fhir.complex_types.extension import Extension
+
     # modifierExtension (Extension)
     # sequence (positiveInt)
     from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
+
     # revenue (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # End Import for References for revenue
     # Import for CodeableConcept for revenue
-    from spark_auto_mapper_fhir.value_sets.example_revenue_center_codes import ExampleRevenueCenterCodesCode
+    from spark_auto_mapper_fhir.value_sets.example_revenue_center_codes import (
+        ExampleRevenueCenterCodesCode,
+    )
+
     # End Import for CodeableConcept for revenue
     # category (CodeableConcept)
     # End Import for References for category
     # Import for CodeableConcept for category
-    from spark_auto_mapper_fhir.value_sets.benefit_category_codes import BenefitCategoryCodesCode
+    from spark_auto_mapper_fhir.value_sets.benefit_category_codes import (
+        BenefitCategoryCodesCode,
+    )
+
     # End Import for CodeableConcept for category
     # productOrService (CodeableConcept)
     # End Import for References for productOrService
     # Import for CodeableConcept for productOrService
     from spark_auto_mapper_fhir.value_sets.uscls_codes import USCLSCodesCode
+
     # End Import for CodeableConcept for productOrService
     # modifier (CodeableConcept)
     # End Import for References for modifier
     # Import for CodeableConcept for modifier
-    from spark_auto_mapper_fhir.value_sets.modifier_type_codes import ModifierTypeCodesCode
+    from spark_auto_mapper_fhir.value_sets.modifier_type_codes import (
+        ModifierTypeCodesCode,
+    )
+
     # End Import for CodeableConcept for modifier
     # programCode (CodeableConcept)
     # End Import for References for programCode
     # Import for CodeableConcept for programCode
-    from spark_auto_mapper_fhir.value_sets.example_program_reason_codes import ExampleProgramReasonCodesCode
+    from spark_auto_mapper_fhir.value_sets.example_program_reason_codes import (
+        ExampleProgramReasonCodesCode,
+    )
+
     # End Import for CodeableConcept for programCode
     # quantity (Quantity)
     from spark_auto_mapper_fhir.complex_types.quantity import Quantity
+
     # unitPrice (Money)
     from spark_auto_mapper_fhir.complex_types.money import Money
+
     # factor (decimal)
     from spark_auto_mapper_fhir.fhir_types.decimal import FhirDecimal
+
     # net (Money)
     # udi (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for udi
     from spark_auto_mapper_fhir.resources.device import Device
 
@@ -71,69 +82,72 @@ class ClaimSubDetail(FhirBackboneElementBase):
     Claim.SubDetail
         A provider issued list of professional services and products which have been provided, or are to be provided, to a patient which is sent to an insurer for reimbursement.
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
-        id_: Optional[FhirString ] = None,
-        extension: Optional[FhirList[Extension ]] = None,
-        modifierExtension: Optional[FhirList[Extension ]] = None,
-        sequence: FhirPositiveInt ,
-        revenue: Optional[CodeableConcept[ExampleRevenueCenterCodesCode] ] = None,
-        category: Optional[CodeableConcept[BenefitCategoryCodesCode] ] = None,
-        productOrService: CodeableConcept[USCLSCodesCode] ,
-        modifier: Optional[FhirList[CodeableConcept[ModifierTypeCodesCode] ]] = None,
-        programCode: Optional[FhirList[CodeableConcept[ExampleProgramReasonCodesCode] ]] = None,
-        quantity: Optional[Quantity ] = None,
-        unitPrice: Optional[Money ] = None,
-        factor: Optional[FhirDecimal ] = None,
-        net: Optional[Money ] = None,
-        udi: Optional[FhirList[Reference [Union[Device]]]] = None,
+        id_: Optional[FhirString] = None,
+        extension: Optional[FhirList[Extension]] = None,
+        modifierExtension: Optional[FhirList[Extension]] = None,
+        sequence: FhirPositiveInt,
+        revenue: Optional[CodeableConcept[ExampleRevenueCenterCodesCode]] = None,
+        category: Optional[CodeableConcept[BenefitCategoryCodesCode]] = None,
+        productOrService: CodeableConcept[USCLSCodesCode],
+        modifier: Optional[FhirList[CodeableConcept[ModifierTypeCodesCode]]] = None,
+        programCode: Optional[
+            FhirList[CodeableConcept[ExampleProgramReasonCodesCode]]
+        ] = None,
+        quantity: Optional[Quantity] = None,
+        unitPrice: Optional[Money] = None,
+        factor: Optional[FhirDecimal] = None,
+        net: Optional[Money] = None,
+        udi: Optional[FhirList[Reference[Union[Device]]]] = None,
     ) -> None:
         """
-        A provider issued list of professional services and products which have been
-    provided, or are to be provided, to a patient which is sent to an insurer for
-    reimbursement.
+            A provider issued list of professional services and products which have been
+        provided, or are to be provided, to a patient which is sent to an insurer for
+        reimbursement.
 
-        :param id_: None
-        :param extension: May be used to represent additional information that is not part of the basic
-    definition of the element. To make the use of extensions safe and manageable,
-    there is a strict set of governance  applied to the definition and use of
-    extensions. Though any implementer can define an extension, there is a set of
-    requirements that SHALL be met as part of the definition of the extension.
-        :param modifierExtension: May be used to represent additional information that is not part of the basic
-    definition of the element and that modifies the understanding of the element
-    in which it is contained and/or the understanding of the containing element's
-    descendants. Usually modifier elements provide negation or qualification. To
-    make the use of extensions safe and manageable, there is a strict set of
-    governance applied to the definition and use of extensions. Though any
-    implementer can define an extension, there is a set of requirements that SHALL
-    be met as part of the definition of the extension. Applications processing a
-    resource are required to check for modifier extensions.
-    
-    Modifier extensions SHALL NOT change the meaning of any elements on Resource
-    or DomainResource (including cannot change the meaning of modifierExtension
-    itself).
-        :param sequence: A number to uniquely identify item entries.
-        :param revenue: The type of revenue or cost center providing the product and/or service.
-        :param category: Code to identify the general type of benefits under which products and
-    services are provided.
-        :param productOrService: When the value is a group code then this item collects a set of related claim
-    details, otherwise this contains the product, service, drug or other billing
-    code for the item.
-        :param modifier: Item typification or modifiers codes to convey additional context for the
-    product or service.
-        :param programCode: Identifies the program under which this may be recovered.
-        :param quantity: The number of repetitions of a service or product.
-        :param unitPrice: If the item is not a group then this is the fee for the product or service,
-    otherwise this is the total of the fees for the details of the group.
-        :param factor: A real number that represents a multiplier used in determining the overall
-    value of services delivered and/or goods received. The concept of a Factor
-    allows for a discount or surcharge multiplier to be applied to a monetary
-    amount.
-        :param net: The quantity times the unit price for an additional service or product or
-    charge.
-        :param udi: Unique Device Identifiers associated with this line item.
+            :param id_: None
+            :param extension: May be used to represent additional information that is not part of the basic
+        definition of the element. To make the use of extensions safe and manageable,
+        there is a strict set of governance  applied to the definition and use of
+        extensions. Though any implementer can define an extension, there is a set of
+        requirements that SHALL be met as part of the definition of the extension.
+            :param modifierExtension: May be used to represent additional information that is not part of the basic
+        definition of the element and that modifies the understanding of the element
+        in which it is contained and/or the understanding of the containing element's
+        descendants. Usually modifier elements provide negation or qualification. To
+        make the use of extensions safe and manageable, there is a strict set of
+        governance applied to the definition and use of extensions. Though any
+        implementer can define an extension, there is a set of requirements that SHALL
+        be met as part of the definition of the extension. Applications processing a
+        resource are required to check for modifier extensions.
+
+        Modifier extensions SHALL NOT change the meaning of any elements on Resource
+        or DomainResource (including cannot change the meaning of modifierExtension
+        itself).
+            :param sequence: A number to uniquely identify item entries.
+            :param revenue: The type of revenue or cost center providing the product and/or service.
+            :param category: Code to identify the general type of benefits under which products and
+        services are provided.
+            :param productOrService: When the value is a group code then this item collects a set of related claim
+        details, otherwise this contains the product, service, drug or other billing
+        code for the item.
+            :param modifier: Item typification or modifiers codes to convey additional context for the
+        product or service.
+            :param programCode: Identifies the program under which this may be recovered.
+            :param quantity: The number of repetitions of a service or product.
+            :param unitPrice: If the item is not a group then this is the fee for the product or service,
+        otherwise this is the total of the fees for the details of the group.
+            :param factor: A real number that represents a multiplier used in determining the overall
+        value of services delivered and/or goods received. The concept of a Factor
+        allows for a discount or surcharge multiplier to be applied to a monetary
+        amount.
+            :param net: The quantity times the unit price for an additional service or product or
+        charge.
+            :param udi: Unique Device Identifiers associated with this line item.
         """
         super().__init__(
             id_=id_,

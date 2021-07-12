@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -28,17 +18,22 @@ class EntityNamePartQualifierR2(GenericTypeCode):
     name may be flagged as a nickname, a family name may be a pseudonym or a name
     of public records.
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     """
     http://terminology.hl7.org/ValueSet/v3-EntityNamePartQualifierR2
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-EntityNamePartQualifierR2"
+    codeset: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-EntityNamePartQualifierR2"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2
     """
-    codeset_2: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2"
+    codeset_2: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2"
+    )
 
 
 class EntityNamePartQualifierR2Values:
@@ -46,13 +41,14 @@ class EntityNamePartQualifierR2Values:
     Description:A name part a person acquired.  The name part may be acquired by
     adoption, or the person may have chosen to use the name part for some other
     reason.
-    
-    
+
+
                                Note: this differs from an Other/Psuedonym/Alias in
     that an acquired name part is acquired on a formal basis rather than an
     informal one (e.g. registered as part of the official name).
     From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
     """
+
     Acquired = EntityNamePartQualifierR2("AD")
     """
     Description:A name that a person was given at birth or established as a
@@ -117,7 +113,9 @@ class EntityNamePartQualifierR2Values:
     generated.
     From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
     """
-    PharmaceuticalEntityNamePartQualifiers = EntityNamePartQualifierR2("PharmaceuticalEntityNamePartQualifiers")
+    PharmaceuticalEntityNamePartQualifiers = EntityNamePartQualifierR2(
+        "PharmaceuticalEntityNamePartQualifiers"
+    )
     """
     Description:A suffix has a strong association to the immediately preceding
     name part. A suffix has no implicit leading white space (it has implicit

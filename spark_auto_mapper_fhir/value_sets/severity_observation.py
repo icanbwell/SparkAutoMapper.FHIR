@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -24,6 +14,7 @@ class SeverityObservation(GenericTypeCode):
     From: http://terminology.hl7.org/ValueSet/v3-SeverityObservation in v3-codesystems.xml
          Potential values for observations of severity.
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -45,7 +36,10 @@ class SeverityObservationValues:
     observation values.
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
     """
-    ActCoverageAssessmentObservationValue = SeverityObservation("_ActCoverageAssessmentObservationValue")
+
+    ActCoverageAssessmentObservationValue = SeverityObservation(
+        "_ActCoverageAssessmentObservationValue"
+    )
     """
     Indicates the result of a particular allergy test.  E.g. Negative, Mild,
     Moderate, Severe
@@ -63,7 +57,9 @@ class SeverityObservationValues:
     of claims or types of parties covered under a policy or program.
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
     """
-    CoverageLimitObservationValue = SeverityObservation("_CoverageLimitObservationValue")
+    CoverageLimitObservationValue = SeverityObservation(
+        "_CoverageLimitObservationValue"
+    )
     """
     A clinical judgment as to the worst case result of a future exposure
     (including substance administration). When the worst case result is assessed
@@ -101,7 +97,9 @@ class SeverityObservationValues:
     into.
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
     """
-    ObservationPopulationInclusion = SeverityObservation("_ObservationPopulationInclusion")
+    ObservationPopulationInclusion = SeverityObservation(
+        "_ObservationPopulationInclusion"
+    )
     """
     PartialCompletionScale
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
@@ -158,7 +156,9 @@ class SeverityObservationValues:
     the grouping will facilitate the management of these domains.
     From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
     """
-    IndividualCaseSafetyReportValueDomains = SeverityObservation("_IndividualCaseSafetyReportValueDomains")
+    IndividualCaseSafetyReportValueDomains = SeverityObservation(
+        "_IndividualCaseSafetyReportValueDomains"
+    )
     """
     Indicates the specific observation result which is the reason for the action
     (prescription, lab test, etc.). E.g. Headache, Ear infection, planned

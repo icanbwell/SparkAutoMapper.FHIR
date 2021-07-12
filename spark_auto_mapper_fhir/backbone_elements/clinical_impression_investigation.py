@@ -1,17 +1,8 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
-from spark_auto_mapper_fhir.resources.resource import Resource
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -22,19 +13,29 @@ if TYPE_CHECKING:
     # id_ (string)
     # extension (Extension)
     from spark_auto_mapper_fhir.complex_types.extension import Extension
+
     # modifierExtension (Extension)
     # code (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # End Import for References for code
     # Import for CodeableConcept for code
-    from spark_auto_mapper_fhir.value_sets.investigation_type import InvestigationTypeCode
+    from spark_auto_mapper_fhir.value_sets.investigation_type import (
+        InvestigationTypeCode,
+    )
+
     # End Import for CodeableConcept for code
     # item (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for item
     from spark_auto_mapper_fhir.resources.observation import Observation
-    from spark_auto_mapper_fhir.resources.questionnaire_response import QuestionnaireResponse
-    from spark_auto_mapper_fhir.resources.family_member_history import FamilyMemberHistory
+    from spark_auto_mapper_fhir.resources.questionnaire_response import (
+        QuestionnaireResponse,
+    )
+    from spark_auto_mapper_fhir.resources.family_member_history import (
+        FamilyMemberHistory,
+    )
     from spark_auto_mapper_fhir.resources.diagnostic_report import DiagnosticReport
     from spark_auto_mapper_fhir.resources.risk_assessment import RiskAssessment
     from spark_auto_mapper_fhir.resources.imaging_study import ImagingStudy
@@ -48,49 +49,64 @@ class ClinicalImpressionInvestigation(FhirBackboneElementBase):
     ClinicalImpression.Investigation
         A record of a clinical assessment performed to determine what problem(s) may affect the patient and before planning the treatments or management strategies that are best to manage a patient's condition. Assessments are often 1:1 with a clinical consultation / encounter,  but this varies greatly depending on the clinical workflow. This resource is called "ClinicalImpression" rather than "ClinicalAssessment" to avoid confusion with the recording of assessment tools such as Apgar score.
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
-        id_: Optional[FhirString ] = None,
-        extension: Optional[FhirList[Extension ]] = None,
-        modifierExtension: Optional[FhirList[Extension ]] = None,
-        code: CodeableConcept[InvestigationTypeCode] ,
-        item: Optional[FhirList[Reference [Union[Observation, QuestionnaireResponse, FamilyMemberHistory, DiagnosticReport, RiskAssessment, ImagingStudy, Media]]]] = None,
+        id_: Optional[FhirString] = None,
+        extension: Optional[FhirList[Extension]] = None,
+        modifierExtension: Optional[FhirList[Extension]] = None,
+        code: CodeableConcept[InvestigationTypeCode],
+        item: Optional[
+            FhirList[
+                Reference[
+                    Union[
+                        Observation,
+                        QuestionnaireResponse,
+                        FamilyMemberHistory,
+                        DiagnosticReport,
+                        RiskAssessment,
+                        ImagingStudy,
+                        Media,
+                    ]
+                ]
+            ]
+        ] = None,
     ) -> None:
         """
-        A record of a clinical assessment performed to determine what problem(s) may
-    affect the patient and before planning the treatments or management strategies
-    that are best to manage a patient's condition. Assessments are often 1:1 with
-    a clinical consultation / encounter,  but this varies greatly depending on the
-    clinical workflow. This resource is called "ClinicalImpression" rather than
-    "ClinicalAssessment" to avoid confusion with the recording of assessment tools
-    such as Apgar score.
+            A record of a clinical assessment performed to determine what problem(s) may
+        affect the patient and before planning the treatments or management strategies
+        that are best to manage a patient's condition. Assessments are often 1:1 with
+        a clinical consultation / encounter,  but this varies greatly depending on the
+        clinical workflow. This resource is called "ClinicalImpression" rather than
+        "ClinicalAssessment" to avoid confusion with the recording of assessment tools
+        such as Apgar score.
 
-        :param id_: None
-        :param extension: May be used to represent additional information that is not part of the basic
-    definition of the element. To make the use of extensions safe and manageable,
-    there is a strict set of governance  applied to the definition and use of
-    extensions. Though any implementer can define an extension, there is a set of
-    requirements that SHALL be met as part of the definition of the extension.
-        :param modifierExtension: May be used to represent additional information that is not part of the basic
-    definition of the element and that modifies the understanding of the element
-    in which it is contained and/or the understanding of the containing element's
-    descendants. Usually modifier elements provide negation or qualification. To
-    make the use of extensions safe and manageable, there is a strict set of
-    governance applied to the definition and use of extensions. Though any
-    implementer can define an extension, there is a set of requirements that SHALL
-    be met as part of the definition of the extension. Applications processing a
-    resource are required to check for modifier extensions.
-    
-    Modifier extensions SHALL NOT change the meaning of any elements on Resource
-    or DomainResource (including cannot change the meaning of modifierExtension
-    itself).
-        :param code: A name/code for the group ("set") of investigations. Typically, this will be
-    something like "signs", "symptoms", "clinical", "diagnostic", but the list is
-    not constrained, and others such groups such as
-    (exposure|family|travel|nutritional) history may be used.
-        :param item: A record of a specific investigation that was undertaken.
+            :param id_: None
+            :param extension: May be used to represent additional information that is not part of the basic
+        definition of the element. To make the use of extensions safe and manageable,
+        there is a strict set of governance  applied to the definition and use of
+        extensions. Though any implementer can define an extension, there is a set of
+        requirements that SHALL be met as part of the definition of the extension.
+            :param modifierExtension: May be used to represent additional information that is not part of the basic
+        definition of the element and that modifies the understanding of the element
+        in which it is contained and/or the understanding of the containing element's
+        descendants. Usually modifier elements provide negation or qualification. To
+        make the use of extensions safe and manageable, there is a strict set of
+        governance applied to the definition and use of extensions. Though any
+        implementer can define an extension, there is a set of requirements that SHALL
+        be met as part of the definition of the extension. Applications processing a
+        resource are required to check for modifier extensions.
+
+        Modifier extensions SHALL NOT change the meaning of any elements on Resource
+        or DomainResource (including cannot change the meaning of modifierExtension
+        itself).
+            :param code: A name/code for the group ("set") of investigations. Typically, this will be
+        something like "signs", "symptoms", "clinical", "diagnostic", but the list is
+        not constrained, and others such groups such as
+        (exposure|family|travel|nutritional) history may be used.
+            :param item: A record of a specific investigation that was undertaken.
         """
         super().__init__(
             id_=id_,

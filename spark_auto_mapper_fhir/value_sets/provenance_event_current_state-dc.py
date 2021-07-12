@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -28,13 +18,16 @@ class ProvenanceEventCurrentState_DC(GenericTypeCode):
     target Act, the source ProvenanceEventCurrentState Act code would be
     "obsoleted".
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
     """
     http://terminology.hl7.org/ValueSet/v3-ProvenanceEventCurrentState-DC
     """
-    codeset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ProvenanceEventCurrentState-DC"
+    codeset: FhirUri = (
+        "http://terminology.hl7.org/ValueSet/v3-ProvenanceEventCurrentState-DC"
+    )
     """
     http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion
     """
@@ -51,6 +44,7 @@ class ProvenanceEventCurrentState_DCValues:
     authentication, usually by the assigned individual.
     From: http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion in v3-codesystems.xml
     """
+
     Authenticated = ProvenanceEventCurrentState_DC("AU")
     """
     A completion status in which information has been orally recorded but not yet

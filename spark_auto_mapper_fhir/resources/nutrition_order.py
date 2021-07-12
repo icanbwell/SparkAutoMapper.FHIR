@@ -1,16 +1,11 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
@@ -24,53 +19,80 @@ if TYPE_CHECKING:
     # implicitRules (uri)
     # language (CommonLanguages)
     from spark_auto_mapper_fhir.value_sets.common_languages import CommonLanguagesCode
+
     # text (Narrative)
     from spark_auto_mapper_fhir.complex_types.narrative import Narrative
+
     # contained (ResourceContainer)
-    from spark_auto_mapper_fhir.complex_types.resource_container import ResourceContainer
+    from spark_auto_mapper_fhir.complex_types.resource_container import (
+        ResourceContainer,
+    )
+
     # extension (Extension)
     from spark_auto_mapper_fhir.complex_types.extension import Extension
+
     # modifierExtension (Extension)
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
     # instantiatesCanonical (canonical)
     from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
+
     # instantiatesUri (uri)
     # instantiates (uri)
     # status (RequestStatus)
     from spark_auto_mapper_fhir.value_sets.request_status import RequestStatusCode
+
     # intent (RequestIntent)
     from spark_auto_mapper_fhir.value_sets.request_intent import RequestIntentCode
+
     # patient (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for patient
     from spark_auto_mapper_fhir.resources.patient import Patient
+
     # encounter (Reference)
     # Imports for References for encounter
     from spark_auto_mapper_fhir.resources.encounter import Encounter
+
     # dateTime (dateTime)
     # orderer (Reference)
     # Imports for References for orderer
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
     from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
+
     # allergyIntolerance (Reference)
     # Imports for References for allergyIntolerance
     from spark_auto_mapper_fhir.resources.allergy_intolerance import AllergyIntolerance
+
     # foodPreferenceModifier (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # Import for CodeableConcept for foodPreferenceModifier
     from spark_auto_mapper_fhir.value_sets.diet import DietCode
+
     # End Import for CodeableConcept for foodPreferenceModifier
     # excludeFoodModifier (CodeableConcept)
     # Import for CodeableConcept for excludeFoodModifier
     from spark_auto_mapper_fhir.value_sets.food_type_codes import FoodTypeCodesCode
+
     # End Import for CodeableConcept for excludeFoodModifier
     # oralDiet (NutritionOrder.OralDiet)
-    from spark_auto_mapper_fhir.backbone_elements.nutrition_order_oral_diet import NutritionOrderOralDiet
+    from spark_auto_mapper_fhir.backbone_elements.nutrition_order_oral_diet import (
+        NutritionOrderOralDiet,
+    )
+
     # supplement (NutritionOrder.Supplement)
-    from spark_auto_mapper_fhir.backbone_elements.nutrition_order_supplement import NutritionOrderSupplement
+    from spark_auto_mapper_fhir.backbone_elements.nutrition_order_supplement import (
+        NutritionOrderSupplement,
+    )
+
     # enteralFormula (NutritionOrder.EnteralFormula)
-    from spark_auto_mapper_fhir.backbone_elements.nutrition_order_enteral_formula import NutritionOrderEnteralFormula
+    from spark_auto_mapper_fhir.backbone_elements.nutrition_order_enteral_formula import (
+        NutritionOrderEnteralFormula,
+    )
+
     # note (Annotation)
     from spark_auto_mapper_fhir.complex_types.annotation import Annotation
 
@@ -85,121 +107,126 @@ class NutritionOrder(FhirResourceBase):
     supplement to a patient/resident.
         If the element is present, it must have either a @value, an @id, or extensions
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
-        id_: Optional[FhirId ] = None,
-        meta: Optional[Meta ] = None,
-        implicitRules: Optional[FhirUri ] = None,
-        language: Optional[CommonLanguagesCode ] = None,
-        text: Optional[Narrative ] = None,
-        contained: Optional[FhirList[ResourceContainer ]] = None,
-        extension: Optional[FhirList[Extension ]] = None,
-        modifierExtension: Optional[FhirList[Extension ]] = None,
-        identifier: Optional[FhirList[Identifier ]] = None,
-        instantiatesCanonical: Optional[FhirList[FhirCanonical ]] = None,
-        instantiatesUri: Optional[FhirList[FhirUri ]] = None,
-        instantiates: Optional[FhirList[FhirUri ]] = None,
-        status: RequestStatusCode ,
-        intent: RequestIntentCode ,
-        patient: Reference [Union[Patient]],
-        encounter: Optional[Reference [Union[Encounter]]] = None,
-        dateTime: FhirDateTime ,
-        orderer: Optional[Reference [Union[Practitioner, PractitionerRole]]] = None,
-        allergyIntolerance: Optional[FhirList[Reference [Union[AllergyIntolerance]]]] = None,
-        foodPreferenceModifier: Optional[FhirList[CodeableConcept[DietCode] ]] = None,
-        excludeFoodModifier: Optional[FhirList[CodeableConcept[FoodTypeCodesCode] ]] = None,
-        oralDiet: Optional[NutritionOrderOralDiet ] = None,
-        supplement: Optional[FhirList[NutritionOrderSupplement ]] = None,
-        enteralFormula: Optional[NutritionOrderEnteralFormula ] = None,
-        note: Optional[FhirList[Annotation ]] = None,
+        id_: Optional[FhirId] = None,
+        meta: Optional[Meta] = None,
+        implicitRules: Optional[FhirUri] = None,
+        language: Optional[CommonLanguagesCode] = None,
+        text: Optional[Narrative] = None,
+        contained: Optional[FhirList[ResourceContainer]] = None,
+        extension: Optional[FhirList[Extension]] = None,
+        modifierExtension: Optional[FhirList[Extension]] = None,
+        identifier: Optional[FhirList[Identifier]] = None,
+        instantiatesCanonical: Optional[FhirList[FhirCanonical]] = None,
+        instantiatesUri: Optional[FhirList[FhirUri]] = None,
+        instantiates: Optional[FhirList[FhirUri]] = None,
+        status: RequestStatusCode,
+        intent: RequestIntentCode,
+        patient: Reference[Union[Patient]],
+        encounter: Optional[Reference[Union[Encounter]]] = None,
+        dateTime: FhirDateTime,
+        orderer: Optional[Reference[Union[Practitioner, PractitionerRole]]] = None,
+        allergyIntolerance: Optional[
+            FhirList[Reference[Union[AllergyIntolerance]]]
+        ] = None,
+        foodPreferenceModifier: Optional[FhirList[CodeableConcept[DietCode]]] = None,
+        excludeFoodModifier: Optional[
+            FhirList[CodeableConcept[FoodTypeCodesCode]]
+        ] = None,
+        oralDiet: Optional[NutritionOrderOralDiet] = None,
+        supplement: Optional[FhirList[NutritionOrderSupplement]] = None,
+        enteralFormula: Optional[NutritionOrderEnteralFormula] = None,
+        note: Optional[FhirList[Annotation]] = None,
     ) -> None:
         """
-        A request to supply a diet, formula feeding (enteral) or oral nutritional
-    supplement to a patient/resident.
-        If the element is present, it must have either a @value, an @id, or extensions
+            A request to supply a diet, formula feeding (enteral) or oral nutritional
+        supplement to a patient/resident.
+            If the element is present, it must have either a @value, an @id, or extensions
 
-        :param id_: The logical id of the resource, as used in the URL for the resource. Once
-    assigned, this value never changes.
-        :param meta: The metadata about the resource. This is content that is maintained by the
-    infrastructure. Changes to the content might not always be associated with
-    version changes to the resource.
-        :param implicitRules: A reference to a set of rules that were followed when the resource was
-    constructed, and which must be understood when processing the content. Often,
-    this is a reference to an implementation guide that defines the special rules
-    along with other profiles etc.
-        :param language: The base language in which the resource is written.
-        :param text: A human-readable narrative that contains a summary of the resource and can be
-    used to represent the content of the resource to a human. The narrative need
-    not encode all the structured data, but is required to contain sufficient
-    detail to make it "clinically safe" for a human to just read the narrative.
-    Resource definitions may define what content should be represented in the
-    narrative to ensure clinical safety.
-        :param contained: These resources do not have an independent existence apart from the resource
-    that contains them - they cannot be identified independently, and nor can they
-    have their own independent transaction scope.
-        :param extension: May be used to represent additional information that is not part of the basic
-    definition of the resource. To make the use of extensions safe and manageable,
-    there is a strict set of governance  applied to the definition and use of
-    extensions. Though any implementer can define an extension, there is a set of
-    requirements that SHALL be met as part of the definition of the extension.
-        :param modifierExtension: May be used to represent additional information that is not part of the basic
-    definition of the resource and that modifies the understanding of the element
-    that contains it and/or the understanding of the containing element's
-    descendants. Usually modifier elements provide negation or qualification. To
-    make the use of extensions safe and manageable, there is a strict set of
-    governance applied to the definition and use of extensions. Though any
-    implementer is allowed to define an extension, there is a set of requirements
-    that SHALL be met as part of the definition of the extension. Applications
-    processing a resource are required to check for modifier extensions.
-    
-    Modifier extensions SHALL NOT change the meaning of any elements on Resource
-    or DomainResource (including cannot change the meaning of modifierExtension
-    itself).
-        :param identifier: Identifiers assigned to this order by the order sender or by the order
-    receiver.
-        :param instantiatesCanonical: The URL pointing to a FHIR-defined protocol, guideline, orderset or other
-    definition that is adhered to in whole or in part by this NutritionOrder.
-        :param instantiatesUri: The URL pointing to an externally maintained protocol, guideline, orderset or
-    other definition that is adhered to in whole or in part by this
-    NutritionOrder.
-        :param instantiates: The URL pointing to a protocol, guideline, orderset or other definition that
-    is adhered to in whole or in part by this NutritionOrder.
-        :param status: The workflow status of the nutrition order/request.
-        :param intent: Indicates the level of authority/intentionality associated with the
-    NutrionOrder and where the request fits into the workflow chain.
-        :param patient: The person (patient) who needs the nutrition order for an oral diet,
-    nutritional supplement and/or enteral or formula feeding.
-        :param encounter: An encounter that provides additional information about the healthcare context
-    in which this request is made.
-        :param dateTime: The date and time that this nutrition order was requested.
-        :param orderer: The practitioner that holds legal responsibility for ordering the diet,
-    nutritional supplement, or formula feedings.
-        :param allergyIntolerance: A link to a record of allergies or intolerances  which should be included in
-    the nutrition order.
-        :param foodPreferenceModifier: This modifier is used to convey order-specific modifiers about the type of
-    food that should be given. These can be derived from patient allergies,
-    intolerances, or preferences such as Halal, Vegan or Kosher. This modifier
-    applies to the entire nutrition order inclusive of the oral diet, nutritional
-    supplements and enteral formula feedings.
-        :param excludeFoodModifier: This modifier is used to convey Order-specific modifier about the type of oral
-    food or oral fluids that should not be given. These can be derived from
-    patient allergies, intolerances, or preferences such as No Red Meat, No Soy or
-    No Wheat or  Gluten-Free.  While it should not be necessary to repeat allergy
-    or intolerance information captured in the referenced AllergyIntolerance
-    resource in the excludeFoodModifier, this element may be used to convey
-    additional specificity related to foods that should be eliminated from the
-    patient’s diet for any reason.  This modifier applies to the entire nutrition
-    order inclusive of the oral diet, nutritional supplements and enteral formula
-    feedings.
-        :param oralDiet: Diet given orally in contrast to enteral (tube) feeding.
-        :param supplement: Oral nutritional products given in order to add further nutritional value to
-    the patient's diet.
-        :param enteralFormula: Feeding provided through the gastrointestinal tract via a tube, catheter, or
-    stoma that delivers nutrition distal to the oral cavity.
-        :param note: Comments made about the {{title}} by the requester, performer, subject or
-    other participants.
+            :param id_: The logical id of the resource, as used in the URL for the resource. Once
+        assigned, this value never changes.
+            :param meta: The metadata about the resource. This is content that is maintained by the
+        infrastructure. Changes to the content might not always be associated with
+        version changes to the resource.
+            :param implicitRules: A reference to a set of rules that were followed when the resource was
+        constructed, and which must be understood when processing the content. Often,
+        this is a reference to an implementation guide that defines the special rules
+        along with other profiles etc.
+            :param language: The base language in which the resource is written.
+            :param text: A human-readable narrative that contains a summary of the resource and can be
+        used to represent the content of the resource to a human. The narrative need
+        not encode all the structured data, but is required to contain sufficient
+        detail to make it "clinically safe" for a human to just read the narrative.
+        Resource definitions may define what content should be represented in the
+        narrative to ensure clinical safety.
+            :param contained: These resources do not have an independent existence apart from the resource
+        that contains them - they cannot be identified independently, and nor can they
+        have their own independent transaction scope.
+            :param extension: May be used to represent additional information that is not part of the basic
+        definition of the resource. To make the use of extensions safe and manageable,
+        there is a strict set of governance  applied to the definition and use of
+        extensions. Though any implementer can define an extension, there is a set of
+        requirements that SHALL be met as part of the definition of the extension.
+            :param modifierExtension: May be used to represent additional information that is not part of the basic
+        definition of the resource and that modifies the understanding of the element
+        that contains it and/or the understanding of the containing element's
+        descendants. Usually modifier elements provide negation or qualification. To
+        make the use of extensions safe and manageable, there is a strict set of
+        governance applied to the definition and use of extensions. Though any
+        implementer is allowed to define an extension, there is a set of requirements
+        that SHALL be met as part of the definition of the extension. Applications
+        processing a resource are required to check for modifier extensions.
+
+        Modifier extensions SHALL NOT change the meaning of any elements on Resource
+        or DomainResource (including cannot change the meaning of modifierExtension
+        itself).
+            :param identifier: Identifiers assigned to this order by the order sender or by the order
+        receiver.
+            :param instantiatesCanonical: The URL pointing to a FHIR-defined protocol, guideline, orderset or other
+        definition that is adhered to in whole or in part by this NutritionOrder.
+            :param instantiatesUri: The URL pointing to an externally maintained protocol, guideline, orderset or
+        other definition that is adhered to in whole or in part by this
+        NutritionOrder.
+            :param instantiates: The URL pointing to a protocol, guideline, orderset or other definition that
+        is adhered to in whole or in part by this NutritionOrder.
+            :param status: The workflow status of the nutrition order/request.
+            :param intent: Indicates the level of authority/intentionality associated with the
+        NutrionOrder and where the request fits into the workflow chain.
+            :param patient: The person (patient) who needs the nutrition order for an oral diet,
+        nutritional supplement and/or enteral or formula feeding.
+            :param encounter: An encounter that provides additional information about the healthcare context
+        in which this request is made.
+            :param dateTime: The date and time that this nutrition order was requested.
+            :param orderer: The practitioner that holds legal responsibility for ordering the diet,
+        nutritional supplement, or formula feedings.
+            :param allergyIntolerance: A link to a record of allergies or intolerances  which should be included in
+        the nutrition order.
+            :param foodPreferenceModifier: This modifier is used to convey order-specific modifiers about the type of
+        food that should be given. These can be derived from patient allergies,
+        intolerances, or preferences such as Halal, Vegan or Kosher. This modifier
+        applies to the entire nutrition order inclusive of the oral diet, nutritional
+        supplements and enteral formula feedings.
+            :param excludeFoodModifier: This modifier is used to convey Order-specific modifier about the type of oral
+        food or oral fluids that should not be given. These can be derived from
+        patient allergies, intolerances, or preferences such as No Red Meat, No Soy or
+        No Wheat or  Gluten-Free.  While it should not be necessary to repeat allergy
+        or intolerance information captured in the referenced AllergyIntolerance
+        resource in the excludeFoodModifier, this element may be used to convey
+        additional specificity related to foods that should be eliminated from the
+        patient’s diet for any reason.  This modifier applies to the entire nutrition
+        order inclusive of the oral diet, nutritional supplements and enteral formula
+        feedings.
+            :param oralDiet: Diet given orally in contrast to enteral (tube) feeding.
+            :param supplement: Oral nutritional products given in order to add further nutritional value to
+        the patient's diet.
+            :param enteralFormula: Feeding provided through the gastrointestinal tract via a tube, catheter, or
+        stoma that delivers nutrition distal to the oral cavity.
+            :param note: Comments made about the {{title}} by the requester, performer, subject or
+        other participants.
         """
         super().__init__(
             resourceType="NutritionOrder",

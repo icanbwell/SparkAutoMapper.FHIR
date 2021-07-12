@@ -1,17 +1,9 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
-from spark_auto_mapper_fhir.resources.resource import Resource
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.base_types.fhir_backbone_element_base import (
     FhirBackboneElementBase,
@@ -22,18 +14,25 @@ if TYPE_CHECKING:
     # id_ (string)
     # extension (Extension)
     from spark_auto_mapper_fhir.complex_types.extension import Extension
+
     # modifierExtension (Extension)
     # description (string)
     # procedure (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
     # End Import for References for procedure
     # Import for CodeableConcept for procedure
-    from spark_auto_mapper_fhir.value_sets.specimen_processing_procedure import SpecimenProcessingProcedureCode
+    from spark_auto_mapper_fhir.value_sets.specimen_processing_procedure import (
+        SpecimenProcessingProcedureCode,
+    )
+
     # End Import for CodeableConcept for procedure
     # additive (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
+
     # Imports for References for additive
     from spark_auto_mapper_fhir.resources.substance import Substance
+
     # timeDateTime (dateTime)
     # timePeriod (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
@@ -46,46 +45,47 @@ class SpecimenProcessing(FhirBackboneElementBase):
     Specimen.Processing
         A sample to be used for analysis.
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
-        id_: Optional[FhirString ] = None,
-        extension: Optional[FhirList[Extension ]] = None,
-        modifierExtension: Optional[FhirList[Extension ]] = None,
-        description: Optional[FhirString ] = None,
-        procedure: Optional[CodeableConcept[SpecimenProcessingProcedureCode] ] = None,
-        additive: Optional[FhirList[Reference [Union[Substance]]]] = None,
-        timeDateTime: Optional[FhirDateTime ] = None,
-        timePeriod: Optional[Period ] = None,
+        id_: Optional[FhirString] = None,
+        extension: Optional[FhirList[Extension]] = None,
+        modifierExtension: Optional[FhirList[Extension]] = None,
+        description: Optional[FhirString] = None,
+        procedure: Optional[CodeableConcept[SpecimenProcessingProcedureCode]] = None,
+        additive: Optional[FhirList[Reference[Union[Substance]]]] = None,
+        timeDateTime: Optional[FhirDateTime] = None,
+        timePeriod: Optional[Period] = None,
     ) -> None:
         """
-        A sample to be used for analysis.
+            A sample to be used for analysis.
 
-        :param id_: None
-        :param extension: May be used to represent additional information that is not part of the basic
-    definition of the element. To make the use of extensions safe and manageable,
-    there is a strict set of governance  applied to the definition and use of
-    extensions. Though any implementer can define an extension, there is a set of
-    requirements that SHALL be met as part of the definition of the extension.
-        :param modifierExtension: May be used to represent additional information that is not part of the basic
-    definition of the element and that modifies the understanding of the element
-    in which it is contained and/or the understanding of the containing element's
-    descendants. Usually modifier elements provide negation or qualification. To
-    make the use of extensions safe and manageable, there is a strict set of
-    governance applied to the definition and use of extensions. Though any
-    implementer can define an extension, there is a set of requirements that SHALL
-    be met as part of the definition of the extension. Applications processing a
-    resource are required to check for modifier extensions.
-    
-    Modifier extensions SHALL NOT change the meaning of any elements on Resource
-    or DomainResource (including cannot change the meaning of modifierExtension
-    itself).
-        :param description: Textual description of procedure.
-        :param procedure: A coded value specifying the procedure used to process the specimen.
-        :param additive: Material used in the processing step.
-        :param timeDateTime: None
-        :param timePeriod: None
+            :param id_: None
+            :param extension: May be used to represent additional information that is not part of the basic
+        definition of the element. To make the use of extensions safe and manageable,
+        there is a strict set of governance  applied to the definition and use of
+        extensions. Though any implementer can define an extension, there is a set of
+        requirements that SHALL be met as part of the definition of the extension.
+            :param modifierExtension: May be used to represent additional information that is not part of the basic
+        definition of the element and that modifies the understanding of the element
+        in which it is contained and/or the understanding of the containing element's
+        descendants. Usually modifier elements provide negation or qualification. To
+        make the use of extensions safe and manageable, there is a strict set of
+        governance applied to the definition and use of extensions. Though any
+        implementer can define an extension, there is a set of requirements that SHALL
+        be met as part of the definition of the extension. Applications processing a
+        resource are required to check for modifier extensions.
+
+        Modifier extensions SHALL NOT change the meaning of any elements on Resource
+        or DomainResource (including cannot change the meaning of modifierExtension
+        itself).
+            :param description: Textual description of procedure.
+            :param procedure: A coded value specifying the procedure used to process the specimen.
+            :param additive: Material used in the processing step.
+            :param timeDateTime: None
+            :param timePeriod: None
         """
         super().__init__(
             id_=id_,

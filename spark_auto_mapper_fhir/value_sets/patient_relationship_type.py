@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -25,6 +15,7 @@ class PatientRelationshipTypeCode(GenericTypeCode):
         A set of codes that can be used to indicate the relationship between a Patient
     and a Related Person.
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -42,6 +33,7 @@ class PatientRelationshipTypeCodeValues:
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
     """
+
     BillingContactPerson = PatientRelationshipTypeCode("BP")
     """
     From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
@@ -133,7 +125,9 @@ class PatientRelationshipTypeCodeValues:
     Code indicating the primary use for which a living subject is bred or grown
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    LivingSubjectProductionClass = PatientRelationshipTypeCode("_LivingSubjectProductionClass")
+    LivingSubjectProductionClass = PatientRelationshipTypeCode(
+        "_LivingSubjectProductionClass"
+    )
     """
     Identifies the specific hierarchical relationship between the playing and
     scoping medications.
@@ -143,7 +137,9 @@ class PatientRelationshipTypeCodeValues:
     Class, etc.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    MedicationGeneralizationRoleType = PatientRelationshipTypeCode("_MedicationGeneralizationRoleType")
+    MedicationGeneralizationRoleType = PatientRelationshipTypeCode(
+        "_MedicationGeneralizationRoleType"
+    )
     """
     Types of membership for Role code "MBR"
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
@@ -153,7 +149,9 @@ class PatientRelationshipTypeCodeValues:
     PersonalRelationshipRoleType
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    PersonalRelationshipRoleType = PatientRelationshipTypeCode("_PersonalRelationshipRoleType")
+    PersonalRelationshipRoleType = PatientRelationshipTypeCode(
+        "_PersonalRelationshipRoleType"
+    )
     """
     Description: A role recognized through the eligibility of an identified party
     for benefits covered under an insurance policy or a program based on meeting
@@ -202,7 +200,9 @@ class PatientRelationshipTypeCodeValues:
     semantic comparability.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    PolicyOrProgramCoverageRoleType = PatientRelationshipTypeCode("_PolicyOrProgramCoverageRoleType")
+    PolicyOrProgramCoverageRoleType = PatientRelationshipTypeCode(
+        "_PolicyOrProgramCoverageRoleType"
+    )
     """
     Specifies the administrative functionality within a formal experimental design
     for which the ResearchSubject role was established.  Examples: screening -
@@ -217,7 +217,9 @@ class PatientRelationshipTypeCodeValues:
     road side, work site, community location) in which services are delivered.
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml
     """
-    ServiceDeliveryLocationRoleType = PatientRelationshipTypeCode("_ServiceDeliveryLocationRoleType")
+    ServiceDeliveryLocationRoleType = PatientRelationshipTypeCode(
+        "_ServiceDeliveryLocationRoleType"
+    )
     """
     SpecimenRoleType
     From: http://terminology.hl7.org/CodeSystem/v3-RoleCode in v3-codesystems.xml

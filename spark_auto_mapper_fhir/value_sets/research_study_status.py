@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -24,6 +14,7 @@ class ResearchStudyStatusCode(GenericTypeCode):
     From: http://hl7.org/fhir/research-study-status in valuesets.xml
         Codes that convey the current status of the research study.
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -38,6 +29,7 @@ class ResearchStudyStatusCodeValues:
     Study is opened for accrual.
     From: http://hl7.org/fhir/research-study-status in valuesets.xml
     """
+
     Active = ResearchStudyStatusCode("active")
     """
     Study is completed prematurely and will not resume; patients are no longer
@@ -61,7 +53,9 @@ class ResearchStudyStatusCodeValues:
     are still being followed according to the primary objective of the study.
     From: http://hl7.org/fhir/research-study-status in valuesets.xml
     """
-    ClosedToAccrualAndIntervention = ResearchStudyStatusCode("closed-to-accrual-and-intervention")
+    ClosedToAccrualAndIntervention = ResearchStudyStatusCode(
+        "closed-to-accrual-and-intervention"
+    )
     """
     Study is closed to accrual and intervention, i.e. the study is closed to
     enrollment, all study subjects have completed treatment
@@ -85,13 +79,17 @@ class ResearchStudyStatusCodeValues:
     future; patients can be examined and treated.
     From: http://hl7.org/fhir/research-study-status in valuesets.xml
     """
-    TemporarilyClosedToAccrual = ResearchStudyStatusCode("temporarily-closed-to-accrual")
+    TemporarilyClosedToAccrual = ResearchStudyStatusCode(
+        "temporarily-closed-to-accrual"
+    )
     """
     Study is temporarily closed for accrual and intervention and potentially can
     be resumed in the future.
     From: http://hl7.org/fhir/research-study-status in valuesets.xml
     """
-    TemporarilyClosedToAccrualAndIntervention = ResearchStudyStatusCode("temporarily-closed-to-accrual-and-intervention")
+    TemporarilyClosedToAccrualAndIntervention = ResearchStudyStatusCode(
+        "temporarily-closed-to-accrual-and-intervention"
+    )
     """
     Protocol was withdrawn by the lead organization.
     From: http://hl7.org/fhir/research-study-status in valuesets.xml

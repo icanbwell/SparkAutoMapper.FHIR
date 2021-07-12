@@ -1,19 +1,9 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
-from spark_auto_mapper_fhir.fhir_types.fhir_reference import FhirReference
-from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 
@@ -22,8 +12,10 @@ if TYPE_CHECKING:
     # id_ (string)
     # extension (Extension)
     from spark_auto_mapper_fhir.complex_types.extension import Extension
+
     # use (NameUse)
     from spark_auto_mapper_fhir.value_sets.name_use import NameUseCode
+
     # text (string)
     # family (string)
     # given (string)
@@ -42,42 +34,43 @@ class HumanName(FhirComplexTypeBase):
         A human's name with the ability to identify parts and usage.
         If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
     """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
         *,
-        id_: Optional[FhirString ] = None,
-        extension: Optional[FhirList[Extension ]] = None,
-        use: Optional[NameUseCode ] = None,
-        text: Optional[FhirString ] = None,
-        family: Optional[FhirString ] = None,
-        given: Optional[FhirList[FhirString ]] = None,
-        prefix: Optional[FhirList[FhirString ]] = None,
-        suffix: Optional[FhirList[FhirString ]] = None,
-        period: Optional[Period ] = None,
+        id_: Optional[FhirString] = None,
+        extension: Optional[FhirList[Extension]] = None,
+        use: Optional[NameUseCode] = None,
+        text: Optional[FhirString] = None,
+        family: Optional[FhirString] = None,
+        given: Optional[FhirList[FhirString]] = None,
+        prefix: Optional[FhirList[FhirString]] = None,
+        suffix: Optional[FhirList[FhirString]] = None,
+        period: Optional[Period] = None,
     ) -> None:
         """
-        A human's name with the ability to identify parts and usage.
-        If the element is present, it must have a value for at least one of the
-    defined elements, an @id referenced from the Narrative, or extensions
+            A human's name with the ability to identify parts and usage.
+            If the element is present, it must have a value for at least one of the
+        defined elements, an @id referenced from the Narrative, or extensions
 
-        :param id_: None
-        :param extension: May be used to represent additional information that is not part of the basic
-    definition of the element. To make the use of extensions safe and manageable,
-    there is a strict set of governance  applied to the definition and use of
-    extensions. Though any implementer can define an extension, there is a set of
-    requirements that SHALL be met as part of the definition of the extension.
-        :param use: Identifies the purpose for this name.
-        :param text: Specifies the entire name as it should be displayed e.g. on an application UI.
-    This may be provided instead of or as well as the specific parts.
-        :param family: The part of a name that links to the genealogy. In some cultures (e.g.
-    Eritrea) the family name of a son is the first name of his father.
-        :param given: Given name.
-        :param prefix: Part of the name that is acquired as a title due to academic, legal,
-    employment or nobility status, etc. and that appears at the start of the name.
-        :param suffix: Part of the name that is acquired as a title due to academic, legal,
-    employment or nobility status, etc. and that appears at the end of the name.
-        :param period: Indicates the period of time when this name was valid for the named person.
+            :param id_: None
+            :param extension: May be used to represent additional information that is not part of the basic
+        definition of the element. To make the use of extensions safe and manageable,
+        there is a strict set of governance  applied to the definition and use of
+        extensions. Though any implementer can define an extension, there is a set of
+        requirements that SHALL be met as part of the definition of the extension.
+            :param use: Identifies the purpose for this name.
+            :param text: Specifies the entire name as it should be displayed e.g. on an application UI.
+        This may be provided instead of or as well as the specific parts.
+            :param family: The part of a name that links to the genealogy. In some cultures (e.g.
+        Eritrea) the family name of a son is the first name of his father.
+            :param given: Given name.
+            :param prefix: Part of the name that is acquired as a title due to academic, legal,
+        employment or nobility status, etc. and that appears at the start of the name.
+            :param suffix: Part of the name that is acquired as a title due to academic, legal,
+        employment or nobility status, etc. and that appears at the end of the name.
+            :param period: Indicates the period of time when this name was valid for the named person.
         """
         super().__init__(
             id_=id_,

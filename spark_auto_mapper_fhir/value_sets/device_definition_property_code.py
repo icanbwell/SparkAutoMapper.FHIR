@@ -1,15 +1,5 @@
 from __future__ import annotations
-from typing import Optional, Union, List, Any, TYPE_CHECKING
 
-from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.fhir_types.date import FhirDate
-from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
@@ -25,6 +15,7 @@ class DeviceDefinitionPropertyCodeCode(GenericTypeCode):
         Codes for identifying device properties.   This is based upon IEEE/HCD
     specified codes.
     """
+
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
@@ -38,6 +29,7 @@ class DeviceDefinitionPropertyCodeCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/device-component-property in valuesets.xml
     """
+
     MDC_TIME_CAP_STATE = DeviceDefinitionPropertyCodeCode("68219")
     """
     From: http://hl7.org/fhir/ValueSet/device-component-property in valuesets.xml
@@ -66,7 +58,9 @@ class DeviceDefinitionPropertyCodeCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/device-component-property in valuesets.xml
     """
-    MDC_REG_CERT_DATA_CONTINUA_CERT_DEV_LIST = DeviceDefinitionPropertyCodeCode("532353")
+    MDC_REG_CERT_DATA_CONTINUA_CERT_DEV_LIST = DeviceDefinitionPropertyCodeCode(
+        "532353"
+    )
     """
     From: http://hl7.org/fhir/ValueSet/device-component-property in valuesets.xml
     """
@@ -74,4 +68,6 @@ class DeviceDefinitionPropertyCodeCodeValues:
     """
     From: http://hl7.org/fhir/ValueSet/device-component-property in valuesets.xml
     """
-    MDC_REG_CERT_DATA_CONTINUA_PHG_CERT_LIST = DeviceDefinitionPropertyCodeCode("532355")
+    MDC_REG_CERT_DATA_CONTINUA_PHG_CERT_LIST = DeviceDefinitionPropertyCodeCode(
+        "532355"
+    )
