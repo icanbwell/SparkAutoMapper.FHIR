@@ -95,7 +95,15 @@ class {{fhir_entity.cleaned_name}}(FhirComplexTypeBase):
         self,
         *,
     {% for property in fhir_entity.properties %}
+        {% if fhir_entity.cleaned_name == "CodeableConcept" and property.name == "coding" %}
+        coding: Optional[FhirList[Coding[_T]]] = None,
+        {% elif fhir_entity.cleaned_name == "Coding" and property.name == "code" %}
+        code: Optional[_T] = None,
+        {% elif fhir_entity.cleaned_name == "Reference" and property.name == "reference" %}
+        reference: Optional[FhirReference] = None,
+        {% else %}
         {{ property.name }}: {% if property.optional %}Optional[{% endif %}{% if property.is_list %}FhirList[{% endif %}{{ property.cleaned_type | replace(".","")}}{% if property.codeable_type %}[{{ property.codeable_type.cleaned_name }}]{% endif %} {% if property.reference_target_resources %}[Union[{{ property.reference_target_resources_names | join(", ") }}]]{% endif %}{% if property.is_list %}]{% endif %}{% if property.optional %}] = None,{% else %},{% endif %}
+        {% endif %}
 
     {% endfor %}
     ) -> None:

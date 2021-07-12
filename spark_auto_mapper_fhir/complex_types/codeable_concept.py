@@ -16,8 +16,6 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.complex_types.coding import Coding
 
     # Import for CodeableConcept for coding
-    from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
-
     # End Import for CodeableConcept for coding
     # text (string)
 
@@ -42,7 +40,7 @@ class CodeableConcept(FhirComplexTypeBase, Generic[_T]):
         self,
         *,
         extension: Optional[FhirList[Extension]] = None,
-        coding: Optional[FhirList[Coding[GenericTypeCode]]] = None,
+        coding: Optional[FhirList[Coding[_T]]] = None,
         text: Optional[FhirString] = None,
     ) -> None:
         """

@@ -17,8 +17,6 @@ if TYPE_CHECKING:
     # system (uri)
     # version (string)
     # code (code)
-    from spark_auto_mapper_fhir.complex_types.code import code
-
     # display (string)
     # userSelected (boolean)
 
@@ -45,7 +43,7 @@ class Coding(FhirComplexTypeBase, Generic[_T]):
         extension: Optional[FhirList[Extension]] = None,
         system: Optional[FhirUri] = None,
         version: Optional[FhirString] = None,
-        code: Optional[code] = None,
+        code: Optional[_T] = None,
         display: Optional[FhirString] = None,
         userSelected: Optional[FhirBoolean] = None,
     ) -> None:

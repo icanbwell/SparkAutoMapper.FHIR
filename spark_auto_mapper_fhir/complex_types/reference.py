@@ -3,6 +3,7 @@ from typing import Optional, TYPE_CHECKING, Union
 
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
+from spark_auto_mapper_fhir.fhir_types.fhir_reference import FhirReference
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 
@@ -41,7 +42,7 @@ class Reference(FhirComplexTypeBase, Generic[_T]):
         self,
         *,
         extension: Optional[FhirList[Extension]] = None,
-        reference: Optional[FhirString] = None,
+        reference: Optional[FhirReference] = None,
         type_: Optional[FhirUri] = None,
         identifier: Optional[Identifier] = None,
         display: Optional[FhirString] = None,
