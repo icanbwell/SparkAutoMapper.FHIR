@@ -1,12 +1,15 @@
 from __future__ import annotations
 from typing import Optional, TYPE_CHECKING, Union
 
+from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
+from spark_fhir_schemas.r4.complex_types.codeableconcept import CodeableConceptSchema
+
 
 if TYPE_CHECKING:
     pass
@@ -68,3 +71,8 @@ class CodeableConcept(FhirComplexTypeBase, Generic[_T]):
             coding=coding,
             text=text,
         )
+
+    def get_schema(
+        self, include_extension: bool
+    ) -> Optional[Union[StructType, DataType]]:
+        return CodeableConceptSchema.get_schema(include_extension=include_extension)

@@ -18,6 +18,11 @@ from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
+{% if fhir_entity.cleaned_name in ["BackboneElement"] %}
+{% else %}
+from spark_fhir_schemas.r4.complex_types.{{ fhir_entity.fhir_name.lower() | replace(".","_") }} import {{ fhir_entity.fhir_name | replace(".","_") }}Schema
+{% endif %}
+
 {% if fhir_entity.properties %}
 
 if TYPE_CHECKING:
@@ -154,3 +159,16 @@ class {{fhir_entity.cleaned_name}}(FhirComplexTypeBase):
         {% endfor %}
         )
 
+{% if fhir_entity.cleaned_name in ["BackboneElement"] %}
+{% else %}
+    def get_schema(
+        self, include_extension: bool
+    ) -> Optional[Union[StructType, DataType]]:
+    {% if fhir_entity.cleaned_name in ["DomainResource", "Resource"] %}
+        return None
+    {% elif fhir_entity.cleaned_name == "List_" %}
+        return ListSchema.get_schema(include_extension=include_extension)
+    {% else %}
+        return {{ fhir_entity.fhir_name | replace(".","_") }}Schema.get_schema(include_extension=include_extension)
+    {% endif %}
+{%  endif %}

@@ -1,12 +1,17 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
+from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
+from spark_fhir_schemas.r4.complex_types.datarequirement_sort import (
+    DataRequirement_SortSchema,
+)
+
 
 if TYPE_CHECKING:
     pass
@@ -59,4 +64,11 @@ class DataRequirementSort(FhirComplexTypeBase):
             extension=extension,
             path=path,
             direction=direction,
+        )
+
+    def get_schema(
+        self, include_extension: bool
+    ) -> Optional[Union[StructType, DataType]]:
+        return DataRequirement_SortSchema.get_schema(
+            include_extension=include_extension
         )

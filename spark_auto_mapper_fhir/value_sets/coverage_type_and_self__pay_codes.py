@@ -19,15 +19,15 @@ class CoverageTypeAndSelf_PayCodesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/CodeSystem/v3-ActCode
-    """
-    codeset_v3_ActCode: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
-    """
     http://terminology.hl7.org/CodeSystem/coverage-selfpay
     """
     codeset_coverage_selfpay: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/coverage-selfpay"
     )
+    """
+    http://terminology.hl7.org/CodeSystem/v3-ActCode
+    """
+    codeset_v3_ActCode: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
 
 
 class CoverageTypeAndSelf_PayCodesCodeValues:

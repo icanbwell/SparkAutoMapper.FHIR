@@ -1,12 +1,15 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Union
 
+from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
+from spark_fhir_schemas.r4.complex_types.contactdetail import ContactDetailSchema
+
 
 if TYPE_CHECKING:
     pass
@@ -57,3 +60,8 @@ class ContactDetail(FhirComplexTypeBase):
             name=name,
             telecom=telecom,
         )
+
+    def get_schema(
+        self, include_extension: bool
+    ) -> Optional[Union[StructType, DataType]]:
+        return ContactDetailSchema.get_schema(include_extension=include_extension)

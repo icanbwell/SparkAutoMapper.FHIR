@@ -25,10 +25,6 @@ class JurisdictionValueSetCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://unstats.un.org/unsd/methods/m49/m49.htm
-    """
-    codeset_m49_htm: FhirUri = "http://unstats.un.org/unsd/methods/m49/m49.htm"
-    """
     urn:iso:std:iso:3166
     """
     codeset_urn_iso_std_iso_3166: FhirUri = "urn:iso:std:iso:3166"
@@ -36,3 +32,7 @@ class JurisdictionValueSetCode(GenericTypeCode):
     urn:iso:std:iso:3166:-2
     """
     codeset_urn_iso_std_iso_3166__2: FhirUri = "urn:iso:std:iso:3166:-2"
+    """
+    http://unstats.un.org/unsd/methods/m49/m49.htm
+    """
+    codeset_m49_htm: FhirUri = "http://unstats.un.org/unsd/methods/m49/m49.htm"
