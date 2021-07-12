@@ -20,9 +20,9 @@ class IdentifierTypeCodesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    
+    http://terminology.hl7.org/CodeSystem/v2-0203
     """
-    codeset: FhirUri = ""
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v2-0203"
 
 
 class IdentifierTypeCodesCodeValues:

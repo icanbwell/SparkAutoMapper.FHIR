@@ -21,15 +21,7 @@ class EducationLevel(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-EducationLevel
     """
-    codeset_v3_EducationLevel: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-EducationLevel"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-EducationLevel
-    """
-    codeset_v3_EducationLevel: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-EducationLevel"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-EducationLevel"
 
 
 class EducationLevelValues:

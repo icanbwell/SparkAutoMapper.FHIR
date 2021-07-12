@@ -19,15 +19,9 @@ class ActInvoiceElementModifier(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-ActInvoiceElementModifier
-    """
-    codeset_v3_ActInvoiceElementModifier: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-ActInvoiceElementModifier"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-ActInvoiceElementModifier
     """
-    codeset_v3_ActInvoiceElementModifier: FhirUri = (
+    codeset: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-ActInvoiceElementModifier"
     )
 

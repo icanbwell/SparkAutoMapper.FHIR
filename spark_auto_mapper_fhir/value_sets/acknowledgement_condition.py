@@ -22,15 +22,9 @@ class AcknowledgementCondition(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-AcknowledgementCondition
-    """
-    codeset_v3_AcknowledgementCondition: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-AcknowledgementCondition"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-AcknowledgementCondition
     """
-    codeset_v3_AcknowledgementCondition: FhirUri = (
+    codeset: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-AcknowledgementCondition"
     )
 

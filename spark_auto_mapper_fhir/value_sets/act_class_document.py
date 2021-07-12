@@ -22,13 +22,7 @@ class ActClassDocument(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-ActClass
     """
-    codeset_v3_ActClass: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActClass"
-    """
-    http://terminology.hl7.org/ValueSet/v3-ActClassDocument
-    """
-    codeset_v3_ActClassDocument: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-ActClassDocument"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActClass"
 
 
 class ActClassDocumentValues:

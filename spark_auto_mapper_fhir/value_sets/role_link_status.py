@@ -23,15 +23,7 @@ class RoleLinkStatus(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-RoleLinkStatus
     """
-    codeset_v3_RoleLinkStatus: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-RoleLinkStatus"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-RoleLinkStatus
-    """
-    codeset_v3_RoleLinkStatus: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-RoleLinkStatus"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleLinkStatus"
 
 
 class RoleLinkStatusValues:

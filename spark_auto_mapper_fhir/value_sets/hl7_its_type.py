@@ -22,13 +22,7 @@ class Hl7ITSType(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-hl7ITSType
     """
-    codeset_v3_hl7ITSType: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-hl7ITSType"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-hl7ITSType
-    """
-    codeset_v3_hl7ITSType: FhirUri = "http://terminology.hl7.org/ValueSet/v3-hl7ITSType"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-hl7ITSType"
 
 
 class Hl7ITSTypeValues:

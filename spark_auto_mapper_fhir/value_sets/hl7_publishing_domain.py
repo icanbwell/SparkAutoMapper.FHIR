@@ -20,17 +20,9 @@ class Hl7PublishingDomain(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-hl7PublishingDomain
-    """
-    codeset_v3_hl7PublishingDomain: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-hl7PublishingDomain"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain
     """
-    codeset_v3_hl7PublishingDomain: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain"
 
 
 class Hl7PublishingDomainValues:

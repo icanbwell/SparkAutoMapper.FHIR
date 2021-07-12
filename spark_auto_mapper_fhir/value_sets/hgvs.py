@@ -19,6 +19,6 @@ class HGVSCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    
+    http://varnomen.hgvs.org
     """
-    codeset: FhirUri = ""
+    codeset: FhirUri = "http://varnomen.hgvs.org"

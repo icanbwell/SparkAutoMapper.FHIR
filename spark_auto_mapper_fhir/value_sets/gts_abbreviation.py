@@ -21,17 +21,9 @@ class GTSAbbreviation(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-GTSAbbreviation
-    """
-    codeset_v3_GTSAbbreviation: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-GTSAbbreviation"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation
     """
-    codeset_v3_GTSAbbreviation: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
 
 
 class GTSAbbreviationValues:

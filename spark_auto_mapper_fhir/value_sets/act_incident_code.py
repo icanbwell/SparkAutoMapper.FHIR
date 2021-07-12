@@ -21,13 +21,7 @@ class ActIncidentCode(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-ActCode
     """
-    codeset_v3_ActCode: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
-    """
-    http://terminology.hl7.org/ValueSet/v3-ActIncidentCode
-    """
-    codeset_v3_ActIncidentCode: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-ActIncidentCode"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
 
 
 class ActIncidentCodeValues:

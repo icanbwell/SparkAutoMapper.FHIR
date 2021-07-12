@@ -30,13 +30,7 @@ class ActClassClinicalDocument(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-ActClass
     """
-    codeset_v3_ActClass: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActClass"
-    """
-    http://terminology.hl7.org/ValueSet/v3-ActClassClinicalDocument
-    """
-    codeset_v3_ActClassClinicalDocument: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-ActClassClinicalDocument"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActClass"
 
 
 class ActClassClinicalDocumentValues:

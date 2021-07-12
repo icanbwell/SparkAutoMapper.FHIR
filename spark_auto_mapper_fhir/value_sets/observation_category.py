@@ -21,17 +21,9 @@ class ObservationCategory(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-ObservationCategory
-    """
-    codeset_v3_ObservationCategory: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-ObservationCategory"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-ObservationCategory
     """
-    codeset_v3_ObservationCategory: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-ObservationCategory"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ObservationCategory"
 
 
 class ObservationCategoryValues:

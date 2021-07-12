@@ -19,17 +19,9 @@ class DataOperation(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-DataOperation
-    """
-    codeset_v3_DataOperation: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-DataOperation"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-DataOperation
     """
-    codeset_v3_DataOperation: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
 
 
 class DataOperationValues:

@@ -1095,7 +1095,7 @@ class FhirXmlSchemaParser:
                                     code_system.value_set_url_list
                                 )
                         elif compose_include_code_system not in value_set_url_list:
-                            if compose_include_code_system not in value_set_url_list:
+                            if is_code_system:
                                 value_set_url_list.add(compose_include_code_system)
                     if hasattr(compose_include, "concept"):
                         concepts = compose_include["concept"]
@@ -1120,7 +1120,7 @@ class FhirXmlSchemaParser:
                         concepts=fhir_concepts,
                         url=url,
                         value_set_url=value_set_url,
-                        value_set_url_list=value_set_url_list or [url],
+                        value_set_url_list=value_set_url_list or {url},
                         documentation=description,
                         source="valuesets.xml",
                     )
@@ -1143,6 +1143,20 @@ class FhirXmlSchemaParser:
             ]
         )
 
+        # for each value_set, if there is a code system and a value system with same name then choose valueset
+        for fhir_value_set in fhir_value_sets:
+            value_set_url_list = set()
+            for value_set_url in fhir_value_set.value_set_url_list:
+                if value_set_url.endswith("/"):
+                    value_set_url = value_set_url[0:-1]
+                value_set_url_name: str = value_set_url.split("/")[-1]
+                if value_set_url_name != "" and value_set_url_name in [
+                    c.split("/")[-1] for c in value_set_url_list
+                ]:
+                    pass
+                else:
+                    value_set_url_list.add(value_set_url)
+            fhir_value_set.value_set_url_list = value_set_url_list
         return fhir_value_sets
 
     @staticmethod
@@ -1213,12 +1227,11 @@ class FhirXmlSchemaParser:
                 description = [description]
             url = value_set["url"].get("value")
             fhir_concepts: List[FhirValueSetConcept] = []
-            value_set_url_list: List[str] = []
+            value_set_url_list: Set[str] = set()
             # value_set_url = None  # value_set["valueSet"]
             if hasattr(value_set, "concept"):
                 concepts_list: ObjectifiedElement = value_set["concept"]
-                if url not in value_set_url_list:
-                    value_set_url_list.append(url)
+                value_set_url_list.add(url)
                 concept: ObjectifiedElement
                 for concept in concepts_list:
                     code: str = str(concept["code"].get("value"))
@@ -1253,7 +1266,7 @@ class FhirXmlSchemaParser:
                     concepts=fhir_concepts,
                     url=url,
                     value_set_url="",
-                    value_set_url_list=value_set_url_list or {url},
+                    value_set_url_list=value_set_url_list,
                     documentation=description,
                     source="v3-codesystems.xml",
                 )
@@ -1272,18 +1285,21 @@ class FhirXmlSchemaParser:
                 else value_set_entry["resource"]
             )
             id_ = value_set["id"].get("value")
+            url = value_set["url"].get("value")
             fhir_concepts = []
-            value_set_url_list = []
+            value_set_url_list = set()
             if hasattr(value_set, "compose"):
                 compose_includes: ObjectifiedElement = value_set["compose"]["include"]
                 compose_include: ObjectifiedElement
                 for compose_include in compose_includes:
                     is_code_system = hasattr(compose_include, "system")
                     # is_value_set = "valueSet" in compose_include
-                    if is_code_system:
-                        compose_include_code_system: str = compose_include[
-                            "system"
-                        ].get("value")
+                    if is_code_system or is_value_set:
+                        compose_include_code_system: str = (
+                            compose_include["system"].get("value")
+                            if is_code_system
+                            else compose_include["valueSet"].get("value")
+                        )
                         # find the corresponding item in code systems
                         v3_code_systems: List[FhirValueSet] = [
                             c
@@ -1293,8 +1309,8 @@ class FhirXmlSchemaParser:
                         if v3_code_systems:
                             for code_system in v3_code_systems:
                                 fhir_concepts.extend(code_system.concepts)
-                                if code_system.url not in value_set_url_list:
-                                    value_set_url_list.append(code_system.url)
+                                if is_code_system:
+                                    value_set_url_list.add(code_system.url)
                         # v2_code_systems: List[FhirValueSet] = [
                         #     c
                         #     for c in fhir_v2_code_systems
@@ -1306,7 +1322,10 @@ class FhirXmlSchemaParser:
                         #         value_set_url_list.append(code_system.url)
 
             # find the appropriate value set and add it there
-            found_value_sets = [c for c in fhir_value_sets if c.id_ == id_]
+            found_value_sets: List[FhirValueSet] = [
+                c for c in fhir_value_sets if c.id_ == id_
+            ]
+            found_value_set: FhirValueSet
             for found_value_set in found_value_sets:
                 # add concepts from compose.includes
                 missing_concepts = [
@@ -1318,8 +1337,7 @@ class FhirXmlSchemaParser:
                     found_value_set.concepts.extend(missing_concepts)
                 # add any missing value set urls
                 for value_set_url in value_set_url_list:
-                    if value_set_url not in found_value_set.value_set_url_list:
-                        found_value_set.value_set_url_list.add(value_set_url)
+                    found_value_set.value_set_url_list.add(value_set_url)
 
         return fhir_value_sets
 

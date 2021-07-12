@@ -20,9 +20,9 @@ class SpecimenCollectionPriorityCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    
+    http://example.com
     """
-    codeset: FhirUri = ""
+    codeset: FhirUri = "http://example.com"
 
 
 class SpecimenCollectionPriorityCodeValues:

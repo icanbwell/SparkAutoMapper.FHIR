@@ -21,11 +21,7 @@ class Charset(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-Charset
     """
-    codeset_v3_Charset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-Charset"
-    """
-    http://terminology.hl7.org/ValueSet/v3-Charset
-    """
-    codeset_v3_Charset: FhirUri = "http://terminology.hl7.org/ValueSet/v3-Charset"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-Charset"
 
 
 class CharsetValues:

@@ -22,17 +22,9 @@ class Hl7ApprovalStatus(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-hl7ApprovalStatus
-    """
-    codeset_v3_hl7ApprovalStatus: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-hl7ApprovalStatus"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus
     """
-    codeset_v3_hl7ApprovalStatus: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus"
 
 
 class Hl7ApprovalStatusValues:

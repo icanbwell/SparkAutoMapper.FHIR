@@ -19,15 +19,9 @@ class Sequencing(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-Sequencing
-    """
-    codeset_v3_Sequencing: FhirUri = "http://terminology.hl7.org/ValueSet/v3-Sequencing"
-    """
     http://terminology.hl7.org/CodeSystem/v3-Sequencing
     """
-    codeset_v3_Sequencing: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-Sequencing"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-Sequencing"
 
 
 class SequencingValues:

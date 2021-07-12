@@ -21,15 +21,7 @@ class ReligiousAffiliation(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation
     """
-    codeset_v3_ReligiousAffiliation: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-ReligiousAffiliation
-    """
-    codeset_v3_ReligiousAffiliation: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-ReligiousAffiliation"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation"
 
 
 class ReligiousAffiliationValues:

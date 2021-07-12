@@ -21,6 +21,6 @@ class FHIRDeviceTypesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    
+    http://snomed.info/sct
     """
-    codeset: FhirUri = ""
+    codeset: FhirUri = "http://snomed.info/sct"

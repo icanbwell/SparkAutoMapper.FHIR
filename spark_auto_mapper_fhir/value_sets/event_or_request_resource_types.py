@@ -20,14 +20,6 @@ class EventOrRequestResourceTypesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://hl7.org/fhir/ValueSet/event-resource-types
+    http://hl7.org/fhir/ValueSet/event-or-request-resource-types
     """
-    codeset_event_resource_types: FhirUri = (
-        "http://hl7.org/fhir/ValueSet/event-resource-types"
-    )
-    """
-    http://hl7.org/fhir/ValueSet/request-resource-types
-    """
-    codeset_request_resource_types: FhirUri = (
-        "http://hl7.org/fhir/ValueSet/request-resource-types"
-    )
+    codeset: FhirUri = "http://hl7.org/fhir/ValueSet/event-or-request-resource-types"

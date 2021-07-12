@@ -19,15 +19,9 @@ class NullFlavor(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-NullFlavor
-    """
-    codeset_v3_NullFlavor: FhirUri = "http://terminology.hl7.org/ValueSet/v3-NullFlavor"
-    """
     http://terminology.hl7.org/CodeSystem/v3-NullFlavor
     """
-    codeset_v3_NullFlavor: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
 
 
 class NullFlavorValues:

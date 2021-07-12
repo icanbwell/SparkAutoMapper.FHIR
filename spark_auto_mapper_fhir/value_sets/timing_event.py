@@ -21,15 +21,7 @@ class TimingEvent(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-TimingEvent
     """
-    codeset_v3_TimingEvent: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-TimingEvent"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-TimingEvent
-    """
-    codeset_v3_TimingEvent: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-TimingEvent"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-TimingEvent"
 
 
 class TimingEventValues:

@@ -21,13 +21,7 @@ class PurposeOfUse(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-ActReason
     """
-    codeset_v3_ActReason: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActReason"
-    """
-    http://terminology.hl7.org/ValueSet/v3-PurposeOfUse
-    """
-    codeset_v3_PurposeOfUse: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-PurposeOfUse"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActReason"
 
 
 class PurposeOfUseValues:

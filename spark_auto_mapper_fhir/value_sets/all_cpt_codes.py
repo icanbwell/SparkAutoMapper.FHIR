@@ -19,6 +19,6 @@ class AllCPTCodesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    
+    http://www.ama-assn.org/go/cpt
     """
-    codeset: FhirUri = ""
+    codeset: FhirUri = "http://www.ama-assn.org/go/cpt"

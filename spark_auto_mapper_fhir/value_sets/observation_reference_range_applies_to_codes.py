@@ -27,10 +27,6 @@ class ObservationReferenceRangeAppliesToCodesCode(GenericTypeCode):
     http://snomed.info/sct
     """
     codeset_sct: FhirUri = "http://snomed.info/sct"
-    """
-    http://terminology.hl7.org/ValueSet/v3-Race
-    """
-    codeset_v3_Race: FhirUri = "http://terminology.hl7.org/ValueSet/v3-Race"
 
 
 class ObservationReferenceRangeAppliesToCodesCodeValues:

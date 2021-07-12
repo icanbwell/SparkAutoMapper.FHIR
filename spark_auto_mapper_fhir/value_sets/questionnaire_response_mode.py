@@ -19,9 +19,9 @@ class QuestionnaireResponseModeCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    
+    http://terminology.hl7.org/CodeSystem/v3-ParticipationMode
     """
-    codeset: FhirUri = ""
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode"
 
 
 class QuestionnaireResponseModeCodeValues:

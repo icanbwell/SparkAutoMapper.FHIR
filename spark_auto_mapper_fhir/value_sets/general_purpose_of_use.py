@@ -19,15 +19,9 @@ class GeneralPurposeOfUse(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-GeneralPurposeOfUse
-    """
-    codeset_v3_GeneralPurposeOfUse: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-GeneralPurposeOfUse"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-ActReason
     """
-    codeset_v3_ActReason: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActReason"
 
 
 class GeneralPurposeOfUseValues:

@@ -21,15 +21,7 @@ class EntityHandling(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-EntityHandling
     """
-    codeset_v3_EntityHandling: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-EntityHandling"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-EntityHandling
-    """
-    codeset_v3_EntityHandling: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-EntityHandling"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-EntityHandling"
 
 
 class EntityHandlingValues:

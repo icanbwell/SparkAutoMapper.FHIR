@@ -23,15 +23,7 @@ class ConfidentialityClassification(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-Confidentiality
     """
-    codeset_v3_Confidentiality: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification
-    """
-    codeset_v3_ConfidentialityClassification: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
 
 
 class ConfidentialityClassificationValues:

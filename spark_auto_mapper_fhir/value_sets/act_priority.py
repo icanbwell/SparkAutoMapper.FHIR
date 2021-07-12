@@ -23,15 +23,7 @@ class ActPriority(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-ActPriority
     """
-    codeset_v3_ActPriority: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-ActPriority"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-ActPriority
-    """
-    codeset_v3_ActPriority: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-ActPriority"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActPriority"
 
 
 class ActPriorityValues:

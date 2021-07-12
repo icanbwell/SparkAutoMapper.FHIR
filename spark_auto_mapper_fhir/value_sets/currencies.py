@@ -20,6 +20,6 @@ class CurrenciesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    
+    urn:iso:std:iso:4217
     """
-    codeset: FhirUri = ""
+    codeset: FhirUri = "urn:iso:std:iso:4217"

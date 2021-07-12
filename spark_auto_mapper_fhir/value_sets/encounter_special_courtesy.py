@@ -21,14 +21,8 @@ class EncounterSpecialCourtesy(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy
     """
-    codeset_v3_EncounterSpecialCourtesy: FhirUri = (
+    codeset: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-EncounterSpecialCourtesy
-    """
-    codeset_v3_EncounterSpecialCourtesy: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-EncounterSpecialCourtesy"
     )
 
 

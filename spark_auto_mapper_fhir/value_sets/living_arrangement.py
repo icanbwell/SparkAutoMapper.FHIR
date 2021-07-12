@@ -19,17 +19,9 @@ class LivingArrangement(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-LivingArrangement
-    """
-    codeset_v3_LivingArrangement: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-LivingArrangement"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-LivingArrangement
     """
-    codeset_v3_LivingArrangement: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-LivingArrangement"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-LivingArrangement"
 
 
 class LivingArrangementValues:

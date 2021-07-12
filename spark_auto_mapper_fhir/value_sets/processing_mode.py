@@ -21,15 +21,7 @@ class ProcessingMode(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-ProcessingMode
     """
-    codeset_v3_ProcessingMode: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-ProcessingMode"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-ProcessingMode
-    """
-    codeset_v3_ProcessingMode: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-ProcessingMode"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ProcessingMode"
 
 
 class ProcessingModeValues:

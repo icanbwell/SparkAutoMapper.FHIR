@@ -21,15 +21,7 @@ class RoleLinkType(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-RoleLinkType
     """
-    codeset_v3_RoleLinkType: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-RoleLinkType"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-RoleLinkType
-    """
-    codeset_v3_RoleLinkType: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-RoleLinkType"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleLinkType"
 
 
 class RoleLinkTypeValues:

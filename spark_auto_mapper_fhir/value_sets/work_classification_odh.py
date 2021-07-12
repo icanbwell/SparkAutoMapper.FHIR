@@ -23,15 +23,7 @@ class WorkClassificationODH(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-WorkClassificationODH
     """
-    codeset_v3_WorkClassificationODH: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-WorkClassificationODH"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-WorkClassificationODH
-    """
-    codeset_v3_WorkClassificationODH: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-WorkClassificationODH"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-WorkClassificationODH"
 
 
 class WorkClassificationODHValues:

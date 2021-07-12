@@ -22,15 +22,7 @@ class ParticipationVerifier(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-ParticipationType
     """
-    codeset_v3_ParticipationType: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-ParticipationVerifier
-    """
-    codeset_v3_ParticipationVerifier: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-ParticipationVerifier"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
 
 
 class ParticipationVerifierValues:

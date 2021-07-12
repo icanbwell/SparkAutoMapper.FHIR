@@ -21,15 +21,9 @@ class ActMoodPredicate(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-ActMoodPredicate
-    """
-    codeset_v3_ActMoodPredicate: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-ActMoodPredicate"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-ActMood
     """
-    codeset_v3_ActMood: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActMood"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActMood"
 
 
 class ActMoodPredicateValues:

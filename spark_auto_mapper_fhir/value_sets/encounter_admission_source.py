@@ -21,14 +21,8 @@ class EncounterAdmissionSource(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-EncounterAdmissionSource
     """
-    codeset_v3_EncounterAdmissionSource: FhirUri = (
+    codeset: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-EncounterAdmissionSource"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-EncounterAdmissionSource
-    """
-    codeset_v3_EncounterAdmissionSource: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-EncounterAdmissionSource"
     )
 
 

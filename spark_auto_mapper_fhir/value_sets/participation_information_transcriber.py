@@ -22,17 +22,9 @@ class ParticipationInformationTranscriber(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-ParticipationInformationTranscriber
-    """
-    codeset_v3_ParticipationInformationTranscriber: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-ParticipationInformationTranscriber"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-ParticipationType
     """
-    codeset_v3_ParticipationType: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
 
 
 class ParticipationInformationTranscriberValues:

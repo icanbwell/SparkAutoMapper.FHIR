@@ -20,9 +20,9 @@ class ClinicalImpressionStatusCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    
+    http://hl7.org/fhir/event-status
     """
-    codeset: FhirUri = ""
+    codeset: FhirUri = "http://hl7.org/fhir/event-status"
 
 
 class ClinicalImpressionStatusCodeValues:

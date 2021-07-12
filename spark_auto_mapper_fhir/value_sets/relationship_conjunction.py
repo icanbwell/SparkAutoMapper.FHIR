@@ -21,14 +21,8 @@ class RelationshipConjunction(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-RelationshipConjunction
     """
-    codeset_v3_RelationshipConjunction: FhirUri = (
+    codeset: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-RelationshipConjunction"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-RelationshipConjunction
-    """
-    codeset_v3_RelationshipConjunction: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-RelationshipConjunction"
     )
 
 

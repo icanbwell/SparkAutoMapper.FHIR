@@ -19,6 +19,6 @@ class COSMICCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    
+    http://cancer.sanger.ac.uk/cancergenome/projects/cosmic
     """
-    codeset: FhirUri = ""
+    codeset: FhirUri = "http://cancer.sanger.ac.uk/cancergenome/projects/cosmic"

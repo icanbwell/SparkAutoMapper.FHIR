@@ -28,15 +28,9 @@ class ActClassSupply(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-ActClassSupply
-    """
-    codeset_v3_ActClassSupply: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-ActClassSupply"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-ActClass
     """
-    codeset_v3_ActClass: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActClass"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActClass"
 
 
 class ActClassSupplyValues:

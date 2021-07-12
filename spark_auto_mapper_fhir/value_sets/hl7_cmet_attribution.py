@@ -21,15 +21,7 @@ class Hl7CMETAttribution(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-hl7CMETAttribution
     """
-    codeset_v3_hl7CMETAttribution: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-hl7CMETAttribution"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-hl7CMETAttribution
-    """
-    codeset_v3_hl7CMETAttribution: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-hl7CMETAttribution"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-hl7CMETAttribution"
 
 
 class Hl7CMETAttributionValues:

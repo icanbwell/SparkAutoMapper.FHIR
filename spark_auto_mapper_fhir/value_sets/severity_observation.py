@@ -21,15 +21,7 @@ class SeverityObservation(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-ObservationValue
     """
-    codeset_v3_ObservationValue: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-SeverityObservation
-    """
-    codeset_v3_SeverityObservation: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-SeverityObservation"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
 
 
 class SeverityObservationValues:

@@ -21,15 +21,7 @@ class ActRelationshipJoin(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-ActRelationshipJoin
     """
-    codeset_v3_ActRelationshipJoin: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-ActRelationshipJoin"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-ActRelationshipJoin
-    """
-    codeset_v3_ActRelationshipJoin: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-ActRelationshipJoin"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActRelationshipJoin"
 
 
 class ActRelationshipJoinValues:

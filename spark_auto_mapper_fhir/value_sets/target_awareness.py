@@ -21,15 +21,7 @@ class TargetAwareness(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-TargetAwareness
     """
-    codeset_v3_TargetAwareness: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-TargetAwareness"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-TargetAwareness
-    """
-    codeset_v3_TargetAwareness: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-TargetAwareness"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-TargetAwareness"
 
 
 class TargetAwarenessValues:

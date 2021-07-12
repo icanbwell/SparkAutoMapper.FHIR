@@ -24,14 +24,8 @@ class TelecommunicationCapabilities(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-TelecommunicationCapabilities
     """
-    codeset_v3_TelecommunicationCapabilities: FhirUri = (
+    codeset: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-TelecommunicationCapabilities"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-TelecommunicationCapabilities
-    """
-    codeset_v3_TelecommunicationCapabilities: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-TelecommunicationCapabilities"
     )
 
 

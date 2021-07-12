@@ -20,15 +20,9 @@ class ActTaskCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-ActTaskCode
-    """
-    codeset_v3_ActTaskCode: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-ActTaskCode"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-ActCode
     """
-    codeset_v3_ActCode: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
 
 
 class ActTaskCodeValues:

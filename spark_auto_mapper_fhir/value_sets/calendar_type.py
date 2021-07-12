@@ -19,17 +19,9 @@ class CalendarType(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-CalendarType
-    """
-    codeset_v3_CalendarType: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-CalendarType"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-CalendarType
     """
-    codeset_v3_CalendarType: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-CalendarType"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-CalendarType"
 
 
 class CalendarTypeValues:

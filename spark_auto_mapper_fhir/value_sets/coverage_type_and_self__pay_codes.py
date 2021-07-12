@@ -23,12 +23,6 @@ class CoverageTypeAndSelf_PayCodesCode(GenericTypeCode):
     """
     codeset_v3_ActCode: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
     """
-    http://terminology.hl7.org/ValueSet/v3-ActCoverageTypeCode
-    """
-    codeset_v3_ActCoverageTypeCode: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-ActCoverageTypeCode"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/coverage-selfpay
     """
     codeset_coverage_selfpay: FhirUri = (

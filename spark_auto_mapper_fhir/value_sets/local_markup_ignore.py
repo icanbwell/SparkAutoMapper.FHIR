@@ -21,17 +21,9 @@ class LocalMarkupIgnore(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-LocalMarkupIgnore
-    """
-    codeset_v3_LocalMarkupIgnore: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-LocalMarkupIgnore"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-LocalMarkupIgnore
     """
-    codeset_v3_LocalMarkupIgnore: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-LocalMarkupIgnore"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-LocalMarkupIgnore"
 
 
 class LocalMarkupIgnoreValues:

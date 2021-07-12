@@ -19,15 +19,9 @@ class IntegrityCheckAlgorithm(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-IntegrityCheckAlgorithm
-    """
-    codeset_v3_IntegrityCheckAlgorithm: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-IntegrityCheckAlgorithm"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-IntegrityCheckAlgorithm
     """
-    codeset_v3_IntegrityCheckAlgorithm: FhirUri = (
+    codeset: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-IntegrityCheckAlgorithm"
     )
 

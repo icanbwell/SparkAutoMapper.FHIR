@@ -24,15 +24,7 @@ class ActExposureLevelCode(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-ActExposureLevelCode
     """
-    codeset_v3_ActExposureLevelCode: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-ActExposureLevelCode"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-ActExposureLevelCode
-    """
-    codeset_v3_ActExposureLevelCode: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-ActExposureLevelCode"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActExposureLevelCode"
 
 
 class ActExposureLevelCodeValues:

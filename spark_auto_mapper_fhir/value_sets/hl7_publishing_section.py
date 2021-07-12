@@ -22,15 +22,7 @@ class Hl7PublishingSection(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSection
     """
-    codeset_v3_hl7PublishingSection: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSection"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-hl7PublishingSection
-    """
-    codeset_v3_hl7PublishingSection: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-hl7PublishingSection"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSection"
 
 
 class Hl7PublishingSectionValues:

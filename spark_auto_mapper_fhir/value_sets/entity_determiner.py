@@ -24,15 +24,7 @@ class EntityDeterminer(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-EntityDeterminer
     """
-    codeset_v3_EntityDeterminer: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-EntityDeterminer"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-EntityDeterminer
-    """
-    codeset_v3_EntityDeterminer: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-EntityDeterminer"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-EntityDeterminer"
 
 
 class EntityDeterminerValues:

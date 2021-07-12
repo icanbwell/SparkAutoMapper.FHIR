@@ -22,15 +22,7 @@ class ResponseMode(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-ResponseMode
     """
-    codeset_v3_ResponseMode: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-ResponseMode"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-ResponseMode
-    """
-    codeset_v3_ResponseMode: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-ResponseMode"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ResponseMode"
 
 
 class ResponseModeValues:

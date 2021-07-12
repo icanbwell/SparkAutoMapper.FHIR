@@ -25,15 +25,7 @@ class ContextControl(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-ContextControl
     """
-    codeset_v3_ContextControl: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-ContextControl"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-ContextControl
-    """
-    codeset_v3_ContextControl: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-ContextControl"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ContextControl"
 
 
 class ContextControlValues:

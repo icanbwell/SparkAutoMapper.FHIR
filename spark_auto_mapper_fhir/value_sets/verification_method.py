@@ -19,17 +19,9 @@ class VerificationMethod(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-VerificationMethod
-    """
-    codeset_v3_VerificationMethod: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-VerificationMethod"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-ObservationMethod
     """
-    codeset_v3_ObservationMethod: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-ObservationMethod"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ObservationMethod"
 
 
 class VerificationMethodValues:

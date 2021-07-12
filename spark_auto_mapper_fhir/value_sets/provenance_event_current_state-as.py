@@ -22,15 +22,9 @@ class ProvenanceEventCurrentState_AS(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-ProvenanceEventCurrentState-AS
-    """
-    codeset_v3_ProvenanceEventCurrentState_AS: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-ProvenanceEventCurrentState-AS"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-ActStatus
     """
-    codeset_v3_ActStatus: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActStatus"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActStatus"
 
 
 class ProvenanceEventCurrentState_ASValues:

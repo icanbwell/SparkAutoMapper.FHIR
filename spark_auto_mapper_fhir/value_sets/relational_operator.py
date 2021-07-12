@@ -19,17 +19,9 @@ class RelationalOperator(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-RelationalOperator
-    """
-    codeset_v3_RelationalOperator: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-RelationalOperator"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-RelationalOperator
     """
-    codeset_v3_RelationalOperator: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-RelationalOperator"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RelationalOperator"
 
 
 class RelationalOperatorValues:

@@ -20,15 +20,9 @@ class ServiceDeliveryLocationRoleType(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType
-    """
-    codeset_v3_ServiceDeliveryLocationRoleType: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-RoleCode
     """
-    codeset_v3_RoleCode: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
 
 
 class ServiceDeliveryLocationRoleTypeValues:

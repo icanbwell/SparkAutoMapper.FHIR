@@ -20,6 +20,6 @@ class ClinVarCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    
+    http://www.ncbi.nlm.nih.gov/clinvar
     """
-    codeset: FhirUri = ""
+    codeset: FhirUri = "http://www.ncbi.nlm.nih.gov/clinvar"

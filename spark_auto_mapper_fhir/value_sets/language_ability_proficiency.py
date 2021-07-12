@@ -23,14 +23,8 @@ class LanguageAbilityProficiency(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityProficiency
     """
-    codeset_v3_LanguageAbilityProficiency: FhirUri = (
+    codeset: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityProficiency"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-LanguageAbilityProficiency
-    """
-    codeset_v3_LanguageAbilityProficiency: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-LanguageAbilityProficiency"
     )
 
 

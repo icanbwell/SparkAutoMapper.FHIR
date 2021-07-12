@@ -21,15 +21,7 @@ class QueryStatusCode(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-QueryStatusCode
     """
-    codeset_v3_QueryStatusCode: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-QueryStatusCode"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-QueryStatusCode
-    """
-    codeset_v3_QueryStatusCode: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-QueryStatusCode"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-QueryStatusCode"
 
 
 class QueryStatusCodeValues:

@@ -22,15 +22,7 @@ class ProcessingID(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-ProcessingID
     """
-    codeset_v3_ProcessingID: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-ProcessingID"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-ProcessingID
-    """
-    codeset_v3_ProcessingID: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-ProcessingID"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ProcessingID"
 
 
 class ProcessingIDValues:

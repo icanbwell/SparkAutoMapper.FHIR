@@ -23,17 +23,9 @@ class ProvenanceEventCurrentState_DC(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-ProvenanceEventCurrentState-DC
-    """
-    codeset_v3_ProvenanceEventCurrentState_DC: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-ProvenanceEventCurrentState-DC"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion
     """
-    codeset_v3_DocumentCompletion: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion"
 
 
 class ProvenanceEventCurrentState_DCValues:

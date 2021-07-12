@@ -28,17 +28,9 @@ class X_BasicConfidentialityKind(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-xBasicConfidentialityKind
-    """
-    codeset_v3_xBasicConfidentialityKind: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-xBasicConfidentialityKind"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-Confidentiality
     """
-    codeset_v3_Confidentiality: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
 
 
 class X_BasicConfidentialityKindValues:

@@ -20,17 +20,9 @@ class ExposureMode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-ExposureMode
-    """
-    codeset_v3_ExposureMode: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-ExposureMode"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-ExposureMode
     """
-    codeset_v3_ExposureMode: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-ExposureMode"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ExposureMode"
 
 
 class ExposureModeValues:

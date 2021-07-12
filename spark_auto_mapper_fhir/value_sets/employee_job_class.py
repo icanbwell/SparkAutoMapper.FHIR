@@ -21,15 +21,7 @@ class EmployeeJobClass(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-EmployeeJobClass
     """
-    codeset_v3_EmployeeJobClass: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-EmployeeJobClass"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-EmployeeJobClass
-    """
-    codeset_v3_EmployeeJobClass: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-EmployeeJobClass"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-EmployeeJobClass"
 
 
 class EmployeeJobClassValues:

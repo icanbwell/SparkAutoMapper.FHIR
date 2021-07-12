@@ -21,14 +21,8 @@ class ActRelationshipCheckpoint(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-ActRelationshipCheckpoint
     """
-    codeset_v3_ActRelationshipCheckpoint: FhirUri = (
+    codeset: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-ActRelationshipCheckpoint"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-ActRelationshipCheckpoint
-    """
-    codeset_v3_ActRelationshipCheckpoint: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-ActRelationshipCheckpoint"
     )
 
 

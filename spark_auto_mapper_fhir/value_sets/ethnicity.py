@@ -34,13 +34,9 @@ class Ethnicity(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-Ethnicity
-    """
-    codeset_v3_Ethnicity: FhirUri = "http://terminology.hl7.org/ValueSet/v3-Ethnicity"
-    """
     http://terminology.hl7.org/CodeSystem/v3-Ethnicity
     """
-    codeset_v3_Ethnicity: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-Ethnicity"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-Ethnicity"
 
 
 class EthnicityValues:

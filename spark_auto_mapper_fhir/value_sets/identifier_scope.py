@@ -21,17 +21,9 @@ class IdentifierScope(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-IdentifierScope
-    """
-    codeset_v3_IdentifierScope: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-IdentifierScope"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-IdentifierScope
     """
-    codeset_v3_IdentifierScope: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-IdentifierScope"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-IdentifierScope"
 
 
 class IdentifierScopeValues:

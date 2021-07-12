@@ -19,10 +19,10 @@ class FDA_MethodCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    https://precision.fda.gov/apps/
+    https://precision.fda.gov/apps
     """
-    codeset_: FhirUri = "https://precision.fda.gov/apps/"
+    codeset_apps: FhirUri = "https://precision.fda.gov/apps"
     """
-    https://precision.fda.gov/jobs/
+    https://precision.fda.gov/jobs
     """
-    codeset_: FhirUri = "https://precision.fda.gov/jobs/"
+    codeset_jobs: FhirUri = "https://precision.fda.gov/jobs"

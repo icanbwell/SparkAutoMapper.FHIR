@@ -20,17 +20,9 @@ class HL7StandardVersionCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-HL7StandardVersionCode
-    """
-    codeset_v3_HL7StandardVersionCode: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-HL7StandardVersionCode"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-HL7StandardVersionCode
     """
-    codeset_v3_HL7StandardVersionCode: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-HL7StandardVersionCode"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-HL7StandardVersionCode"
 
 
 class HL7StandardVersionCodeValues:

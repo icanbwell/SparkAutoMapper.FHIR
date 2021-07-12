@@ -20,6 +20,6 @@ class MimeTypesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    
+    urn:ietf:bcp:13
     """
-    codeset: FhirUri = ""
+    codeset: FhirUri = "urn:ietf:bcp:13"

@@ -26,13 +26,7 @@ class MilitaryRoleType(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-RoleCode
     """
-    codeset_v3_RoleCode: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
-    """
-    http://terminology.hl7.org/ValueSet/v3-MilitaryRoleType
-    """
-    codeset_v3_MilitaryRoleType: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-MilitaryRoleType"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
 
 
 class MilitaryRoleTypeValues:

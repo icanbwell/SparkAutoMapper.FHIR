@@ -20,9 +20,9 @@ class CommonUCUMCodesForDistanceCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    
+    http://unitsofmeasure.org
     """
-    codeset: FhirUri = ""
+    codeset: FhirUri = "http://unitsofmeasure.org"
 
 
 class CommonUCUMCodesForDistanceCodeValues:

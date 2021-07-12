@@ -31,15 +31,7 @@ class CodingRationale(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-CodingRationale
     """
-    codeset_v3_CodingRationale: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-CodingRationale"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-CodingRationale
-    """
-    codeset_v3_CodingRationale: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-CodingRationale"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-CodingRationale"
 
 
 class CodingRationaleValues:

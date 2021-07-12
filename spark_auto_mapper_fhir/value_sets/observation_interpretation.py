@@ -25,14 +25,8 @@ class ObservationInterpretation(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
     """
-    codeset_v3_ObservationInterpretation: FhirUri = (
+    codeset: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-ObservationInterpretation
-    """
-    codeset_v3_ObservationInterpretation: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-ObservationInterpretation"
     )
 
 

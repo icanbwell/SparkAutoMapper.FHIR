@@ -20,15 +20,9 @@ class AmericanIndianAlaskaNativeLanguages(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-AmericanIndianAlaskaNativeLanguages
-    """
-    codeset_v3_AmericanIndianAlaskaNativeLanguages: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-AmericanIndianAlaskaNativeLanguages"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages
     """
-    codeset_v3_AmericanIndianAlaskaNativeLanguages: FhirUri = (
+    codeset: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages"
     )
 

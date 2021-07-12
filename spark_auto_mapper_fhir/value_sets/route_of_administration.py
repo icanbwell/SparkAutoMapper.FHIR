@@ -22,15 +22,7 @@ class RouteOfAdministration(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration
     """
-    codeset_v3_RouteOfAdministration: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-RouteOfAdministration
-    """
-    codeset_v3_RouteOfAdministration: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-RouteOfAdministration"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"
 
 
 class RouteOfAdministrationValues:

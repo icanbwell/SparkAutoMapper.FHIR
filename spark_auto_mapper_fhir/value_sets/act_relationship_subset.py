@@ -25,15 +25,7 @@ class ActRelationshipSubset(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-ActRelationshipSubset
     """
-    codeset_v3_ActRelationshipSubset: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-ActRelationshipSubset"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-ActRelationshipSubset
-    """
-    codeset_v3_ActRelationshipSubset: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-ActRelationshipSubset"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActRelationshipSubset"
 
 
 class ActRelationshipSubsetValues:

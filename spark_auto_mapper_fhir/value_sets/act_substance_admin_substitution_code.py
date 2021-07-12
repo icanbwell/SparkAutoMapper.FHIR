@@ -19,15 +19,9 @@ class ActSubstanceAdminSubstitutionCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-ActSubstanceAdminSubstitutionCode
-    """
-    codeset_v3_ActSubstanceAdminSubstitutionCode: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-ActSubstanceAdminSubstitutionCode"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution
     """
-    codeset_v3_substanceAdminSubstitution: FhirUri = (
+    codeset: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"
     )
 

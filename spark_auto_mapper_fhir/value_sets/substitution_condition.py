@@ -20,17 +20,9 @@ class SubstitutionCondition(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-SubstitutionCondition
-    """
-    codeset_v3_SubstitutionCondition: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-SubstitutionCondition"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-SubstitutionCondition
     """
-    codeset_v3_SubstitutionCondition: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-SubstitutionCondition"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-SubstitutionCondition"
 
 
 class SubstitutionConditionValues:

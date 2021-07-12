@@ -31,6 +31,6 @@ class DocumentReferenceFormatCodeSetCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    
+    http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem
     """
-    codeset: FhirUri = ""
+    codeset: FhirUri = "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem"

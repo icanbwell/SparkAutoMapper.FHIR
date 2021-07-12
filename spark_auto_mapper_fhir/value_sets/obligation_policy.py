@@ -26,13 +26,7 @@ class ObligationPolicy(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-ActCode
     """
-    codeset_v3_ActCode: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
-    """
-    http://terminology.hl7.org/ValueSet/v3-ObligationPolicy
-    """
-    codeset_v3_ObligationPolicy: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-ObligationPolicy"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
 
 
 class ObligationPolicyValues:

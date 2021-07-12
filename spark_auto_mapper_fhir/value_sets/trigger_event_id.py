@@ -30,15 +30,7 @@ class TriggerEventID(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-triggerEventID
     """
-    codeset_v3_triggerEventID: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-triggerEventID"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-triggerEventID
-    """
-    codeset_v3_triggerEventID: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-triggerEventID"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-triggerEventID"
 
 
 class TriggerEventIDValues:

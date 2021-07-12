@@ -26,13 +26,7 @@ class RoleClassPartitive(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-RoleClass
     """
-    codeset_v3_RoleClass: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleClass"
-    """
-    http://terminology.hl7.org/ValueSet/v3-RoleClassPartitive
-    """
-    codeset_v3_RoleClassPartitive: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-RoleClassPartitive"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleClass"
 
 
 class RoleClassPartitiveValues:

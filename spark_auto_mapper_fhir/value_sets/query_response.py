@@ -20,17 +20,9 @@ class QueryResponse(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-QueryResponse
-    """
-    codeset_v3_QueryResponse: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-QueryResponse"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-QueryResponse
     """
-    codeset_v3_QueryResponse: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-QueryResponse"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-QueryResponse"
 
 
 class QueryResponseValues:

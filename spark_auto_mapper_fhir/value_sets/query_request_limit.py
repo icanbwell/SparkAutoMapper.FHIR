@@ -21,17 +21,9 @@ class QueryRequestLimit(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-QueryRequestLimit
-    """
-    codeset_v3_QueryRequestLimit: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-QueryRequestLimit"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-QueryRequestLimit
     """
-    codeset_v3_QueryRequestLimit: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-QueryRequestLimit"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-QueryRequestLimit"
 
 
 class QueryRequestLimitValues:

@@ -32,15 +32,9 @@ class InformationSensitivityPolicy(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-InformationSensitivityPolicy
-    """
-    codeset_v3_InformationSensitivityPolicy: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-InformationSensitivityPolicy"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-ActCode
     """
-    codeset_v3_ActCode: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
 
 
 class InformationSensitivityPolicyValues:

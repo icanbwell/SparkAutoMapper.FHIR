@@ -20,17 +20,9 @@ class ContainerSeparator(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-ContainerSeparator
-    """
-    codeset_v3_ContainerSeparator: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-ContainerSeparator"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-ContainerSeparator
     """
-    codeset_v3_ContainerSeparator: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-ContainerSeparator"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ContainerSeparator"
 
 
 class ContainerSeparatorValues:

@@ -23,15 +23,7 @@ class EntityNamePartTypeR2(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-EntityNamePartTypeR2
     """
-    codeset_v3_EntityNamePartTypeR2: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-EntityNamePartTypeR2"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-EntityNamePartTypeR2
-    """
-    codeset_v3_EntityNamePartTypeR2: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-EntityNamePartTypeR2"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-EntityNamePartTypeR2"
 
 
 class EntityNamePartTypeR2Values:

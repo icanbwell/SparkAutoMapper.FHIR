@@ -25,11 +25,7 @@ class ActMood(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-ActMood
     """
-    codeset_v3_ActMood: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActMood"
-    """
-    http://terminology.hl7.org/ValueSet/v3-ActMood
-    """
-    codeset_v3_ActMood: FhirUri = "http://terminology.hl7.org/ValueSet/v3-ActMood"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActMood"
 
 
 class ActMoodValues:

@@ -20,15 +20,9 @@ class ManagedParticipationStatus(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/ValueSet/v3-ManagedParticipationStatus
-    """
-    codeset_v3_ManagedParticipationStatus: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-ManagedParticipationStatus"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-ManagedParticipationStatus
     """
-    codeset_v3_ManagedParticipationStatus: FhirUri = (
+    codeset: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-ManagedParticipationStatus"
     )
 

@@ -64,10 +64,12 @@ class {{fhir_entity.cleaned_name}}(GenericTypeCode):
     codeset_{{ value_set_url.split("/")[-1].replace("-", "_").replace(":","_").replace(".","_") }}: FhirUri = "{{ value_set_url}}"
             {% endfor %}
         {% else %}
+            {% for value_set_url in fhir_entity.value_set_url_list %}
     """
-    {{ fhir_entity.value_set_url_list[0] }}
+    {{ value_set_url }}
     """
-    codeset: FhirUri = "{{ fhir_entity.value_set_url_list[0] }}"
+    codeset: FhirUri = "{{ value_set_url }}"
+            {% endfor %}
         {% endif %}
     {% endif %}
 

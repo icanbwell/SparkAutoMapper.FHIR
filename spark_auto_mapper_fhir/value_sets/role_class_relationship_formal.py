@@ -22,13 +22,7 @@ class RoleClassRelationshipFormal(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-RoleClass
     """
-    codeset_v3_RoleClass: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleClass"
-    """
-    http://terminology.hl7.org/ValueSet/v3-RoleClassRelationshipFormal
-    """
-    codeset_v3_RoleClassRelationshipFormal: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-RoleClassRelationshipFormal"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleClass"
 
 
 class RoleClassRelationshipFormalValues:

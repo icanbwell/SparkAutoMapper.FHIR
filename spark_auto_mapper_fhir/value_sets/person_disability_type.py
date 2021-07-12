@@ -21,15 +21,7 @@ class PersonDisabilityType(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-PersonDisabilityType
     """
-    codeset_v3_PersonDisabilityType: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-PersonDisabilityType"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-PersonDisabilityType
-    """
-    codeset_v3_PersonDisabilityType: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-PersonDisabilityType"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-PersonDisabilityType"
 
 
 class PersonDisabilityTypeValues:

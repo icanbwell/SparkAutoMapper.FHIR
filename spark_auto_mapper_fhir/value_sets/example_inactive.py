@@ -19,9 +19,9 @@ class Example_inactiveCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    
+    http://terminology.hl7.org/CodeSystem/v3-ActMood
     """
-    codeset: FhirUri = ""
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActMood"
 
 
 class Example_inactiveCodeValues:

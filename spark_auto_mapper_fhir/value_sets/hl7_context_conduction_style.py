@@ -22,14 +22,8 @@ class HL7ContextConductionStyle(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-HL7ContextConductionStyle
     """
-    codeset_v3_HL7ContextConductionStyle: FhirUri = (
+    codeset: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-HL7ContextConductionStyle"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-HL7ContextConductionStyle
-    """
-    codeset_v3_HL7ContextConductionStyle: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-HL7ContextConductionStyle"
     )
 
 

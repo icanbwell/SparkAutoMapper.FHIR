@@ -22,13 +22,7 @@ class EntityCode(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-EntityCode
     """
-    codeset_v3_EntityCode: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-EntityCode"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-EntityCode
-    """
-    codeset_v3_EntityCode: FhirUri = "http://terminology.hl7.org/ValueSet/v3-EntityCode"
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-EntityCode"
 
 
 class EntityCodeValues:

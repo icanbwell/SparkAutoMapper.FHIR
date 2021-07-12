@@ -19,9 +19,9 @@ class InstanceAvailabilityCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    
+    http://dicom.nema.org/resources/ontology/DCM
     """
-    codeset: FhirUri = ""
+    codeset: FhirUri = "http://dicom.nema.org/resources/ontology/DCM"
 
 
 class InstanceAvailabilityCodeValues:

@@ -23,9 +23,9 @@ class DocumentTypeValueSetCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    
+    http://loinc.org
     """
-    codeset: FhirUri = ""
+    codeset: FhirUri = "http://loinc.org"
 
 
 class DocumentTypeValueSetCodeValues:

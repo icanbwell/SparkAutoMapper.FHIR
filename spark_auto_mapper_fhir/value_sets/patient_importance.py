@@ -21,15 +21,7 @@ class PatientImportance(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/v3-PatientImportance
     """
-    codeset_v3_PatientImportance: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-PatientImportance"
-    )
-    """
-    http://terminology.hl7.org/ValueSet/v3-PatientImportance
-    """
-    codeset_v3_PatientImportance: FhirUri = (
-        "http://terminology.hl7.org/ValueSet/v3-PatientImportance"
-    )
+    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-PatientImportance"
 
 
 class PatientImportanceValues:
