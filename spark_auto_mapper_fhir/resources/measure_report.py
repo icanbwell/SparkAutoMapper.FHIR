@@ -1,60 +1,123 @@
-from typing import Optional, Union, Any
+from __future__ import annotations
+from typing import Optional, TYPE_CHECKING, Union
+
+# noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
-
-from spark_auto_mapper_fhir.backbone_elements.group_backbone_element import (
-    GroupBackboneElement,
-)
-from spark_auto_mapper_fhir.resources.organization import Organization
-
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-
-from spark_auto_mapper_fhir.resources.group import Group
-
-from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
-
-from spark_auto_mapper_fhir.resources.device import Device
-
-from spark_auto_mapper_fhir.resources.location import Location
-
-from spark_auto_mapper_fhir.complex_types.period import Period
-
-from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
-
-from spark_auto_mapper_fhir.resources.practitioner import Practitioner
-
-from spark_auto_mapper_fhir.complex_types.reference import Reference
-
-from spark_auto_mapper_fhir.fhir_types.uri import FhirCanonical
-from spark_auto_mapper_fhir.complex_types.identifier import Identifier
-from spark_fhir_schemas.r4.resources.measurereport import MeasureReportSchema
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
-from spark_auto_mapper_fhir.extensions.extension import Extension
 from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.valuesets.measure_improvement_notation import (
-    MeasureImprovementNotationCode,
-)
-from spark_auto_mapper_fhir.valuesets.measure_report_status import (
-    MeasureReportStatusCode,
-)
-from spark_auto_mapper_fhir.valuesets.measure_report_type import MeasureReportTypeCode
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
+
+from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBase
+from spark_fhir_schemas.r4.resources.measurereport import MeasureReportSchema
+
+if TYPE_CHECKING:
+    pass
+    # id_ (id)
+    # meta (Meta)
+    # implicitRules (uri)
+    # language (CommonLanguages)
+    from spark_auto_mapper_fhir.value_sets.common_languages import CommonLanguagesCode
+
+    # text (Narrative)
+    from spark_auto_mapper_fhir.complex_types.narrative import Narrative
+
+    # contained (ResourceContainer)
+    from spark_auto_mapper_fhir.complex_types.resource_container import (
+        ResourceContainer,
+    )
+
+    # extension (Extension)
+    # modifierExtension (Extension)
+    # identifier (Identifier)
+    from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # status (MeasureReportStatus)
+    from spark_auto_mapper_fhir.value_sets.measure_report_status import (
+        MeasureReportStatusCode,
+    )
+
+    # type_ (MeasureReportType)
+    from spark_auto_mapper_fhir.value_sets.measure_report_type import (
+        MeasureReportTypeCode,
+    )
+
+    # measure (canonical)
+    from spark_auto_mapper_fhir.fhir_types.canonical import FhirCanonical
+
+    # subject (Reference)
+    from spark_auto_mapper_fhir.complex_types.reference import Reference
+
+    # Imports for References for subject
+    from spark_auto_mapper_fhir.resources.patient import Patient
+    from spark_auto_mapper_fhir.resources.practitioner import Practitioner
+    from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
+    from spark_auto_mapper_fhir.resources.location import Location
+    from spark_auto_mapper_fhir.resources.device import Device
+    from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
+    from spark_auto_mapper_fhir.resources.group import Group
+
+    # date (dateTime)
+    # reporter (Reference)
+    # Imports for References for reporter
+    from spark_auto_mapper_fhir.resources.organization import Organization
+
+    # period (Period)
+    from spark_auto_mapper_fhir.complex_types.period import Period
+
+    # improvementNotation (CodeableConcept)
+    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for improvementNotation
+    from spark_auto_mapper_fhir.value_sets.measure_improvement_notation import (
+        MeasureImprovementNotationCode,
+    )
+
+    # End Import for CodeableConcept for improvementNotation
+    # group (MeasureReport.Group)
+    from spark_auto_mapper_fhir.backbone_elements.measure_report_group import (
+        MeasureReportGroup,
+    )
+
+    # evaluatedResource (Reference)
+    # Imports for References for evaluatedResource
+    from spark_auto_mapper_fhir.resources.resource import Resource
 
 
+# This file is auto-generated by generate_classes so do not edit manually
+# noinspection PyPep8Naming
 class MeasureReport(FhirResourceBase):
+    """
+    MeasureReport
+    measurereport.xsd
+        The MeasureReport resource contains the results of the calculation of a
+    measure; and optionally a reference to the resources involved in that
+    calculation.
+        If the element is present, it must have either a @value, an @id, or extensions
+    """
+
+    # noinspection PyPep8Naming
     def __init__(
         self,
+        *,
+        id_: Optional[FhirId] = None,
+        meta: Optional[Meta] = None,
+        implicitRules: Optional[FhirUri] = None,
+        language: Optional[CommonLanguagesCode] = None,
+        text: Optional[Narrative] = None,
+        contained: Optional[FhirList[ResourceContainer]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
+        identifier: Optional[FhirList[Identifier]] = None,
         status: MeasureReportStatusCode,
         type_: MeasureReportTypeCode,
         measure: FhirCanonical,
-        period: Period,
-        id_: Optional[FhirId] = None,
-        meta: Optional[Meta] = None,
-        identifier: Optional[FhirList[Identifier]] = None,
         subject: Optional[
             Reference[
                 Union[
+                    Patient,
                     Practitioner,
                     PractitionerRole,
                     Location,
@@ -68,34 +131,89 @@ class MeasureReport(FhirResourceBase):
         reporter: Optional[
             Reference[Union[Practitioner, PractitionerRole, Location, Organization]]
         ] = None,
+        period: Period,
         improvementNotation: Optional[
             CodeableConcept[MeasureImprovementNotationCode]
         ] = None,
-        group: Optional[FhirList[GroupBackboneElement]] = None,
-        evaluatedResource: Optional[FhirList[Reference[Any]]] = None,
-        extension: Optional[FhirList[Extension]] = None,
+        group: Optional[FhirList[MeasureReportGroup]] = None,
+        evaluatedResource: Optional[FhirList[Reference[Resource]]] = None,
     ) -> None:
         """
-        MeasureReport Resource in FHIR
-        https://www.hl7.org/fhir/measurereport.html
+            The MeasureReport resource contains the results of the calculation of a
+        measure; and optionally a reference to the resources involved in that
+        calculation.
+            If the element is present, it must have either a @value, an @id, or extensions
 
-        :param id_: id of resource
-        :param identifier: Additional identifier for the MeasureReport
-        :param status: complete | pending | error
-        :param type_: individual | subject-list | summary | data-collection
-        :param measure: What measure was calculated
-        :param subject: What individual(s) the report is for
-        :param date: When the report was generated
-        :param reporter: Who is reporting the data
-        :param period: What period the report covers
-        :param improvementNotation: increase | decrease
-        :param group: Measure results from each group
-        :param evaluatedResource: What data was used to calculate the measure score
+            :param id_: The logical id of the resource, as used in the URL for the resource. Once
+        assigned, this value never changes.
+            :param meta: The metadata about the resource. This is content that is maintained by the
+        infrastructure. Changes to the content might not always be associated with
+        version changes to the resource.
+            :param implicitRules: A reference to a set of rules that were followed when the resource was
+        constructed, and which must be understood when processing the content. Often,
+        this is a reference to an implementation guide that defines the special rules
+        along with other profiles etc.
+            :param language: The base language in which the resource is written.
+            :param text: A human-readable narrative that contains a summary of the resource and can be
+        used to represent the content of the resource to a human. The narrative need
+        not encode all the structured data, but is required to contain sufficient
+        detail to make it "clinically safe" for a human to just read the narrative.
+        Resource definitions may define what content should be represented in the
+        narrative to ensure clinical safety.
+            :param contained: These resources do not have an independent existence apart from the resource
+        that contains them - they cannot be identified independently, and nor can they
+        have their own independent transaction scope.
+            :param extension: May be used to represent additional information that is not part of the basic
+        definition of the resource. To make the use of extensions safe and manageable,
+        there is a strict set of governance  applied to the definition and use of
+        extensions. Though any implementer can define an extension, there is a set of
+        requirements that SHALL be met as part of the definition of the extension.
+            :param modifierExtension: May be used to represent additional information that is not part of the basic
+        definition of the resource and that modifies the understanding of the element
+        that contains it and/or the understanding of the containing element's
+        descendants. Usually modifier elements provide negation or qualification. To
+        make the use of extensions safe and manageable, there is a strict set of
+        governance applied to the definition and use of extensions. Though any
+        implementer is allowed to define an extension, there is a set of requirements
+        that SHALL be met as part of the definition of the extension. Applications
+        processing a resource are required to check for modifier extensions.
+
+        Modifier extensions SHALL NOT change the meaning of any elements on Resource
+        or DomainResource (including cannot change the meaning of modifierExtension
+        itself).
+            :param identifier: A formal identifier that is used to identify this MeasureReport when it is
+        represented in other formats or referenced in a specification, model, design
+        or an instance.
+            :param status: The MeasureReport status. No data will be available until the MeasureReport
+        status is complete.
+            :param type_: The type of measure report. This may be an individual report, which provides
+        the score for the measure for an individual member of the population; a
+        subject-listing, which returns the list of members that meet the various
+        criteria in the measure; a summary report, which returns a population count
+        for each of the criteria in the measure; or a data-collection, which enables
+        the MeasureReport to be used to exchange the data-of-interest for a quality
+        measure.
+            :param measure: A reference to the Measure that was calculated to produce this report.
+            :param subject: Optional subject identifying the individual or individuals the report is for.
+            :param date: The date this measure report was generated.
+            :param reporter: The individual, location, or organization that is reporting the data.
+            :param period: The reporting period for which the report was calculated.
+            :param improvementNotation: Whether improvement in the measure is noted by an increase or decrease in the
+        measure score.
+            :param group: The results of the calculation, one for each population group in the measure.
+            :param evaluatedResource: A reference to a Bundle containing the Resources that were used in the
+        calculation of this measure.
         """
         super().__init__(
             resourceType="MeasureReport",
             id_=id_,
             meta=meta,
+            implicitRules=implicitRules,
+            language=language,
+            text=text,
+            contained=contained,
+            extension=extension,
+            modifierExtension=modifierExtension,
             identifier=identifier,
             status=status,
             type_=type_,
@@ -107,7 +225,6 @@ class MeasureReport(FhirResourceBase):
             improvementNotation=improvementNotation,
             group=group,
             evaluatedResource=evaluatedResource,
-            extension=extension,
         )
 
     def get_schema(

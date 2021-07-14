@@ -1,48 +1,119 @@
-from typing import Optional, Union
+from __future__ import annotations
+from typing import Optional, TYPE_CHECKING, Union
 
+# noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper.data_types.text_like_base import AutoMapperTextLikeBase
-from spark_fhir_schemas.r4.resources.patient import PatientSchema
-
-from spark_auto_mapper_fhir.backbone_elements.patient_communication_backbone_element import (
-    PatientCommunicationBackboneElement,
-)
-from spark_auto_mapper_fhir.complex_types.meta import Meta
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
-from spark_auto_mapper.data_types.date import AutoMapperDateDataType
-from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
-
-from spark_auto_mapper_fhir.complex_types.address import Address
-from spark_auto_mapper_fhir.complex_types.attachment import Attachment
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
-from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
-from spark_auto_mapper_fhir.complex_types.contact import Contact
-from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
 from spark_auto_mapper_fhir.fhir_types.date import FhirDate
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-from spark_auto_mapper_fhir.complex_types.human_name import HumanName
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
-from spark_auto_mapper_fhir.complex_types.identifier import Identifier
-from spark_auto_mapper_fhir.complex_types.link_patient import LinkPatient
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.resources.organization import Organization
-from spark_auto_mapper_fhir.fhir_types.positive_int import FhirPositiveInt
-from spark_auto_mapper_fhir.resources.practitioner import Practitioner
-from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
-from spark_auto_mapper_fhir.complex_types.reference import Reference
-from spark_auto_mapper_fhir.valuesets.administrative_gender import (
-    AdministrativeGenderCode,
-)
-from spark_auto_mapper_fhir.valuesets.marital_status import MaritalStatusCode
+from spark_auto_mapper_fhir.fhir_types.integer import FhirInteger
+from spark_auto_mapper_fhir.complex_types.meta import Meta
+from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
+
+from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBase
+from spark_fhir_schemas.r4.resources.patient import PatientSchema
+
+if TYPE_CHECKING:
+    pass
+    # id_ (id)
+    # meta (Meta)
+    # implicitRules (uri)
+    # language (CommonLanguages)
+    from spark_auto_mapper_fhir.value_sets.common_languages import CommonLanguagesCode
+
+    # text (Narrative)
+    from spark_auto_mapper_fhir.complex_types.narrative import Narrative
+
+    # contained (ResourceContainer)
+    from spark_auto_mapper_fhir.complex_types.resource_container import (
+        ResourceContainer,
+    )
+
+    # extension (Extension)
+    # modifierExtension (Extension)
+    # identifier (Identifier)
+    from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # active (boolean)
+    # name (HumanName)
+    from spark_auto_mapper_fhir.complex_types.human_name import HumanName
+
+    # telecom (ContactPoint)
+    from spark_auto_mapper_fhir.complex_types.contact_point import ContactPoint
+
+    # gender (AdministrativeGender)
+    from spark_auto_mapper_fhir.value_sets.administrative_gender import (
+        AdministrativeGenderCode,
+    )
+
+    # birthDate (date)
+    # deceasedBoolean (boolean)
+    # deceasedDateTime (dateTime)
+    # address (Address)
+    from spark_auto_mapper_fhir.complex_types.address import Address
+
+    # maritalStatus (CodeableConcept)
+    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for maritalStatus
+    from spark_auto_mapper_fhir.value_sets.marital_status_codes import (
+        MaritalStatusCodesCode,
+    )
+
+    # End Import for CodeableConcept for maritalStatus
+    # multipleBirthBoolean (boolean)
+    # multipleBirthInteger (integer)
+    # photo (Attachment)
+    from spark_auto_mapper_fhir.complex_types.attachment import Attachment
+
+    # contact (Patient.Contact)
+    from spark_auto_mapper_fhir.backbone_elements.patient_contact import PatientContact
+
+    # communication (Patient.Communication)
+    from spark_auto_mapper_fhir.backbone_elements.patient_communication import (
+        PatientCommunication,
+    )
+
+    # generalPractitioner (Reference)
+    from spark_auto_mapper_fhir.complex_types.reference import Reference
+
+    # Imports for References for generalPractitioner
+    from spark_auto_mapper_fhir.resources.organization import Organization
+    from spark_auto_mapper_fhir.resources.practitioner import Practitioner
+    from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
+
+    # managingOrganization (Reference)
+    # Imports for References for managingOrganization
+    # link (Patient.Link)
+    from spark_auto_mapper_fhir.backbone_elements.patient_link import PatientLink
 
 
+# This file is auto-generated by generate_classes so do not edit manually
+# noinspection PyPep8Naming
 class Patient(FhirResourceBase):
+    """
+    Patient
+    patient.xsd
+        Demographics and other administrative information about an individual or
+    animal receiving care or other health-related services.
+        If the element is present, it must have either a @value, an @id, or extensions
+    """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
-        id_: FhirId,
+        *,
+        id_: Optional[FhirId] = None,
         meta: Optional[Meta] = None,
+        implicitRules: Optional[FhirUri] = None,
+        language: Optional[CommonLanguagesCode] = None,
+        text: Optional[Narrative] = None,
+        contained: Optional[FhirList[ResourceContainer]] = None,
+        extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         active: Optional[FhirBoolean] = None,
         name: Optional[FhirList[HumanName]] = None,
@@ -52,52 +123,100 @@ class Patient(FhirResourceBase):
         deceasedBoolean: Optional[FhirBoolean] = None,
         deceasedDateTime: Optional[FhirDateTime] = None,
         address: Optional[FhirList[Address]] = None,
-        maritalStatus: Optional[CodeableConcept[MaritalStatusCode]] = None,
+        maritalStatus: Optional[CodeableConcept[MaritalStatusCodesCode]] = None,
         multipleBirthBoolean: Optional[FhirBoolean] = None,
-        multipleBirthInteger: Optional[FhirPositiveInt] = None,
+        multipleBirthInteger: Optional[FhirInteger] = None,
         photo: Optional[FhirList[Attachment]] = None,
-        contact: Optional[FhirList[Contact]] = None,
-        communication: Optional[FhirList[PatientCommunicationBackboneElement]] = None,
+        contact: Optional[FhirList[PatientContact]] = None,
+        communication: Optional[FhirList[PatientCommunication]] = None,
         generalPractitioner: Optional[
             FhirList[Reference[Union[Organization, Practitioner, PractitionerRole]]]
         ] = None,
         managingOrganization: Optional[Reference[Organization]] = None,
-        link: Optional[FhirList[LinkPatient]] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None,
-    ):
+        link: Optional[FhirList[PatientLink]] = None,
+    ) -> None:
         """
-        Patient Resource in FHIR
-        https://hl7.org/FHIR/patient.html
-        Information about an individual or animal receiving health care services
+            Demographics and other administrative information about an individual or
+        animal receiving care or other health-related services.
+            If the element is present, it must have either a @value, an @id, or extensions
 
+            :param id_: The logical id of the resource, as used in the URL for the resource. Once
+        assigned, this value never changes.
+            :param meta: The metadata about the resource. This is content that is maintained by the
+        infrastructure. Changes to the content might not always be associated with
+        version changes to the resource.
+            :param implicitRules: A reference to a set of rules that were followed when the resource was
+        constructed, and which must be understood when processing the content. Often,
+        this is a reference to an implementation guide that defines the special rules
+        along with other profiles etc.
+            :param language: The base language in which the resource is written.
+            :param text: A human-readable narrative that contains a summary of the resource and can be
+        used to represent the content of the resource to a human. The narrative need
+        not encode all the structured data, but is required to contain sufficient
+        detail to make it "clinically safe" for a human to just read the narrative.
+        Resource definitions may define what content should be represented in the
+        narrative to ensure clinical safety.
+            :param contained: These resources do not have an independent existence apart from the resource
+        that contains them - they cannot be identified independently, and nor can they
+        have their own independent transaction scope.
+            :param extension: May be used to represent additional information that is not part of the basic
+        definition of the resource. To make the use of extensions safe and manageable,
+        there is a strict set of governance  applied to the definition and use of
+        extensions. Though any implementer can define an extension, there is a set of
+        requirements that SHALL be met as part of the definition of the extension.
+            :param modifierExtension: May be used to represent additional information that is not part of the basic
+        definition of the resource and that modifies the understanding of the element
+        that contains it and/or the understanding of the containing element's
+        descendants. Usually modifier elements provide negation or qualification. To
+        make the use of extensions safe and manageable, there is a strict set of
+        governance applied to the definition and use of extensions. Though any
+        implementer is allowed to define an extension, there is a set of requirements
+        that SHALL be met as part of the definition of the extension. Applications
+        processing a resource are required to check for modifier extensions.
 
-        :param id_: id of resource
-        :param identifier: An identifier for this patient
-        :param active: Whether this patient's record is in active use
-        :param name: A name associated with the patient
-        :param telecom: A contact detail for the individual
-        :param gender: 	male | female | other | unknown (https://hl7.org/FHIR/valueset-administrative-gender.html)
-        :param birthDate: The date of birth for the individual
-        :param deceasedBoolean: Indicates if the individual is deceased or not
-        :param deceasedDateTime: Indicates if the individual is deceased or not
-        :param address: An address for the individual
-        :param maritalStatus: Marital (civil) status of a patient (https://hl7.org/FHIR/valueset-marital-status.html)
-        :param multipleBirthBoolean: Whether patient is part of a multiple birth
-        :param multipleBirthInteger: Whether patient is part of a multiple birth
-        :param photo: Image of the patient
-        :param contact: A contact party (e.g. guardian, partner, friend) for the patient
-                        + Rule: SHALL at least contain a contact's details or a reference to an organization
-        :param communication: A language which may be used to communicate with the patient about his or her health
-        :param generalPractitioner: Patient's nominated primary care provider
-        :param managingOrganization: Organization that is the custodian of the patient record
-        :param link: Link to another patient resource that concerns the same actual person
-        :param extension: extensions
+        Modifier extensions SHALL NOT change the meaning of any elements on Resource
+        or DomainResource (including cannot change the meaning of modifierExtension
+        itself).
+            :param identifier: An identifier for this patient.
+            :param active: Whether this patient record is in active use.
+        Many systems use this property to mark as non-current patients, such as those
+        that have not been seen for a period of time based on an organization's
+        business rules.
+
+        It is often used to filter patient lists to exclude inactive patients
+
+        Deceased patients may also be marked as inactive for the same reasons, but may
+        be active for some time after death.
+            :param name: A name associated with the individual.
+            :param telecom: A contact detail (e.g. a telephone number or an email address) by which the
+        individual may be contacted.
+            :param gender: Administrative Gender - the gender that the patient is considered to have for
+        administration and record keeping purposes.
+            :param birthDate: The date of birth for the individual.
+            :param deceasedBoolean: None
+            :param deceasedDateTime: None
+            :param address: An address for the individual.
+            :param maritalStatus: This field contains a patient's most recent marital (civil) status.
+            :param multipleBirthBoolean: None
+            :param multipleBirthInteger: None
+            :param photo: Image of the patient.
+            :param contact: A contact party (e.g. guardian, partner, friend) for the patient.
+            :param communication: A language which may be used to communicate with the patient about his or her
+        health.
+            :param generalPractitioner: Patient's nominated care provider.
+            :param managingOrganization: Organization that is the custodian of the patient record.
+            :param link: Link to another patient resource that concerns the same actual patient.
         """
         super().__init__(
             resourceType="Patient",
             id_=id_,
             meta=meta,
+            implicitRules=implicitRules,
+            language=language,
+            text=text,
+            contained=contained,
             extension=extension,
+            modifierExtension=modifierExtension,
             identifier=identifier,
             active=active,
             name=name,
@@ -122,23 +241,3 @@ class Patient(FhirResourceBase):
         self, include_extension: bool
     ) -> Optional[Union[StructType, DataType]]:
         return PatientSchema.get_schema(include_extension=include_extension)
-
-    id_: FhirId = FhirId(A.column("id_"))
-    identifier = A.column("identifier")
-    active = A.boolean(A.column("active"))
-    name = A.column("name")
-    telecom = A.column("telecom")
-    gender: AutoMapperTextLikeBase = A.column("gender")
-    birthDate: AutoMapperDateDataType = A.date(A.column("birthDate"))
-    deceasedBoolean = A.column("deceasedBoolean")
-    deceasedDateTime = A.column("deceasedDateTime")
-    address = A.column("address")
-    maritalStatus: AutoMapperTextLikeBase = A.column("maritalStatus")
-    multipleBirthBoolean = A.column("multipleBirthBoolean")
-    multipleBirthInteger = A.column("multipleBirthInteger")
-    photo = A.column("photo")
-    contact = A.column("contact")
-    communication = A.column("communication")
-    generalPractitioner = A.column("generalPractitioner")
-    managingOrganization = A.column("managingOrganization")
-    link = A.column("link")

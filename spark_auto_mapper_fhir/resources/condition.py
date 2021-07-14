@@ -1,84 +1,181 @@
-from typing import Optional, Union, TYPE_CHECKING
+from __future__ import annotations
+from typing import Optional, TYPE_CHECKING, Union
 
+# noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
-from spark_auto_mapper_fhir.resources.fhir_resource_base import FhirResourceBase
-from spark_auto_mapper_fhir.fhir_types.id import FhirId
-
-from spark_auto_mapper_fhir.complex_types.annotation import Annotation
-from spark_auto_mapper_fhir.backbone_elements.condition_evidence_backbone_element import (
-    ConditionEvidenceBackboneElement,
-)
-from spark_auto_mapper_fhir.backbone_elements.condition_stage_backbone_element import (
-    ConditionStageBackboneElement,
-)
-from spark_auto_mapper_fhir.resources.practitioner import Practitioner
-
-from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
-
-from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
-
-from spark_auto_mapper_fhir.fhir_types.string import FhirString
-
-from spark_auto_mapper_fhir.complex_types.period import Period
-from spark_auto_mapper_fhir.complex_types.range import Range
-
-from spark_auto_mapper_fhir.fhir_types.age import FhirAge
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
-
-from spark_auto_mapper_fhir.complex_types.reference import Reference
-
-if TYPE_CHECKING:
-    from spark_auto_mapper_fhir.resources.encounter import Encounter
-
-from spark_auto_mapper_fhir.resources.patient import Patient
-
-from spark_auto_mapper_fhir.resources.group import Group
-from spark_fhir_schemas.r4.resources.condition import ConditionSchema
-
-from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
-from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+from spark_auto_mapper_fhir.fhir_types.list import FhirList
+from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.fhir_types.list import FhirList
-from spark_auto_mapper_fhir.valuesets.body_site import SNOMEDCTBodyStructuresCode
-from spark_auto_mapper_fhir.valuesets.condition import ConditionCode
-from spark_auto_mapper_fhir.valuesets.condition_category import ConditionCategoryCode
-from spark_auto_mapper_fhir.valuesets.condition_clinical import (
-    ConditionClinicalStatusCode,
-)
-from spark_auto_mapper_fhir.valuesets.condition_severity import ConditionSeverityCode
-from spark_auto_mapper_fhir.valuesets.condition_verification_status import (
-    ConditionVerificationStatusCode,
-)
+from spark_auto_mapper_fhir.fhir_types.id import FhirId
+from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
+
+from spark_auto_mapper_fhir.base_types.fhir_resource_base import FhirResourceBase
+from spark_fhir_schemas.r4.resources.condition import ConditionSchema
+
+if TYPE_CHECKING:
+    pass
+    # id_ (id)
+    # meta (Meta)
+    # implicitRules (uri)
+    # language (CommonLanguages)
+    from spark_auto_mapper_fhir.value_sets.common_languages import CommonLanguagesCode
+
+    # text (Narrative)
+    from spark_auto_mapper_fhir.complex_types.narrative import Narrative
+
+    # contained (ResourceContainer)
+    from spark_auto_mapper_fhir.complex_types.resource_container import (
+        ResourceContainer,
+    )
+
+    # extension (Extension)
+    # modifierExtension (Extension)
+    # identifier (Identifier)
+    from spark_auto_mapper_fhir.complex_types.identifier import Identifier
+
+    # clinicalStatus (CodeableConcept)
+    from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
+
+    # Import for CodeableConcept for clinicalStatus
+    from spark_auto_mapper_fhir.value_sets.condition_clinical_status_codes import (
+        ConditionClinicalStatusCodesCode,
+    )
+
+    # End Import for CodeableConcept for clinicalStatus
+    # verificationStatus (CodeableConcept)
+    # Import for CodeableConcept for verificationStatus
+    from spark_auto_mapper_fhir.value_sets.condition_verification_status import (
+        ConditionVerificationStatusCode,
+    )
+
+    # End Import for CodeableConcept for verificationStatus
+    # category (CodeableConcept)
+    # Import for CodeableConcept for category
+    from spark_auto_mapper_fhir.value_sets.condition_category_codes import (
+        ConditionCategoryCodesCode,
+    )
+
+    # End Import for CodeableConcept for category
+    # severity (CodeableConcept)
+    # Import for CodeableConcept for severity
+    from spark_auto_mapper_fhir.value_sets.condition_or__diagnosis_severity import (
+        Condition_or_DiagnosisSeverityCode,
+    )
+
+    # End Import for CodeableConcept for severity
+    # code (CodeableConcept)
+    # Import for CodeableConcept for code
+    from spark_auto_mapper_fhir.value_sets.condition_or__problem_or__diagnosis_codes import (
+        Condition_or_Problem_or_DiagnosisCodesCode,
+    )
+
+    # End Import for CodeableConcept for code
+    # bodySite (CodeableConcept)
+    # Import for CodeableConcept for bodySite
+    from spark_auto_mapper_fhir.value_sets.snomedct_body_structures import (
+        SNOMEDCTBodyStructuresCode,
+    )
+
+    # End Import for CodeableConcept for bodySite
+    # subject (Reference)
+    from spark_auto_mapper_fhir.complex_types.reference import Reference
+
+    # Imports for References for subject
+    from spark_auto_mapper_fhir.resources.patient import Patient
+    from spark_auto_mapper_fhir.resources.group import Group
+
+    # encounter (Reference)
+    # Imports for References for encounter
+    from spark_auto_mapper_fhir.resources.encounter import Encounter
+
+    # onsetDateTime (dateTime)
+    # onsetAge (Age)
+    from spark_auto_mapper_fhir.complex_types.age import Age
+
+    # onsetPeriod (Period)
+    from spark_auto_mapper_fhir.complex_types.period import Period
+
+    # onsetRange (Range)
+    from spark_auto_mapper_fhir.complex_types.range import Range
+
+    # onsetString (string)
+    # abatementDateTime (dateTime)
+    # abatementAge (Age)
+    # abatementPeriod (Period)
+    # abatementRange (Range)
+    # abatementString (string)
+    # recordedDate (dateTime)
+    # recorder (Reference)
+    # Imports for References for recorder
+    from spark_auto_mapper_fhir.resources.practitioner import Practitioner
+    from spark_auto_mapper_fhir.resources.practitioner_role import PractitionerRole
+    from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
+
+    # asserter (Reference)
+    # Imports for References for asserter
+    # stage (Condition.Stage)
+    from spark_auto_mapper_fhir.backbone_elements.condition_stage import ConditionStage
+
+    # evidence (Condition.Evidence)
+    from spark_auto_mapper_fhir.backbone_elements.condition_evidence import (
+        ConditionEvidence,
+    )
+
+    # note (Annotation)
+    from spark_auto_mapper_fhir.complex_types.annotation import Annotation
 
 
+# This file is auto-generated by generate_classes so do not edit manually
+# noinspection PyPep8Naming
 class Condition(FhirResourceBase):
+    """
+    Condition
+    condition.xsd
+        A clinical condition, problem, diagnosis, or other event, situation, issue, or
+    clinical concept that has risen to a level of concern.
+        If the element is present, it must have either a @value, an @id, or extensions
+    """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
-        id_: FhirId,
-        subject: Reference[Union[Patient, Group]],
+        *,
+        id_: Optional[FhirId] = None,
         meta: Optional[Meta] = None,
+        implicitRules: Optional[FhirUri] = None,
+        language: Optional[CommonLanguagesCode] = None,
+        text: Optional[Narrative] = None,
+        contained: Optional[FhirList[ResourceContainer]] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
+        modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
-        clinicalStatus: Optional[CodeableConcept[ConditionClinicalStatusCode]] = None,
+        clinicalStatus: Optional[
+            CodeableConcept[ConditionClinicalStatusCodesCode]
+        ] = None,
         verificationStatus: Optional[
             CodeableConcept[ConditionVerificationStatusCode]
         ] = None,
-        category: Optional[FhirList[CodeableConcept[ConditionCategoryCode]]] = None,
-        severity: Optional[CodeableConcept[ConditionSeverityCode]] = None,
-        code: Optional[CodeableConcept[ConditionCode]] = None,
+        category: Optional[
+            FhirList[CodeableConcept[ConditionCategoryCodesCode]]
+        ] = None,
+        severity: Optional[CodeableConcept[Condition_or_DiagnosisSeverityCode]] = None,
+        code: Optional[
+            CodeableConcept[Condition_or_Problem_or_DiagnosisCodesCode]
+        ] = None,
         bodySite: Optional[
             FhirList[CodeableConcept[SNOMEDCTBodyStructuresCode]]
         ] = None,
-        encounter: Optional[Reference["Encounter"]] = None,
+        subject: Reference[Union[Patient, Group]],
+        encounter: Optional[Reference[Encounter]] = None,
         onsetDateTime: Optional[FhirDateTime] = None,
-        onsetAge: Optional[FhirAge] = None,
+        onsetAge: Optional[Age] = None,
         onsetPeriod: Optional[Period] = None,
         onsetRange: Optional[Range] = None,
         onsetString: Optional[FhirString] = None,
         abatementDateTime: Optional[FhirDateTime] = None,
-        abatementAge: Optional[FhirAge] = None,
+        abatementAge: Optional[Age] = None,
         abatementPeriod: Optional[Period] = None,
         abatementRange: Optional[Range] = None,
         abatementString: Optional[FhirString] = None,
@@ -89,53 +186,96 @@ class Condition(FhirResourceBase):
         asserter: Optional[
             Reference[Union[Practitioner, PractitionerRole, Patient, RelatedPerson]]
         ] = None,
-        stage: Optional[FhirList[ConditionStageBackboneElement]] = None,
-        evidence: Optional[FhirList[ConditionEvidenceBackboneElement]] = None,
+        stage: Optional[FhirList[ConditionStage]] = None,
+        evidence: Optional[FhirList[ConditionEvidence]] = None,
         note: Optional[FhirList[Annotation]] = None,
     ) -> None:
         """
-        Condition Resource in FHIR
-        https://hl7.org/FHIR/datatypes.html#Condition
-        Detailed information about conditions, problems or diagnoses
-        + Guideline: Condition.clinicalStatus SHALL be present if verificationStatus is not entered-in-error
-                        and category is problem-list-item
-        + Rule: If condition is abated, then clinicalStatus must be either inactive, resolved, or remission
-        + Rule: Condition.clinicalStatus SHALL NOT be present if verification Status is entered-in-error
+            A clinical condition, problem, diagnosis, or other event, situation, issue, or
+        clinical concept that has risen to a level of concern.
+            If the element is present, it must have either a @value, an @id, or extensions
 
-        :param id_: id of resource
-        :param identifier: External Ids for this condition
-        :param clinicalStatus: active | recurrence | relapse | inactive | remission | resolved
-        :param verificationStatus: unconfirmed | provisional | differential | confirmed | refuted | entered-in-error
-        :param category: problem-list-item | encounter-diagnosis
-        :param severity: Subjective severity of condition
-        :param code: Identification of the condition, problem or diagnosis
-        :param bodySite: Anatomical location, if relevant
-        :param subject: Who has the condition?
-        :param encounter: Encounter created as part of
-        :param onsetDateTime: Estimated or actual date, date-time, or age
-        :param onsetAge: Estimated or actual date, date-time, or age
-        :param onsetPeriod: Estimated or actual date, date-time, or age
-        :param onsetRange: Estimated or actual date, date-time, or age
-        :param onsetString: Estimated or actual date, date-time, or age
-        :param abatementDateTime: When in resolution/remission
-        :param abatementAge: When in resolution/remission
-        :param abatementPeriod: When in resolution/remission
-        :param abatementRange: When in resolution/remission
-        :param abatementString: When in resolution/remission
-        :param recordedDate: Date record was first recorded
-        :param recorder: Who recorded the condition
-        :param asserter: Person who asserts this condition
-        :param stage: Stage/grade, usually assessed formally
-                        + Rule: Stage SHALL have summary or assessment
-        :param evidence: Supporting evidence
-                        + Rule: evidence SHALL have code or details
-        :param note: Additional information about the Condition
+            :param id_: The logical id of the resource, as used in the URL for the resource. Once
+        assigned, this value never changes.
+            :param meta: The metadata about the resource. This is content that is maintained by the
+        infrastructure. Changes to the content might not always be associated with
+        version changes to the resource.
+            :param implicitRules: A reference to a set of rules that were followed when the resource was
+        constructed, and which must be understood when processing the content. Often,
+        this is a reference to an implementation guide that defines the special rules
+        along with other profiles etc.
+            :param language: The base language in which the resource is written.
+            :param text: A human-readable narrative that contains a summary of the resource and can be
+        used to represent the content of the resource to a human. The narrative need
+        not encode all the structured data, but is required to contain sufficient
+        detail to make it "clinically safe" for a human to just read the narrative.
+        Resource definitions may define what content should be represented in the
+        narrative to ensure clinical safety.
+            :param contained: These resources do not have an independent existence apart from the resource
+        that contains them - they cannot be identified independently, and nor can they
+        have their own independent transaction scope.
+            :param extension: May be used to represent additional information that is not part of the basic
+        definition of the resource. To make the use of extensions safe and manageable,
+        there is a strict set of governance  applied to the definition and use of
+        extensions. Though any implementer can define an extension, there is a set of
+        requirements that SHALL be met as part of the definition of the extension.
+            :param modifierExtension: May be used to represent additional information that is not part of the basic
+        definition of the resource and that modifies the understanding of the element
+        that contains it and/or the understanding of the containing element's
+        descendants. Usually modifier elements provide negation or qualification. To
+        make the use of extensions safe and manageable, there is a strict set of
+        governance applied to the definition and use of extensions. Though any
+        implementer is allowed to define an extension, there is a set of requirements
+        that SHALL be met as part of the definition of the extension. Applications
+        processing a resource are required to check for modifier extensions.
+
+        Modifier extensions SHALL NOT change the meaning of any elements on Resource
+        or DomainResource (including cannot change the meaning of modifierExtension
+        itself).
+            :param identifier: Business identifiers assigned to this condition by the performer or other
+        systems which remain constant as the resource is updated and propagates from
+        server to server.
+            :param clinicalStatus: The clinical status of the condition.
+            :param verificationStatus: The verification status to support the clinical status of the condition.
+            :param category: A category assigned to the condition.
+            :param severity: A subjective assessment of the severity of the condition as evaluated by the
+        clinician.
+            :param code: Identification of the condition, problem or diagnosis.
+            :param bodySite: The anatomical location where this condition manifests itself.
+            :param subject: Indicates the patient or group who the condition record is associated with.
+            :param encounter: The Encounter during which this Condition was created or to which the creation
+        of this record is tightly associated.
+            :param onsetDateTime: None
+            :param onsetAge: None
+            :param onsetPeriod: None
+            :param onsetRange: None
+            :param onsetString: None
+            :param abatementDateTime: None
+            :param abatementAge: None
+            :param abatementPeriod: None
+            :param abatementRange: None
+            :param abatementString: None
+            :param recordedDate: The recordedDate represents when this particular Condition record was created
+        in the system, which is often a system-generated date.
+            :param recorder: Individual who recorded the record and takes responsibility for its content.
+            :param asserter: Individual who is making the condition statement.
+            :param stage: Clinical stage or grade of a condition. May include formal severity
+        assessments.
+            :param evidence: Supporting evidence / manifestations that are the basis of the Condition's
+        verification status, such as evidence that confirmed or refuted the condition.
+            :param note: Additional information about the Condition. This is a general notes/comments
+        entry  for description of the Condition, its diagnosis and prognosis.
         """
         super().__init__(
             resourceType="Condition",
             id_=id_,
             meta=meta,
+            implicitRules=implicitRules,
+            language=language,
+            text=text,
+            contained=contained,
             extension=extension,
+            modifierExtension=modifierExtension,
             identifier=identifier,
             clinicalStatus=clinicalStatus,
             verificationStatus=verificationStatus,

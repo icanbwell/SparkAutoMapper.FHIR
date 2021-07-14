@@ -8,12 +8,10 @@ def test_condition_import_cycle() -> None:
 
 
 def test_claim_import_cycle() -> None:
-    from spark_auto_mapper_fhir.backbone_elements.related_claim_backbone_element import (
-        RelatedClaimBackboneElement,
-    )
+    from spark_auto_mapper_fhir.backbone_elements.claim_related import ClaimRelated
     from spark_auto_mapper_fhir.resources.claim import Claim
 
-    print(RelatedClaimBackboneElement.__name__)
+    print(ClaimRelated.__name__)
     print(Claim.__name__)
 
 

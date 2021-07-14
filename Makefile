@@ -52,3 +52,12 @@ sphinx-html:
 	@rm -rf docs/*
 	@touch docs/.nojekyll
 	cp -a docsrc/_build/html/. docs
+
+.PHONY:classes-debug
+classes-debug:
+	docker-compose run --rm --name sam_fhir dev python3 spark_auto_mapper_fhir/generator/generate_classes.py > out.txt
+
+.PHONY:classes
+classes:
+	docker-compose run --rm --name sam_fhir dev python3 spark_auto_mapper_fhir/generator/generate_classes.py && \
+	make run-pre-commit

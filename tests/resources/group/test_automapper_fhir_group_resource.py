@@ -2,19 +2,20 @@ from typing import Dict
 
 from pyspark.sql import SparkSession, DataFrame, Column
 from spark_auto_mapper.automappers.automapper import AutoMapper
+from spark_auto_mapper_fhir.backbone_elements.group_member import GroupMember
+
 from spark_auto_mapper_fhir.fhir_types.fhir_reference import FhirReference
 
 from spark_auto_mapper_fhir.complex_types.reference import Reference
 
-from spark_auto_mapper_fhir.backbone_elements.group_member_backbone_element import (
-    GroupMemberBackboneElement,
+from spark_auto_mapper_fhir.value_sets.group_type import GroupTypeCodeValues
+from spark_auto_mapper_fhir.value_sets.identifier_type_codes import (
+    IdentifierTypeCodesCode,
 )
-from spark_auto_mapper_fhir.valuesets.group_type import GroupTypeCode
-from spark_auto_mapper_fhir.valuesets.identifier_type import IdentifierTypeCode
 
 from spark_auto_mapper_fhir.complex_types.coding import Coding
 
-from spark_auto_mapper_fhir.complex_types.codeableConcept import CodeableConcept
+from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
 from spark_auto_mapper_fhir.complex_types.identifier import Identifier
 
@@ -37,10 +38,10 @@ def test_auto_mapper_fhir_group_resource(spark_session: SparkSession) -> None:
     source_df: DataFrame = spark_session.table("groups")
 
     df = source_df.select("practitioner_id")
-    df.createOrReplaceTempView("practioners")
+    df.createOrReplaceTempView("view_group")
 
     mapper = AutoMapper(
-        view="practioners", source_view="groups", keys=["practitioner_id"]
+        view="view_group", source_view="groups", keys=["practitioner_id"]
     ).complex(
         Group(
             id_=FhirId(A.column("practitioner_id")),
@@ -53,8 +54,8 @@ def test_auto_mapper_fhir_group_resource(spark_session: SparkSession) -> None:
                             coding=FhirList(
                                 [
                                     Coding(
-                                        system=IdentifierTypeCode.codeset,
-                                        code=IdentifierTypeCode(
+                                        system=IdentifierTypeCodesCode.codeset,
+                                        code=IdentifierTypeCodesCode(
                                             A.text("PractitionerAffiliation")
                                         ),
                                     )
@@ -65,18 +66,19 @@ def test_auto_mapper_fhir_group_resource(spark_session: SparkSession) -> None:
                     )
                 ]
             ),
-            type_=GroupTypeCode.practitioner,
+            type_=GroupTypeCodeValues.Practitioner,
+            actual=True,
             name=A.text("Medstar Affiliated Practitioner"),
             member=FhirList(
                 [
-                    GroupMemberBackboneElement(
+                    GroupMember(
                         entity=Reference(
                             reference=FhirReference(
                                 "Practitioner",
                                 A.column("affiliated_id"),
                             )
                         ),
-                        inactive=False,
+                        # inactive=False,
                     ),
                 ]
             ),
