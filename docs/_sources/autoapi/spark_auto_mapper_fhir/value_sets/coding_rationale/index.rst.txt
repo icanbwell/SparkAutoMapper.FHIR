@@ -1,0 +1,106 @@
+:mod:`spark_auto_mapper_fhir.value_sets.coding_rationale`
+=========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.coding_rationale
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.coding_rationale.CodingRationale
+   spark_auto_mapper_fhir.value_sets.coding_rationale.CodingRationaleValues
+
+
+
+.. class:: CodingRationale(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.CodingRationale
+   From: http://terminology.hl7.org/ValueSet/v3-CodingRationale in v3-codesystems.xml
+        Identifies how to interpret the instance of the code, codeSystem value in a
+   set of translations.  Since HL7 (or a government body) may mandate that codes
+   from certain code systems be sent in conformant messages, other synonyms that
+   are sent in the translation set need to be distinguished among the originally
+   captured source, the HL7 specified code, or some future role.  When this code
+   is NULL, it indicates that the translation is an undefined type.  When valued,
+   this property must contain one of the following values: SRC - Source (or
+   original) code HL7 - HL7 Specified or Mandated SH - both HL7 mandated and the
+   original code (precoordination) There may be additional values added to this
+   value set as we work through the use of codes in messages and determine other
+   Use Cases requiring special interpretation of the translations.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-CodingRationale
+
+      
+
+
+.. class:: CodingRationaleValues
+
+   Description: Originally produced code.
+   From: http://terminology.hl7.org/CodeSystem/v3-CodingRationale in v3-codesystems.xml
+
+   .. attribute:: OriginallyProducedCode
+      
+
+      Originally produced code, required by the specification describing the use of
+      the coded concept.
+      From: http://terminology.hl7.org/CodeSystem/v3-CodingRationale in v3-codesystems.xml
+
+
+   .. attribute:: OriginalAndRequired
+      
+
+      Description: Post-coded from free text source</description>
+      From: http://terminology.hl7.org/CodeSystem/v3-CodingRationale in v3-codesystems.xml
+
+
+   .. attribute:: Post_coded
+      
+
+      Post-coded from free text source, required by the specification describing the
+      use of the coded concept.
+      From: http://terminology.hl7.org/CodeSystem/v3-CodingRationale in v3-codesystems.xml
+
+
+   .. attribute:: Post_codedAndRequired
+      
+
+      Description: Required standard code for HL7.
+      From: http://terminology.hl7.org/CodeSystem/v3-CodingRationale in v3-codesystems.xml
+
+
+   .. attribute:: Required
+      
+
+      HL7 Specified or Mandated
+      From: http://terminology.hl7.org/CodeSystem/v3-CodingRationale in v3-codesystems.xml
+
+
+   .. attribute:: HL7SpecifiedOrMandated
+      
+
+      Both HL7 mandated and the original code (precoordination)
+      From: http://terminology.hl7.org/CodeSystem/v3-CodingRationale in v3-codesystems.xml
+
+
+   .. attribute:: BothHL7MandatedAndTheOriginalCode
+      
+
+      Source (or original) code
+      From: http://terminology.hl7.org/CodeSystem/v3-CodingRationale in v3-codesystems.xml
+
+
+   .. attribute:: Source_orOriginal_Code
+      
+
+      
+
+

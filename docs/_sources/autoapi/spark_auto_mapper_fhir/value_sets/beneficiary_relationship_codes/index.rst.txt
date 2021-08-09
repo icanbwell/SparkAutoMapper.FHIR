@@ -1,0 +1,74 @@
+:mod:`spark_auto_mapper_fhir.value_sets.beneficiary_relationship_codes`
+=======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.beneficiary_relationship_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.beneficiary_relationship_codes.BeneficiaryRelationshipCodesCode
+   spark_auto_mapper_fhir.value_sets.beneficiary_relationship_codes.BeneficiaryRelationshipCodesCodeValues
+
+
+
+.. class:: BeneficiaryRelationshipCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   Beneficiary Relationship Codes
+   From: http://hl7.org/fhir/relationship in valuesets.xml
+       This value set includes the Patient to subscriber relationship codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/relationship
+
+      
+
+
+.. class:: BeneficiaryRelationshipCodesCodeValues
+
+   The patient is the subscriber (policy holder)
+   From: http://hl7.org/fhir/relationship in valuesets.xml
+
+   .. attribute:: Self
+      
+
+      The patient is the spouse or equivalent of the subscriber (policy holder)
+      From: http://hl7.org/fhir/relationship in valuesets.xml
+
+
+   .. attribute:: Spouse
+      
+
+      The patient is the child of the subscriber (policy holder)
+      From: http://hl7.org/fhir/relationship in valuesets.xml
+
+
+   .. attribute:: Child
+      
+
+      The patient is the common law spouse of the subscriber (policy holder)
+      From: http://hl7.org/fhir/relationship in valuesets.xml
+
+
+   .. attribute:: CommonLawSpouse
+      
+
+      The patient has some other relationship, such as parent, to the subscriber
+      (policy holder)
+      From: http://hl7.org/fhir/relationship in valuesets.xml
+
+
+   .. attribute:: Other
+      
+
+      
+
+

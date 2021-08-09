@@ -1,0 +1,81 @@
+:mod:`spark_auto_mapper_fhir.value_sets.definition_use_codes`
+=============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.definition_use_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.definition_use_codes.DefinitionUseCodesCode
+   spark_auto_mapper_fhir.value_sets.definition_use_codes.DefinitionUseCodesCodeValues
+
+
+
+.. class:: DefinitionUseCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   DefinitionUseCodes
+   From: http://terminology.hl7.org/CodeSystem/definition-use in valuesets.xml
+       Structure Definition Use Codes / Keywords
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/definition-use
+
+      
+
+
+.. class:: DefinitionUseCodesCodeValues
+
+   This structure is defined as part of the base FHIR Specification
+   From: http://terminology.hl7.org/CodeSystem/definition-use in valuesets.xml
+
+   .. attribute:: FHIRStructure
+      
+
+      This structure is intended to be treated like a FHIR resource (e.g. on the
+      FHIR API)
+      From: http://terminology.hl7.org/CodeSystem/definition-use in valuesets.xml
+
+
+   .. attribute:: CustomResource
+      
+
+      This structure captures an analysis of a domain
+      From: http://terminology.hl7.org/CodeSystem/definition-use in valuesets.xml
+
+
+   .. attribute:: DomainAnalysisModel
+      
+
+      This structure represents and existing structure (e.g. CDA, HL7 v2)
+      From: http://terminology.hl7.org/CodeSystem/definition-use in valuesets.xml
+
+
+   .. attribute:: WireFormat
+      
+
+      This structure captures an analysis of a domain
+      From: http://terminology.hl7.org/CodeSystem/definition-use in valuesets.xml
+
+
+   .. attribute:: DomainAnalysisModel
+      
+
+      This structure is a template (n.b: 'template' has many meanings)
+      From: http://terminology.hl7.org/CodeSystem/definition-use in valuesets.xml
+
+
+   .. attribute:: Template
+      
+
+      
+
+

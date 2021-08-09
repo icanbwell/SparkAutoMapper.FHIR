@@ -1,0 +1,65 @@
+:mod:`spark_auto_mapper_fhir.value_sets.immunization_recommendation_date_criterion_codes`
+=========================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.immunization_recommendation_date_criterion_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.immunization_recommendation_date_criterion_codes.ImmunizationRecommendationDateCriterionCodesCode
+   spark_auto_mapper_fhir.value_sets.immunization_recommendation_date_criterion_codes.ImmunizationRecommendationDateCriterionCodesCodeValues
+
+
+
+.. class:: ImmunizationRecommendationDateCriterionCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ImmunizationRecommendationDateCriterionCodes
+   From: http://hl7.org/fhir/ValueSet/immunization-recommendation-date-criterion in valuesets.xml
+       The value set to instantiate this attribute should be drawn from a
+   terminologically robust code system that consists of or contains concepts to
+   support the definition of dates relevant to recommendations for future doses
+   of vaccines. This value set is provided as a suggestive example.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://loinc.org
+
+      
+
+
+.. class:: ImmunizationRecommendationDateCriterionCodesCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/immunization-recommendation-date-criterion in valuesets.xml
+
+   .. attribute:: _30981_5
+      
+
+      From: http://hl7.org/fhir/ValueSet/immunization-recommendation-date-criterion in valuesets.xml
+
+
+   .. attribute:: _30980_7
+      
+
+      From: http://hl7.org/fhir/ValueSet/immunization-recommendation-date-criterion in valuesets.xml
+
+
+   .. attribute:: _59777_3
+      
+
+      From: http://hl7.org/fhir/ValueSet/immunization-recommendation-date-criterion in valuesets.xml
+
+
+   .. attribute:: _59778_1
+      
+
+      
+
+

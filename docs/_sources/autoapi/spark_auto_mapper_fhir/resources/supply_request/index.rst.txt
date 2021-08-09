@@ -1,0 +1,33 @@
+:mod:`spark_auto_mapper_fhir.resources.supply_request`
+======================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.supply_request
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.supply_request.SupplyRequest
+
+
+
+.. class:: SupplyRequest(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.identifier.Identifier]] = None, status: Optional[spark_auto_mapper_fhir.value_sets.supply_request_status.SupplyRequestStatusCode] = None, category: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.supply_type.SupplyTypeCode]] = None, priority: Optional[spark_auto_mapper_fhir.value_sets.request_priority.RequestPriorityCode] = None, itemCodeableConcept: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.snomedct_supply_item.SNOMEDCTSupplyItemCode]] = None, itemReference: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.medication.Medication, spark_auto_mapper_fhir.resources.substance.Substance, spark_auto_mapper_fhir.resources.device.Device)]]] = None, quantity: spark_auto_mapper_fhir.complex_types.quantity.Quantity, parameter: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.supply_request_parameter.SupplyRequestParameter]] = None, occurrenceDateTime: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, occurrencePeriod: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, occurrenceTiming: Optional[spark_auto_mapper_fhir.backbone_elements.timing.Timing] = None, authoredOn: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, requester: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole, spark_auto_mapper_fhir.resources.organization.Organization, spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.related_person.RelatedPerson, spark_auto_mapper_fhir.resources.device.Device)]]] = None, supplier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.organization.Organization, spark_auto_mapper_fhir.resources.healthcare_service.HealthcareService)]]]] = None, reasonCode: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.supply_request_reason.SupplyRequestReasonCode]]] = None, reasonReference: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.condition.Condition, spark_auto_mapper_fhir.resources.observation.Observation, spark_auto_mapper_fhir.resources.diagnostic_report.DiagnosticReport, spark_auto_mapper_fhir.resources.document_reference.DocumentReference)]]]] = None, deliverFrom: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.organization.Organization, spark_auto_mapper_fhir.resources.location.Location)]]] = None, deliverTo: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.organization.Organization, spark_auto_mapper_fhir.resources.location.Location, spark_auto_mapper_fhir.resources.patient.Patient)]]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   SupplyRequest
+   supplyrequest.xsd
+       A record of a request for a medication, substance or device used in the
+   healthcare setting.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

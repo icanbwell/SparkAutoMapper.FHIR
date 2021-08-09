@@ -1,0 +1,61 @@
+:mod:`spark_auto_mapper_fhir.value_sets.reason_medication_given_codes`
+======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.reason_medication_given_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.reason_medication_given_codes.ReasonMedicationGivenCodesCode
+   spark_auto_mapper_fhir.value_sets.reason_medication_given_codes.ReasonMedicationGivenCodesCodeValues
+
+
+
+.. class:: ReasonMedicationGivenCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ReasonMedicationGivenCodes
+   From: http://terminology.hl7.org/CodeSystem/reason-medication-given in valuesets.xml
+       This value set is provided as an example. The value set to instantiate this
+   attribute should be drawn from a robust terminology code system that consists
+   of or contains concepts to support the medication process.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/reason-medication-given
+
+      
+
+
+.. class:: ReasonMedicationGivenCodesCodeValues
+
+   No reason known.
+   From: http://terminology.hl7.org/CodeSystem/reason-medication-given in valuesets.xml
+
+   .. attribute:: None_
+      
+
+      The administration was following an ordered protocol.
+      From: http://terminology.hl7.org/CodeSystem/reason-medication-given in valuesets.xml
+
+
+   .. attribute:: GivenAsOrdered
+      
+
+      The administration was needed to treat an emergency.
+      From: http://terminology.hl7.org/CodeSystem/reason-medication-given in valuesets.xml
+
+
+   .. attribute:: Emergency
+      
+
+      
+
+

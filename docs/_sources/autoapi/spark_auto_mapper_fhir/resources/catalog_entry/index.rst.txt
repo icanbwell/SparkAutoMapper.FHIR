@@ -1,0 +1,32 @@
+:mod:`spark_auto_mapper_fhir.resources.catalog_entry`
+=====================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.catalog_entry
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.catalog_entry.CatalogEntry
+
+
+
+.. class:: CatalogEntry(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.identifier.Identifier]] = None, type_: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, orderable: spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean, referencedItem: spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.medication.Medication, spark_auto_mapper_fhir.resources.device.Device, spark_auto_mapper_fhir.resources.organization.Organization, spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole, spark_auto_mapper_fhir.resources.healthcare_service.HealthcareService, spark_auto_mapper_fhir.resources.activity_definition.ActivityDefinition, spark_auto_mapper_fhir.resources.plan_definition.PlanDefinition, spark_auto_mapper_fhir.resources.specimen_definition.SpecimenDefinition, spark_auto_mapper_fhir.resources.observation_definition.ObservationDefinition, spark_auto_mapper_fhir.resources.binary.Binary)]], additionalIdentifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.identifier.Identifier]] = None, classification: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]]] = None, status: Optional[spark_auto_mapper_fhir.value_sets.publication_status.PublicationStatusCode] = None, validityPeriod: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, validTo: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, lastUpdated: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, additionalCharacteristic: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]]] = None, additionalClassification: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]]] = None, relatedEntry: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.catalog_entry_related_entry.CatalogEntryRelatedEntry]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   CatalogEntry
+   catalogentry.xsd
+       Catalog entries are wrappers that contextualize items included in a catalog.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

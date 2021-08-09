@@ -1,0 +1,52 @@
+:mod:`spark_auto_mapper_fhir.value_sets.biologically_derived_product_status`
+============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.biologically_derived_product_status
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.biologically_derived_product_status.BiologicallyDerivedProductStatusCode
+   spark_auto_mapper_fhir.value_sets.biologically_derived_product_status.BiologicallyDerivedProductStatusCodeValues
+
+
+
+.. class:: BiologicallyDerivedProductStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   BiologicallyDerivedProductStatus
+   From: http://hl7.org/fhir/product-status in valuesets.xml
+       Biologically Derived Product Status.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/product-status
+
+      
+
+
+.. class:: BiologicallyDerivedProductStatusCodeValues
+
+   Product is currently available for use.
+   From: http://hl7.org/fhir/product-status in valuesets.xml
+
+   .. attribute:: Available
+      
+
+      Product is not currently available for use.
+      From: http://hl7.org/fhir/product-status in valuesets.xml
+
+
+   .. attribute:: Unavailable
+      
+
+      
+
+

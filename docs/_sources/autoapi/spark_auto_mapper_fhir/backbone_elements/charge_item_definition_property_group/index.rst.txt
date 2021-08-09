@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.charge_item_definition_property_group`
+=====================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.charge_item_definition_property_group
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.charge_item_definition_property_group.ChargeItemDefinitionPropertyGroup
+
+
+
+.. class:: ChargeItemDefinitionPropertyGroup(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, applicability: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.charge_item_definition_applicability.ChargeItemDefinitionApplicability]] = None, priceComponent: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.charge_item_definition_price_component.ChargeItemDefinitionPriceComponent]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   ChargeItemDefinition.PropertyGroup
+   The ChargeItemDefinition resource provides the properties that apply to the (billing) codes necessary to calculate costs and prices. The properties may differ largely depending on type and realm, therefore this resource gives only a rough structure and requires profiling for each type of billing code system.
+
+

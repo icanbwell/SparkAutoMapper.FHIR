@@ -1,0 +1,28 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.element_definition_slicing`
+==========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.element_definition_slicing
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.element_definition_slicing.ElementDefinitionSlicing
+
+
+
+.. class:: ElementDefinitionSlicing(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, discriminator: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.element_definition_discriminator.ElementDefinitionDiscriminator]] = None, description: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, ordered: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, rules: spark_auto_mapper_fhir.value_sets.slicing_rules.SlicingRulesCode)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   ElementDefinition.Slicing
+   Captures constraints on each element within the resource, profile, or extension.
+   If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
+
+

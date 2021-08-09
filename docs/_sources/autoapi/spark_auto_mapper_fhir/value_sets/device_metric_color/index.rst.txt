@@ -1,0 +1,94 @@
+:mod:`spark_auto_mapper_fhir.value_sets.device_metric_color`
+============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.device_metric_color
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.device_metric_color.DeviceMetricColorCode
+   spark_auto_mapper_fhir.value_sets.device_metric_color.DeviceMetricColorCodeValues
+
+
+
+.. class:: DeviceMetricColorCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   DeviceMetricColor
+   From: http://hl7.org/fhir/metric-color in valuesets.xml
+       Describes the typical color of representation.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/metric-color
+
+      
+
+
+.. class:: DeviceMetricColorCodeValues
+
+   Color for representation - black.
+   From: http://hl7.org/fhir/metric-color in valuesets.xml
+
+   .. attribute:: ColorBlack
+      
+
+      Color for representation - red.
+      From: http://hl7.org/fhir/metric-color in valuesets.xml
+
+
+   .. attribute:: ColorRed
+      
+
+      Color for representation - green.
+      From: http://hl7.org/fhir/metric-color in valuesets.xml
+
+
+   .. attribute:: ColorGreen
+      
+
+      Color for representation - yellow.
+      From: http://hl7.org/fhir/metric-color in valuesets.xml
+
+
+   .. attribute:: ColorYellow
+      
+
+      Color for representation - blue.
+      From: http://hl7.org/fhir/metric-color in valuesets.xml
+
+
+   .. attribute:: ColorBlue
+      
+
+      Color for representation - magenta.
+      From: http://hl7.org/fhir/metric-color in valuesets.xml
+
+
+   .. attribute:: ColorMagenta
+      
+
+      Color for representation - cyan.
+      From: http://hl7.org/fhir/metric-color in valuesets.xml
+
+
+   .. attribute:: ColorCyan
+      
+
+      Color for representation - white.
+      From: http://hl7.org/fhir/metric-color in valuesets.xml
+
+
+   .. attribute:: ColorWhite
+      
+
+      
+
+

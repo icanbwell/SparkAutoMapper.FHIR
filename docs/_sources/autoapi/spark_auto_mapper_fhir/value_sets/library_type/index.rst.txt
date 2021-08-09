@@ -1,0 +1,67 @@
+:mod:`spark_auto_mapper_fhir.value_sets.library_type`
+=====================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.library_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.library_type.LibraryTypeCode
+   spark_auto_mapper_fhir.value_sets.library_type.LibraryTypeCodeValues
+
+
+
+.. class:: LibraryTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   LibraryType
+   From: http://terminology.hl7.org/CodeSystem/library-type in valuesets.xml
+       The type of knowledge asset this library contains.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/library-type
+
+      
+
+
+.. class:: LibraryTypeCodeValues
+
+   The resource is a shareable library of formalized knowledge.
+   From: http://terminology.hl7.org/CodeSystem/library-type in valuesets.xml
+
+   .. attribute:: LogicLibrary
+      
+
+      The resource is a definition of an information model.
+      From: http://terminology.hl7.org/CodeSystem/library-type in valuesets.xml
+
+
+   .. attribute:: ModelDefinition
+      
+
+      The resource is a collection of knowledge assets.
+      From: http://terminology.hl7.org/CodeSystem/library-type in valuesets.xml
+
+
+   .. attribute:: AssetCollection
+      
+
+      The resource defines the dependencies, parameters, and data requirements for a
+      particular module or evaluation context.
+      From: http://terminology.hl7.org/CodeSystem/library-type in valuesets.xml
+
+
+   .. attribute:: ModuleDefinition
+      
+
+      
+
+

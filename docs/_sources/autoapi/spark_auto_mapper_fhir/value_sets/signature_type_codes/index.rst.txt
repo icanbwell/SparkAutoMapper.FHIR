@@ -1,0 +1,218 @@
+:mod:`spark_auto_mapper_fhir.value_sets.signature_type_codes`
+=============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.signature_type_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.signature_type_codes.SignatureTypeCodesCode
+   spark_auto_mapper_fhir.value_sets.signature_type_codes.SignatureTypeCodesCodeValues
+
+
+
+.. class:: SignatureTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   SignatureTypeCodes
+   From: urn:iso-astm:E1762-95:2013 in valuesets.xml
+       The Digital Signature Purposes, an indication of the reason an entity signs a
+   document. This is included in the signed information and can be used when
+   determining accountability for various actions concerning the document.
+   Examples include: author, transcriptionist/recorder, and witness.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = urn:iso-astm:E1762-95:2013
+
+      
+
+
+.. class:: SignatureTypeCodesCodeValues
+
+   the signature of the primary or sole author of a health information document.
+   There can be only one primary author of a health information document.
+   From: urn:iso-astm:E1762-95:2013 in valuesets.xml
+
+   .. attribute:: Author_sSignature
+      
+
+      the signature of a health information document coauthor. There can be multiple
+      coauthors of a health information document.
+      From: urn:iso-astm:E1762-95:2013 in valuesets.xml
+
+
+   .. attribute:: Coauthor_sSignature
+      
+
+      the signature of an individual who is a participant in the health information
+      document but is not an author or coauthor. (Example a surgeon who is required
+      by institutional, regulatory, or legal rules to sign an operative report, but
+      who was not involved in the authorship of that report.)
+      From: urn:iso-astm:E1762-95:2013 in valuesets.xml
+
+
+   .. attribute:: Co_participant_sSignature
+      
+
+      the signature of an individual who has transcribed a dictated document or
+      recorded written text into a digital machine readable format.
+      From: urn:iso-astm:E1762-95:2013 in valuesets.xml
+
+
+   .. attribute:: Transcriptionist_RecorderSignature
+      
+
+      a signature verifying the information contained in a document. (Example a
+      physician is required to countersign a verbal order that has previously been
+      recorded in the medical record by a registered nurse who has carried out the
+      verbal order.)
+      From: urn:iso-astm:E1762-95:2013 in valuesets.xml
+
+
+   .. attribute:: VerificationSignature
+      
+
+      a signature validating a health information document for inclusion in the
+      patient record. (Example a medical student or resident is credentialed to
+      perform history or physical examinations and to write progress notes. The
+      attending physician signs the history and physical examination to validate the
+      entry for inclusion in the patient's medical record.)
+      From: urn:iso-astm:E1762-95:2013 in valuesets.xml
+
+
+   .. attribute:: ValidationSignature
+      
+
+      the signature of an individual consenting to what is described in a health
+      information document.
+      From: urn:iso-astm:E1762-95:2013 in valuesets.xml
+
+
+   .. attribute:: ConsentSignature
+      
+
+      the signature of a witness to any other signature.
+      From: urn:iso-astm:E1762-95:2013 in valuesets.xml
+
+
+   .. attribute:: SignatureWitnessSignature
+      
+
+      the signature of a witness to an event. (Example the witness has observed a
+      procedure and is attesting to this fact.)
+      From: urn:iso-astm:E1762-95:2013 in valuesets.xml
+
+
+   .. attribute:: EventWitnessSignature
+      
+
+      the signature of an individual who has witnessed another individual who is
+      known to them signing a document. (Example the identity witness is a notary
+      public.)
+      From: urn:iso-astm:E1762-95:2013 in valuesets.xml
+
+
+   .. attribute:: IdentityWitnessSignature
+      
+
+      the signature of an individual who has witnessed the health care provider
+      counselling a patient.
+      From: urn:iso-astm:E1762-95:2013 in valuesets.xml
+
+
+   .. attribute:: ConsentWitnessSignature
+      
+
+      the signature of an individual who has translated health care information
+      during an event or the obtaining of consent to a treatment.
+      From: urn:iso-astm:E1762-95:2013 in valuesets.xml
+
+
+   .. attribute:: InterpreterSignature
+      
+
+      the signature of a person, device, or algorithm that has reviewed or filtered
+      data for inclusion into the patient record. ( Examples: (1) a medical records
+      clerk who scans a document for inclusion in the medical record, enters header
+      information, or catalogues and classifies the data, or a combination thereof;
+      (2) a gateway that receives data from another computer system and interprets
+      that data or changes its format, or both, before entering it into the patient
+      record.)
+      From: urn:iso-astm:E1762-95:2013 in valuesets.xml
+
+
+   .. attribute:: ReviewSignature
+      
+
+      the signature of an automated data source. (Examples: (1) the signature for an
+      image that is generated by a device for inclusion in the patient record; (2)
+      the signature for an ECG derived by an ECG system for inclusion in the patient
+      record; (3) the data from a biomedical monitoring device or system that is for
+      inclusion in the patient record.)
+      From: urn:iso-astm:E1762-95:2013 in valuesets.xml
+
+
+   .. attribute:: SourceSignature
+      
+
+      the signature on a new amended document of an individual who has corrected,
+      edited, or amended an original health information document. An addendum
+      signature can either be a signature type or a signature sub-type (see 8.1).
+      Any document with an addendum signature shall have a companion document that
+      is the original document with its original, unaltered content, and original
+      signatures. The original document shall be referenced via an attribute in the
+      new document, which contains, for example, the digest of the old document.
+      Whether the original, unaltered, document is always displayed with the
+      addended document is a local matter, but the original, unaltered, document
+      must remain as part of the patient record and be retrievable on demand.
+      From: urn:iso-astm:E1762-95:2013 in valuesets.xml
+
+
+   .. attribute:: AddendumSignature
+      
+
+      the signature on an original document of an individual who has generated a new
+      amended document. This (original) document shall reference the new document
+      via an additional signature purpose. This is the inverse of an addendum
+      signature and provides a pointer from the original to the amended document.
+      From: urn:iso-astm:E1762-95:2013 in valuesets.xml
+
+
+   .. attribute:: ModificationSignature
+      
+
+      the signature of an individual who is certifying that the document is
+      invalidated by an error(s), or is placed in the wrong chart. An administrative
+      (error/edit) signature must include an addendum to the document and therefore
+      shall have an addendum signature sub-type (see 8.1). This signature is
+      reserved for the highest health information system administrative
+      classification, since it is a statement that the entire document is
+      invalidated by the error and that the document should no longer be used for
+      patient care, although for legal reasons the document must remain part of the
+      permanent patient record.
+      From: urn:iso-astm:E1762-95:2013 in valuesets.xml
+
+
+   .. attribute:: Administrative_Error_Edit_Signature
+      
+
+      the signature by an entity or device trusted to provide accurate timestamps.
+      This timestamp might be provided, for example, in the signature time
+      attribute.
+      From: urn:iso-astm:E1762-95:2013 in valuesets.xml
+
+
+   .. attribute:: TimestampSignature
+      
+
+      
+
+

@@ -1,0 +1,59 @@
+:mod:`spark_auto_mapper_fhir.value_sets.expression_language`
+============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.expression_language
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.expression_language.ExpressionLanguageCode
+   spark_auto_mapper_fhir.value_sets.expression_language.ExpressionLanguageCodeValues
+
+
+
+.. class:: ExpressionLanguageCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ExpressionLanguage
+   From: http://hl7.org/fhir/expression-language in valuesets.xml
+       The media type of the expression language.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/expression-language
+
+      
+
+
+.. class:: ExpressionLanguageCodeValues
+
+   Clinical Quality Language.
+   From: http://hl7.org/fhir/expression-language in valuesets.xml
+
+   .. attribute:: CQL
+      
+
+      FHIRPath.
+      From: http://hl7.org/fhir/expression-language in valuesets.xml
+
+
+   .. attribute:: FHIRPath
+      
+
+      FHIR's RESTful query syntax - typically independent of base URL.
+      From: http://hl7.org/fhir/expression-language in valuesets.xml
+
+
+   .. attribute:: FHIRQuery
+      
+
+      
+
+

@@ -1,0 +1,75 @@
+:mod:`spark_auto_mapper_fhir.value_sets.consent_action_codes`
+=============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.consent_action_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.consent_action_codes.ConsentActionCodesCode
+   spark_auto_mapper_fhir.value_sets.consent_action_codes.ConsentActionCodesCodeValues
+
+
+
+.. class:: ConsentActionCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ConsentActionCodes
+   From: http://terminology.hl7.org/CodeSystem/consentaction in valuesets.xml
+       This value set includes sample Consent Action codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/consentaction
+
+      
+
+
+.. class:: ConsentActionCodesCodeValues
+
+   Gather retrieved information for storage
+   From: http://terminology.hl7.org/CodeSystem/consentaction in valuesets.xml
+
+   .. attribute:: Collect
+      
+
+      Retrieval without permitting collection, use or disclosure. e.g., no screen-
+      scraping for collection, use or disclosure (view-only access)
+      From: http://terminology.hl7.org/CodeSystem/consentaction in valuesets.xml
+
+
+   .. attribute:: Access
+      
+
+      Utilize the retrieved information
+      From: http://terminology.hl7.org/CodeSystem/consentaction in valuesets.xml
+
+
+   .. attribute:: Use
+      
+
+      Transfer retrieved information
+      From: http://terminology.hl7.org/CodeSystem/consentaction in valuesets.xml
+
+
+   .. attribute:: Disclose
+      
+
+      Allow retrieval of a patient's information for the purpose of update or
+      rectify
+      From: http://terminology.hl7.org/CodeSystem/consentaction in valuesets.xml
+
+
+   .. attribute:: AccessAndCorrect
+      
+
+      
+
+

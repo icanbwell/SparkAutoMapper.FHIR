@@ -1,0 +1,97 @@
+:mod:`spark_auto_mapper_fhir.value_sets.immunization_route_codes`
+=================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.immunization_route_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.immunization_route_codes.ImmunizationRouteCodesCode
+   spark_auto_mapper_fhir.value_sets.immunization_route_codes.ImmunizationRouteCodesCodeValues
+
+
+
+.. class:: ImmunizationRouteCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ImmunizationRouteCodes
+   From: http://hl7.org/fhir/ValueSet/immunization-route in valuesets.xml
+       The value set to instantiate this attribute should be drawn from a
+   terminologically robust code system that consists of or contains concepts to
+   support describing the administrative routes used during vaccination. This
+   value set is provided as a suggestive example.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration
+
+      
+
+
+.. class:: ImmunizationRouteCodesCodeValues
+
+   Route of substance administration classified by administration method.
+   From: http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration in v3-codesystems.xml
+
+   .. attribute:: RouteByMethod
+      
+
+      Route of substance administration classified by site.
+      From: http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration in v3-codesystems.xml
+
+
+   .. attribute:: RouteBySite
+      
+
+      From: http://hl7.org/fhir/ValueSet/immunization-route in valuesets.xml
+
+
+   .. attribute:: Injection_Intradermal
+      
+
+      From: http://hl7.org/fhir/ValueSet/immunization-route in valuesets.xml
+
+
+   .. attribute:: Injection_Intramuscular
+      
+
+      From: http://hl7.org/fhir/ValueSet/immunization-route in valuesets.xml
+
+
+   .. attribute:: Inhalation_Nasal
+      
+
+      From: http://hl7.org/fhir/ValueSet/immunization-route in valuesets.xml
+
+
+   .. attribute:: Injection_Intravenous
+      
+
+      From: http://hl7.org/fhir/ValueSet/immunization-route in valuesets.xml
+
+
+   .. attribute:: Swallow_Oral
+      
+
+      From: http://hl7.org/fhir/ValueSet/immunization-route in valuesets.xml
+
+
+   .. attribute:: Injection_Subcutaneous
+      
+
+      From: http://hl7.org/fhir/ValueSet/immunization-route in valuesets.xml
+
+
+   .. attribute:: Transdermal
+      
+
+      
+
+

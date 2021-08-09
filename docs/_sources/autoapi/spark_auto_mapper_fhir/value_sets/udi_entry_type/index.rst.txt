@@ -1,0 +1,82 @@
+:mod:`spark_auto_mapper_fhir.value_sets.udi_entry_type`
+=======================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.udi_entry_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.udi_entry_type.UDIEntryTypeCode
+   spark_auto_mapper_fhir.value_sets.udi_entry_type.UDIEntryTypeCodeValues
+
+
+
+.. class:: UDIEntryTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   UDIEntryType
+   From: http://hl7.org/fhir/udi-entry-type in valuesets.xml
+       Codes to identify how UDI data was entered.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/udi-entry-type
+
+      
+
+
+.. class:: UDIEntryTypeCodeValues
+
+   a barcodescanner captured the data from the device label.
+   From: http://hl7.org/fhir/udi-entry-type in valuesets.xml
+
+   .. attribute:: Barcode
+      
+
+      An RFID chip reader captured the data from the device label.
+      From: http://hl7.org/fhir/udi-entry-type in valuesets.xml
+
+
+   .. attribute:: RFID
+      
+
+      The data was read from the label by a person and manually entered. (e.g.  via
+      a keyboard).
+      From: http://hl7.org/fhir/udi-entry-type in valuesets.xml
+
+
+   .. attribute:: Manual
+      
+
+      The data originated from a patient's implant card and was read by an operator.
+      From: http://hl7.org/fhir/udi-entry-type in valuesets.xml
+
+
+   .. attribute:: Card
+      
+
+      The data originated from a patient source and was not directly scanned or read
+      from a label or card.
+      From: http://hl7.org/fhir/udi-entry-type in valuesets.xml
+
+
+   .. attribute:: SelfReported
+      
+
+      The method of data capture has not been determined.
+      From: http://hl7.org/fhir/udi-entry-type in valuesets.xml
+
+
+   .. attribute:: Unknown
+      
+
+      
+
+

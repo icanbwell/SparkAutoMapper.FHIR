@@ -1,0 +1,744 @@
+:mod:`spark_auto_mapper_fhir.value_sets.practice_setting_code_value_set`
+========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.practice_setting_code_value_set
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.practice_setting_code_value_set.PracticeSettingCodeValueSetCode
+   spark_auto_mapper_fhir.value_sets.practice_setting_code_value_set.PracticeSettingCodeValueSetCodeValues
+
+
+
+.. class:: PracticeSettingCodeValueSetCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   PracticeSettingCodeValueSet
+   From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+       This is the code representing the clinical specialty of the clinician or
+   provider who interacted with, treated, or provided a service to/for the
+   patient. The value set used for clinical specialty has been limited by HITSP
+   to the value set reproduced from HITSP C80 Table 2-149 Clinical Specialty
+   Value Set Definition.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+
+.. class:: PracticeSettingCodeValueSetCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+   .. attribute:: AdultMentalIllness
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Anesthetics
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: AudiologicalMedicine
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: BloodBankingAndTransfusionMedicine
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: BurnsCare
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Cardiology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: ClinicalCytogeneticsAndMolecularGenetics
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: ClinicalGenetics
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: ClinicalHematology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: ClinicalImmunology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: ClinicalMicrobiology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: ClinicalNeuro_physiology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: ClinicalOncology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: ClinicalPharmacology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: ClinicalPhysiology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: CommunityMedicine
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: CriticalCareMedicine
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: DentalMedicineSpecialties
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Dental_GeneralDentalPractice
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Dermatology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: DiabeticMedicine
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: DiveMedicine
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Endocrinology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: FamilyPractice
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Gastroenterology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: GeneralMedicalPractice
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: GeneralMedicine
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: GeneralPathology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: GeneralPractice
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Genito_urinaryMedicine
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: GeriatricMedicine
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: GynecologicalOncology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Gynecology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Hematopathology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Hepatology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Histopathology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Immunopathology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: InfectiousDiseases
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: InternalMedicine
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: LearningDisability
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: MedicalOncology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: MedicalOphthalmology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: MilitaryMedicine
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Nephrology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Neurology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Neuropathology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: NuclearMedicine
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Obstetrics
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: ObstetricsAndGynecology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: OccupationalMedicine
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: OphthalmicSurgery
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Ophthalmology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: OsteopathicManipulativeMedicine
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Otolaryngology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: PainManagement
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: PalliativeMedicine
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Pediatric_ChildAndAdolescent_Psychiatry
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: PediatricCardiology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: PediatricDentistry
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: PediatricEndocrinology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: PediatricGastroenterology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: PediatricGenetics
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: PediatricHematology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: PediatricImmunology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: PediatricInfectiousDiseases
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: PediatricNephrology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: PediatricOncology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: PediatricOphthalmology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: PediatricPulmonology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: PediatricRheumatology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: PediatricSurgery
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: PediatricSurgery_boneMarrowTransplantation
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: PreventiveMedicine
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Psychiatry
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Psychotherapy
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: PublicHealthMedicine
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: PulmonaryMedicine
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: RadiationOncology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Radiology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Radiology_InterventionalRadiology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Rehabilitation
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: RespiteCare
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Rheumatology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: SleepStudies
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Surgery_BoneAndMarrowTransplantation
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Surgery_BreastSurgery
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Surgery_CardiacSurgery
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Surgery_CardiothoracicTransplantation
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Surgery_ColorectalSurgery
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Surgery_Dental_Endodontics
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Surgery_Dental_OralAndMaxillofacialSurgery
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Surgery_Dental_OralSurgery
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Surgery_Dental_Orthodontics
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Surgery_Dental_PeriodontalSurgery
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Surgery_Dental_ProstheticDentistry_Prosthodontics_
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Surgery_Dental_surgical_Prosthodontics
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Surgery_Dentistry_RestorativeDentistry
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Surgery_Dentistry_surgical
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Surgery_Dentistry_surgical_Orthodontics
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Surgery_DermatologicSurgery
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Surgery_Ear_NoseAndThroatSurgery
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Surgery_general
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Surgery_HepatobiliaryAndPancreaticSurgery
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Surgery_Neurosurgery
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Surgery_PlasticSurgery
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Surgery_TransplantationSurgery
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Surgery_TraumaAndOrthopedics
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Surgery_Vascular
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: SurgicalOncology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Surgical_Accident_Emergency
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: ThoracicMedicine
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Toxicology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: TropicalMedicine
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: UrologicalOncology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: Urology
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: MedicalSpecialty_OTHER_NOTLISTED
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
+
+
+   .. attribute:: SurgicalSpecialty_OTHER_NOTLISTED
+      
+
+      
+
+

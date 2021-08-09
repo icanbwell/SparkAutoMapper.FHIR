@@ -1,0 +1,909 @@
+:mod:`spark_auto_mapper_fhir.value_sets.identifier_type_codes`
+==============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.identifier_type_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.identifier_type_codes.IdentifierTypeCodesCode
+   spark_auto_mapper_fhir.value_sets.identifier_type_codes.IdentifierTypeCodesCodeValues
+
+
+
+.. class:: IdentifierTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   Identifier Type Codes
+   From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
+       A coded type for an identifier that can be used to determine which identifier
+   to use for a specific purpose.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v2-0203
+
+      
+
+
+.. class:: IdentifierTypeCodesCodeValues
+
+   From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+   .. attribute:: Accreditation_CertificationIdentifier
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: AccessionID
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: AmericanExpress
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: AmericanMedicalAssociationNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: AccountNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: AccountNumberCreditor
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: AccountNumberDebitor
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: AnonymousIdentifier
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: TemporaryAccountNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: AdvancedPracticeRegisteredNurseNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: AncestorSpecimenID
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: BankAccountNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: BankCardNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: BirthCertificateFileNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: BirthCertificate
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: BirthRegistryNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: BreedRegistryNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: PrimaryPhysicianOfficeNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: CostCenterNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: ChangeOfNameDocument
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: CountyNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: CitizenshipCard
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: DeathCertificateID
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: DeathCertificateFileNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: DentistLicenseNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: DrugEnforcementAdministrationRegistrationNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: DrugFurnishingOrPrescriptiveAuthorityNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: Diner_sClubCard
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: Driver_sLicenseNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: DoctorNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: OsteopathicLicenseNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: DiplomaticPassport
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: PodiatristLicenseNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: DonorRegistrationNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: DiscoverCard
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: EmployeeNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: EmployerNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: StaffEnterpriseNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: FetalDeathReportID
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: FetalDeathReportFileNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: FacilityID
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: FillerIdentifier
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: GuarantorInternalIdentifier
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: GeneralLedgerNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: GuarantorExternalIdentifier
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: HealthCardNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: Indigenous_Aboriginal
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: JurisdictionalHealthNumber_Canada_
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: LaboratoryAccessionID
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: LifelongPhysicianNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: LaborAndIndustriesNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: LicenseNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: LocalRegistryID
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: PatientMedicaidNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: MemberNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: Patient_sMedicareNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: PractitionerMedicaidNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: MicrochipNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: PractitionerMedicareNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: MarriageCertificate
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: MedicalLicenseNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: MilitaryIDNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: MedicalRecordNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: TemporaryMedicalRecordNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: MasterCard
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: SecondaryPhysicianOfficeNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: NaturalizationCertificate
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: NationalEmployerIdentifier
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: NationalHealthPlanIdentifier
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: NationalUniqueIndividualIdentifier
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: NationalInsuranceOrganizationIdentifier
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: NationalInsurancePayorIdentifier_Payor_
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: NationalPersonIdentifierWhereTheXxxIsTheISOTable31663_character_alphabetic_CountryCode
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: NursePractitionerNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: NationalProviderIdentifier
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: ObservationInstanceIdentifier
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: OptometristLicenseNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: PhysicianAssistantNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: ParoleCard
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: Penitentiary_correctionalInstitutionNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: LivingSubjectEnterpriseNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: PensionNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: PublicHealthCaseIdentifier
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: PublicHealthEventIdentifier
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: PublicHealthOfficialID
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: PatientInternalIdentifier
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: PlacerIdentifier
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: PersonNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: TemporaryLivingSubjectNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: Medicare_CMSPerformingProviderIdentificationNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: PassportNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: PermanentResidentCardNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: ProviderNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: PatientExternalIdentifier
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: QANumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: ResourceIdentifier
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: RegisteredNurseNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: PharmacistLicenseNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: RailroadRetirementNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: RegionalRegistryID
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: RailroadRetirementProvider
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: SocialBeneficiaryIdentifier
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: SpecimenID
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: StateLicense
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: SubscriberNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: StateAssignedNDBSCardIdentifier
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: SerialNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: StudyPermit
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: StateRegistryID
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: SocialSecurityNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: ShipmentTrackingNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: TaxIDNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: TreatyNumber_Canada_
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: TemporaryPermanentResident_Canada_
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: TrainingLicenseNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: UnspecifiedIdentifier
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: UniversalDeviceIdentifier
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: Medicare_CMS_formerlyHCFA_sUniversalPhysicianIdentificationNumbers
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: UniqueSpecimenID
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: VisitNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: VisitorPermit
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: VISA
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: WICIdentifier
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: Workers_CompNumber
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: WorkPermit
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: HealthPlanIdentifier
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
+
+
+   .. attribute:: OrganizationIdentifier
+      
+
+      From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
+
+
+   .. attribute:: DL
+      
+
+      From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
+
+
+   .. attribute:: PPN
+      
+
+      From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
+
+
+   .. attribute:: BRN
+      
+
+      From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
+
+
+   .. attribute:: MR
+      
+
+      From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
+
+
+   .. attribute:: MCN
+      
+
+      From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
+
+
+   .. attribute:: EN
+      
+
+      From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
+
+
+   .. attribute:: TAX
+      
+
+      From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
+
+
+   .. attribute:: NIIP
+      
+
+      From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
+
+
+   .. attribute:: PRN
+      
+
+      From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
+
+
+   .. attribute:: MD
+      
+
+      From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
+
+
+   .. attribute:: DR
+      
+
+      From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
+
+
+   .. attribute:: ACSN
+      
+
+      From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
+
+
+   .. attribute:: UDI
+      
+
+      From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
+
+
+   .. attribute:: SNO
+      
+
+      From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
+
+
+   .. attribute:: SB
+      
+
+      From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
+
+
+   .. attribute:: PLAC
+      
+
+      From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
+
+
+   .. attribute:: FILL
+      
+
+      From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
+
+
+   .. attribute:: JHN
+      
+
+      
+
+

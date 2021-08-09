@@ -1,0 +1,34 @@
+:mod:`spark_auto_mapper_fhir.value_sets.v2_0366`
+================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.v2_0366
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.v2_0366.V2_0366
+
+
+
+.. class:: V2_0366(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v2.0366
+   From: http://terminology.hl7.org/ValueSet/v2-0366 in v2-tables.xml
+       FHIR Value set/code system definition for HL7 v2 table 0366 ( Local/remote
+   control state)
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/ValueSet/v2-0366
+
+      
+
+

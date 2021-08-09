@@ -1,0 +1,32 @@
+:mod:`spark_auto_mapper_fhir.complex_types.human_name`
+======================================================
+
+.. py:module:: spark_auto_mapper_fhir.complex_types.human_name
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.complex_types.human_name.HumanName
+
+
+
+.. class:: HumanName(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, use: Optional[spark_auto_mapper_fhir.value_sets.name_use.NameUseCode] = None, text: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, family: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, given: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.string.FhirString]] = None, prefix: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.string.FhirString]] = None, suffix: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.string.FhirString]] = None, period: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
+
+   HumanName
+   fhir-base.xsd
+       A human's name with the ability to identify parts and usage.
+       If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

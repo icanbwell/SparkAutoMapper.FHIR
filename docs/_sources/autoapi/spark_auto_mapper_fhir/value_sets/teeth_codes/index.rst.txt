@@ -1,0 +1,262 @@
+:mod:`spark_auto_mapper_fhir.value_sets.teeth_codes`
+====================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.teeth_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.teeth_codes.TeethCodesCode
+   spark_auto_mapper_fhir.value_sets.teeth_codes.TeethCodesCodeValues
+
+
+
+.. class:: TeethCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   TeethCodes
+   From: http://hl7.org/fhir/ex-fdi in valuesets.xml
+       This value set includes the FDI Teeth codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/ex-fdi
+
+      
+
+
+.. class:: TeethCodesCodeValues
+
+   Upper Right Tooth 1 from the central axis, permanent dentition.
+   From: http://hl7.org/fhir/ex-fdi in valuesets.xml
+
+   .. attribute:: _11
+      
+
+      Upper Right Tooth 2 from the central axis, permanent dentition.
+      From: http://hl7.org/fhir/ex-fdi in valuesets.xml
+
+
+   .. attribute:: _12
+      
+
+      Upper Right Tooth 3 from the central axis, permanent dentition.
+      From: http://hl7.org/fhir/ex-fdi in valuesets.xml
+
+
+   .. attribute:: _13
+      
+
+      Upper Right Tooth 4 from the central axis, permanent dentition.
+      From: http://hl7.org/fhir/ex-fdi in valuesets.xml
+
+
+   .. attribute:: _14
+      
+
+      Upper Right Tooth 5 from the central axis, permanent dentition.
+      From: http://hl7.org/fhir/ex-fdi in valuesets.xml
+
+
+   .. attribute:: _15
+      
+
+      Upper Right Tooth 6 from the central axis, permanent dentition.
+      From: http://hl7.org/fhir/ex-fdi in valuesets.xml
+
+
+   .. attribute:: _16
+      
+
+      Upper Right Tooth 7 from the central axis, permanent dentition.
+      From: http://hl7.org/fhir/ex-fdi in valuesets.xml
+
+
+   .. attribute:: _17
+      
+
+      Upper Right Tooth 8 from the central axis, permanent dentition.
+      From: http://hl7.org/fhir/ex-fdi in valuesets.xml
+
+
+   .. attribute:: _18
+      
+
+      Upper Left Tooth 1 from the central axis, permanent dentition.
+      From: http://hl7.org/fhir/ex-fdi in valuesets.xml
+
+
+   .. attribute:: _21
+      
+
+      Upper Left Tooth 2 from the central axis, permanent dentition.
+      From: http://hl7.org/fhir/ex-fdi in valuesets.xml
+
+
+   .. attribute:: _22
+      
+
+      Upper Left Tooth 3 from the central axis, permanent dentition.
+      From: http://hl7.org/fhir/ex-fdi in valuesets.xml
+
+
+   .. attribute:: _23
+      
+
+      Upper Left Tooth 4 from the central axis, permanent dentition.
+      From: http://hl7.org/fhir/ex-fdi in valuesets.xml
+
+
+   .. attribute:: _24
+      
+
+      Upper Left Tooth 5 from the central axis, permanent dentition.
+      From: http://hl7.org/fhir/ex-fdi in valuesets.xml
+
+
+   .. attribute:: _25
+      
+
+      Upper Left Tooth 6 from the central axis, permanent dentition.
+      From: http://hl7.org/fhir/ex-fdi in valuesets.xml
+
+
+   .. attribute:: _26
+      
+
+      Upper Left Tooth 7 from the central axis, permanent dentition.
+      From: http://hl7.org/fhir/ex-fdi in valuesets.xml
+
+
+   .. attribute:: _27
+      
+
+      Upper Left Tooth 8 from the central axis, permanent dentition.
+      From: http://hl7.org/fhir/ex-fdi in valuesets.xml
+
+
+   .. attribute:: _28
+      
+
+      Lower Left Tooth 1 from the central axis, permanent dentition.
+      From: http://hl7.org/fhir/ex-fdi in valuesets.xml
+
+
+   .. attribute:: _31
+      
+
+      Lower Left Tooth 2 from the central axis, permanent dentition.
+      From: http://hl7.org/fhir/ex-fdi in valuesets.xml
+
+
+   .. attribute:: _32
+      
+
+      Lower Left Tooth 3 from the central axis, permanent dentition.
+      From: http://hl7.org/fhir/ex-fdi in valuesets.xml
+
+
+   .. attribute:: _33
+      
+
+      Lower Left Tooth 4 from the central axis, permanent dentition.
+      From: http://hl7.org/fhir/ex-fdi in valuesets.xml
+
+
+   .. attribute:: _34
+      
+
+      Lower Left Tooth 5 from the central axis, permanent dentition.
+      From: http://hl7.org/fhir/ex-fdi in valuesets.xml
+
+
+   .. attribute:: _35
+      
+
+      Lower Left Tooth 6 from the central axis, permanent dentition.
+      From: http://hl7.org/fhir/ex-fdi in valuesets.xml
+
+
+   .. attribute:: _36
+      
+
+      Lower Left Tooth 7 from the central axis, permanent dentition.
+      From: http://hl7.org/fhir/ex-fdi in valuesets.xml
+
+
+   .. attribute:: _37
+      
+
+      Lower Left Tooth 8 from the central axis, permanent dentition.
+      From: http://hl7.org/fhir/ex-fdi in valuesets.xml
+
+
+   .. attribute:: _38
+      
+
+      Lower Right Tooth 1 from the central axis, permanent dentition.
+      From: http://hl7.org/fhir/ex-fdi in valuesets.xml
+
+
+   .. attribute:: _41
+      
+
+      Lower Right Tooth 2 from the central axis, permanent dentition.
+      From: http://hl7.org/fhir/ex-fdi in valuesets.xml
+
+
+   .. attribute:: _42
+      
+
+      Lower Right Tooth 3 from the central axis, permanent dentition.
+      From: http://hl7.org/fhir/ex-fdi in valuesets.xml
+
+
+   .. attribute:: _43
+      
+
+      Lower Right Tooth 4 from the central axis, permanent dentition.
+      From: http://hl7.org/fhir/ex-fdi in valuesets.xml
+
+
+   .. attribute:: _44
+      
+
+      Lower Right Tooth 5 from the central axis, permanent dentition.
+      From: http://hl7.org/fhir/ex-fdi in valuesets.xml
+
+
+   .. attribute:: _45
+      
+
+      Lower Right Tooth 6 from the central axis, permanent dentition.
+      From: http://hl7.org/fhir/ex-fdi in valuesets.xml
+
+
+   .. attribute:: _46
+      
+
+      Lower Right Tooth 7 from the central axis, permanent dentition.
+      From: http://hl7.org/fhir/ex-fdi in valuesets.xml
+
+
+   .. attribute:: _47
+      
+
+      Lower Right Tooth 8 from the central axis, permanent dentition.
+      From: http://hl7.org/fhir/ex-fdi in valuesets.xml
+
+
+   .. attribute:: _48
+      
+
+      
+
+

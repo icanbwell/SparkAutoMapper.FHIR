@@ -1,0 +1,60 @@
+:mod:`spark_auto_mapper_fhir.value_sets.da_vinci.accepting_patients`
+====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.da_vinci.accepting_patients
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.da_vinci.accepting_patients.AcceptingPatientsCode
+   spark_auto_mapper_fhir.value_sets.da_vinci.accepting_patients.AcceptingPatientsCodeValues
+
+
+
+.. class:: AcceptingPatientsCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   https://build.fhir.org/ig/HL7/davinci-pdex-plan-net/CodeSystem-AcceptingPatientsCS.html
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = https://build.fhir.org/ig/HL7/davinci-pdex-plan-net/CodeSystem-AcceptingPatientsCS.html
+
+      
+
+
+.. class:: AcceptingPatientsCodeValues
+
+   Not accepting patients
+
+   .. attribute:: NotAccepting
+      
+
+      Accepting new patients
+
+
+   .. attribute:: Accepting
+      
+
+      Accepting existing patients
+
+
+   .. attribute:: AcceptingExistingPatients
+      
+
+      Accepting existing patients and members of their families
+
+
+   .. attribute:: AcceptingExistingPatientsAndTheirFamilies
+      
+
+      
+
+

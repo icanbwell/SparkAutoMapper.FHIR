@@ -1,0 +1,86 @@
+:mod:`spark_auto_mapper_fhir.value_sets.synthesis_type`
+=======================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.synthesis_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.synthesis_type.SynthesisTypeCode
+   spark_auto_mapper_fhir.value_sets.synthesis_type.SynthesisTypeCodeValues
+
+
+
+.. class:: SynthesisTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   SynthesisType
+   From: http://terminology.hl7.org/CodeSystem/synthesis-type in valuesets.xml
+       Types of combining results from a body of evidence (eg. summary data meta-
+   analysis).
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/synthesis-type
+
+      
+
+
+.. class:: SynthesisTypeCodeValues
+
+   A meta-analysis of the summary data of estimates from individual studies or
+   data sets.
+   From: http://terminology.hl7.org/CodeSystem/synthesis-type in valuesets.xml
+
+   .. attribute:: SummaryDataMeta_analysis
+      
+
+      A meta-analysis of the individual participant data from individual studies or
+      data sets.
+      From: http://terminology.hl7.org/CodeSystem/synthesis-type in valuesets.xml
+
+
+   .. attribute:: IndividualPatientDataMeta_analysis
+      
+
+      An indirect meta-analysis derived from 2 or more direct comparisons in a
+      network meta-analysis.
+      From: http://terminology.hl7.org/CodeSystem/synthesis-type in valuesets.xml
+
+
+   .. attribute:: IndirectNetworkMeta_analysis
+      
+
+      An composite meta-analysis derived from direct comparisons and indirect
+      comparisons in a network meta-analysis.
+      From: http://terminology.hl7.org/CodeSystem/synthesis-type in valuesets.xml
+
+
+   .. attribute:: CombinedDirectPlusIndirectNetworkMeta_analysis
+      
+
+      A range of results across a body of evidence.
+      From: http://terminology.hl7.org/CodeSystem/synthesis-type in valuesets.xml
+
+
+   .. attribute:: RangeOfResults
+      
+
+      An approach describing a body of evidence by categorically classifying
+      individual studies (eg 3 studies showed beneft and 2 studied found no effect).
+      From: http://terminology.hl7.org/CodeSystem/synthesis-type in valuesets.xml
+
+
+   .. attribute:: ClassifcationOfResults
+      
+
+      
+
+

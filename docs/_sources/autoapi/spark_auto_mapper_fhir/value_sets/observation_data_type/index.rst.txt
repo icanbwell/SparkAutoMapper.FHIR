@@ -1,0 +1,116 @@
+:mod:`spark_auto_mapper_fhir.value_sets.observation_data_type`
+==============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.observation_data_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.observation_data_type.ObservationDataTypeCode
+   spark_auto_mapper_fhir.value_sets.observation_data_type.ObservationDataTypeCodeValues
+
+
+
+.. class:: ObservationDataTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ObservationDataType
+   From: http://hl7.org/fhir/permitted-data-type in valuesets.xml
+       Permitted data type for observation value.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/permitted-data-type
+
+      
+
+
+.. class:: ObservationDataTypeCodeValues
+
+   A measured amount.
+   From: http://hl7.org/fhir/permitted-data-type in valuesets.xml
+
+   .. attribute:: Quantity
+      
+
+      A coded concept from a reference terminology and/or text.
+      From: http://hl7.org/fhir/permitted-data-type in valuesets.xml
+
+
+   .. attribute:: CodeableConcept
+      
+
+      A sequence of Unicode characters.
+      From: http://hl7.org/fhir/permitted-data-type in valuesets.xml
+
+
+   .. attribute:: String
+      
+
+      true or false.
+      From: http://hl7.org/fhir/permitted-data-type in valuesets.xml
+
+
+   .. attribute:: Boolean
+      
+
+      A signed integer.
+      From: http://hl7.org/fhir/permitted-data-type in valuesets.xml
+
+
+   .. attribute:: Integer
+      
+
+      A set of values bounded by low and high.
+      From: http://hl7.org/fhir/permitted-data-type in valuesets.xml
+
+
+   .. attribute:: Range
+      
+
+      A ratio of two Quantity values - a numerator and a denominator.
+      From: http://hl7.org/fhir/permitted-data-type in valuesets.xml
+
+
+   .. attribute:: Ratio
+      
+
+      A series of measurements taken by a device.
+      From: http://hl7.org/fhir/permitted-data-type in valuesets.xml
+
+
+   .. attribute:: SampledData
+      
+
+      A time during the day, in the format hh:mm:ss.
+      From: http://hl7.org/fhir/permitted-data-type in valuesets.xml
+
+
+   .. attribute:: Time
+      
+
+      A date, date-time or partial date (e.g. just year or year + month) as used in
+      human communication.
+      From: http://hl7.org/fhir/permitted-data-type in valuesets.xml
+
+
+   .. attribute:: DateTime
+      
+
+      A time range defined by start and end date/time.
+      From: http://hl7.org/fhir/permitted-data-type in valuesets.xml
+
+
+   .. attribute:: Period
+      
+
+      
+
+

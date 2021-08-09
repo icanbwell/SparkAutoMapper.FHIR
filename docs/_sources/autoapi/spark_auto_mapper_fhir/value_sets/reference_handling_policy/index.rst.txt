@@ -1,0 +1,79 @@
+:mod:`spark_auto_mapper_fhir.value_sets.reference_handling_policy`
+==================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.reference_handling_policy
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.reference_handling_policy.ReferenceHandlingPolicyCode
+   spark_auto_mapper_fhir.value_sets.reference_handling_policy.ReferenceHandlingPolicyCodeValues
+
+
+
+.. class:: ReferenceHandlingPolicyCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ReferenceHandlingPolicy
+   From: http://hl7.org/fhir/reference-handling-policy in valuesets.xml
+       A set of flags that defines how references are supported.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/reference-handling-policy
+
+      
+
+
+.. class:: ReferenceHandlingPolicyCodeValues
+
+   The server supports and populates Literal references (i.e. using
+   Reference.reference) where they are known (this code does not guarantee that
+   all references are literal; see 'enforced').
+   From: http://hl7.org/fhir/reference-handling-policy in valuesets.xml
+
+   .. attribute:: LiteralReferences
+      
+
+      The server allows logical references (i.e. using Reference.identifier).
+      From: http://hl7.org/fhir/reference-handling-policy in valuesets.xml
+
+
+   .. attribute:: LogicalReferences
+      
+
+      The server will attempt to resolve logical references to literal references -
+      i.e. converting Reference.identifier to Reference.reference (if resolution
+      fails, the server may still accept resources; see logical).
+      From: http://hl7.org/fhir/reference-handling-policy in valuesets.xml
+
+
+   .. attribute:: ResolvesReferences
+      
+
+      The server enforces that references have integrity - e.g. it ensures that
+      references can always be resolved. This is typically the case for clinical
+      record systems, but often not the case for middleware/proxy systems.
+      From: http://hl7.org/fhir/reference-handling-policy in valuesets.xml
+
+
+   .. attribute:: ReferenceIntegrityEnforced
+      
+
+      The server does not support references that point to other servers.
+      From: http://hl7.org/fhir/reference-handling-policy in valuesets.xml
+
+
+   .. attribute:: LocalReferencesOnly
+      
+
+      
+
+

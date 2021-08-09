@@ -1,0 +1,80 @@
+:mod:`spark_auto_mapper_fhir.value_sets.status`
+===============================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.status
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.status.StatusCode
+   spark_auto_mapper_fhir.value_sets.status.StatusCodeValues
+
+
+
+.. class:: StatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   status
+   From: http://hl7.org/fhir/CodeSystem/status in valuesets.xml
+       The validation status of the target
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/CodeSystem/status
+
+      
+
+
+.. class:: StatusCodeValues
+
+   ***TODO***
+   From: http://hl7.org/fhir/CodeSystem/status in valuesets.xml
+
+   .. attribute:: Attested
+      
+
+      ***TODO***
+      From: http://hl7.org/fhir/CodeSystem/status in valuesets.xml
+
+
+   .. attribute:: Validated
+      
+
+      ***TODO***
+      From: http://hl7.org/fhir/CodeSystem/status in valuesets.xml
+
+
+   .. attribute:: InProcess
+      
+
+      ***TODO***
+      From: http://hl7.org/fhir/CodeSystem/status in valuesets.xml
+
+
+   .. attribute:: RequiresRevalidation
+      
+
+      ***TODO***
+      From: http://hl7.org/fhir/CodeSystem/status in valuesets.xml
+
+
+   .. attribute:: ValidationFailed
+      
+
+      ***TODO***
+      From: http://hl7.org/fhir/CodeSystem/status in valuesets.xml
+
+
+   .. attribute:: Re_ValidationFailed
+      
+
+      
+
+

@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.measure_group`
+=============================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.measure_group
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.measure_group.MeasureGroup
+
+
+
+.. class:: MeasureGroup(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, code: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, description: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, population: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.measure_population.MeasurePopulation]] = None, stratifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.measure_stratifier.MeasureStratifier]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   Measure.Group
+   The Measure resource provides the definition of a quality measure.
+
+

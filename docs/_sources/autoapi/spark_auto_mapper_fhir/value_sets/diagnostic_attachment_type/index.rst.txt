@@ -1,0 +1,35 @@
+:mod:`spark_auto_mapper_fhir.value_sets.diagnostic_attachment_type`
+===================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.diagnostic_attachment_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.diagnostic_attachment_type.DiagnosticAttachmentTypeCode
+
+
+
+.. class:: DiagnosticAttachmentTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   DiagnosticAttachmentType
+   From: http://hl7.org/fhir/ValueSet/diagnostic-based-on-snomed in valuesets.xml
+       Diagnostic Attachment Type codes from [SNOMED CT](http://snomed.info/sct)
+   where concept is-a 182836005 (Review of medication (procedure)) or is-a
+   404684003 (Clinical finding (finding))
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+

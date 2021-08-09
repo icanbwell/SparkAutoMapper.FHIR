@@ -1,0 +1,34 @@
+:mod:`spark_auto_mapper_fhir.resources.biologically_derived_product`
+====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.biologically_derived_product
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.biologically_derived_product.BiologicallyDerivedProduct
+
+
+
+.. class:: BiologicallyDerivedProduct(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.identifier.Identifier]] = None, productCategory: Optional[spark_auto_mapper_fhir.value_sets.biologically_derived_product_category.BiologicallyDerivedProductCategoryCode] = None, productCode: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, status: Optional[spark_auto_mapper_fhir.value_sets.biologically_derived_product_status.BiologicallyDerivedProductStatusCode] = None, request: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.service_request.ServiceRequest]]] = None, quantity: Optional[spark_auto_mapper_fhir.fhir_types.integer.FhirInteger] = None, parent: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.biologically_derived_product.BiologicallyDerivedProduct]]] = None, collection: Optional[spark_auto_mapper_fhir.backbone_elements.biologically_derived_product_collection.BiologicallyDerivedProductCollection] = None, processing: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.biologically_derived_product_processing.BiologicallyDerivedProductProcessing]] = None, manipulation: Optional[spark_auto_mapper_fhir.backbone_elements.biologically_derived_product_manipulation.BiologicallyDerivedProductManipulation] = None, storage: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.biologically_derived_product_storage.BiologicallyDerivedProductStorage]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   BiologicallyDerivedProduct
+   biologicallyderivedproduct.xsd
+       A material substance originating from a biological entity intended to be
+   transplanted or infused
+   into another (possibly the same) biological entity.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

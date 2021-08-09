@@ -1,0 +1,14 @@
+:mod:`spark_auto_mapper_fhir.fhir_types.base64_binary`
+======================================================
+
+.. py:module:: spark_auto_mapper_fhir.fhir_types.base64_binary
+
+
+Module Contents
+---------------
+
+.. data:: FhirBase64Binary
+   
+
+   
+

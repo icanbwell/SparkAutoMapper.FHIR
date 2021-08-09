@@ -1,0 +1,147 @@
+:mod:`spark_auto_mapper_fhir.value_sets.location_type`
+======================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.location_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.location_type.LocationTypeCode
+   spark_auto_mapper_fhir.value_sets.location_type.LocationTypeCodeValues
+
+
+
+.. class:: LocationTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   LocationType
+   From: http://terminology.hl7.org/CodeSystem/location-physical-type in valuesets.xml
+       This example value set defines a set of codes that can be used to indicate the
+   physical form of the Location.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/location-physical-type
+
+      
+
+
+.. class:: LocationTypeCodeValues
+
+   A collection of buildings or other locations such as a site or a campus.
+   From: http://terminology.hl7.org/CodeSystem/location-physical-type in valuesets.xml
+
+   .. attribute:: Site
+      
+
+      Any Building or structure. This may contain rooms, corridors, wings, etc. It
+      might not have walls, or a roof, but is considered a defined/allocated space.
+      From: http://terminology.hl7.org/CodeSystem/location-physical-type in valuesets.xml
+
+
+   .. attribute:: Building
+      
+
+      A Wing within a Building, this often contains levels, rooms and corridors.
+      From: http://terminology.hl7.org/CodeSystem/location-physical-type in valuesets.xml
+
+
+   .. attribute:: Wing
+      
+
+      A Ward is a section of a medical facility that may contain rooms and other
+      types of location.
+      From: http://terminology.hl7.org/CodeSystem/location-physical-type in valuesets.xml
+
+
+   .. attribute:: Ward
+      
+
+      A Level in a multi-level Building/Structure.
+      From: http://terminology.hl7.org/CodeSystem/location-physical-type in valuesets.xml
+
+
+   .. attribute:: Level
+      
+
+      Any corridor within a Building, that may connect rooms.
+      From: http://terminology.hl7.org/CodeSystem/location-physical-type in valuesets.xml
+
+
+   .. attribute:: Corridor
+      
+
+      A space that is allocated as a room, it may have walls/roof etc., but does not
+      require these.
+      From: http://terminology.hl7.org/CodeSystem/location-physical-type in valuesets.xml
+
+
+   .. attribute:: Room
+      
+
+      A space that is allocated for sleeping/laying on. This is not the physical
+      bed/trolley that may be moved about, but the space it may occupy.
+      From: http://terminology.hl7.org/CodeSystem/location-physical-type in valuesets.xml
+
+
+   .. attribute:: Bed
+      
+
+      A means of transportation.
+      From: http://terminology.hl7.org/CodeSystem/location-physical-type in valuesets.xml
+
+
+   .. attribute:: Vehicle
+      
+
+      A residential dwelling. Usually used to reference a location that a
+      person/patient may reside.
+      From: http://terminology.hl7.org/CodeSystem/location-physical-type in valuesets.xml
+
+
+   .. attribute:: House
+      
+
+      A container that can store goods, equipment, medications or other items.
+      From: http://terminology.hl7.org/CodeSystem/location-physical-type in valuesets.xml
+
+
+   .. attribute:: Cabinet
+      
+
+      A defined path to travel between 2 points that has a known name.
+      From: http://terminology.hl7.org/CodeSystem/location-physical-type in valuesets.xml
+
+
+   .. attribute:: Road
+      
+
+      A defined physical boundary of something, such as a flood risk zone, region,
+      postcode
+      From: http://terminology.hl7.org/CodeSystem/location-physical-type in valuesets.xml
+
+
+   .. attribute:: Area
+      
+
+      A wide scope that covers a conceptual domain, such as a Nation (Country wide
+      community or Federal Government - e.g. Ministry of Health),  Province or State
+      (community or Government), Business (throughout the enterprise), Nation with a
+      business scope of an agency (e.g. CDC, FDA etc.) or a Business segment (UK
+      Pharmacy), not just an physical boundary
+      From: http://terminology.hl7.org/CodeSystem/location-physical-type in valuesets.xml
+
+
+   .. attribute:: Jurisdiction
+      
+
+      
+
+

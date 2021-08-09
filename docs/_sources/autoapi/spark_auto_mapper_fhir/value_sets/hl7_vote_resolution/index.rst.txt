@@ -1,0 +1,56 @@
+:mod:`spark_auto_mapper_fhir.value_sets.hl7_vote_resolution`
+============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.hl7_vote_resolution
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.hl7_vote_resolution.Hl7VoteResolution
+   spark_auto_mapper_fhir.value_sets.hl7_vote_resolution.Hl7VoteResolutionValues
+
+
+
+.. class:: Hl7VoteResolution(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.hl7VoteResolution
+   From: http://terminology.hl7.org/ValueSet/v3-hl7VoteResolution in v3-codesystems.xml
+         Description:
+   Based on concepts for resolutions from HL7 ballot spreadsheet according to
+   HL7's Governance & Operations Manual (GOM).
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-hl7VoteResolution
+
+      
+
+
+.. class:: Hl7VoteResolutionValues
+
+   Description: An abstract concept grouping resolutions that can be applied to
+   affirmative ballot comments.
+   From: http://terminology.hl7.org/CodeSystem/v3-hl7VoteResolution in v3-codesystems.xml
+
+   .. attribute:: AffirmativeResolution
+      
+
+      Description: An abstract concept grouping resolutions that can be applied to
+      negative ballot comments.
+      From: http://terminology.hl7.org/CodeSystem/v3-hl7VoteResolution in v3-codesystems.xml
+
+
+   .. attribute:: NegativeResolution
+      
+
+      
+
+

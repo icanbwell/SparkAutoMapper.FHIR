@@ -1,0 +1,68 @@
+:mod:`spark_auto_mapper_fhir.value_sets.request_priority`
+=========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.request_priority
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.request_priority.RequestPriorityCode
+   spark_auto_mapper_fhir.value_sets.request_priority.RequestPriorityCodeValues
+
+
+
+.. class:: RequestPriorityCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   RequestPriority
+   From: http://hl7.org/fhir/request-priority in valuesets.xml
+       Identifies the level of importance to be assigned to actioning the request.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/request-priority
+
+      
+
+
+.. class:: RequestPriorityCodeValues
+
+   The request has normal priority.
+   From: http://hl7.org/fhir/request-priority in valuesets.xml
+
+   .. attribute:: Routine
+      
+
+      The request should be actioned promptly - higher priority than routine.
+      From: http://hl7.org/fhir/request-priority in valuesets.xml
+
+
+   .. attribute:: Urgent
+      
+
+      The request should be actioned as soon as possible - higher priority than
+      urgent.
+      From: http://hl7.org/fhir/request-priority in valuesets.xml
+
+
+   .. attribute:: ASAP
+      
+
+      The request should be actioned immediately - highest possible priority.  E.g.
+      an emergency.
+      From: http://hl7.org/fhir/request-priority in valuesets.xml
+
+
+   .. attribute:: STAT
+      
+
+      
+
+

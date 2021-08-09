@@ -1,0 +1,45 @@
+:mod:`spark_auto_mapper_fhir.value_sets.max_occurs`
+===================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.max_occurs
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.max_occurs.MaxOccursCode
+   spark_auto_mapper_fhir.value_sets.max_occurs.MaxOccursCodeValues
+
+
+
+.. class:: MaxOccursCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   MaxOccurs
+   From: http://terminology.hl7.org/CodeSystem/question-max-occurs in valuesets.xml
+       Flags an element as having unlimited repetitions.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/question-max-occurs
+
+      
+
+
+.. class:: MaxOccursCodeValues
+
+   Element can repeat an unlimited number of times.
+   From: http://terminology.hl7.org/CodeSystem/question-max-occurs in valuesets.xml
+
+   .. attribute:: Repeating
+      
+
+      
+
+

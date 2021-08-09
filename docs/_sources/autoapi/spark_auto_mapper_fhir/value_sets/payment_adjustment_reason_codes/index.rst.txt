@@ -1,0 +1,52 @@
+:mod:`spark_auto_mapper_fhir.value_sets.payment_adjustment_reason_codes`
+========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.payment_adjustment_reason_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.payment_adjustment_reason_codes.PaymentAdjustmentReasonCodesCode
+   spark_auto_mapper_fhir.value_sets.payment_adjustment_reason_codes.PaymentAdjustmentReasonCodesCodeValues
+
+
+
+.. class:: PaymentAdjustmentReasonCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   PaymentAdjustmentReasonCodes
+   From: http://terminology.hl7.org/CodeSystem/payment-adjustment-reason in valuesets.xml
+       This value set includes smattering of Payment Adjustment Reason codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/payment-adjustment-reason
+
+      
+
+
+.. class:: PaymentAdjustmentReasonCodesCodeValues
+
+   Prior Payment Reversal
+   From: http://terminology.hl7.org/CodeSystem/payment-adjustment-reason in valuesets.xml
+
+   .. attribute:: PriorPaymentReversal
+      
+
+      Prior Overpayment
+      From: http://terminology.hl7.org/CodeSystem/payment-adjustment-reason in valuesets.xml
+
+
+   .. attribute:: PriorOverpayment
+      
+
+      
+
+

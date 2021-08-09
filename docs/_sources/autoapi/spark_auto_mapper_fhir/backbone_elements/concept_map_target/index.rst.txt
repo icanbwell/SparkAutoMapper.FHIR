@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.concept_map_target`
+==================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.concept_map_target
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.concept_map_target.ConceptMapTarget
+
+
+
+.. class:: ConceptMapTarget(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, code: Optional[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode] = None, display: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, equivalence: spark_auto_mapper_fhir.value_sets.concept_map_equivalence.ConceptMapEquivalenceCode, comment: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, dependsOn: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.concept_map_depends_on.ConceptMapDependsOn]] = None, product: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.concept_map_depends_on.ConceptMapDependsOn]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   ConceptMap.Target
+   A statement of relationships from one set of concepts to one or more other concepts - either concepts in code systems, or data element/data element concepts, or classes in class models.
+
+

@@ -1,0 +1,60 @@
+:mod:`spark_auto_mapper_fhir.value_sets.media_type`
+===================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.media_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.media_type.MediaTypeCode
+   spark_auto_mapper_fhir.value_sets.media_type.MediaTypeCodeValues
+
+
+
+.. class:: MediaTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   MediaType
+   From: http://terminology.hl7.org/CodeSystem/media-type in valuesets.xml
+       Codes for high level media categories.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/media-type
+
+      
+
+
+.. class:: MediaTypeCodeValues
+
+   The media consists of one or more unmoving images, including photographs,
+   computer-generated graphs and charts, and scanned documents
+   From: http://terminology.hl7.org/CodeSystem/media-type in valuesets.xml
+
+   .. attribute:: Image
+      
+
+      The media consists of a series of frames that capture a moving image
+      From: http://terminology.hl7.org/CodeSystem/media-type in valuesets.xml
+
+
+   .. attribute:: Video
+      
+
+      The media consists of a sound recording
+      From: http://terminology.hl7.org/CodeSystem/media-type in valuesets.xml
+
+
+   .. attribute:: Audio
+      
+
+      
+
+

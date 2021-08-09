@@ -1,0 +1,67 @@
+:mod:`spark_auto_mapper_fhir.value_sets.graph_compartment_rule`
+===============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.graph_compartment_rule
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.graph_compartment_rule.GraphCompartmentRuleCode
+   spark_auto_mapper_fhir.value_sets.graph_compartment_rule.GraphCompartmentRuleCodeValues
+
+
+
+.. class:: GraphCompartmentRuleCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   GraphCompartmentRule
+   From: http://hl7.org/fhir/graph-compartment-rule in valuesets.xml
+       How a compartment must be linked.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/graph-compartment-rule
+
+      
+
+
+.. class:: GraphCompartmentRuleCodeValues
+
+   The compartment must be identical (the same literal reference).
+   From: http://hl7.org/fhir/graph-compartment-rule in valuesets.xml
+
+   .. attribute:: Identical
+      
+
+      The compartment must be the same - the record must be about the same patient,
+      but the reference may be different.
+      From: http://hl7.org/fhir/graph-compartment-rule in valuesets.xml
+
+
+   .. attribute:: Matching
+      
+
+      The compartment must be different.
+      From: http://hl7.org/fhir/graph-compartment-rule in valuesets.xml
+
+
+   .. attribute:: Different
+      
+
+      The compartment rule is defined in the accompanying FHIRPath expression.
+      From: http://hl7.org/fhir/graph-compartment-rule in valuesets.xml
+
+
+   .. attribute:: Custom
+      
+
+      
+
+

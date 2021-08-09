@@ -1,0 +1,107 @@
+:mod:`spark_auto_mapper_fhir.value_sets.research_study_phase`
+=============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.research_study_phase
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.research_study_phase.ResearchStudyPhaseCode
+   spark_auto_mapper_fhir.value_sets.research_study_phase.ResearchStudyPhaseCodeValues
+
+
+
+.. class:: ResearchStudyPhaseCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ResearchStudyPhase
+   From: http://terminology.hl7.org/CodeSystem/research-study-phase in valuesets.xml
+       Codes for the stage in the progression of a therapy from initial experimental
+   use in humans in clinical trials to post-market evaluation.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/research-study-phase
+
+      
+
+
+.. class:: ResearchStudyPhaseCodeValues
+
+   Trials without phases (for example, studies of devices or behavioral
+   interventions).
+   From: http://terminology.hl7.org/CodeSystem/research-study-phase in valuesets.xml
+
+   .. attribute:: N_A
+      
+
+      Designation for optional exploratory trials conducted in accordance with the
+      United States Food and Drug Administration's (FDA) 2006 Guidance on
+      Exploratory Investigational New Drug (IND) Studies. Formerly called Phase 0.
+      From: http://terminology.hl7.org/CodeSystem/research-study-phase in valuesets.xml
+
+
+   .. attribute:: EarlyPhase1
+      
+
+      Includes initial studies to determine the metabolism and pharmacologic actions
+      of drugs in humans, the side effects associated with increasing doses, and to
+      gain early evidence of effectiveness; may include healthy participants and/or
+      patients.
+      From: http://terminology.hl7.org/CodeSystem/research-study-phase in valuesets.xml
+
+
+   .. attribute:: Phase1
+      
+
+      Trials that are a combination of phases 1 and 2.
+      From: http://terminology.hl7.org/CodeSystem/research-study-phase in valuesets.xml
+
+
+   .. attribute:: Phase1_Phase2
+      
+
+      Includes controlled clinical studies conducted to evaluate the effectiveness
+      of the drug for a particular indication or indications in participants with
+      the disease or condition under study and to determine the common short-term
+      side effects and risks.
+      From: http://terminology.hl7.org/CodeSystem/research-study-phase in valuesets.xml
+
+
+   .. attribute:: Phase2
+      
+
+      Trials that are a combination of phases 2 and 3.
+      From: http://terminology.hl7.org/CodeSystem/research-study-phase in valuesets.xml
+
+
+   .. attribute:: Phase2_Phase3
+      
+
+      Includes trials conducted after preliminary evidence suggesting effectiveness
+      of the drug has been obtained, and are intended to gather additional
+      information to evaluate the overall benefit-risk relationship of the drug.
+      From: http://terminology.hl7.org/CodeSystem/research-study-phase in valuesets.xml
+
+
+   .. attribute:: Phase3
+      
+
+      Studies of FDA-approved drugs to delineate additional information including
+      the drug's risks, benefits, and optimal use.
+      From: http://terminology.hl7.org/CodeSystem/research-study-phase in valuesets.xml
+
+
+   .. attribute:: Phase4
+      
+
+      
+
+

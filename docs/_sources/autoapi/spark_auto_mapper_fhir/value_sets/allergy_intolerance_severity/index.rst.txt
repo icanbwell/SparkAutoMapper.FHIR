@@ -1,0 +1,60 @@
+:mod:`spark_auto_mapper_fhir.value_sets.allergy_intolerance_severity`
+=====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.allergy_intolerance_severity
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.allergy_intolerance_severity.AllergyIntoleranceSeverityCode
+   spark_auto_mapper_fhir.value_sets.allergy_intolerance_severity.AllergyIntoleranceSeverityCodeValues
+
+
+
+.. class:: AllergyIntoleranceSeverityCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   AllergyIntoleranceSeverity
+   From: http://hl7.org/fhir/reaction-event-severity in valuesets.xml
+       Clinical assessment of the severity of a reaction event as a whole,
+   potentially considering multiple different manifestations.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/reaction-event-severity
+
+      
+
+
+.. class:: AllergyIntoleranceSeverityCodeValues
+
+   Causes mild physiological effects.
+   From: http://hl7.org/fhir/reaction-event-severity in valuesets.xml
+
+   .. attribute:: Mild
+      
+
+      Causes moderate physiological effects.
+      From: http://hl7.org/fhir/reaction-event-severity in valuesets.xml
+
+
+   .. attribute:: Moderate
+      
+
+      Causes severe physiological effects.
+      From: http://hl7.org/fhir/reaction-event-severity in valuesets.xml
+
+
+   .. attribute:: Severe
+      
+
+      
+
+

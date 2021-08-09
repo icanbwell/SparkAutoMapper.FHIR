@@ -1,0 +1,66 @@
+:mod:`spark_auto_mapper_fhir.value_sets.audit_event_entity_type`
+================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.audit_event_entity_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.audit_event_entity_type.AuditEventEntityTypeCode
+   spark_auto_mapper_fhir.value_sets.audit_event_entity_type.AuditEventEntityTypeCodeValues
+
+
+
+.. class:: AuditEventEntityTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   AuditEventEntityType
+   From: http://terminology.hl7.org/CodeSystem/audit-entity-type in valuesets.xml
+       Code for the entity type involved in the audit event.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/audit-entity-type
+
+      
+
+
+.. class:: AuditEventEntityTypeCodeValues
+
+   Person
+   From: http://terminology.hl7.org/CodeSystem/audit-entity-type in valuesets.xml
+
+   .. attribute:: Person
+      
+
+      System Object
+      From: http://terminology.hl7.org/CodeSystem/audit-entity-type in valuesets.xml
+
+
+   .. attribute:: SystemObject
+      
+
+      Organization
+      From: http://terminology.hl7.org/CodeSystem/audit-entity-type in valuesets.xml
+
+
+   .. attribute:: Organization
+      
+
+      Other
+      From: http://terminology.hl7.org/CodeSystem/audit-entity-type in valuesets.xml
+
+
+   .. attribute:: Other
+      
+
+      
+
+

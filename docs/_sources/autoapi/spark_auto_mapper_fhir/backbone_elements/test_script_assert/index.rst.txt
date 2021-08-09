@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.test_script_assert`
+==================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.test_script_assert
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.test_script_assert.TestScriptAssert
+
+
+
+.. class:: TestScriptAssert(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, label: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, description: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, direction: Optional[spark_auto_mapper_fhir.value_sets.assertion_direction_type.AssertionDirectionTypeCode] = None, compareToSourceId: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, compareToSourceExpression: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, compareToSourcePath: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, contentType: Optional[spark_auto_mapper_fhir.value_sets.mime_types.MimeTypesCode] = None, expression: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, headerField: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, minimumId: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, navigationLinks: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, operator: Optional[spark_auto_mapper_fhir.value_sets.assertion_operator_type.AssertionOperatorTypeCode] = None, path: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, requestMethod: Optional[spark_auto_mapper_fhir.value_sets.test_script_request_method_code.TestScriptRequestMethodCodeCode] = None, requestURL: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, resource: Optional[spark_auto_mapper_fhir.value_sets.fhir_defined_type.FHIRDefinedTypeCode] = None, response: Optional[spark_auto_mapper_fhir.value_sets.assertion_response_types.AssertionResponseTypesCode] = None, responseCode: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, sourceId: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, validateProfileId: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, value: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, warningOnly: spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   TestScript.Assert
+   A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
+
+

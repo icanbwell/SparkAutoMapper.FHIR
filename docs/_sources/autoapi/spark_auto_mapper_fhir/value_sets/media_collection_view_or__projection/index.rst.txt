@@ -1,0 +1,33 @@
+:mod:`spark_auto_mapper_fhir.value_sets.media_collection_view_or__projection`
+=============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.media_collection_view_or__projection
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.media_collection_view_or__projection.MediaCollectionView_or_ProjectionCode
+
+
+
+.. class:: MediaCollectionView_or_ProjectionCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   MediaCollectionView/Projection
+   From: http://hl7.org/fhir/ValueSet/media-view in valuesets.xml
+       Codes defined in SNOMED CT that can be used to record Media Recording views.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+

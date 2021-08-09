@@ -1,0 +1,59 @@
+:mod:`spark_auto_mapper_fhir.value_sets.handling_condition_set`
+===============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.handling_condition_set
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.handling_condition_set.HandlingConditionSetCode
+   spark_auto_mapper_fhir.value_sets.handling_condition_set.HandlingConditionSetCodeValues
+
+
+
+.. class:: HandlingConditionSetCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   HandlingConditionSet
+   From: http://terminology.hl7.org/CodeSystem/handling-condition in valuesets.xml
+       Set of handling instructions prior testing of the specimen.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/handling-condition
+
+      
+
+
+.. class:: HandlingConditionSetCodeValues
+
+   room temperature.
+   From: http://terminology.hl7.org/CodeSystem/handling-condition in valuesets.xml
+
+   .. attribute:: RoomTemperature
+      
+
+      refrigerated temperature.
+      From: http://terminology.hl7.org/CodeSystem/handling-condition in valuesets.xml
+
+
+   .. attribute:: Refrigerated
+      
+
+      frozen temperature.
+      From: http://terminology.hl7.org/CodeSystem/handling-condition in valuesets.xml
+
+
+   .. attribute:: Frozen
+      
+
+      
+
+

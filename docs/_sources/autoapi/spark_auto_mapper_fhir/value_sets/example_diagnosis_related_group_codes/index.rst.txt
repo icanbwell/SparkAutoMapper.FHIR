@@ -1,0 +1,66 @@
+:mod:`spark_auto_mapper_fhir.value_sets.example_diagnosis_related_group_codes`
+==============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.example_diagnosis_related_group_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.example_diagnosis_related_group_codes.ExampleDiagnosisRelatedGroupCodesCode
+   spark_auto_mapper_fhir.value_sets.example_diagnosis_related_group_codes.ExampleDiagnosisRelatedGroupCodesCodeValues
+
+
+
+.. class:: ExampleDiagnosisRelatedGroupCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ExampleDiagnosisRelatedGroupCodes
+   From: http://terminology.hl7.org/CodeSystem/ex-diagnosisrelatedgroup in valuesets.xml
+       This value set includes example Diagnosis Related Group codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/ex-diagnosisrelatedgroup
+
+      
+
+
+.. class:: ExampleDiagnosisRelatedGroupCodesCodeValues
+
+   Normal Vaginal Delivery.
+   From: http://terminology.hl7.org/CodeSystem/ex-diagnosisrelatedgroup in valuesets.xml
+
+   .. attribute:: NormalVaginalDelivery
+      
+
+      Appendectomy without rupture or other complications.
+      From: http://terminology.hl7.org/CodeSystem/ex-diagnosisrelatedgroup in valuesets.xml
+
+
+   .. attribute:: Appendectomy_Uncomplicated
+      
+
+      Emergency department treatment of a tooth abscess.
+      From: http://terminology.hl7.org/CodeSystem/ex-diagnosisrelatedgroup in valuesets.xml
+
+
+   .. attribute:: ToothAbscess
+      
+
+      Head trauma - concussion.
+      From: http://terminology.hl7.org/CodeSystem/ex-diagnosisrelatedgroup in valuesets.xml
+
+
+   .. attribute:: HeadTrauma_Concussion
+      
+
+      
+
+

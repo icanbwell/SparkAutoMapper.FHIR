@@ -1,0 +1,315 @@
+:mod:`spark_auto_mapper_fhir.value_sets.document_class_value_set`
+=================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.document_class_value_set
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.document_class_value_set.DocumentClassValueSetCode
+   spark_auto_mapper_fhir.value_sets.document_class_value_set.DocumentClassValueSetCodeValues
+
+
+
+.. class:: DocumentClassValueSetCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   DocumentClassValueSet
+   From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+       This is the code specifying the high-level kind of document (e.g.
+   Prescription, Discharge Summary, Report, etc.). Note: Class code for documents
+   comes from LOINC, and is based upon one of the following:The type of service
+   described by the document. It is described at a very high level in Section 7.3
+   of the LOINC Manual. The type study performed. It was determined by
+   identifying modalities for study reports. The section of the chart where the
+   document is placed. It was determined from the SETs created for Claims
+   Attachment requests.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://loinc.org
+
+      
+
+
+.. class:: DocumentClassValueSetCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+   .. attribute:: HistoryOfImmunization
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: AnesthesiaRecords
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: ChemotherapyRecords
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: ConsultNote
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: Provider_unspecifiedProgressNote
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: NurseryRecords
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: LaborAndDeliveryRecords
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: RadiologyStudies_set_
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: Provider_unspecifiedTransferSummary
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: DischargeSummary
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: LaboratoryStudies_set_
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: CardiologyStudies_set_
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: ObstetricalStudies_set_
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: GastroenterologyEndoscopyStudies_set_
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: PulmonaryStudies_set_
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: NeuromuscularElectrophysiologyStudies_set_
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: PathologyStudies_set_
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: Provider_unspecifiedProcedureNote
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: Ophthalmology_optometryStudies_set_
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: MiscellaneousStudies_set_
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: DialysisRecords
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: NeonatalIntensiveCareRecords
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: CriticalCareRecords
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: PerioperativeRecords
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: EvaluationAndManagementNote
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: Provider_unspecified_HistoryAndPhysicalNote
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: InterventionalProcedureNote
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: PathologyProcedureNote
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: SummarizationOfEpisodeNote
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: TransferOfCareReferralNote
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: TelephoneEncounterNote
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: GeneralSurgeryPre_operativeEvaluationAndManagementNote
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: InpatientAdmissionHistoryAndPhysicalNote
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: CounselingNote
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: StudyReportDocument
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: SummaryOfDeath
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: Non_patientCommunication
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: PrivacyPolicyOrganizationDocument
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: PrivacyPolicyAcknowledgmentDocument
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: MedicationSummaryDocument
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: PersonalHealthMonitoringReportDocument
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: PlanOfCareNote
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: DiagnosticImagingStudy
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: SurgicalOperationNote
+      
+
+      From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
+
+
+   .. attribute:: ReferralNote
+      
+
+      
+
+

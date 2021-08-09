@@ -1,0 +1,67 @@
+:mod:`spark_auto_mapper_fhir.value_sets.consent_scope_codes`
+============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.consent_scope_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.consent_scope_codes.ConsentScopeCodesCode
+   spark_auto_mapper_fhir.value_sets.consent_scope_codes.ConsentScopeCodesCodeValues
+
+
+
+.. class:: ConsentScopeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ConsentScopeCodes
+   From: http://terminology.hl7.org/CodeSystem/consentscope in valuesets.xml
+       This value set includes the four Consent scope codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/consentscope
+
+      
+
+
+.. class:: ConsentScopeCodesCodeValues
+
+   Actions to be taken if they are no longer able to make decisions for
+   themselves
+   From: http://terminology.hl7.org/CodeSystem/consentscope in valuesets.xml
+
+   .. attribute:: AdvancedCareDirective
+      
+
+      Consent to participate in research protocol and information sharing required
+      From: http://terminology.hl7.org/CodeSystem/consentscope in valuesets.xml
+
+
+   .. attribute:: Research
+      
+
+      Agreement to collect, access, use or disclose (share) information
+      From: http://terminology.hl7.org/CodeSystem/consentscope in valuesets.xml
+
+
+   .. attribute:: PrivacyConsent
+      
+
+      Consent to undergo a specific treatment
+      From: http://terminology.hl7.org/CodeSystem/consentscope in valuesets.xml
+
+
+   .. attribute:: Treatment
+      
+
+      
+
+

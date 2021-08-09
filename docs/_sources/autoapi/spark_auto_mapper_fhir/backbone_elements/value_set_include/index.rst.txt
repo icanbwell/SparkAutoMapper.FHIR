@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.value_set_include`
+=================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.value_set_include
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.value_set_include.ValueSetInclude
+
+
+
+.. class:: ValueSetInclude(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, system: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, version: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, concept: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.value_set_concept.ValueSetConcept]] = None, filter: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.value_set_filter.ValueSetFilter]] = None, valueSet: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.canonical.FhirCanonical]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   ValueSet.Include
+   A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [[[CodeSystem]]] definitions and their use in [coded elements](terminologies.html).
+
+

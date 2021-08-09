@@ -1,0 +1,63 @@
+:mod:`spark_auto_mapper_fhir.value_sets.detected_issue_severity`
+================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.detected_issue_severity
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.detected_issue_severity.DetectedIssueSeverityCode
+   spark_auto_mapper_fhir.value_sets.detected_issue_severity.DetectedIssueSeverityCodeValues
+
+
+
+.. class:: DetectedIssueSeverityCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   DetectedIssueSeverity
+   From: http://hl7.org/fhir/detectedissue-severity in valuesets.xml
+       Indicates the potential degree of impact of the identified issue on the
+   patient.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/detectedissue-severity
+
+      
+
+
+.. class:: DetectedIssueSeverityCodeValues
+
+   Indicates the issue may be life-threatening or has the potential to cause
+   permanent injury.
+   From: http://hl7.org/fhir/detectedissue-severity in valuesets.xml
+
+   .. attribute:: High
+      
+
+      Indicates the issue may result in noticeable adverse consequences but is
+      unlikely to be life-threatening or cause permanent injury.
+      From: http://hl7.org/fhir/detectedissue-severity in valuesets.xml
+
+
+   .. attribute:: Moderate
+      
+
+      Indicates the issue may result in some adverse consequences but is unlikely to
+      substantially affect the situation of the subject.
+      From: http://hl7.org/fhir/detectedissue-severity in valuesets.xml
+
+
+   .. attribute:: Low
+      
+
+      
+
+

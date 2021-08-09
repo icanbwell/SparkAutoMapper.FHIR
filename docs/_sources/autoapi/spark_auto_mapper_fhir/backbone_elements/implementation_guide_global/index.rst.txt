@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.implementation_guide_global`
+===========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.implementation_guide_global
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.implementation_guide_global.ImplementationGuideGlobal
+
+
+
+.. class:: ImplementationGuideGlobal(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, type_: spark_auto_mapper_fhir.value_sets.resource_type.ResourceTypeCode, profile: spark_auto_mapper_fhir.fhir_types.canonical.FhirCanonical)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   ImplementationGuide.Global
+   A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
+
+

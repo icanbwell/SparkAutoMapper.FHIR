@@ -1,0 +1,88 @@
+:mod:`spark_auto_mapper_fhir.value_sets.financial_task_input_type_codes`
+========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.financial_task_input_type_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.financial_task_input_type_codes.FinancialTaskInputTypeCodesCode
+   spark_auto_mapper_fhir.value_sets.financial_task_input_type_codes.FinancialTaskInputTypeCodesCodeValues
+
+
+
+.. class:: FinancialTaskInputTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   FinancialTaskInputTypeCodes
+   From: http://terminology.hl7.org/CodeSystem/financialtaskinputtype in valuesets.xml
+       This value set includes Financial Task Input Type codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/financialtaskinputtype
+
+      
+
+
+.. class:: FinancialTaskInputTypeCodesCodeValues
+
+   The name of a resource to include in a selection.
+   From: http://terminology.hl7.org/CodeSystem/financialtaskinputtype in valuesets.xml
+
+   .. attribute:: Include
+      
+
+      The name of a resource to not include in a selection.
+      From: http://terminology.hl7.org/CodeSystem/financialtaskinputtype in valuesets.xml
+
+
+   .. attribute:: Exclude
+      
+
+      A reference to the response resource to the original processing of a resource.
+      From: http://terminology.hl7.org/CodeSystem/financialtaskinputtype in valuesets.xml
+
+
+   .. attribute:: OriginalResponse
+      
+
+      A reference value which must be quoted to authorize an action.
+      From: http://terminology.hl7.org/CodeSystem/financialtaskinputtype in valuesets.xml
+
+
+   .. attribute:: ReferenceNumber
+      
+
+      The sequence number associated with an item for reprocessing.
+      From: http://terminology.hl7.org/CodeSystem/financialtaskinputtype in valuesets.xml
+
+
+   .. attribute:: ItemNumber
+      
+
+      The reference period for the action being requested.
+      From: http://terminology.hl7.org/CodeSystem/financialtaskinputtype in valuesets.xml
+
+
+   .. attribute:: Period
+      
+
+      The processing status from a check on the processing status of a resource such
+      as the adjudication of a claim.
+      From: http://terminology.hl7.org/CodeSystem/financialtaskinputtype in valuesets.xml
+
+
+   .. attribute:: StatusCode
+      
+
+      
+
+

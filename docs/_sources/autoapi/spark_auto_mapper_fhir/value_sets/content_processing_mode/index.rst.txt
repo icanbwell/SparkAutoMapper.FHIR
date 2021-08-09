@@ -1,0 +1,53 @@
+:mod:`spark_auto_mapper_fhir.value_sets.content_processing_mode`
+================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.content_processing_mode
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.content_processing_mode.ContentProcessingMode
+   spark_auto_mapper_fhir.value_sets.content_processing_mode.ContentProcessingModeValues
+
+
+
+.. class:: ContentProcessingMode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.ContentProcessingMode
+   From: http://terminology.hl7.org/ValueSet/v3-ContentProcessingMode in v3-codesystems.xml
+         Description:
+   Identifies the order in which content should be processed.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ContentProcessingMode
+
+      
+
+
+.. class:: ContentProcessingModeValues
+
+   Description:The content should be processed in a sequential fashion.
+   From: http://terminology.hl7.org/CodeSystem/v3-ContentProcessingMode in v3-codesystems.xml
+
+   .. attribute:: Sequential
+      
+
+      Description:The content may be processed in any order.
+      From: http://terminology.hl7.org/CodeSystem/v3-ContentProcessingMode in v3-codesystems.xml
+
+
+   .. attribute:: Unordered
+      
+
+      
+
+

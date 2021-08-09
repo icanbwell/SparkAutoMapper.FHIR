@@ -1,0 +1,130 @@
+:mod:`spark_auto_mapper_fhir.value_sets.provenance_history_record_activity_codes`
+=================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.provenance_history_record_activity_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.provenance_history_record_activity_codes.ProvenanceHistoryRecordActivityCodesCode
+   spark_auto_mapper_fhir.value_sets.provenance_history_record_activity_codes.ProvenanceHistoryRecordActivityCodesCodeValues
+
+
+
+.. class:: ProvenanceHistoryRecordActivityCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ProvenanceHistoryRecordActivityCodes
+   From: http://hl7.org/fhir/ValueSet/provenance-history-record-activity in valuesets.xml
+       Codes for Provenance activities that are relevant when capturing event history
+   for resources.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-DataOperation
+
+      
+
+
+.. class:: ProvenanceHistoryRecordActivityCodesCodeValues
+
+   Description:Act on an object or objects.
+   From: http://terminology.hl7.org/CodeSystem/v3-DataOperation in v3-codesystems.xml
+
+   .. attribute:: Operate
+      
+
+      From: http://hl7.org/fhir/ValueSet/provenance-history-record-activity in valuesets.xml
+
+
+   .. attribute:: Created
+      
+
+      From: http://hl7.org/fhir/ValueSet/provenance-history-record-activity in valuesets.xml
+
+
+   .. attribute:: Updated
+      
+
+      From: http://hl7.org/fhir/ValueSet/provenance-history-record-activity in valuesets.xml
+
+
+   .. attribute:: Deleted
+      
+
+      From: http://hl7.org/fhir/ValueSet/provenance-history-record-activity in valuesets.xml
+
+
+   .. attribute:: Stopped_Ended_Aborted
+      
+
+      From: http://hl7.org/fhir/ValueSet/provenance-history-record-activity in valuesets.xml
+
+
+   .. attribute:: Held
+      
+
+      From: http://hl7.org/fhir/ValueSet/provenance-history-record-activity in valuesets.xml
+
+
+   .. attribute:: Released
+      
+
+      From: http://hl7.org/fhir/ValueSet/provenance-history-record-activity in valuesets.xml
+
+
+   .. attribute:: Cancelled
+      
+
+      From: http://hl7.org/fhir/ValueSet/provenance-history-record-activity in valuesets.xml
+
+
+   .. attribute:: Activated
+      
+
+      From: http://hl7.org/fhir/ValueSet/provenance-history-record-activity in valuesets.xml
+
+
+   .. attribute:: Suspended
+      
+
+      From: http://hl7.org/fhir/ValueSet/provenance-history-record-activity in valuesets.xml
+
+
+   .. attribute:: RESUME
+      
+
+      From: http://hl7.org/fhir/ValueSet/provenance-history-record-activity in valuesets.xml
+
+
+   .. attribute:: Completed
+      
+
+      From: http://hl7.org/fhir/ValueSet/provenance-history-record-activity in valuesets.xml
+
+
+   .. attribute:: MarkEntered_in_error
+      
+
+      From: http://hl7.org/fhir/ValueSet/provenance-history-record-activity in valuesets.xml
+
+
+   .. attribute:: Replaced
+      
+
+      From: http://hl7.org/fhir/ValueSet/provenance-history-record-activity in valuesets.xml
+
+
+   .. attribute:: Reactivated
+      
+
+      
+
+

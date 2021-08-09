@@ -1,0 +1,96 @@
+:mod:`spark_auto_mapper_fhir.value_sets.adjudication_value_codes`
+=================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.adjudication_value_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.adjudication_value_codes.AdjudicationValueCodesCode
+   spark_auto_mapper_fhir.value_sets.adjudication_value_codes.AdjudicationValueCodesCodeValues
+
+
+
+.. class:: AdjudicationValueCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   AdjudicationValueCodes
+   From: http://terminology.hl7.org/CodeSystem/adjudication in valuesets.xml
+       This value set includes a smattering of Adjudication Value codes which
+   includes codes to indicate the amounts eligible under the plan, the amount of
+   benefit, copays etc.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/adjudication
+
+      
+
+
+.. class:: AdjudicationValueCodesCodeValues
+
+   The total submitted amount for the claim or group or line item.
+   From: http://terminology.hl7.org/CodeSystem/adjudication in valuesets.xml
+
+   .. attribute:: SubmittedAmount
+      
+
+      Patient Co-Payment
+      From: http://terminology.hl7.org/CodeSystem/adjudication in valuesets.xml
+
+
+   .. attribute:: CoPay
+      
+
+      Amount of the change which is considered for adjudication.
+      From: http://terminology.hl7.org/CodeSystem/adjudication in valuesets.xml
+
+
+   .. attribute:: EligibleAmount
+      
+
+      Amount deducted from the eligible amount prior to adjudication.
+      From: http://terminology.hl7.org/CodeSystem/adjudication in valuesets.xml
+
+
+   .. attribute:: Deductible
+      
+
+      The amount of deductible which could not allocated to other line items.
+      From: http://terminology.hl7.org/CodeSystem/adjudication in valuesets.xml
+
+
+   .. attribute:: UnallocatedDeductible
+      
+
+      Eligible Percentage.
+      From: http://terminology.hl7.org/CodeSystem/adjudication in valuesets.xml
+
+
+   .. attribute:: Eligible_
+      
+
+      The amount of tax.
+      From: http://terminology.hl7.org/CodeSystem/adjudication in valuesets.xml
+
+
+   .. attribute:: Tax
+      
+
+      Amount payable under the coverage
+      From: http://terminology.hl7.org/CodeSystem/adjudication in valuesets.xml
+
+
+   .. attribute:: BenefitAmount
+      
+
+      
+
+

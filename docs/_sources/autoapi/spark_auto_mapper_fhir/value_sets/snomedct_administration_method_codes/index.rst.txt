@@ -1,0 +1,34 @@
+:mod:`spark_auto_mapper_fhir.value_sets.snomedct_administration_method_codes`
+=============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.snomedct_administration_method_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.snomedct_administration_method_codes.SNOMEDCTAdministrationMethodCodesCode
+
+
+
+.. class:: SNOMEDCTAdministrationMethodCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   SNOMEDCTAdministrationMethodCodes
+   From: http://hl7.org/fhir/ValueSet/administration-method-codes in valuesets.xml
+       This value set includes some method codes from SNOMED CT - provided as an
+   exemplar
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+

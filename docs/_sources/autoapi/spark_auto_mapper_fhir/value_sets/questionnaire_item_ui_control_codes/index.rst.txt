@@ -1,0 +1,60 @@
+:mod:`spark_auto_mapper_fhir.value_sets.questionnaire_item_ui_control_codes`
+============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.questionnaire_item_ui_control_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.questionnaire_item_ui_control_codes.QuestionnaireItemUIControlCodesCode
+   spark_auto_mapper_fhir.value_sets.questionnaire_item_ui_control_codes.QuestionnaireItemUIControlCodesCodeValues
+
+
+
+.. class:: QuestionnaireItemUIControlCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   QuestionnaireItemUIControlCodes
+   From: http://hl7.org/fhir/questionnaire-item-control in valuesets.xml
+       Starter set of user interface control/display mechanisms that might be used
+   when rendering an item in a questionnaire.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/questionnaire-item-control
+
+      
+
+
+.. class:: QuestionnaireItemUIControlCodesCodeValues
+
+   UI controls relevant to organizing groups of questions
+   From: http://hl7.org/fhir/questionnaire-item-control in valuesets.xml
+
+   .. attribute:: Group
+      
+
+      UI controls relevant to rendering questionnaire text items
+      From: http://hl7.org/fhir/questionnaire-item-control in valuesets.xml
+
+
+   .. attribute:: Text
+      
+
+      UI controls relevant to capturing question data
+      From: http://hl7.org/fhir/questionnaire-item-control in valuesets.xml
+
+
+   .. attribute:: Question
+      
+
+      
+
+

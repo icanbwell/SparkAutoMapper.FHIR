@@ -1,0 +1,135 @@
+:mod:`spark_auto_mapper_fhir.value_sets.event_timing`
+=====================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.event_timing
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.event_timing.EventTimingCode
+   spark_auto_mapper_fhir.value_sets.event_timing.EventTimingCodeValues
+
+
+
+.. class:: EventTimingCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   EventTiming
+   From: http://hl7.org/fhir/event-timing in valuesets.xml
+       Real world event relating to the schedule.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/event-timing
+
+      
+
+
+.. class:: EventTimingCodeValues
+
+   Event occurs during the morning. The exact time is unspecified and established
+   by institution convention or patient interpretation.
+   From: http://hl7.org/fhir/event-timing in valuesets.xml
+
+   .. attribute:: Morning
+      
+
+      Event occurs during the early morning. The exact time is unspecified and
+      established by institution convention or patient interpretation.
+      From: http://hl7.org/fhir/event-timing in valuesets.xml
+
+
+   .. attribute:: EarlyMorning
+      
+
+      Event occurs during the late morning. The exact time is unspecified and
+      established by institution convention or patient interpretation.
+      From: http://hl7.org/fhir/event-timing in valuesets.xml
+
+
+   .. attribute:: LateMorning
+      
+
+      Event occurs around 12:00pm. The exact time is unspecified and established by
+      institution convention or patient interpretation.
+      From: http://hl7.org/fhir/event-timing in valuesets.xml
+
+
+   .. attribute:: Noon
+      
+
+      Event occurs during the afternoon. The exact time is unspecified and
+      established by institution convention or patient interpretation.
+      From: http://hl7.org/fhir/event-timing in valuesets.xml
+
+
+   .. attribute:: Afternoon
+      
+
+      Event occurs during the early afternoon. The exact time is unspecified and
+      established by institution convention or patient interpretation.
+      From: http://hl7.org/fhir/event-timing in valuesets.xml
+
+
+   .. attribute:: EarlyAfternoon
+      
+
+      Event occurs during the late afternoon. The exact time is unspecified and
+      established by institution convention or patient interpretation.
+      From: http://hl7.org/fhir/event-timing in valuesets.xml
+
+
+   .. attribute:: LateAfternoon
+      
+
+      Event occurs during the evening. The exact time is unspecified and established
+      by institution convention or patient interpretation.
+      From: http://hl7.org/fhir/event-timing in valuesets.xml
+
+
+   .. attribute:: Evening
+      
+
+      Event occurs during the early evening. The exact time is unspecified and
+      established by institution convention or patient interpretation.
+      From: http://hl7.org/fhir/event-timing in valuesets.xml
+
+
+   .. attribute:: EarlyEvening
+      
+
+      Event occurs during the late evening. The exact time is unspecified and
+      established by institution convention or patient interpretation.
+      From: http://hl7.org/fhir/event-timing in valuesets.xml
+
+
+   .. attribute:: LateEvening
+      
+
+      Event occurs during the night. The exact time is unspecified and established
+      by institution convention or patient interpretation.
+      From: http://hl7.org/fhir/event-timing in valuesets.xml
+
+
+   .. attribute:: Night
+      
+
+      Event occurs [offset] after subject goes to sleep. The exact time is
+      unspecified and established by institution convention or patient
+      interpretation.
+      From: http://hl7.org/fhir/event-timing in valuesets.xml
+
+
+   .. attribute:: AfterSleep
+      
+
+      
+
+

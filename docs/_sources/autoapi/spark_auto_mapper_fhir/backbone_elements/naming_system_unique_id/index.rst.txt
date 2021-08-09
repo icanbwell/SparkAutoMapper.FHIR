@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.naming_system_unique_id`
+=======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.naming_system_unique_id
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.naming_system_unique_id.NamingSystemUniqueId
+
+
+
+.. class:: NamingSystemUniqueId(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, type_: spark_auto_mapper_fhir.value_sets.naming_system_identifier_type.NamingSystemIdentifierTypeCode, value: spark_auto_mapper_fhir.fhir_types.string.FhirString, preferred: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, comment: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, period: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   NamingSystem.UniqueId
+   A curated namespace that issues unique symbols within that namespace for the identification of concepts, people, devices, etc.  Represents a "System" used within the Identifier and Coding data types.
+
+

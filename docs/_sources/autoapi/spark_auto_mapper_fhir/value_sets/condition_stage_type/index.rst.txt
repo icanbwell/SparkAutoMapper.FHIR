@@ -1,0 +1,50 @@
+:mod:`spark_auto_mapper_fhir.value_sets.condition_stage_type`
+=============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.condition_stage_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.condition_stage_type.ConditionStageTypeCode
+   spark_auto_mapper_fhir.value_sets.condition_stage_type.ConditionStageTypeCodeValues
+
+
+
+.. class:: ConditionStageTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ConditionStageType
+   From: http://hl7.org/fhir/ValueSet/condition-stage-type in valuesets.xml
+       Example value set for the type of stages of cancer and other conditions
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+
+.. class:: ConditionStageTypeCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/condition-stage-type in valuesets.xml
+
+   .. attribute:: PathologicalStaging_qualifierValue_
+      
+
+      From: http://hl7.org/fhir/ValueSet/condition-stage-type in valuesets.xml
+
+
+   .. attribute:: ClinicalStaging_qualifierValue_
+      
+
+      
+
+

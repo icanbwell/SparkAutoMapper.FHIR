@@ -1,0 +1,57 @@
+:mod:`spark_auto_mapper_fhir.value_sets.act_mood`
+=================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.act_mood
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.act_mood.ActMood
+   spark_auto_mapper_fhir.value_sets.act_mood.ActMoodValues
+
+
+
+.. class:: ActMood(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.ActMood
+   From: http://terminology.hl7.org/ValueSet/v3-ActMood in v3-codesystems.xml
+        OpenIssue:  In Ballot 2009May, a strong Negative vote was lodged against
+   several of the concept definitions in the vocabulary used for Act.moodCode.
+   The vote was found "Persuasive With Mod", with the understanding that M and M
+   would undertake a detailed review of these concept definitions for a future
+   release of the RIM.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ActMood
+
+      
+
+
+.. class:: ActMoodValues
+
+   These are moods describing activities as they progress in the business cycle,
+   from defined, through planned and ordered to completed.
+   From: http://terminology.hl7.org/CodeSystem/v3-ActMood in v3-codesystems.xml
+
+   .. attribute:: ActMoodCompletionTrack
+      
+
+      Definition: An act that expresses condition statements for other acts.
+      From: http://terminology.hl7.org/CodeSystem/v3-ActMood in v3-codesystems.xml
+
+
+   .. attribute:: ActMoodPredicate
+      
+
+      
+
+

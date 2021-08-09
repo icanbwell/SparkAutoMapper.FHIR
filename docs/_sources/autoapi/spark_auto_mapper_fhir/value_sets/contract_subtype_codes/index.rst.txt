@@ -1,0 +1,52 @@
+:mod:`spark_auto_mapper_fhir.value_sets.contract_subtype_codes`
+===============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.contract_subtype_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.contract_subtype_codes.ContractSubtypeCodesCode
+   spark_auto_mapper_fhir.value_sets.contract_subtype_codes.ContractSubtypeCodesCodeValues
+
+
+
+.. class:: ContractSubtypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ContractSubtypeCodes
+   From: http://terminology.hl7.org/CodeSystem/contractsubtypecodes in valuesets.xml
+       This value set includes sample Contract Subtype codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/contractsubtypecodes
+
+      
+
+
+.. class:: ContractSubtypeCodesCodeValues
+
+   Canadian health information disclosure policy.
+   From: http://terminology.hl7.org/CodeSystem/contractsubtypecodes in valuesets.xml
+
+   .. attribute:: Disclosure_CA
+      
+
+      United States health information disclosure policy.
+      From: http://terminology.hl7.org/CodeSystem/contractsubtypecodes in valuesets.xml
+
+
+   .. attribute:: Disclosure_US
+      
+
+      
+
+

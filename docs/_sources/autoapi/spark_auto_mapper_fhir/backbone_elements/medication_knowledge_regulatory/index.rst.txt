@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.medication_knowledge_regulatory`
+===============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.medication_knowledge_regulatory
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.medication_knowledge_regulatory.MedicationKnowledgeRegulatory
+
+
+
+.. class:: MedicationKnowledgeRegulatory(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, regulatoryAuthority: spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.organization.Organization], substitution: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.medication_knowledge_substitution.MedicationKnowledgeSubstitution]] = None, schedule: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.medication_knowledge_schedule.MedicationKnowledgeSchedule]] = None, maxDispense: Optional[spark_auto_mapper_fhir.backbone_elements.medication_knowledge_max_dispense.MedicationKnowledgeMaxDispense] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   MedicationKnowledge.Regulatory
+   Information about a medication that is used to support knowledge.
+
+

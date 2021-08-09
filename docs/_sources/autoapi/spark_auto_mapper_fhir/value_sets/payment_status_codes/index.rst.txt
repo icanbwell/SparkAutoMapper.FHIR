@@ -1,0 +1,52 @@
+:mod:`spark_auto_mapper_fhir.value_sets.payment_status_codes`
+=============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.payment_status_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.payment_status_codes.PaymentStatusCodesCode
+   spark_auto_mapper_fhir.value_sets.payment_status_codes.PaymentStatusCodesCodeValues
+
+
+
+.. class:: PaymentStatusCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   PaymentStatusCodes
+   From: http://terminology.hl7.org/CodeSystem/paymentstatus in valuesets.xml
+       This value set includes a sample set of Payment Status codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/paymentstatus
+
+      
+
+
+.. class:: PaymentStatusCodesCodeValues
+
+   The payment has been sent physically or electronically.
+   From: http://terminology.hl7.org/CodeSystem/paymentstatus in valuesets.xml
+
+   .. attribute:: Paid
+      
+
+      The payment has been received by the payee.
+      From: http://terminology.hl7.org/CodeSystem/paymentstatus in valuesets.xml
+
+
+   .. attribute:: Cleared
+      
+
+      
+
+

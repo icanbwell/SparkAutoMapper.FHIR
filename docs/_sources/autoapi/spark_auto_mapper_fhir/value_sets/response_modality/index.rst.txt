@@ -1,0 +1,61 @@
+:mod:`spark_auto_mapper_fhir.value_sets.response_modality`
+==========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.response_modality
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.response_modality.ResponseModality
+   spark_auto_mapper_fhir.value_sets.response_modality.ResponseModalityValues
+
+
+
+.. class:: ResponseModality(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.ResponseModality
+   From: http://terminology.hl7.org/ValueSet/v3-ResponseModality in v3-codesystems.xml
+        Defines the timing and grouping of the response instances.  OpenIssue:
+   Description copied from Concept Domain of same name.  Must be verified.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ResponseModality
+
+      
+
+
+.. class:: ResponseModalityValues
+
+   Query response to be sent as an HL7 Batch.
+   From: http://terminology.hl7.org/CodeSystem/v3-ResponseModality in v3-codesystems.xml
+
+   .. attribute:: Batch
+      
+
+      Query response to occur in real time.
+      From: http://terminology.hl7.org/CodeSystem/v3-ResponseModality in v3-codesystems.xml
+
+
+   .. attribute:: RealTime
+      
+
+      Query response to sent as a series of responses at the same time without the
+      use of batch formatting.
+      From: http://terminology.hl7.org/CodeSystem/v3-ResponseModality in v3-codesystems.xml
+
+
+   .. attribute:: Bolus
+      
+
+      
+
+

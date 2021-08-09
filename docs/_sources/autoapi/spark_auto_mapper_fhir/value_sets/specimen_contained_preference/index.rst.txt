@@ -1,0 +1,52 @@
+:mod:`spark_auto_mapper_fhir.value_sets.specimen_contained_preference`
+======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.specimen_contained_preference
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.specimen_contained_preference.SpecimenContainedPreferenceCode
+   spark_auto_mapper_fhir.value_sets.specimen_contained_preference.SpecimenContainedPreferenceCodeValues
+
+
+
+.. class:: SpecimenContainedPreferenceCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   SpecimenContainedPreference
+   From: http://hl7.org/fhir/specimen-contained-preference in valuesets.xml
+       Degree of preference of a type of conditioned specimen.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/specimen-contained-preference
+
+      
+
+
+.. class:: SpecimenContainedPreferenceCodeValues
+
+   This type of contained specimen is preferred to collect this kind of specimen.
+   From: http://hl7.org/fhir/specimen-contained-preference in valuesets.xml
+
+   .. attribute:: Preferred
+      
+
+      This type of conditioned specimen is an alternate.
+      From: http://hl7.org/fhir/specimen-contained-preference in valuesets.xml
+
+
+   .. attribute:: Alternate
+      
+
+      
+
+

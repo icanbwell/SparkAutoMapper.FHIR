@@ -1,0 +1,64 @@
+:mod:`spark_auto_mapper_fhir.value_sets.medication_administration_performer_function_codes`
+===========================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.medication_administration_performer_function_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.medication_administration_performer_function_codes.MedicationAdministrationPerformerFunctionCodesCode
+   spark_auto_mapper_fhir.value_sets.medication_administration_performer_function_codes.MedicationAdministrationPerformerFunctionCodesCodeValues
+
+
+
+.. class:: MedicationAdministrationPerformerFunctionCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   MedicationAdministration Performer Function Codes
+   From: http://terminology.hl7.org/CodeSystem/med-admin-perform-function in valuesets.xml
+       MedicationAdministration Performer Function Codes
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/med-admin-perform-function
+
+      
+
+
+.. class:: MedicationAdministrationPerformerFunctionCodesCodeValues
+
+   A person, non-person living subject, organization or device that who actually
+   and principally carries out the action
+   From: http://terminology.hl7.org/CodeSystem/med-admin-perform-function in valuesets.xml
+
+   .. attribute:: Performer
+      
+
+      A person who verifies the correctness and appropriateness of the service
+      (plan, order, event, etc.) and hence takes on accountability.
+      From: http://terminology.hl7.org/CodeSystem/med-admin-perform-function in valuesets.xml
+
+
+   .. attribute:: Verifier
+      
+
+      A person witnessing the action happening without doing anything. A witness is
+      not necessarily aware, much less approves of anything stated in the service
+      event. Example for a witness is students watching an operation or an advanced
+      directive witness.
+      From: http://terminology.hl7.org/CodeSystem/med-admin-perform-function in valuesets.xml
+
+
+   .. attribute:: Witness
+      
+
+      
+
+

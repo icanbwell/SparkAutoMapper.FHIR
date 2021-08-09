@@ -1,0 +1,82 @@
+:mod:`spark_auto_mapper_fhir.value_sets.consent_state`
+======================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.consent_state
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.consent_state.ConsentStateCode
+   spark_auto_mapper_fhir.value_sets.consent_state.ConsentStateCodeValues
+
+
+
+.. class:: ConsentStateCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ConsentState
+   From: http://hl7.org/fhir/consent-state-codes in valuesets.xml
+       Indicates the state of the consent.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/consent-state-codes
+
+      
+
+
+.. class:: ConsentStateCodeValues
+
+   The consent is in development or awaiting use but is not yet intended to be
+   acted upon.
+   From: http://hl7.org/fhir/consent-state-codes in valuesets.xml
+
+   .. attribute:: Pending
+      
+
+      The consent has been proposed but not yet agreed to by all parties. The
+      negotiation stage.
+      From: http://hl7.org/fhir/consent-state-codes in valuesets.xml
+
+
+   .. attribute:: Proposed
+      
+
+      The consent is to be followed and enforced.
+      From: http://hl7.org/fhir/consent-state-codes in valuesets.xml
+
+
+   .. attribute:: Active
+      
+
+      The consent has been rejected by one or more of the parties.
+      From: http://hl7.org/fhir/consent-state-codes in valuesets.xml
+
+
+   .. attribute:: Rejected
+      
+
+      The consent is terminated or replaced.
+      From: http://hl7.org/fhir/consent-state-codes in valuesets.xml
+
+
+   .. attribute:: Inactive
+      
+
+      The consent was created wrongly (e.g. wrong patient) and should be ignored.
+      From: http://hl7.org/fhir/consent-state-codes in valuesets.xml
+
+
+   .. attribute:: EnteredInError
+      
+
+      
+
+

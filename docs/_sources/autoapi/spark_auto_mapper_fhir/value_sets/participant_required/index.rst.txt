@@ -1,0 +1,61 @@
+:mod:`spark_auto_mapper_fhir.value_sets.participant_required`
+=============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.participant_required
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.participant_required.ParticipantRequiredCode
+   spark_auto_mapper_fhir.value_sets.participant_required.ParticipantRequiredCodeValues
+
+
+
+.. class:: ParticipantRequiredCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ParticipantRequired
+   From: http://hl7.org/fhir/participantrequired in valuesets.xml
+       Is the Participant required to attend the appointment.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/participantrequired
+
+      
+
+
+.. class:: ParticipantRequiredCodeValues
+
+   The participant is required to attend the appointment.
+   From: http://hl7.org/fhir/participantrequired in valuesets.xml
+
+   .. attribute:: Required
+      
+
+      The participant may optionally attend the appointment.
+      From: http://hl7.org/fhir/participantrequired in valuesets.xml
+
+
+   .. attribute:: Optional
+      
+
+      The participant is excluded from the appointment, and might not be informed of
+      the appointment taking place. (Appointment is about them, not for them - such
+      as 2 doctors discussing results about a patient's test).
+      From: http://hl7.org/fhir/participantrequired in valuesets.xml
+
+
+   .. attribute:: InformationOnly
+      
+
+      
+
+

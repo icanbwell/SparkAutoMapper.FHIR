@@ -1,0 +1,53 @@
+:mod:`spark_auto_mapper_fhir.value_sets.language_preference_type`
+=================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.language_preference_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.language_preference_type.LanguagePreferenceTypeCode
+   spark_auto_mapper_fhir.value_sets.language_preference_type.LanguagePreferenceTypeCodeValues
+
+
+
+.. class:: LanguagePreferenceTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   LanguagePreferenceType
+   From: http://hl7.org/fhir/language-preference-type in valuesets.xml
+       This value set defines the set of codes for describing the type or mode of the
+   patient's preferred language.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/language-preference-type
+
+      
+
+
+.. class:: LanguagePreferenceTypeCodeValues
+
+   The patient prefers to verbally communicate with the associated language.
+   From: http://hl7.org/fhir/language-preference-type in valuesets.xml
+
+   .. attribute:: Verbal
+      
+
+      The patient prefers to communicate in writing with the associated language.
+      From: http://hl7.org/fhir/language-preference-type in valuesets.xml
+
+
+   .. attribute:: Written
+      
+
+      
+
+

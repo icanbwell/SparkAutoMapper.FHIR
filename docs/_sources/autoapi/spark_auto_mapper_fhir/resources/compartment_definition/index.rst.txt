@@ -1,0 +1,32 @@
+:mod:`spark_auto_mapper_fhir.resources.compartment_definition`
+==============================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.compartment_definition
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.compartment_definition.CompartmentDefinition
+
+
+
+.. class:: CompartmentDefinition(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, url: spark_auto_mapper_fhir.fhir_types.uri.FhirUri, version: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, name: spark_auto_mapper_fhir.fhir_types.string.FhirString, status: spark_auto_mapper_fhir.value_sets.publication_status.PublicationStatusCode, experimental: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, date: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, publisher: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, contact: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.contact_detail.ContactDetail]] = None, description: Optional[spark_auto_mapper_fhir.fhir_types.markdown.FhirMarkdown] = None, useContext: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.usage_context.UsageContext]] = None, purpose: Optional[spark_auto_mapper_fhir.fhir_types.markdown.FhirMarkdown] = None, code: spark_auto_mapper_fhir.value_sets.compartment_type.CompartmentTypeCode, search: spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean, resource: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.compartment_definition_resource.CompartmentDefinitionResource]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   CompartmentDefinition
+   compartmentdefinition.xsd
+       A compartment definition that defines how resources are accessed on a server.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

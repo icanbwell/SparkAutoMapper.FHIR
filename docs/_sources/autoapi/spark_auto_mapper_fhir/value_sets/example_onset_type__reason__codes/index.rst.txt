@@ -1,0 +1,60 @@
+:mod:`spark_auto_mapper_fhir.value_sets.example_onset_type__reason__codes`
+==========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.example_onset_type__reason__codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.example_onset_type__reason__codes.ExampleOnsetType_Reason_CodesCode
+   spark_auto_mapper_fhir.value_sets.example_onset_type__reason__codes.ExampleOnsetType_Reason_CodesCodeValues
+
+
+
+.. class:: ExampleOnsetType_Reason_CodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ExampleOnsetType(Reason)Codes
+   From: http://hl7.org/fhir/ex-onsettype in valuesets.xml
+       This value set includes example Onset Type codes which are used to identify
+   the event for which the onset, starting date, is required.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/ex-onsettype
+
+      
+
+
+.. class:: ExampleOnsetType_Reason_CodesCodeValues
+
+   Date of last examination.
+   From: http://hl7.org/fhir/ex-onsettype in valuesets.xml
+
+   .. attribute:: LastExam
+      
+
+      Date when symptoms were first noticed.
+      From: http://hl7.org/fhir/ex-onsettype in valuesets.xml
+
+
+   .. attribute:: StartOfSymptoms
+      
+
+      Start date of last menstruation.
+      From: http://hl7.org/fhir/ex-onsettype in valuesets.xml
+
+
+   .. attribute:: LastMenstruation
+      
+
+      
+
+

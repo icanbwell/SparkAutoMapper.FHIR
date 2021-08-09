@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.account_coverage`
+================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.account_coverage
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.account_coverage.AccountCoverage
+
+
+
+.. class:: AccountCoverage(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, coverage: spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.coverage.Coverage], priority: Optional[spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   Account.Coverage
+   A financial tool for tracking value accrued for a particular purpose.  In the healthcare field, used to track charges for a patient, cost centers, etc.
+
+

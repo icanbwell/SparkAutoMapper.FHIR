@@ -1,0 +1,73 @@
+:mod:`spark_auto_mapper_fhir.value_sets.goal_category`
+======================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.goal_category
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.goal_category.GoalCategoryCode
+   spark_auto_mapper_fhir.value_sets.goal_category.GoalCategoryCodeValues
+
+
+
+.. class:: GoalCategoryCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   GoalCategory
+   From: http://terminology.hl7.org/CodeSystem/goal-category in valuesets.xml
+       Example codes for grouping goals to use for filtering or presentation.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/goal-category
+
+      
+
+
+.. class:: GoalCategoryCodeValues
+
+   Goals related to the consumption of food and/or beverages.
+   From: http://terminology.hl7.org/CodeSystem/goal-category in valuesets.xml
+
+   .. attribute:: Dietary
+      
+
+      Goals related to the personal protection of the subject.
+      From: http://terminology.hl7.org/CodeSystem/goal-category in valuesets.xml
+
+
+   .. attribute:: Safety
+      
+
+      Goals related to the manner in which the subject acts.
+      From: http://terminology.hl7.org/CodeSystem/goal-category in valuesets.xml
+
+
+   .. attribute:: Behavioral
+      
+
+      Goals related to the practice of nursing or established by nurses.
+      From: http://terminology.hl7.org/CodeSystem/goal-category in valuesets.xml
+
+
+   .. attribute:: Nursing
+      
+
+      Goals related to the mobility and/or motor capability of the subject.
+      From: http://terminology.hl7.org/CodeSystem/goal-category in valuesets.xml
+
+
+   .. attribute:: Physiotherapy
+      
+
+      
+
+

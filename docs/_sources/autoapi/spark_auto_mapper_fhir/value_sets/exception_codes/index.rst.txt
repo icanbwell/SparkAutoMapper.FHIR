@@ -1,0 +1,52 @@
+:mod:`spark_auto_mapper_fhir.value_sets.exception_codes`
+========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.exception_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.exception_codes.ExceptionCodesCode
+   spark_auto_mapper_fhir.value_sets.exception_codes.ExceptionCodesCodeValues
+
+
+
+.. class:: ExceptionCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ExceptionCodes
+   From: http://terminology.hl7.org/CodeSystem/claim-exception in valuesets.xml
+       This value set includes sample Exception codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/claim-exception
+
+      
+
+
+.. class:: ExceptionCodesCodeValues
+
+   Fulltime Student
+   From: http://terminology.hl7.org/CodeSystem/claim-exception in valuesets.xml
+
+   .. attribute:: Student_Fulltime_
+      
+
+      Disabled
+      From: http://terminology.hl7.org/CodeSystem/claim-exception in valuesets.xml
+
+
+   .. attribute:: Disabled
+      
+
+      
+
+

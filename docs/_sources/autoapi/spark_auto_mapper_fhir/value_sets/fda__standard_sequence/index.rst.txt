@@ -1,0 +1,33 @@
+:mod:`spark_auto_mapper_fhir.value_sets.fda__standard_sequence`
+===============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.fda__standard_sequence
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.fda__standard_sequence.FDA_StandardSequenceCode
+
+
+
+.. class:: FDA_StandardSequenceCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   FDA-StandardSequence
+   From: http://hl7.org/fhir/ValueSet/sequence-quality-standardSequence in valuesets.xml
+       This value set includes sequence quality standard
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = https://precision.fda.gov/files
+
+      
+
+

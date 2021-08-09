@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.claim_insurance`
+===============================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.claim_insurance
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.claim_insurance.ClaimInsurance
+
+
+
+.. class:: ClaimInsurance(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, sequence: spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt, focal: spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean, identifier: Optional[spark_auto_mapper_fhir.complex_types.identifier.Identifier] = None, coverage: spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.coverage.Coverage], businessArrangement: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, preAuthRef: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.string.FhirString]] = None, claimResponse: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.claim_response.ClaimResponse]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   Claim.Insurance
+   A provider issued list of professional services and products which have been provided, or are to be provided, to a patient which is sent to an insurer for reimbursement.
+
+

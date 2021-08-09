@@ -1,0 +1,99 @@
+:mod:`spark_auto_mapper_fhir.value_sets.device_definition_property_code`
+========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.device_definition_property_code
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.device_definition_property_code.DeviceDefinitionPropertyCodeCode
+   spark_auto_mapper_fhir.value_sets.device_definition_property_code.DeviceDefinitionPropertyCodeCodeValues
+
+
+
+.. class:: DeviceDefinitionPropertyCodeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   DeviceDefinitionPropertyCode
+   From: http://hl7.org/fhir/ValueSet/device-component-property in valuesets.xml
+       Codes for identifying device properties.   This is based upon IEEE/HCD
+   specified codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = urn:iso:std:iso:11073:10101
+
+      
+
+
+.. class:: DeviceDefinitionPropertyCodeCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/device-component-property in valuesets.xml
+
+   .. attribute:: MDC_TIME_CAP_STATE
+      
+
+      From: http://hl7.org/fhir/ValueSet/device-component-property in valuesets.xml
+
+
+   .. attribute:: MDC_TIME_SYNC_PROTOCOL
+      
+
+      From: http://hl7.org/fhir/ValueSet/device-component-property in valuesets.xml
+
+
+   .. attribute:: MDC_TIME_SYNC_ACCURACY
+      
+
+      From: http://hl7.org/fhir/ValueSet/device-component-property in valuesets.xml
+
+
+   .. attribute:: MDC_TIME_RES_ABS
+      
+
+      From: http://hl7.org/fhir/ValueSet/device-component-property in valuesets.xml
+
+
+   .. attribute:: MDC_TIME_RES_REL
+      
+
+      From: http://hl7.org/fhir/ValueSet/device-component-property in valuesets.xml
+
+
+   .. attribute:: MDC_TIME_RES_REL_HI_RES
+      
+
+      From: http://hl7.org/fhir/ValueSet/device-component-property in valuesets.xml
+
+
+   .. attribute:: MDC_TIME_RES_BO
+      
+
+      From: http://hl7.org/fhir/ValueSet/device-component-property in valuesets.xml
+
+
+   .. attribute:: MDC_REG_CERT_DATA_CONTINUA_CERT_DEV_LIST
+      
+
+      From: http://hl7.org/fhir/ValueSet/device-component-property in valuesets.xml
+
+
+   .. attribute:: MDC_REG_CERT_DATA_CONTINUA_REG_STATUS
+      
+
+      From: http://hl7.org/fhir/ValueSet/device-component-property in valuesets.xml
+
+
+   .. attribute:: MDC_REG_CERT_DATA_CONTINUA_PHG_CERT_LIST
+      
+
+      
+
+

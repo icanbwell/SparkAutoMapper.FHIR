@@ -1,0 +1,106 @@
+:mod:`spark_auto_mapper_fhir.value_sets.search_comparator`
+==========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.search_comparator
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.search_comparator.SearchComparatorCode
+   spark_auto_mapper_fhir.value_sets.search_comparator.SearchComparatorCodeValues
+
+
+
+.. class:: SearchComparatorCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   SearchComparator
+   From: http://hl7.org/fhir/search-comparator in valuesets.xml
+       What Search Comparator Codes are supported in search.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/search-comparator
+
+      
+
+
+.. class:: SearchComparatorCodeValues
+
+   the value for the parameter in the resource is equal to the provided value.
+   From: http://hl7.org/fhir/search-comparator in valuesets.xml
+
+   .. attribute:: Equals
+      
+
+      the value for the parameter in the resource is not equal to the provided
+      value.
+      From: http://hl7.org/fhir/search-comparator in valuesets.xml
+
+
+   .. attribute:: NotEquals
+      
+
+      the value for the parameter in the resource is greater than the provided
+      value.
+      From: http://hl7.org/fhir/search-comparator in valuesets.xml
+
+
+   .. attribute:: GreaterThan
+      
+
+      the value for the parameter in the resource is less than the provided value.
+      From: http://hl7.org/fhir/search-comparator in valuesets.xml
+
+
+   .. attribute:: LessThan
+      
+
+      the value for the parameter in the resource is greater or equal to the
+      provided value.
+      From: http://hl7.org/fhir/search-comparator in valuesets.xml
+
+
+   .. attribute:: GreaterOrEquals
+      
+
+      the value for the parameter in the resource is less or equal to the provided
+      value.
+      From: http://hl7.org/fhir/search-comparator in valuesets.xml
+
+
+   .. attribute:: LessOfEqual
+      
+
+      the value for the parameter in the resource starts after the provided value.
+      From: http://hl7.org/fhir/search-comparator in valuesets.xml
+
+
+   .. attribute:: StartsAfter
+      
+
+      the value for the parameter in the resource ends before the provided value.
+      From: http://hl7.org/fhir/search-comparator in valuesets.xml
+
+
+   .. attribute:: EndsBefore
+      
+
+      the value for the parameter in the resource is approximately the same to the
+      provided value.
+      From: http://hl7.org/fhir/search-comparator in valuesets.xml
+
+
+   .. attribute:: Approximately
+      
+
+      
+
+

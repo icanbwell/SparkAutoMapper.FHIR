@@ -1,0 +1,56 @@
+:mod:`spark_auto_mapper_fhir.value_sets.location_mode`
+======================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.location_mode
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.location_mode.LocationModeCode
+   spark_auto_mapper_fhir.value_sets.location_mode.LocationModeCodeValues
+
+
+
+.. class:: LocationModeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   LocationMode
+   From: http://hl7.org/fhir/location-mode in valuesets.xml
+       Indicates whether a resource instance represents a specific location or a
+   class of locations.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/location-mode
+
+      
+
+
+.. class:: LocationModeCodeValues
+
+   The Location resource represents a specific instance of a location (e.g.
+   Operating Theatre 1A).
+   From: http://hl7.org/fhir/location-mode in valuesets.xml
+
+   .. attribute:: Instance
+      
+
+      The Location represents a class of locations (e.g. Any Operating Theatre)
+      although this class of locations could be constrained within a specific
+      boundary (such as organization, or parent location, address etc.).
+      From: http://hl7.org/fhir/location-mode in valuesets.xml
+
+
+   .. attribute:: Kind
+      
+
+      
+
+

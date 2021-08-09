@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.verification_result_primary_source`
+==================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.verification_result_primary_source
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.verification_result_primary_source.VerificationResultPrimarySource
+
+
+
+.. class:: VerificationResultPrimarySource(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, who: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.organization.Organization, spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole)]]] = None, type_: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.primary_source_type.Primary_source_typeCode]]] = None, communicationMethod: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.verificationresult_communication_method.Verificationresult_communication_methodCode]]] = None, validationStatus: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.validation_status.Validation_statusCode]] = None, validationDate: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, canPushUpdates: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.can_push_updates.Can_push_updatesCode]] = None, pushTypeAvailable: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.push_type_available.Push_type_availableCode]]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   VerificationResult.PrimarySource
+   Describes validation requirements, source(s), status and dates for one or more elements.
+
+

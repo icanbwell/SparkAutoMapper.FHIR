@@ -1,0 +1,59 @@
+:mod:`spark_auto_mapper_fhir.value_sets.medication_knowledge_status_codes`
+==========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.medication_knowledge_status_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.medication_knowledge_status_codes.MedicationKnowledgeStatusCodesCode
+   spark_auto_mapper_fhir.value_sets.medication_knowledge_status_codes.MedicationKnowledgeStatusCodesCodeValues
+
+
+
+.. class:: MedicationKnowledgeStatusCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   MedicationKnowledge Status Codes
+   From: http://terminology.hl7.org/CodeSystem/medicationknowledge-status in valuesets.xml
+       MedicationKnowledge Status Codes
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/medicationknowledge-status
+
+      
+
+
+.. class:: MedicationKnowledgeStatusCodesCodeValues
+
+   The medication is available for use.
+   From: http://terminology.hl7.org/CodeSystem/medicationknowledge-status in valuesets.xml
+
+   .. attribute:: Active
+      
+
+      The medication is not available for use.
+      From: http://terminology.hl7.org/CodeSystem/medicationknowledge-status in valuesets.xml
+
+
+   .. attribute:: Inactive
+      
+
+      The medication was entered in error.
+      From: http://terminology.hl7.org/CodeSystem/medicationknowledge-status in valuesets.xml
+
+
+   .. attribute:: EnteredInError
+      
+
+      
+
+

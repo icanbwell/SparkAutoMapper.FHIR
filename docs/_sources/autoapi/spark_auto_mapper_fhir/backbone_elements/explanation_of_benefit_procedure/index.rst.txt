@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_procedure`
+================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_procedure
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_procedure.ExplanationOfBenefitProcedure
+
+
+
+.. class:: ExplanationOfBenefitProcedure(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, sequence: spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt, type_: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.example_procedure_type_codes.ExampleProcedureTypeCodesCode]]] = None, date: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, procedureCodeableConcept: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.icd_10_procedure_codes.ICD_10ProcedureCodesCode]] = None, procedureReference: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.procedure.Procedure]] = None, udi: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.device.Device]]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   ExplanationOfBenefit.Procedure
+   This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided.
+
+

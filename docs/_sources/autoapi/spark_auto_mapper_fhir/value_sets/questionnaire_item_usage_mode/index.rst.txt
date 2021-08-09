@@ -1,0 +1,76 @@
+:mod:`spark_auto_mapper_fhir.value_sets.questionnaire_item_usage_mode`
+======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.questionnaire_item_usage_mode
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.questionnaire_item_usage_mode.QuestionnaireItemUsageModeCode
+   spark_auto_mapper_fhir.value_sets.questionnaire_item_usage_mode.QuestionnaireItemUsageModeCodeValues
+
+
+
+.. class:: QuestionnaireItemUsageModeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   QuestionnaireItemUsageMode
+   From: http://terminology.hl7.org/CodeSystem/questionnaire-usage-mode in valuesets.xml
+       Identifies the modes of usage of a questionnaire that should enable a
+   particular questionnaire item.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/questionnaire-usage-mode
+
+      
+
+
+.. class:: QuestionnaireItemUsageModeCodeValues
+
+   Render the item regardless of usage mode.
+   From: http://terminology.hl7.org/CodeSystem/questionnaire-usage-mode in valuesets.xml
+
+   .. attribute:: Capture_Display
+      
+
+      Render the item only when capturing data.
+      From: http://terminology.hl7.org/CodeSystem/questionnaire-usage-mode in valuesets.xml
+
+
+   .. attribute:: CaptureOnly
+      
+
+      Render the item only when displaying a completed form.
+      From: http://terminology.hl7.org/CodeSystem/questionnaire-usage-mode in valuesets.xml
+
+
+   .. attribute:: DisplayOnly
+      
+
+      Render the item only when displaying a completed form and the item has been
+      answered (or has child items that have been answered).
+      From: http://terminology.hl7.org/CodeSystem/questionnaire-usage-mode in valuesets.xml
+
+
+   .. attribute:: DisplayWhenAnswered
+      
+
+      Render the item when capturing data or when displaying a completed form and
+      the item has been answered (or has child items that have been answered).
+      From: http://terminology.hl7.org/CodeSystem/questionnaire-usage-mode in valuesets.xml
+
+
+   .. attribute:: CaptureOr_IfAnswered_Display
+      
+
+      
+
+

@@ -1,0 +1,55 @@
+:mod:`spark_auto_mapper_fhir.value_sets.chol_code_legacy_status`
+================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.chol_code_legacy_status
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.chol_code_legacy_status.CholCodeLegacyStatusCode
+   spark_auto_mapper_fhir.value_sets.chol_code_legacy_status.CholCodeLegacyStatusCodeValues
+
+
+
+.. class:: CholCodeLegacyStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   CholCodeLegacyStatus
+   From: http://hl7.org/fhir/CodeSystem/example-supplement in valuesets.xml
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/CodeSystem/example-supplement
+
+      
+
+
+.. class:: CholCodeLegacyStatusCodeValues
+
+   From: http://hl7.org/fhir/CodeSystem/example-supplement in valuesets.xml
+
+   .. attribute:: Chol_mmol
+      
+
+      From: http://hl7.org/fhir/CodeSystem/example-supplement in valuesets.xml
+
+
+   .. attribute:: Chol_mass
+      
+
+      From: http://hl7.org/fhir/CodeSystem/example-supplement in valuesets.xml
+
+
+   .. attribute:: Chol
+      
+
+      
+
+

@@ -1,0 +1,70 @@
+:mod:`spark_auto_mapper_fhir.value_sets.definition_status`
+==========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.definition_status
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.definition_status.DefinitionStatusCode
+   spark_auto_mapper_fhir.value_sets.definition_status.DefinitionStatusCodeValues
+
+
+
+.. class:: DefinitionStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   DefinitionStatus
+   From: http://terminology.hl7.org/CodeSystem/definition-status in valuesets.xml
+       Codes identifying the lifecycle stage of a definition.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/definition-status
+
+      
+
+
+.. class:: DefinitionStatusCodeValues
+
+   The definition is in the design stage and is not yet considered to be "ready
+   for use".
+   From: http://terminology.hl7.org/CodeSystem/definition-status in valuesets.xml
+
+   .. attribute:: Draft
+      
+
+      The definition is considered ready for use.
+      From: http://terminology.hl7.org/CodeSystem/definition-status in valuesets.xml
+
+
+   .. attribute:: Active
+      
+
+      The definition should no longer be used.
+      From: http://terminology.hl7.org/CodeSystem/definition-status in valuesets.xml
+
+
+   .. attribute:: Withdrawn
+      
+
+      The authoring/source system does not know which of the status values currently
+      applies for this resource.  Note: This concept is not to be used for "other" -
+      one of the listed statuses is presumed to apply,  but the authoring/source
+      system does not know which.
+      From: http://terminology.hl7.org/CodeSystem/definition-status in valuesets.xml
+
+
+   .. attribute:: Unknown
+      
+
+      
+
+

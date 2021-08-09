@@ -1,0 +1,192 @@
+:mod:`spark_auto_mapper_fhir.value_sets.feeding_device_codes`
+=============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.feeding_device_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.feeding_device_codes.FeedingDeviceCodesCode
+   spark_auto_mapper_fhir.value_sets.feeding_device_codes.FeedingDeviceCodesCodeValues
+
+
+
+.. class:: FeedingDeviceCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   FeedingDeviceCodes
+   From: http://hl7.org/fhir/feeding-device in valuesets.xml
+       Materials used or needed to feed the patient.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/feeding-device
+
+      
+
+
+.. class:: FeedingDeviceCodesCodeValues
+
+   Standard nipple definition:
+   From: http://hl7.org/fhir/feeding-device in valuesets.xml
+
+   .. attribute:: StandardNipple
+      
+
+      Preemie nipple definition:
+      From: http://hl7.org/fhir/feeding-device in valuesets.xml
+
+
+   .. attribute:: PreemieNipple
+      
+
+      Orthodontic nipple definition:
+      From: http://hl7.org/fhir/feeding-device in valuesets.xml
+
+
+   .. attribute:: OrthodonticNipple
+      
+
+      Slow flow nipple definition:
+      From: http://hl7.org/fhir/feeding-device in valuesets.xml
+
+
+   .. attribute:: SlowFlowNipple
+      
+
+      Middle flow nipple definition:
+      From: http://hl7.org/fhir/feeding-device in valuesets.xml
+
+
+   .. attribute:: MiddleFlowNipple
+      
+
+      Enlarged, cross-cut nipple definition:
+      From: http://hl7.org/fhir/feeding-device in valuesets.xml
+
+
+   .. attribute:: Enlarged_Cross_cutNipple
+      
+
+      Haberman bottle definition:
+      From: http://hl7.org/fhir/feeding-device in valuesets.xml
+
+
+   .. attribute:: HabermanBottle
+      
+
+      Sippy cup with valve definition:
+      From: http://hl7.org/fhir/feeding-device in valuesets.xml
+
+
+   .. attribute:: SippyCupWithValve
+      
+
+      Sippy cup without valve definition:
+      From: http://hl7.org/fhir/feeding-device in valuesets.xml
+
+
+   .. attribute:: SippyCupWithoutValve
+      
+
+      Provale Cup definition:
+      From: http://hl7.org/fhir/feeding-device in valuesets.xml
+
+
+   .. attribute:: ProvaleCup
+      
+
+      Glass with lid/sippy cup definition:
+      From: http://hl7.org/fhir/feeding-device in valuesets.xml
+
+
+   .. attribute:: GlassWithLid_sippyCup
+      
+
+      Double handhold on glass/cup definition:
+      From: http://hl7.org/fhir/feeding-device in valuesets.xml
+
+
+   .. attribute:: DoubleHandholdOnGlass_cup
+      
+
+      Rubber matting under tray definition:
+      From: http://hl7.org/fhir/feeding-device in valuesets.xml
+
+
+   .. attribute:: RubberMattingUnderTray
+      
+
+      Straw definition:
+      From: http://hl7.org/fhir/feeding-device in valuesets.xml
+
+
+   .. attribute:: Straw
+      
+
+      Nose cup definition:
+      From: http://hl7.org/fhir/feeding-device in valuesets.xml
+
+
+   .. attribute:: NoseCup
+      
+
+      Scoop plate definition:
+      From: http://hl7.org/fhir/feeding-device in valuesets.xml
+
+
+   .. attribute:: ScoopPlate
+      
+
+      Hand wrap utensil holder definition:
+      From: http://hl7.org/fhir/feeding-device in valuesets.xml
+
+
+   .. attribute:: HandWrapUtensilHolder
+      
+
+      Foam handle utensils definition:
+      From: http://hl7.org/fhir/feeding-device in valuesets.xml
+
+
+   .. attribute:: FoamHandleUtensils
+      
+
+      Angled utensils definition:
+      From: http://hl7.org/fhir/feeding-device in valuesets.xml
+
+
+   .. attribute:: AngledUtensils
+      
+
+      Spout cup definition:
+      From: http://hl7.org/fhir/feeding-device in valuesets.xml
+
+
+   .. attribute:: SpoutCup
+      
+
+      Automated feeding devices definition:
+      From: http://hl7.org/fhir/feeding-device in valuesets.xml
+
+
+   .. attribute:: AutomatedFeedingDevices
+      
+
+      Rocker knife definition:
+      From: http://hl7.org/fhir/feeding-device in valuesets.xml
+
+
+   .. attribute:: RockerKnife
+      
+
+      
+
+

@@ -1,0 +1,36 @@
+:mod:`spark_auto_mapper_fhir.fhir_types`
+========================================
+
+.. py:module:: spark_auto_mapper_fhir.fhir_types
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   age/index.rst
+   base64_binary/index.rst
+   boolean/index.rst
+   canonical/index.rst
+   date/index.rst
+   date_time/index.rst
+   date_time_formats/index.rst
+   decimal/index.rst
+   fhir_reference/index.rst
+   id/index.rst
+   instant/index.rst
+   integer/index.rst
+   list/index.rst
+   markdown/index.rst
+   oid/index.rst
+   positive_int/index.rst
+   string/index.rst
+   time/index.rst
+   unsigned_int/index.rst
+   uri/index.rst
+   url/index.rst
+   uuid/index.rst
+
+

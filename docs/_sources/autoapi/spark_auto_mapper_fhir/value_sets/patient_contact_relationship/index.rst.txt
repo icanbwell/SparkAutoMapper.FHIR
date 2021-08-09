@@ -1,0 +1,110 @@
+:mod:`spark_auto_mapper_fhir.value_sets.patient_contact_relationship`
+=====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.patient_contact_relationship
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.patient_contact_relationship.PatientContactRelationshipCode
+   spark_auto_mapper_fhir.value_sets.patient_contact_relationship.PatientContactRelationshipCodeValues
+
+
+
+.. class:: PatientContactRelationshipCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   PatientContactRelationship
+   From: http://hl7.org/fhir/ValueSet/patient-contactrelationship in valuesets.xml
+       The nature of the relationship between the patient and the contact person.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v2-0131
+
+      
+
+
+.. class:: PatientContactRelationshipCodeValues
+
+   From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
+
+   .. attribute:: BillingContactPerson
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
+
+
+   .. attribute:: EmergencyContact
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
+
+
+   .. attribute:: ContactPerson
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
+
+
+   .. attribute:: Employer
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
+
+
+   .. attribute:: EmergencyContactPerson
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
+
+
+   .. attribute:: FederalAgency
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
+
+
+   .. attribute:: InsuranceCompany
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
+
+
+   .. attribute:: Next_of_Kin
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
+
+
+   .. attribute:: Other
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
+
+
+   .. attribute:: PersonPreparingReferral
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
+
+
+   .. attribute:: StateAgency
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
+
+
+   .. attribute:: Unknown
+      
+
+      
+
+

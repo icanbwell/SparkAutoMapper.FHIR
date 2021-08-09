@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.bundle_request`
+==============================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.bundle_request
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.bundle_request.BundleRequest
+
+
+
+.. class:: BundleRequest(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, method: spark_auto_mapper_fhir.value_sets.http_verb.HTTPVerbCode, url: spark_auto_mapper_fhir.fhir_types.uri.FhirUri, ifNoneMatch: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, ifModifiedSince: Optional[spark_auto_mapper_fhir.fhir_types.instant.FhirInstant] = None, ifMatch: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, ifNoneExist: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   Bundle.Request
+   A container for a collection of resources.
+
+

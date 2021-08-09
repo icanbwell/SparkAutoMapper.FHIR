@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.coverage_eligibility_request_supporting_info`
+============================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.coverage_eligibility_request_supporting_info
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.coverage_eligibility_request_supporting_info.CoverageEligibilityRequestSupportingInfo
+
+
+
+.. class:: CoverageEligibilityRequestSupportingInfo(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, sequence: spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt, information: spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.resource.Resource], appliesToAll: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   CoverageEligibilityRequest.SupportingInfo
+   The CoverageEligibilityRequest provides patient and insurance coverage information to an insurer for them to respond, in the form of an CoverageEligibilityResponse, with information regarding whether the stated coverage is valid and in-force and optionally to provide the insurance details of the policy.
+
+

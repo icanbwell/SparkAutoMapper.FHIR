@@ -1,0 +1,85 @@
+:mod:`spark_auto_mapper_fhir.value_sets.name_use`
+=================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.name_use
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.name_use.NameUseCode
+   spark_auto_mapper_fhir.value_sets.name_use.NameUseCodeValues
+
+
+
+.. class:: NameUseCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   NameUse
+   From: http://hl7.org/fhir/name-use in valuesets.xml
+       The use of a human name.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/name-use
+
+      
+
+
+.. class:: NameUseCodeValues
+
+   Known as/conventional/the one you normally use.
+   From: http://hl7.org/fhir/name-use in valuesets.xml
+
+   .. attribute:: Usual
+      
+
+      The formal name as registered in an official (government) registry, but which
+      name might not be commonly used. May be called "legal name".
+      From: http://hl7.org/fhir/name-use in valuesets.xml
+
+
+   .. attribute:: Official
+      
+
+      A temporary name. Name.period can provide more detailed information. This may
+      also be used for temporary names assigned at birth or in emergency situations.
+      From: http://hl7.org/fhir/name-use in valuesets.xml
+
+
+   .. attribute:: Temp
+      
+
+      A name that is used to address the person in an informal manner, but is not
+      part of their formal or usual name.
+      From: http://hl7.org/fhir/name-use in valuesets.xml
+
+
+   .. attribute:: Nickname
+      
+
+      Anonymous assigned name, alias, or pseudonym (used to protect a person's
+      identity for privacy reasons).
+      From: http://hl7.org/fhir/name-use in valuesets.xml
+
+
+   .. attribute:: Anonymous
+      
+
+      This name is no longer in use (or was never correct, but retained for
+      records).
+      From: http://hl7.org/fhir/name-use in valuesets.xml
+
+
+   .. attribute:: Old
+      
+
+      
+
+

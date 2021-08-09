@@ -1,0 +1,103 @@
+:mod:`spark_auto_mapper_fhir.value_sets.goal_status_reason`
+===========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.goal_status_reason
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.goal_status_reason.GoalStatusReasonCode
+   spark_auto_mapper_fhir.value_sets.goal_status_reason.GoalStatusReasonCodeValues
+
+
+
+.. class:: GoalStatusReasonCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   GoalStatusReason
+   From: http://hl7.org/fhir/goal-status-reason in valuesets.xml
+       Example codes indicating the reason for a current status.  Note that these are
+   in no way complete and might not even be appropriate for some uses.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/goal-status-reason
+
+      
+
+
+.. class:: GoalStatusReasonCodeValues
+
+   Goal suspended or ended because of a surgical procedure.
+   From: http://hl7.org/fhir/goal-status-reason in valuesets.xml
+
+   .. attribute:: Surgery
+      
+
+      Goal suspended or ended because of a significant life event (marital change,
+      bereavement, etc.).
+      From: http://hl7.org/fhir/goal-status-reason in valuesets.xml
+
+
+   .. attribute:: LifeEvent
+      
+
+      Goal has been superseded by a new goal.
+      From: http://hl7.org/fhir/goal-status-reason in valuesets.xml
+
+
+   .. attribute:: Replaced
+      
+
+      Patient wishes the goal to be set aside, at least temporarily.
+      From: http://hl7.org/fhir/goal-status-reason in valuesets.xml
+
+
+   .. attribute:: PatientRequest
+      
+
+      Goal cannot be reached temporarily.
+      From: http://hl7.org/fhir/goal-status-reason in valuesets.xml
+
+
+   .. attribute:: GoalNotAttainableTemporarily
+      
+
+      Goal cannot be reached permanently.
+      From: http://hl7.org/fhir/goal-status-reason in valuesets.xml
+
+
+   .. attribute:: GoalNotAttainablePermanently
+      
+
+      Goal cannot be reached due to financial barrier or reason.
+      From: http://hl7.org/fhir/goal-status-reason in valuesets.xml
+
+
+   .. attribute:: FinancialReason
+      
+
+      Goal cannot be reached due to a lack of transportation.
+      From: http://hl7.org/fhir/goal-status-reason in valuesets.xml
+
+
+   .. attribute:: LackOfTransportation
+      
+
+      Goal cannot be reached due to a lack of social support.
+      From: http://hl7.org/fhir/goal-status-reason in valuesets.xml
+
+
+   .. attribute:: LackOfSocialSupport
+      
+
+      
+
+

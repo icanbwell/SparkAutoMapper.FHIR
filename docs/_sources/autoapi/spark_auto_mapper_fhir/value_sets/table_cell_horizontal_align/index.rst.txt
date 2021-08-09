@@ -1,0 +1,73 @@
+:mod:`spark_auto_mapper_fhir.value_sets.table_cell_horizontal_align`
+====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.table_cell_horizontal_align
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.table_cell_horizontal_align.TableCellHorizontalAlign
+   spark_auto_mapper_fhir.value_sets.table_cell_horizontal_align.TableCellHorizontalAlignValues
+
+
+
+.. class:: TableCellHorizontalAlign(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.TableCellHorizontalAlign
+   From: http://terminology.hl7.org/ValueSet/v3-TableCellHorizontalAlign in v3-codesystems.xml
+        These values are defined within the XHTML 4.0 Table Model
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-TableCellHorizontalAlign
+
+      
+
+
+.. class:: TableCellHorizontalAlignValues
+
+   center
+   From: http://terminology.hl7.org/CodeSystem/v3-TableCellHorizontalAlign in v3-codesystems.xml
+
+   .. attribute:: Center
+      
+
+      char
+      From: http://terminology.hl7.org/CodeSystem/v3-TableCellHorizontalAlign in v3-codesystems.xml
+
+
+   .. attribute:: Char
+      
+
+      justify
+      From: http://terminology.hl7.org/CodeSystem/v3-TableCellHorizontalAlign in v3-codesystems.xml
+
+
+   .. attribute:: Justify
+      
+
+      left
+      From: http://terminology.hl7.org/CodeSystem/v3-TableCellHorizontalAlign in v3-codesystems.xml
+
+
+   .. attribute:: Left
+      
+
+      right
+      From: http://terminology.hl7.org/CodeSystem/v3-TableCellHorizontalAlign in v3-codesystems.xml
+
+
+   .. attribute:: Right
+      
+
+      
+
+

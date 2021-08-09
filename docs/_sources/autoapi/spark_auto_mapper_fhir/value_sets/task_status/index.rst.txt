@@ -1,0 +1,128 @@
+:mod:`spark_auto_mapper_fhir.value_sets.task_status`
+====================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.task_status
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.task_status.TaskStatusCode
+   spark_auto_mapper_fhir.value_sets.task_status.TaskStatusCodeValues
+
+
+
+.. class:: TaskStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   TaskStatus
+   From: http://hl7.org/fhir/task-status in valuesets.xml
+       The current status of the task.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/task-status
+
+      
+
+
+.. class:: TaskStatusCodeValues
+
+   The task is not yet ready to be acted upon.
+   From: http://hl7.org/fhir/task-status in valuesets.xml
+
+   .. attribute:: Draft
+      
+
+      The task is ready to be acted upon and action is sought.
+      From: http://hl7.org/fhir/task-status in valuesets.xml
+
+
+   .. attribute:: Requested
+      
+
+      A potential performer has claimed ownership of the task and is evaluating
+      whether to perform it.
+      From: http://hl7.org/fhir/task-status in valuesets.xml
+
+
+   .. attribute:: Received
+      
+
+      The potential performer has agreed to execute the task but has not yet started
+      work.
+      From: http://hl7.org/fhir/task-status in valuesets.xml
+
+
+   .. attribute:: Accepted
+      
+
+      The potential performer who claimed ownership of the task has decided not to
+      execute it prior to performing any action.
+      From: http://hl7.org/fhir/task-status in valuesets.xml
+
+
+   .. attribute:: Rejected
+      
+
+      The task is ready to be performed, but no action has yet been taken.  Used in
+      place of requested/received/accepted/rejected when request assignment and
+      acceptance is a given.
+      From: http://hl7.org/fhir/task-status in valuesets.xml
+
+
+   .. attribute:: Ready
+      
+
+      The task was not completed.
+      From: http://hl7.org/fhir/task-status in valuesets.xml
+
+
+   .. attribute:: Cancelled
+      
+
+      The task has been started but is not yet complete.
+      From: http://hl7.org/fhir/task-status in valuesets.xml
+
+
+   .. attribute:: InProgress
+      
+
+      The task has been started but work has been paused.
+      From: http://hl7.org/fhir/task-status in valuesets.xml
+
+
+   .. attribute:: OnHold
+      
+
+      The task was attempted but could not be completed due to some error.
+      From: http://hl7.org/fhir/task-status in valuesets.xml
+
+
+   .. attribute:: Failed
+      
+
+      The task has been completed.
+      From: http://hl7.org/fhir/task-status in valuesets.xml
+
+
+   .. attribute:: Completed
+      
+
+      The task should never have existed and is retained only because of the
+      possibility it may have used.
+      From: http://hl7.org/fhir/task-status in valuesets.xml
+
+
+   .. attribute:: EnteredInError
+      
+
+      
+
+

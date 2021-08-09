@@ -1,0 +1,103 @@
+:mod:`spark_auto_mapper_fhir.value_sets.medication_request_intent`
+==================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.medication_request_intent
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.medication_request_intent.MedicationRequestIntentCode
+   spark_auto_mapper_fhir.value_sets.medication_request_intent.MedicationRequestIntentCodeValues
+
+
+
+.. class:: MedicationRequestIntentCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   medicationRequest Intent
+   From: http://hl7.org/fhir/CodeSystem/medicationrequest-intent in valuesets.xml
+       MedicationRequest Intent Codes
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/CodeSystem/medicationrequest-intent
+
+      
+
+
+.. class:: MedicationRequestIntentCodeValues
+
+   The request is a suggestion made by someone/something that doesn't have an
+   intention to ensure it occurs and without providing an authorization to act
+   From: http://hl7.org/fhir/CodeSystem/medicationrequest-intent in valuesets.xml
+
+   .. attribute:: Proposal
+      
+
+      The request represents an intention to ensure something occurs without
+      providing an authorization for others to act.
+      From: http://hl7.org/fhir/CodeSystem/medicationrequest-intent in valuesets.xml
+
+
+   .. attribute:: Plan
+      
+
+      The request represents a request/demand and authorization for action
+      From: http://hl7.org/fhir/CodeSystem/medicationrequest-intent in valuesets.xml
+
+
+   .. attribute:: Order
+      
+
+      The request represents the original authorization for the medication request.
+      From: http://hl7.org/fhir/CodeSystem/medicationrequest-intent in valuesets.xml
+
+
+   .. attribute:: OriginalOrder
+      
+
+      The request represents an automatically generated supplemental authorization
+      for action based on a parent authorization together with initial results of
+      the action taken against that parent authorization..
+      From: http://hl7.org/fhir/CodeSystem/medicationrequest-intent in valuesets.xml
+
+
+   .. attribute:: ReflexOrder
+      
+
+      The request represents the view of an authorization instantiated by a
+      fulfilling system representing the details of the fulfiller's intention to act
+      upon a submitted order.
+      From: http://hl7.org/fhir/CodeSystem/medicationrequest-intent in valuesets.xml
+
+
+   .. attribute:: FillerOrder
+      
+
+      The request represents an instance for the particular order, for example a
+      medication administration record.
+      From: http://hl7.org/fhir/CodeSystem/medicationrequest-intent in valuesets.xml
+
+
+   .. attribute:: InstanceOrder
+      
+
+      The request represents a component or option for a RequestGroup that
+      establishes timing, conditionality and/or  other constraints among a set of
+      requests.
+      From: http://hl7.org/fhir/CodeSystem/medicationrequest-intent in valuesets.xml
+
+
+   .. attribute:: Option
+      
+
+      
+
+

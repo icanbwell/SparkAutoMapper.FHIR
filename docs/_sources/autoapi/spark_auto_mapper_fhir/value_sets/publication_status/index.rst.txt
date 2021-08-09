@@ -1,0 +1,70 @@
+:mod:`spark_auto_mapper_fhir.value_sets.publication_status`
+===========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.publication_status
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.publication_status.PublicationStatusCode
+   spark_auto_mapper_fhir.value_sets.publication_status.PublicationStatusCodeValues
+
+
+
+.. class:: PublicationStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   PublicationStatus
+   From: http://hl7.org/fhir/publication-status in valuesets.xml
+       The lifecycle status of an artifact.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/publication-status
+
+      
+
+
+.. class:: PublicationStatusCodeValues
+
+   This resource is still under development and is not yet considered to be ready
+   for normal use.
+   From: http://hl7.org/fhir/publication-status in valuesets.xml
+
+   .. attribute:: Draft
+      
+
+      This resource is ready for normal use.
+      From: http://hl7.org/fhir/publication-status in valuesets.xml
+
+
+   .. attribute:: Active
+      
+
+      This resource has been withdrawn or superseded and should no longer be used.
+      From: http://hl7.org/fhir/publication-status in valuesets.xml
+
+
+   .. attribute:: Retired
+      
+
+      The authoring system does not know which of the status values currently
+      applies for this resource.  Note: This concept is not to be used for "other" -
+      one of the listed statuses is presumed to apply, it's just not known which
+      one.
+      From: http://hl7.org/fhir/publication-status in valuesets.xml
+
+
+   .. attribute:: Unknown
+      
+
+      
+
+

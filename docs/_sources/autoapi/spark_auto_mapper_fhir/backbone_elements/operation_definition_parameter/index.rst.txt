@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.operation_definition_parameter`
+==============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.operation_definition_parameter
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.operation_definition_parameter.OperationDefinitionParameter
+
+
+
+.. class:: OperationDefinitionParameter(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, name: spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode, use: spark_auto_mapper_fhir.value_sets.operation_parameter_use.OperationParameterUseCode, min: spark_auto_mapper_fhir.fhir_types.integer.FhirInteger, max: spark_auto_mapper_fhir.fhir_types.string.FhirString, documentation: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, type_: Optional[spark_auto_mapper_fhir.value_sets.fhir_all_types.FHIRAllTypesCode] = None, targetProfile: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.canonical.FhirCanonical]] = None, searchType: Optional[spark_auto_mapper_fhir.value_sets.search_param_type.SearchParamTypeCode] = None, binding: Optional[spark_auto_mapper_fhir.backbone_elements.operation_definition_binding.OperationDefinitionBinding] = None, referencedFrom: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.operation_definition_referenced_from.OperationDefinitionReferencedFrom]] = None, part: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.operation_definition_parameter.OperationDefinitionParameter]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   OperationDefinition.Parameter
+   A formal computable definition of an operation (on the RESTful interface) or a named query (using the search interaction).
+
+

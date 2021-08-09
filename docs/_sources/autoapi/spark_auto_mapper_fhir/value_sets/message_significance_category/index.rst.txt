@@ -1,0 +1,63 @@
+:mod:`spark_auto_mapper_fhir.value_sets.message_significance_category`
+======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.message_significance_category
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.message_significance_category.MessageSignificanceCategoryCode
+   spark_auto_mapper_fhir.value_sets.message_significance_category.MessageSignificanceCategoryCodeValues
+
+
+
+.. class:: MessageSignificanceCategoryCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   MessageSignificanceCategory
+   From: http://hl7.org/fhir/message-significance-category in valuesets.xml
+       The impact of the content of a message.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/message-significance-category
+
+      
+
+
+.. class:: MessageSignificanceCategoryCodeValues
+
+   The message represents/requests a change that should not be processed more
+   than once; e.g., making a booking for an appointment.
+   From: http://hl7.org/fhir/message-significance-category in valuesets.xml
+
+   .. attribute:: Consequence
+      
+
+      The message represents a response to query for current information.
+      Retrospective processing is wrong and/or wasteful.
+      From: http://hl7.org/fhir/message-significance-category in valuesets.xml
+
+
+   .. attribute:: Currency
+      
+
+      The content is not necessarily intended to be current, and it can be
+      reprocessed, though there may be version issues created by processing old
+      notifications.
+      From: http://hl7.org/fhir/message-significance-category in valuesets.xml
+
+
+   .. attribute:: Notification
+      
+
+      
+
+

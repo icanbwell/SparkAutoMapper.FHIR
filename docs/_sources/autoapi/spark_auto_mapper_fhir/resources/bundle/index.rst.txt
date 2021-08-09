@@ -1,0 +1,32 @@
+:mod:`spark_auto_mapper_fhir.resources.bundle`
+==============================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.bundle
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.bundle.Bundle
+
+
+
+.. class:: Bundle(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, identifier: Optional[spark_auto_mapper_fhir.complex_types.identifier.Identifier] = None, type_: spark_auto_mapper_fhir.value_sets.bundle_type.BundleTypeCode, timestamp: Optional[spark_auto_mapper_fhir.fhir_types.instant.FhirInstant] = None, total: Optional[spark_auto_mapper_fhir.fhir_types.unsigned_int.FhirUnsignedInt] = None, link: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.bundle_link.BundleLink]] = None, entry: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.bundle_entry.BundleEntry]] = None, signature: Optional[spark_auto_mapper_fhir.complex_types.signature.Signature] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   Bundle
+   bundle.xsd
+       A container for a collection of resources.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

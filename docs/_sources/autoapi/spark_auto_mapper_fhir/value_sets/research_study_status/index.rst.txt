@@ -1,0 +1,123 @@
+:mod:`spark_auto_mapper_fhir.value_sets.research_study_status`
+==============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.research_study_status
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.research_study_status.ResearchStudyStatusCode
+   spark_auto_mapper_fhir.value_sets.research_study_status.ResearchStudyStatusCodeValues
+
+
+
+.. class:: ResearchStudyStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ResearchStudyStatus
+   From: http://hl7.org/fhir/research-study-status in valuesets.xml
+       Codes that convey the current status of the research study.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/research-study-status
+
+      
+
+
+.. class:: ResearchStudyStatusCodeValues
+
+   Study is opened for accrual.
+   From: http://hl7.org/fhir/research-study-status in valuesets.xml
+
+   .. attribute:: Active
+      
+
+      Study is completed prematurely and will not resume; patients are no longer
+      examined nor treated.
+      From: http://hl7.org/fhir/research-study-status in valuesets.xml
+
+
+   .. attribute:: AdministrativelyCompleted
+      
+
+      Protocol is approved by the review board.
+      From: http://hl7.org/fhir/research-study-status in valuesets.xml
+
+
+   .. attribute:: Approved
+      
+
+      Study is closed for accrual; patients can be examined and treated.
+      From: http://hl7.org/fhir/research-study-status in valuesets.xml
+
+
+   .. attribute:: ClosedToAccrual
+      
+
+      Study is closed to accrual and intervention, i.e. the study is closed to
+      enrollment, all study subjects have completed treatment or intervention but
+      are still being followed according to the primary objective of the study.
+      From: http://hl7.org/fhir/research-study-status in valuesets.xml
+
+
+   .. attribute:: ClosedToAccrualAndIntervention
+      
+
+      Study is closed to accrual and intervention, i.e. the study is closed to
+      enrollment, all study subjects have completed treatment
+      or intervention but are still being followed according to the primary
+      objective of the study.
+      From: http://hl7.org/fhir/research-study-status in valuesets.xml
+
+
+   .. attribute:: Completed
+      
+
+      Protocol was disapproved by the review board.
+      From: http://hl7.org/fhir/research-study-status in valuesets.xml
+
+
+   .. attribute:: Disapproved
+      
+
+      Protocol is submitted to the review board for approval.
+      From: http://hl7.org/fhir/research-study-status in valuesets.xml
+
+
+   .. attribute:: InReview
+      
+
+      Study is temporarily closed for accrual; can be potentially resumed in the
+      future; patients can be examined and treated.
+      From: http://hl7.org/fhir/research-study-status in valuesets.xml
+
+
+   .. attribute:: TemporarilyClosedToAccrual
+      
+
+      Study is temporarily closed for accrual and intervention and potentially can
+      be resumed in the future.
+      From: http://hl7.org/fhir/research-study-status in valuesets.xml
+
+
+   .. attribute:: TemporarilyClosedToAccrualAndIntervention
+      
+
+      Protocol was withdrawn by the lead organization.
+      From: http://hl7.org/fhir/research-study-status in valuesets.xml
+
+
+   .. attribute:: Withdrawn
+      
+
+      
+
+

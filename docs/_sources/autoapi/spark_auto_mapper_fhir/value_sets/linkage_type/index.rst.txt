@@ -1,0 +1,64 @@
+:mod:`spark_auto_mapper_fhir.value_sets.linkage_type`
+=====================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.linkage_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.linkage_type.LinkageTypeCode
+   spark_auto_mapper_fhir.value_sets.linkage_type.LinkageTypeCodeValues
+
+
+
+.. class:: LinkageTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   LinkageType
+   From: http://hl7.org/fhir/linkage-type in valuesets.xml
+       Used to distinguish different roles a resource can play within a set of linked
+   resources.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/linkage-type
+
+      
+
+
+.. class:: LinkageTypeCodeValues
+
+   The resource represents the "source of truth" (from the perspective of this
+   Linkage resource) for the underlying event/condition/etc.
+   From: http://hl7.org/fhir/linkage-type in valuesets.xml
+
+   .. attribute:: SourceOfTruth
+      
+
+      The resource represents an alternative view of the underlying
+      event/condition/etc.  The resource may still be actively maintained, even
+      though it is not considered to be the source of truth.
+      From: http://hl7.org/fhir/linkage-type in valuesets.xml
+
+
+   .. attribute:: AlternateRecord
+      
+
+      The resource represents an obsolete record of the underlying
+      event/condition/etc.  It is not expected to be actively maintained.
+      From: http://hl7.org/fhir/linkage-type in valuesets.xml
+
+
+   .. attribute:: Historical_ObsoleteRecord
+      
+
+      
+
+

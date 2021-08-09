@@ -1,0 +1,57 @@
+:mod:`spark_auto_mapper_fhir.value_sets.indicator`
+==================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.indicator
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.indicator.IndicatorCode
+   spark_auto_mapper_fhir.value_sets.indicator.IndicatorCodeValues
+
+
+
+.. class:: IndicatorCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   Indicator
+   From: http://cds-hooks.hl7.org/CodeSystem/indicator in valuesets.xml
+       This value set captures the set of indicator codes defined by the CDS Hooks
+   specification.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://cds-hooks.hl7.org/CodeSystem/indicator
+
+      
+
+
+.. class:: IndicatorCodeValues
+
+   From: http://cds-hooks.hl7.org/CodeSystem/indicator in valuesets.xml
+
+   .. attribute:: TheResponseIsInformational
+      
+
+      From: http://cds-hooks.hl7.org/CodeSystem/indicator in valuesets.xml
+
+
+   .. attribute:: TheResponseIsAWarning
+      
+
+      From: http://cds-hooks.hl7.org/CodeSystem/indicator in valuesets.xml
+
+
+   .. attribute:: TheResponseIsCriticalAndIndicatesTheWorkflowShouldNotBeAllowedToProceed
+      
+
+      
+
+

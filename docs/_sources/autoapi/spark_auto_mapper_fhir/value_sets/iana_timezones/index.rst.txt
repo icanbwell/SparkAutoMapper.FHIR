@@ -1,0 +1,33 @@
+:mod:`spark_auto_mapper_fhir.value_sets.iana_timezones`
+=======================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.iana_timezones
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.iana_timezones.IANATimezonesCode
+
+
+
+.. class:: IANATimezonesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   IANATimezones
+   From: http://hl7.org/fhir/ValueSet/timezones in valuesets.xml
+       IANA Timezone Codes
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = https://www.iana.org/time-zones
+
+      
+
+

@@ -1,0 +1,51 @@
+:mod:`spark_auto_mapper_fhir.value_sets.body_length_units`
+==========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.body_length_units
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.body_length_units.BodyLengthUnitsCode
+   spark_auto_mapper_fhir.value_sets.body_length_units.BodyLengthUnitsCodeValues
+
+
+
+.. class:: BodyLengthUnitsCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   BodyLengthUnits
+   From: http://hl7.org/fhir/ValueSet/ucum-bodylength in valuesets.xml
+       UCUM units for recording body length measures such as height and head
+   circumference
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://unitsofmeasure.org
+
+      
+
+
+.. class:: BodyLengthUnitsCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/ucum-bodylength in valuesets.xml
+
+   .. attribute:: Cm
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-bodylength in valuesets.xml
+
+
+   .. attribute:: _in_i_
+      
+
+      
+
+

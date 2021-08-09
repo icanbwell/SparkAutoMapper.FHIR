@@ -1,0 +1,34 @@
+:mod:`spark_auto_mapper_fhir.resources.appointment`
+===================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.appointment
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.appointment.Appointment
+
+
+
+.. class:: Appointment(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.identifier.Identifier]] = None, status: spark_auto_mapper_fhir.value_sets.appointment_status.AppointmentStatusCode, cancelationReason: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.appointment_cancellation_reason.AppointmentCancellationReasonCode]] = None, serviceCategory: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.service_category.ServiceCategoryCode]]] = None, serviceType: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.service_type.ServiceTypeCode]]] = None, specialty: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.practice_setting_code_value_set.PracticeSettingCodeValueSetCode]]] = None, appointmentType: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.v2_0276.V2_0276]] = None, reasonCode: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.encounter_reason_codes.EncounterReasonCodesCode]]] = None, reasonReference: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.condition.Condition, spark_auto_mapper_fhir.resources.procedure.Procedure, spark_auto_mapper_fhir.resources.observation.Observation, spark_auto_mapper_fhir.resources.immunization_recommendation.ImmunizationRecommendation)]]]] = None, priority: Optional[spark_auto_mapper_fhir.fhir_types.unsigned_int.FhirUnsignedInt] = None, description: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, supportingInformation: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.resource.Resource]]] = None, start: Optional[spark_auto_mapper_fhir.fhir_types.instant.FhirInstant] = None, end: Optional[spark_auto_mapper_fhir.fhir_types.instant.FhirInstant] = None, minutesDuration: Optional[spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt] = None, slot: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.slot.Slot]]] = None, created: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, comment: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, patientInstruction: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, basedOn: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.service_request.ServiceRequest]]] = None, participant: spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.appointment_participant.AppointmentParticipant], requestedPeriod: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.period.Period]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   Appointment
+   appointment.xsd
+       A booking of a healthcare event among patient(s), practitioner(s), related
+   person(s) and/or device(s) for a specific date/time. This may result in one or
+   more Encounter(s).
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

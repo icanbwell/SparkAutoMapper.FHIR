@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.specimen_definition_type_tested`
+===============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.specimen_definition_type_tested
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.specimen_definition_type_tested.SpecimenDefinitionTypeTested
+
+
+
+.. class:: SpecimenDefinitionTypeTested(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, isDerived: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, type_: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.v2_0487.V2_0487]] = None, preference: spark_auto_mapper_fhir.value_sets.specimen_contained_preference.SpecimenContainedPreferenceCode, container: Optional[spark_auto_mapper_fhir.backbone_elements.specimen_definition_container.SpecimenDefinitionContainer] = None, requirement: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, retentionTime: Optional[spark_auto_mapper_fhir.complex_types.duration.Duration] = None, rejectionCriterion: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.rejection_criterion.RejectionCriterionCode]]] = None, handling: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.specimen_definition_handling.SpecimenDefinitionHandling]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   SpecimenDefinition.TypeTested
+   A kind of specimen with associated set of requirements.
+
+

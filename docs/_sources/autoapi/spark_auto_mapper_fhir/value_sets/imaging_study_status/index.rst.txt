@@ -1,0 +1,80 @@
+:mod:`spark_auto_mapper_fhir.value_sets.imaging_study_status`
+=============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.imaging_study_status
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.imaging_study_status.ImagingStudyStatusCode
+   spark_auto_mapper_fhir.value_sets.imaging_study_status.ImagingStudyStatusCodeValues
+
+
+
+.. class:: ImagingStudyStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ImagingStudyStatus
+   From: http://hl7.org/fhir/imagingstudy-status in valuesets.xml
+       The status of the ImagingStudy.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/imagingstudy-status
+
+      
+
+
+.. class:: ImagingStudyStatusCodeValues
+
+   The existence of the imaging study is registered, but there is nothing yet
+   available.
+   From: http://hl7.org/fhir/imagingstudy-status in valuesets.xml
+
+   .. attribute:: Registered
+      
+
+      At least one instance has been associated with this imaging study.
+      From: http://hl7.org/fhir/imagingstudy-status in valuesets.xml
+
+
+   .. attribute:: Available
+      
+
+      The imaging study is unavailable because the imaging study was not started or
+      not completed (also sometimes called "aborted").
+      From: http://hl7.org/fhir/imagingstudy-status in valuesets.xml
+
+
+   .. attribute:: Cancelled
+      
+
+      The imaging study has been withdrawn following a previous final release.  This
+      electronic record should never have existed, though it is possible that real-
+      world decisions were based on it. (If real-world activity has occurred, the
+      status should be "cancelled" rather than "entered-in-error".).
+      From: http://hl7.org/fhir/imagingstudy-status in valuesets.xml
+
+
+   .. attribute:: EnteredInError
+      
+
+      The system does not know which of the status values currently applies for this
+      request. Note: This concept is not to be used for "other" - one of the listed
+      statuses is presumed to apply, it's just not known which one.
+      From: http://hl7.org/fhir/imagingstudy-status in valuesets.xml
+
+
+   .. attribute:: Unknown
+      
+
+      
+
+

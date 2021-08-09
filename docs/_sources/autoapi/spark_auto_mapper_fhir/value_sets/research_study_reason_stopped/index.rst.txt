@@ -1,0 +1,66 @@
+:mod:`spark_auto_mapper_fhir.value_sets.research_study_reason_stopped`
+======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.research_study_reason_stopped
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.research_study_reason_stopped.ResearchStudyReasonStoppedCode
+   spark_auto_mapper_fhir.value_sets.research_study_reason_stopped.ResearchStudyReasonStoppedCodeValues
+
+
+
+.. class:: ResearchStudyReasonStoppedCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ResearchStudyReasonStopped
+   From: http://terminology.hl7.org/CodeSystem/research-study-reason-stopped in valuesets.xml
+       Codes for why the study ended prematurely.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/research-study-reason-stopped
+
+      
+
+
+.. class:: ResearchStudyReasonStoppedCodeValues
+
+   The study prematurely ended because the accrual goal was met.
+   From: http://terminology.hl7.org/CodeSystem/research-study-reason-stopped in valuesets.xml
+
+   .. attribute:: AccrualGoalMet
+      
+
+      The study prematurely ended due to toxicity.
+      From: http://terminology.hl7.org/CodeSystem/research-study-reason-stopped in valuesets.xml
+
+
+   .. attribute:: ClosedDueToToxicity
+      
+
+      The study prematurely ended due to lack of study progress.
+      From: http://terminology.hl7.org/CodeSystem/research-study-reason-stopped in valuesets.xml
+
+
+   .. attribute:: ClosedDueToLackOfStudyProgress
+      
+
+      The study prematurely ended temporarily per study design.
+      From: http://terminology.hl7.org/CodeSystem/research-study-reason-stopped in valuesets.xml
+
+
+   .. attribute:: TemporarilyClosedPerStudyDesign
+      
+
+      
+
+

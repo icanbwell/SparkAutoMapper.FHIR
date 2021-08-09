@@ -1,0 +1,777 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>fhir_all_types &mdash; Spark Auto Mapper FHIR  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Spark Auto Mapper FHIR
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">API Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Spark Auto Mapper FHIR</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">fhir_all_types</span></code></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/autoapi/fhir_all_types/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="module-fhir_all_types">
+<span id="fhir-all-types"></span><h1><a class="reference internal" href="#module-fhir_all_types" title="fhir_all_types"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fhir_all_types</span></code></a><a class="headerlink" href="#module-fhir_all_types" title="Permalink to this headline">¶</a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#fhir_all_types.FHIRAllTypesCode" title="fhir_all_types.FHIRAllTypesCode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FHIRAllTypesCode</span></code></a></p></td>
+<td><p>FHIRAllTypes</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#fhir_all_types.FHIRAllTypesCodeValues" title="fhir_all_types.FHIRAllTypesCodeValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FHIRAllTypesCodeValues</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt id="fhir_all_types.FHIRAllTypesCode">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">fhir_all_types.</span></code><code class="sig-name descname"><span class="pre">FHIRAllTypesCode</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../spark_auto_mapper_fhir/value_sets/generic_type/index.html#spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode" title="spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode"><code class="xref py py-class docutils literal notranslate"><span class="pre">spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode</span></code></a></p>
+<p>FHIRAllTypes</p>
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCode.codeset">
+<code class="sig-name descname"><span class="pre">codeset</span></code><em class="property"> <span class="pre">:FhirUri</span> <span class="pre">=</span> <span class="pre">http://hl7.org/fhir/ValueSet/all-types</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCode.codeset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">fhir_all_types.</span></code><code class="sig-name descname"><span class="pre">FHIRAllTypesCodeValues</span></code><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.Address">
+<code class="sig-name descname"><span class="pre">Address</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.Address" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.Annotation">
+<code class="sig-name descname"><span class="pre">Annotation</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.Annotation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.BackboneElement">
+<code class="sig-name descname"><span class="pre">BackboneElement</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.BackboneElement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.Coding">
+<code class="sig-name descname"><span class="pre">Coding</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.Coding" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.ContactPoint">
+<code class="sig-name descname"><span class="pre">ContactPoint</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.ContactPoint" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.Count">
+<code class="sig-name descname"><span class="pre">Count</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.Count" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.Distance">
+<code class="sig-name descname"><span class="pre">Distance</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.Distance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.Duration">
+<code class="sig-name descname"><span class="pre">Duration</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.Duration" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.ElementDefinition">
+<code class="sig-name descname"><span class="pre">ElementDefinition</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.ElementDefinition" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.Extension">
+<code class="sig-name descname"><span class="pre">Extension</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.Extension" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.Identifier">
+<code class="sig-name descname"><span class="pre">Identifier</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.Identifier" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.Meta">
+<code class="sig-name descname"><span class="pre">Meta</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.Meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.MoneyQuantity">
+<code class="sig-name descname"><span class="pre">MoneyQuantity</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.MoneyQuantity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.ParameterDefinition">
+<code class="sig-name descname"><span class="pre">ParameterDefinition</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.ParameterDefinition" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.Population">
+<code class="sig-name descname"><span class="pre">Population</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.Population" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.ProductShelfLife">
+<code class="sig-name descname"><span class="pre">ProductShelfLife</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.ProductShelfLife" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.Range">
+<code class="sig-name descname"><span class="pre">Range</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.Range" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.Reference">
+<code class="sig-name descname"><span class="pre">Reference</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.Reference" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.SampledData">
+<code class="sig-name descname"><span class="pre">SampledData</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.SampledData" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.SimpleQuantity">
+<code class="sig-name descname"><span class="pre">SimpleQuantity</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.SimpleQuantity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.Timing">
+<code class="sig-name descname"><span class="pre">Timing</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.Timing" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.UsageContext">
+<code class="sig-name descname"><span class="pre">UsageContext</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.UsageContext" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.boolean">
+<code class="sig-name descname"><span class="pre">boolean</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.boolean" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.code">
+<code class="sig-name descname"><span class="pre">code</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.dateTime">
+<code class="sig-name descname"><span class="pre">dateTime</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.dateTime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.id">
+<code class="sig-name descname"><span class="pre">id</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.integer">
+<code class="sig-name descname"><span class="pre">integer</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.integer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.oid_">
+<code class="sig-name descname"><span class="pre">oid_</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.oid_" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.string">
+<code class="sig-name descname"><span class="pre">string</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.string" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.unsignedInt">
+<code class="sig-name descname"><span class="pre">unsignedInt</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.unsignedInt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.url">
+<code class="sig-name descname"><span class="pre">url</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.xhtml">
+<code class="sig-name descname"><span class="pre">xhtml</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.xhtml" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.ActivityDefinition">
+<code class="sig-name descname"><span class="pre">ActivityDefinition</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.ActivityDefinition" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.AllergyIntolerance">
+<code class="sig-name descname"><span class="pre">AllergyIntolerance</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.AllergyIntolerance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.AppointmentResponse">
+<code class="sig-name descname"><span class="pre">AppointmentResponse</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.AppointmentResponse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.Basic">
+<code class="sig-name descname"><span class="pre">Basic</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.Basic" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.BiologicallyDerivedProduct">
+<code class="sig-name descname"><span class="pre">BiologicallyDerivedProduct</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.BiologicallyDerivedProduct" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.Bundle">
+<code class="sig-name descname"><span class="pre">Bundle</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.Bundle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.CarePlan">
+<code class="sig-name descname"><span class="pre">CarePlan</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.CarePlan" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.CatalogEntry">
+<code class="sig-name descname"><span class="pre">CatalogEntry</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.CatalogEntry" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.ChargeItemDefinition">
+<code class="sig-name descname"><span class="pre">ChargeItemDefinition</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.ChargeItemDefinition" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.ClaimResponse">
+<code class="sig-name descname"><span class="pre">ClaimResponse</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.ClaimResponse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.CodeSystem">
+<code class="sig-name descname"><span class="pre">CodeSystem</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.CodeSystem" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.CommunicationRequest">
+<code class="sig-name descname"><span class="pre">CommunicationRequest</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.CommunicationRequest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.Composition">
+<code class="sig-name descname"><span class="pre">Composition</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.Composition" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.Condition">
+<code class="sig-name descname"><span class="pre">Condition</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.Condition" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.Contract">
+<code class="sig-name descname"><span class="pre">Contract</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.Contract" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.CoverageEligibilityRequest">
+<code class="sig-name descname"><span class="pre">CoverageEligibilityRequest</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.CoverageEligibilityRequest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.DetectedIssue">
+<code class="sig-name descname"><span class="pre">DetectedIssue</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.DetectedIssue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.DeviceDefinition">
+<code class="sig-name descname"><span class="pre">DeviceDefinition</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.DeviceDefinition" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.DeviceRequest">
+<code class="sig-name descname"><span class="pre">DeviceRequest</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.DeviceRequest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.DiagnosticReport">
+<code class="sig-name descname"><span class="pre">DiagnosticReport</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.DiagnosticReport" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.DocumentReference">
+<code class="sig-name descname"><span class="pre">DocumentReference</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.DocumentReference" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.EffectEvidenceSynthesis">
+<code class="sig-name descname"><span class="pre">EffectEvidenceSynthesis</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.EffectEvidenceSynthesis" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.Endpoint">
+<code class="sig-name descname"><span class="pre">Endpoint</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.Endpoint" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.EnrollmentResponse">
+<code class="sig-name descname"><span class="pre">EnrollmentResponse</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.EnrollmentResponse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.EventDefinition">
+<code class="sig-name descname"><span class="pre">EventDefinition</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.EventDefinition" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.EvidenceVariable">
+<code class="sig-name descname"><span class="pre">EvidenceVariable</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.EvidenceVariable" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.ExplanationOfBenefit">
+<code class="sig-name descname"><span class="pre">ExplanationOfBenefit</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.ExplanationOfBenefit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.Flag">
+<code class="sig-name descname"><span class="pre">Flag</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.Flag" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.GraphDefinition">
+<code class="sig-name descname"><span class="pre">GraphDefinition</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.GraphDefinition" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.GuidanceResponse">
+<code class="sig-name descname"><span class="pre">GuidanceResponse</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.GuidanceResponse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.ImagingStudy">
+<code class="sig-name descname"><span class="pre">ImagingStudy</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.ImagingStudy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.ImmunizationEvaluation">
+<code class="sig-name descname"><span class="pre">ImmunizationEvaluation</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.ImmunizationEvaluation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.ImplementationGuide">
+<code class="sig-name descname"><span class="pre">ImplementationGuide</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.ImplementationGuide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.Invoice">
+<code class="sig-name descname"><span class="pre">Invoice</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.Invoice" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.Linkage">
+<code class="sig-name descname"><span class="pre">Linkage</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.Linkage" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.Location">
+<code class="sig-name descname"><span class="pre">Location</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.Location" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.MeasureReport">
+<code class="sig-name descname"><span class="pre">MeasureReport</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.MeasureReport" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.Medication">
+<code class="sig-name descname"><span class="pre">Medication</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.Medication" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.MedicationDispense">
+<code class="sig-name descname"><span class="pre">MedicationDispense</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.MedicationDispense" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.MedicationRequest">
+<code class="sig-name descname"><span class="pre">MedicationRequest</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.MedicationRequest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.MedicinalProduct">
+<code class="sig-name descname"><span class="pre">MedicinalProduct</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.MedicinalProduct" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.MedicinalProductContraindication">
+<code class="sig-name descname"><span class="pre">MedicinalProductContraindication</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.MedicinalProductContraindication" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.MedicinalProductIngredient">
+<code class="sig-name descname"><span class="pre">MedicinalProductIngredient</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.MedicinalProductIngredient" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.MedicinalProductManufactured">
+<code class="sig-name descname"><span class="pre">MedicinalProductManufactured</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.MedicinalProductManufactured" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.MedicinalProductPharmaceutical">
+<code class="sig-name descname"><span class="pre">MedicinalProductPharmaceutical</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.MedicinalProductPharmaceutical" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.MessageDefinition">
+<code class="sig-name descname"><span class="pre">MessageDefinition</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.MessageDefinition" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.MolecularSequence">
+<code class="sig-name descname"><span class="pre">MolecularSequence</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.MolecularSequence" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.NutritionOrder">
+<code class="sig-name descname"><span class="pre">NutritionOrder</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.NutritionOrder" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.ObservationDefinition">
+<code class="sig-name descname"><span class="pre">ObservationDefinition</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.ObservationDefinition" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.OperationOutcome">
+<code class="sig-name descname"><span class="pre">OperationOutcome</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.OperationOutcome" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.OrganizationAffiliation">
+<code class="sig-name descname"><span class="pre">OrganizationAffiliation</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.OrganizationAffiliation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.Patient">
+<code class="sig-name descname"><span class="pre">Patient</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.Patient" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.PaymentReconciliation">
+<code class="sig-name descname"><span class="pre">PaymentReconciliation</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.PaymentReconciliation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.PlanDefinition">
+<code class="sig-name descname"><span class="pre">PlanDefinition</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.PlanDefinition" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.PractitionerRole">
+<code class="sig-name descname"><span class="pre">PractitionerRole</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.PractitionerRole" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.Provenance">
+<code class="sig-name descname"><span class="pre">Provenance</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.Provenance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.QuestionnaireResponse">
+<code class="sig-name descname"><span class="pre">QuestionnaireResponse</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.QuestionnaireResponse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.RequestGroup">
+<code class="sig-name descname"><span class="pre">RequestGroup</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.RequestGroup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.ResearchElementDefinition">
+<code class="sig-name descname"><span class="pre">ResearchElementDefinition</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.ResearchElementDefinition" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.ResearchSubject">
+<code class="sig-name descname"><span class="pre">ResearchSubject</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.ResearchSubject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.RiskAssessment">
+<code class="sig-name descname"><span class="pre">RiskAssessment</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.RiskAssessment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.Schedule">
+<code class="sig-name descname"><span class="pre">Schedule</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.Schedule" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.ServiceRequest">
+<code class="sig-name descname"><span class="pre">ServiceRequest</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.ServiceRequest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.Specimen">
+<code class="sig-name descname"><span class="pre">Specimen</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.Specimen" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.StructureDefinition">
+<code class="sig-name descname"><span class="pre">StructureDefinition</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.StructureDefinition" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.Subscription">
+<code class="sig-name descname"><span class="pre">Subscription</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.Subscription" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.SubstanceNucleicAcid">
+<code class="sig-name descname"><span class="pre">SubstanceNucleicAcid</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.SubstanceNucleicAcid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.SubstanceProtein">
+<code class="sig-name descname"><span class="pre">SubstanceProtein</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.SubstanceProtein" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.SubstanceSourceMaterial">
+<code class="sig-name descname"><span class="pre">SubstanceSourceMaterial</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.SubstanceSourceMaterial" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.SupplyDelivery">
+<code class="sig-name descname"><span class="pre">SupplyDelivery</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.SupplyDelivery" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.Task">
+<code class="sig-name descname"><span class="pre">Task</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.Task" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.TestReport">
+<code class="sig-name descname"><span class="pre">TestReport</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.TestReport" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.ValueSet">
+<code class="sig-name descname"><span class="pre">ValueSet</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.ValueSet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.VisionPrescription">
+<code class="sig-name descname"><span class="pre">VisionPrescription</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.VisionPrescription" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="fhir_all_types.FHIRAllTypesCodeValues.Any">
+<code class="sig-name descname"><span class="pre">Any</span></code><em class="property"> <span class="pre">:FHIRAllTypesCode</span></em><a class="headerlink" href="#fhir_all_types.FHIRAllTypesCodeValues.Any" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Helix Team.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

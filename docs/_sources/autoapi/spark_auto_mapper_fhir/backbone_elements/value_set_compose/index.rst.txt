@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.value_set_compose`
+=================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.value_set_compose
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.value_set_compose.ValueSetCompose
+
+
+
+.. class:: ValueSetCompose(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, lockedDate: Optional[spark_auto_mapper_fhir.fhir_types.date.FhirDate] = None, inactive: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, include: spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.value_set_include.ValueSetInclude], exclude: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.value_set_include.ValueSetInclude]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   ValueSet.Compose
+   A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [[[CodeSystem]]] definitions and their use in [coded elements](terminologies.html).
+
+

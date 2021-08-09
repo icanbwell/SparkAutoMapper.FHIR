@@ -1,0 +1,77 @@
+:mod:`spark_auto_mapper_fhir.value_sets.issue_type`
+===================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.issue_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.issue_type.IssueTypeCode
+   spark_auto_mapper_fhir.value_sets.issue_type.IssueTypeCodeValues
+
+
+
+.. class:: IssueTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   IssueType
+   From: http://hl7.org/fhir/issue-type in valuesets.xml
+       A code that describes the type of issue.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/issue-type
+
+      
+
+
+.. class:: IssueTypeCodeValues
+
+   Content invalid against the specification or a profile.
+   From: http://hl7.org/fhir/issue-type in valuesets.xml
+
+   .. attribute:: InvalidContent
+      
+
+      An authentication/authorization/permissions issue of some kind.
+      From: http://hl7.org/fhir/issue-type in valuesets.xml
+
+
+   .. attribute:: SecurityProblem
+      
+
+      Processing issues. These are expected to be final e.g. there is no point
+      resubmitting the same content unchanged.
+      From: http://hl7.org/fhir/issue-type in valuesets.xml
+
+
+   .. attribute:: ProcessingFailure
+      
+
+      Transient processing issues. The system receiving the message may be able to
+      resubmit the same content once an underlying issue is resolved.
+      From: http://hl7.org/fhir/issue-type in valuesets.xml
+
+
+   .. attribute:: TransientIssue
+      
+
+      A message unrelated to the processing success of the completed operation
+      (examples of the latter include things like reminders of password expiry,
+      system maintenance times, etc.).
+      From: http://hl7.org/fhir/issue-type in valuesets.xml
+
+
+   .. attribute:: InformationalNote
+      
+
+      
+
+

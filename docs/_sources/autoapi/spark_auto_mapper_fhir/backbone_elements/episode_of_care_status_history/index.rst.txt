@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.episode_of_care_status_history`
+==============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.episode_of_care_status_history
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.episode_of_care_status_history.EpisodeOfCareStatusHistory
+
+
+
+.. class:: EpisodeOfCareStatusHistory(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, status: spark_auto_mapper_fhir.value_sets.episode_of_care_status.EpisodeOfCareStatusCode, period: spark_auto_mapper_fhir.complex_types.period.Period)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   EpisodeOfCare.StatusHistory
+   An association between a patient and an organization / healthcare provider(s) during which time encounters may occur. The managing organization assumes a level of responsibility for the patient during this time.
+
+

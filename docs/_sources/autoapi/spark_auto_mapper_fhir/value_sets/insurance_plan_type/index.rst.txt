@@ -1,0 +1,99 @@
+:mod:`spark_auto_mapper_fhir.value_sets.insurance_plan_type`
+============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.insurance_plan_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.insurance_plan_type.InsurancePlanTypeCode
+   spark_auto_mapper_fhir.value_sets.insurance_plan_type.InsurancePlanTypeCodeValues
+
+
+
+.. class:: InsurancePlanTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   InsurancePlanType
+   From: http://terminology.hl7.org/CodeSystem/insurance-plan-type in valuesets.xml
+       This example value set defines a set of codes that can be used to indicate a
+   type of insurance plan.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/insurance-plan-type
+
+      
+
+
+.. class:: InsurancePlanTypeCodeValues
+
+   From: http://terminology.hl7.org/CodeSystem/insurance-plan-type in valuesets.xml
+
+   .. attribute:: Medical
+      
+
+      From: http://terminology.hl7.org/CodeSystem/insurance-plan-type in valuesets.xml
+
+
+   .. attribute:: Dental
+      
+
+      From: http://terminology.hl7.org/CodeSystem/insurance-plan-type in valuesets.xml
+
+
+   .. attribute:: MentalHealth
+      
+
+      From: http://terminology.hl7.org/CodeSystem/insurance-plan-type in valuesets.xml
+
+
+   .. attribute:: SubstanceAbuse
+      
+
+      From: http://terminology.hl7.org/CodeSystem/insurance-plan-type in valuesets.xml
+
+
+   .. attribute:: Vision
+      
+
+      From: http://terminology.hl7.org/CodeSystem/insurance-plan-type in valuesets.xml
+
+
+   .. attribute:: Drug
+      
+
+      From: http://terminology.hl7.org/CodeSystem/insurance-plan-type in valuesets.xml
+
+
+   .. attribute:: ShortTerm
+      
+
+      From: http://terminology.hl7.org/CodeSystem/insurance-plan-type in valuesets.xml
+
+
+   .. attribute:: LongTermCare
+      
+
+      From: http://terminology.hl7.org/CodeSystem/insurance-plan-type in valuesets.xml
+
+
+   .. attribute:: Hospice
+      
+
+      From: http://terminology.hl7.org/CodeSystem/insurance-plan-type in valuesets.xml
+
+
+   .. attribute:: HomeHealth
+      
+
+      
+
+

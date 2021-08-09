@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.imaging_study_series`
+====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.imaging_study_series
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.imaging_study_series.ImagingStudySeries
+
+
+
+.. class:: ImagingStudySeries(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, uid: spark_auto_mapper_fhir.fhir_types.id.FhirId, number: Optional[spark_auto_mapper_fhir.fhir_types.unsigned_int.FhirUnsignedInt] = None, modality: spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode], description: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, numberOfInstances: Optional[spark_auto_mapper_fhir.fhir_types.unsigned_int.FhirUnsignedInt] = None, endpoint: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.endpoint.Endpoint]]] = None, bodySite: Optional[spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.snomedct_body_structures.SNOMEDCTBodyStructuresCode]] = None, laterality: Optional[spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.laterality.LateralityCode]] = None, specimen: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.specimen.Specimen]]] = None, started: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, performer: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.imaging_study_performer.ImagingStudyPerformer]] = None, instance: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.imaging_study_instance.ImagingStudyInstance]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   ImagingStudy.Series
+   Representation of the content produced in a DICOM imaging study. A study comprises a set of series, each of which includes a set of Service-Object Pair Instances (SOP Instances - images or other data) acquired or produced in a common context.  A series is of only one modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple series of different modalities.
+
+

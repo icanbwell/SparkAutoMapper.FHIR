@@ -1,0 +1,380 @@
+:mod:`spark_auto_mapper_fhir.value_sets.document_section_codes`
+===============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.document_section_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.document_section_codes.DocumentSectionCodesCode
+   spark_auto_mapper_fhir.value_sets.document_section_codes.DocumentSectionCodesCodeValues
+
+
+
+.. class:: DocumentSectionCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   DocumentSectionCodes
+   From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+       Document section codes (LOINC codes used in CCDA sections).
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://loinc.org
+
+      
+
+
+.. class:: DocumentSectionCodesCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+   .. attribute:: _10154_3
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _10157_6
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _10160_0
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _10164_2
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _10183_2
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _10184_0
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _10187_3
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _10210_3
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _10216_0
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _10218_6
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _10218_6
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _10223_6
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _10222_8
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _11329_0
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _11348_0
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _11369_6
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _57852_6
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _11493_4
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _11535_2
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _11537_8
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _18776_5
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _18841_7
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _29299_5
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _29545_1
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _29549_3
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _29554_3
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _29762_2
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _30954_2
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _42344_2
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _42346_7
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _42348_3
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _42349_1
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _46240_8
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _46241_6
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _46264_8
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _47420_5
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _47519_4
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _48765_2
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _48768_6
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _51848_0
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _55109_3
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _55122_6
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _59768_2
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _59769_0
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _59770_8
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _59771_6
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _59772_4
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _59773_2
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _59775_7
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _59776_5
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _61149_1
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _61150_9
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _61150_9
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _69730_0
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _8648_8
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _8653_8
+      
+
+      From: http://hl7.org/fhir/ValueSet/doc-section-codes in valuesets.xml
+
+
+   .. attribute:: _8716_3
+      
+
+      
+
+

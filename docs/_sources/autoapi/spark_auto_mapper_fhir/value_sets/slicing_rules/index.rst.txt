@@ -1,0 +1,62 @@
+:mod:`spark_auto_mapper_fhir.value_sets.slicing_rules`
+======================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.slicing_rules
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.slicing_rules.SlicingRulesCode
+   spark_auto_mapper_fhir.value_sets.slicing_rules.SlicingRulesCodeValues
+
+
+
+.. class:: SlicingRulesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   SlicingRules
+   From: http://hl7.org/fhir/resource-slicing-rules in valuesets.xml
+       How slices are interpreted when evaluating an instance.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/resource-slicing-rules
+
+      
+
+
+.. class:: SlicingRulesCodeValues
+
+   No additional content is allowed other than that described by the slices in
+   this profile.
+   From: http://hl7.org/fhir/resource-slicing-rules in valuesets.xml
+
+   .. attribute:: Closed
+      
+
+      Additional content is allowed anywhere in the list.
+      From: http://hl7.org/fhir/resource-slicing-rules in valuesets.xml
+
+
+   .. attribute:: Open
+      
+
+      Additional content is allowed, but only at the end of the list. Note that
+      using this requires that the slices be ordered, which makes it hard to share
+      uses. This should only be done where absolutely required.
+      From: http://hl7.org/fhir/resource-slicing-rules in valuesets.xml
+
+
+   .. attribute:: OpenAtEnd
+      
+
+      
+
+

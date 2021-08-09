@@ -1,0 +1,139 @@
+:mod:`spark_auto_mapper_fhir.value_sets.claim_information_category_codes`
+=========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.claim_information_category_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.claim_information_category_codes.ClaimInformationCategoryCodesCode
+   spark_auto_mapper_fhir.value_sets.claim_information_category_codes.ClaimInformationCategoryCodesCodeValues
+
+
+
+.. class:: ClaimInformationCategoryCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ClaimInformationCategoryCodes
+   From: http://terminology.hl7.org/CodeSystem/claiminformationcategory in valuesets.xml
+       This value set includes sample Information Category codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/claiminformationcategory
+
+      
+
+
+.. class:: ClaimInformationCategoryCodesCodeValues
+
+   Codes conveying additional situation and condition information.
+   From: http://terminology.hl7.org/CodeSystem/claiminformationcategory in valuesets.xml
+
+   .. attribute:: Information
+      
+
+      Discharge status and discharge to locations.
+      From: http://terminology.hl7.org/CodeSystem/claiminformationcategory in valuesets.xml
+
+
+   .. attribute:: Discharge
+      
+
+      Period, start or end dates of aspects of the Condition.
+      From: http://terminology.hl7.org/CodeSystem/claiminformationcategory in valuesets.xml
+
+
+   .. attribute:: Onset
+      
+
+      Nature and date of the related event e.g. Last exam, service, X-ray etc.
+      From: http://terminology.hl7.org/CodeSystem/claiminformationcategory in valuesets.xml
+
+
+   .. attribute:: RelatedServices
+      
+
+      Insurance policy exceptions.
+      From: http://terminology.hl7.org/CodeSystem/claiminformationcategory in valuesets.xml
+
+
+   .. attribute:: Exception
+      
+
+      Materials being forwarded, e.g. Models, molds, images, documents.
+      From: http://terminology.hl7.org/CodeSystem/claiminformationcategory in valuesets.xml
+
+
+   .. attribute:: MaterialsForwarded
+      
+
+      Materials attached such as images, documents and resources.
+      From: http://terminology.hl7.org/CodeSystem/claiminformationcategory in valuesets.xml
+
+
+   .. attribute:: Attachment
+      
+
+      Teeth which are missing for any reason, for example: prior extraction, never
+      developed.
+      From: http://terminology.hl7.org/CodeSystem/claiminformationcategory in valuesets.xml
+
+
+   .. attribute:: MissingTooth
+      
+
+      The type of prosthesis and date of supply if a previously supplied prosthesis.
+      From: http://terminology.hl7.org/CodeSystem/claiminformationcategory in valuesets.xml
+
+
+   .. attribute:: Prosthesis
+      
+
+      Other information identified by the type.system.
+      From: http://terminology.hl7.org/CodeSystem/claiminformationcategory in valuesets.xml
+
+
+   .. attribute:: Other
+      
+
+      An indication that the patient was hospitalized, the period if known otherwise
+      a Yes/No (boolean).
+      From: http://terminology.hl7.org/CodeSystem/claiminformationcategory in valuesets.xml
+
+
+   .. attribute:: Hospitalized
+      
+
+      An indication that the patient was unable to work, the period if known
+      otherwise a Yes/No (boolean).
+      From: http://terminology.hl7.org/CodeSystem/claiminformationcategory in valuesets.xml
+
+
+   .. attribute:: EmploymentImpacted
+      
+
+      The external cause of an illness or injury.
+      From: http://terminology.hl7.org/CodeSystem/claiminformationcategory in valuesets.xml
+
+
+   .. attribute:: ExternalCaause
+      
+
+      The reason for the patient visit.
+      From: http://terminology.hl7.org/CodeSystem/claiminformationcategory in valuesets.xml
+
+
+   .. attribute:: PatientReasonForVisit
+      
+
+      
+
+

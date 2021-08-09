@@ -1,0 +1,32 @@
+:mod:`spark_auto_mapper_fhir.complex_types.expression`
+======================================================
+
+.. py:module:: spark_auto_mapper_fhir.complex_types.expression
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.complex_types.expression.Expression
+
+
+
+.. class:: Expression(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, description: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, name: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, language: spark_auto_mapper_fhir.value_sets.expression_language.ExpressionLanguageCode, expression: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, reference: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
+
+   Expression
+   fhir-base.xsd
+       A expression that is evaluated in a specified context and returns a value. The context of use of the expression must specify the context in which the expression is evaluated, and how the result of the expression is used.
+       If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

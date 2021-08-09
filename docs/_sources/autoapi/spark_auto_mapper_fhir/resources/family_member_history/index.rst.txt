@@ -1,0 +1,33 @@
+:mod:`spark_auto_mapper_fhir.resources.family_member_history`
+=============================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.family_member_history
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.family_member_history.FamilyMemberHistory
+
+
+
+.. class:: FamilyMemberHistory(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.identifier.Identifier]] = None, instantiatesCanonical: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.canonical.FhirCanonical]] = None, instantiatesUri: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.uri.FhirUri]] = None, status: spark_auto_mapper_fhir.value_sets.family_history_status.FamilyHistoryStatusCode, dataAbsentReason: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.family_history_absent_reason.FamilyHistoryAbsentReasonCode]] = None, patient: spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.patient.Patient], date: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, name: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, relationship: spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.family_member.FamilyMember], sex: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.administrative_gender.AdministrativeGenderCode]] = None, bornPeriod: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, bornDate: Optional[spark_auto_mapper_fhir.fhir_types.date.FhirDate] = None, bornString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, ageAge: Optional[spark_auto_mapper_fhir.complex_types.age.Age] = None, ageRange: Optional[spark_auto_mapper_fhir.complex_types.range.Range] = None, ageString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, estimatedAge: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, deceasedBoolean: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, deceasedAge: Optional[spark_auto_mapper_fhir.complex_types.age.Age] = None, deceasedRange: Optional[spark_auto_mapper_fhir.complex_types.range.Range] = None, deceasedDate: Optional[spark_auto_mapper_fhir.fhir_types.date.FhirDate] = None, deceasedString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, reasonCode: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.snomedct_clinical_findings.SNOMEDCTClinicalFindingsCode]]] = None, reasonReference: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.condition.Condition, spark_auto_mapper_fhir.resources.observation.Observation, spark_auto_mapper_fhir.resources.allergy_intolerance.AllergyIntolerance, spark_auto_mapper_fhir.resources.questionnaire_response.QuestionnaireResponse, spark_auto_mapper_fhir.resources.diagnostic_report.DiagnosticReport, spark_auto_mapper_fhir.resources.document_reference.DocumentReference)]]]] = None, note: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.annotation.Annotation]] = None, condition: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.family_member_history_condition.FamilyMemberHistoryCondition]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   FamilyMemberHistory
+   familymemberhistory.xsd
+       Significant health conditions for a person related to the patient relevant in
+   the context of care for the patient.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

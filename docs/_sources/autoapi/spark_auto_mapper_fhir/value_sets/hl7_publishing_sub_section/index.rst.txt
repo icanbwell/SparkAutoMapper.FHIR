@@ -1,0 +1,228 @@
+:mod:`spark_auto_mapper_fhir.value_sets.hl7_publishing_sub_section`
+===================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.hl7_publishing_sub_section
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.hl7_publishing_sub_section.Hl7PublishingSubSection
+   spark_auto_mapper_fhir.value_sets.hl7_publishing_sub_section.Hl7PublishingSubSectionValues
+
+
+
+.. class:: Hl7PublishingSubSection(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.hl7PublishingSubSection
+   From: http://terminology.hl7.org/ValueSet/v3-hl7PublishingSubSection in v3-codesystems.xml
+         Description:
+   Codes for HL7 publishing sub-sections (business sub-categories)
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSubSection
+
+      
+
+
+.. class:: Hl7PublishingSubSectionValues
+
+   Description: Represents the HL7 V3 publishing sub-section that holds common or
+   shared specifications within the Infrastructure Management (IM) section.
+
+
+                              UsageNote: V3 Specifications are published in a set
+   of "domains", which contain interactions and related specifications for a
+   single area of health care within which can be supported by a single, coherent
+   set of interoperability specifications.
+
+                           For publishing purposes, these domains are aggregated
+   into sub-sections of related health care areas and these sub-sections are
+   further aggregated into three major sets.
+   From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSubSection in v3-codesystems.xml
+
+   .. attribute:: Common
+      
+
+      Description: Represents the HL7 V3 publishing sub-section that holds
+      specifications related to the management of financial information within the
+      Administrative Management (AM) section.
+
+
+                                 UsageNote: V3 Specifications are published in a set
+      of "domains", which contain interactions and related specifications for a
+      single area of health care within which can be supported by a single, coherent
+      set of interoperability specifications.
+
+                              For publishing purposes, these domains are aggregated
+      into sub-sections of related health care areas and these sub-sections are
+      further aggregated into three major sets.
+      From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSubSection in v3-codesystems.xml
+
+
+   .. attribute:: FinancialInformation
+      
+
+      Description: Represents the HL7 V3 publishing sub-section that holds
+      specifications related to the definition and control of interoperability
+      messages within the Infrastructure Management (IM) section.
+
+
+                                 UsageNote: V3 Specifications are published in a set
+      of "domains", which contain interactions and related specifications for a
+      single area of health care within which can be supported by a single, coherent
+      set of interoperability specifications.
+
+                              For publishing purposes, these domains are aggregated
+      into sub-sections of related health care areas and these sub-sections are
+      further aggregated into three major sets.
+      From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSubSection in v3-codesystems.xml
+
+
+   .. attribute:: MessageControl
+      
+
+      Description: Represents the HL7 V3 publishing sub-section that holds
+      specifications related to master file and registry management activities
+      within the Infrastructure Management (IM) section.
+
+
+                                 UsageNote: V3 Specifications are published in a set
+      of "domains", which contain interactions and related specifications for a
+      single area of health care within which can be supported by a single, coherent
+      set of interoperability specifications.
+
+                              For publishing purposes, these domains are aggregated
+      into sub-sections of related health care areas and these sub-sections are
+      further aggregated into three major sets.
+      From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSubSection in v3-codesystems.xml
+
+
+   .. attribute:: MasterFile
+      
+
+      Description: Represents the HL7 V3 publishing sub-section that holds
+      specifications related to managing clinical operations within the Health and
+      Clinical Management (HM) section.
+
+
+                                 UsageNote: V3 Specifications are published in a set
+      of "domains", which contain interactions and related specifications for a
+      single area of health care within which can be supported by a single, coherent
+      set of interoperability specifications.
+
+                              For publishing purposes, these domains are aggregated
+      into sub-sections of related health care areas and these sub-sections are
+      further aggregated into three major sets.
+      From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSubSection in v3-codesystems.xml
+
+
+   .. attribute:: Operations
+      
+
+      Description: Represents the HL7 V3 publishing sub-section that holds
+      specifications related to the management of practice settings within the
+      Administrative Management (AM) section.
+
+
+                                 UsageNote: V3 Specifications are published in a set
+      of "domains", which contain interactions and related specifications for a
+      single area of health care within which can be supported by a single, coherent
+      set of interoperability specifications.
+
+                              For publishing purposes, these domains are aggregated
+      into sub-sections of related health care areas and these sub-sections are
+      further aggregated into three major sets.
+      From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSubSection in v3-codesystems.xml
+
+
+   .. attribute:: Practice
+      
+
+      Description: Represents the HL7 V3 publishing sub-section that holds
+      specifications related to query/response activities within the Infrastructure
+      Management (IM) section.
+
+
+                                 UsageNote: V3 Specifications are published in a set
+      of "domains", which contain interactions and related specifications for a
+      single area of health care within which can be supported by a single, coherent
+      set of interoperability specifications.
+
+                              For publishing purposes, these domains are aggregated
+      into sub-sections of related health care areas and these sub-sections are
+      further aggregated into three major sets.
+      From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSubSection in v3-codesystems.xml
+
+
+   .. attribute:: Query
+      
+
+      Description: Represents the HL7 V3 publishing sub-section that holds
+      specifications related to the definition and communication of records of
+      clinical care within the Health and Clinical Management (HM) section.
+
+
+                                 UsageNote: V3 Specifications are published in a set
+      of "domains", which contain interactions and related specifications for a
+      single area of health care within which can be supported by a single, coherent
+      set of interoperability specifications.
+
+                              For publishing purposes, these domains are aggregated
+      into sub-sections of related health care areas and these sub-sections are
+      further aggregated into three major sets.
+      From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSubSection in v3-codesystems.xml
+
+
+   .. attribute:: Records
+      
+
+      Description: Represents the HL7 V3 publishing sub-section that holds
+      specifications related to the definition and communication of reasoning
+      (knowledge) within the Health and Clinical Management (HM) section.
+
+
+                                 UsageNote: V3 Specifications are published in a set
+      of "domains", which contain interactions and related specifications for a
+      single area of health care within which can be supported by a single, coherent
+      set of interoperability specifications.
+
+                              For publishing purposes, these domains are aggregated
+      into sub-sections of related health care areas and these sub-sections are
+      further aggregated into three major sets.
+      From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSubSection in v3-codesystems.xml
+
+
+   .. attribute:: Reasoning
+      
+
+      Description: Represents the HL7 V3 publishing sub-section that holds
+      specifications that are unassigned - that have not yet been assigned to one of
+      the formal publishing sections.
+
+
+                                 UsageNote: V3 Specifications are published in a set
+      of "domains", which contain interactions and related specifications for a
+      single area of health care within which can be supported by a single, coherent
+      set of interoperability specifications.
+
+                              For publishing purposes, these domains are aggregated
+      into sub-sections of related health care areas and these sub-sections are
+      further aggregated into three major sets.
+      From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSubSection in v3-codesystems.xml
+
+
+   .. attribute:: Unknown
+      
+
+      
+
+

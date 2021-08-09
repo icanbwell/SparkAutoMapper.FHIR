@@ -1,0 +1,37 @@
+:mod:`spark_auto_mapper_fhir.complex_types.codeable_concept`
+============================================================
+
+.. py:module:: spark_auto_mapper_fhir.complex_types.codeable_concept
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept
+
+
+
+.. data:: _T
+   
+
+   
+
+.. class:: CodeableConcept(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, coding: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.coding.Coding[_T]]] = None, text: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`, :class:`Generic[_T]`
+
+   CodeableConcept
+   fhir-base.xsd
+       A concept that may be defined by a formal reference to a terminology or ontology or may be provided by text.
+       If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

@@ -1,0 +1,135 @@
+:mod:`spark_auto_mapper_fhir.value_sets.special_courtesy`
+=========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.special_courtesy
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.special_courtesy.SpecialCourtesyCode
+   spark_auto_mapper_fhir.value_sets.special_courtesy.SpecialCourtesyCodeValues
+
+
+
+.. class:: SpecialCourtesyCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   SpecialCourtesy
+   From: http://hl7.org/fhir/ValueSet/encounter-special-courtesy in valuesets.xml
+       This value set defines a set of codes that can be used to indicate special
+   courtesies provided to the patient.
+
+   .. attribute:: codeset_v3_NullFlavor
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
+
+      http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy
+
+
+   .. attribute:: codeset_v3_EncounterSpecialCourtesy
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy
+
+      
+
+
+.. class:: SpecialCourtesyCodeValues
+
+   extended courtesy
+   From: http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy in v3-codesystems.xml
+
+   .. attribute:: ExtendedCourtesy
+      
+
+      normal courtesy
+      From: http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy in v3-codesystems.xml
+
+
+   .. attribute:: NormalCourtesy
+      
+
+      professional courtesy
+      From: http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy in v3-codesystems.xml
+
+
+   .. attribute:: ProfessionalCourtesy
+      
+
+      Courtesies extended to the staff of the entity providing service.
+      From: http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy in v3-codesystems.xml
+
+
+   .. attribute:: Staff
+      
+
+      very important person
+      From: http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy in v3-codesystems.xml
+
+
+   .. attribute:: VeryImportantPerson
+      
+
+      From: http://hl7.org/fhir/ValueSet/encounter-special-courtesy in valuesets.xml
+
+
+   .. attribute:: EXT
+      
+
+      From: http://hl7.org/fhir/ValueSet/encounter-special-courtesy in valuesets.xml
+
+
+   .. attribute:: NRM
+      
+
+      From: http://hl7.org/fhir/ValueSet/encounter-special-courtesy in valuesets.xml
+
+
+   .. attribute:: PRF
+      
+
+      From: http://hl7.org/fhir/ValueSet/encounter-special-courtesy in valuesets.xml
+
+
+   .. attribute:: STF
+      
+
+      From: http://hl7.org/fhir/ValueSet/encounter-special-courtesy in valuesets.xml
+
+
+   .. attribute:: VIP
+      
+
+      Description:The value is exceptional (missing, omitted, incomplete, improper).
+      No information as to the reason for being an exceptional value is provided.
+      This is the most general exceptional value. It is also the default exceptional
+      value.
+      From: http://terminology.hl7.org/CodeSystem/v3-NullFlavor in v3-codesystems.xml
+
+
+   .. attribute:: NoInformation
+      
+
+      Value is not present in a message.  This is only defined in messages, never in
+      application data!  All values not present in the message must be replaced by
+      the applicable default, or no-information (NI) as the default of all defaults.
+      From: http://terminology.hl7.org/CodeSystem/v3-NullFlavor in v3-codesystems.xml
+
+
+   .. attribute:: NotPresent
+      
+
+      From: http://hl7.org/fhir/ValueSet/encounter-special-courtesy in valuesets.xml
+
+
+   .. attribute:: UNK
+      
+
+      
+
+

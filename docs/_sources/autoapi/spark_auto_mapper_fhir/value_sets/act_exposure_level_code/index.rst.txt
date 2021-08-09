@@ -1,0 +1,51 @@
+:mod:`spark_auto_mapper_fhir.value_sets.act_exposure_level_code`
+================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.act_exposure_level_code
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.act_exposure_level_code.ActExposureLevelCode
+   spark_auto_mapper_fhir.value_sets.act_exposure_level_code.ActExposureLevelCodeValues
+
+
+
+.. class:: ActExposureLevelCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.ActExposureLevelCode
+   From: http://terminology.hl7.org/ValueSet/v3-ActExposureLevelCode in v3-codesystems.xml
+        A qualitative measure of the degree of exposure to the causative agent.  This
+   includes concepts such as "low", "medium" and "high".  This quantifies how the
+   quantity that was available to be administered to the target differs from
+   typical or background levels of the substance.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ActExposureLevelCode
+
+      
+
+
+.. class:: ActExposureLevelCodeValues
+
+   A qualitative measure of the degree of exposure to the causative agent.  This
+   includes concepts such as "low", "medium" and "high".  This quantifies how the
+   quantity that was available to be administered to the target differs from
+   typical or background levels of the substance.
+   From: http://terminology.hl7.org/CodeSystem/v3-ActExposureLevelCode in v3-codesystems.xml
+
+   .. attribute:: ActExposureLevelCode_
+      
+
+      
+
+

@@ -1,0 +1,14 @@
+:mod:`spark_auto_mapper_fhir.fhir_types.boolean`
+================================================
+
+.. py:module:: spark_auto_mapper_fhir.fhir_types.boolean
+
+
+Module Contents
+---------------
+
+.. data:: FhirBoolean
+   
+
+   
+

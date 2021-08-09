@@ -1,0 +1,36 @@
+:mod:`spark_auto_mapper_fhir.resources.diagnostic_report`
+=========================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.diagnostic_report
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.diagnostic_report.DiagnosticReport
+
+
+
+.. class:: DiagnosticReport(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.identifier.Identifier]] = None, basedOn: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.care_plan.CarePlan, spark_auto_mapper_fhir.resources.immunization_recommendation.ImmunizationRecommendation, spark_auto_mapper_fhir.resources.medication_request.MedicationRequest, spark_auto_mapper_fhir.resources.nutrition_order.NutritionOrder, spark_auto_mapper_fhir.resources.service_request.ServiceRequest)]]]] = None, status: spark_auto_mapper_fhir.value_sets.diagnostic_report_status.DiagnosticReportStatusCode, category: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.diagnostic_service_section_codes.DiagnosticServiceSectionCodesCode]]] = None, code: spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.loinc_diagnostic_report_codes.LOINCDiagnosticReportCodesCode], subject: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.group.Group, spark_auto_mapper_fhir.resources.device.Device, spark_auto_mapper_fhir.resources.location.Location)]]] = None, encounter: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.encounter.Encounter]] = None, effectiveDateTime: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, effectivePeriod: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, issued: Optional[spark_auto_mapper_fhir.fhir_types.instant.FhirInstant] = None, performer: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole, spark_auto_mapper_fhir.resources.organization.Organization, spark_auto_mapper_fhir.resources.care_team.CareTeam)]]]] = None, resultsInterpreter: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole, spark_auto_mapper_fhir.resources.organization.Organization, spark_auto_mapper_fhir.resources.care_team.CareTeam)]]]] = None, specimen: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.specimen.Specimen]]] = None, result: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.observation.Observation]]] = None, imagingStudy: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.imaging_study.ImagingStudy]]] = None, media: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.diagnostic_report_media.DiagnosticReportMedia]] = None, conclusion: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, conclusionCode: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.snomedct_clinical_findings.SNOMEDCTClinicalFindingsCode]]] = None, presentedForm: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.attachment.Attachment]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   DiagnosticReport
+   diagnosticreport.xsd
+       The findings and interpretation of diagnostic  tests performed on patients,
+   groups of patients, devices, and locations, and/or specimens derived from
+   these. The report includes clinical context such as requesting and provider
+   information, and some mix of atomic results, images, textual and coded
+   interpretations, and formatted representation of diagnostic reports.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

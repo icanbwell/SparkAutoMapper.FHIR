@@ -1,0 +1,158 @@
+:mod:`spark_auto_mapper_fhir.value_sets.html_link_type`
+=======================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.html_link_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.html_link_type.HtmlLinkType
+   spark_auto_mapper_fhir.value_sets.html_link_type.HtmlLinkTypeValues
+
+
+
+.. class:: HtmlLinkType(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.HtmlLinkType
+   From: http://terminology.hl7.org/ValueSet/v3-HtmlLinkType in v3-codesystems.xml
+        HtmlLinkType values are drawn from HTML 4.0 and describe the relationship
+   between the current document and the anchor that is the target of the link
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType
+
+      
+
+
+.. class:: HtmlLinkTypeValues
+
+   Designates substitute versions for the document in which the link occurs. When
+   used together with the lang attribute, it implies a translated version of the
+   document. When used together with the media attribute, it implies a version
+   designed for a different medium (or media).
+   From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
+
+   .. attribute:: Alternate
+      
+
+      Refers to a document serving as an appendix in a collection of documents.
+      From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
+
+
+   .. attribute:: Appendix
+      
+
+      Refers to a bookmark. A bookmark is a link to a key entry point within an
+      extended document. The title attribute may be used, for example, to label the
+      bookmark. Note that several bookmarks may be defined in each document.
+      From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
+
+
+   .. attribute:: Bookmark
+      
+
+      Refers to a document serving as a chapter in a collection of documents.
+      From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
+
+
+   .. attribute:: Chapter
+      
+
+      Refers to a document serving as a table of contents. Some user agents also
+      support the synonym ToC (from "Table of Contents").
+      From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
+
+
+   .. attribute:: Contents
+      
+
+      Refers to a copyright statement for the current document.
+      From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
+
+
+   .. attribute:: Copyright
+      
+
+      Refers to a document providing a glossary of terms that pertain to the current
+      document.
+      From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
+
+
+   .. attribute:: Glossary
+      
+
+      Refers to a document offering help (more information, links to other sources
+      of information, etc.).
+      From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
+
+
+   .. attribute:: Help
+      
+
+      Refers to a document providing an index for the current document.
+      From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
+
+
+   .. attribute:: Index
+      
+
+      Refers to the next document in a linear sequence of documents. User agents may
+      choose to preload the "next" document, to reduce the perceived load time.
+      From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
+
+
+   .. attribute:: Next
+      
+
+      Refers to the previous document in an ordered series of documents. Some user
+      agents also support the synonym "Previous".
+      From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
+
+
+   .. attribute:: Prev
+      
+
+      Refers to a document serving as a section in a collection of documents.
+      From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
+
+
+   .. attribute:: Section
+      
+
+      Refers to the first document in a collection of documents. This link type
+      tells search engines which document is considered by the author to be the
+      starting point of the collection.
+      From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
+
+
+   .. attribute:: Start
+      
+
+      Refers to an external style sheet. See the section on external style sheets
+      for details. This is used together with the link type "Alternate" for user-
+      selectable alternate style sheets.
+      From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
+
+
+   .. attribute:: Stylesheet
+      
+
+      Refers to a document serving as a subsection in a collection of documents.
+      From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
+
+
+   .. attribute:: Subsection
+      
+
+      
+
+

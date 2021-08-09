@@ -1,0 +1,56 @@
+:mod:`spark_auto_mapper_fhir.value_sets.procedure_outcome_codes_snomedct_`
+==========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.procedure_outcome_codes_snomedct_
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.procedure_outcome_codes_snomedct_.ProcedureOutcomeCodes_SNOMEDCT_Code
+   spark_auto_mapper_fhir.value_sets.procedure_outcome_codes_snomedct_.ProcedureOutcomeCodes_SNOMEDCT_CodeValues
+
+
+
+.. class:: ProcedureOutcomeCodes_SNOMEDCT_Code(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ProcedureOutcomeCodes(SNOMEDCT)
+   From: http://hl7.org/fhir/ValueSet/procedure-outcome in valuesets.xml
+       Procedure Outcome code: A selection of relevant SNOMED CT codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+
+.. class:: ProcedureOutcomeCodes_SNOMEDCT_CodeValues
+
+   From: http://hl7.org/fhir/ValueSet/procedure-outcome in valuesets.xml
+
+   .. attribute:: _385669000
+      
+
+      From: http://hl7.org/fhir/ValueSet/procedure-outcome in valuesets.xml
+
+
+   .. attribute:: _385671000
+      
+
+      From: http://hl7.org/fhir/ValueSet/procedure-outcome in valuesets.xml
+
+
+   .. attribute:: _385670004
+      
+
+      
+
+

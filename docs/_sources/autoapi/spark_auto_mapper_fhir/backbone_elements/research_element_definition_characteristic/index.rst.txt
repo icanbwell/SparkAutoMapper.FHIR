@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.research_element_definition_characteristic`
+==========================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.research_element_definition_characteristic
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.research_element_definition_characteristic.ResearchElementDefinitionCharacteristic
+
+
+
+.. class:: ResearchElementDefinitionCharacteristic(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, definitionCodeableConcept: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, definitionCanonical: Optional[spark_auto_mapper_fhir.fhir_types.canonical.FhirCanonical] = None, definitionExpression: Optional[spark_auto_mapper_fhir.complex_types.expression.Expression] = None, definitionDataRequirement: Optional[spark_auto_mapper_fhir.complex_types.data_requirement.DataRequirement] = None, usageContext: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.usage_context.UsageContext]] = None, exclude: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, unitOfMeasure: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.ucum_codes.UCUMCodesCode]] = None, studyEffectiveDescription: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, studyEffectiveDateTime: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, studyEffectivePeriod: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, studyEffectiveDuration: Optional[spark_auto_mapper_fhir.complex_types.duration.Duration] = None, studyEffectiveTiming: Optional[spark_auto_mapper_fhir.backbone_elements.timing.Timing] = None, studyEffectiveTimeFromStart: Optional[spark_auto_mapper_fhir.complex_types.duration.Duration] = None, studyEffectiveGroupMeasure: Optional[spark_auto_mapper_fhir.value_sets.group_measure.GroupMeasureCode] = None, participantEffectiveDescription: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, participantEffectiveDateTime: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, participantEffectivePeriod: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, participantEffectiveDuration: Optional[spark_auto_mapper_fhir.complex_types.duration.Duration] = None, participantEffectiveTiming: Optional[spark_auto_mapper_fhir.backbone_elements.timing.Timing] = None, participantEffectiveTimeFromStart: Optional[spark_auto_mapper_fhir.complex_types.duration.Duration] = None, participantEffectiveGroupMeasure: Optional[spark_auto_mapper_fhir.value_sets.group_measure.GroupMeasureCode] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   ResearchElementDefinition.Characteristic
+   The ResearchElementDefinition resource describes a "PICO" element that knowledge (evidence, assertion, recommendation) is about.
+
+

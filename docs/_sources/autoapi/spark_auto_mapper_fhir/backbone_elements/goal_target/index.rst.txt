@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.goal_target`
+===========================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.goal_target
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.goal_target.GoalTarget
+
+
+
+.. class:: GoalTarget(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, measure: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.loinc_codes.LOINCCodesCode]] = None, detailQuantity: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, detailRange: Optional[spark_auto_mapper_fhir.complex_types.range.Range] = None, detailCodeableConcept: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, detailString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, detailBoolean: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, detailInteger: Optional[spark_auto_mapper_fhir.fhir_types.integer.FhirInteger] = None, detailRatio: Optional[spark_auto_mapper_fhir.complex_types.ratio.Ratio] = None, dueDate: Optional[spark_auto_mapper_fhir.fhir_types.date.FhirDate] = None, dueDuration: Optional[spark_auto_mapper_fhir.complex_types.duration.Duration] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   Goal.Target
+   Describes the intended objective(s) for a patient, group or organization care, for example, weight loss, restoring an activity of daily living, obtaining herd immunity via immunization, meeting a process improvement objective, etc.
+
+

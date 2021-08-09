@@ -1,0 +1,39 @@
+:mod:`spark_auto_mapper_fhir.resources.substance_protein`
+=========================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.substance_protein
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.substance_protein.SubstanceProtein
+
+
+
+.. class:: SubstanceProtein(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, sequenceType: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, numberOfSubunits: Optional[spark_auto_mapper_fhir.fhir_types.integer.FhirInteger] = None, disulfideLinkage: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.string.FhirString]] = None, subunit: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.substance_protein_subunit.SubstanceProteinSubunit]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   SubstanceProtein
+   substanceprotein.xsd
+       A SubstanceProtein is defined as a single unit of a linear amino acid
+   sequence, or a combination of subunits that are either covalently linked or
+   have a defined invariant stoichiometric relationship. This includes all
+   synthetic, recombinant and purified SubstanceProteins of defined sequence,
+   whether the use is therapeutic or prophylactic. This set of elements will be
+   used to describe albumins, coagulation factors, cytokines, growth factors,
+   peptide/SubstanceProtein hormones, enzymes, toxins, toxoids, recombinant
+   vaccines, and immunomodulators.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

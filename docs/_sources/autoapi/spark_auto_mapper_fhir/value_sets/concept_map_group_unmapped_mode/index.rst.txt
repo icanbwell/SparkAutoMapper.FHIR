@@ -1,0 +1,59 @@
+:mod:`spark_auto_mapper_fhir.value_sets.concept_map_group_unmapped_mode`
+========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.concept_map_group_unmapped_mode
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.concept_map_group_unmapped_mode.ConceptMapGroupUnmappedModeCode
+   spark_auto_mapper_fhir.value_sets.concept_map_group_unmapped_mode.ConceptMapGroupUnmappedModeCodeValues
+
+
+
+.. class:: ConceptMapGroupUnmappedModeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ConceptMapGroupUnmappedMode
+   From: http://hl7.org/fhir/conceptmap-unmapped-mode in valuesets.xml
+       Defines which action to take if there is no match in the group.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/conceptmap-unmapped-mode
+
+      
+
+
+.. class:: ConceptMapGroupUnmappedModeCodeValues
+
+   Use the code as provided in the $translate request.
+   From: http://hl7.org/fhir/conceptmap-unmapped-mode in valuesets.xml
+
+   .. attribute:: ProvidedCode
+      
+
+      Use the code explicitly provided in the group.unmapped.
+      From: http://hl7.org/fhir/conceptmap-unmapped-mode in valuesets.xml
+
+
+   .. attribute:: FixedCode
+      
+
+      Use the map identified by the canonical URL in the url element.
+      From: http://hl7.org/fhir/conceptmap-unmapped-mode in valuesets.xml
+
+
+   .. attribute:: OtherMap
+      
+
+      
+
+

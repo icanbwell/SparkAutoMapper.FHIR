@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.molecular_sequence_variant`
+==========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.molecular_sequence_variant
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.molecular_sequence_variant.MolecularSequenceVariant
+
+
+
+.. class:: MolecularSequenceVariant(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, start: Optional[spark_auto_mapper_fhir.fhir_types.integer.FhirInteger] = None, end: Optional[spark_auto_mapper_fhir.fhir_types.integer.FhirInteger] = None, observedAllele: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, referenceAllele: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, cigar: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, variantPointer: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.observation.Observation]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   MolecularSequence.Variant
+   Raw data describing a biological sequence.
+
+

@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.device_definition_udi_device_identifier`
+=======================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.device_definition_udi_device_identifier
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.device_definition_udi_device_identifier.DeviceDefinitionUdiDeviceIdentifier
+
+
+
+.. class:: DeviceDefinitionUdiDeviceIdentifier(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, deviceIdentifier: spark_auto_mapper_fhir.fhir_types.string.FhirString, issuer: spark_auto_mapper_fhir.fhir_types.uri.FhirUri, jurisdiction: spark_auto_mapper_fhir.fhir_types.uri.FhirUri)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   DeviceDefinition.UdiDeviceIdentifier
+   The characteristics, operational status and capabilities of a medical-related component of a medical device.
+
+

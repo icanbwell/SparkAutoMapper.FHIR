@@ -1,0 +1,70 @@
+:mod:`spark_auto_mapper_fhir.value_sets.service_request_order_details_codes`
+============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.service_request_order_details_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.service_request_order_details_codes.ServiceRequestOrderDetailsCodesCode
+   spark_auto_mapper_fhir.value_sets.service_request_order_details_codes.ServiceRequestOrderDetailsCodesCodeValues
+
+
+
+.. class:: ServiceRequestOrderDetailsCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ServiceRequestOrderDetailsCodes
+   From: http://hl7.org/fhir/ValueSet/servicerequest-orderdetail in valuesets.xml
+       An example value set of Codified order entry details concepts.  These concepts
+   only make sense in the context of what is being ordered.  This example is for
+   a patient ventilation order
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+
+.. class:: ServiceRequestOrderDetailsCodesCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/servicerequest-orderdetail in valuesets.xml
+
+   .. attribute:: ContinuousPositiveAirwayPressureVentilationTreatment_regime_therapy_
+      
+
+      From: http://hl7.org/fhir/ValueSet/servicerequest-orderdetail in valuesets.xml
+
+
+   .. attribute:: PressureControlledVentilation_procedure_
+      
+
+      From: http://hl7.org/fhir/ValueSet/servicerequest-orderdetail in valuesets.xml
+
+
+   .. attribute:: PatientTriggeredInspiratoryAssistance_procedure_
+      
+
+      From: http://hl7.org/fhir/ValueSet/servicerequest-orderdetail in valuesets.xml
+
+
+   .. attribute:: AssistedControlledMandatoryVentilation_procedure_
+      
+
+      From: http://hl7.org/fhir/ValueSet/servicerequest-orderdetail in valuesets.xml
+
+
+   .. attribute:: SynchronizedIntermittentMandatoryVentilation_procedure_
+      
+
+      
+
+

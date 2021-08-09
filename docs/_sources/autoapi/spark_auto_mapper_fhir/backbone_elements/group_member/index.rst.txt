@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.group_member`
+============================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.group_member
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.group_member.GroupMember
+
+
+
+.. class:: GroupMember(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, entity: spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole, spark_auto_mapper_fhir.resources.device.Device, spark_auto_mapper_fhir.resources.medication.Medication, spark_auto_mapper_fhir.resources.substance.Substance, spark_auto_mapper_fhir.resources.group.Group)]], period: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, inactive: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   Group.Member
+   Represents a defined collection of entities that may be discussed or acted upon collectively but which are not expected to act collectively, and are not formally or legally recognized; i.e. a collection of entities that isn't an Organization.
+
+

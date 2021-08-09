@@ -1,0 +1,66 @@
+:mod:`spark_auto_mapper_fhir.value_sets.device_metric_calibration_state`
+========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.device_metric_calibration_state
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.device_metric_calibration_state.DeviceMetricCalibrationStateCode
+   spark_auto_mapper_fhir.value_sets.device_metric_calibration_state.DeviceMetricCalibrationStateCodeValues
+
+
+
+.. class:: DeviceMetricCalibrationStateCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   DeviceMetricCalibrationState
+   From: http://hl7.org/fhir/metric-calibration-state in valuesets.xml
+       Describes the state of a metric calibration.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/metric-calibration-state
+
+      
+
+
+.. class:: DeviceMetricCalibrationStateCodeValues
+
+   The metric has not been calibrated.
+   From: http://hl7.org/fhir/metric-calibration-state in valuesets.xml
+
+   .. attribute:: NotCalibrated
+      
+
+      The metric needs to be calibrated.
+      From: http://hl7.org/fhir/metric-calibration-state in valuesets.xml
+
+
+   .. attribute:: CalibrationRequired
+      
+
+      The metric has been calibrated.
+      From: http://hl7.org/fhir/metric-calibration-state in valuesets.xml
+
+
+   .. attribute:: Calibrated
+      
+
+      The state of calibration of this metric is unspecified.
+      From: http://hl7.org/fhir/metric-calibration-state in valuesets.xml
+
+
+   .. attribute:: Unspecified
+      
+
+      
+
+

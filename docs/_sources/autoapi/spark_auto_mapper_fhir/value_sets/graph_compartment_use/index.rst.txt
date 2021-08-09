@@ -1,0 +1,53 @@
+:mod:`spark_auto_mapper_fhir.value_sets.graph_compartment_use`
+==============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.graph_compartment_use
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.graph_compartment_use.GraphCompartmentUseCode
+   spark_auto_mapper_fhir.value_sets.graph_compartment_use.GraphCompartmentUseCodeValues
+
+
+
+.. class:: GraphCompartmentUseCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   GraphCompartmentUse
+   From: http://hl7.org/fhir/graph-compartment-use in valuesets.xml
+       Defines how a compartment rule is used.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/graph-compartment-use
+
+      
+
+
+.. class:: GraphCompartmentUseCodeValues
+
+   This compartment rule is a condition for whether the rule applies.
+   From: http://hl7.org/fhir/graph-compartment-use in valuesets.xml
+
+   .. attribute:: Condition
+      
+
+      This compartment rule is enforced on any relationships that meet the
+      conditions.
+      From: http://hl7.org/fhir/graph-compartment-use in valuesets.xml
+
+
+   .. attribute:: Requirement
+      
+
+      
+
+

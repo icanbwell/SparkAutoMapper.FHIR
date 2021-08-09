@@ -1,0 +1,32 @@
+:mod:`spark_auto_mapper_fhir.complex_types.data_requirement_date_filter`
+========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.complex_types.data_requirement_date_filter
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.complex_types.data_requirement_date_filter.DataRequirementDateFilter
+
+
+
+.. class:: DataRequirementDateFilter(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, path: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, searchParam: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, valueDateTime: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, valuePeriod: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, valueDuration: Optional[spark_auto_mapper_fhir.complex_types.duration.Duration] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
+
+   DataRequirement.DateFilter
+   fhir-base.xsd
+       Describes a required data item for evaluation in terms of the type of data, and optional code or date-based filters of the data.
+       If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

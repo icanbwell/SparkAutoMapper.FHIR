@@ -1,0 +1,67 @@
+:mod:`spark_auto_mapper_fhir.value_sets.subscription_status`
+============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.subscription_status
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.subscription_status.SubscriptionStatusCode
+   spark_auto_mapper_fhir.value_sets.subscription_status.SubscriptionStatusCodeValues
+
+
+
+.. class:: SubscriptionStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   SubscriptionStatus
+   From: http://hl7.org/fhir/subscription-status in valuesets.xml
+       The status of a subscription.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/subscription-status
+
+      
+
+
+.. class:: SubscriptionStatusCodeValues
+
+   The client has requested the subscription, and the server has not yet set it
+   up.
+   From: http://hl7.org/fhir/subscription-status in valuesets.xml
+
+   .. attribute:: Requested
+      
+
+      The subscription is active.
+      From: http://hl7.org/fhir/subscription-status in valuesets.xml
+
+
+   .. attribute:: Active
+      
+
+      The server has an error executing the notification.
+      From: http://hl7.org/fhir/subscription-status in valuesets.xml
+
+
+   .. attribute:: Error
+      
+
+      Too many errors have occurred or the subscription has expired.
+      From: http://hl7.org/fhir/subscription-status in valuesets.xml
+
+
+   .. attribute:: Off
+      
+
+      
+
+

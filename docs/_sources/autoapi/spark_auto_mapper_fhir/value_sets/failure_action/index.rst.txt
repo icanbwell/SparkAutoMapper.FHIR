@@ -1,0 +1,62 @@
+:mod:`spark_auto_mapper_fhir.value_sets.failure_action`
+=======================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.failure_action
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.failure_action.Failure_actionCode
+   spark_auto_mapper_fhir.value_sets.failure_action.Failure_actionCodeValues
+
+
+
+.. class:: Failure_actionCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   failure-action
+   From: http://terminology.hl7.org/CodeSystem/failure-action in valuesets.xml
+       The result if validation fails
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/failure-action
+
+      
+
+
+.. class:: Failure_actionCodeValues
+
+   From: http://terminology.hl7.org/CodeSystem/failure-action in valuesets.xml
+
+   .. attribute:: Fatal
+      
+
+      From: http://terminology.hl7.org/CodeSystem/failure-action in valuesets.xml
+
+
+   .. attribute:: Warning
+      
+
+      From: http://terminology.hl7.org/CodeSystem/failure-action in valuesets.xml
+
+
+   .. attribute:: RecordOnly
+      
+
+      From: http://terminology.hl7.org/CodeSystem/failure-action in valuesets.xml
+
+
+   .. attribute:: None_
+      
+
+      
+
+

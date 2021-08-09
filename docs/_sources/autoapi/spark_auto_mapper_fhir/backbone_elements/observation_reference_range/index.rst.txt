@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.observation_reference_range`
+===========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.observation_reference_range
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.observation_reference_range.ObservationReferenceRange
+
+
+
+.. class:: ObservationReferenceRange(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, low: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, high: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, type_: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.observation_reference_range_meaning_codes.ObservationReferenceRangeMeaningCodesCode]] = None, appliesTo: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.observation_reference_range_applies_to_codes.ObservationReferenceRangeAppliesToCodesCode]]] = None, age: Optional[spark_auto_mapper_fhir.complex_types.range.Range] = None, text: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   Observation.ReferenceRange
+   Measurements and simple assertions made about a patient, device or other subject.
+
+

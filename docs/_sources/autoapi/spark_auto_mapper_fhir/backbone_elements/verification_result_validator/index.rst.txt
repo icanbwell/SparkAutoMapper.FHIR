@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.verification_result_validator`
+=============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.verification_result_validator
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.verification_result_validator.VerificationResultValidator
+
+
+
+.. class:: VerificationResultValidator(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, organization: spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.organization.Organization], identityCertificate: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, attestationSignature: Optional[spark_auto_mapper_fhir.complex_types.signature.Signature] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   VerificationResult.Validator
+   Describes validation requirements, source(s), status and dates for one or more elements.
+
+

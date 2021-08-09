@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.test_script_test`
+================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.test_script_test
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.test_script_test.TestScriptTest
+
+
+
+.. class:: TestScriptTest(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, name: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, description: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, action: spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.test_script_action1.TestScriptAction1])
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   TestScript.Test
+   A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
+
+

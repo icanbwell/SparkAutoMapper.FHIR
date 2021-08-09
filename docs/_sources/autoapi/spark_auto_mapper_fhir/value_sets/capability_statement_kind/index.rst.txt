@@ -1,0 +1,64 @@
+:mod:`spark_auto_mapper_fhir.value_sets.capability_statement_kind`
+==================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.capability_statement_kind
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.capability_statement_kind.CapabilityStatementKindCode
+   spark_auto_mapper_fhir.value_sets.capability_statement_kind.CapabilityStatementKindCodeValues
+
+
+
+.. class:: CapabilityStatementKindCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   CapabilityStatementKind
+   From: http://hl7.org/fhir/capability-statement-kind in valuesets.xml
+       How a capability statement is intended to be used.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/capability-statement-kind
+
+      
+
+
+.. class:: CapabilityStatementKindCodeValues
+
+   The CapabilityStatement instance represents the present capabilities of a
+   specific system instance.  This is the kind returned by /metadata for a FHIR
+   server end-point.
+   From: http://hl7.org/fhir/capability-statement-kind in valuesets.xml
+
+   .. attribute:: Instance
+      
+
+      The CapabilityStatement instance represents the capabilities of a system or
+      piece of software, independent of a particular installation.
+      From: http://hl7.org/fhir/capability-statement-kind in valuesets.xml
+
+
+   .. attribute:: Capability
+      
+
+      The CapabilityStatement instance represents a set of requirements for other
+      systems to meet; e.g. as part of an implementation guide or 'request for
+      proposal'.
+      From: http://hl7.org/fhir/capability-statement-kind in valuesets.xml
+
+
+   .. attribute:: Requirements
+      
+
+      
+
+

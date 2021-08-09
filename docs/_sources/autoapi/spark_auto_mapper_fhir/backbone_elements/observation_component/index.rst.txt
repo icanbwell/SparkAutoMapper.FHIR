@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.observation_component`
+=====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.observation_component
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.observation_component.ObservationComponent
+
+
+
+.. class:: ObservationComponent(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, code: spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.loinc_codes.LOINCCodesCode], valueQuantity: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, valueCodeableConcept: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, valueString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, valueBoolean: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, valueInteger: Optional[spark_auto_mapper_fhir.fhir_types.integer.FhirInteger] = None, valueRange: Optional[spark_auto_mapper_fhir.complex_types.range.Range] = None, valueRatio: Optional[spark_auto_mapper_fhir.complex_types.ratio.Ratio] = None, valueSampledData: Optional[spark_auto_mapper_fhir.complex_types.sampled_data.SampledData] = None, valueTime: Optional[spark_auto_mapper_fhir.fhir_types.time.FhirTime] = None, valueDateTime: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, valuePeriod: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, dataAbsentReason: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.data_absent_reason.DataAbsentReasonCode]] = None, interpretation: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.observation_interpretation_codes.ObservationInterpretationCodesCode]]] = None, referenceRange: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.observation_reference_range.ObservationReferenceRange]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   Observation.Component
+   Measurements and simple assertions made about a patient, device or other subject.
+
+

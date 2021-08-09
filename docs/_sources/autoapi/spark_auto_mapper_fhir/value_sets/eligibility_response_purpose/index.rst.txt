@@ -1,0 +1,70 @@
+:mod:`spark_auto_mapper_fhir.value_sets.eligibility_response_purpose`
+=====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.eligibility_response_purpose
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.eligibility_response_purpose.EligibilityResponsePurposeCode
+   spark_auto_mapper_fhir.value_sets.eligibility_response_purpose.EligibilityResponsePurposeCodeValues
+
+
+
+.. class:: EligibilityResponsePurposeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   EligibilityResponsePurpose
+   From: http://hl7.org/fhir/eligibilityresponse-purpose in valuesets.xml
+       A code specifying the types of information being requested.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/eligibilityresponse-purpose
+
+      
+
+
+.. class:: EligibilityResponsePurposeCodeValues
+
+   The prior authorization requirements for the listed, or discovered if
+   specified, converages for the categories of service and/or specifed biling
+   codes are requested.
+   From: http://hl7.org/fhir/eligibilityresponse-purpose in valuesets.xml
+
+   .. attribute:: CoverageAuth_requirements
+      
+
+      The plan benefits and optionally benefits consumed  for the listed, or
+      discovered if specified, converages are requested.
+      From: http://hl7.org/fhir/eligibilityresponse-purpose in valuesets.xml
+
+
+   .. attribute:: CoverageBenefits
+      
+
+      The insurer is requested to report on any coverages which they are aware of in
+      addition to any specifed.
+      From: http://hl7.org/fhir/eligibilityresponse-purpose in valuesets.xml
+
+
+   .. attribute:: CoverageDiscovery
+      
+
+      A check that the specified coverages are in-force is requested.
+      From: http://hl7.org/fhir/eligibilityresponse-purpose in valuesets.xml
+
+
+   .. attribute:: CoverageValidation
+      
+
+      
+
+

@@ -1,0 +1,87 @@
+:mod:`spark_auto_mapper_fhir.value_sets.medication_knowledge_characteristic_codes`
+==================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.medication_knowledge_characteristic_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.medication_knowledge_characteristic_codes.MedicationKnowledgeCharacteristicCodesCode
+   spark_auto_mapper_fhir.value_sets.medication_knowledge_characteristic_codes.MedicationKnowledgeCharacteristicCodesCodeValues
+
+
+
+.. class:: MedicationKnowledgeCharacteristicCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   medicationKnowledge Characteristic Codes
+   From: http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic in valuesets.xml
+       MedicationKnowledge Characteristic Codes
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic
+
+      
+
+
+.. class:: MedicationKnowledgeCharacteristicCodesCodeValues
+
+   Identyifying marks on product
+   From: http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic in valuesets.xml
+
+   .. attribute:: ImprintCode
+      
+
+      Description of size of the product
+      From: http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic in valuesets.xml
+
+
+   .. attribute:: Size
+      
+
+      Description of the shape of the product
+      From: http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic in valuesets.xml
+
+
+   .. attribute:: Shape
+      
+
+      Description of the color of the product
+      From: http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic in valuesets.xml
+
+
+   .. attribute:: Color
+      
+
+      Description of the coating of the product
+      From: http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic in valuesets.xml
+
+
+   .. attribute:: Coating
+      
+
+      Description of the scoring of the product
+      From: http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic in valuesets.xml
+
+
+   .. attribute:: Scoring
+      
+
+      Description of the Logo of the product
+      From: http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic in valuesets.xml
+
+
+   .. attribute:: Logo
+      
+
+      
+
+

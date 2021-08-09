@@ -1,0 +1,69 @@
+:mod:`spark_auto_mapper_fhir.value_sets.common_ucum_codes_for_distance`
+=======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.common_ucum_codes_for_distance
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.common_ucum_codes_for_distance.CommonUCUMCodesForDistanceCode
+   spark_auto_mapper_fhir.value_sets.common_ucum_codes_for_distance.CommonUCUMCodesForDistanceCodeValues
+
+
+
+.. class:: CommonUCUMCodesForDistanceCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   CommonUCUMCodesForDistance
+   From: http://hl7.org/fhir/ValueSet/distance-units in valuesets.xml
+       Unified Code for Units of Measure (UCUM). This value set includes common UCUM
+   codes for units of distance
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://unitsofmeasure.org
+
+      
+
+
+.. class:: CommonUCUMCodesForDistanceCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/distance-units in valuesets.xml
+
+   .. attribute:: Nanometers
+      
+
+      From: http://hl7.org/fhir/ValueSet/distance-units in valuesets.xml
+
+
+   .. attribute:: Micrometers
+      
+
+      From: http://hl7.org/fhir/ValueSet/distance-units in valuesets.xml
+
+
+   .. attribute:: Millimeters
+      
+
+      From: http://hl7.org/fhir/ValueSet/distance-units in valuesets.xml
+
+
+   .. attribute:: Meters
+      
+
+      From: http://hl7.org/fhir/ValueSet/distance-units in valuesets.xml
+
+
+   .. attribute:: Kilometers
+      
+
+      
+
+

@@ -1,0 +1,192 @@
+:mod:`spark_auto_mapper_fhir.value_sets.fhir_version`
+=====================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.fhir_version
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.fhir_version.FHIRVersionCode
+   spark_auto_mapper_fhir.value_sets.fhir_version.FHIRVersionCodeValues
+
+
+
+.. class:: FHIRVersionCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   FHIRVersion
+   From: http://hl7.org/fhir/FHIR-version in valuesets.xml
+       All published FHIR Versions.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/FHIR-version
+
+      
+
+
+.. class:: FHIRVersionCodeValues
+
+   Oldest archived version of FHIR.
+   From: http://hl7.org/fhir/FHIR-version in valuesets.xml
+
+   .. attribute:: _0_01
+      
+
+      1st Draft for Comment (Sept 2012 Ballot).
+      From: http://hl7.org/fhir/FHIR-version in valuesets.xml
+
+
+   .. attribute:: _0_05
+      
+
+      2nd Draft for Comment (January 2013 Ballot).
+      From: http://hl7.org/fhir/FHIR-version in valuesets.xml
+
+
+   .. attribute:: _0_06
+      
+
+      DSTU 1 Ballot version.
+      From: http://hl7.org/fhir/FHIR-version in valuesets.xml
+
+
+   .. attribute:: _0_11
+      
+
+      DSTU 1 Official version.
+      From: http://hl7.org/fhir/FHIR-version in valuesets.xml
+
+
+   .. attribute:: _0_0_80
+      
+
+      DSTU 1 Official version Technical Errata #1.
+      From: http://hl7.org/fhir/FHIR-version in valuesets.xml
+
+
+   .. attribute:: _0_0_81
+      
+
+      DSTU 1 Official version Technical Errata #2.
+      From: http://hl7.org/fhir/FHIR-version in valuesets.xml
+
+
+   .. attribute:: _0_0_82
+      
+
+      Draft For Comment (January 2015 Ballot).
+      From: http://hl7.org/fhir/FHIR-version in valuesets.xml
+
+
+   .. attribute:: _0_4_0
+      
+
+      DSTU 2 Ballot version (May 2015 Ballot).
+      From: http://hl7.org/fhir/FHIR-version in valuesets.xml
+
+
+   .. attribute:: _0_5_0
+      
+
+      DSTU 2 QA Preview + CQIF Ballot (Sep 2015).
+      From: http://hl7.org/fhir/FHIR-version in valuesets.xml
+
+
+   .. attribute:: _1_0_0
+      
+
+      DSTU 2 (Official version).
+      From: http://hl7.org/fhir/FHIR-version in valuesets.xml
+
+
+   .. attribute:: _1_0_1
+      
+
+      DSTU 2 (Official version) with 1 technical errata.
+      From: http://hl7.org/fhir/FHIR-version in valuesets.xml
+
+
+   .. attribute:: _1_0_2
+      
+
+      GAO Ballot + draft changes to main FHIR standard.
+      From: http://hl7.org/fhir/FHIR-version in valuesets.xml
+
+
+   .. attribute:: _1_1_0
+      
+
+      CQF on FHIR Ballot + Connectathon 12 (Montreal).
+      From: http://hl7.org/fhir/FHIR-version in valuesets.xml
+
+
+   .. attribute:: _1_4_0
+      
+
+      FHIR STU3 Ballot + Connectathon 13 (Baltimore).
+      From: http://hl7.org/fhir/FHIR-version in valuesets.xml
+
+
+   .. attribute:: _1_6_0
+      
+
+      FHIR STU3 Candidate + Connectathon 14 (San Antonio).
+      From: http://hl7.org/fhir/FHIR-version in valuesets.xml
+
+
+   .. attribute:: _1_8_0
+      
+
+      FHIR Release 3 (STU).
+      From: http://hl7.org/fhir/FHIR-version in valuesets.xml
+
+
+   .. attribute:: _3_0_0
+      
+
+      FHIR Release 3 (STU) with 1 technical errata.
+      From: http://hl7.org/fhir/FHIR-version in valuesets.xml
+
+
+   .. attribute:: _3_0_1
+      
+
+      R4 Ballot #1.
+      From: http://hl7.org/fhir/FHIR-version in valuesets.xml
+
+
+   .. attribute:: _3_3_0
+      
+
+      R4 Ballot #2.
+      From: http://hl7.org/fhir/FHIR-version in valuesets.xml
+
+
+   .. attribute:: _3_5_0
+      
+
+      FHIR Release 4 (Normative + STU).
+      From: http://hl7.org/fhir/FHIR-version in valuesets.xml
+
+
+   .. attribute:: _4_0_0
+      
+
+      FHIR Release 4 Technical Correction.
+      From: http://hl7.org/fhir/FHIR-version in valuesets.xml
+
+
+   .. attribute:: _4_0_1
+      
+
+      
+
+

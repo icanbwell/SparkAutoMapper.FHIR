@@ -1,0 +1,45 @@
+:mod:`spark_auto_mapper_fhir.resources.substance_source_material`
+=================================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.substance_source_material
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.substance_source_material.SubstanceSourceMaterial
+
+
+
+.. class:: SubstanceSourceMaterial(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, sourceMaterialClass: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, sourceMaterialType: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, sourceMaterialState: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, organismId: Optional[spark_auto_mapper_fhir.complex_types.identifier.Identifier] = None, organismName: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, parentSubstanceId: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.identifier.Identifier]] = None, parentSubstanceName: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.string.FhirString]] = None, countryOfOrigin: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]]] = None, geographicalLocation: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.string.FhirString]] = None, developmentStage: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, fractionDescription: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.substance_source_material_fraction_description.SubstanceSourceMaterialFractionDescription]] = None, organism: Optional[spark_auto_mapper_fhir.backbone_elements.substance_source_material_organism.SubstanceSourceMaterialOrganism] = None, partDescription: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.substance_source_material_part_description.SubstanceSourceMaterialPartDescription]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   SubstanceSourceMaterial
+   substancesourcematerial.xsd
+       Source material shall capture information on the taxonomic and anatomical
+   origins as well as the fraction of a material that can result in or can be
+   modified to form a substance. This set of data elements shall be used to
+   define polymer substances isolated from biological matrices. Taxonomic and
+   anatomical origins shall be described using a controlled vocabulary as
+   required. This information is captured for naturally derived polymers ( .
+   starch) and structurally diverse substances. For Organisms belonging to the
+   Kingdom Plantae the Substance level defines the fresh material of a single
+   species or infraspecies, the Herbal Drug and the Herbal preparation. For
+   Herbal preparations, the fraction information will be captured at the
+   Substance information level and additional information for herbal extracts
+   will be captured at the Specified Substance Group 1 information level. See for
+   further explanation the Substance Class: Structurally Diverse and the herbal
+   annex.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

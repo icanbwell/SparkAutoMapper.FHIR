@@ -1,0 +1,54 @@
+:mod:`spark_auto_mapper_fhir.value_sets.abstract_type`
+======================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.abstract_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.abstract_type.AbstractTypeCode
+   spark_auto_mapper_fhir.value_sets.abstract_type.AbstractTypeCodeValues
+
+
+
+.. class:: AbstractTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   AbstractType
+   From: http://hl7.org/fhir/abstract-types in valuesets.xml
+       A list of the base types defined by this version of the FHIR specification -
+   types that are defined, but for which only specializations actually are
+   created.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/abstract-types
+
+      
+
+
+.. class:: AbstractTypeCodeValues
+
+   A place holder that means any kind of data type
+   From: http://hl7.org/fhir/abstract-types in valuesets.xml
+
+   .. attribute:: Type
+      
+
+      A place holder that means any kind of resource
+      From: http://hl7.org/fhir/abstract-types in valuesets.xml
+
+
+   .. attribute:: Any
+      
+
+      
+
+

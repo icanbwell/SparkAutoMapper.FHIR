@@ -1,0 +1,69 @@
+:mod:`spark_auto_mapper_fhir.value_sets.acknowledgement_condition`
+==================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.acknowledgement_condition
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.acknowledgement_condition.AcknowledgementCondition
+   spark_auto_mapper_fhir.value_sets.acknowledgement_condition.AcknowledgementConditionValues
+
+
+
+.. class:: AcknowledgementCondition(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.AcknowledgementCondition
+   From: http://terminology.hl7.org/ValueSet/v3-AcknowledgementCondition in v3-codesystems.xml
+        The codes identify the conditions under which accept acknowledgements are
+   required to be returned in response to this message. Note that accept
+   acknowledgement address two different issues at the same time: reliable
+   transport as well as syntactical correctness
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-AcknowledgementCondition
+
+      
+
+
+.. class:: AcknowledgementConditionValues
+
+   Always send an acknowledgement.
+   From: http://terminology.hl7.org/CodeSystem/v3-AcknowledgementCondition in v3-codesystems.xml
+
+   .. attribute:: Always
+      
+
+      Send an acknowledgement for error/reject conditions only.
+      From: http://terminology.hl7.org/CodeSystem/v3-AcknowledgementCondition in v3-codesystems.xml
+
+
+   .. attribute:: Error_rejectOnly
+      
+
+      Never send an acknowledgement.
+      From: http://terminology.hl7.org/CodeSystem/v3-AcknowledgementCondition in v3-codesystems.xml
+
+
+   .. attribute:: Never
+      
+
+      Send an acknowledgement for successful completions only.
+      From: http://terminology.hl7.org/CodeSystem/v3-AcknowledgementCondition in v3-codesystems.xml
+
+
+   .. attribute:: SuccessfulOnly
+      
+
+      
+
+

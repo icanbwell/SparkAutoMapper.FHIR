@@ -1,0 +1,50 @@
+:mod:`spark_auto_mapper_fhir.value_sets.body_temperature_units`
+===============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.body_temperature_units
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.body_temperature_units.BodyTemperatureUnitsCode
+   spark_auto_mapper_fhir.value_sets.body_temperature_units.BodyTemperatureUnitsCodeValues
+
+
+
+.. class:: BodyTemperatureUnitsCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   BodyTemperatureUnits
+   From: http://hl7.org/fhir/ValueSet/ucum-bodytemp in valuesets.xml
+       UCUM units for recording Body Temperature
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://unitsofmeasure.org
+
+      
+
+
+.. class:: BodyTemperatureUnitsCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/ucum-bodytemp in valuesets.xml
+
+   .. attribute:: Cel
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-bodytemp in valuesets.xml
+
+
+   .. attribute:: _degF_
+      
+
+      
+
+

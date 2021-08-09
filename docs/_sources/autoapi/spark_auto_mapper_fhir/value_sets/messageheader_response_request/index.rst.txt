@@ -1,0 +1,67 @@
+:mod:`spark_auto_mapper_fhir.value_sets.messageheader_response_request`
+=======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.messageheader_response_request
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.messageheader_response_request.Messageheader_response_requestCode
+   spark_auto_mapper_fhir.value_sets.messageheader_response_request.Messageheader_response_requestCodeValues
+
+
+
+.. class:: Messageheader_response_requestCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   messageheader-response-request
+   From: http://hl7.org/fhir/messageheader-response-request in valuesets.xml
+       HL7-defined table of codes which identify conditions under which
+   acknowledgments are required to be returned in response to a message.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/messageheader-response-request
+
+      
+
+
+.. class:: Messageheader_response_requestCodeValues
+
+   initiator expects a response for this message.
+   From: http://hl7.org/fhir/messageheader-response-request in valuesets.xml
+
+   .. attribute:: Always
+      
+
+      initiator expects a response only if in error.
+      From: http://hl7.org/fhir/messageheader-response-request in valuesets.xml
+
+
+   .. attribute:: Error_rejectConditionsOnly
+      
+
+      initiator does not expect a response.
+      From: http://hl7.org/fhir/messageheader-response-request in valuesets.xml
+
+
+   .. attribute:: Never
+      
+
+      initiator expects a response only if successful.
+      From: http://hl7.org/fhir/messageheader-response-request in valuesets.xml
+
+
+   .. attribute:: SuccessfulCompletionOnly
+      
+
+      
+
+

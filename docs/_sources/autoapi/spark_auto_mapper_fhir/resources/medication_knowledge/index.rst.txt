@@ -1,0 +1,32 @@
+:mod:`spark_auto_mapper_fhir.resources.medication_knowledge`
+============================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.medication_knowledge
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.medication_knowledge.MedicationKnowledge
+
+
+
+.. class:: MedicationKnowledge(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, code: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.snomedct_medication_codes.SNOMEDCTMedicationCodesCode]] = None, status: Optional[spark_auto_mapper_fhir.value_sets.medication_knowledge_status_codes.MedicationKnowledgeStatusCodesCode] = None, manufacturer: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.organization.Organization]] = None, doseForm: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.snomedct_form_codes.SNOMEDCTFormCodesCode]] = None, amount: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, synonym: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.string.FhirString]] = None, relatedMedicationKnowledge: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.medication_knowledge_related_medication_knowledge.MedicationKnowledgeRelatedMedicationKnowledge]] = None, associatedMedication: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.medication.Medication]]] = None, productType: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]]] = None, monograph: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.medication_knowledge_monograph.MedicationKnowledgeMonograph]] = None, ingredient: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.medication_knowledge_ingredient.MedicationKnowledgeIngredient]] = None, preparationInstruction: Optional[spark_auto_mapper_fhir.fhir_types.markdown.FhirMarkdown] = None, intendedRoute: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.snomedct_route_codes.SNOMEDCTRouteCodesCode]]] = None, cost: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.medication_knowledge_cost.MedicationKnowledgeCost]] = None, monitoringProgram: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.medication_knowledge_monitoring_program.MedicationKnowledgeMonitoringProgram]] = None, administrationGuidelines: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.medication_knowledge_administration_guidelines.MedicationKnowledgeAdministrationGuidelines]] = None, medicineClassification: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.medication_knowledge_medicine_classification.MedicationKnowledgeMedicineClassification]] = None, packaging: Optional[spark_auto_mapper_fhir.backbone_elements.medication_knowledge_packaging.MedicationKnowledgePackaging] = None, drugCharacteristic: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.medication_knowledge_drug_characteristic.MedicationKnowledgeDrugCharacteristic]] = None, contraindication: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.detected_issue.DetectedIssue]]] = None, regulatory: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.medication_knowledge_regulatory.MedicationKnowledgeRegulatory]] = None, kinetics: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.medication_knowledge_kinetics.MedicationKnowledgeKinetics]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   MedicationKnowledge
+   medicationknowledge.xsd
+       Information about a medication that is used to support knowledge.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

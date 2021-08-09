@@ -1,0 +1,73 @@
+:mod:`spark_auto_mapper_fhir.value_sets.structure_map_source_list_mode`
+=======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.structure_map_source_list_mode
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.structure_map_source_list_mode.StructureMapSourceListModeCode
+   spark_auto_mapper_fhir.value_sets.structure_map_source_list_mode.StructureMapSourceListModeCodeValues
+
+
+
+.. class:: StructureMapSourceListModeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   StructureMapSourceListMode
+   From: http://hl7.org/fhir/map-source-list-mode in valuesets.xml
+       If field is a list, how to manage the source.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/map-source-list-mode
+
+      
+
+
+.. class:: StructureMapSourceListModeCodeValues
+
+   Only process this rule for the first in the list.
+   From: http://hl7.org/fhir/map-source-list-mode in valuesets.xml
+
+   .. attribute:: First
+      
+
+      Process this rule for all but the first.
+      From: http://hl7.org/fhir/map-source-list-mode in valuesets.xml
+
+
+   .. attribute:: AllButTheFirst
+      
+
+      Only process this rule for the last in the list.
+      From: http://hl7.org/fhir/map-source-list-mode in valuesets.xml
+
+
+   .. attribute:: Last
+      
+
+      Process this rule for all but the last.
+      From: http://hl7.org/fhir/map-source-list-mode in valuesets.xml
+
+
+   .. attribute:: AllButTheLast
+      
+
+      Only process this rule is there is only item.
+      From: http://hl7.org/fhir/map-source-list-mode in valuesets.xml
+
+
+   .. attribute:: EnforceOnlyOne
+      
+
+      
+
+

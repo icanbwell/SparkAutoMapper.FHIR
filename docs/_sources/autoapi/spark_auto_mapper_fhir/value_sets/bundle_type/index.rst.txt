@@ -1,0 +1,108 @@
+:mod:`spark_auto_mapper_fhir.value_sets.bundle_type`
+====================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.bundle_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.bundle_type.BundleTypeCode
+   spark_auto_mapper_fhir.value_sets.bundle_type.BundleTypeCodeValues
+
+
+
+.. class:: BundleTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   BundleType
+   From: http://hl7.org/fhir/bundle-type in valuesets.xml
+       Indicates the purpose of a bundle - how it is intended to be used.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/bundle-type
+
+      
+
+
+.. class:: BundleTypeCodeValues
+
+   The bundle is a document. The first resource is a Composition.
+   From: http://hl7.org/fhir/bundle-type in valuesets.xml
+
+   .. attribute:: Document
+      
+
+      The bundle is a message. The first resource is a MessageHeader.
+      From: http://hl7.org/fhir/bundle-type in valuesets.xml
+
+
+   .. attribute:: Message
+      
+
+      The bundle is a transaction - intended to be processed by a server as an
+      atomic commit.
+      From: http://hl7.org/fhir/bundle-type in valuesets.xml
+
+
+   .. attribute:: Transaction
+      
+
+      The bundle is a transaction response. Because the response is a transaction
+      response, the transaction has succeeded, and all responses are error free.
+      From: http://hl7.org/fhir/bundle-type in valuesets.xml
+
+
+   .. attribute:: TransactionResponse
+      
+
+      The bundle is a set of actions - intended to be processed by a server as a
+      group of independent actions.
+      From: http://hl7.org/fhir/bundle-type in valuesets.xml
+
+
+   .. attribute:: Batch
+      
+
+      The bundle is a batch response. Note that as a batch, some responses may
+      indicate failure and others success.
+      From: http://hl7.org/fhir/bundle-type in valuesets.xml
+
+
+   .. attribute:: BatchResponse
+      
+
+      The bundle is a list of resources from a history interaction on a server.
+      From: http://hl7.org/fhir/bundle-type in valuesets.xml
+
+
+   .. attribute:: HistoryList
+      
+
+      The bundle is a list of resources returned as a result of a search/query
+      interaction, operation, or message.
+      From: http://hl7.org/fhir/bundle-type in valuesets.xml
+
+
+   .. attribute:: SearchResults
+      
+
+      The bundle is a set of resources collected into a single package for ease of
+      distribution that imposes no processing obligations or behavioral rules beyond
+      persistence.
+      From: http://hl7.org/fhir/bundle-type in valuesets.xml
+
+
+   .. attribute:: Collection
+      
+
+      
+
+

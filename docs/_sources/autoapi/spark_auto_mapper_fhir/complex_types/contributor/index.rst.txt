@@ -1,0 +1,32 @@
+:mod:`spark_auto_mapper_fhir.complex_types.contributor`
+=======================================================
+
+.. py:module:: spark_auto_mapper_fhir.complex_types.contributor
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.complex_types.contributor.Contributor
+
+
+
+.. class:: Contributor(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, type_: spark_auto_mapper_fhir.value_sets.contributor_type.ContributorTypeCode, name: spark_auto_mapper_fhir.fhir_types.string.FhirString, contact: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.contact_detail.ContactDetail]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
+
+   Contributor
+   fhir-base.xsd
+       A contributor to the content of a knowledge asset, including authors, editors, reviewers, and endorsers.
+       If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

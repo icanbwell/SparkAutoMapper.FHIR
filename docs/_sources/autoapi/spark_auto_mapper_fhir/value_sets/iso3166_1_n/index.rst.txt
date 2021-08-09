@@ -1,0 +1,33 @@
+:mod:`spark_auto_mapper_fhir.value_sets.iso3166_1_n`
+====================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.iso3166_1_n
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.iso3166_1_n.Iso3166_1_NCode
+
+
+
+.. class:: Iso3166_1_NCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   Iso3166-1-N
+   From: http://hl7.org/fhir/ValueSet/iso3166-1-N in valuesets.xml
+       This value set defines the ISO 3166 Part 1 Numeric codes
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = urn:iso:std:iso:3166
+
+      
+
+

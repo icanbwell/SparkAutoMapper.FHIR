@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.effect_evidence_synthesis_sample_size`
+=====================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.effect_evidence_synthesis_sample_size
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.effect_evidence_synthesis_sample_size.EffectEvidenceSynthesisSampleSize
+
+
+
+.. class:: EffectEvidenceSynthesisSampleSize(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, description: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, numberOfStudies: Optional[spark_auto_mapper_fhir.fhir_types.integer.FhirInteger] = None, numberOfParticipants: Optional[spark_auto_mapper_fhir.fhir_types.integer.FhirInteger] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   EffectEvidenceSynthesis.SampleSize
+   The EffectEvidenceSynthesis resource describes the difference in an outcome between exposures states in a population where the effect estimate is derived from a combination of research studies.
+
+

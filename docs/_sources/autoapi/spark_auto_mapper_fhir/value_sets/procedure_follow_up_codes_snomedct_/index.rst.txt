@@ -1,0 +1,99 @@
+:mod:`spark_auto_mapper_fhir.value_sets.procedure_follow_up_codes_snomedct_`
+============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.procedure_follow_up_codes_snomedct_
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.procedure_follow_up_codes_snomedct_.ProcedureFollowUpCodes_SNOMEDCT_Code
+   spark_auto_mapper_fhir.value_sets.procedure_follow_up_codes_snomedct_.ProcedureFollowUpCodes_SNOMEDCT_CodeValues
+
+
+
+.. class:: ProcedureFollowUpCodes_SNOMEDCT_Code(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ProcedureFollowUpCodes(SNOMEDCT)
+   From: http://hl7.org/fhir/ValueSet/procedure-followup in valuesets.xml
+       Procedure follow up codes: A selection of SNOMED CT codes relevant to
+   procedure follow up.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+
+.. class:: ProcedureFollowUpCodes_SNOMEDCT_CodeValues
+
+   From: http://hl7.org/fhir/ValueSet/procedure-followup in valuesets.xml
+
+   .. attribute:: _18949003
+      
+
+      From: http://hl7.org/fhir/ValueSet/procedure-followup in valuesets.xml
+
+
+   .. attribute:: _30549001
+      
+
+      From: http://hl7.org/fhir/ValueSet/procedure-followup in valuesets.xml
+
+
+   .. attribute:: _241031001
+      
+
+      From: http://hl7.org/fhir/ValueSet/procedure-followup in valuesets.xml
+
+
+   .. attribute:: _35963001
+      
+
+      From: http://hl7.org/fhir/ValueSet/procedure-followup in valuesets.xml
+
+
+   .. attribute:: _225164002
+      
+
+      From: http://hl7.org/fhir/ValueSet/procedure-followup in valuesets.xml
+
+
+   .. attribute:: _447346005
+      
+
+      From: http://hl7.org/fhir/ValueSet/procedure-followup in valuesets.xml
+
+
+   .. attribute:: _229506003
+      
+
+      From: http://hl7.org/fhir/ValueSet/procedure-followup in valuesets.xml
+
+
+   .. attribute:: _274441001
+      
+
+      From: http://hl7.org/fhir/ValueSet/procedure-followup in valuesets.xml
+
+
+   .. attribute:: _394725008
+      
+
+      From: http://hl7.org/fhir/ValueSet/procedure-followup in valuesets.xml
+
+
+   .. attribute:: _359825008
+      
+
+      
+
+

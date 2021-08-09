@@ -1,0 +1,35 @@
+:mod:`spark_auto_mapper_fhir.resources.substance_nucleic_acid`
+==============================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.substance_nucleic_acid
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.substance_nucleic_acid.SubstanceNucleicAcid
+
+
+
+.. class:: SubstanceNucleicAcid(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, sequenceType: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, numberOfSubunits: Optional[spark_auto_mapper_fhir.fhir_types.integer.FhirInteger] = None, areaOfHybridisation: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, oligoNucleotideType: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, subunit: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.substance_nucleic_acid_subunit.SubstanceNucleicAcidSubunit]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   SubstanceNucleicAcid
+   substancenucleicacid.xsd
+       Nucleic acids are defined by three distinct elements: the base, sugar and
+   linkage. Individual substance/moiety IDs will be created for each of these
+   elements. The nucleotide sequence will be always entered in the 5’-3’
+   direction.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

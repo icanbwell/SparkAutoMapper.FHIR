@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.activity_definition_participant`
+===============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.activity_definition_participant
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.activity_definition_participant.ActivityDefinitionParticipant
+
+
+
+.. class:: ActivityDefinitionParticipant(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, type_: spark_auto_mapper_fhir.value_sets.action_participant_type.ActionParticipantTypeCode, role: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.action_participant_role.ActionParticipantRoleCode]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   ActivityDefinition.Participant
+   This resource allows for the definition of some activity to be performed, independent of a particular patient, practitioner, or other performance context.
+
+

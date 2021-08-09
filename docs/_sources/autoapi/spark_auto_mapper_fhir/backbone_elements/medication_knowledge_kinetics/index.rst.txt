@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.medication_knowledge_kinetics`
+=============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.medication_knowledge_kinetics
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.medication_knowledge_kinetics.MedicationKnowledgeKinetics
+
+
+
+.. class:: MedicationKnowledgeKinetics(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, areaUnderCurve: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.quantity.Quantity]] = None, lethalDose50: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.quantity.Quantity]] = None, halfLifePeriod: Optional[spark_auto_mapper_fhir.complex_types.duration.Duration] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   MedicationKnowledge.Kinetics
+   Information about a medication that is used to support knowledge.
+
+

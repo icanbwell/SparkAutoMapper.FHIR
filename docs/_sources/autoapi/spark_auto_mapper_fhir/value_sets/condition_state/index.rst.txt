@@ -1,0 +1,60 @@
+:mod:`spark_auto_mapper_fhir.value_sets.condition_state`
+========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.condition_state
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.condition_state.ConditionStateCode
+   spark_auto_mapper_fhir.value_sets.condition_state.ConditionStateCodeValues
+
+
+
+.. class:: ConditionStateCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ConditionState
+   From: http://terminology.hl7.org/CodeSystem/condition-state in valuesets.xml
+       Enumeration indicating whether the condition is currently active, inactive, or
+   has been resolved.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/condition-state
+
+      
+
+
+.. class:: ConditionStateCodeValues
+
+   The condition is active.
+   From: http://terminology.hl7.org/CodeSystem/condition-state in valuesets.xml
+
+   .. attribute:: Active
+      
+
+      The condition is inactive, but not resolved.
+      From: http://terminology.hl7.org/CodeSystem/condition-state in valuesets.xml
+
+
+   .. attribute:: Inactive
+      
+
+      The condition is resolved.
+      From: http://terminology.hl7.org/CodeSystem/condition-state in valuesets.xml
+
+
+   .. attribute:: Resolved
+      
+
+      
+
+

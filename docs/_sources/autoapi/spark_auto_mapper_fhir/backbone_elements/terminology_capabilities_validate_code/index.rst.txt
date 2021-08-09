@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_validate_code`
+======================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_validate_code
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_validate_code.TerminologyCapabilitiesValidateCode
+
+
+
+.. class:: TerminologyCapabilitiesValidateCode(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, translations: spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   TerminologyCapabilities.ValidateCode
+   A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+
+

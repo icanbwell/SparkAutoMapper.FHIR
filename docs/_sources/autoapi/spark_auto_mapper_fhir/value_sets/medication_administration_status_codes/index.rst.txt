@@ -1,0 +1,93 @@
+:mod:`spark_auto_mapper_fhir.value_sets.medication_administration_status_codes`
+===============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.medication_administration_status_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.medication_administration_status_codes.MedicationAdministrationStatusCodesCode
+   spark_auto_mapper_fhir.value_sets.medication_administration_status_codes.MedicationAdministrationStatusCodesCodeValues
+
+
+
+.. class:: MedicationAdministrationStatusCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   MedicationAdministration Status Codes
+   From: http://terminology.hl7.org/CodeSystem/medication-admin-status in valuesets.xml
+       MedicationAdministration Status Codes
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/medication-admin-status
+
+      
+
+
+.. class:: MedicationAdministrationStatusCodesCodeValues
+
+   The administration has started but has not yet completed.
+   From: http://terminology.hl7.org/CodeSystem/medication-admin-status in valuesets.xml
+
+   .. attribute:: InProgress
+      
+
+      The administration was terminated prior to any impact on the subject (though
+      preparatory actions may have been taken)
+      From: http://terminology.hl7.org/CodeSystem/medication-admin-status in valuesets.xml
+
+
+   .. attribute:: NotDone
+      
+
+      Actions implied by the administration have been temporarily halted, but are
+      expected to continue later. May also be called 'suspended'.
+      From: http://terminology.hl7.org/CodeSystem/medication-admin-status in valuesets.xml
+
+
+   .. attribute:: OnHold
+      
+
+      All actions that are implied by the administration have occurred.
+      From: http://terminology.hl7.org/CodeSystem/medication-admin-status in valuesets.xml
+
+
+   .. attribute:: Completed
+      
+
+      The administration was entered in error and therefore nullified.
+      From: http://terminology.hl7.org/CodeSystem/medication-admin-status in valuesets.xml
+
+
+   .. attribute:: EnteredInError
+      
+
+      Actions implied by the administration have been permanently halted, before all
+      of them occurred.
+      From: http://terminology.hl7.org/CodeSystem/medication-admin-status in valuesets.xml
+
+
+   .. attribute:: Stopped
+      
+
+      The authoring system does not know which of the status values currently
+      applies for this request. Note: This concept is not to be used for 'other' -
+      one of the listed statuses is presumed to apply, it's just not known which
+      one.
+      From: http://terminology.hl7.org/CodeSystem/medication-admin-status in valuesets.xml
+
+
+   .. attribute:: Unknown
+      
+
+      
+
+

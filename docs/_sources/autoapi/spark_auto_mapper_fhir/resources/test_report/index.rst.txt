@@ -1,0 +1,32 @@
+:mod:`spark_auto_mapper_fhir.resources.test_report`
+===================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.test_report
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.test_report.TestReport
+
+
+
+.. class:: TestReport(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.complex_types.identifier.Identifier] = None, name: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, status: spark_auto_mapper_fhir.value_sets.test_report_status.TestReportStatusCode, testScript: spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.test_script.TestScript], result: spark_auto_mapper_fhir.value_sets.test_report_result.TestReportResultCode, score: Optional[spark_auto_mapper_fhir.fhir_types.decimal.FhirDecimal] = None, tester: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, issued: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, participant: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.test_report_participant.TestReportParticipant]] = None, setup: Optional[spark_auto_mapper_fhir.backbone_elements.test_report_setup.TestReportSetup] = None, test: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.test_report_test.TestReportTest]] = None, teardown: Optional[spark_auto_mapper_fhir.backbone_elements.test_report_teardown.TestReportTeardown] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   TestReport
+   testreport.xsd
+       A summary of information based on the results of executing a TestScript.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

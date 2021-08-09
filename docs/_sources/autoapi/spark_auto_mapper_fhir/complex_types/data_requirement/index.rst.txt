@@ -1,0 +1,32 @@
+:mod:`spark_auto_mapper_fhir.complex_types.data_requirement`
+============================================================
+
+.. py:module:: spark_auto_mapper_fhir.complex_types.data_requirement
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.complex_types.data_requirement.DataRequirement
+
+
+
+.. class:: DataRequirement(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, type_: spark_auto_mapper_fhir.value_sets.fhir_all_types.FHIRAllTypesCode, profile: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.canonical.FhirCanonical]] = None, subjectCodeableConcept: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.subject_type.SubjectTypeCode]] = None, subjectReference: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.group.Group]] = None, mustSupport: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.string.FhirString]] = None, codeFilter: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.data_requirement_code_filter.DataRequirementCodeFilter]] = None, dateFilter: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.data_requirement_date_filter.DataRequirementDateFilter]] = None, limit: Optional[spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt] = None, sort: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.data_requirement_sort.DataRequirementSort]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
+
+   DataRequirement
+   fhir-base.xsd
+       Describes a required data item for evaluation in terms of the type of data, and optional code or date-based filters of the data.
+       If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

@@ -1,0 +1,66 @@
+:mod:`spark_auto_mapper_fhir.value_sets.payee_resource_type`
+============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.payee_resource_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.payee_resource_type.PayeeResourceTypeCode
+   spark_auto_mapper_fhir.value_sets.payee_resource_type.PayeeResourceTypeCodeValues
+
+
+
+.. class:: PayeeResourceTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   PayeeResourceType
+   From: http://terminology.hl7.org/CodeSystem/resource-type-link in valuesets.xml
+       The type of payee Resource.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/resource-type-link
+
+      
+
+
+.. class:: PayeeResourceTypeCodeValues
+
+   Organization resource.
+   From: http://terminology.hl7.org/CodeSystem/resource-type-link in valuesets.xml
+
+   .. attribute:: Organization
+      
+
+      Patient resource.
+      From: http://terminology.hl7.org/CodeSystem/resource-type-link in valuesets.xml
+
+
+   .. attribute:: Patient
+      
+
+      Practitioner resource.
+      From: http://terminology.hl7.org/CodeSystem/resource-type-link in valuesets.xml
+
+
+   .. attribute:: Practitioner
+      
+
+      RelatedPerson resource.
+      From: http://terminology.hl7.org/CodeSystem/resource-type-link in valuesets.xml
+
+
+   .. attribute:: RelatedPerson
+      
+
+      
+
+

@@ -1,0 +1,34 @@
+:mod:`spark_auto_mapper_fhir.value_sets.v2_0294`
+================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.v2_0294
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.v2_0294.V2_0294
+
+
+
+.. class:: V2_0294(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v2.0294
+   From: http://terminology.hl7.org/ValueSet/v2-0294 in v2-tables.xml
+       FHIR Value set/code system definition for HL7 v2 table 0294 ( Time Selection
+   Criteria Parameter Class Codes)
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/ValueSet/v2-0294
+
+      
+
+

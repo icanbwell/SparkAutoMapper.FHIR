@@ -1,0 +1,39 @@
+:mod:`spark_auto_mapper_fhir.value_sets.procedure_not_performed_reason_snomed_ct_`
+==================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.procedure_not_performed_reason_snomed_ct_
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.procedure_not_performed_reason_snomed_ct_.ProcedureNotPerformedReason_SNOMED_CT_Code
+
+
+
+.. class:: ProcedureNotPerformedReason_SNOMED_CT_Code(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ProcedureNotPerformedReason(SNOMED-CT)
+   From: http://hl7.org/fhir/ValueSet/procedure-not-performed-reason in valuesets.xml
+       Situation codes describing the reason that a procedure, which might otherwise
+   be expected, was not performed, or a procedure that was started and was not
+   completed. Consists of SNOMED CT codes, children of procedure contraindicated
+   (183932001), procedure discontinued (416406003), procedure not done
+   (416237000), procedure not indicated (428119001), procedure not offered
+   (416064006), procedure not wanted (416432009), procedure refused (183944003),
+   and procedure stopped (394908001).
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+

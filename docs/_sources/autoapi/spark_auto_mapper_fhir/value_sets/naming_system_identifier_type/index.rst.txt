@@ -1,0 +1,69 @@
+:mod:`spark_auto_mapper_fhir.value_sets.naming_system_identifier_type`
+======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.naming_system_identifier_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.naming_system_identifier_type.NamingSystemIdentifierTypeCode
+   spark_auto_mapper_fhir.value_sets.naming_system_identifier_type.NamingSystemIdentifierTypeCodeValues
+
+
+
+.. class:: NamingSystemIdentifierTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   NamingSystemIdentifierType
+   From: http://hl7.org/fhir/namingsystem-identifier-type in valuesets.xml
+       Identifies the style of unique identifier used to identify a namespace.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/namingsystem-identifier-type
+
+      
+
+
+.. class:: NamingSystemIdentifierTypeCodeValues
+
+   An ISO object identifier; e.g. 1.2.3.4.5.
+   From: http://hl7.org/fhir/namingsystem-identifier-type in valuesets.xml
+
+   .. attribute:: OID
+      
+
+      A universally unique identifier of the form
+      a5afddf4-e880-459b-876e-e4591b0acc11.
+      From: http://hl7.org/fhir/namingsystem-identifier-type in valuesets.xml
+
+
+   .. attribute:: UUID
+      
+
+      A uniform resource identifier (ideally a URL - uniform resource locator); e.g.
+      http://unitsofmeasure.org.
+      From: http://hl7.org/fhir/namingsystem-identifier-type in valuesets.xml
+
+
+   .. attribute:: URI
+      
+
+      Some other type of unique identifier; e.g. HL7-assigned reserved string such
+      as LN for LOINC.
+      From: http://hl7.org/fhir/namingsystem-identifier-type in valuesets.xml
+
+
+   .. attribute:: Other
+      
+
+      
+
+

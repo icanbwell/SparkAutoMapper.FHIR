@@ -1,0 +1,80 @@
+:mod:`spark_auto_mapper_fhir.value_sets.additional_material_codes`
+==================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.additional_material_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.additional_material_codes.AdditionalMaterialCodesCode
+   spark_auto_mapper_fhir.value_sets.additional_material_codes.AdditionalMaterialCodesCodeValues
+
+
+
+.. class:: AdditionalMaterialCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   AdditionalMaterialCodes
+   From: http://hl7.org/fhir/additionalmaterials in valuesets.xml
+       This value set includes sample additional material type codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/additionalmaterials
+
+      
+
+
+.. class:: AdditionalMaterialCodesCodeValues
+
+   XRay
+   From: http://hl7.org/fhir/additionalmaterials in valuesets.xml
+
+   .. attribute:: XRay
+      
+
+      Image
+      From: http://hl7.org/fhir/additionalmaterials in valuesets.xml
+
+
+   .. attribute:: Image
+      
+
+      Email
+      From: http://hl7.org/fhir/additionalmaterials in valuesets.xml
+
+
+   .. attribute:: Email
+      
+
+      Model
+      From: http://hl7.org/fhir/additionalmaterials in valuesets.xml
+
+
+   .. attribute:: Model
+      
+
+      Document
+      From: http://hl7.org/fhir/additionalmaterials in valuesets.xml
+
+
+   .. attribute:: Document
+      
+
+      Other
+      From: http://hl7.org/fhir/additionalmaterials in valuesets.xml
+
+
+   .. attribute:: Other
+      
+
+      
+
+

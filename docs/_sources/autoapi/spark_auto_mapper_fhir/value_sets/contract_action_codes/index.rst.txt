@@ -1,0 +1,52 @@
+:mod:`spark_auto_mapper_fhir.value_sets.contract_action_codes`
+==============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.contract_action_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.contract_action_codes.ContractActionCodesCode
+   spark_auto_mapper_fhir.value_sets.contract_action_codes.ContractActionCodesCodeValues
+
+
+
+.. class:: ContractActionCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ContractActionCodes
+   From: http://terminology.hl7.org/CodeSystem/contractaction in valuesets.xml
+       This value set includes sample Contract Action codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/contractaction
+
+      
+
+
+.. class:: ContractActionCodesCodeValues
+
+   Definition for Action A
+   From: http://terminology.hl7.org/CodeSystem/contractaction in valuesets.xml
+
+   .. attribute:: ActionA
+      
+
+      Definition for Action B
+      From: http://terminology.hl7.org/CodeSystem/contractaction in valuesets.xml
+
+
+   .. attribute:: ActionB
+      
+
+      
+
+

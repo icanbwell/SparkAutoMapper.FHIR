@@ -1,0 +1,60 @@
+:mod:`spark_auto_mapper_fhir.value_sets.codes_for_immunization_site_of_administration`
+======================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.codes_for_immunization_site_of_administration
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.codes_for_immunization_site_of_administration.CodesForImmunizationSiteOfAdministrationCode
+   spark_auto_mapper_fhir.value_sets.codes_for_immunization_site_of_administration.CodesForImmunizationSiteOfAdministrationCodeValues
+
+
+
+.. class:: CodesForImmunizationSiteOfAdministrationCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   CodesForImmunizationSiteOfAdministration
+   From: http://hl7.org/fhir/ValueSet/immunization-site in valuesets.xml
+       The value set to instantiate this attribute should be drawn from a
+   terminologically robust code system that consists of or contains concepts to
+   support describing the body site where the vaccination occurred. This value
+   set is provided as a suggestive example.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ActSite
+
+      
+
+
+.. class:: CodesForImmunizationSiteOfAdministrationCodeValues
+
+   An anatomical location on a human which can be the focus of an act.
+   From: http://terminology.hl7.org/CodeSystem/v3-ActSite in v3-codesystems.xml
+
+   .. attribute:: HumanActSite
+      
+
+      From: http://hl7.org/fhir/ValueSet/immunization-site in valuesets.xml
+
+
+   .. attribute:: LeftArm
+      
+
+      From: http://hl7.org/fhir/ValueSet/immunization-site in valuesets.xml
+
+
+   .. attribute:: RightArm
+      
+
+      
+
+

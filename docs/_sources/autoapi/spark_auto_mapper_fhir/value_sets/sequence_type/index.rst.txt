@@ -1,0 +1,59 @@
+:mod:`spark_auto_mapper_fhir.value_sets.sequence_type`
+======================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.sequence_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.sequence_type.SequenceTypeCode
+   spark_auto_mapper_fhir.value_sets.sequence_type.SequenceTypeCodeValues
+
+
+
+.. class:: SequenceTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   sequenceType
+   From: http://hl7.org/fhir/sequence-type in valuesets.xml
+       Type if a sequence -- DNA, RNA, or amino acid sequence.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/sequence-type
+
+      
+
+
+.. class:: SequenceTypeCodeValues
+
+   Amino acid sequence.
+   From: http://hl7.org/fhir/sequence-type in valuesets.xml
+
+   .. attribute:: AASequence
+      
+
+      DNA Sequence.
+      From: http://hl7.org/fhir/sequence-type in valuesets.xml
+
+
+   .. attribute:: DNASequence
+      
+
+      RNA Sequence.
+      From: http://hl7.org/fhir/sequence-type in valuesets.xml
+
+
+   .. attribute:: RNASequence
+      
+
+      
+
+

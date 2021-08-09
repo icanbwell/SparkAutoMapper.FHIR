@@ -1,0 +1,34 @@
+:mod:`spark_auto_mapper_fhir.fhir_types.id`
+===========================================
+
+.. py:module:: spark_auto_mapper_fhir.fhir_types.id
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.fhir_types.id.FhirId
+
+
+
+.. class:: FhirId(column: Union[(spark_auto_mapper.data_types.column.AutoMapperDataTypeColumn, spark_auto_mapper.data_types.text_like_base.AutoMapperTextLikeBase)])
+
+
+   Bases: :class:`spark_auto_mapper.data_types.text_like_base.AutoMapperTextLikeBase`
+
+   Cleans up the text for an id column
+
+   .. method:: get_column_spec(self, source_df: Optional[pyspark.sql.DataFrame], current_column: Optional[pyspark.sql.Column]) -> pyspark.sql.Column
+
+      Gets the column spec for this automapper data type
+
+      :param source_df: source data frame in case the automapper type needs that data to decide what to do
+      :param current_column: (Optional) this is set when we are inside an array
+
+
+

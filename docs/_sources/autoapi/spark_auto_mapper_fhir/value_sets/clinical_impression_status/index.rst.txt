@@ -1,0 +1,57 @@
+:mod:`spark_auto_mapper_fhir.value_sets.clinical_impression_status`
+===================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.clinical_impression_status
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.clinical_impression_status.ClinicalImpressionStatusCode
+   spark_auto_mapper_fhir.value_sets.clinical_impression_status.ClinicalImpressionStatusCodeValues
+
+
+
+.. class:: ClinicalImpressionStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ClinicalImpressionStatus
+   From: http://hl7.org/fhir/ValueSet/clinicalimpression-status in valuesets.xml
+       Codes that reflect the current state of a clinical impression within its
+   overall lifecycle.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/event-status
+
+      
+
+
+.. class:: ClinicalImpressionStatusCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/clinicalimpression-status in valuesets.xml
+
+   .. attribute:: In_progress
+      
+
+      From: http://hl7.org/fhir/ValueSet/clinicalimpression-status in valuesets.xml
+
+
+   .. attribute:: Completed
+      
+
+      From: http://hl7.org/fhir/ValueSet/clinicalimpression-status in valuesets.xml
+
+
+   .. attribute:: Entered_in_error
+      
+
+      
+
+

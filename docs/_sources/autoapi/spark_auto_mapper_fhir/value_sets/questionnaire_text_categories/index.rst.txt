@@ -1,0 +1,64 @@
+:mod:`spark_auto_mapper_fhir.value_sets.questionnaire_text_categories`
+======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.questionnaire_text_categories
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.questionnaire_text_categories.QuestionnaireTextCategoriesCode
+   spark_auto_mapper_fhir.value_sets.questionnaire_text_categories.QuestionnaireTextCategoriesCodeValues
+
+
+
+.. class:: QuestionnaireTextCategoriesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   QuestionnaireTextCategories
+   From: http://hl7.org/fhir/questionnaire-display-category in valuesets.xml
+       Codes defining the purpose of a Questionnaire item of type 'text'.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/questionnaire-display-category
+
+      
+
+
+.. class:: QuestionnaireTextCategoriesCodeValues
+
+   The text provides guidance on how to populate or use a portion of the
+   questionnaire (or the questionnaire as a whole).
+   From: http://hl7.org/fhir/questionnaire-display-category in valuesets.xml
+
+   .. attribute:: Instructions
+      
+
+      The text provides guidance on how the information should be or will be handled
+      from a security/confidentiality/access control perspective when completed
+      From: http://hl7.org/fhir/questionnaire-display-category in valuesets.xml
+
+
+   .. attribute:: Security
+      
+
+      The text provides additional guidance on populating the containing item.  Help
+      text isn't necessarily expected to be rendered as part of the form, but may
+      instead be made available through fly-over, pop-up button, link to a "help"
+      page, etc.
+      From: http://hl7.org/fhir/questionnaire-display-category in valuesets.xml
+
+
+   .. attribute:: Help
+      
+
+      
+
+

@@ -1,0 +1,173 @@
+:mod:`spark_auto_mapper_fhir.value_sets.gts_abbreviation`
+=========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.gts_abbreviation
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.gts_abbreviation.GTSAbbreviation
+   spark_auto_mapper_fhir.value_sets.gts_abbreviation.GTSAbbreviationValues
+
+
+
+.. class:: GTSAbbreviation(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.GTSAbbreviation
+   From: http://terminology.hl7.org/ValueSet/v3-GTSAbbreviation in v3-codesystems.xml
+         Open Issue:
+   It appears that the printnames are suboptimal and should be improved for many
+   of the existing codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation
+
+      
+
+
+.. class:: GTSAbbreviationValues
+
+   Every morning at institution specified times.
+   From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+   .. attribute:: AM
+      
+
+      At bedtime (institution specified time).
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: AtBedtime
+      
+
+      Two times a day at institution specified time
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: BID
+      
+
+      Regular business days (Monday to Friday excluding holidays)
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: JB
+      
+
+      Regular weekends (Saturday and Sunday excluding holidays)
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: JE
+      
+
+      Holidays
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: GTSAbbreviationHolidays
+      
+
+      Monthly at institution specified time.
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: Monthly
+      
+
+      Every afternoon at institution specified times.
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: PM
+      
+
+      Every hour at institution specified times.
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: EveryHour
+      
+
+      Every 2 hours at institution specified times.
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: Every2Hours
+      
+
+      Every 3 hours at institution specified times.
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: Every3Hours
+      
+
+      Every 4 hours at institution specified time
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: Q4H
+      
+
+      Every 6 hours at institution specified time
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: Q6H
+      
+
+      Every 8 hours at institution specified times.
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: Every8Hours
+      
+
+      Every day at institution specified times.
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: QD
+      
+
+      Four times a day at institution specified time
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: QID
+      
+
+      Every other day at institution specified times.
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: QOD
+      
+
+      Three times a day at institution specified time
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: TID
+      
+
+      Weekly at institution specified time.
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: Weekly
+      
+
+      
+
+

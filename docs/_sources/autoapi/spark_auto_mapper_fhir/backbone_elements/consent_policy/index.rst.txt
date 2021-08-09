@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.consent_policy`
+==============================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.consent_policy
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.consent_policy.ConsentPolicy
+
+
+
+.. class:: ConsentPolicy(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, authority: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, uri: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   Consent.Policy
+   A record of a healthcare consumer’s  choices, which permits or denies identified recipient(s) or recipient role(s) to perform one or more actions within a given policy context, for specific purposes and periods of time.
+
+

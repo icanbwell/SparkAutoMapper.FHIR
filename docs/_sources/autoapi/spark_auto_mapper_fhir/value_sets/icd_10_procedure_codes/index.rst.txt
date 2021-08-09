@@ -1,0 +1,59 @@
+:mod:`spark_auto_mapper_fhir.value_sets.icd_10_procedure_codes`
+===============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.icd_10_procedure_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.icd_10_procedure_codes.ICD_10ProcedureCodesCode
+   spark_auto_mapper_fhir.value_sets.icd_10_procedure_codes.ICD_10ProcedureCodesCodeValues
+
+
+
+.. class:: ICD_10ProcedureCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ICD-10ProcedureCodes
+   From: http://hl7.org/fhir/sid/ex-icd-10-procedures in valuesets.xml
+       This value set includes sample ICD-10 Procedure codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/sid/ex-icd-10-procedures
+
+      
+
+
+.. class:: ICD_10ProcedureCodesCodeValues
+
+   Procedure 1
+   From: http://hl7.org/fhir/sid/ex-icd-10-procedures in valuesets.xml
+
+   .. attribute:: PROC_1
+      
+
+      Procedure 2
+      From: http://hl7.org/fhir/sid/ex-icd-10-procedures in valuesets.xml
+
+
+   .. attribute:: PROC_2
+      
+
+      Procedure 3
+      From: http://hl7.org/fhir/sid/ex-icd-10-procedures in valuesets.xml
+
+
+   .. attribute:: PROC_3
+      
+
+      
+
+

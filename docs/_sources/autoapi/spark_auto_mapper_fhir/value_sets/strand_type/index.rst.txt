@@ -1,0 +1,52 @@
+:mod:`spark_auto_mapper_fhir.value_sets.strand_type`
+====================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.strand_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.strand_type.StrandTypeCode
+   spark_auto_mapper_fhir.value_sets.strand_type.StrandTypeCodeValues
+
+
+
+.. class:: StrandTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   strandType
+   From: http://hl7.org/fhir/strand-type in valuesets.xml
+       Type for strand.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/strand-type
+
+      
+
+
+.. class:: StrandTypeCodeValues
+
+   Watson strand of reference sequence.
+   From: http://hl7.org/fhir/strand-type in valuesets.xml
+
+   .. attribute:: WatsonStrandOfReferenceSeq
+      
+
+      Crick strand of reference sequence.
+      From: http://hl7.org/fhir/strand-type in valuesets.xml
+
+
+   .. attribute:: CrickStrandOfReferenceSeq
+      
+
+      
+
+

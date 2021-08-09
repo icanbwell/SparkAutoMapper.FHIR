@@ -1,0 +1,40 @@
+:mod:`spark_auto_mapper_fhir.resources.provenance`
+==================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.provenance
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.provenance.Provenance
+
+
+
+.. class:: Provenance(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, target: spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.resource.Resource]], occurredPeriod: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, occurredDateTime: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, recorded: spark_auto_mapper_fhir.fhir_types.instant.FhirInstant, policy: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.uri.FhirUri]] = None, location: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.location.Location]] = None, reason: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.purpose_of_use.PurposeOfUse]]] = None, activity: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.provenance_activity_type.ProvenanceActivityTypeCode]] = None, agent: spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.provenance_agent.ProvenanceAgent], entity: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.provenance_entity.ProvenanceEntity]] = None, signature: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.signature.Signature]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   Provenance
+   provenance.xsd
+       Provenance of a resource is a record that describes entities and processes
+   involved in producing and delivering or otherwise influencing that resource.
+   Provenance provides a critical foundation for assessing authenticity, enabling
+   trust, and allowing reproducibility. Provenance assertions are a form of
+   contextual metadata and can themselves become important records with their own
+   provenance. Provenance statement indicates clinical significance in terms of
+   confidence in authenticity, reliability, and trustworthiness, integrity, and
+   stage in lifecycle (e.g. Document Completion - has the artifact been legally
+   authenticated), all of which may impact security, privacy, and trust policies.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

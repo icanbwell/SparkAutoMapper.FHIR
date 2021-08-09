@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.bundle_link`
+===========================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.bundle_link
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.bundle_link.BundleLink
+
+
+
+.. class:: BundleLink(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, relation: spark_auto_mapper_fhir.fhir_types.string.FhirString, url: spark_auto_mapper_fhir.fhir_types.uri.FhirUri)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   Bundle.Link
+   A container for a collection of resources.
+
+

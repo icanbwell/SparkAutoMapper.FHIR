@@ -1,0 +1,44 @@
+:mod:`spark_auto_mapper_fhir.value_sets.condition_or__problem_or__diagnosis_codes`
+==================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.condition_or__problem_or__diagnosis_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.condition_or__problem_or__diagnosis_codes.Condition_or_Problem_or_DiagnosisCodesCode
+   spark_auto_mapper_fhir.value_sets.condition_or__problem_or__diagnosis_codes.Condition_or_Problem_or_DiagnosisCodesCodeValues
+
+
+
+.. class:: Condition_or_Problem_or_DiagnosisCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   Condition/Problem/DiagnosisCodes
+   From: http://hl7.org/fhir/ValueSet/condition-code in valuesets.xml
+       Example value set for Condition/Problem/Diagnosis codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+
+.. class:: Condition_or_Problem_or_DiagnosisCodesCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/condition-code in valuesets.xml
+
+   .. attribute:: NoCurrentProblemsOrDisability
+      
+
+      
+
+

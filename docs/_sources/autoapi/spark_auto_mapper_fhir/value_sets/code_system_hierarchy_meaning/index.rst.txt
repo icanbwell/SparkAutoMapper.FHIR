@@ -1,0 +1,77 @@
+:mod:`spark_auto_mapper_fhir.value_sets.code_system_hierarchy_meaning`
+======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.code_system_hierarchy_meaning
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.code_system_hierarchy_meaning.CodeSystemHierarchyMeaningCode
+   spark_auto_mapper_fhir.value_sets.code_system_hierarchy_meaning.CodeSystemHierarchyMeaningCodeValues
+
+
+
+.. class:: CodeSystemHierarchyMeaningCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   CodeSystemHierarchyMeaning
+   From: http://hl7.org/fhir/codesystem-hierarchy-meaning in valuesets.xml
+       The meaning of the hierarchy of concepts in a code system.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/codesystem-hierarchy-meaning
+
+      
+
+
+.. class:: CodeSystemHierarchyMeaningCodeValues
+
+   No particular relationship between the concepts can be assumed, except what
+   can be determined by inspection of the definitions of the elements (possible
+   reasons to use this: importing from a source where this is not defined, or
+   where various parts of the hierarchy have different meanings).
+   From: http://hl7.org/fhir/codesystem-hierarchy-meaning in valuesets.xml
+
+   .. attribute:: GroupedBy
+      
+
+      A hierarchy where the child concepts have an IS-A relationship with the
+      parents - that is, all the properties of the parent are also true for its
+      child concepts. Not that is-a is a property of the concepts, so additional
+      subsumption relationships may be defined using properties or the
+      [subsumes](extension-codesystem-subsumes.html) extension.
+      From: http://hl7.org/fhir/codesystem-hierarchy-meaning in valuesets.xml
+
+
+   .. attribute:: Is_A
+      
+
+      Child elements list the individual parts of a composite whole (e.g. body
+      site).
+      From: http://hl7.org/fhir/codesystem-hierarchy-meaning in valuesets.xml
+
+
+   .. attribute:: PartOf
+      
+
+      Child concepts in the hierarchy may have only one parent, and there is a
+      presumption that the code system is a "closed world" meaning all things must
+      be in the hierarchy. This results in concepts such as "not otherwise
+      classified.".
+      From: http://hl7.org/fhir/codesystem-hierarchy-meaning in valuesets.xml
+
+
+   .. attribute:: ClassifiedWith
+      
+
+      
+
+

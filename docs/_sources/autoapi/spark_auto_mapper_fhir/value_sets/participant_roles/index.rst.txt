@@ -1,0 +1,35 @@
+:mod:`spark_auto_mapper_fhir.value_sets.participant_roles`
+==========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.participant_roles
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.participant_roles.ParticipantRolesCode
+
+
+
+.. class:: ParticipantRolesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ParticipantRoles
+   From: http://hl7.org/fhir/ValueSet/participant-role in valuesets.xml
+       Roles of participants that may be included in a care team.  Defined as: Is a
+   Person, Healthcare professional (occupation) or Healthcare related
+   organization (qualifier value).
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+

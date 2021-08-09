@@ -1,0 +1,77 @@
+:mod:`spark_auto_mapper_fhir.value_sets.x_path_usage_type`
+==========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.x_path_usage_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.x_path_usage_type.XPathUsageTypeCode
+   spark_auto_mapper_fhir.value_sets.x_path_usage_type.XPathUsageTypeCodeValues
+
+
+
+.. class:: XPathUsageTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   XPathUsageType
+   From: http://hl7.org/fhir/search-xpath-usage in valuesets.xml
+       How a search parameter relates to the set of elements returned by evaluating
+   its xpath query.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/search-xpath-usage
+
+      
+
+
+.. class:: XPathUsageTypeCodeValues
+
+   The search parameter is derived directly from the selected nodes based on the
+   type definitions.
+   From: http://hl7.org/fhir/search-xpath-usage in valuesets.xml
+
+   .. attribute:: Normal
+      
+
+      The search parameter is derived by a phonetic transform from the selected
+      nodes.
+      From: http://hl7.org/fhir/search-xpath-usage in valuesets.xml
+
+
+   .. attribute:: Phonetic
+      
+
+      The search parameter is based on a spatial transform of the selected nodes.
+      From: http://hl7.org/fhir/search-xpath-usage in valuesets.xml
+
+
+   .. attribute:: Nearby
+      
+
+      The search parameter is based on a spatial transform of the selected nodes,
+      using physical distance from the middle.
+      From: http://hl7.org/fhir/search-xpath-usage in valuesets.xml
+
+
+   .. attribute:: Distance
+      
+
+      The interpretation of the xpath statement is unknown (and can't be automated).
+      From: http://hl7.org/fhir/search-xpath-usage in valuesets.xml
+
+
+   .. attribute:: Other
+      
+
+      
+
+

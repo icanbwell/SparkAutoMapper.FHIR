@@ -1,0 +1,67 @@
+:mod:`spark_auto_mapper_fhir.value_sets.unknown_content_code`
+=============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.unknown_content_code
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.unknown_content_code.UnknownContentCodeCode
+   spark_auto_mapper_fhir.value_sets.unknown_content_code.UnknownContentCodeCodeValues
+
+
+
+.. class:: UnknownContentCodeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   UnknownContentCode
+   From: http://hl7.org/fhir/unknown-content-code in valuesets.xml
+       A code that indicates whether an application accepts unknown elements or
+   extensions when reading resources.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/unknown-content-code
+
+      
+
+
+.. class:: UnknownContentCodeCodeValues
+
+   The application does not accept either unknown elements or extensions.
+   From: http://hl7.org/fhir/unknown-content-code in valuesets.xml
+
+   .. attribute:: NeitherElementsOrExtensions
+      
+
+      The application accepts unknown extensions, but not unknown elements.
+      From: http://hl7.org/fhir/unknown-content-code in valuesets.xml
+
+
+   .. attribute:: UnknownExtensions
+      
+
+      The application accepts unknown elements, but not unknown extensions.
+      From: http://hl7.org/fhir/unknown-content-code in valuesets.xml
+
+
+   .. attribute:: UnknownElements
+      
+
+      The application accepts unknown elements and extensions.
+      From: http://hl7.org/fhir/unknown-content-code in valuesets.xml
+
+
+   .. attribute:: UnknownElementsAndExtensions
+      
+
+      
+
+

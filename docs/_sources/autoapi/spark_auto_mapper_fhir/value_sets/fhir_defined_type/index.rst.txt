@@ -1,0 +1,40 @@
+:mod:`spark_auto_mapper_fhir.value_sets.fhir_defined_type`
+==========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.fhir_defined_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.fhir_defined_type.FHIRDefinedTypeCode
+
+
+
+.. class:: FHIRDefinedTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   FHIRDefinedType
+   From: http://hl7.org/fhir/ValueSet/defined-types in valuesets.xml
+       A list of all the concrete types defined in this version of the FHIR
+   specification - Data Types and Resource Types.
+
+   .. attribute:: codeset_resource_types
+      :annotation: :FhirUri = http://hl7.org/fhir/resource-types
+
+      http://hl7.org/fhir/data-types
+
+
+   .. attribute:: codeset_data_types
+      :annotation: :FhirUri = http://hl7.org/fhir/data-types
+
+      
+
+

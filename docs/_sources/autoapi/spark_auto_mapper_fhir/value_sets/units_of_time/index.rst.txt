@@ -1,0 +1,80 @@
+:mod:`spark_auto_mapper_fhir.value_sets.units_of_time`
+======================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.units_of_time
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.units_of_time.UnitsOfTimeCode
+   spark_auto_mapper_fhir.value_sets.units_of_time.UnitsOfTimeCodeValues
+
+
+
+.. class:: UnitsOfTimeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   UnitsOfTime
+   From: http://hl7.org/fhir/ValueSet/units-of-time in valuesets.xml
+       A unit of time (units from UCUM).
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://unitsofmeasure.org
+
+      
+
+
+.. class:: UnitsOfTimeCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/units-of-time in valuesets.xml
+
+   .. attribute:: Second
+      
+
+      From: http://hl7.org/fhir/ValueSet/units-of-time in valuesets.xml
+
+
+   .. attribute:: Minute
+      
+
+      From: http://hl7.org/fhir/ValueSet/units-of-time in valuesets.xml
+
+
+   .. attribute:: Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/units-of-time in valuesets.xml
+
+
+   .. attribute:: Day
+      
+
+      From: http://hl7.org/fhir/ValueSet/units-of-time in valuesets.xml
+
+
+   .. attribute:: Week
+      
+
+      From: http://hl7.org/fhir/ValueSet/units-of-time in valuesets.xml
+
+
+   .. attribute:: Month
+      
+
+      From: http://hl7.org/fhir/ValueSet/units-of-time in valuesets.xml
+
+
+   .. attribute:: Year
+      
+
+      
+
+

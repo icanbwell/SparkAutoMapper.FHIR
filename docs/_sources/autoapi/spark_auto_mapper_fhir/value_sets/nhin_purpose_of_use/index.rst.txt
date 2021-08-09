@@ -1,0 +1,230 @@
+:mod:`spark_auto_mapper_fhir.value_sets.nhin_purpose_of_use`
+============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.nhin_purpose_of_use
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.nhin_purpose_of_use.NHINPurposeOfUseCode
+   spark_auto_mapper_fhir.value_sets.nhin_purpose_of_use.NHINPurposeOfUseCodeValues
+
+
+
+.. class:: NHINPurposeOfUseCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   NHIN PurposeOfUse
+   From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
+       This value set is suitable for use with the provenance resource. It is derived
+   from, but not compatible with, the HL7 v3 Purpose of use Code system.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://healthit.gov/nhin/purposeofuse
+
+      
+
+
+.. class:: NHINPurposeOfUseCodeValues
+
+   Treatment
+   From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
+
+   .. attribute:: Treatment
+      
+
+      Payment
+      From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
+
+
+   .. attribute:: Payment
+      
+
+      Healthcare Operations
+      From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
+
+
+   .. attribute:: Operations
+      
+
+      System Administration
+      From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
+
+
+   .. attribute:: Sysadmin
+      
+
+      Fraud detection
+      From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
+
+
+   .. attribute:: Fraud
+      
+
+      Use or disclosure of Psychotherapy Notes
+      From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
+
+
+   .. attribute:: Psychotherapy
+      
+
+      Use or disclosure by the covered entity for its own training programs
+      From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
+
+
+   .. attribute:: Training
+      
+
+      Use or disclosure by the covered entity to defend itself in a legal action
+      From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
+
+
+   .. attribute:: Legal
+      
+
+      Marketing
+      From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
+
+
+   .. attribute:: Marketing
+      
+
+      Use and disclosure for facility directories
+      From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
+
+
+   .. attribute:: Directory
+      
+
+      Disclose to a family member, other relative, or a close personal friend of the
+      individual
+      From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
+
+
+   .. attribute:: Family
+      
+
+      Uses and disclosures with the individual present.
+      From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
+
+
+   .. attribute:: Present
+      
+
+      Permission cannot practicably be provided because of the individual's
+      incapacity or an emergency.
+      From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
+
+
+   .. attribute:: Emergency
+      
+
+      Use and disclosures for disaster relief purposes.
+      From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
+
+
+   .. attribute:: Disaster
+      
+
+      Uses and disclosures for public health activities.
+      From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
+
+
+   .. attribute:: PublicHealth
+      
+
+      Disclosures about victims of abuse, neglect or domestic violence.
+      From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
+
+
+   .. attribute:: Abuse
+      
+
+      Uses and disclosures for health oversight activities.
+      From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
+
+
+   .. attribute:: Oversight
+      
+
+      Disclosures for judicial and administrative proceedings.
+      From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
+
+
+   .. attribute:: Judicial
+      
+
+      Disclosures for law enforcement purposes.
+      From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
+
+
+   .. attribute:: LawEnforcement
+      
+
+      Uses and disclosures about decedents.
+      From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
+
+
+   .. attribute:: Deceased
+      
+
+      Uses and disclosures for cadaveric organ,  eye or tissue donation purposes
+      From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
+
+
+   .. attribute:: Donation
+      
+
+      Uses and disclosures for research purposes.
+      From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
+
+
+   .. attribute:: Research
+      
+
+      Uses and disclosures to avert a serious threat to health or safety.
+      From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
+
+
+   .. attribute:: Threat
+      
+
+      Uses and disclosures for specialized government functions.
+      From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
+
+
+   .. attribute:: Government
+      
+
+      Disclosures for workers' compensation.
+      From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
+
+
+   .. attribute:: Worker_sComp
+      
+
+      Disclosures for insurance or disability coverage determination
+      From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
+
+
+   .. attribute:: Coverage
+      
+
+      Request of the Individual
+      From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
+
+
+   .. attribute:: Request
+      
+
+      
+
+

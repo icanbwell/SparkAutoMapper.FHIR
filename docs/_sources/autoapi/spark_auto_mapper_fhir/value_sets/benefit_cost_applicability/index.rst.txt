@@ -1,0 +1,61 @@
+:mod:`spark_auto_mapper_fhir.value_sets.benefit_cost_applicability`
+===================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.benefit_cost_applicability
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.benefit_cost_applicability.BenefitCostApplicabilityCode
+   spark_auto_mapper_fhir.value_sets.benefit_cost_applicability.BenefitCostApplicabilityCodeValues
+
+
+
+.. class:: BenefitCostApplicabilityCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   BenefitCostApplicability
+   From: http://terminology.hl7.org/CodeSystem/applicability in valuesets.xml
+       Whether the cost applies to in-network or out-of-network providers.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/applicability
+
+      
+
+
+.. class:: BenefitCostApplicabilityCodeValues
+
+   Provider is contracted with the health insurance company to provide services
+   to plan members for specific pre-negotiated rates
+   From: http://terminology.hl7.org/CodeSystem/applicability in valuesets.xml
+
+   .. attribute:: InNetwork
+      
+
+      Provider is  not contracted with the health insurance company to provide
+      services to plan members for specific pre-negotiated rates
+      From: http://terminology.hl7.org/CodeSystem/applicability in valuesets.xml
+
+
+   .. attribute:: OutOfNetwork
+      
+
+      Other applicability
+      From: http://terminology.hl7.org/CodeSystem/applicability in valuesets.xml
+
+
+   .. attribute:: Other
+      
+
+      
+
+

@@ -1,0 +1,72 @@
+:mod:`spark_auto_mapper_fhir.value_sets.payment_terms`
+======================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.payment_terms
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.payment_terms.PaymentTerms
+   spark_auto_mapper_fhir.value_sets.payment_terms.PaymentTermsValues
+
+
+
+.. class:: PaymentTerms(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.PaymentTerms
+   From: http://terminology.hl7.org/ValueSet/v3-PaymentTerms in v3-codesystems.xml
+        Describes payment terms for a financial transaction, used in an invoice. This
+   is typically expressed as a responsibility of the acceptor or payor of an
+   invoice.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-PaymentTerms
+
+      
+
+
+.. class:: PaymentTermsValues
+
+   Payment in full for products and/or services is required as soon as the
+   service is performed or goods delivered.
+   From: http://terminology.hl7.org/CodeSystem/v3-PaymentTerms in v3-codesystems.xml
+
+   .. attribute:: CashOnDelivery
+      
+
+      Payment in full for products and/or services is required 30 days from the time
+      the service is performed or goods delivered.
+      From: http://terminology.hl7.org/CodeSystem/v3-PaymentTerms in v3-codesystems.xml
+
+
+   .. attribute:: Net30Days
+      
+
+      Payment in full for products and/or services is required 60 days from the time
+      the service is performed or goods delivered.
+      From: http://terminology.hl7.org/CodeSystem/v3-PaymentTerms in v3-codesystems.xml
+
+
+   .. attribute:: Net60Days
+      
+
+      Payment in full for products and/or services is required 90 days from the time
+      the service is performed or goods delivered.
+      From: http://terminology.hl7.org/CodeSystem/v3-PaymentTerms in v3-codesystems.xml
+
+
+   .. attribute:: Net90Days
+      
+
+      
+
+

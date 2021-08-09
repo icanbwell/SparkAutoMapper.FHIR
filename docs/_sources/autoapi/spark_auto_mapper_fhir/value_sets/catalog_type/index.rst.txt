@@ -1,0 +1,59 @@
+:mod:`spark_auto_mapper_fhir.value_sets.catalog_type`
+=====================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.catalog_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.catalog_type.CatalogTypeCode
+   spark_auto_mapper_fhir.value_sets.catalog_type.CatalogTypeCodeValues
+
+
+
+.. class:: CatalogTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   CatalogType
+   From: http://terminology.hl7.org/CodeSystem/catalogType in valuesets.xml
+       The type of catalog.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/catalogType
+
+      
+
+
+.. class:: CatalogTypeCodeValues
+
+   Medication Catalog.
+   From: http://terminology.hl7.org/CodeSystem/catalogType in valuesets.xml
+
+   .. attribute:: MedicationCatalog
+      
+
+      Device Catalog.
+      From: http://terminology.hl7.org/CodeSystem/catalogType in valuesets.xml
+
+
+   .. attribute:: DeviceCatalog
+      
+
+      Protocol List.
+      From: http://terminology.hl7.org/CodeSystem/catalogType in valuesets.xml
+
+
+   .. attribute:: ProtocolList
+      
+
+      
+
+

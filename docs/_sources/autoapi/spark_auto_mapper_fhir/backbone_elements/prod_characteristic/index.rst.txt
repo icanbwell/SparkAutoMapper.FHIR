@@ -1,0 +1,28 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.prod_characteristic`
+===================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.prod_characteristic
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.prod_characteristic.ProdCharacteristic
+
+
+
+.. class:: ProdCharacteristic(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, height: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, width: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, depth: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, weight: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, nominalVolume: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, externalDiameter: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, shape: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, color: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.string.FhirString]] = None, imprint: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.string.FhirString]] = None, image: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.attachment.Attachment]] = None, scoring: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   ProdCharacteristic
+   The marketing status describes the date when a medicinal product is actually put on the market or the date as of which it is no longer available.
+   If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
+
+

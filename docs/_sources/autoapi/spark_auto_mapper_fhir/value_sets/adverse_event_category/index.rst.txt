@@ -1,0 +1,81 @@
+:mod:`spark_auto_mapper_fhir.value_sets.adverse_event_category`
+===============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.adverse_event_category
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.adverse_event_category.AdverseEventCategoryCode
+   spark_auto_mapper_fhir.value_sets.adverse_event_category.AdverseEventCategoryCodeValues
+
+
+
+.. class:: AdverseEventCategoryCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   AdverseEventCategory
+   From: http://terminology.hl7.org/CodeSystem/adverse-event-category in valuesets.xml
+       Overall categorization of the event, e.g. product-related or situational.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/adverse-event-category
+
+      
+
+
+.. class:: AdverseEventCategoryCodeValues
+
+   The adverse event pertains to a product problem.
+   From: http://terminology.hl7.org/CodeSystem/adverse-event-category in valuesets.xml
+
+   .. attribute:: ProductProblem
+      
+
+      The adverse event pertains to product quality.
+      From: http://terminology.hl7.org/CodeSystem/adverse-event-category in valuesets.xml
+
+
+   .. attribute:: ProductQuality
+      
+
+      The adverse event pertains to a product use error.
+      From: http://terminology.hl7.org/CodeSystem/adverse-event-category in valuesets.xml
+
+
+   .. attribute:: ProductUseError
+      
+
+      The adverse event pertains to a medical device use error.
+      From: http://terminology.hl7.org/CodeSystem/adverse-event-category in valuesets.xml
+
+
+   .. attribute:: MedicalDeviceUseError
+      
+
+      The adverse event pertains to a problem with a different manufacturer of the
+      same medication.
+      From: http://terminology.hl7.org/CodeSystem/adverse-event-category in valuesets.xml
+
+
+   .. attribute:: ProblemWithDifferentManufacturerOfSameMedicine
+      
+
+      The adverse event pertains to an unsafe physical environment.
+      From: http://terminology.hl7.org/CodeSystem/adverse-event-category in valuesets.xml
+
+
+   .. attribute:: UnsafePhysicalEnvironment
+      
+
+      
+
+

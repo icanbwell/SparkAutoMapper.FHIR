@@ -1,0 +1,66 @@
+:mod:`spark_auto_mapper_fhir.value_sets.device_alert_level`
+===========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.device_alert_level
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.device_alert_level.DeviceAlertLevel
+   spark_auto_mapper_fhir.value_sets.device_alert_level.DeviceAlertLevelValues
+
+
+
+.. class:: DeviceAlertLevel(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.DeviceAlertLevel
+   From: http://terminology.hl7.org/ValueSet/v3-DeviceAlertLevel in v3-codesystems.xml
+        Domain values for the Device.Alert_levelCode
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-DeviceAlertLevel
+
+      
+
+
+.. class:: DeviceAlertLevelValues
+
+   Shut Down, Fix Problem and Re-initialize
+   From: http://terminology.hl7.org/CodeSystem/v3-DeviceAlertLevel in v3-codesystems.xml
+
+   .. attribute:: Critical
+      
+
+      No Corrective Action Needed
+      From: http://terminology.hl7.org/CodeSystem/v3-DeviceAlertLevel in v3-codesystems.xml
+
+
+   .. attribute:: Normal
+      
+
+      Corrective Action Required
+      From: http://terminology.hl7.org/CodeSystem/v3-DeviceAlertLevel in v3-codesystems.xml
+
+
+   .. attribute:: Serious
+      
+
+      Corrective Action Anticipated
+      From: http://terminology.hl7.org/CodeSystem/v3-DeviceAlertLevel in v3-codesystems.xml
+
+
+   .. attribute:: Warning
+      
+
+      
+
+

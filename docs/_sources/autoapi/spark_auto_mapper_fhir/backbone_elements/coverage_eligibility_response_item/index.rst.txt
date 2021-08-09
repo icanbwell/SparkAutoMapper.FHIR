@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.coverage_eligibility_response_item`
+==================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.coverage_eligibility_response_item
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.coverage_eligibility_response_item.CoverageEligibilityResponseItem
+
+
+
+.. class:: CoverageEligibilityResponseItem(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, category: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.benefit_category_codes.BenefitCategoryCodesCode]] = None, productOrService: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.uscls_codes.USCLSCodesCode]] = None, modifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.modifier_type_codes.ModifierTypeCodesCode]]] = None, provider: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole)]]] = None, excluded: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, name: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, description: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, network: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.network_type_codes.NetworkTypeCodesCode]] = None, unit: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.unit_type_codes.UnitTypeCodesCode]] = None, term: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.benefit_term_codes.BenefitTermCodesCode]] = None, benefit: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.coverage_eligibility_response_benefit.CoverageEligibilityResponseBenefit]] = None, authorizationRequired: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, authorizationSupporting: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.coverage_eligibility_response_auth_support_codes.CoverageEligibilityResponseAuthSupportCodesCode]]] = None, authorizationUrl: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   CoverageEligibilityResponse.Item
+   This resource provides eligibility and plan details from the processing of an CoverageEligibilityRequest resource.
+
+

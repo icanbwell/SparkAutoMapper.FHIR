@@ -1,0 +1,67 @@
+:mod:`spark_auto_mapper_fhir.value_sets.quality_of_evidence_rating`
+===================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.quality_of_evidence_rating
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.quality_of_evidence_rating.QualityOfEvidenceRatingCode
+   spark_auto_mapper_fhir.value_sets.quality_of_evidence_rating.QualityOfEvidenceRatingCodeValues
+
+
+
+.. class:: QualityOfEvidenceRatingCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   QualityOfEvidenceRating
+   From: http://terminology.hl7.org/CodeSystem/evidence-quality in valuesets.xml
+       A rating system that describes the quality of evidence such as the GRADE,
+   DynaMed, or Oxford CEBM systems.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/evidence-quality
+
+      
+
+
+.. class:: QualityOfEvidenceRatingCodeValues
+
+   High quality evidence.
+   From: http://terminology.hl7.org/CodeSystem/evidence-quality in valuesets.xml
+
+   .. attribute:: HighQuality
+      
+
+      Moderate quality evidence.
+      From: http://terminology.hl7.org/CodeSystem/evidence-quality in valuesets.xml
+
+
+   .. attribute:: ModerateQuality
+      
+
+      Low quality evidence.
+      From: http://terminology.hl7.org/CodeSystem/evidence-quality in valuesets.xml
+
+
+   .. attribute:: LowQuality
+      
+
+      Very low quality evidence.
+      From: http://terminology.hl7.org/CodeSystem/evidence-quality in valuesets.xml
+
+
+   .. attribute:: VeryLowQuality
+      
+
+      
+
+

@@ -1,0 +1,101 @@
+:mod:`spark_auto_mapper_fhir.value_sets.table_frame`
+====================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.table_frame
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.table_frame.TableFrame
+   spark_auto_mapper_fhir.value_sets.table_frame.TableFrameValues
+
+
+
+.. class:: TableFrame(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.TableFrame
+   From: http://terminology.hl7.org/ValueSet/v3-TableFrame in v3-codesystems.xml
+        These values are defined within the XHTML 4.0 Table Model
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-TableFrame
+
+      
+
+
+.. class:: TableFrameValues
+
+   above
+   From: http://terminology.hl7.org/CodeSystem/v3-TableFrame in v3-codesystems.xml
+
+   .. attribute:: Above
+      
+
+      below
+      From: http://terminology.hl7.org/CodeSystem/v3-TableFrame in v3-codesystems.xml
+
+
+   .. attribute:: Below
+      
+
+      border
+      From: http://terminology.hl7.org/CodeSystem/v3-TableFrame in v3-codesystems.xml
+
+
+   .. attribute:: Border
+      
+
+      box
+      From: http://terminology.hl7.org/CodeSystem/v3-TableFrame in v3-codesystems.xml
+
+
+   .. attribute:: Box
+      
+
+      hsides
+      From: http://terminology.hl7.org/CodeSystem/v3-TableFrame in v3-codesystems.xml
+
+
+   .. attribute:: Hsides
+      
+
+      lhs
+      From: http://terminology.hl7.org/CodeSystem/v3-TableFrame in v3-codesystems.xml
+
+
+   .. attribute:: Lhs
+      
+
+      rhs
+      From: http://terminology.hl7.org/CodeSystem/v3-TableFrame in v3-codesystems.xml
+
+
+   .. attribute:: Rhs
+      
+
+      void
+      From: http://terminology.hl7.org/CodeSystem/v3-TableFrame in v3-codesystems.xml
+
+
+   .. attribute:: Void
+      
+
+      vsides
+      From: http://terminology.hl7.org/CodeSystem/v3-TableFrame in v3-codesystems.xml
+
+
+   .. attribute:: Vsides
+      
+
+      
+
+

@@ -1,0 +1,34 @@
+:mod:`spark_auto_mapper_fhir.value_sets.clin_var`
+=================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.clin_var
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.clin_var.ClinVarCode
+
+
+
+.. class:: ClinVarCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ClinVar
+   From: http://hl7.org/fhir/ValueSet/clinvar in valuesets.xml
+       NCBI central repository for curating pathogenicity of potentially clinically
+   relevant variants
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://www.ncbi.nlm.nih.gov/clinvar
+
+      
+
+

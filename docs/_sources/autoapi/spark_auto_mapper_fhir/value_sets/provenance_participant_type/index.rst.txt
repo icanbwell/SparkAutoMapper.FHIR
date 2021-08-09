@@ -1,0 +1,108 @@
+:mod:`spark_auto_mapper_fhir.value_sets.provenance_participant_type`
+====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.provenance_participant_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.provenance_participant_type.ProvenanceParticipantTypeCode
+   spark_auto_mapper_fhir.value_sets.provenance_participant_type.ProvenanceParticipantTypeCodeValues
+
+
+
+.. class:: ProvenanceParticipantTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ProvenanceParticipantType
+   From: http://terminology.hl7.org/CodeSystem/provenance-participant-type in valuesets.xml
+       The type of participation a provenance participant.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/provenance-participant-type
+
+      
+
+
+.. class:: ProvenanceParticipantTypeCodeValues
+
+   A person entering the data into the originating system
+   From: http://terminology.hl7.org/CodeSystem/provenance-participant-type in valuesets.xml
+
+   .. attribute:: Enterer
+      
+
+      A person, animal, organization or device that who actually and principally
+      carries out the activity
+      From: http://terminology.hl7.org/CodeSystem/provenance-participant-type in valuesets.xml
+
+
+   .. attribute:: Performer
+      
+
+      A party that originates the resource and therefore has responsibility for the
+      information given in the resource and ownership of this resource
+      From: http://terminology.hl7.org/CodeSystem/provenance-participant-type in valuesets.xml
+
+
+   .. attribute:: Author
+      
+
+      A person who verifies the correctness and appropriateness of activity
+      From: http://terminology.hl7.org/CodeSystem/provenance-participant-type in valuesets.xml
+
+
+   .. attribute:: Verifier
+      
+
+      A verifier who attests to the accuracy of the resource
+      From: http://terminology.hl7.org/CodeSystem/provenance-participant-type in valuesets.xml
+
+
+   .. attribute:: Attester
+      
+
+      A person who reported information that contributed to the resource
+      From: http://terminology.hl7.org/CodeSystem/provenance-participant-type in valuesets.xml
+
+
+   .. attribute:: Informant
+      
+
+      The entity that is accountable for maintaining a true an accurate copy of the
+      original record
+      From: http://terminology.hl7.org/CodeSystem/provenance-participant-type in valuesets.xml
+
+
+   .. attribute:: Custodian
+      
+
+      A device that operates independently of an author on custodian's algorithms
+      for data extraction of existing information for purpose of generating a new
+      artifact.
+      From: http://terminology.hl7.org/CodeSystem/provenance-participant-type in valuesets.xml
+
+
+   .. attribute:: Assembler
+      
+
+      A device used by an author to record new information, which may also be used
+      by the author to select existing information for aggregation with newly
+      recorded information for the purpose of generating a new artifact.
+      From: http://terminology.hl7.org/CodeSystem/provenance-participant-type in valuesets.xml
+
+
+   .. attribute:: Composer
+      
+
+      
+
+

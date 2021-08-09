@@ -1,0 +1,33 @@
+:mod:`spark_auto_mapper_fhir.value_sets.action_participant_role`
+================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.action_participant_role
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.action_participant_role.ActionParticipantRoleCode
+
+
+
+.. class:: ActionParticipantRoleCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ActionParticipantRole
+   From: http://hl7.org/fhir/ValueSet/action-participant-role in valuesets.xml
+       Either a practitioner role or a relationship type.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/ValueSet/action-participant-role
+
+      
+
+

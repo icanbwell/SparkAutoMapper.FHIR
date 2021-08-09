@@ -1,0 +1,14 @@
+:mod:`spark_auto_mapper_fhir.fhir_types.uri`
+============================================
+
+.. py:module:: spark_auto_mapper_fhir.fhir_types.uri
+
+
+Module Contents
+---------------
+
+.. data:: FhirUri
+   
+
+   
+

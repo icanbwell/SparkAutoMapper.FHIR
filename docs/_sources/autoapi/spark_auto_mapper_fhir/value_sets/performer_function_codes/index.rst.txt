@@ -1,0 +1,130 @@
+:mod:`spark_auto_mapper_fhir.value_sets.performer_function_codes`
+=================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.performer_function_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.performer_function_codes.PerformerFunctionCodesCode
+   spark_auto_mapper_fhir.value_sets.performer_function_codes.PerformerFunctionCodesCodeValues
+
+
+
+.. class:: PerformerFunctionCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   Performer Function Codes
+   From: http://hl7.org/fhir/ValueSet/performer-function in valuesets.xml
+       The types of involvement of the performer in the Event.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
+
+      
+
+
+.. class:: PerformerFunctionCodesCodeValues
+
+   Indicates that the target of the participation is involved in some manner in
+   the act, but does not qualify how.
+   From: http://terminology.hl7.org/CodeSystem/v3-ParticipationType in v3-codesystems.xml
+
+   .. attribute:: Participation
+      
+
+      From: http://hl7.org/fhir/ValueSet/performer-function in valuesets.xml
+
+
+   .. attribute:: TRANS
+      
+
+      From: http://hl7.org/fhir/ValueSet/performer-function in valuesets.xml
+
+
+   .. attribute:: PART
+      
+
+      From: http://hl7.org/fhir/ValueSet/performer-function in valuesets.xml
+
+
+   .. attribute:: ATND
+      
+
+      From: http://hl7.org/fhir/ValueSet/performer-function in valuesets.xml
+
+
+   .. attribute:: CON
+      
+
+      From: http://hl7.org/fhir/ValueSet/performer-function in valuesets.xml
+
+
+   .. attribute:: AUT
+      
+
+      From: http://hl7.org/fhir/ValueSet/performer-function in valuesets.xml
+
+
+   .. attribute:: INF
+      
+
+      From: http://hl7.org/fhir/ValueSet/performer-function in valuesets.xml
+
+
+   .. attribute:: ENT
+      
+
+      From: http://hl7.org/fhir/ValueSet/performer-function in valuesets.xml
+
+
+   .. attribute:: WIT
+      
+
+      From: http://hl7.org/fhir/ValueSet/performer-function in valuesets.xml
+
+
+   .. attribute:: PPRF
+      
+
+      From: http://hl7.org/fhir/ValueSet/performer-function in valuesets.xml
+
+
+   .. attribute:: SPRF
+      
+
+      From: http://hl7.org/fhir/ValueSet/performer-function in valuesets.xml
+
+
+   .. attribute:: RESP
+      
+
+      From: http://hl7.org/fhir/ValueSet/performer-function in valuesets.xml
+
+
+   .. attribute:: VRF
+      
+
+      From: http://hl7.org/fhir/ValueSet/performer-function in valuesets.xml
+
+
+   .. attribute:: AUTHEN
+      
+
+      From: http://hl7.org/fhir/ValueSet/performer-function in valuesets.xml
+
+
+   .. attribute:: LA
+      
+
+      
+
+

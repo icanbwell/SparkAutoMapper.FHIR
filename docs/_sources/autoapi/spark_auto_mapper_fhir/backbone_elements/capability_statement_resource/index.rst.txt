@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.capability_statement_resource`
+=============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.capability_statement_resource
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.capability_statement_resource.CapabilityStatementResource
+
+
+
+.. class:: CapabilityStatementResource(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, type_: spark_auto_mapper_fhir.value_sets.resource_type.ResourceTypeCode, profile: Optional[spark_auto_mapper_fhir.fhir_types.canonical.FhirCanonical] = None, supportedProfile: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.canonical.FhirCanonical]] = None, documentation: Optional[spark_auto_mapper_fhir.fhir_types.markdown.FhirMarkdown] = None, interaction: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.capability_statement_interaction.CapabilityStatementInteraction]] = None, versioning: Optional[spark_auto_mapper_fhir.value_sets.resource_version_policy.ResourceVersionPolicyCode] = None, readHistory: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, updateCreate: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, conditionalCreate: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, conditionalRead: Optional[spark_auto_mapper_fhir.value_sets.conditional_read_status.ConditionalReadStatusCode] = None, conditionalUpdate: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, conditionalDelete: Optional[spark_auto_mapper_fhir.value_sets.conditional_delete_status.ConditionalDeleteStatusCode] = None, referencePolicy: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.value_sets.reference_handling_policy.ReferenceHandlingPolicyCode]] = None, searchInclude: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.string.FhirString]] = None, searchRevInclude: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.string.FhirString]] = None, searchParam: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.capability_statement_search_param.CapabilityStatementSearchParam]] = None, operation: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.capability_statement_operation.CapabilityStatementOperation]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   CapabilityStatement.Resource
+   A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+
+

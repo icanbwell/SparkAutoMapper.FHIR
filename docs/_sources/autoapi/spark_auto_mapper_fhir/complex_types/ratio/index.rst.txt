@@ -1,0 +1,32 @@
+:mod:`spark_auto_mapper_fhir.complex_types.ratio`
+=================================================
+
+.. py:module:: spark_auto_mapper_fhir.complex_types.ratio
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.complex_types.ratio.Ratio
+
+
+
+.. class:: Ratio(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, numerator: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, denominator: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
+
+   Ratio
+   fhir-base.xsd
+       A relationship of two Quantity values - expressed as a numerator and a denominator.
+       If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

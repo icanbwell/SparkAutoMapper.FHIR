@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.request_group_action`
+====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.request_group_action
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.request_group_action.RequestGroupAction
+
+
+
+.. class:: RequestGroupAction(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, prefix: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, title: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, description: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, textEquivalent: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, priority: Optional[spark_auto_mapper_fhir.value_sets.request_priority.RequestPriorityCode] = None, code: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]]] = None, documentation: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.related_artifact.RelatedArtifact]] = None, condition: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.request_group_condition.RequestGroupCondition]] = None, relatedAction: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.request_group_related_action.RequestGroupRelatedAction]] = None, timingDateTime: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, timingAge: Optional[spark_auto_mapper_fhir.complex_types.age.Age] = None, timingPeriod: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, timingDuration: Optional[spark_auto_mapper_fhir.complex_types.duration.Duration] = None, timingRange: Optional[spark_auto_mapper_fhir.complex_types.range.Range] = None, timingTiming: Optional[spark_auto_mapper_fhir.backbone_elements.timing.Timing] = None, participant: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole, spark_auto_mapper_fhir.resources.related_person.RelatedPerson, spark_auto_mapper_fhir.resources.device.Device)]]]] = None, type_: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.action_type.ActionTypeCode]] = None, groupingBehavior: Optional[spark_auto_mapper_fhir.value_sets.action_grouping_behavior.ActionGroupingBehaviorCode] = None, selectionBehavior: Optional[spark_auto_mapper_fhir.value_sets.action_selection_behavior.ActionSelectionBehaviorCode] = None, requiredBehavior: Optional[spark_auto_mapper_fhir.value_sets.action_required_behavior.ActionRequiredBehaviorCode] = None, precheckBehavior: Optional[spark_auto_mapper_fhir.value_sets.action_precheck_behavior.ActionPrecheckBehaviorCode] = None, cardinalityBehavior: Optional[spark_auto_mapper_fhir.value_sets.action_cardinality_behavior.ActionCardinalityBehaviorCode] = None, resource: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.resource.Resource]] = None, action: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.request_group_action.RequestGroupAction]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   RequestGroup.Action
+   A group of related requests that can be used to capture intended activities that have inter-dependencies such as "give this medication after that one".
+
+

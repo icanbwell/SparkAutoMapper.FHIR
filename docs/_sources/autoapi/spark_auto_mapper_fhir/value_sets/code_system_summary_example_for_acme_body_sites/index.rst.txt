@@ -1,0 +1,33 @@
+:mod:`spark_auto_mapper_fhir.value_sets.code_system_summary_example_for_acme_body_sites`
+========================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.code_system_summary_example_for_acme_body_sites
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.code_system_summary_example_for_acme_body_sites.CodeSystemSummaryExampleForACMEBodySitesCode
+
+
+
+.. class:: CodeSystemSummaryExampleForACMEBodySitesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   Code system summary example for ACME body sites
+   From: http://hl7.org/fhir/CodeSystem/summary in valuesets.xml
+       This is an example code system summary for the ACME codes for body site.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/CodeSystem/summary
+
+      
+
+

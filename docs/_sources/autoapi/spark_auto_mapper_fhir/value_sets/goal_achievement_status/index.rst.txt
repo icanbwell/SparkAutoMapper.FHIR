@@ -1,0 +1,63 @@
+:mod:`spark_auto_mapper_fhir.value_sets.goal_achievement_status`
+================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.goal_achievement_status
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.goal_achievement_status.GoalAchievementStatusCode
+   spark_auto_mapper_fhir.value_sets.goal_achievement_status.GoalAchievementStatusCodeValues
+
+
+
+.. class:: GoalAchievementStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   GoalAchievementStatus
+   From: http://terminology.hl7.org/CodeSystem/goal-achievement in valuesets.xml
+       Describes the progression, or lack thereof, towards the goal against the
+   target.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/goal-achievement
+
+      
+
+
+.. class:: GoalAchievementStatusCodeValues
+
+   The goal is being sought but has not yet been reached. (Also applies if the
+   goal was reached in the past but there has been regression and the goal is
+   again being sought).
+   From: http://terminology.hl7.org/CodeSystem/goal-achievement in valuesets.xml
+
+   .. attribute:: InProgress
+      
+
+      The goal has been met.
+      From: http://terminology.hl7.org/CodeSystem/goal-achievement in valuesets.xml
+
+
+   .. attribute:: Achieved
+      
+
+      The goal has not been met and there might or might not have been progress
+      towards target.
+      From: http://terminology.hl7.org/CodeSystem/goal-achievement in valuesets.xml
+
+
+   .. attribute:: NotAchieved
+      
+
+      
+
+

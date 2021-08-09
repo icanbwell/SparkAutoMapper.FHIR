@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.substance_specification_structure`
+=================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.substance_specification_structure
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.substance_specification_structure.SubstanceSpecificationStructure
+
+
+
+.. class:: SubstanceSpecificationStructure(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, stereochemistry: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, opticalActivity: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, molecularFormula: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, molecularFormulaByMoiety: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, isotope: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.substance_specification_isotope.SubstanceSpecificationIsotope]] = None, molecularWeight: Optional[spark_auto_mapper_fhir.backbone_elements.substance_specification_molecular_weight.SubstanceSpecificationMolecularWeight] = None, source: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.document_reference.DocumentReference]]] = None, representation: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.substance_specification_representation.SubstanceSpecificationRepresentation]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   SubstanceSpecification.Structure
+   The detailed description of a substance, typically at a level beyond what is used for prescribing.
+
+

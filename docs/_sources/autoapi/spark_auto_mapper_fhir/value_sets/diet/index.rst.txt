@@ -1,0 +1,89 @@
+:mod:`spark_auto_mapper_fhir.value_sets.diet`
+=============================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.diet
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.diet.DietCode
+   spark_auto_mapper_fhir.value_sets.diet.DietCodeValues
+
+
+
+.. class:: DietCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   Diet
+   From: http://terminology.hl7.org/CodeSystem/diet in valuesets.xml
+       This value set defines a set of codes that can be used to indicate dietary
+   preferences or restrictions a patient may have.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/diet
+
+      
+
+
+.. class:: DietCodeValues
+
+   Food without meat, poultry or seafood.
+   From: http://terminology.hl7.org/CodeSystem/diet in valuesets.xml
+
+   .. attribute:: Vegetarian
+      
+
+      Excludes dairy products.
+      From: http://terminology.hl7.org/CodeSystem/diet in valuesets.xml
+
+
+   .. attribute:: DairyFree
+      
+
+      Excludes ingredients containing nuts.
+      From: http://terminology.hl7.org/CodeSystem/diet in valuesets.xml
+
+
+   .. attribute:: NutFree
+      
+
+      Excludes ingredients containing gluten.
+      From: http://terminology.hl7.org/CodeSystem/diet in valuesets.xml
+
+
+   .. attribute:: GlutenFree
+      
+
+      Food without meat, poultry, seafood, eggs, dairy products and other animal-
+      derived substances.
+      From: http://terminology.hl7.org/CodeSystem/diet in valuesets.xml
+
+
+   .. attribute:: Vegan
+      
+
+      Foods that conform to Islamic law.
+      From: http://terminology.hl7.org/CodeSystem/diet in valuesets.xml
+
+
+   .. attribute:: Halal
+      
+
+      Foods that conform to Jewish dietary law.
+      From: http://terminology.hl7.org/CodeSystem/diet in valuesets.xml
+
+
+   .. attribute:: Kosher
+      
+
+      
+
+

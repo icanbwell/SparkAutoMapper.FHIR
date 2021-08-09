@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.contract_asset`
+==============================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.contract_asset
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.contract_asset.ContractAsset
+
+
+
+.. class:: ContractAsset(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, scope: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.contract_resource_asset_scope_codes.ContractResourceAssetScopeCodesCode]] = None, type_: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.contract_resource_asset_type_codes.ContractResourceAssetTypeCodesCode]]] = None, typeReference: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.resource.Resource]]] = None, subtype: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.contract_resource_asset_sub__type_codes.ContractResourceAssetSub_TypeCodesCode]]] = None, relationship: Optional[spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.consent_content_class.ConsentContentClassCode]] = None, context: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.contract_context.ContractContext]] = None, condition: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, periodType: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.contract_resource_asset_availiability_codes.ContractResourceAssetAvailiabilityCodesCode]]] = None, period: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.period.Period]] = None, usePeriod: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.period.Period]] = None, text: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, linkId: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.string.FhirString]] = None, answer: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.contract_answer.ContractAnswer]] = None, securityLabelNumber: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.unsigned_int.FhirUnsignedInt]] = None, valuedItem: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.contract_valued_item.ContractValuedItem]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   Contract.Asset
+   Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
+
+

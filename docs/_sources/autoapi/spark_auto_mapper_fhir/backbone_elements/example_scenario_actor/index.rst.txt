@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.example_scenario_actor`
+======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.example_scenario_actor
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.example_scenario_actor.ExampleScenarioActor
+
+
+
+.. class:: ExampleScenarioActor(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, actorId: spark_auto_mapper_fhir.fhir_types.string.FhirString, type_: spark_auto_mapper_fhir.value_sets.example_scenario_actor_type.ExampleScenarioActorTypeCode, name: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, description: Optional[spark_auto_mapper_fhir.fhir_types.markdown.FhirMarkdown] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   ExampleScenario.Actor
+   Example of workflow instance.
+
+

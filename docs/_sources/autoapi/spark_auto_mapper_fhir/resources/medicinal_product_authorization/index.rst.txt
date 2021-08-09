@@ -1,0 +1,32 @@
+:mod:`spark_auto_mapper_fhir.resources.medicinal_product_authorization`
+=======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.medicinal_product_authorization
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.medicinal_product_authorization.MedicinalProductAuthorization
+
+
+
+.. class:: MedicinalProductAuthorization(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.identifier.Identifier]] = None, subject: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.medicinal_product.MedicinalProduct, spark_auto_mapper_fhir.resources.medicinal_product_packaged.MedicinalProductPackaged)]]] = None, country: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]]] = None, jurisdiction: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]]] = None, status: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, statusDate: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, restoreDate: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, validityPeriod: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, dataExclusivityPeriod: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, dateOfFirstAuthorization: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, internationalBirthDate: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, legalBasis: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, jurisdictionalAuthorization: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.medicinal_product_authorization_jurisdictional_authorization.MedicinalProductAuthorizationJurisdictionalAuthorization]] = None, holder: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.organization.Organization]] = None, regulator: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.organization.Organization]] = None, procedure: Optional[spark_auto_mapper_fhir.backbone_elements.medicinal_product_authorization_procedure.MedicinalProductAuthorizationProcedure] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   MedicinalProductAuthorization
+   medicinalproductauthorization.xsd
+       The regulatory authorization of a medicinal product.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_expansion`
+==================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_expansion
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_expansion.TerminologyCapabilitiesExpansion
+
+
+
+.. class:: TerminologyCapabilitiesExpansion(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, hierarchical: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, paging: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, incomplete: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, parameter: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_parameter.TerminologyCapabilitiesParameter]] = None, textFilter: Optional[spark_auto_mapper_fhir.fhir_types.markdown.FhirMarkdown] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   TerminologyCapabilities.Expansion
+   A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+
+

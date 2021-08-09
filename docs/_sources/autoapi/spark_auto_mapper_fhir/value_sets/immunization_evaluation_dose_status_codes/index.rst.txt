@@ -1,0 +1,56 @@
+:mod:`spark_auto_mapper_fhir.value_sets.immunization_evaluation_dose_status_codes`
+==================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.immunization_evaluation_dose_status_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.immunization_evaluation_dose_status_codes.ImmunizationEvaluationDoseStatusCodesCode
+   spark_auto_mapper_fhir.value_sets.immunization_evaluation_dose_status_codes.ImmunizationEvaluationDoseStatusCodesCodeValues
+
+
+
+.. class:: ImmunizationEvaluationDoseStatusCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ImmunizationEvaluationDoseStatusCodes
+   From: http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status in valuesets.xml
+       The value set to instantiate this attribute should be drawn from a
+   terminologically robust code system that consists of or contains concepts to
+   support describing the validity of a dose relative to a particular recommended
+   schedule. This value set is provided as a suggestive example.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status
+
+      
+
+
+.. class:: ImmunizationEvaluationDoseStatusCodesCodeValues
+
+   The dose counts toward fulfilling a path to immunity for a patient, providing
+   protection against the target disease.
+   From: http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status in valuesets.xml
+
+   .. attribute:: Valid
+      
+
+      The dose does not count toward fulfilling a path to immunity for a patient.
+      From: http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status in valuesets.xml
+
+
+   .. attribute:: NotValid
+      
+
+      
+
+

@@ -1,0 +1,68 @@
+:mod:`spark_auto_mapper_fhir.value_sets.questionnaire_category_codes`
+=====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.questionnaire_category_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.questionnaire_category_codes.QuestionnaireCategoryCodesCode
+   spark_auto_mapper_fhir.value_sets.questionnaire_category_codes.QuestionnaireCategoryCodesCodeValues
+
+
+
+.. class:: QuestionnaireCategoryCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   QuestionnaireCategoryCodes
+   From: http://hl7.org/fhir/ValueSet/questionnaire-category in valuesets.xml
+       Example list of potential categories for questionnaires.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+
+.. class:: QuestionnaireCategoryCodesCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/questionnaire-category in valuesets.xml
+
+   .. attribute:: MentalStatusQuestionnaire
+      
+
+      From: http://hl7.org/fhir/ValueSet/questionnaire-category in valuesets.xml
+
+
+   .. attribute:: SocialSupportQuestionnaire
+      
+
+      From: http://hl7.org/fhir/ValueSet/questionnaire-category in valuesets.xml
+
+
+   .. attribute:: GeneralHealthQuestionnaire
+      
+
+      From: http://hl7.org/fhir/ValueSet/questionnaire-category in valuesets.xml
+
+
+   .. attribute:: ConsumerSatisfactionQuestionnaire
+      
+
+      From: http://hl7.org/fhir/ValueSet/questionnaire-category in valuesets.xml
+
+
+   .. attribute:: AdministrativeForm
+      
+
+      
+
+

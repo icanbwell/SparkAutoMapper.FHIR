@@ -1,0 +1,33 @@
+:mod:`spark_auto_mapper_fhir.extensions.custom.provider_search`
+===============================================================
+
+.. py:module:: spark_auto_mapper_fhir.extensions.custom.provider_search
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.extensions.custom.provider_search.ProviderSearchExtension
+
+
+
+.. class:: ProviderSearchExtension(forSystem: spark_auto_mapper_fhir.extensions.custom.provider_search_system.ProviderSearchSystemExtensionItem, searchCharacteristic: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.custom.provider_search_characteristic.SearchCharacteristicExtensionItem]] = None, availabilityScore: Optional[spark_auto_mapper_fhir.extensions.custom.provider_search_availability_score.AvailabilityScoreExtensionItem] = None, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase`
+
+   DO NOT USE DIRECTLY!  ALWAYS USE A SUB_CLASS.
+
+   .. method:: codeset(cls) -> spark_auto_mapper_fhir.fhir_types.uri.FhirUri
+
+      https://raw.githubusercontent.com/imranq2/SparkAutoMapper.FHIR/main/StructureDefinition/provider_search
+      :return:
+      :rtype:
+
+
+

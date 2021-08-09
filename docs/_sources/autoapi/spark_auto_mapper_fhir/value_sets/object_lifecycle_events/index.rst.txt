@@ -1,0 +1,41 @@
+:mod:`spark_auto_mapper_fhir.value_sets.object_lifecycle_events`
+================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.object_lifecycle_events
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.object_lifecycle_events.ObjectLifecycleEventsCode
+
+
+
+.. class:: ObjectLifecycleEventsCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ObjectLifecycleEvents
+   From: http://hl7.org/fhir/ValueSet/object-lifecycle-events in valuesets.xml
+       This example FHIR value set is comprised of lifecycle event codes. The FHIR
+   Actor value set is based on    DICOM Audit Message,
+   ParticipantObjectDataLifeCycle;   ISO Standard, TS 21089-2017;
+
+   .. attribute:: codeset_dicom_audit_lifecycle
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle
+
+      http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle
+
+
+   .. attribute:: codeset_iso_21089_lifecycle
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle
+
+      
+
+

@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.test_script_destination`
+=======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.test_script_destination
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.test_script_destination.TestScriptDestination
+
+
+
+.. class:: TestScriptDestination(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, index: spark_auto_mapper_fhir.fhir_types.integer.FhirInteger, profile: spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.test_script_profile_destination_type.TestScriptProfileDestinationTypeCode])
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   TestScript.Destination
+   A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
+
+

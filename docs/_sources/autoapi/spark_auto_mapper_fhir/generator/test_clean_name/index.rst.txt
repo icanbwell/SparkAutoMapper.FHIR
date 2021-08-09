@@ -1,0 +1,21 @@
+:mod:`spark_auto_mapper_fhir.generator.test_clean_name`
+=======================================================
+
+.. py:module:: spark_auto_mapper_fhir.generator.test_clean_name
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.generator.test_clean_name.test_clean_name
+
+
+.. function:: test_clean_name() -> None
+
+

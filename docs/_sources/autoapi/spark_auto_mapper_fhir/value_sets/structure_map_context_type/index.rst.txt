@@ -1,0 +1,52 @@
+:mod:`spark_auto_mapper_fhir.value_sets.structure_map_context_type`
+===================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.structure_map_context_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.structure_map_context_type.StructureMapContextTypeCode
+   spark_auto_mapper_fhir.value_sets.structure_map_context_type.StructureMapContextTypeCodeValues
+
+
+
+.. class:: StructureMapContextTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   StructureMapContextType
+   From: http://hl7.org/fhir/map-context-type in valuesets.xml
+       How to interpret the context.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/map-context-type
+
+      
+
+
+.. class:: StructureMapContextTypeCodeValues
+
+   The context specifies a type.
+   From: http://hl7.org/fhir/map-context-type in valuesets.xml
+
+   .. attribute:: Type
+      
+
+      The context specifies a variable.
+      From: http://hl7.org/fhir/map-context-type in valuesets.xml
+
+
+   .. attribute:: Variable
+      
+
+      
+
+

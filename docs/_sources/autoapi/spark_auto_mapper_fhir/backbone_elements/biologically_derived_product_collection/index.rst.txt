@@ -1,0 +1,28 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.biologically_derived_product_collection`
+=======================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.biologically_derived_product_collection
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.biologically_derived_product_collection.BiologicallyDerivedProductCollection
+
+
+
+.. class:: BiologicallyDerivedProductCollection(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, collector: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole)]]] = None, source: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.organization.Organization)]]] = None, collectedDateTime: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, collectedPeriod: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   BiologicallyDerivedProduct.Collection
+           A material substance originating from a biological entity intended to be transplanted or infused
+   into another (possibly the same) biological entity.
+
+

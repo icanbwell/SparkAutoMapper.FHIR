@@ -1,0 +1,50 @@
+:mod:`spark_auto_mapper_fhir.value_sets.yes_or__no_or__don_t_know`
+==================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.yes_or__no_or__don_t_know
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.yes_or__no_or__don_t_know.Yes_or_No_or_Don_tKnowCode
+   spark_auto_mapper_fhir.value_sets.yes_or__no_or__don_t_know.Yes_or_No_or_Don_tKnowCodeValues
+
+
+
+.. class:: Yes_or_No_or_Don_tKnowCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   Yes/No/Don't Know
+   From: http://hl7.org/fhir/ValueSet/yesnodontknow in valuesets.xml
+       For Capturing simple yes-no-don't know answers
+
+   .. attribute:: codeset_data_absent_reason
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/data-absent-reason
+
+      http://terminology.hl7.org/ValueSet/v2-0136
+
+
+   .. attribute:: codeset_v2_0136
+      :annotation: :FhirUri = http://terminology.hl7.org/ValueSet/v2-0136
+
+      
+
+
+.. class:: Yes_or_No_or_Don_tKnowCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/yesnodontknow in valuesets.xml
+
+   .. attribute:: Don_tKnow
+      
+
+      
+
+

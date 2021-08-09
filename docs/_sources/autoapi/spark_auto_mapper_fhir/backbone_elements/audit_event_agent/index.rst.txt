@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.audit_event_agent`
+=================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.audit_event_agent
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.audit_event_agent.AuditEventAgent
+
+
+
+.. class:: AuditEventAgent(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, type_: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.participation_role_type.ParticipationRoleTypeCode]] = None, role: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.security_role_type.SecurityRoleTypeCode]]] = None, who: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole, spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.organization.Organization, spark_auto_mapper_fhir.resources.device.Device, spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.related_person.RelatedPerson)]]] = None, altId: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, name: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, requestor: spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean, location: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.location.Location]] = None, policy: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.uri.FhirUri]] = None, media: Optional[spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.media_type_code.MediaTypeCodeCode]] = None, network: Optional[spark_auto_mapper_fhir.backbone_elements.audit_event_network.AuditEventNetwork] = None, purposeOfUse: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.purpose_of_use.PurposeOfUse]]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   AuditEvent.Agent
+   A record of an event made for purposes of maintaining a security log. Typical uses include detection of intrusion attempts and monitoring for inappropriate usage.
+
+

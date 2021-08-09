@@ -1,0 +1,34 @@
+:mod:`spark_auto_mapper_fhir.value_sets.v2_0290`
+================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.v2_0290
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.v2_0290.V2_0290
+
+
+
+.. class:: V2_0290(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v2.0290
+   From: http://terminology.hl7.org/ValueSet/v2-0290 in v2-tables.xml
+       FHIR Value set/code system definition for HL7 v2 table 0290 ( MIME base64
+   encoding Characters)
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/ValueSet/v2-0290
+
+      
+
+

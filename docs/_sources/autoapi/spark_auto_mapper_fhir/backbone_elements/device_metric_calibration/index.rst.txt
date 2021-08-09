@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.device_metric_calibration`
+=========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.device_metric_calibration
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.device_metric_calibration.DeviceMetricCalibration
+
+
+
+.. class:: DeviceMetricCalibration(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, type_: Optional[spark_auto_mapper_fhir.value_sets.device_metric_calibration_type.DeviceMetricCalibrationTypeCode] = None, state: Optional[spark_auto_mapper_fhir.value_sets.device_metric_calibration_state.DeviceMetricCalibrationStateCode] = None, time: Optional[spark_auto_mapper_fhir.fhir_types.instant.FhirInstant] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   DeviceMetric.Calibration
+   Describes a measurement, calculation or setting capability of a medical device.
+
+

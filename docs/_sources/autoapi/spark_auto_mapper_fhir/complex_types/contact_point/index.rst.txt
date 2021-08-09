@@ -1,0 +1,32 @@
+:mod:`spark_auto_mapper_fhir.complex_types.contact_point`
+=========================================================
+
+.. py:module:: spark_auto_mapper_fhir.complex_types.contact_point
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.complex_types.contact_point.ContactPoint
+
+
+
+.. class:: ContactPoint(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, system: Optional[spark_auto_mapper_fhir.value_sets.contact_point_system.ContactPointSystemCode] = None, value: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, use: Optional[spark_auto_mapper_fhir.value_sets.contact_point_use.ContactPointUseCode] = None, rank: Optional[spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt] = None, period: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
+
+   ContactPoint
+   fhir-base.xsd
+       Details for all kinds of technology mediated contact points for a person or organization, including telephone, email, etc.
+       If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

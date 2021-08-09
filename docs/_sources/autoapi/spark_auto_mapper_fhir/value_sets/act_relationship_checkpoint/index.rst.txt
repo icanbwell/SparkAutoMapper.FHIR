@@ -1,0 +1,79 @@
+:mod:`spark_auto_mapper_fhir.value_sets.act_relationship_checkpoint`
+====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.act_relationship_checkpoint
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.act_relationship_checkpoint.ActRelationshipCheckpoint
+   spark_auto_mapper_fhir.value_sets.act_relationship_checkpoint.ActRelationshipCheckpointValues
+
+
+
+.. class:: ActRelationshipCheckpoint(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.ActRelationshipCheckpoint
+   From: http://terminology.hl7.org/ValueSet/v3-ActRelationshipCheckpoint in v3-codesystems.xml
+       **** MISSING DEFINITIONS ****
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ActRelationshipCheckpoint
+
+      
+
+
+.. class:: ActRelationshipCheckpointValues
+
+   Condition is tested every time before execution of the service (WHILE
+   condition DO service).
+   From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipCheckpoint in v3-codesystems.xml
+
+   .. attribute:: Beginning
+      
+
+      Condition is tested at the end of a repeated service execution.  The service
+      is repeated only if the condition is true (DO service WHILE condition).
+      From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipCheckpoint in v3-codesystems.xml
+
+
+   .. attribute:: End
+      
+
+      Condition is tested once before the service is executed (IF condition THEN
+      service).
+      From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipCheckpoint in v3-codesystems.xml
+
+
+   .. attribute:: Entry
+      
+
+      Condition must be true throughout the execution and the service is interrupted
+      (asynchronously) as soon as the condition turns false (asynchronous WHILE
+      loop).  The service must be interruptible.
+      From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipCheckpoint in v3-codesystems.xml
+
+
+   .. attribute:: Through
+      
+
+      Condition is a loop checkpoint, i.e. it is a step of an activity plan and, if
+      negative causes the containing loop to exit.
+      From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipCheckpoint in v3-codesystems.xml
+
+
+   .. attribute:: Exit
+      
+
+      
+
+

@@ -1,0 +1,68 @@
+:mod:`spark_auto_mapper_fhir.value_sets.family_history_status`
+==============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.family_history_status
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.family_history_status.FamilyHistoryStatusCode
+   spark_auto_mapper_fhir.value_sets.family_history_status.FamilyHistoryStatusCodeValues
+
+
+
+.. class:: FamilyHistoryStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   FamilyHistoryStatus
+   From: http://hl7.org/fhir/history-status in valuesets.xml
+       A code that identifies the status of the family history record.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/history-status
+
+      
+
+
+.. class:: FamilyHistoryStatusCodeValues
+
+   Some health information is known and captured, but not complete - see notes
+   for details.
+   From: http://hl7.org/fhir/history-status in valuesets.xml
+
+   .. attribute:: Partial
+      
+
+      All available related health information is captured as of the date (and
+      possibly time) when the family member history was taken.
+      From: http://hl7.org/fhir/history-status in valuesets.xml
+
+
+   .. attribute:: Completed
+      
+
+      This instance should not have been part of this patient's medical record.
+      From: http://hl7.org/fhir/history-status in valuesets.xml
+
+
+   .. attribute:: EnteredInError
+      
+
+      Health information for this family member is unavailable/unknown.
+      From: http://hl7.org/fhir/history-status in valuesets.xml
+
+
+   .. attribute:: HealthUnknown
+      
+
+      
+
+

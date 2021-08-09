@@ -1,0 +1,95 @@
+:mod:`spark_auto_mapper_fhir.value_sets.adverse_event_causality_assessment`
+===========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.adverse_event_causality_assessment
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.adverse_event_causality_assessment.AdverseEventCausalityAssessmentCode
+   spark_auto_mapper_fhir.value_sets.adverse_event_causality_assessment.AdverseEventCausalityAssessmentCodeValues
+
+
+
+.. class:: AdverseEventCausalityAssessmentCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   AdverseEventCausalityAssessment
+   From: http://terminology.hl7.org/CodeSystem/adverse-event-causality-assess in valuesets.xml
+       Codes for the assessment of whether the entity caused the event.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/adverse-event-causality-assess
+
+      
+
+
+.. class:: AdverseEventCausalityAssessmentCodeValues
+
+   i) Event or laboratory test abnormality, with plausible time relationship to
+   drug intake; ii) Cannot be explained by disease or other drugs; iii) Response
+   to withdrawal plausible (pharmacologically, pathologically); iv) Event
+   definitive pharmacologically or phenomenologically (i.e. an objective and
+   specific medical disorder or a recognized pharmacological phenomenon); or v)
+   Re-challenge satisfactory, if necessary.
+   From: http://terminology.hl7.org/CodeSystem/adverse-event-causality-assess in valuesets.xml
+
+   .. attribute:: Certain
+      
+
+      i) Event or laboratory test abnormality, with reasonable time relationship to
+      drug intake; ii) Unlikely to be attributed to disease or other drugs; iii)
+      Response to withdrawal clinically reasonable; or iv) Re-challenge not
+      required.
+      From: http://terminology.hl7.org/CodeSystem/adverse-event-causality-assess in valuesets.xml
+
+
+   .. attribute:: Probably_Likely
+      
+
+      i) Event or laboratory test abnormality, with reasonable time relationship to
+      drug intake; ii) Could also be explained by disease or other drugs; or iii)
+      Information on drug withdrawal may be lacking or unclear.
+      From: http://terminology.hl7.org/CodeSystem/adverse-event-causality-assess in valuesets.xml
+
+
+   .. attribute:: Possible
+      
+
+      i) Event or laboratory test abnormality, with a time to drug intake that makes
+      a relationship improbable (but not impossible); or ii) Disease or other drugs
+      provide plausible explanations.
+      From: http://terminology.hl7.org/CodeSystem/adverse-event-causality-assess in valuesets.xml
+
+
+   .. attribute:: Unlikely
+      
+
+      i) Event or laboratory test abnormality; ii) More data for proper assessment
+      needed; or iii) Additional data under examination.
+      From: http://terminology.hl7.org/CodeSystem/adverse-event-causality-assess in valuesets.xml
+
+
+   .. attribute:: Conditional_Classified
+      
+
+      i) Report suggesting an adverse reaction; ii) Cannot be judged because
+      information is insufficient or contradictory; or iii) Data cannot be
+      supplemented or verified.
+      From: http://terminology.hl7.org/CodeSystem/adverse-event-causality-assess in valuesets.xml
+
+
+   .. attribute:: Unassessable_Unclassifiable
+      
+
+      
+
+

@@ -1,0 +1,60 @@
+:mod:`spark_auto_mapper_fhir.value_sets.acme_chol_codes_blood`
+==============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.acme_chol_codes_blood
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.acme_chol_codes_blood.ACMECholCodesBloodCode
+   spark_auto_mapper_fhir.value_sets.acme_chol_codes_blood.ACMECholCodesBloodCodeValues
+
+
+
+.. class:: ACMECholCodesBloodCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ACMECholCodesBlood
+   From: http://hl7.org/fhir/CodeSystem/example in valuesets.xml
+       This is an example code system that includes all the ACME codes for
+   serum/plasma cholesterol from v2.36.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/CodeSystem/example
+
+      
+
+
+.. class:: ACMECholCodesBloodCodeValues
+
+   Serum Cholesterol, in mmol/L
+   From: http://hl7.org/fhir/CodeSystem/example in valuesets.xml
+
+   .. attribute:: SChol_mmol_L_
+      
+
+      Serum Cholesterol, in mg/L
+      From: http://hl7.org/fhir/CodeSystem/example in valuesets.xml
+
+
+   .. attribute:: SChol_mg_L_
+      
+
+      Serum Cholesterol
+      From: http://hl7.org/fhir/CodeSystem/example in valuesets.xml
+
+
+   .. attribute:: SChol
+      
+
+      
+
+

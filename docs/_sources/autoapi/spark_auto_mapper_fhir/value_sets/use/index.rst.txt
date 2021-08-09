@@ -1,0 +1,61 @@
+:mod:`spark_auto_mapper_fhir.value_sets.use`
+============================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.use
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.use.UseCode
+   spark_auto_mapper_fhir.value_sets.use.UseCodeValues
+
+
+
+.. class:: UseCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   Use
+   From: http://hl7.org/fhir/claim-use in valuesets.xml
+       The purpose of the Claim: predetermination, preauthorization, claim.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/claim-use
+
+      
+
+
+.. class:: UseCodeValues
+
+   The treatment is complete and this represents a Claim for the services.
+   From: http://hl7.org/fhir/claim-use in valuesets.xml
+
+   .. attribute:: Claim
+      
+
+      The treatment is proposed and this represents a Pre-authorization for the
+      services.
+      From: http://hl7.org/fhir/claim-use in valuesets.xml
+
+
+   .. attribute:: Preauthorization
+      
+
+      The treatment is proposed and this represents a Pre-determination for the
+      services.
+      From: http://hl7.org/fhir/claim-use in valuesets.xml
+
+
+   .. attribute:: Predetermination
+      
+
+      
+
+

@@ -1,0 +1,129 @@
+:mod:`spark_auto_mapper_fhir.value_sets.dicom_audit_message_record_lifecycle_events`
+====================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.dicom_audit_message_record_lifecycle_events
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.dicom_audit_message_record_lifecycle_events.DICOMAuditMessageRecordLifecycleEventsCode
+   spark_auto_mapper_fhir.value_sets.dicom_audit_message_record_lifecycle_events.DICOMAuditMessageRecordLifecycleEventsCodeValues
+
+
+
+.. class:: DICOMAuditMessageRecordLifecycleEventsCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   DICOM Audit Message Record Lifecycle Events
+   From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
+       Attached is vocabulary for the record lifecycle events, as per DICOM Audit
+   Message,
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle
+
+      
+
+
+.. class:: DICOMAuditMessageRecordLifecycleEventsCodeValues
+
+   From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
+
+   .. attribute:: Origination_Creation
+      
+
+      From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
+
+
+   .. attribute:: Import_Copy
+      
+
+      From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
+
+
+   .. attribute:: Amendment
+      
+
+      From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
+
+
+   .. attribute:: Verification
+      
+
+      From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
+
+
+   .. attribute:: Translation
+      
+
+      From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
+
+
+   .. attribute:: Access_Use
+      
+
+      From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
+
+
+   .. attribute:: De_identification
+      
+
+      From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
+
+
+   .. attribute:: Aggregation_Summarization_Derivation
+      
+
+      From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
+
+
+   .. attribute:: Report
+      
+
+      From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
+
+
+   .. attribute:: Export
+      
+
+      From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
+
+
+   .. attribute:: Disclosure
+      
+
+      From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
+
+
+   .. attribute:: ReceiptOfDisclosure
+      
+
+      From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
+
+
+   .. attribute:: Archiving
+      
+
+      From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
+
+
+   .. attribute:: LogicalDeletion
+      
+
+      From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
+
+
+   .. attribute:: PermanentErasure_PhysicalDestruction
+      
+
+      
+
+

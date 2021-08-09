@@ -1,0 +1,52 @@
+:mod:`spark_auto_mapper_fhir.value_sets.structure_map_input_mode`
+=================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.structure_map_input_mode
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.structure_map_input_mode.StructureMapInputModeCode
+   spark_auto_mapper_fhir.value_sets.structure_map_input_mode.StructureMapInputModeCodeValues
+
+
+
+.. class:: StructureMapInputModeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   StructureMapInputMode
+   From: http://hl7.org/fhir/map-input-mode in valuesets.xml
+       Mode for this instance of data.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/map-input-mode
+
+      
+
+
+.. class:: StructureMapInputModeCodeValues
+
+   Names an input instance used a source for mapping.
+   From: http://hl7.org/fhir/map-input-mode in valuesets.xml
+
+   .. attribute:: SourceInstance
+      
+
+      Names an instance that is being populated.
+      From: http://hl7.org/fhir/map-input-mode in valuesets.xml
+
+
+   .. attribute:: TargetInstance
+      
+
+      
+
+

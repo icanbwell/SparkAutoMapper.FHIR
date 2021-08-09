@@ -1,0 +1,33 @@
+:mod:`spark_auto_mapper_fhir.resources.allergy_intolerance`
+===========================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.allergy_intolerance
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.allergy_intolerance.AllergyIntolerance
+
+
+
+.. class:: AllergyIntolerance(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.identifier.Identifier]] = None, clinicalStatus: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.allergy_intolerance_clinical_status_codes.AllergyIntoleranceClinicalStatusCodesCode]] = None, verificationStatus: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.allergy_intolerance_verification_status_codes.AllergyIntoleranceVerificationStatusCodesCode]] = None, type_: Optional[spark_auto_mapper_fhir.value_sets.allergy_intolerance_type.AllergyIntoleranceTypeCode] = None, category: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.value_sets.allergy_intolerance_category.AllergyIntoleranceCategoryCode]] = None, criticality: Optional[spark_auto_mapper_fhir.value_sets.allergy_intolerance_criticality.AllergyIntoleranceCriticalityCode] = None, code: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.allergy_intolerance_substance_or__product__condition_and_negation_codes.AllergyIntoleranceSubstance_or_Product_ConditionAndNegationCodesCode]] = None, patient: spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.patient.Patient], encounter: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.encounter.Encounter]] = None, onsetDateTime: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, onsetAge: Optional[spark_auto_mapper_fhir.complex_types.age.Age] = None, onsetPeriod: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, onsetRange: Optional[spark_auto_mapper_fhir.complex_types.range.Range] = None, onsetString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, recordedDate: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, recorder: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole, spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.related_person.RelatedPerson)]]] = None, asserter: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.related_person.RelatedPerson, spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole)]]] = None, lastOccurrence: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, note: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.annotation.Annotation]] = None, reaction: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.allergy_intolerance_reaction.AllergyIntoleranceReaction]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   AllergyIntolerance
+   allergyintolerance.xsd
+       Risk of harmful or undesirable, physiological response which is unique to an
+   individual and associated with exposure to a substance.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

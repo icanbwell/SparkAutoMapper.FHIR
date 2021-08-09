@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.claim_response_sub_detail`
+=========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.claim_response_sub_detail
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.claim_response_sub_detail.ClaimResponseSubDetail
+
+
+
+.. class:: ClaimResponseSubDetail(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, subDetailSequence: spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt, noteNumber: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt]] = None, adjudication: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.claim_response_adjudication.ClaimResponseAdjudication]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   ClaimResponse.SubDetail
+   This resource provides the adjudication details from the processing of a Claim resource.
+
+

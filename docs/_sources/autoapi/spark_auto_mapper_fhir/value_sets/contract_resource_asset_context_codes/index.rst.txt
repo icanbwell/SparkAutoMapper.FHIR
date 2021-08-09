@@ -1,0 +1,45 @@
+:mod:`spark_auto_mapper_fhir.value_sets.contract_resource_asset_context_codes`
+==============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.contract_resource_asset_context_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.contract_resource_asset_context_codes.ContractResourceAssetContextCodesCode
+   spark_auto_mapper_fhir.value_sets.contract_resource_asset_context_codes.ContractResourceAssetContextCodesCodeValues
+
+
+
+.. class:: ContractResourceAssetContextCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ContractResourceAssetContextCodes
+   From: http://hl7.org/fhir/contract-asset-context in valuesets.xml
+       This value set contract specific codes for asset context.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/contract-asset-context
+
+      
+
+
+.. class:: ContractResourceAssetContextCodesCodeValues
+
+   To be completed
+   From: http://hl7.org/fhir/contract-asset-context in valuesets.xml
+
+   .. attribute:: Custodian
+      
+
+      
+
+

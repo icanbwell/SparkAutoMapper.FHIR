@@ -1,0 +1,72 @@
+:mod:`spark_auto_mapper_fhir.value_sets.medication_dispense_category_codes`
+===========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.medication_dispense_category_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.medication_dispense_category_codes.MedicationDispenseCategoryCodesCode
+   spark_auto_mapper_fhir.value_sets.medication_dispense_category_codes.MedicationDispenseCategoryCodesCodeValues
+
+
+
+.. class:: MedicationDispenseCategoryCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   MedicationDispense Category Codes
+   From: http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category in valuesets.xml
+       MedicationDispense Category Codes
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category
+
+      
+
+
+.. class:: MedicationDispenseCategoryCodesCodeValues
+
+   Includes dispenses for medications to be administered or consumed in an
+   inpatient or acute care setting.
+   From: http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category in valuesets.xml
+
+   .. attribute:: Inpatient
+      
+
+      Includes dispenses for medications to be administered or consumed in an
+      outpatient setting (for example, Emergency Department, Outpatient Clinic,
+      Outpatient Surgery, Doctor's office).
+      From: http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category in valuesets.xml
+
+
+   .. attribute:: Outpatient
+      
+
+      Includes dispenses for medications to be administered or consumed by the
+      patient in their home (this would include long term care or nursing homes,
+      hospices, etc.).
+      From: http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category in valuesets.xml
+
+
+   .. attribute:: Community
+      
+
+      Includes dispenses for medications created when the patient is being released
+      from a facility.
+      From: http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category in valuesets.xml
+
+
+   .. attribute:: Discharge
+      
+
+      
+
+

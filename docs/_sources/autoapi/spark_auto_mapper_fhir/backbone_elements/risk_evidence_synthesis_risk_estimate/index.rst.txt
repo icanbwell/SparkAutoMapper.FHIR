@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.risk_evidence_synthesis_risk_estimate`
+=====================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.risk_evidence_synthesis_risk_estimate
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.risk_evidence_synthesis_risk_estimate.RiskEvidenceSynthesisRiskEstimate
+
+
+
+.. class:: RiskEvidenceSynthesisRiskEstimate(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, description: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, type_: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.risk_estimate_type.RiskEstimateTypeCode]] = None, value: Optional[spark_auto_mapper_fhir.fhir_types.decimal.FhirDecimal] = None, unitOfMeasure: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.ucum_codes.UCUMCodesCode]] = None, denominatorCount: Optional[spark_auto_mapper_fhir.fhir_types.integer.FhirInteger] = None, numeratorCount: Optional[spark_auto_mapper_fhir.fhir_types.integer.FhirInteger] = None, precisionEstimate: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.risk_evidence_synthesis_precision_estimate.RiskEvidenceSynthesisPrecisionEstimate]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   RiskEvidenceSynthesis.RiskEstimate
+   The RiskEvidenceSynthesis resource describes the likelihood of an outcome in a population plus exposure state where the risk estimate is derived from a combination of research studies.
+
+

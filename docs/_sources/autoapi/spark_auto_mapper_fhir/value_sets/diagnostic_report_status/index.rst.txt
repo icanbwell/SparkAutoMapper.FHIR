@@ -1,0 +1,97 @@
+:mod:`spark_auto_mapper_fhir.value_sets.diagnostic_report_status`
+=================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.diagnostic_report_status
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.diagnostic_report_status.DiagnosticReportStatusCode
+   spark_auto_mapper_fhir.value_sets.diagnostic_report_status.DiagnosticReportStatusCodeValues
+
+
+
+.. class:: DiagnosticReportStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   DiagnosticReportStatus
+   From: http://hl7.org/fhir/diagnostic-report-status in valuesets.xml
+       The status of the diagnostic report.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/diagnostic-report-status
+
+      
+
+
+.. class:: DiagnosticReportStatusCodeValues
+
+   The existence of the report is registered, but there is nothing yet available.
+   From: http://hl7.org/fhir/diagnostic-report-status in valuesets.xml
+
+   .. attribute:: Registered
+      
+
+      This is a partial (e.g. initial, interim or preliminary) report: data in the
+      report may be incomplete or unverified.
+      From: http://hl7.org/fhir/diagnostic-report-status in valuesets.xml
+
+
+   .. attribute:: Partial
+      
+
+      The report is complete and verified by an authorized person.
+      From: http://hl7.org/fhir/diagnostic-report-status in valuesets.xml
+
+
+   .. attribute:: Final
+      
+
+      Subsequent to being final, the report has been modified.  This includes any
+      change in the results, diagnosis, narrative text, or other content of a report
+      that has been issued.
+      From: http://hl7.org/fhir/diagnostic-report-status in valuesets.xml
+
+
+   .. attribute:: Amended
+      
+
+      The report is unavailable because the measurement was not started or not
+      completed (also sometimes called "aborted").
+      From: http://hl7.org/fhir/diagnostic-report-status in valuesets.xml
+
+
+   .. attribute:: Cancelled
+      
+
+      The report has been withdrawn following a previous final release.  This
+      electronic record should never have existed, though it is possible that real-
+      world decisions were based on it. (If real-world activity has occurred, the
+      status should be "cancelled" rather than "entered-in-error".).
+      From: http://hl7.org/fhir/diagnostic-report-status in valuesets.xml
+
+
+   .. attribute:: EnteredInError
+      
+
+      The authoring/source system does not know which of the status values currently
+      applies for this observation. Note: This concept is not to be used for "other"
+      - one of the listed statuses is presumed to apply, but the authoring/source
+      system does not know which.
+      From: http://hl7.org/fhir/diagnostic-report-status in valuesets.xml
+
+
+   .. attribute:: Unknown
+      
+
+      
+
+

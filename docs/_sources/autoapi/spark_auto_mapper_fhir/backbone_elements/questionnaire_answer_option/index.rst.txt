@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.questionnaire_answer_option`
+===========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.questionnaire_answer_option
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.questionnaire_answer_option.QuestionnaireAnswerOption
+
+
+
+.. class:: QuestionnaireAnswerOption(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, valueInteger: Optional[spark_auto_mapper_fhir.fhir_types.integer.FhirInteger] = None, valueDate: Optional[spark_auto_mapper_fhir.fhir_types.date.FhirDate] = None, valueTime: Optional[spark_auto_mapper_fhir.fhir_types.time.FhirTime] = None, valueString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, valueCoding: Optional[spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, valueReference: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.resource.Resource]] = None, initialSelected: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   Questionnaire.AnswerOption
+   A structured set of questions intended to guide the collection of answers from end-users. Questionnaires provide detailed control over order, presentation, phraseology and grouping to allow coherent, consistent data collection.
+
+

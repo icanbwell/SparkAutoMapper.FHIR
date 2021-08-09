@@ -1,0 +1,67 @@
+:mod:`spark_auto_mapper_fhir.value_sets.medication_dispense_performer_function_codes`
+=====================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.medication_dispense_performer_function_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.medication_dispense_performer_function_codes.MedicationDispensePerformerFunctionCodesCode
+   spark_auto_mapper_fhir.value_sets.medication_dispense_performer_function_codes.MedicationDispensePerformerFunctionCodesCodeValues
+
+
+
+.. class:: MedicationDispensePerformerFunctionCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   MedicationDispense Performer Function Codes
+   From: http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function in valuesets.xml
+       MedicationDispense Performer Function Codes
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function
+
+      
+
+
+.. class:: MedicationDispensePerformerFunctionCodesCodeValues
+
+   Recorded the details of the request
+   From: http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function in valuesets.xml
+
+   .. attribute:: DataEnterer
+      
+
+      Prepared the medication.
+      From: http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function in valuesets.xml
+
+
+   .. attribute:: Packager
+      
+
+      Performed initial quality assurance on the prepared medication
+      From: http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function in valuesets.xml
+
+
+   .. attribute:: Checker
+      
+
+      Performed the final quality assurance on the prepared medication against the
+      request. Typically, this is a pharmacist function.
+      From: http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function in valuesets.xml
+
+
+   .. attribute:: FinalChecker
+      
+
+      
+
+

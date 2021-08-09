@@ -1,0 +1,33 @@
+:mod:`spark_auto_mapper_fhir.value_sets.condition_cause_codes`
+==============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.condition_cause_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.condition_cause_codes.ConditionCauseCodesCode
+
+
+
+.. class:: ConditionCauseCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ConditionCauseCodes
+   From: http://hl7.org/fhir/ValueSet/condition-cause in valuesets.xml
+       Example value set for Cause of Condition codes
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+

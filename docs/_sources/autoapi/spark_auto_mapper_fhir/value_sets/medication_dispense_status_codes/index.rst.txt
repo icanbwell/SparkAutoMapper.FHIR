@@ -1,0 +1,108 @@
+:mod:`spark_auto_mapper_fhir.value_sets.medication_dispense_status_codes`
+=========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.medication_dispense_status_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.medication_dispense_status_codes.MedicationDispenseStatusCodesCode
+   spark_auto_mapper_fhir.value_sets.medication_dispense_status_codes.MedicationDispenseStatusCodesCodeValues
+
+
+
+.. class:: MedicationDispenseStatusCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   MedicationDispense Status Codes
+   From: http://terminology.hl7.org/CodeSystem/medicationdispense-status in valuesets.xml
+       MedicationDispense Status Codes
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/medicationdispense-status
+
+      
+
+
+.. class:: MedicationDispenseStatusCodesCodeValues
+
+   The core event has not started yet, but some staging activities have begun
+   (e.g. initial compounding or packaging of medication). Preparation stages may
+   be tracked for billing purposes.
+   From: http://terminology.hl7.org/CodeSystem/medicationdispense-status in valuesets.xml
+
+   .. attribute:: Preparation
+      
+
+      The dispensed product is ready for pickup.
+      From: http://terminology.hl7.org/CodeSystem/medicationdispense-status in valuesets.xml
+
+
+   .. attribute:: InProgress
+      
+
+      The dispensed product was not and will never be picked up by the patient.
+      From: http://terminology.hl7.org/CodeSystem/medicationdispense-status in valuesets.xml
+
+
+   .. attribute:: Cancelled
+      
+
+      The dispense process is paused while waiting for an external event to
+      reactivate the dispense.  For example, new stock has arrived or the prescriber
+      has called.
+      From: http://terminology.hl7.org/CodeSystem/medicationdispense-status in valuesets.xml
+
+
+   .. attribute:: OnHold
+      
+
+      The dispensed product has been picked up.
+      From: http://terminology.hl7.org/CodeSystem/medicationdispense-status in valuesets.xml
+
+
+   .. attribute:: Completed
+      
+
+      The dispense was entered in error and therefore nullified.
+      From: http://terminology.hl7.org/CodeSystem/medicationdispense-status in valuesets.xml
+
+
+   .. attribute:: EnteredInError
+      
+
+      Actions implied by the dispense have been permanently halted, before all of
+      them occurred.
+      From: http://terminology.hl7.org/CodeSystem/medicationdispense-status in valuesets.xml
+
+
+   .. attribute:: Stopped
+      
+
+      The dispense was declined and not performed.
+      From: http://terminology.hl7.org/CodeSystem/medicationdispense-status in valuesets.xml
+
+
+   .. attribute:: Declined
+      
+
+      The authoring system does not know which of the status values applies for this
+      medication dispense.  Note: this concept is not to be used for other - one of
+      the listed statuses is presumed to apply, it's just now known which one.
+      From: http://terminology.hl7.org/CodeSystem/medicationdispense-status in valuesets.xml
+
+
+   .. attribute:: Unknown
+      
+
+      
+
+

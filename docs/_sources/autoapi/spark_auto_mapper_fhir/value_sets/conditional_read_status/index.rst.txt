@@ -1,0 +1,68 @@
+:mod:`spark_auto_mapper_fhir.value_sets.conditional_read_status`
+================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.conditional_read_status
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.conditional_read_status.ConditionalReadStatusCode
+   spark_auto_mapper_fhir.value_sets.conditional_read_status.ConditionalReadStatusCodeValues
+
+
+
+.. class:: ConditionalReadStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ConditionalReadStatus
+   From: http://hl7.org/fhir/conditional-read-status in valuesets.xml
+       A code that indicates how the server supports conditional read.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/conditional-read-status
+
+      
+
+
+.. class:: ConditionalReadStatusCodeValues
+
+   No support for conditional reads.
+   From: http://hl7.org/fhir/conditional-read-status in valuesets.xml
+
+   .. attribute:: NotSupported
+      
+
+      Conditional reads are supported, but only with the If-Modified-Since HTTP
+      Header.
+      From: http://hl7.org/fhir/conditional-read-status in valuesets.xml
+
+
+   .. attribute:: If_Modified_Since
+      
+
+      Conditional reads are supported, but only with the If-None-Match HTTP Header.
+      From: http://hl7.org/fhir/conditional-read-status in valuesets.xml
+
+
+   .. attribute:: If_None_Match
+      
+
+      Conditional reads are supported, with both If-Modified-Since and If-None-Match
+      HTTP Headers.
+      From: http://hl7.org/fhir/conditional-read-status in valuesets.xml
+
+
+   .. attribute:: FullSupport
+      
+
+      
+
+

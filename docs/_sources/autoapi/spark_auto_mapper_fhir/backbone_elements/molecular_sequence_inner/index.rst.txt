@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.molecular_sequence_inner`
+========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.molecular_sequence_inner
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.molecular_sequence_inner.MolecularSequenceInner
+
+
+
+.. class:: MolecularSequenceInner(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, start: Optional[spark_auto_mapper_fhir.fhir_types.integer.FhirInteger] = None, end: Optional[spark_auto_mapper_fhir.fhir_types.integer.FhirInteger] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   MolecularSequence.Inner
+   Raw data describing a biological sequence.
+
+

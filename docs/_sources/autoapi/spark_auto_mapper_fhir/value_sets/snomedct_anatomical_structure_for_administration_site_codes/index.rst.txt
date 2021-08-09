@@ -1,0 +1,34 @@
+:mod:`spark_auto_mapper_fhir.value_sets.snomedct_anatomical_structure_for_administration_site_codes`
+====================================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.snomedct_anatomical_structure_for_administration_site_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.snomedct_anatomical_structure_for_administration_site_codes.SNOMEDCTAnatomicalStructureForAdministrationSiteCodesCode
+
+
+
+.. class:: SNOMEDCTAnatomicalStructureForAdministrationSiteCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   SNOMEDCTAnatomicalStructureForAdministrationSiteCodes
+   From: http://hl7.org/fhir/ValueSet/approach-site-codes in valuesets.xml
+       This value set includes Anatomical Structure codes from SNOMED CT - provided
+   as an exemplar.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+

@@ -1,0 +1,60 @@
+:mod:`spark_auto_mapper_fhir.value_sets.calendar_cycle`
+=======================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.calendar_cycle
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.calendar_cycle.CalendarCycle
+   spark_auto_mapper_fhir.value_sets.calendar_cycle.CalendarCycleValues
+
+
+
+.. class:: CalendarCycle(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.CalendarCycle
+   From: http://terminology.hl7.org/ValueSet/v3-CalendarCycle in v3-codesystems.xml
+        Calendar cycle identifiers
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-CalendarCycle
+
+      
+
+
+.. class:: CalendarCycleValues
+
+   CalendarCycleOneLetter
+   From: http://terminology.hl7.org/CodeSystem/v3-CalendarCycle in v3-codesystems.xml
+
+   .. attribute:: CalendarCycleOneLetter
+      
+
+      CalendarCycleTwoLetter
+      From: http://terminology.hl7.org/CodeSystem/v3-CalendarCycle in v3-codesystems.xml
+
+
+   .. attribute:: CalendarCycleTwoLetter
+      
+
+      The week with the month's first Thursday in it (analagous to the ISO 8601
+      definition for week of the year).
+      From: http://terminology.hl7.org/CodeSystem/v3-CalendarCycle in v3-codesystems.xml
+
+
+   .. attribute:: WeekOfTheMonth
+      
+
+      
+
+

@@ -1,0 +1,28 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.substance_amount`
+================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.substance_amount
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.substance_amount.SubstanceAmount
+
+
+
+.. class:: SubstanceAmount(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, amountQuantity: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, amountRange: Optional[spark_auto_mapper_fhir.complex_types.range.Range] = None, amountString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, amountType: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, amountText: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, referenceRange: Optional[spark_auto_mapper_fhir.backbone_elements.substance_amount_reference_range.SubstanceAmountReferenceRange] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   SubstanceAmount
+   Chemical substances are a single substance type whose primary defining element is the molecular structure. Chemical substances shall be defined on the basis of their complete covalent molecular structure; the presence of a salt (counter-ion) and/or solvates (water, alcohols) is also captured. Purity, grade, physical form or particle size are not taken into account in the definition of a chemical substance or in the assignment of a Substance ID.
+   If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
+
+

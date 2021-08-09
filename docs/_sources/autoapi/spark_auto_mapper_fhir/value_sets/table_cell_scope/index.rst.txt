@@ -1,0 +1,66 @@
+:mod:`spark_auto_mapper_fhir.value_sets.table_cell_scope`
+=========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.table_cell_scope
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.table_cell_scope.TableCellScope
+   spark_auto_mapper_fhir.value_sets.table_cell_scope.TableCellScopeValues
+
+
+
+.. class:: TableCellScope(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.TableCellScope
+   From: http://terminology.hl7.org/ValueSet/v3-TableCellScope in v3-codesystems.xml
+        These values are defined within the XHTML 4.0 Table Model
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-TableCellScope
+
+      
+
+
+.. class:: TableCellScopeValues
+
+   col
+   From: http://terminology.hl7.org/CodeSystem/v3-TableCellScope in v3-codesystems.xml
+
+   .. attribute:: Col
+      
+
+      colgroup
+      From: http://terminology.hl7.org/CodeSystem/v3-TableCellScope in v3-codesystems.xml
+
+
+   .. attribute:: Colgroup
+      
+
+      row
+      From: http://terminology.hl7.org/CodeSystem/v3-TableCellScope in v3-codesystems.xml
+
+
+   .. attribute:: Row
+      
+
+      rowgroup
+      From: http://terminology.hl7.org/CodeSystem/v3-TableCellScope in v3-codesystems.xml
+
+
+   .. attribute:: Rowgroup
+      
+
+      
+
+

@@ -1,0 +1,53 @@
+:mod:`spark_auto_mapper_fhir.value_sets.observation_reference_range_meaning_codes`
+==================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.observation_reference_range_meaning_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.observation_reference_range_meaning_codes.ObservationReferenceRangeMeaningCodesCode
+   spark_auto_mapper_fhir.value_sets.observation_reference_range_meaning_codes.ObservationReferenceRangeMeaningCodesCodeValues
+
+
+
+.. class:: ObservationReferenceRangeMeaningCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ObservationReferenceRangeMeaningCodes
+   From: http://terminology.hl7.org/CodeSystem/referencerange-meaning in valuesets.xml
+       This value set defines a set of codes that can be used to indicate the
+   meaning/use of a reference range for a particular target population.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/referencerange-meaning
+
+      
+
+
+.. class:: ObservationReferenceRangeMeaningCodesCodeValues
+
+   General types of reference range.
+   From: http://terminology.hl7.org/CodeSystem/referencerange-meaning in valuesets.xml
+
+   .. attribute:: Type
+      
+
+      Endocrine related states that change the expected value.
+      From: http://terminology.hl7.org/CodeSystem/referencerange-meaning in valuesets.xml
+
+
+   .. attribute:: Endocrine
+      
+
+      
+
+

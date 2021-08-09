@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.payment_reconciliation_process_note`
+===================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.payment_reconciliation_process_note
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.payment_reconciliation_process_note.PaymentReconciliationProcessNote
+
+
+
+.. class:: PaymentReconciliationProcessNote(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, type_: Optional[spark_auto_mapper_fhir.value_sets.note_type.NoteTypeCode] = None, text: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   PaymentReconciliation.ProcessNote
+   This resource provides the details including amount of a payment and allocates the payment items being paid.
+
+

@@ -1,0 +1,16 @@
+:mod:`us_core`
+==============
+
+.. py:module:: us_core
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   detailed_ethnicity/index.rst
+   omb_ethnicity_category/index.rst
+
+

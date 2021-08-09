@@ -1,0 +1,106 @@
+:mod:`spark_auto_mapper_fhir.value_sets.medicationrequest_status`
+=================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.medicationrequest_status
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.medicationrequest_status.MedicationrequestStatusCode
+   spark_auto_mapper_fhir.value_sets.medicationrequest_status.MedicationrequestStatusCodeValues
+
+
+
+.. class:: MedicationrequestStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   medicationrequest Status
+   From: http://hl7.org/fhir/CodeSystem/medicationrequest-status in valuesets.xml
+       MedicationRequest Status Codes
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/CodeSystem/medicationrequest-status
+
+      
+
+
+.. class:: MedicationrequestStatusCodeValues
+
+   The prescription is 'actionable', but not all actions that are implied by it
+   have occurred yet.
+   From: http://hl7.org/fhir/CodeSystem/medicationrequest-status in valuesets.xml
+
+   .. attribute:: Active
+      
+
+      Actions implied by the prescription are to be temporarily halted, but are
+      expected to continue later.  May also be called 'suspended'.
+      From: http://hl7.org/fhir/CodeSystem/medicationrequest-status in valuesets.xml
+
+
+   .. attribute:: OnHold
+      
+
+      The prescription has been withdrawn before any administrations have occurred
+      From: http://hl7.org/fhir/CodeSystem/medicationrequest-status in valuesets.xml
+
+
+   .. attribute:: Cancelled
+      
+
+      All actions that are implied by the prescription have occurred.
+      From: http://hl7.org/fhir/CodeSystem/medicationrequest-status in valuesets.xml
+
+
+   .. attribute:: Completed
+      
+
+      Some of the actions that are implied by the medication request may have
+      occurred.  For example, the medication may have been dispensed and the patient
+      may have taken some of the medication.  Clinical decision support systems
+      should take this status into account
+      From: http://hl7.org/fhir/CodeSystem/medicationrequest-status in valuesets.xml
+
+
+   .. attribute:: EnteredInError
+      
+
+      Actions implied by the prescription are to be permanently halted, before all
+      of the administrations occurred. This should not be used if the original order
+      was entered in error
+      From: http://hl7.org/fhir/CodeSystem/medicationrequest-status in valuesets.xml
+
+
+   .. attribute:: Stopped
+      
+
+      The prescription is not yet 'actionable', e.g. it is a work in progress,
+      requires sign-off, verification or needs to be run through decision support
+      process.
+      From: http://hl7.org/fhir/CodeSystem/medicationrequest-status in valuesets.xml
+
+
+   .. attribute:: Draft
+      
+
+      The authoring/source system does not know which of the status values currently
+      applies for this observation. Note: This concept is not to be used for 'other'
+      - one of the listed statuses is presumed to apply, but the authoring/source
+      system does not know which.
+      From: http://hl7.org/fhir/CodeSystem/medicationrequest-status in valuesets.xml
+
+
+   .. attribute:: Unknown
+      
+
+      
+
+

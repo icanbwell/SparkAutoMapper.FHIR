@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.value_set_filter`
+================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.value_set_filter
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.value_set_filter.ValueSetFilter
+
+
+
+.. class:: ValueSetFilter(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, property: spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode, op: spark_auto_mapper_fhir.value_sets.filter_operator.FilterOperatorCode, value: spark_auto_mapper_fhir.fhir_types.string.FhirString)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   ValueSet.Filter
+   A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [[[CodeSystem]]] definitions and their use in [coded elements](terminologies.html).
+
+

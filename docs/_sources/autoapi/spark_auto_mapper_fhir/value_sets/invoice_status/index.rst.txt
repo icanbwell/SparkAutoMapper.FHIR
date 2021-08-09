@@ -1,0 +1,73 @@
+:mod:`spark_auto_mapper_fhir.value_sets.invoice_status`
+=======================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.invoice_status
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.invoice_status.InvoiceStatusCode
+   spark_auto_mapper_fhir.value_sets.invoice_status.InvoiceStatusCodeValues
+
+
+
+.. class:: InvoiceStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   InvoiceStatus
+   From: http://hl7.org/fhir/invoice-status in valuesets.xml
+       Codes identifying the lifecycle stage of an Invoice.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/invoice-status
+
+      
+
+
+.. class:: InvoiceStatusCodeValues
+
+   the invoice has been prepared but not yet finalized.
+   From: http://hl7.org/fhir/invoice-status in valuesets.xml
+
+   .. attribute:: Draft
+      
+
+      the invoice has been finalized and sent to the recipient.
+      From: http://hl7.org/fhir/invoice-status in valuesets.xml
+
+
+   .. attribute:: Issued
+      
+
+      the invoice has been balaced / completely paid.
+      From: http://hl7.org/fhir/invoice-status in valuesets.xml
+
+
+   .. attribute:: Balanced
+      
+
+      the invoice was cancelled.
+      From: http://hl7.org/fhir/invoice-status in valuesets.xml
+
+
+   .. attribute:: Cancelled
+      
+
+      the invoice was determined as entered in error before it was issued.
+      From: http://hl7.org/fhir/invoice-status in valuesets.xml
+
+
+   .. attribute:: EnteredInError
+      
+
+      
+
+

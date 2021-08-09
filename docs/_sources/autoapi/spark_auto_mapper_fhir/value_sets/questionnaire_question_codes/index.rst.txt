@@ -1,0 +1,34 @@
+:mod:`spark_auto_mapper_fhir.value_sets.questionnaire_question_codes`
+=====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.questionnaire_question_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.questionnaire_question_codes.QuestionnaireQuestionCodesCode
+
+
+
+.. class:: QuestionnaireQuestionCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   QuestionnaireQuestionCodes
+   From: http://hl7.org/fhir/ValueSet/questionnaire-questions in valuesets.xml
+       Example list of codes for questions and groups of questions. (Not necessarily
+   complete or appropriate.)
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://loinc.org
+
+      
+
+

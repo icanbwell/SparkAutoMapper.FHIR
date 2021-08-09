@@ -1,0 +1,66 @@
+:mod:`spark_auto_mapper_fhir.value_sets.device_metric_calibration_type`
+=======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.device_metric_calibration_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.device_metric_calibration_type.DeviceMetricCalibrationTypeCode
+   spark_auto_mapper_fhir.value_sets.device_metric_calibration_type.DeviceMetricCalibrationTypeCodeValues
+
+
+
+.. class:: DeviceMetricCalibrationTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   DeviceMetricCalibrationType
+   From: http://hl7.org/fhir/metric-calibration-type in valuesets.xml
+       Describes the type of a metric calibration.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/metric-calibration-type
+
+      
+
+
+.. class:: DeviceMetricCalibrationTypeCodeValues
+
+   Metric calibration method has not been identified.
+   From: http://hl7.org/fhir/metric-calibration-type in valuesets.xml
+
+   .. attribute:: Unspecified
+      
+
+      Offset metric calibration method.
+      From: http://hl7.org/fhir/metric-calibration-type in valuesets.xml
+
+
+   .. attribute:: Offset
+      
+
+      Gain metric calibration method.
+      From: http://hl7.org/fhir/metric-calibration-type in valuesets.xml
+
+
+   .. attribute:: Gain
+      
+
+      Two-point metric calibration method.
+      From: http://hl7.org/fhir/metric-calibration-type in valuesets.xml
+
+
+   .. attribute:: TwoPoint
+      
+
+      
+
+

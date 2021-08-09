@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.detected_issue_mitigation`
+=========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.detected_issue_mitigation
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.detected_issue_mitigation.DetectedIssueMitigation
+
+
+
+.. class:: DetectedIssueMitigation(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, action: spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.detected_issue_mitigation_action.DetectedIssueMitigationActionCode], date: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, author: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole)]]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   DetectedIssue.Mitigation
+   Indicates an actual or potential clinical issue with or between one or more active or proposed clinical actions for a patient; e.g. Drug-drug interaction, Ineffective treatment frequency, Procedure-condition conflict, etc.
+
+

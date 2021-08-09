@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.contract_term`
+=============================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.contract_term
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.contract_term.ContractTerm
+
+
+
+.. class:: ContractTerm(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.complex_types.identifier.Identifier] = None, issued: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, applies: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, topicCodeableConcept: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, topicReference: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.resource.Resource]] = None, type_: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.contract_term_type_codes.ContractTermTypeCodesCode]] = None, subType: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.contract_term_subtype_codes.ContractTermSubtypeCodesCode]] = None, text: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, securityLabel: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.contract_security_label.ContractSecurityLabel]] = None, offer: spark_auto_mapper_fhir.backbone_elements.contract_offer.ContractOffer, asset: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.contract_asset.ContractAsset]] = None, action: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.contract_action.ContractAction]] = None, group: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.contract_term.ContractTerm]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   Contract.Term
+   Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
+
+

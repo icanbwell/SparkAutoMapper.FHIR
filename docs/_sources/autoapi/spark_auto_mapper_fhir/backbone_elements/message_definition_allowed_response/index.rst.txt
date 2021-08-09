@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.message_definition_allowed_response`
+===================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.message_definition_allowed_response
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.message_definition_allowed_response.MessageDefinitionAllowedResponse
+
+
+
+.. class:: MessageDefinitionAllowedResponse(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, message: spark_auto_mapper_fhir.fhir_types.canonical.FhirCanonical, situation: Optional[spark_auto_mapper_fhir.fhir_types.markdown.FhirMarkdown] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   MessageDefinition.AllowedResponse
+   Defines the characteristics of a message that can be shared between systems, including the type of event that initiates the message, the content to be transmitted and what response(s), if any, are permitted.
+
+

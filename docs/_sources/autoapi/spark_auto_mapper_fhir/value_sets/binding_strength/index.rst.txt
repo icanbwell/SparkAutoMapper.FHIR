@@ -1,0 +1,75 @@
+:mod:`spark_auto_mapper_fhir.value_sets.binding_strength`
+=========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.binding_strength
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.binding_strength.BindingStrengthCode
+   spark_auto_mapper_fhir.value_sets.binding_strength.BindingStrengthCodeValues
+
+
+
+.. class:: BindingStrengthCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   BindingStrength
+   From: http://hl7.org/fhir/binding-strength in valuesets.xml
+       Indication of the degree of conformance expectations associated with a
+   binding.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/binding-strength
+
+      
+
+
+.. class:: BindingStrengthCodeValues
+
+   To be conformant, the concept in this element SHALL be from the specified
+   value set.
+   From: http://hl7.org/fhir/binding-strength in valuesets.xml
+
+   .. attribute:: Required
+      
+
+      To be conformant, the concept in this element SHALL be from the specified
+      value set if any of the codes within the value set can apply to the concept
+      being communicated.  If the value set does not cover the concept (based on
+      human review), alternate codings (or, data type allowing, text) may be
+      included instead.
+      From: http://hl7.org/fhir/binding-strength in valuesets.xml
+
+
+   .. attribute:: Extensible
+      
+
+      Instances are encouraged to draw from the specified codes for interoperability
+      purposes but are not required to do so to be considered conformant.
+      From: http://hl7.org/fhir/binding-strength in valuesets.xml
+
+
+   .. attribute:: Preferred
+      
+
+      Instances are not expected or even encouraged to draw from the specified value
+      set.  The value set merely provides examples of the types of concepts intended
+      to be included.
+      From: http://hl7.org/fhir/binding-strength in valuesets.xml
+
+
+   .. attribute:: Example
+      
+
+      
+
+

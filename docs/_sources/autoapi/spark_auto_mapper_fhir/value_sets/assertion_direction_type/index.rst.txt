@@ -1,0 +1,52 @@
+:mod:`spark_auto_mapper_fhir.value_sets.assertion_direction_type`
+=================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.assertion_direction_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.assertion_direction_type.AssertionDirectionTypeCode
+   spark_auto_mapper_fhir.value_sets.assertion_direction_type.AssertionDirectionTypeCodeValues
+
+
+
+.. class:: AssertionDirectionTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   AssertionDirectionType
+   From: http://hl7.org/fhir/assert-direction-codes in valuesets.xml
+       The type of direction to use for assertion.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/assert-direction-codes
+
+      
+
+
+.. class:: AssertionDirectionTypeCodeValues
+
+   The assertion is evaluated on the response. This is the default value.
+   From: http://hl7.org/fhir/assert-direction-codes in valuesets.xml
+
+   .. attribute:: Response
+      
+
+      The assertion is evaluated on the request.
+      From: http://hl7.org/fhir/assert-direction-codes in valuesets.xml
+
+
+   .. attribute:: Request
+      
+
+      
+
+

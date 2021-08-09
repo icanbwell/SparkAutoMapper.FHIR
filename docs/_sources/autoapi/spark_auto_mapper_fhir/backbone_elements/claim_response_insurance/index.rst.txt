@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.claim_response_insurance`
+========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.claim_response_insurance
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.claim_response_insurance.ClaimResponseInsurance
+
+
+
+.. class:: ClaimResponseInsurance(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, sequence: spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt, focal: spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean, coverage: spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.coverage.Coverage], businessArrangement: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, claimResponse: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.claim_response.ClaimResponse]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   ClaimResponse.Insurance
+   This resource provides the adjudication details from the processing of a Claim resource.
+
+

@@ -1,0 +1,34 @@
+:mod:`spark_auto_mapper_fhir.value_sets.v2_0755`
+================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.v2_0755
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.v2_0755.V2_0755
+
+
+
+.. class:: V2_0755(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v2.0755
+   From: http://terminology.hl7.org/ValueSet/v2-0755 in v2-tables.xml
+       FHIR Value set/code system definition for HL7 v2 table 0755 ( Status Weight At
+   Birth)
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/ValueSet/v2-0755
+
+      
+
+

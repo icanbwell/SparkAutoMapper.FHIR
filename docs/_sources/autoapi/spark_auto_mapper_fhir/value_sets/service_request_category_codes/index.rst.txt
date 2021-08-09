@@ -1,0 +1,69 @@
+:mod:`spark_auto_mapper_fhir.value_sets.service_request_category_codes`
+=======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.service_request_category_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.service_request_category_codes.ServiceRequestCategoryCodesCode
+   spark_auto_mapper_fhir.value_sets.service_request_category_codes.ServiceRequestCategoryCodesCodeValues
+
+
+
+.. class:: ServiceRequestCategoryCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ServiceRequestCategoryCodes
+   From: http://hl7.org/fhir/ValueSet/servicerequest-category in valuesets.xml
+       An example value set of SNOMED CT concepts that can classify a requested
+   service
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+
+.. class:: ServiceRequestCategoryCodesCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/servicerequest-category in valuesets.xml
+
+   .. attribute:: LaboratoryProcedure
+      
+
+      From: http://hl7.org/fhir/ValueSet/servicerequest-category in valuesets.xml
+
+
+   .. attribute:: Imaging
+      
+
+      From: http://hl7.org/fhir/ValueSet/servicerequest-category in valuesets.xml
+
+
+   .. attribute:: Counselling
+      
+
+      From: http://hl7.org/fhir/ValueSet/servicerequest-category in valuesets.xml
+
+
+   .. attribute:: Education
+      
+
+      From: http://hl7.org/fhir/ValueSet/servicerequest-category in valuesets.xml
+
+
+   .. attribute:: SurgicalProcedure
+      
+
+      
+
+

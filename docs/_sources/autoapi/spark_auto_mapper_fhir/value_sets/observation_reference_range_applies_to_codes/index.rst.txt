@@ -1,0 +1,106 @@
+:mod:`spark_auto_mapper_fhir.value_sets.observation_reference_range_applies_to_codes`
+=====================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.observation_reference_range_applies_to_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.observation_reference_range_applies_to_codes.ObservationReferenceRangeAppliesToCodesCode
+   spark_auto_mapper_fhir.value_sets.observation_reference_range_applies_to_codes.ObservationReferenceRangeAppliesToCodesCodeValues
+
+
+
+.. class:: ObservationReferenceRangeAppliesToCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ObservationReferenceRangeAppliesToCodes
+   From: http://hl7.org/fhir/ValueSet/referencerange-appliesto in valuesets.xml
+       This value set defines a set of codes that can be used to indicate the
+   particular target population the reference range applies to.
+
+   .. attribute:: codeset_sct
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      http://terminology.hl7.org/CodeSystem/v3-Race
+
+
+   .. attribute:: codeset_v3_Race
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-Race
+
+      
+
+
+.. class:: ObservationReferenceRangeAppliesToCodesCodeValues
+
+   American Indian or Alaska Native
+   From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
+
+   .. attribute:: AmericanIndianOrAlaskaNative
+      
+
+      Asian
+      From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
+
+
+   .. attribute:: Asian
+      
+
+      Black or African American
+      From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
+
+
+   .. attribute:: BlackOrAfricanAmerican
+      
+
+      Native Hawaiian or Other Pacific Islander
+      From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
+
+
+   .. attribute:: NativeHawaiianOrOtherPacificIslander
+      
+
+      White
+      From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
+
+
+   .. attribute:: White
+      
+
+      Note that this term remains in the table for completeness, even though within
+      HL7, the notion of Other code is deprecated.
+      From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
+
+
+   .. attribute:: OtherRace
+      
+
+      From: http://hl7.org/fhir/ValueSet/referencerange-appliesto in valuesets.xml
+
+
+   .. attribute:: _248153007
+      
+
+      From: http://hl7.org/fhir/ValueSet/referencerange-appliesto in valuesets.xml
+
+
+   .. attribute:: _248152002
+      
+
+      From: http://hl7.org/fhir/ValueSet/referencerange-appliesto in valuesets.xml
+
+
+   .. attribute:: _77386006
+      
+
+      
+
+

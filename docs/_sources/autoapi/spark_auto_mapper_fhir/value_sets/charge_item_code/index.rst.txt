@@ -1,0 +1,69 @@
+:mod:`spark_auto_mapper_fhir.value_sets.charge_item_code`
+=========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.charge_item_code
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.charge_item_code.ChargeItemCodeCode
+   spark_auto_mapper_fhir.value_sets.charge_item_code.ChargeItemCodeCodeValues
+
+
+
+.. class:: ChargeItemCodeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ChargeItemCode
+   From: http://terminology.hl7.org/CodeSystem/chargeitem-billingcodes in valuesets.xml
+       Example set of codes that can be used for billing purposes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/chargeitem-billingcodes
+
+      
+
+
+.. class:: ChargeItemCodeCodeValues
+
+   From German EBM billing system:
+   Unvorhergesehene Inanspruchnahme des Vertragsarztes durch einen
+   Patienten;zwischen 19:00 und 22:00 Uhr;an Samstagen, Sonntagen und
+   gesetzlichen Feiertagen, am 24.12. und 31.12. zwischen 07:00 und 19:00 Uhr.
+   From: http://terminology.hl7.org/CodeSystem/chargeitem-billingcodes in valuesets.xml
+
+   .. attribute:: UnvorhergeseheneInanspruchnahme
+      
+
+      From German EBM billing system:
+      Notfallpauschale im organisierten Not(-fall)dienst und für nicht an der
+      vertragsärztlichen Versorgung teilnehmende Ärzte, Institute und Krankenhäuser
+      bei Inanspruchnahme;zwischen 07:00 und 19:00 Uhr.
+      From: http://terminology.hl7.org/CodeSystem/chargeitem-billingcodes in valuesets.xml
+
+
+   .. attribute:: Notfallpauschale
+      
+
+      From German EBM billing system:
+      Grundpauschale für Ärzte, Institute und Krankenhäuser, die zur Erbringung von
+      Leistungen innerhalb mindestens eines der Fachgebiete Anästhesiologie,
+      Frauenheilkunde und Geburtshilfe, Haut- und Geschlechtskrankheiten, Mund-,
+      Kiefer- und Gesichtschirurgie und Humangenetik ermächtigt sind.
+      From: http://terminology.hl7.org/CodeSystem/chargeitem-billingcodes in valuesets.xml
+
+
+   .. attribute:: Grundpauschale
+      
+
+      
+
+

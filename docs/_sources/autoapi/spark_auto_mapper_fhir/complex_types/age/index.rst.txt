@@ -1,0 +1,32 @@
+:mod:`spark_auto_mapper_fhir.complex_types.age`
+===============================================
+
+.. py:module:: spark_auto_mapper_fhir.complex_types.age
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.complex_types.age.Age
+
+
+
+.. class:: Age(*, value: Optional[spark_auto_mapper_fhir.fhir_types.decimal.FhirDecimal] = None, comparator: Optional[spark_auto_mapper_fhir.value_sets.quantity_comparator.QuantityComparatorCode] = None, unit: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, system: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, code: Optional[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
+
+   Age
+   fhir-base.xsd
+       A duration of time during which an organism (or a process) has existed.
+       If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

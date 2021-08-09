@@ -1,0 +1,73 @@
+:mod:`spark_auto_mapper_fhir.value_sets.rejection_criterion`
+============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.rejection_criterion
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.rejection_criterion.RejectionCriterionCode
+   spark_auto_mapper_fhir.value_sets.rejection_criterion.RejectionCriterionCodeValues
+
+
+
+.. class:: RejectionCriterionCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   RejectionCriterion
+   From: http://terminology.hl7.org/CodeSystem/rejection-criteria in valuesets.xml
+       Criterion for rejection of the specimen by laboratory.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/rejection-criteria
+
+      
+
+
+.. class:: RejectionCriterionCodeValues
+
+   blood specimen hemolized.
+   From: http://terminology.hl7.org/CodeSystem/rejection-criteria in valuesets.xml
+
+   .. attribute:: HemolizedSpecimen
+      
+
+      insufficient quantity of specimen.
+      From: http://terminology.hl7.org/CodeSystem/rejection-criteria in valuesets.xml
+
+
+   .. attribute:: InsufficientSpecimenVolume
+      
+
+      specimen container broken.
+      From: http://terminology.hl7.org/CodeSystem/rejection-criteria in valuesets.xml
+
+
+   .. attribute:: BrokenSpecimenContainer
+      
+
+      specimen clotted.
+      From: http://terminology.hl7.org/CodeSystem/rejection-criteria in valuesets.xml
+
+
+   .. attribute:: SpecimenClotted
+      
+
+      specimen temperature inappropriate.
+      From: http://terminology.hl7.org/CodeSystem/rejection-criteria in valuesets.xml
+
+
+   .. attribute:: SpecimenTemperatureInappropriate
+      
+
+      
+
+

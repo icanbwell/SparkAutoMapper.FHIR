@@ -1,0 +1,309 @@
+:mod:`spark_auto_mapper_fhir.value_sets.program`
+================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.program
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.program.ProgramCode
+   spark_auto_mapper_fhir.value_sets.program.ProgramCodeValues
+
+
+
+.. class:: ProgramCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   Program
+   From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+       This value set defines an example set of codes that could be can be used to
+   classify groupings of service-types/specialties.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/program
+
+      
+
+
+.. class:: ProgramCodeValues
+
+   From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+   .. attribute:: AcquiredBrainInjury_ABI_Program_
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: ABISlowToRecover_ABISTR_Program
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: AccessPrograms
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: AdultAndFurtherEducation_ACFE_Program
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: AdultDayActivityAndSupportServices_ADASS_Program
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: AdultDayCareProgram
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: ATSS_AdultTrainingSupportService_
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: CommunityAgedCarePackages_CACP_
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: CareCoordination_SupplementaryServices_CCSS_
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: CognitiveDementiaMemoryService_CDAMS_
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: ChildFIRST
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: Children_sContactServices
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: CommunityVisitorsScheme
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: CPP_CommunityPartnersProgram_
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: ClosingTheGap_CTG_
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: CoordinatedVeterans_Care_CVC_Program
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: DayProgram
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: DropInProgram
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: EarlyYearsProgram
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: EmployeeAssistanceProgram
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: HomeAndCommunityCare_HACC_
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: HospitalAdmissionRiskProgram_HARP_
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: HospitalInTheHome_HITH_Program
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: ICTP_IntensiveCommunityTreatmentProgram_
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: IFSS_IntensiveFamilySupportProgram_
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: JPET_JobPlacement_EducationAndTraining_
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: KooriJuvenileJusticeProgram
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: LanguageLiteracyAndNumeracyProgram
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: LifeSkillsProgram
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: LMP_LifestyleModificationProgram_
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: MedsCheckProgram
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: Methadone_BuprenorphineProgram
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: NationalDisabilitiesInsuranceScheme_NDIS_
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: NationalDiabetesServicesScheme_NDSS_
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: Needle_SyringeProgram
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: NPEPProgram
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: PersonalSupportProgram
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: PartnersInRecovery_PIR_Program
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: Pre_employmentProgram
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: ReconnectProgram
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: SexualAbuseCounsellingAndPreventionProgram_SACPP_
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: SocialSupportPrograms
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: SupportedResidentialService_SRS_
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: TasmanianAboriginalCentre_TAC_
+      
+
+      From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
+
+
+   .. attribute:: Victim_sAssistanceProgram
+      
+
+      
+
+

@@ -1,0 +1,67 @@
+:mod:`spark_auto_mapper_fhir.value_sets.identity_assurance_level`
+=================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.identity_assurance_level
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.identity_assurance_level.IdentityAssuranceLevelCode
+   spark_auto_mapper_fhir.value_sets.identity_assurance_level.IdentityAssuranceLevelCodeValues
+
+
+
+.. class:: IdentityAssuranceLevelCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   IdentityAssuranceLevel
+   From: http://hl7.org/fhir/identity-assuranceLevel in valuesets.xml
+       The level of confidence that this link represents the same actual person,
+   based on NIST Authentication Levels.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/identity-assuranceLevel
+
+      
+
+
+.. class:: IdentityAssuranceLevelCodeValues
+
+   Little or no confidence in the asserted identity's accuracy.
+   From: http://hl7.org/fhir/identity-assuranceLevel in valuesets.xml
+
+   .. attribute:: Level1
+      
+
+      Some confidence in the asserted identity's accuracy.
+      From: http://hl7.org/fhir/identity-assuranceLevel in valuesets.xml
+
+
+   .. attribute:: Level2
+      
+
+      High confidence in the asserted identity's accuracy.
+      From: http://hl7.org/fhir/identity-assuranceLevel in valuesets.xml
+
+
+   .. attribute:: Level3
+      
+
+      Very high confidence in the asserted identity's accuracy.
+      From: http://hl7.org/fhir/identity-assuranceLevel in valuesets.xml
+
+
+   .. attribute:: Level4
+      
+
+      
+
+

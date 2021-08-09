@@ -1,0 +1,122 @@
+:mod:`spark_auto_mapper_fhir.value_sets.container_cap`
+======================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.container_cap
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.container_cap.ContainerCapCode
+   spark_auto_mapper_fhir.value_sets.container_cap.ContainerCapCodeValues
+
+
+
+.. class:: ContainerCapCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ContainerCap
+   From: http://terminology.hl7.org/CodeSystem/container-cap in valuesets.xml
+       Color of the container cap.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/container-cap
+
+      
+
+
+.. class:: ContainerCapCodeValues
+
+   red cap.
+   From: http://terminology.hl7.org/CodeSystem/container-cap in valuesets.xml
+
+   .. attribute:: RedCap
+      
+
+      yellow cap.
+      From: http://terminology.hl7.org/CodeSystem/container-cap in valuesets.xml
+
+
+   .. attribute:: YellowCap
+      
+
+      dark yellow cap.
+      From: http://terminology.hl7.org/CodeSystem/container-cap in valuesets.xml
+
+
+   .. attribute:: DarkYellowCap
+      
+
+      grey cap.
+      From: http://terminology.hl7.org/CodeSystem/container-cap in valuesets.xml
+
+
+   .. attribute:: GreyCap
+      
+
+      light blue cap.
+      From: http://terminology.hl7.org/CodeSystem/container-cap in valuesets.xml
+
+
+   .. attribute:: LightBlueCap
+      
+
+      black cap.
+      From: http://terminology.hl7.org/CodeSystem/container-cap in valuesets.xml
+
+
+   .. attribute:: BlackCap
+      
+
+      green cap.
+      From: http://terminology.hl7.org/CodeSystem/container-cap in valuesets.xml
+
+
+   .. attribute:: GreenCap
+      
+
+      light green cap.
+      From: http://terminology.hl7.org/CodeSystem/container-cap in valuesets.xml
+
+
+   .. attribute:: LightGreenCap
+      
+
+      lavender cap.
+      From: http://terminology.hl7.org/CodeSystem/container-cap in valuesets.xml
+
+
+   .. attribute:: LavenderCap
+      
+
+      brown cap.
+      From: http://terminology.hl7.org/CodeSystem/container-cap in valuesets.xml
+
+
+   .. attribute:: BrownCap
+      
+
+      white cap.
+      From: http://terminology.hl7.org/CodeSystem/container-cap in valuesets.xml
+
+
+   .. attribute:: WhiteCap
+      
+
+      pink cap.
+      From: http://terminology.hl7.org/CodeSystem/container-cap in valuesets.xml
+
+
+   .. attribute:: PinkCap
+      
+
+      
+
+

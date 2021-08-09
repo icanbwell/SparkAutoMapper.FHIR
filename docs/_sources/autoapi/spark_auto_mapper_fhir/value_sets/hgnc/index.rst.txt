@@ -1,0 +1,33 @@
+:mod:`spark_auto_mapper_fhir.value_sets.hgnc`
+=============================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.hgnc
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.hgnc.HGNCCode
+
+
+
+.. class:: HGNCCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   HGNC
+   From: http://hl7.org/fhir/ValueSet/genenames in valuesets.xml
+       HGNC: Human Gene Nomenclature Committee
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://www.genenames.org
+
+      
+
+

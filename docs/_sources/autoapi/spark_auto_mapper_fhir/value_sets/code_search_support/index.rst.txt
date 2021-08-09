@@ -1,0 +1,55 @@
+:mod:`spark_auto_mapper_fhir.value_sets.code_search_support`
+============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.code_search_support
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.code_search_support.CodeSearchSupportCode
+   spark_auto_mapper_fhir.value_sets.code_search_support.CodeSearchSupportCodeValues
+
+
+
+.. class:: CodeSearchSupportCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   CodeSearchSupport
+   From: http://hl7.org/fhir/code-search-support in valuesets.xml
+       The degree to which the server supports the code search parameter on ValueSet,
+   if it is supported.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/code-search-support
+
+      
+
+
+.. class:: CodeSearchSupportCodeValues
+
+   The search for code on ValueSet only includes codes explicitly detailed on
+   includes or expansions.
+   From: http://hl7.org/fhir/code-search-support in valuesets.xml
+
+   .. attribute:: ExplicitCodes
+      
+
+      The search for code on ValueSet only includes all codes based on the expansion
+      of the value set.
+      From: http://hl7.org/fhir/code-search-support in valuesets.xml
+
+
+   .. attribute:: ImplicitCodes
+      
+
+      
+
+

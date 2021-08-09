@@ -1,0 +1,34 @@
+:mod:`spark_auto_mapper_fhir.value_sets.refseq`
+===============================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.refseq
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.refseq.REFSEQCode
+
+
+
+.. class:: REFSEQCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   REFSEQ
+   From: http://hl7.org/fhir/ValueSet/ref-sequences in valuesets.xml
+       REFSEQ : National Center for Biotechnology Information (NCBI) Reference
+   Sequences
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://www.ncbi.nlm.nih.gov/nuccore
+
+      
+
+

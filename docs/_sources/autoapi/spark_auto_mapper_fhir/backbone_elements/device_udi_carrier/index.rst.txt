@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.device_udi_carrier`
+==================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.device_udi_carrier
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.device_udi_carrier.DeviceUdiCarrier
+
+
+
+.. class:: DeviceUdiCarrier(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, deviceIdentifier: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, issuer: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, jurisdiction: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, carrierAIDC: Optional[spark_auto_mapper_fhir.fhir_types.base64_binary.FhirBase64Binary] = None, carrierHRF: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, entryType: Optional[spark_auto_mapper_fhir.value_sets.udi_entry_type.UDIEntryTypeCode] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   Device.UdiCarrier
+   A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.
+
+

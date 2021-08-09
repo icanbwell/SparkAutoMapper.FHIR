@@ -1,0 +1,56 @@
+:mod:`spark_auto_mapper_fhir.value_sets.body_weight_units`
+==========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.body_weight_units
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.body_weight_units.BodyWeightUnitsCode
+   spark_auto_mapper_fhir.value_sets.body_weight_units.BodyWeightUnitsCodeValues
+
+
+
+.. class:: BodyWeightUnitsCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   BodyWeightUnits
+   From: http://hl7.org/fhir/ValueSet/ucum-bodyweight in valuesets.xml
+       UCUM units for recording Body Weight
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://unitsofmeasure.org
+
+      
+
+
+.. class:: BodyWeightUnitsCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/ucum-bodyweight in valuesets.xml
+
+   .. attribute:: Kg
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-bodyweight in valuesets.xml
+
+
+   .. attribute:: _lb_av_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-bodyweight in valuesets.xml
+
+
+   .. attribute:: G
+      
+
+      
+
+

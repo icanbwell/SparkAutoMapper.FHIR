@@ -1,0 +1,98 @@
+:mod:`spark_auto_mapper_fhir.value_sets.specimen_collection`
+============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.specimen_collection
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.specimen_collection.SpecimenCollectionCode
+   spark_auto_mapper_fhir.value_sets.specimen_collection.SpecimenCollectionCodeValues
+
+
+
+.. class:: SpecimenCollectionCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   SpecimenCollection
+   From: http://hl7.org/fhir/ValueSet/specimen-collection in valuesets.xml
+       Actions that can be taken for the collection of specimen from a subject.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+
+.. class:: SpecimenCollectionCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/specimen-collection in valuesets.xml
+
+   .. attribute:: Aspiration_Action
+      
+
+      From: http://hl7.org/fhir/ValueSet/specimen-collection in valuesets.xml
+
+
+   .. attribute:: Biopsy_Action
+      
+
+      From: http://hl7.org/fhir/ValueSet/specimen-collection in valuesets.xml
+
+
+   .. attribute:: Puncture_Action
+      
+
+      From: http://hl7.org/fhir/ValueSet/specimen-collection in valuesets.xml
+
+
+   .. attribute:: Excision_Action
+      
+
+      From: http://hl7.org/fhir/ValueSet/specimen-collection in valuesets.xml
+
+
+   .. attribute:: Scraping_Action
+      
+
+      From: http://hl7.org/fhir/ValueSet/specimen-collection in valuesets.xml
+
+
+   .. attribute:: UrineSpecimenCollection_CleanCatch
+      
+
+      From: http://hl7.org/fhir/ValueSet/specimen-collection in valuesets.xml
+
+
+   .. attribute:: TimedUrineCollection
+      
+
+      From: http://hl7.org/fhir/ValueSet/specimen-collection in valuesets.xml
+
+
+   .. attribute:: UrineSpecimenCollection_Catheterized
+      
+
+      From: http://hl7.org/fhir/ValueSet/specimen-collection in valuesets.xml
+
+
+   .. attribute:: CollectionOfCoughedSputum
+      
+
+      From: http://hl7.org/fhir/ValueSet/specimen-collection in valuesets.xml
+
+
+   .. attribute:: Finger_prickSampling
+      
+
+      
+
+

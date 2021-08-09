@@ -1,0 +1,36 @@
+:mod:`spark_auto_mapper_fhir.value_sets.substance_code`
+=======================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.substance_code
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.substance_code.SubstanceCodeCode
+
+
+
+.. class:: SubstanceCodeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   SubstanceCode
+   From: http://hl7.org/fhir/ValueSet/substance-code in valuesets.xml
+       This value set contains concept codes for specific substances. It includes
+   codes from [SNOMED](http://snomed.info/sct) where concept is-a 105590001
+   (Substance (substance)) and where concept is-a 373873005 (Pharmaceutical /
+   biologic product (product))
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+

@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_version`
+================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_version
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_version.TerminologyCapabilitiesVersion
+
+
+
+.. class:: TerminologyCapabilitiesVersion(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, code: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, isDefault: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, compositional: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, language: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, filter: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.terminology_capabilities_filter.TerminologyCapabilitiesFilter]] = None, property: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   TerminologyCapabilities.Version
+   A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+
+

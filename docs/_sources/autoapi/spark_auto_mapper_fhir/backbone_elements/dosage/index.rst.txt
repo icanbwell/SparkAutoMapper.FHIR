@@ -1,0 +1,28 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.dosage`
+======================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.dosage
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.dosage.Dosage
+
+
+
+.. class:: Dosage(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, sequence: Optional[spark_auto_mapper_fhir.fhir_types.integer.FhirInteger] = None, text: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, additionalInstruction: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.snomedct_additional_dosage_instructions.SNOMEDCTAdditionalDosageInstructionsCode]]] = None, patientInstruction: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, timing: Optional[spark_auto_mapper_fhir.backbone_elements.timing.Timing] = None, asNeededBoolean: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, asNeededCodeableConcept: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, site: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.snomedct_anatomical_structure_for_administration_site_codes.SNOMEDCTAnatomicalStructureForAdministrationSiteCodesCode]] = None, route: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.snomedct_route_codes.SNOMEDCTRouteCodesCode]] = None, method: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.snomedct_administration_method_codes.SNOMEDCTAdministrationMethodCodesCode]] = None, doseAndRate: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.dosage_dose_and_rate.DosageDoseAndRate]] = None, maxDosePerPeriod: Optional[spark_auto_mapper_fhir.complex_types.ratio.Ratio] = None, maxDosePerAdministration: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, maxDosePerLifetime: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   Dosage
+   Indicates how the medication is/was taken or should be taken by the patient.
+   If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
+
+

@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.implementation_guide_resource`
+=============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.implementation_guide_resource
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.implementation_guide_resource.ImplementationGuideResource
+
+
+
+.. class:: ImplementationGuideResource(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, reference: spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.resource.Resource], fhirVersion: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.value_sets.fhir_version.FHIRVersionCode]] = None, name: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, description: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, exampleBoolean: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, exampleCanonical: Optional[spark_auto_mapper_fhir.fhir_types.canonical.FhirCanonical] = None, groupingId: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   ImplementationGuide.Resource
+   A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
+
+

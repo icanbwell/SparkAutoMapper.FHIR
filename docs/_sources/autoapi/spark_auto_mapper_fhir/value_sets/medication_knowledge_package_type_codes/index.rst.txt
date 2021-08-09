@@ -1,0 +1,170 @@
+:mod:`spark_auto_mapper_fhir.value_sets.medication_knowledge_package_type_codes`
+================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.medication_knowledge_package_type_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.medication_knowledge_package_type_codes.MedicationKnowledgePackageTypeCodesCode
+   spark_auto_mapper_fhir.value_sets.medication_knowledge_package_type_codes.MedicationKnowledgePackageTypeCodesCodeValues
+
+
+
+.. class:: MedicationKnowledgePackageTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   medicationKnowledge Package Type Codes
+   From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
+       MedicationKnowledge Package Type Codes
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type
+
+      
+
+
+.. class:: MedicationKnowledgePackageTypeCodesCodeValues
+
+   From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
+
+   .. attribute:: Ampule
+      
+
+      From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
+
+
+   .. attribute:: Bag
+      
+
+      From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
+
+
+   .. attribute:: BlisterPack
+      
+
+      From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
+
+
+   .. attribute:: Bottle
+      
+
+      From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
+
+
+   .. attribute:: Box
+      
+
+      From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
+
+
+   .. attribute:: Can
+      
+
+      From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
+
+
+   .. attribute:: Cartridge
+      
+
+      From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
+
+
+   .. attribute:: Disk
+      
+
+      From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
+
+
+   .. attribute:: Dosette
+      
+
+      From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
+
+
+   .. attribute:: Jar
+      
+
+      From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
+
+
+   .. attribute:: Jug
+      
+
+      From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
+
+
+   .. attribute:: Minim
+      
+
+      From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
+
+
+   .. attribute:: NebuleAmp
+      
+
+      From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
+
+
+   .. attribute:: Ovule
+      
+
+      From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
+
+
+   .. attribute:: Pouch
+      
+
+      From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
+
+
+   .. attribute:: Packet
+      
+
+      From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
+
+
+   .. attribute:: Sashet
+      
+
+      From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
+
+
+   .. attribute:: Strip
+      
+
+      From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
+
+
+   .. attribute:: Tin
+      
+
+      From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
+
+
+   .. attribute:: Tub
+      
+
+      From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
+
+
+   .. attribute:: Tube
+      
+
+      From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
+
+
+   .. attribute:: Vial
+      
+
+      
+
+

@@ -1,0 +1,81 @@
+:mod:`spark_auto_mapper_fhir.value_sets.specimen_collection_priority`
+=====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.specimen_collection_priority
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.specimen_collection_priority.SpecimenCollectionPriorityCode
+   spark_auto_mapper_fhir.value_sets.specimen_collection_priority.SpecimenCollectionPriorityCodeValues
+
+
+
+.. class:: SpecimenCollectionPriorityCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   SpecimenCollectionPriority
+   From: http://hl7.org/fhir/ValueSet/specimen-collection-priority in valuesets.xml
+        This example value set defines a set of codes that can be used to indicate
+   the priority of collection of a specimen.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://example.com
+
+      
+
+
+.. class:: SpecimenCollectionPriorityCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/specimen-collection-priority in valuesets.xml
+
+   .. attribute:: STAT
+      
+
+      From: http://hl7.org/fhir/ValueSet/specimen-collection-priority in valuesets.xml
+
+
+   .. attribute:: ASAP
+      
+
+      From: http://hl7.org/fhir/ValueSet/specimen-collection-priority in valuesets.xml
+
+
+   .. attribute:: ASAP_ED
+      
+
+      From: http://hl7.org/fhir/ValueSet/specimen-collection-priority in valuesets.xml
+
+
+   .. attribute:: AM
+      
+
+      From: http://hl7.org/fhir/ValueSet/specimen-collection-priority in valuesets.xml
+
+
+   .. attribute:: ROUTINE
+      
+
+      From: http://hl7.org/fhir/ValueSet/specimen-collection-priority in valuesets.xml
+
+
+   .. attribute:: NURSECOLLECT
+      
+
+      From: http://hl7.org/fhir/ValueSet/specimen-collection-priority in valuesets.xml
+
+
+   .. attribute:: CALLORFAX
+      
+
+      
+
+

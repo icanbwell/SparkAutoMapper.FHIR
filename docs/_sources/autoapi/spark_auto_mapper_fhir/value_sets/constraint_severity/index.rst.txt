@@ -1,0 +1,53 @@
+:mod:`spark_auto_mapper_fhir.value_sets.constraint_severity`
+============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.constraint_severity
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.constraint_severity.ConstraintSeverityCode
+   spark_auto_mapper_fhir.value_sets.constraint_severity.ConstraintSeverityCodeValues
+
+
+
+.. class:: ConstraintSeverityCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ConstraintSeverity
+   From: http://hl7.org/fhir/constraint-severity in valuesets.xml
+       SHALL applications comply with this constraint?
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/constraint-severity
+
+      
+
+
+.. class:: ConstraintSeverityCodeValues
+
+   If the constraint is violated, the resource is not conformant.
+   From: http://hl7.org/fhir/constraint-severity in valuesets.xml
+
+   .. attribute:: Error
+      
+
+      If the constraint is violated, the resource is conformant, but it is not
+      necessarily following best practice.
+      From: http://hl7.org/fhir/constraint-severity in valuesets.xml
+
+
+   .. attribute:: Warning
+      
+
+      
+
+

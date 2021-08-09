@@ -1,0 +1,33 @@
+:mod:`spark_auto_mapper_fhir.resources.condition`
+=================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.condition
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.condition.Condition
+
+
+
+.. class:: Condition(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.identifier.Identifier]] = None, clinicalStatus: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.condition_clinical_status_codes.ConditionClinicalStatusCodesCode]] = None, verificationStatus: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.condition_verification_status.ConditionVerificationStatusCode]] = None, category: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.condition_category_codes.ConditionCategoryCodesCode]]] = None, severity: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.condition_or__diagnosis_severity.Condition_or_DiagnosisSeverityCode]] = None, code: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.condition_or__problem_or__diagnosis_codes.Condition_or_Problem_or_DiagnosisCodesCode]] = None, bodySite: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.snomedct_body_structures.SNOMEDCTBodyStructuresCode]]] = None, subject: spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.group.Group)]], encounter: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.encounter.Encounter]] = None, onsetDateTime: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, onsetAge: Optional[spark_auto_mapper_fhir.complex_types.age.Age] = None, onsetPeriod: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, onsetRange: Optional[spark_auto_mapper_fhir.complex_types.range.Range] = None, onsetString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, abatementDateTime: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, abatementAge: Optional[spark_auto_mapper_fhir.complex_types.age.Age] = None, abatementPeriod: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, abatementRange: Optional[spark_auto_mapper_fhir.complex_types.range.Range] = None, abatementString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, recordedDate: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, recorder: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole, spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.related_person.RelatedPerson)]]] = None, asserter: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole, spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.related_person.RelatedPerson)]]] = None, stage: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.condition_stage.ConditionStage]] = None, evidence: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.condition_evidence.ConditionEvidence]] = None, note: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.annotation.Annotation]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   Condition
+   condition.xsd
+       A clinical condition, problem, diagnosis, or other event, situation, issue, or
+   clinical concept that has risen to a level of concern.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

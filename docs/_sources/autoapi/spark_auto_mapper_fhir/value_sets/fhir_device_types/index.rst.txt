@@ -1,0 +1,35 @@
+:mod:`spark_auto_mapper_fhir.value_sets.fhir_device_types`
+==========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.fhir_device_types
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.fhir_device_types.FHIRDeviceTypesCode
+
+
+
+.. class:: FHIRDeviceTypesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   FHIRDeviceTypes
+   From: http://hl7.org/fhir/ValueSet/device-kind in valuesets.xml
+       Codes used to identify medical devices. Includes concepts from SNOMED CT
+   (http://www.snomed.org/) where concept is-a 49062001 (Device)  and is provided
+   as a suggestive example.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+

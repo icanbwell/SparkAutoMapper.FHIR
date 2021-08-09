@@ -1,0 +1,62 @@
+:mod:`spark_auto_mapper_fhir.value_sets.system_restful_interaction`
+===================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.system_restful_interaction
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.system_restful_interaction.SystemRestfulInteractionCode
+   spark_auto_mapper_fhir.value_sets.system_restful_interaction.SystemRestfulInteractionCodeValues
+
+
+
+.. class:: SystemRestfulInteractionCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   SystemRestfulInteraction
+   From: http://hl7.org/fhir/ValueSet/system-restful-interaction in valuesets.xml
+       Operations supported by REST at the system level.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/restful-interaction
+
+      
+
+
+.. class:: SystemRestfulInteractionCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/system-restful-interaction in valuesets.xml
+
+   .. attribute:: Transaction
+      
+
+      From: http://hl7.org/fhir/ValueSet/system-restful-interaction in valuesets.xml
+
+
+   .. attribute:: Batch
+      
+
+      From: http://hl7.org/fhir/ValueSet/system-restful-interaction in valuesets.xml
+
+
+   .. attribute:: Search_system
+      
+
+      From: http://hl7.org/fhir/ValueSet/system-restful-interaction in valuesets.xml
+
+
+   .. attribute:: History_system
+      
+
+      
+
+

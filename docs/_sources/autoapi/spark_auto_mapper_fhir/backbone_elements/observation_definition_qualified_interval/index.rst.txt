@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.observation_definition_qualified_interval`
+=========================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.observation_definition_qualified_interval
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.observation_definition_qualified_interval.ObservationDefinitionQualifiedInterval
+
+
+
+.. class:: ObservationDefinitionQualifiedInterval(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, category: Optional[spark_auto_mapper_fhir.value_sets.observation_range_category.ObservationRangeCategoryCode] = None, range: Optional[spark_auto_mapper_fhir.complex_types.range.Range] = None, context: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.observation_reference_range_meaning_codes.ObservationReferenceRangeMeaningCodesCode]] = None, appliesTo: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.observation_reference_range_applies_to_codes.ObservationReferenceRangeAppliesToCodesCode]]] = None, gender: Optional[spark_auto_mapper_fhir.value_sets.administrative_gender.AdministrativeGenderCode] = None, age: Optional[spark_auto_mapper_fhir.complex_types.range.Range] = None, gestationalAge: Optional[spark_auto_mapper_fhir.complex_types.range.Range] = None, condition: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   ObservationDefinition.QualifiedInterval
+   Set of definitional characteristics for a kind of observation or measurement produced or consumed by an orderable health care service.
+
+

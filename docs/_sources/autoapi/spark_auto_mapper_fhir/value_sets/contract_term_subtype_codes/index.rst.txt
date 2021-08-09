@@ -1,0 +1,60 @@
+:mod:`spark_auto_mapper_fhir.value_sets.contract_term_subtype_codes`
+====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.contract_term_subtype_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.contract_term_subtype_codes.ContractTermSubtypeCodesCode
+   spark_auto_mapper_fhir.value_sets.contract_term_subtype_codes.ContractTermSubtypeCodesCodeValues
+
+
+
+.. class:: ContractTermSubtypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ContractTermSubtypeCodes
+   From: http://terminology.hl7.org/CodeSystem/contracttermsubtypecodes in valuesets.xml
+       This value set includes sample Contract Term SubType codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/contracttermsubtypecodes
+
+      
+
+
+.. class:: ContractTermSubtypeCodesCodeValues
+
+   Terms that go to the very root of a contract.
+   From: http://terminology.hl7.org/CodeSystem/contracttermsubtypecodes in valuesets.xml
+
+   .. attribute:: Condition
+      
+
+      Less imperative than a condition, so the contract will survive a breach
+      From: http://terminology.hl7.org/CodeSystem/contracttermsubtypecodes in valuesets.xml
+
+
+   .. attribute:: Warranty
+      
+
+      Breach of which might or might not go to the root of the contract depending
+      upon the nature of the breach
+      From: http://terminology.hl7.org/CodeSystem/contracttermsubtypecodes in valuesets.xml
+
+
+   .. attribute:: Innominate
+      
+
+      
+
+

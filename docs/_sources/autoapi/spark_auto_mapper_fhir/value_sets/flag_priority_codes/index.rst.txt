@@ -1,0 +1,67 @@
+:mod:`spark_auto_mapper_fhir.value_sets.flag_priority_codes`
+============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.flag_priority_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.flag_priority_codes.FlagPriorityCodesCode
+   spark_auto_mapper_fhir.value_sets.flag_priority_codes.FlagPriorityCodesCodeValues
+
+
+
+.. class:: FlagPriorityCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   FlagPriorityCodes
+   From: http://hl7.org/fhir/flag-priority-code in valuesets.xml
+       This value set is provided as an exemplar. The value set is driven by IHE
+   Table B.8-4: Abnormal Flags, Alert Priority.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/flag-priority-code
+
+      
+
+
+.. class:: FlagPriorityCodesCodeValues
+
+   No alarm.
+   From: http://hl7.org/fhir/flag-priority-code in valuesets.xml
+
+   .. attribute:: NoAlarm
+      
+
+      Low priority.
+      From: http://hl7.org/fhir/flag-priority-code in valuesets.xml
+
+
+   .. attribute:: LowPriority
+      
+
+      Medium priority.
+      From: http://hl7.org/fhir/flag-priority-code in valuesets.xml
+
+
+   .. attribute:: MediumPriority
+      
+
+      High priority.
+      From: http://hl7.org/fhir/flag-priority-code in valuesets.xml
+
+
+   .. attribute:: HighPriority
+      
+
+      
+
+

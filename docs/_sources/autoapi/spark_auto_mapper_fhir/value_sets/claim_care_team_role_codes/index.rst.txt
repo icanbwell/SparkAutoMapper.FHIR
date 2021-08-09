@@ -1,0 +1,66 @@
+:mod:`spark_auto_mapper_fhir.value_sets.claim_care_team_role_codes`
+===================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.claim_care_team_role_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.claim_care_team_role_codes.ClaimCareTeamRoleCodesCode
+   spark_auto_mapper_fhir.value_sets.claim_care_team_role_codes.ClaimCareTeamRoleCodesCodeValues
+
+
+
+.. class:: ClaimCareTeamRoleCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ClaimCareTeamRoleCodes
+   From: http://terminology.hl7.org/CodeSystem/claimcareteamrole in valuesets.xml
+       This value set includes sample Claim Care Team Role codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/claimcareteamrole
+
+      
+
+
+.. class:: ClaimCareTeamRoleCodesCodeValues
+
+   The primary care provider.
+   From: http://terminology.hl7.org/CodeSystem/claimcareteamrole in valuesets.xml
+
+   .. attribute:: PrimaryProvider
+      
+
+      Assisting care provider.
+      From: http://terminology.hl7.org/CodeSystem/claimcareteamrole in valuesets.xml
+
+
+   .. attribute:: AssistingProvider
+      
+
+      Supervising care provider.
+      From: http://terminology.hl7.org/CodeSystem/claimcareteamrole in valuesets.xml
+
+
+   .. attribute:: SupervisingProvider
+      
+
+      Other role on the care team.
+      From: http://terminology.hl7.org/CodeSystem/claimcareteamrole in valuesets.xml
+
+
+   .. attribute:: Other
+      
+
+      
+
+

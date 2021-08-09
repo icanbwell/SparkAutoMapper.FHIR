@@ -1,0 +1,34 @@
+:mod:`spark_auto_mapper_fhir.resources.detected_issue`
+======================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.detected_issue
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.detected_issue.DetectedIssue
+
+
+
+.. class:: DetectedIssue(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.identifier.Identifier]] = None, status: spark_auto_mapper_fhir.value_sets.observation_status.ObservationStatusCode, code: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.detected_issue_category.DetectedIssueCategoryCode]] = None, severity: Optional[spark_auto_mapper_fhir.value_sets.detected_issue_severity.DetectedIssueSeverityCode] = None, patient: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.patient.Patient]] = None, identifiedDateTime: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, identifiedPeriod: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, author: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole, spark_auto_mapper_fhir.resources.device.Device)]]] = None, implicated: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.resource.Resource]]] = None, evidence: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.detected_issue_evidence.DetectedIssueEvidence]] = None, detail: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, reference: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, mitigation: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.detected_issue_mitigation.DetectedIssueMitigation]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   DetectedIssue
+   detectedissue.xsd
+       Indicates an actual or potential clinical issue with or between one or more
+   active or proposed clinical actions for a patient; e.g. Drug-drug interaction,
+   Ineffective treatment frequency, Procedure-condition conflict, etc.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

@@ -1,0 +1,69 @@
+:mod:`spark_auto_mapper_fhir.value_sets.episode_of_care_type`
+=============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.episode_of_care_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.episode_of_care_type.EpisodeOfCareTypeCode
+   spark_auto_mapper_fhir.value_sets.episode_of_care_type.EpisodeOfCareTypeCodeValues
+
+
+
+.. class:: EpisodeOfCareTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   EpisodeOfCareType
+   From: http://terminology.hl7.org/CodeSystem/episodeofcare-type in valuesets.xml
+       This example value set defines a set of codes that can be used to express the
+   usage type of an EpisodeOfCare record.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/episodeofcare-type
+
+      
+
+
+.. class:: EpisodeOfCareTypeCodeValues
+
+   From: http://terminology.hl7.org/CodeSystem/episodeofcare-type in valuesets.xml
+
+   .. attribute:: HomeAndCommunityCare
+      
+
+      From: http://terminology.hl7.org/CodeSystem/episodeofcare-type in valuesets.xml
+
+
+   .. attribute:: PostAcuteCare
+      
+
+      From: http://terminology.hl7.org/CodeSystem/episodeofcare-type in valuesets.xml
+
+
+   .. attribute:: PostCoordinatedDiabetesProgram
+      
+
+      From: http://terminology.hl7.org/CodeSystem/episodeofcare-type in valuesets.xml
+
+
+   .. attribute:: DrugAndAlcoholRehabilitation
+      
+
+      From: http://terminology.hl7.org/CodeSystem/episodeofcare-type in valuesets.xml
+
+
+   .. attribute:: Community_basedAgedCare
+      
+
+      
+
+

@@ -1,0 +1,60 @@
+:mod:`spark_auto_mapper_fhir.value_sets.expansion_parameter_source`
+===================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.expansion_parameter_source
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.expansion_parameter_source.ExpansionParameterSourceCode
+   spark_auto_mapper_fhir.value_sets.expansion_parameter_source.ExpansionParameterSourceCodeValues
+
+
+
+.. class:: ExpansionParameterSourceCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ExpansionParameterSource
+   From: http://terminology.hl7.org/CodeSystem/expansion-parameter-source in valuesets.xml
+       Declares what the source of a parameter is.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/expansion-parameter-source
+
+      
+
+
+.. class:: ExpansionParameterSourceCodeValues
+
+   The parameter was supplied by the client in the $expand request.
+   From: http://terminology.hl7.org/CodeSystem/expansion-parameter-source in valuesets.xml
+
+   .. attribute:: ClientInput
+      
+
+      The parameter was added by the expansion engine on the server.
+      From: http://terminology.hl7.org/CodeSystem/expansion-parameter-source in valuesets.xml
+
+
+   .. attribute:: ServerEngine
+      
+
+      The parameter was added from one the code systems used in the $expand
+      operation.
+      From: http://terminology.hl7.org/CodeSystem/expansion-parameter-source in valuesets.xml
+
+
+   .. attribute:: CodeSystem
+      
+
+      
+
+

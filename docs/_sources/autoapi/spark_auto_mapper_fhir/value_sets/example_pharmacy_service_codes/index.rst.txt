@@ -1,0 +1,80 @@
+:mod:`spark_auto_mapper_fhir.value_sets.example_pharmacy_service_codes`
+=======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.example_pharmacy_service_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.example_pharmacy_service_codes.ExamplePharmacyServiceCodesCode
+   spark_auto_mapper_fhir.value_sets.example_pharmacy_service_codes.ExamplePharmacyServiceCodesCodeValues
+
+
+
+.. class:: ExamplePharmacyServiceCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ExamplePharmacyServiceCodes
+   From: http://hl7.org/fhir/ex-pharmaservice in valuesets.xml
+       This value set includes a smattering of Pharmacy Service codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/ex-pharmaservice
+
+      
+
+
+.. class:: ExamplePharmacyServiceCodesCodeValues
+
+   Smoking cessation
+   From: http://hl7.org/fhir/ex-pharmaservice in valuesets.xml
+
+   .. attribute:: SmokingCessation
+      
+
+      Flu Shot
+      From: http://hl7.org/fhir/ex-pharmaservice in valuesets.xml
+
+
+   .. attribute:: FluShot
+      
+
+      The wholesale price of the medication.
+      From: http://hl7.org/fhir/ex-pharmaservice in valuesets.xml
+
+
+   .. attribute:: DrugCost
+      
+
+      The additional cost assessed on the drug.
+      From: http://hl7.org/fhir/ex-pharmaservice in valuesets.xml
+
+
+   .. attribute:: Markup
+      
+
+      The professional fee charged for dispensing the product or service.
+      From: http://hl7.org/fhir/ex-pharmaservice in valuesets.xml
+
+
+   .. attribute:: DispenseFee
+      
+
+      The professional fee charged for compounding the medication.
+      From: http://hl7.org/fhir/ex-pharmaservice in valuesets.xml
+
+
+   .. attribute:: CompoundingFee
+      
+
+      
+
+

@@ -1,0 +1,58 @@
+:mod:`spark_auto_mapper_fhir.value_sets.allergy_intolerance_type`
+=================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.allergy_intolerance_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.allergy_intolerance_type.AllergyIntoleranceTypeCode
+   spark_auto_mapper_fhir.value_sets.allergy_intolerance_type.AllergyIntoleranceTypeCodeValues
+
+
+
+.. class:: AllergyIntoleranceTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   AllergyIntoleranceType
+   From: http://hl7.org/fhir/allergy-intolerance-type in valuesets.xml
+       Identification of the underlying physiological mechanism for a Reaction Risk.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/allergy-intolerance-type
+
+      
+
+
+.. class:: AllergyIntoleranceTypeCodeValues
+
+   A propensity for hypersensitive reaction(s) to a substance.  These reactions
+   are most typically type I hypersensitivity, plus other "allergy-like"
+   reactions, including pseudoallergy.
+   From: http://hl7.org/fhir/allergy-intolerance-type in valuesets.xml
+
+   .. attribute:: Allergy
+      
+
+      A propensity for adverse reactions to a substance that is not judged to be
+      allergic or "allergy-like".  These reactions are typically (but not
+      necessarily) non-immune.  They are to some degree idiosyncratic and/or
+      patient-specific (i.e. are not a reaction that is expected to occur with most
+      or all patients given similar circumstances).
+      From: http://hl7.org/fhir/allergy-intolerance-type in valuesets.xml
+
+
+   .. attribute:: Intolerance
+      
+
+      
+
+

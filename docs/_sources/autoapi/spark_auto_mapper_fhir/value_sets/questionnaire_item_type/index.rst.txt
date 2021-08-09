@@ -1,0 +1,62 @@
+:mod:`spark_auto_mapper_fhir.value_sets.questionnaire_item_type`
+================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.questionnaire_item_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.questionnaire_item_type.QuestionnaireItemTypeCode
+   spark_auto_mapper_fhir.value_sets.questionnaire_item_type.QuestionnaireItemTypeCodeValues
+
+
+
+.. class:: QuestionnaireItemTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   QuestionnaireItemType
+   From: http://hl7.org/fhir/item-type in valuesets.xml
+       Distinguishes groups from questions and display text and indicates data type
+   for questions.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/item-type
+
+      
+
+
+.. class:: QuestionnaireItemTypeCodeValues
+
+   An item with no direct answer but should have at least one child item.
+   From: http://hl7.org/fhir/item-type in valuesets.xml
+
+   .. attribute:: Group
+      
+
+      Text for display that will not capture an answer or have child items.
+      From: http://hl7.org/fhir/item-type in valuesets.xml
+
+
+   .. attribute:: Display
+      
+
+      An item that defines a specific answer to be captured, and which may have
+      child items. (the answer provided in the QuestionnaireResponse should be of
+      the defined datatype).
+      From: http://hl7.org/fhir/item-type in valuesets.xml
+
+
+   .. attribute:: Question
+      
+
+      
+
+

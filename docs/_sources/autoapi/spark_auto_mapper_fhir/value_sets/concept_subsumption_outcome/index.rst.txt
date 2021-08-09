@@ -1,0 +1,73 @@
+:mod:`spark_auto_mapper_fhir.value_sets.concept_subsumption_outcome`
+====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.concept_subsumption_outcome
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.concept_subsumption_outcome.ConceptSubsumptionOutcomeCode
+   spark_auto_mapper_fhir.value_sets.concept_subsumption_outcome.ConceptSubsumptionOutcomeCodeValues
+
+
+
+.. class:: ConceptSubsumptionOutcomeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ConceptSubsumptionOutcome
+   From: http://hl7.org/fhir/concept-subsumption-outcome in valuesets.xml
+       The subsumption relationship between code/Coding "A" and code/Coding "B".
+   There are 4 possible codes to be returned: equivalent, subsumes, subsumed-by,
+   and not-subsumed. If the server is unable to determine the relationship
+   between the codes/Codings, then it returns an error (i.e. an
+   OperationOutcome).
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/concept-subsumption-outcome
+
+      
+
+
+.. class:: ConceptSubsumptionOutcomeCodeValues
+
+   The two concepts are equivalent (have the same properties).
+   From: http://hl7.org/fhir/concept-subsumption-outcome in valuesets.xml
+
+   .. attribute:: Equivalent
+      
+
+      Coding/code "A" subsumes Coding/code "B" (e.g. B has all the properties A has,
+      and some of it's own).
+      From: http://hl7.org/fhir/concept-subsumption-outcome in valuesets.xml
+
+
+   .. attribute:: Subsumes
+      
+
+      Coding/code "A" is subsumed by Coding/code "B" (e.g. A has all the properties
+      B has, and some of it's own).
+      From: http://hl7.org/fhir/concept-subsumption-outcome in valuesets.xml
+
+
+   .. attribute:: Subsumed_By
+      
+
+      Coding/code "A" and Coding/code "B" are disjoint (e.g. each has propeties that
+      the other doesn't have).
+      From: http://hl7.org/fhir/concept-subsumption-outcome in valuesets.xml
+
+
+   .. attribute:: Not_Subsumed
+      
+
+      
+
+

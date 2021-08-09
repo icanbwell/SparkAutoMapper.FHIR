@@ -1,0 +1,63 @@
+:mod:`spark_auto_mapper_fhir.value_sets.human_name_assembly_order`
+==================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.human_name_assembly_order
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.human_name_assembly_order.HumanNameAssemblyOrderCode
+   spark_auto_mapper_fhir.value_sets.human_name_assembly_order.HumanNameAssemblyOrderCodeValues
+
+
+
+.. class:: HumanNameAssemblyOrderCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   HumanNameAssemblyOrder
+   From: http://terminology.hl7.org/CodeSystem/name-assembly-order in valuesets.xml
+       A code that represents the preferred display order of the components of a
+   human name.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/name-assembly-order
+
+      
+
+
+.. class:: HumanNameAssemblyOrderCodeValues
+
+   From: http://terminology.hl7.org/CodeSystem/name-assembly-order in valuesets.xml
+
+   .. attribute:: OwnName
+      
+
+      From: http://terminology.hl7.org/CodeSystem/name-assembly-order in valuesets.xml
+
+
+   .. attribute:: PartnerName
+      
+
+      From: http://terminology.hl7.org/CodeSystem/name-assembly-order in valuesets.xml
+
+
+   .. attribute:: PartnerNameFollowedByMaidenName
+      
+
+      From: http://terminology.hl7.org/CodeSystem/name-assembly-order in valuesets.xml
+
+
+   .. attribute:: OwnNameFollowedByPartnerName
+      
+
+      
+
+

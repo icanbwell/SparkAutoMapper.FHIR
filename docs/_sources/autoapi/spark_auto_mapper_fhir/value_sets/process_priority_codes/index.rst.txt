@@ -1,0 +1,59 @@
+:mod:`spark_auto_mapper_fhir.value_sets.process_priority_codes`
+===============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.process_priority_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.process_priority_codes.ProcessPriorityCodesCode
+   spark_auto_mapper_fhir.value_sets.process_priority_codes.ProcessPriorityCodesCodeValues
+
+
+
+.. class:: ProcessPriorityCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ProcessPriorityCodes
+   From: http://terminology.hl7.org/CodeSystem/processpriority in valuesets.xml
+       This value set includes the financial processing priority codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/processpriority
+
+      
+
+
+.. class:: ProcessPriorityCodesCodeValues
+
+   Immediately in real time.
+   From: http://terminology.hl7.org/CodeSystem/processpriority in valuesets.xml
+
+   .. attribute:: Immediate
+      
+
+      With best effort.
+      From: http://terminology.hl7.org/CodeSystem/processpriority in valuesets.xml
+
+
+   .. attribute:: Normal
+      
+
+      Later, when possible.
+      From: http://terminology.hl7.org/CodeSystem/processpriority in valuesets.xml
+
+
+   .. attribute:: Deferred
+      
+
+      
+
+

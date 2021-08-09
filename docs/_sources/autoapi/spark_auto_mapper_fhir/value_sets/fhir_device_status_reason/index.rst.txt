@@ -1,0 +1,94 @@
+:mod:`spark_auto_mapper_fhir.value_sets.fhir_device_status_reason`
+==================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.fhir_device_status_reason
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.fhir_device_status_reason.FHIRDeviceStatusReasonCode
+   spark_auto_mapper_fhir.value_sets.fhir_device_status_reason.FHIRDeviceStatusReasonCodeValues
+
+
+
+.. class:: FHIRDeviceStatusReasonCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   FHIRDeviceStatusReason
+   From: http://terminology.hl7.org/CodeSystem/device-status-reason in valuesets.xml
+       The availability status reason of the device.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/device-status-reason
+
+      
+
+
+.. class:: FHIRDeviceStatusReasonCodeValues
+
+   The device is off.
+   From: http://terminology.hl7.org/CodeSystem/device-status-reason in valuesets.xml
+
+   .. attribute:: Online
+      
+
+      The device is paused.
+      From: http://terminology.hl7.org/CodeSystem/device-status-reason in valuesets.xml
+
+
+   .. attribute:: Paused
+      
+
+      The device is ready but not actively operating.
+      From: http://terminology.hl7.org/CodeSystem/device-status-reason in valuesets.xml
+
+
+   .. attribute:: Standby
+      
+
+      The device is offline.
+      From: http://terminology.hl7.org/CodeSystem/device-status-reason in valuesets.xml
+
+
+   .. attribute:: Offline
+      
+
+      The device is not ready.
+      From: http://terminology.hl7.org/CodeSystem/device-status-reason in valuesets.xml
+
+
+   .. attribute:: NotReady
+      
+
+      The device transducer is disconnected.
+      From: http://terminology.hl7.org/CodeSystem/device-status-reason in valuesets.xml
+
+
+   .. attribute:: TransducerDisconnected
+      
+
+      The device hardware is disconnected.
+      From: http://terminology.hl7.org/CodeSystem/device-status-reason in valuesets.xml
+
+
+   .. attribute:: HardwareDisconnected
+      
+
+      The device is off.
+      From: http://terminology.hl7.org/CodeSystem/device-status-reason in valuesets.xml
+
+
+   .. attribute:: Off
+      
+
+      
+
+

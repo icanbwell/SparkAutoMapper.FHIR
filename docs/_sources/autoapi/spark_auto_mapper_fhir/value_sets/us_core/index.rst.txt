@@ -1,0 +1,16 @@
+:mod:`spark_auto_mapper_fhir.value_sets.us_core`
+================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.us_core
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   detailed_ethnicity/index.rst
+   omb_ethnicity_category/index.rst
+
+

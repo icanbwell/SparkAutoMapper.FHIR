@@ -1,0 +1,73 @@
+:mod:`spark_auto_mapper_fhir.value_sets.table_rules`
+====================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.table_rules
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.table_rules.TableRules
+   spark_auto_mapper_fhir.value_sets.table_rules.TableRulesValues
+
+
+
+.. class:: TableRules(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.TableRules
+   From: http://terminology.hl7.org/ValueSet/v3-TableRules in v3-codesystems.xml
+        These values are defined within the XHTML 4.0 Table Model
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-TableRules
+
+      
+
+
+.. class:: TableRulesValues
+
+   all
+   From: http://terminology.hl7.org/CodeSystem/v3-TableRules in v3-codesystems.xml
+
+   .. attribute:: All
+      
+
+      cols
+      From: http://terminology.hl7.org/CodeSystem/v3-TableRules in v3-codesystems.xml
+
+
+   .. attribute:: Cols
+      
+
+      groups
+      From: http://terminology.hl7.org/CodeSystem/v3-TableRules in v3-codesystems.xml
+
+
+   .. attribute:: Groups
+      
+
+      none
+      From: http://terminology.hl7.org/CodeSystem/v3-TableRules in v3-codesystems.xml
+
+
+   .. attribute:: None_
+      
+
+      rows
+      From: http://terminology.hl7.org/CodeSystem/v3-TableRules in v3-codesystems.xml
+
+
+   .. attribute:: Rows
+      
+
+      
+
+

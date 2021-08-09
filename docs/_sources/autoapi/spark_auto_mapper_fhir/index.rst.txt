@@ -1,0 +1,32 @@
+:mod:`spark_auto_mapper_fhir`
+=============================
+
+.. py:module:: spark_auto_mapper_fhir
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   backbone_elements/index.rst
+   base_types/index.rst
+   complex_types/index.rst
+   extensions/index.rst
+   fhir_types/index.rst
+   generator/index.rst
+   resources/index.rst
+   simple_types/index.rst
+   value_sets/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   classproperty/index.rst
+
+

@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.medicinal_product_manufacturing_business_operation`
+==================================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.medicinal_product_manufacturing_business_operation
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.medicinal_product_manufacturing_business_operation.MedicinalProductManufacturingBusinessOperation
+
+
+
+.. class:: MedicinalProductManufacturingBusinessOperation(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, operationType: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, authorisationReferenceNumber: Optional[spark_auto_mapper_fhir.complex_types.identifier.Identifier] = None, effectiveDate: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, confidentialityIndicator: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, manufacturer: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.organization.Organization]]] = None, regulator: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.organization.Organization]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   MedicinalProduct.ManufacturingBusinessOperation
+   Detailed definition of a medicinal product, typically for uses other than direct patient care (e.g. regulatory use).
+
+

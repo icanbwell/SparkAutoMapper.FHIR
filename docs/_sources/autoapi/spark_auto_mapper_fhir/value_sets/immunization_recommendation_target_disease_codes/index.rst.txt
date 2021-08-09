@@ -1,0 +1,96 @@
+:mod:`spark_auto_mapper_fhir.value_sets.immunization_recommendation_target_disease_codes`
+=========================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.immunization_recommendation_target_disease_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.immunization_recommendation_target_disease_codes.ImmunizationRecommendationTargetDiseaseCodesCode
+   spark_auto_mapper_fhir.value_sets.immunization_recommendation_target_disease_codes.ImmunizationRecommendationTargetDiseaseCodesCodeValues
+
+
+
+.. class:: ImmunizationRecommendationTargetDiseaseCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ImmunizationRecommendationTargetDiseaseCodes
+   From: http://hl7.org/fhir/ValueSet/immunization-recommendation-target-disease in valuesets.xml
+       The value set to instantiate this attribute should be drawn from a
+   terminologically robust code system that consists of or contains concepts to
+   support describing the disease targeted by a vaccination recommendation. This
+   value set is provided as a suggestive example and includes the SNOMED CT
+   concepts from the 64572001 (Disease) hierarchy.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+
+.. class:: ImmunizationRecommendationTargetDiseaseCodesCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/immunization-recommendation-target-disease in valuesets.xml
+
+   .. attribute:: _1857005
+      
+
+      From: http://hl7.org/fhir/ValueSet/immunization-recommendation-target-disease in valuesets.xml
+
+
+   .. attribute:: _397430003
+      
+
+      From: http://hl7.org/fhir/ValueSet/immunization-recommendation-target-disease in valuesets.xml
+
+
+   .. attribute:: _14189004
+      
+
+      From: http://hl7.org/fhir/ValueSet/immunization-recommendation-target-disease in valuesets.xml
+
+
+   .. attribute:: _36989005
+      
+
+      From: http://hl7.org/fhir/ValueSet/immunization-recommendation-target-disease in valuesets.xml
+
+
+   .. attribute:: _36653000
+      
+
+      From: http://hl7.org/fhir/ValueSet/immunization-recommendation-target-disease in valuesets.xml
+
+
+   .. attribute:: _76902006
+      
+
+      From: http://hl7.org/fhir/ValueSet/immunization-recommendation-target-disease in valuesets.xml
+
+
+   .. attribute:: _709410003
+      
+
+      From: http://hl7.org/fhir/ValueSet/immunization-recommendation-target-disease in valuesets.xml
+
+
+   .. attribute:: _27836007
+      
+
+      From: http://hl7.org/fhir/ValueSet/immunization-recommendation-target-disease in valuesets.xml
+
+
+   .. attribute:: _398102009
+      
+
+      
+
+

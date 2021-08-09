@@ -1,0 +1,45 @@
+:mod:`spark_auto_mapper_fhir.value_sets.act_site`
+=================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.act_site
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.act_site.ActSite
+   spark_auto_mapper_fhir.value_sets.act_site.ActSiteValues
+
+
+
+.. class:: ActSite(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.ActSite
+   From: http://terminology.hl7.org/ValueSet/v3-ActSite in v3-codesystems.xml
+        An anatomical location on an organism which can be the focus of an act.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ActSite
+
+      
+
+
+.. class:: ActSiteValues
+
+   An anatomical location on a human which can be the focus of an act.
+   From: http://terminology.hl7.org/CodeSystem/v3-ActSite in v3-codesystems.xml
+
+   .. attribute:: HumanActSite
+      
+
+      
+
+

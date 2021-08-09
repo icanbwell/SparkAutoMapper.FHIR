@@ -1,0 +1,61 @@
+:mod:`spark_auto_mapper_fhir.value_sets.flag_status`
+====================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.flag_status
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.flag_status.FlagStatusCode
+   spark_auto_mapper_fhir.value_sets.flag_status.FlagStatusCodeValues
+
+
+
+.. class:: FlagStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   FlagStatus
+   From: http://hl7.org/fhir/flag-status in valuesets.xml
+       Indicates whether this flag is active and needs to be displayed to a user, or
+   whether it is no longer needed or was entered in error.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/flag-status
+
+      
+
+
+.. class:: FlagStatusCodeValues
+
+   A current flag that should be displayed to a user. A system may use the
+   category to determine which user roles should view the flag.
+   From: http://hl7.org/fhir/flag-status in valuesets.xml
+
+   .. attribute:: Active
+      
+
+      The flag no longer needs to be displayed.
+      From: http://hl7.org/fhir/flag-status in valuesets.xml
+
+
+   .. attribute:: Inactive
+      
+
+      The flag was added in error and should no longer be displayed.
+      From: http://hl7.org/fhir/flag-status in valuesets.xml
+
+
+   .. attribute:: EnteredInError
+      
+
+      
+
+

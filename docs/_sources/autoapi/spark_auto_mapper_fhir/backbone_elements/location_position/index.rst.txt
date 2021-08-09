@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.location_position`
+=================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.location_position
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.location_position.LocationPosition
+
+
+
+.. class:: LocationPosition(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, longitude: spark_auto_mapper_fhir.fhir_types.decimal.FhirDecimal, latitude: spark_auto_mapper_fhir.fhir_types.decimal.FhirDecimal, altitude: Optional[spark_auto_mapper_fhir.fhir_types.decimal.FhirDecimal] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   Location.Position
+   Details and position information for a physical place where services are provided and resources and participants may be stored, found, contained, or accommodated.
+
+

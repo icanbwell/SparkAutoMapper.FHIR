@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.location_hours_of_operation`
+===========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.location_hours_of_operation
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.location_hours_of_operation.LocationHoursOfOperation
+
+
+
+.. class:: LocationHoursOfOperation(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, daysOfWeek: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.value_sets.days_of_week.DaysOfWeekCode]] = None, allDay: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, openingTime: Optional[spark_auto_mapper_fhir.fhir_types.time.FhirTime] = None, closingTime: Optional[spark_auto_mapper_fhir.fhir_types.time.FhirTime] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   Location.HoursOfOperation
+   Details and position information for a physical place where services are provided and resources and participants may be stored, found, contained, or accommodated.
+
+

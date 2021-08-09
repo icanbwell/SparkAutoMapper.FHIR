@@ -1,0 +1,34 @@
+:mod:`spark_auto_mapper_fhir.value_sets.procedure_performer_role_codes`
+=======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.procedure_performer_role_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.procedure_performer_role_codes.ProcedurePerformerRoleCodesCode
+
+
+
+.. class:: ProcedurePerformerRoleCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ProcedurePerformerRoleCodes
+   From: http://hl7.org/fhir/ValueSet/performer-role in valuesets.xml
+       This example value set defines the set of codes that can be used to indicate a
+   role of a procedure performer.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+

@@ -1,0 +1,321 @@
+:mod:`spark_auto_mapper_fhir.value_sets.vaccine_manufacturer`
+=============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.vaccine_manufacturer
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.vaccine_manufacturer.VaccineManufacturer
+   spark_auto_mapper_fhir.value_sets.vaccine_manufacturer.VaccineManufacturerValues
+
+
+
+.. class:: VaccineManufacturer(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.VaccineManufacturer
+   From: http://terminology.hl7.org/ValueSet/v3-VaccineManufacturer in v3-codesystems.xml
+        The manufacturer of a vaccine.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer
+
+      
+
+
+.. class:: VaccineManufacturerValues
+
+   Abbott Laboratories (includes Ross Products Division)
+   From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+   .. attribute:: AbbottLaboratories_includesRossProductsDivision_
+      
+
+      Adams Laboratories
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: AdamsLaboratories
+      
+
+      Alpha Therapeutic Corporation
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: AlphaTherapeuticCorporation
+      
+
+      Armour [Inactive-use CEN]
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: Armour_Inactive_UseCEN_
+      
+
+      Aviron
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: Aviron
+      
+
+      Baxter Healthcare Corporation
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: BaxterHealthcareCorporation
+      
+
+      Bayer Corporation (includes Miles, Inc. and Cutter Laboratories)
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: BayerCorporation_includesMiles_Inc_AndCutterLaboratories_
+      
+
+      Berna Products [Inactive-use BPC]
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: BernaProducts_Inactive_UseBPC_
+      
+
+      Berna Products Corporation (includes Swiss Serum and Vaccine Institute Berne)
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: BernaProductsCorporation_includesSwissSerumAndVaccineInstituteBerne_
+      
+
+      Centeon L.L.C. (includes Armour Pharmaceutical Company)
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: CenteonL_L_C_includesArmourPharmaceuticalCompany_
+      
+
+      Chiron Corporation
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: ChironCorporation
+      
+
+      Connaught [Inactive-use PMC]
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: Connaught_Inactive_UsePMC_
+      
+
+      Evans Medical Limited (an affiliate of Medeva Pharmaceuticals, Inc.)
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: EvansMedicalLimited_anAffiliateOfMedevaPharmaceuticals_Inc_
+      
+
+      Greer Laboratories, Inc.
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: GreerLaboratories_Inc_
+      
+
+      Immuno International AG
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: ImmunoInternationalAG
+      
+
+      Merieux [Inactive-use PMC]
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: Merieux_Inactive_UsePMC_
+      
+
+      Immuno-U.S., Inc.
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: Immuno_U_S_Inc_
+      
+
+      The Research Foundation for Microbial Diseases of Osaka University (BIKEN)
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: TheResearchFoundationForMicrobialDiseasesOfOsakaUniversity_BIKEN_
+      
+
+      Korea Green Cross Corporation
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: KoreaGreenCrossCorporation
+      
+
+      Lederle [Inactive-use WAL]
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: Lederle_Inactive_UseWAL_
+      
+
+      Massachusetts Public Health Biologic Laboratories
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: MassachusettsPublicHealthBiologicLaboratories
+      
+
+      MedImmune, Inc.
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: MedImmune_Inc_
+      
+
+      Miles [Inactive-use BAY]
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: Miles_Inactive_UseBAY_
+      
+
+      Bioport Corporation (formerly Michigan Biologic Products Institute)
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: BioportCorporation_formerlyMichiganBiologicProductsInstitute_
+      
+
+      Merck & Co., Inc.
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: MerckAndCo_Inc_
+      
+
+      NABI (formerly North American Biologicals, Inc.)
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: NABI_formerlyNorthAmericanBiologicals_Inc_
+      
+
+      North American Vaccine, Inc.
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: NorthAmericanVaccine_Inc_
+      
+
+      Novartis Pharmaceutical Corporation (includes Ciba-Geigy Limited and Sandoz
+      Limited)
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: NovartisPharmaceuticalCorporation_includesCiba_GeigyLimitedAndSandozLimited_
+      
+
+      New York Blood Center
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: NewYorkBloodCenter
+      
+
+      Ortho Diagnostic Systems, Inc.
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: OrthoDiagnosticSystems_Inc_
+      
+
+      Organon Teknika Corporation
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: OrganonTeknikaCorporation
+      
+
+      Parkedale Pharmaceuticals (formerly Parke-Davis)
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: ParkedalePharmaceuticals_formerlyParke_Davis_
+      
+
+      Aventis Pasteur Inc. (formerly Pasteur Merieux Connaught; includes Connaught
+      Laboratories and Pasteur Merieux)
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: AventisPasteurInc_formerlyPasteurMerieuxConnaught_IncludesConnaughtLaboratoriesAndPasteurMerieux_
+      
+
+      Praxis Biologics [Inactive-use WAL]
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: PraxisBiologics_Inactive_UseWAL_
+      
+
+      Sclavo, Inc.
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: Sclavo_Inc_
+      
+
+      Swiss Serum and Vaccine Inst. [Inactive-use BPC]
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: SwissSerumAndVaccineInst_Inactive_UseBPC_
+      
+
+      SmithKline Beecham
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: SmithKlineBeecham
+      
+
+      United States Army Medical Research and Materiel Command
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: UnitedStatesArmyMedicalResearchAndMaterielCommand
+      
+
+      Wyeth-Ayerst [Inactive-use WAL]
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: Wyeth_Ayerst_Inactive_UseWAL_
+      
+
+      Wyeth-Ayerst (includes Wyeth-Lederle Vaccines and Pediatrics, Wyeth
+      Laboratories, Lederle Laboratories, and Praxis Biologics)
+      From: http://terminology.hl7.org/CodeSystem/v3-VaccineManufacturer in v3-codesystems.xml
+
+
+   .. attribute:: Wyeth_Ayerst_includesWyeth_LederleVaccinesAndPediatrics_WyethLaboratories_LederleLaboratories_AndPraxisBiologics_
+      
+
+      
+
+

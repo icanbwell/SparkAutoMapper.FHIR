@@ -1,0 +1,70 @@
+:mod:`spark_auto_mapper_fhir.value_sets.structure_map_model_mode`
+=================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.structure_map_model_mode
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.structure_map_model_mode.StructureMapModelModeCode
+   spark_auto_mapper_fhir.value_sets.structure_map_model_mode.StructureMapModelModeCodeValues
+
+
+
+.. class:: StructureMapModelModeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   StructureMapModelMode
+   From: http://hl7.org/fhir/map-model-mode in valuesets.xml
+       How the referenced structure is used in this mapping.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/map-model-mode
+
+      
+
+
+.. class:: StructureMapModelModeCodeValues
+
+   This structure describes an instance passed to the mapping engine that is used
+   a source of data.
+   From: http://hl7.org/fhir/map-model-mode in valuesets.xml
+
+   .. attribute:: SourceStructureDefinition
+      
+
+      This structure describes an instance that the mapping engine may ask for that
+      is used a source of data.
+      From: http://hl7.org/fhir/map-model-mode in valuesets.xml
+
+
+   .. attribute:: QueriedStructureDefinition
+      
+
+      This structure describes an instance passed to the mapping engine that is used
+      a target of data.
+      From: http://hl7.org/fhir/map-model-mode in valuesets.xml
+
+
+   .. attribute:: TargetStructureDefinition
+      
+
+      This structure describes an instance that the mapping engine may ask to create
+      that is used a target of data.
+      From: http://hl7.org/fhir/map-model-mode in valuesets.xml
+
+
+   .. attribute:: ProducedStructureDefinition
+      
+
+      
+
+

@@ -1,0 +1,66 @@
+:mod:`spark_auto_mapper_fhir.value_sets.example_program_reason_codes`
+=====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.example_program_reason_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.example_program_reason_codes.ExampleProgramReasonCodesCode
+   spark_auto_mapper_fhir.value_sets.example_program_reason_codes.ExampleProgramReasonCodesCodeValues
+
+
+
+.. class:: ExampleProgramReasonCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ExampleProgramReasonCodes
+   From: http://terminology.hl7.org/CodeSystem/ex-programcode in valuesets.xml
+       This value set includes sample Program Reason Span codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/ex-programcode
+
+      
+
+
+.. class:: ExampleProgramReasonCodesCodeValues
+
+   Child Asthma Program
+   From: http://terminology.hl7.org/CodeSystem/ex-programcode in valuesets.xml
+
+   .. attribute:: ChildAsthma
+      
+
+      Hemodialysis Program.
+      From: http://terminology.hl7.org/CodeSystem/ex-programcode in valuesets.xml
+
+
+   .. attribute:: Hemodialysis
+      
+
+      Autism Screening Program.
+      From: http://terminology.hl7.org/CodeSystem/ex-programcode in valuesets.xml
+
+
+   .. attribute:: AutismScreening
+      
+
+      No program code applies.
+      From: http://terminology.hl7.org/CodeSystem/ex-programcode in valuesets.xml
+
+
+   .. attribute:: None_
+      
+
+      
+
+

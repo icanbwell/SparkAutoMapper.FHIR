@@ -1,0 +1,34 @@
+:mod:`spark_auto_mapper_fhir.resources.binary`
+==============================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.binary
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.binary.Binary
+
+
+
+.. class:: Binary(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, contentType: spark_auto_mapper_fhir.value_sets.mime_types.MimeTypesCode, securityContext: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.resource.Resource]] = None, data: Optional[spark_auto_mapper_fhir.fhir_types.base64_binary.FhirBase64Binary] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   Binary
+   binary.xsd
+       A resource that represents the data of a single raw artifact as digital
+   content accessible in its native format.  A Binary resource can contain any
+   content, whether text, image, pdf, zip archive, etc.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

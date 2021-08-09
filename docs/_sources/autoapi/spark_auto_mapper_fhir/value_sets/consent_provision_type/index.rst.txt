@@ -1,0 +1,53 @@
+:mod:`spark_auto_mapper_fhir.value_sets.consent_provision_type`
+===============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.consent_provision_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.consent_provision_type.ConsentProvisionTypeCode
+   spark_auto_mapper_fhir.value_sets.consent_provision_type.ConsentProvisionTypeCodeValues
+
+
+
+.. class:: ConsentProvisionTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ConsentProvisionType
+   From: http://hl7.org/fhir/consent-provision-type in valuesets.xml
+       How a rule statement is applied, such as adding additional consent or removing
+   consent.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/consent-provision-type
+
+      
+
+
+.. class:: ConsentProvisionTypeCodeValues
+
+   Consent is denied for actions meeting these rules.
+   From: http://hl7.org/fhir/consent-provision-type in valuesets.xml
+
+   .. attribute:: OptOut
+      
+
+      Consent is provided for actions meeting these rules.
+      From: http://hl7.org/fhir/consent-provision-type in valuesets.xml
+
+
+   .. attribute:: OptIn
+      
+
+      
+
+

@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.substance_protein_subunit`
+=========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.substance_protein_subunit
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.substance_protein_subunit.SubstanceProteinSubunit
+
+
+
+.. class:: SubstanceProteinSubunit(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, subunit: Optional[spark_auto_mapper_fhir.fhir_types.integer.FhirInteger] = None, sequence: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, length: Optional[spark_auto_mapper_fhir.fhir_types.integer.FhirInteger] = None, sequenceAttachment: Optional[spark_auto_mapper_fhir.complex_types.attachment.Attachment] = None, nTerminalModificationId: Optional[spark_auto_mapper_fhir.complex_types.identifier.Identifier] = None, nTerminalModification: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, cTerminalModificationId: Optional[spark_auto_mapper_fhir.complex_types.identifier.Identifier] = None, cTerminalModification: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   SubstanceProtein.Subunit
+   A SubstanceProtein is defined as a single unit of a linear amino acid sequence, or a combination of subunits that are either covalently linked or have a defined invariant stoichiometric relationship. This includes all synthetic, recombinant and purified SubstanceProteins of defined sequence, whether the use is therapeutic or prophylactic. This set of elements will be used to describe albumins, coagulation factors, cytokines, growth factors, peptide/SubstanceProtein hormones, enzymes, toxins, toxoids, recombinant vaccines, and immunomodulators.
+
+

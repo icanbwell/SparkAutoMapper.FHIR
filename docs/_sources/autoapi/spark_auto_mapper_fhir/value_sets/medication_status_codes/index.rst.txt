@@ -1,0 +1,98 @@
+:mod:`spark_auto_mapper_fhir.value_sets.medication_status_codes`
+================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.medication_status_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.medication_status_codes.MedicationStatusCodesCode
+   spark_auto_mapper_fhir.value_sets.medication_status_codes.MedicationStatusCodesCodeValues
+
+
+
+.. class:: MedicationStatusCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   Medication Status Codes
+   From: http://hl7.org/fhir/CodeSystem/medication-statement-status in valuesets.xml
+       Medication Status Codes
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/CodeSystem/medication-statement-status
+
+      
+
+
+.. class:: MedicationStatusCodesCodeValues
+
+   The medication is still being taken.
+   From: http://hl7.org/fhir/CodeSystem/medication-statement-status in valuesets.xml
+
+   .. attribute:: Active
+      
+
+      The medication is no longer being taken.
+      From: http://hl7.org/fhir/CodeSystem/medication-statement-status in valuesets.xml
+
+
+   .. attribute:: Completed
+      
+
+      Some of the actions that are implied by the medication statement may have
+      occurred.  For example, the patient may have taken some of the medication.
+      Clinical decision support systems should take this status into account.
+      From: http://hl7.org/fhir/CodeSystem/medication-statement-status in valuesets.xml
+
+
+   .. attribute:: EnteredInError
+      
+
+      The medication may be taken at some time in the future.
+      From: http://hl7.org/fhir/CodeSystem/medication-statement-status in valuesets.xml
+
+
+   .. attribute:: Intended
+      
+
+      Actions implied by the statement have been permanently halted, before all of
+      them occurred. This should not be used if the statement was entered in error.
+      From: http://hl7.org/fhir/CodeSystem/medication-statement-status in valuesets.xml
+
+
+   .. attribute:: Stopped
+      
+
+      Actions implied by the statement have been temporarily halted, but are
+      expected to continue later. May also be called 'suspended'.
+      From: http://hl7.org/fhir/CodeSystem/medication-statement-status in valuesets.xml
+
+
+   .. attribute:: OnHold
+      
+
+      The state of the medication use is not currently known.
+      From: http://hl7.org/fhir/CodeSystem/medication-statement-status in valuesets.xml
+
+
+   .. attribute:: Unknown
+      
+
+      The medication was not consumed by the patient
+      From: http://hl7.org/fhir/CodeSystem/medication-statement-status in valuesets.xml
+
+
+   .. attribute:: NotTaken
+      
+
+      
+
+

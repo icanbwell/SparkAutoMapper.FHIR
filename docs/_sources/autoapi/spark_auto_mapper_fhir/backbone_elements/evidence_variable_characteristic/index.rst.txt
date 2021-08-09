@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.evidence_variable_characteristic`
+================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.evidence_variable_characteristic
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.evidence_variable_characteristic.EvidenceVariableCharacteristic
+
+
+
+.. class:: EvidenceVariableCharacteristic(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, description: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, definitionReference: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.group.Group]] = None, definitionCanonical: Optional[spark_auto_mapper_fhir.fhir_types.canonical.FhirCanonical] = None, definitionCodeableConcept: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, definitionExpression: Optional[spark_auto_mapper_fhir.complex_types.expression.Expression] = None, definitionDataRequirement: Optional[spark_auto_mapper_fhir.complex_types.data_requirement.DataRequirement] = None, definitionTriggerDefinition: Optional[spark_auto_mapper_fhir.complex_types.trigger_definition.TriggerDefinition] = None, usageContext: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.usage_context.UsageContext]] = None, exclude: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, participantEffectiveDateTime: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, participantEffectivePeriod: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, participantEffectiveDuration: Optional[spark_auto_mapper_fhir.complex_types.duration.Duration] = None, participantEffectiveTiming: Optional[spark_auto_mapper_fhir.backbone_elements.timing.Timing] = None, timeFromStart: Optional[spark_auto_mapper_fhir.complex_types.duration.Duration] = None, groupMeasure: Optional[spark_auto_mapper_fhir.value_sets.group_measure.GroupMeasureCode] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   EvidenceVariable.Characteristic
+   The EvidenceVariable resource describes a "PICO" element that knowledge (evidence, assertion, recommendation) is about.
+
+
