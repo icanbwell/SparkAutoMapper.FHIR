@@ -1,0 +1,66 @@
+:mod:`spark_auto_mapper_fhir.value_sets.fluid_consistency_type_codes`
+=====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.fluid_consistency_type_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.fluid_consistency_type_codes.FluidConsistencyTypeCodesCode
+   spark_auto_mapper_fhir.value_sets.fluid_consistency_type_codes.FluidConsistencyTypeCodesCodeValues
+
+
+
+.. class:: FluidConsistencyTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   FluidConsistencyTypeCodes
+   From: http://hl7.org/fhir/ValueSet/consistency-type in valuesets.xml
+       FluidConsistencyType :  Codes used to represent the consistency of fluids and
+   liquids provided to the patient. This value set includes concepts from [SNOMED
+   CT](http://snomed.info/sct)(US Extension) where concept is a 435681000124103
+   (Dietary liquid consistency diet (regime/therapy)). It is provided as a
+   suggestive example.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+
+.. class:: FluidConsistencyTypeCodesCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/consistency-type in valuesets.xml
+
+   .. attribute:: HoneyThickLiquid
+      
+
+      From: http://hl7.org/fhir/ValueSet/consistency-type in valuesets.xml
+
+
+   .. attribute:: NectarThickLiquid
+      
+
+      From: http://hl7.org/fhir/ValueSet/consistency-type in valuesets.xml
+
+
+   .. attribute:: SpoonThickLiquid
+      
+
+      From: http://hl7.org/fhir/ValueSet/consistency-type in valuesets.xml
+
+
+   .. attribute:: ThinLiquid
+      
+
+      
+
+

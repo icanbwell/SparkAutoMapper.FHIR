@@ -1,0 +1,59 @@
+:mod:`spark_auto_mapper_fhir.value_sets.benefit_term_codes`
+===========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.benefit_term_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.benefit_term_codes.BenefitTermCodesCode
+   spark_auto_mapper_fhir.value_sets.benefit_term_codes.BenefitTermCodesCodeValues
+
+
+
+.. class:: BenefitTermCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   BenefitTermCodes
+   From: http://terminology.hl7.org/CodeSystem/benefit-term in valuesets.xml
+       This value set includes a smattering of Benefit Term codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/benefit-term
+
+      
+
+
+.. class:: BenefitTermCodesCodeValues
+
+   Annual, renewing on the anniversary
+   From: http://terminology.hl7.org/CodeSystem/benefit-term in valuesets.xml
+
+   .. attribute:: Annual
+      
+
+      Per day
+      From: http://terminology.hl7.org/CodeSystem/benefit-term in valuesets.xml
+
+
+   .. attribute:: Day
+      
+
+      For the total term, lifetime, of the policy or coverage
+      From: http://terminology.hl7.org/CodeSystem/benefit-term in valuesets.xml
+
+
+   .. attribute:: Lifetime
+      
+
+      
+
+

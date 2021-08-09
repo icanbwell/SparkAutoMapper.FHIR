@@ -1,0 +1,60 @@
+:mod:`spark_auto_mapper_fhir.value_sets.evidence_variant_state`
+===============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.evidence_variant_state
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.evidence_variant_state.EvidenceVariantStateCode
+   spark_auto_mapper_fhir.value_sets.evidence_variant_state.EvidenceVariantStateCodeValues
+
+
+
+.. class:: EvidenceVariantStateCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   EvidenceVariantState
+   From: http://terminology.hl7.org/CodeSystem/evidence-variant-state in valuesets.xml
+       Used for results by exposure in variant states such as low-risk, medium-risk
+   and high-risk states.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/evidence-variant-state
+
+      
+
+
+.. class:: EvidenceVariantStateCodeValues
+
+   low risk estimate.
+   From: http://terminology.hl7.org/CodeSystem/evidence-variant-state in valuesets.xml
+
+   .. attribute:: LowRisk
+      
+
+      medium risk estimate.
+      From: http://terminology.hl7.org/CodeSystem/evidence-variant-state in valuesets.xml
+
+
+   .. attribute:: MediumRisk
+      
+
+      high risk estimate.
+      From: http://terminology.hl7.org/CodeSystem/evidence-variant-state in valuesets.xml
+
+
+   .. attribute:: HighRisk
+      
+
+      
+
+

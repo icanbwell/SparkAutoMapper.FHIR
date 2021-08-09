@@ -1,0 +1,34 @@
+:mod:`spark_auto_mapper_fhir.value_sets.v2_0201`
+================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.v2_0201
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.v2_0201.V2_0201
+
+
+
+.. class:: V2_0201(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v2.0201
+   From: http://terminology.hl7.org/ValueSet/v2-0201 in v2-tables.xml
+       FHIR Value set/code system definition for HL7 v2 table 0201 (
+   Telecommunication Use Code)
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/ValueSet/v2-0201
+
+      
+
+

@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.immunization_protocol_applied`
+=============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.immunization_protocol_applied
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.immunization_protocol_applied.ImmunizationProtocolApplied
+
+
+
+.. class:: ImmunizationProtocolApplied(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, series: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, authority: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.organization.Organization]] = None, targetDisease: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.immunization_target_disease_codes.ImmunizationTargetDiseaseCodesCode]]] = None, doseNumberPositiveInt: Optional[spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt] = None, doseNumberString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, seriesDosesPositiveInt: Optional[spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt] = None, seriesDosesString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   Immunization.ProtocolApplied
+   Describes the event of a patient being administered a vaccine or a record of an immunization as reported by a patient, a clinician or another party.
+
+

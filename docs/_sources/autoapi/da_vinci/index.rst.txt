@@ -1,0 +1,15 @@
+:mod:`da_vinci`
+===============
+
+.. py:module:: da_vinci
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   accepting_patients/index.rst
+
+

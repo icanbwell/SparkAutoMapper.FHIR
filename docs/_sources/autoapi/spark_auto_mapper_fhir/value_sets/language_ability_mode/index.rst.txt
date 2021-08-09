@@ -1,0 +1,83 @@
+:mod:`spark_auto_mapper_fhir.value_sets.language_ability_mode`
+==============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.language_ability_mode
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.language_ability_mode.LanguageAbilityMode
+   spark_auto_mapper_fhir.value_sets.language_ability_mode.LanguageAbilityModeValues
+
+
+
+.. class:: LanguageAbilityMode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.LanguageAbilityMode
+   From: http://terminology.hl7.org/ValueSet/v3-LanguageAbilityMode in v3-codesystems.xml
+        A value representing the method of expression of the language.  Example:
+   Expressed spoken, expressed written, expressed signed, received spoken,
+   received written, received signed.  OpenIssue:
+   Description copied from Concept Domain of same name.  Must be verified.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityMode
+
+      
+
+
+.. class:: LanguageAbilityModeValues
+
+   Expressed signed
+   From: http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityMode in v3-codesystems.xml
+
+   .. attribute:: ExpressedSigned
+      
+
+      Expressed spoken
+      From: http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityMode in v3-codesystems.xml
+
+
+   .. attribute:: ExpressedSpoken
+      
+
+      Expressed written
+      From: http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityMode in v3-codesystems.xml
+
+
+   .. attribute:: ExpressedWritten
+      
+
+      Received signed
+      From: http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityMode in v3-codesystems.xml
+
+
+   .. attribute:: ReceivedSigned
+      
+
+      Received spoken
+      From: http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityMode in v3-codesystems.xml
+
+
+   .. attribute:: ReceivedSpoken
+      
+
+      Received written
+      From: http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityMode in v3-codesystems.xml
+
+
+   .. attribute:: ReceivedWritten
+      
+
+      
+
+

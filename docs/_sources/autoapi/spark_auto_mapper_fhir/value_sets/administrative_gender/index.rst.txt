@@ -1,0 +1,66 @@
+:mod:`spark_auto_mapper_fhir.value_sets.administrative_gender`
+==============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.administrative_gender
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.administrative_gender.AdministrativeGenderCode
+   spark_auto_mapper_fhir.value_sets.administrative_gender.AdministrativeGenderCodeValues
+
+
+
+.. class:: AdministrativeGenderCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   AdministrativeGender
+   From: http://hl7.org/fhir/administrative-gender in valuesets.xml
+       The gender of a person used for administrative purposes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/administrative-gender
+
+      
+
+
+.. class:: AdministrativeGenderCodeValues
+
+   Male.
+   From: http://hl7.org/fhir/administrative-gender in valuesets.xml
+
+   .. attribute:: Male
+      
+
+      Female.
+      From: http://hl7.org/fhir/administrative-gender in valuesets.xml
+
+
+   .. attribute:: Female
+      
+
+      Other.
+      From: http://hl7.org/fhir/administrative-gender in valuesets.xml
+
+
+   .. attribute:: Other
+      
+
+      Unknown.
+      From: http://hl7.org/fhir/administrative-gender in valuesets.xml
+
+
+   .. attribute:: Unknown
+      
+
+      
+
+

@@ -1,0 +1,59 @@
+:mod:`spark_auto_mapper_fhir.value_sets.claim_payee_type_codes`
+===============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.claim_payee_type_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.claim_payee_type_codes.ClaimPayeeTypeCodesCode
+   spark_auto_mapper_fhir.value_sets.claim_payee_type_codes.ClaimPayeeTypeCodesCodeValues
+
+
+
+.. class:: ClaimPayeeTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   Claim Payee Type Codes
+   From: http://terminology.hl7.org/CodeSystem/payeetype in valuesets.xml
+       This value set includes sample Payee Type codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/payeetype
+
+      
+
+
+.. class:: ClaimPayeeTypeCodesCodeValues
+
+   The subscriber (policy holder) will be reimbursed.
+   From: http://terminology.hl7.org/CodeSystem/payeetype in valuesets.xml
+
+   .. attribute:: Subscriber
+      
+
+      Any benefit payable will be paid to the provider (Assignment of Benefit).
+      From: http://terminology.hl7.org/CodeSystem/payeetype in valuesets.xml
+
+
+   .. attribute:: Provider
+      
+
+      Any benefit payable will be paid to a third party such as a guarrantor.
+      From: http://terminology.hl7.org/CodeSystem/payeetype in valuesets.xml
+
+
+   .. attribute:: Provider
+      
+
+      
+
+

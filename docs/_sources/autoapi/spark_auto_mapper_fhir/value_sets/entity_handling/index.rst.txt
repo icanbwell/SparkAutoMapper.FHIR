@@ -1,0 +1,168 @@
+:mod:`spark_auto_mapper_fhir.value_sets.entity_handling`
+========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.entity_handling
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.entity_handling.EntityHandling
+   spark_auto_mapper_fhir.value_sets.entity_handling.EntityHandlingValues
+
+
+
+.. class:: EntityHandling(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.EntityHandling
+   From: http://terminology.hl7.org/ValueSet/v3-EntityHandling in v3-codesystems.xml
+       **** MISSING DEFINITIONS ****
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-EntityHandling
+
+      
+
+
+.. class:: EntityHandlingValues
+
+   Keep at ambient temperature, 22 +/- 2C
+   From: http://terminology.hl7.org/CodeSystem/v3-EntityHandling in v3-codesystems.xml
+
+   .. attribute:: AmbientTemperature
+      
+
+      Critical to keep at body temperature 36-38C
+      From: http://terminology.hl7.org/CodeSystem/v3-EntityHandling in v3-codesystems.xml
+
+
+   .. attribute:: BodyTemperature
+      
+
+      Critical ambient - must not be refrigerated or frozen.
+      From: http://terminology.hl7.org/CodeSystem/v3-EntityHandling in v3-codesystems.xml
+
+
+   .. attribute:: CriticalAmbientTemperature
+      
+
+      Critical. Do not expose to atmosphere.  Do not uncap.
+      From: http://terminology.hl7.org/CodeSystem/v3-EntityHandling in v3-codesystems.xml
+
+
+   .. attribute:: ProtectFromAir
+      
+
+      Critical frozen. Specimen must not be allowed to thaw until immediately prior
+      to testing.
+      From: http://terminology.hl7.org/CodeSystem/v3-EntityHandling in v3-codesystems.xml
+
+
+   .. attribute:: CriticalFrozen
+      
+
+      Critical refrigerated - must not be allowed to freeze or warm until imediately
+      prior to testing.
+      From: http://terminology.hl7.org/CodeSystem/v3-EntityHandling in v3-codesystems.xml
+
+
+   .. attribute:: CriticalRefrigeratedTemperature
+      
+
+      Deep Frozen -16 to -20C.
+      From: http://terminology.hl7.org/CodeSystem/v3-EntityHandling in v3-codesystems.xml
+
+
+   .. attribute:: DeepFrozen
+      
+
+      Keep in a dry environment
+      From: http://terminology.hl7.org/CodeSystem/v3-EntityHandling in v3-codesystems.xml
+
+
+   .. attribute:: Dry
+      
+
+      Keep frozen below 0 ?C
+      From: http://terminology.hl7.org/CodeSystem/v3-EntityHandling in v3-codesystems.xml
+
+
+   .. attribute:: Frozen
+      
+
+      Container is free of heavy metals, including lead.
+      From: http://terminology.hl7.org/CodeSystem/v3-EntityHandling in v3-codesystems.xml
+
+
+   .. attribute:: MetalFree
+      
+
+      Keep in liquid nitrogen
+      From: http://terminology.hl7.org/CodeSystem/v3-EntityHandling in v3-codesystems.xml
+
+
+   .. attribute:: Nitrogen
+      
+
+      Protect from light (eg. Wrap in aluminum foil).
+      From: http://terminology.hl7.org/CodeSystem/v3-EntityHandling in v3-codesystems.xml
+
+
+   .. attribute:: ProtectFromLight
+      
+
+      Do not shake
+      From: http://terminology.hl7.org/CodeSystem/v3-EntityHandling in v3-codesystems.xml
+
+
+   .. attribute:: DoNotShake
+      
+
+      Protect against shock
+      From: http://terminology.hl7.org/CodeSystem/v3-EntityHandling in v3-codesystems.xml
+
+
+   .. attribute:: NoShock
+      
+
+      Keep at refrigerated temperature:4-8C Accidental warming or freezing is of
+      little consequence.
+      From: http://terminology.hl7.org/CodeSystem/v3-EntityHandling in v3-codesystems.xml
+
+
+   .. attribute:: RefrigeratedTemperature
+      
+
+      Shake thoroughly before using
+      From: http://terminology.hl7.org/CodeSystem/v3-EntityHandling in v3-codesystems.xml
+
+
+   .. attribute:: ShakeBeforeUse
+      
+
+      Ultra cold frozen -75 to -85C.  Ultra cold freezer is typically at temperature
+      of dry ice.
+      From: http://terminology.hl7.org/CodeSystem/v3-EntityHandling in v3-codesystems.xml
+
+
+   .. attribute:: UltraFrozen
+      
+
+      Keep upright, do not turn upside down
+      From: http://terminology.hl7.org/CodeSystem/v3-EntityHandling in v3-codesystems.xml
+
+
+   .. attribute:: Upright
+      
+
+      
+
+

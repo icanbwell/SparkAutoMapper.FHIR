@@ -1,0 +1,34 @@
+:mod:`spark_auto_mapper_fhir.resources.audit_event`
+===================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.audit_event
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.audit_event.AuditEvent
+
+
+
+.. class:: AuditEvent(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, type_: spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.audit_event_id.AuditEventIDCode], subtype: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.audit_event_sub__type.AuditEventSub_TypeCode]]] = None, action: Optional[spark_auto_mapper_fhir.value_sets.audit_event_action.AuditEventActionCode] = None, period: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, recorded: spark_auto_mapper_fhir.fhir_types.instant.FhirInstant, outcome: Optional[spark_auto_mapper_fhir.value_sets.audit_event_outcome.AuditEventOutcomeCode] = None, outcomeDesc: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, purposeOfEvent: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.purpose_of_use.PurposeOfUse]]] = None, agent: spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.audit_event_agent.AuditEventAgent], source: spark_auto_mapper_fhir.backbone_elements.audit_event_source.AuditEventSource, entity: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.audit_event_entity.AuditEventEntity]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   AuditEvent
+   auditevent.xsd
+       A record of an event made for purposes of maintaining a security log. Typical
+   uses include detection of intrusion attempts and monitoring for inappropriate
+   usage.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

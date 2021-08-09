@@ -1,0 +1,36 @@
+:mod:`spark_auto_mapper_fhir.value_sets.diet_codes`
+===================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.diet_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.diet_codes.DietCodesCode
+
+
+
+.. class:: DietCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   DietCodes
+   From: http://hl7.org/fhir/ValueSet/diet-type in valuesets.xml
+       Codes that can be used to indicate the type of food being ordered for a
+   patient. This value set is provided as a suggestive example. It includes codes
+   from [SNOMED CT](http://snomed.info/sct) where concept is-a 182922004 (Dietary
+   regime (regime/therapy))
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+

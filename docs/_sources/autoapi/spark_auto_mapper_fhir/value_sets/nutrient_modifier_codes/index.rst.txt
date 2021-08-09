@@ -1,0 +1,60 @@
+:mod:`spark_auto_mapper_fhir.value_sets.nutrient_modifier_codes`
+================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.nutrient_modifier_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.nutrient_modifier_codes.NutrientModifierCodesCode
+   spark_auto_mapper_fhir.value_sets.nutrient_modifier_codes.NutrientModifierCodesCodeValues
+
+
+
+.. class:: NutrientModifierCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   NutrientModifierCodes
+   From: http://hl7.org/fhir/ValueSet/nutrient-code in valuesets.xml
+       NutrientModifier :  Codes for types of nutrients that are being modified such
+   as carbohydrate or sodium.  This value set includes codes from [SNOMED
+   CT](http://snomed.info/sct) where concept is-a 226355009
+   (Nutrients(substance)), and the concepts for Sodium, Potassium and Fluid. This
+   is provided as a suggestive example.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+
+.. class:: NutrientModifierCodesCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/nutrient-code in valuesets.xml
+
+   .. attribute:: Fluid
+      
+
+      From: http://hl7.org/fhir/ValueSet/nutrient-code in valuesets.xml
+
+
+   .. attribute:: Sodium
+      
+
+      From: http://hl7.org/fhir/ValueSet/nutrient-code in valuesets.xml
+
+
+   .. attribute:: Potassium
+      
+
+      
+
+

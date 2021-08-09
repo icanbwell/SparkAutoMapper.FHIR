@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.medication_knowledge_packaging`
+==============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.medication_knowledge_packaging
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.medication_knowledge_packaging.MedicationKnowledgePackaging
+
+
+
+.. class:: MedicationKnowledgePackaging(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, type_: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.medication_knowledge_package_type_codes.MedicationKnowledgePackageTypeCodesCode]] = None, quantity: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   MedicationKnowledge.Packaging
+   Information about a medication that is used to support knowledge.
+
+

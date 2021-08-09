@@ -1,0 +1,62 @@
+:mod:`spark_auto_mapper_fhir.value_sets.instance_availability`
+==============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.instance_availability
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.instance_availability.InstanceAvailabilityCode
+   spark_auto_mapper_fhir.value_sets.instance_availability.InstanceAvailabilityCodeValues
+
+
+
+.. class:: InstanceAvailabilityCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   InstanceAvailability
+   From: http://hl7.org/fhir/ValueSet/instance-availability in valuesets.xml
+       Availability of the resource.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://dicom.nema.org/resources/ontology/DCM
+
+      
+
+
+.. class:: InstanceAvailabilityCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/instance-availability in valuesets.xml
+
+   .. attribute:: ONLINE
+      
+
+      From: http://hl7.org/fhir/ValueSet/instance-availability in valuesets.xml
+
+
+   .. attribute:: OFFLINE
+      
+
+      From: http://hl7.org/fhir/ValueSet/instance-availability in valuesets.xml
+
+
+   .. attribute:: NEARLINE
+      
+
+      From: http://hl7.org/fhir/ValueSet/instance-availability in valuesets.xml
+
+
+   .. attribute:: UNAVAILABLE
+      
+
+      
+
+

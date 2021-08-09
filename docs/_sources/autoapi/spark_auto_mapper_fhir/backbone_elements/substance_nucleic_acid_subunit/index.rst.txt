@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.substance_nucleic_acid_subunit`
+==============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.substance_nucleic_acid_subunit
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.substance_nucleic_acid_subunit.SubstanceNucleicAcidSubunit
+
+
+
+.. class:: SubstanceNucleicAcidSubunit(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, subunit: Optional[spark_auto_mapper_fhir.fhir_types.integer.FhirInteger] = None, sequence: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, length: Optional[spark_auto_mapper_fhir.fhir_types.integer.FhirInteger] = None, sequenceAttachment: Optional[spark_auto_mapper_fhir.complex_types.attachment.Attachment] = None, fivePrime: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, threePrime: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, linkage: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.substance_nucleic_acid_linkage.SubstanceNucleicAcidLinkage]] = None, sugar: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.substance_nucleic_acid_sugar.SubstanceNucleicAcidSugar]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   SubstanceNucleicAcid.Subunit
+   Nucleic acids are defined by three distinct elements: the base, sugar and linkage. Individual substance/moiety IDs will be created for each of these elements. The nucleotide sequence will be always entered in the 5’-3’ direction.
+
+

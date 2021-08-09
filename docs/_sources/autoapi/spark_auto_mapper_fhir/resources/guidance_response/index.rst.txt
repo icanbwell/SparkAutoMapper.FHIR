@@ -1,0 +1,34 @@
+:mod:`spark_auto_mapper_fhir.resources.guidance_response`
+=========================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.guidance_response
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.guidance_response.GuidanceResponse
+
+
+
+.. class:: GuidanceResponse(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, requestIdentifier: Optional[spark_auto_mapper_fhir.complex_types.identifier.Identifier] = None, identifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.identifier.Identifier]] = None, moduleUri: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, moduleCanonical: Optional[spark_auto_mapper_fhir.fhir_types.canonical.FhirCanonical] = None, moduleCodeableConcept: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, status: spark_auto_mapper_fhir.value_sets.guidance_response_status.GuidanceResponseStatusCode, subject: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.group.Group)]]] = None, encounter: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.encounter.Encounter]] = None, occurrenceDateTime: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, performer: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.device.Device]] = None, reasonCode: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]]] = None, reasonReference: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.condition.Condition, spark_auto_mapper_fhir.resources.observation.Observation, spark_auto_mapper_fhir.resources.diagnostic_report.DiagnosticReport, spark_auto_mapper_fhir.resources.document_reference.DocumentReference)]]]] = None, note: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.annotation.Annotation]] = None, evaluationMessage: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.operation_outcome.OperationOutcome]]] = None, outputParameters: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.parameters.Parameters]] = None, result: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.care_plan.CarePlan, spark_auto_mapper_fhir.resources.request_group.RequestGroup)]]] = None, dataRequirement: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.data_requirement.DataRequirement]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   GuidanceResponse
+   guidanceresponse.xsd
+       A guidance response is the formal response to a guidance request, including
+   any output parameters returned by the evaluation, as well as the description
+   of any proposed actions to be taken.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

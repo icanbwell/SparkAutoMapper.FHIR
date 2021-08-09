@@ -1,0 +1,53 @@
+:mod:`spark_auto_mapper_fhir.value_sets.supply_type`
+====================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.supply_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.supply_type.SupplyTypeCode
+   spark_auto_mapper_fhir.value_sets.supply_type.SupplyTypeCodeValues
+
+
+
+.. class:: SupplyTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   SupplyType
+   From: http://terminology.hl7.org/CodeSystem/supply-kind in valuesets.xml
+       This value sets refers to a Category of supply.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/supply-kind
+
+      
+
+
+.. class:: SupplyTypeCodeValues
+
+   Supply is stored and requested from central supply.
+   From: http://terminology.hl7.org/CodeSystem/supply-kind in valuesets.xml
+
+   .. attribute:: CentralSupply
+      
+
+      Supply is not onsite and must be requested from an outside vendor using a non-
+      stock requisition.
+      From: http://terminology.hl7.org/CodeSystem/supply-kind in valuesets.xml
+
+
+   .. attribute:: Non_Stock
+      
+
+      
+
+

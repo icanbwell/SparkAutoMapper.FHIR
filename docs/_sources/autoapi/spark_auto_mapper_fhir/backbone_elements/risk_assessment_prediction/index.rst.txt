@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.risk_assessment_prediction`
+==========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.risk_assessment_prediction
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.risk_assessment_prediction.RiskAssessmentPrediction
+
+
+
+.. class:: RiskAssessmentPrediction(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, outcome: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, probabilityDecimal: Optional[spark_auto_mapper_fhir.fhir_types.decimal.FhirDecimal] = None, probabilityRange: Optional[spark_auto_mapper_fhir.complex_types.range.Range] = None, qualitativeRisk: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.risk_probability.RiskProbabilityCode]] = None, relativeRisk: Optional[spark_auto_mapper_fhir.fhir_types.decimal.FhirDecimal] = None, whenPeriod: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, whenRange: Optional[spark_auto_mapper_fhir.complex_types.range.Range] = None, rationale: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   RiskAssessment.Prediction
+   An assessment of the likely outcome(s) for a patient or other subject as well as the likelihood of each outcome.
+
+

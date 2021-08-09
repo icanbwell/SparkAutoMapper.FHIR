@@ -1,0 +1,77 @@
+:mod:`spark_auto_mapper_fhir.value_sets.device_safety`
+======================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.device_safety
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.device_safety.DeviceSafetyCode
+   spark_auto_mapper_fhir.value_sets.device_safety.DeviceSafetyCodeValues
+
+
+
+.. class:: DeviceSafetyCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   DeviceSafety
+   From: http://hl7.org/fhir/ValueSet/device-safety in valuesets.xml
+       Codes used to identify medical devices safety characteristics. These codes are
+   taken from the [NCI
+   Thesaurus](https://ncit.nci.nih.gov/ncitbrowser/pages/home.jsf) and are
+   provided here as a suggestive example.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = urn:oid:2.16.840.1.113883.3.26.1.1
+
+      
+
+
+.. class:: DeviceSafetyCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/device-safety in valuesets.xml
+
+   .. attribute:: MagneticResonanceConditional
+      
+
+      From: http://hl7.org/fhir/ValueSet/device-safety in valuesets.xml
+
+
+   .. attribute:: MagneticResonanceSafe
+      
+
+      From: http://hl7.org/fhir/ValueSet/device-safety in valuesets.xml
+
+
+   .. attribute:: MagneticResonanceUnsafe
+      
+
+      From: http://hl7.org/fhir/ValueSet/device-safety in valuesets.xml
+
+
+   .. attribute:: LabelingDoesNotContainMRISafetyInformation
+      
+
+      From: http://hl7.org/fhir/ValueSet/device-safety in valuesets.xml
+
+
+   .. attribute:: LabeledAsContainingNaturalRubberLatex
+      
+
+      From: http://hl7.org/fhir/ValueSet/device-safety in valuesets.xml
+
+
+   .. attribute:: NotMadeWithNaturalRubberLatex
+      
+
+      
+
+

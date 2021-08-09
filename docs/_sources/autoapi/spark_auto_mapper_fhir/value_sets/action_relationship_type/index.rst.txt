@@ -1,0 +1,101 @@
+:mod:`spark_auto_mapper_fhir.value_sets.action_relationship_type`
+=================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.action_relationship_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.action_relationship_type.ActionRelationshipTypeCode
+   spark_auto_mapper_fhir.value_sets.action_relationship_type.ActionRelationshipTypeCodeValues
+
+
+
+.. class:: ActionRelationshipTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ActionRelationshipType
+   From: http://hl7.org/fhir/action-relationship-type in valuesets.xml
+       Defines the types of relationships between actions.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/action-relationship-type
+
+      
+
+
+.. class:: ActionRelationshipTypeCodeValues
+
+   The action must be performed before the start of the related action.
+   From: http://hl7.org/fhir/action-relationship-type in valuesets.xml
+
+   .. attribute:: BeforeStart
+      
+
+      The action must be performed before the related action.
+      From: http://hl7.org/fhir/action-relationship-type in valuesets.xml
+
+
+   .. attribute:: Before
+      
+
+      The action must be performed before the end of the related action.
+      From: http://hl7.org/fhir/action-relationship-type in valuesets.xml
+
+
+   .. attribute:: BeforeEnd
+      
+
+      The action must be performed concurrent with the start of the related action.
+      From: http://hl7.org/fhir/action-relationship-type in valuesets.xml
+
+
+   .. attribute:: ConcurrentWithStart
+      
+
+      The action must be performed concurrent with the related action.
+      From: http://hl7.org/fhir/action-relationship-type in valuesets.xml
+
+
+   .. attribute:: Concurrent
+      
+
+      The action must be performed concurrent with the end of the related action.
+      From: http://hl7.org/fhir/action-relationship-type in valuesets.xml
+
+
+   .. attribute:: ConcurrentWithEnd
+      
+
+      The action must be performed after the start of the related action.
+      From: http://hl7.org/fhir/action-relationship-type in valuesets.xml
+
+
+   .. attribute:: AfterStart
+      
+
+      The action must be performed after the related action.
+      From: http://hl7.org/fhir/action-relationship-type in valuesets.xml
+
+
+   .. attribute:: After
+      
+
+      The action must be performed after the end of the related action.
+      From: http://hl7.org/fhir/action-relationship-type in valuesets.xml
+
+
+   .. attribute:: AfterEnd
+      
+
+      
+
+

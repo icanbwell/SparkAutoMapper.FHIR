@@ -1,0 +1,52 @@
+:mod:`spark_auto_mapper_fhir.value_sets.adverse_event_seriousness`
+==================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.adverse_event_seriousness
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.adverse_event_seriousness.AdverseEventSeriousnessCode
+   spark_auto_mapper_fhir.value_sets.adverse_event_seriousness.AdverseEventSeriousnessCodeValues
+
+
+
+.. class:: AdverseEventSeriousnessCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   AdverseEventSeriousness
+   From: http://terminology.hl7.org/CodeSystem/adverse-event-seriousness in valuesets.xml
+       Overall seriousness of this event for the patient.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/adverse-event-seriousness
+
+      
+
+
+.. class:: AdverseEventSeriousnessCodeValues
+
+   Non-serious.
+   From: http://terminology.hl7.org/CodeSystem/adverse-event-seriousness in valuesets.xml
+
+   .. attribute:: Non_serious
+      
+
+      Serious.
+      From: http://terminology.hl7.org/CodeSystem/adverse-event-seriousness in valuesets.xml
+
+
+   .. attribute:: Serious
+      
+
+      
+
+

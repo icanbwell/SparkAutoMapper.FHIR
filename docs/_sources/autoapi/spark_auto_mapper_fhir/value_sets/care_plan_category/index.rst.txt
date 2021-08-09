@@ -1,0 +1,34 @@
+:mod:`spark_auto_mapper_fhir.value_sets.care_plan_category`
+===========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.care_plan_category
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.care_plan_category.CarePlanCategoryCode
+
+
+
+.. class:: CarePlanCategoryCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   CarePlanCategory
+   From: http://hl7.org/fhir/ValueSet/care-plan-category in valuesets.xml
+       Example codes indicating the category a care plan falls within.  Note that
+   these are in no way complete and might not even be appropriate for some uses.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+

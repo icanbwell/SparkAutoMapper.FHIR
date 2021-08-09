@@ -1,0 +1,99 @@
+:mod:`spark_auto_mapper_fhir.value_sets.fhir_specimen_collection_method`
+========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.fhir_specimen_collection_method
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.fhir_specimen_collection_method.FHIRSpecimenCollectionMethodCode
+   spark_auto_mapper_fhir.value_sets.fhir_specimen_collection_method.FHIRSpecimenCollectionMethodCodeValues
+
+
+
+.. class:: FHIRSpecimenCollectionMethodCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   FHIRSpecimenCollectionMethod
+   From: http://hl7.org/fhir/ValueSet/specimen-collection-method in valuesets.xml
+        This example value set defines a set of codes that can be used to indicate
+   the method by which a specimen was collected.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+
+.. class:: FHIRSpecimenCollectionMethodCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/specimen-collection-method in valuesets.xml
+
+   .. attribute:: Aspiration_Action
+      
+
+      From: http://hl7.org/fhir/ValueSet/specimen-collection-method in valuesets.xml
+
+
+   .. attribute:: Biopsy_Action
+      
+
+      From: http://hl7.org/fhir/ValueSet/specimen-collection-method in valuesets.xml
+
+
+   .. attribute:: Puncture_Action
+      
+
+      From: http://hl7.org/fhir/ValueSet/specimen-collection-method in valuesets.xml
+
+
+   .. attribute:: Excision_Action
+      
+
+      From: http://hl7.org/fhir/ValueSet/specimen-collection-method in valuesets.xml
+
+
+   .. attribute:: Scraping_Action
+      
+
+      From: http://hl7.org/fhir/ValueSet/specimen-collection-method in valuesets.xml
+
+
+   .. attribute:: UrineSpecimenCollection_CleanCatch
+      
+
+      From: http://hl7.org/fhir/ValueSet/specimen-collection-method in valuesets.xml
+
+
+   .. attribute:: TimedUrineCollection
+      
+
+      From: http://hl7.org/fhir/ValueSet/specimen-collection-method in valuesets.xml
+
+
+   .. attribute:: UrineSpecimenCollection_Catheterized
+      
+
+      From: http://hl7.org/fhir/ValueSet/specimen-collection-method in valuesets.xml
+
+
+   .. attribute:: CollectionOfCoughedSputum
+      
+
+      From: http://hl7.org/fhir/ValueSet/specimen-collection-method in valuesets.xml
+
+
+   .. attribute:: Finger_prickSampling
+      
+
+      
+
+

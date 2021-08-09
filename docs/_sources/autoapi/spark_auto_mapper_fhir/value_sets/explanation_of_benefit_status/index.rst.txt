@@ -1,0 +1,66 @@
+:mod:`spark_auto_mapper_fhir.value_sets.explanation_of_benefit_status`
+======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.explanation_of_benefit_status
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.explanation_of_benefit_status.ExplanationOfBenefitStatusCode
+   spark_auto_mapper_fhir.value_sets.explanation_of_benefit_status.ExplanationOfBenefitStatusCodeValues
+
+
+
+.. class:: ExplanationOfBenefitStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ExplanationOfBenefitStatus
+   From: http://hl7.org/fhir/explanationofbenefit-status in valuesets.xml
+       A code specifying the state of the resource instance.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/explanationofbenefit-status
+
+      
+
+
+.. class:: ExplanationOfBenefitStatusCodeValues
+
+   The resource instance is currently in-force.
+   From: http://hl7.org/fhir/explanationofbenefit-status in valuesets.xml
+
+   .. attribute:: Active
+      
+
+      The resource instance is withdrawn, rescinded or reversed.
+      From: http://hl7.org/fhir/explanationofbenefit-status in valuesets.xml
+
+
+   .. attribute:: Cancelled
+      
+
+      A new resource instance the contents of which is not complete.
+      From: http://hl7.org/fhir/explanationofbenefit-status in valuesets.xml
+
+
+   .. attribute:: Draft
+      
+
+      The resource instance was entered in error.
+      From: http://hl7.org/fhir/explanationofbenefit-status in valuesets.xml
+
+
+   .. attribute:: EnteredInError
+      
+
+      
+
+

@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.structure_map_dependent`
+=======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.structure_map_dependent
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.structure_map_dependent.StructureMapDependent
+
+
+
+.. class:: StructureMapDependent(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, name: spark_auto_mapper_fhir.fhir_types.id.FhirId, variable: spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.string.FhirString])
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   StructureMap.Dependent
+   A Map of relationships between 2 structures that can be used to transform data.
+
+

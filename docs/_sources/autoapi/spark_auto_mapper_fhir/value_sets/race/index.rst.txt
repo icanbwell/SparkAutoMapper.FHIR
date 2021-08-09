@@ -1,0 +1,95 @@
+:mod:`spark_auto_mapper_fhir.value_sets.race`
+=============================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.race
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.race.Race
+   spark_auto_mapper_fhir.value_sets.race.RaceValues
+
+
+
+.. class:: Race(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.Race
+   From: http://terminology.hl7.org/ValueSet/v3-Race in v3-codesystems.xml
+        In the United States, federal standards for classifying data on race
+   determine the categories used by federal agencies and exert a strong influence
+   on categorization by state and local agencies and private sector
+   organizations.  The federal standards do not conceptually define race, and
+   they recognize the absence of an anthropological or scientific basis for
+   racial classification.  Instead, the federal standards acknowledge that race
+   is a social-political construct in which an individual's own identification
+   with one more race categories is preferred to observer identification. The
+   standards use a variety of features to define five minimum race categories.
+   Among these features are descent from "the original peoples" of a specified
+   region or nation.  The minimum race categories are American Indian or Alaska
+   Native, Asian, Black or African American, Native Hawaiian or Other Pacific
+   Islander, and White.  The federal standards stipulate that race data need not
+   be limited to the five minimum categories, but any expansion must be
+   collapsible to those categories.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-Race
+
+      
+
+
+.. class:: RaceValues
+
+   American Indian or Alaska Native
+   From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
+
+   .. attribute:: AmericanIndianOrAlaskaNative
+      
+
+      Asian
+      From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
+
+
+   .. attribute:: Asian
+      
+
+      Black or African American
+      From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
+
+
+   .. attribute:: BlackOrAfricanAmerican
+      
+
+      Native Hawaiian or Other Pacific Islander
+      From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
+
+
+   .. attribute:: NativeHawaiianOrOtherPacificIslander
+      
+
+      White
+      From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
+
+
+   .. attribute:: White
+      
+
+      Note that this term remains in the table for completeness, even though within
+      HL7, the notion of Other code is deprecated.
+      From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
+
+
+   .. attribute:: OtherRace
+      
+
+      
+
+

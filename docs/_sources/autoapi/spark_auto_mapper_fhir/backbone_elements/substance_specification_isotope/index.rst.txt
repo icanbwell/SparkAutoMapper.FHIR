@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.substance_specification_isotope`
+===============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.substance_specification_isotope
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.substance_specification_isotope.SubstanceSpecificationIsotope
+
+
+
+.. class:: SubstanceSpecificationIsotope(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.complex_types.identifier.Identifier] = None, name: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, substitution: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, halfLife: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, molecularWeight: Optional[spark_auto_mapper_fhir.backbone_elements.substance_specification_molecular_weight.SubstanceSpecificationMolecularWeight] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   SubstanceSpecification.Isotope
+   The detailed description of a substance, typically at a level beyond what is used for prescribing.
+
+

@@ -1,0 +1,104 @@
+:mod:`spark_auto_mapper_fhir.value_sets.example_use_codes_for_list`
+===================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.example_use_codes_for_list
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.example_use_codes_for_list.ExampleUseCodesForListCode
+   spark_auto_mapper_fhir.value_sets.example_use_codes_for_list.ExampleUseCodesForListCodeValues
+
+
+
+.. class:: ExampleUseCodesForListCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ExampleUseCodesForList
+   From: http://terminology.hl7.org/CodeSystem/list-example-use-codes in valuesets.xml
+       Example use codes for the List resource - typical kinds of use.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/list-example-use-codes
+
+      
+
+
+.. class:: ExampleUseCodesForListCodeValues
+
+   A list of alerts for the patient.
+   From: http://terminology.hl7.org/CodeSystem/list-example-use-codes in valuesets.xml
+
+   .. attribute:: Alerts
+      
+
+      A list of part adverse reactions.
+      From: http://terminology.hl7.org/CodeSystem/list-example-use-codes in valuesets.xml
+
+
+   .. attribute:: AdverseReactions
+      
+
+      A list of Allergies for the patient.
+      From: http://terminology.hl7.org/CodeSystem/list-example-use-codes in valuesets.xml
+
+
+   .. attribute:: Allergies
+      
+
+      A list of medication statements for the patient.
+      From: http://terminology.hl7.org/CodeSystem/list-example-use-codes in valuesets.xml
+
+
+   .. attribute:: MedicationList
+      
+
+      A list of problems that the patient is known of have (or have had in the
+      past).
+      From: http://terminology.hl7.org/CodeSystem/list-example-use-codes in valuesets.xml
+
+
+   .. attribute:: ProblemList
+      
+
+      A list of items that constitute a set of work to be performed (typically this
+      code would be specialized for more specific uses, such as a ward round list).
+      From: http://terminology.hl7.org/CodeSystem/list-example-use-codes in valuesets.xml
+
+
+   .. attribute:: Worklist
+      
+
+      A list of items waiting for an event (perhaps a surgical patient waiting
+      list).
+      From: http://terminology.hl7.org/CodeSystem/list-example-use-codes in valuesets.xml
+
+
+   .. attribute:: WaitingList
+      
+
+      A set of protocols to be followed.
+      From: http://terminology.hl7.org/CodeSystem/list-example-use-codes in valuesets.xml
+
+
+   .. attribute:: Protocols
+      
+
+      A set of care plans that apply in a particular context of care.
+      From: http://terminology.hl7.org/CodeSystem/list-example-use-codes in valuesets.xml
+
+
+   .. attribute:: CarePlans
+      
+
+      
+
+

@@ -1,0 +1,85 @@
+:mod:`spark_auto_mapper_fhir.value_sets.confidentiality_classification`
+=======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.confidentiality_classification
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.confidentiality_classification.ConfidentialityClassification
+   spark_auto_mapper_fhir.value_sets.confidentiality_classification.ConfidentialityClassificationValues
+
+
+
+.. class:: ConfidentialityClassification(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.ConfidentialityClassification
+   From: http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification in v3-codesystems.xml
+        Set of codes used to value Act.Confidentiality and Role.Confidentiality
+   attribute in accordance with the definition for concept domain
+   "Confidentiality".
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-Confidentiality
+
+      
+
+
+.. class:: ConfidentialityClassificationValues
+
+   A specializable code and its leaf codes used in Confidentiality value sets to
+   value the Act.Confidentiality and Role.Confidentiality attribute in accordance
+   with the definition for concept domain "Confidentiality".
+   From: http://terminology.hl7.org/CodeSystem/v3-Confidentiality in v3-codesystems.xml
+
+   .. attribute:: Confidentiality
+      
+
+      Description: By accessing subject / role and relationship based  rights
+      (These concepts are mutually exclusive, one and only one is required for a
+      valid confidentiality coding.)
+
+
+                                 Deprecation Comment:Deprecated due to updated
+      confidentiality codes under ActCode
+      From: http://terminology.hl7.org/CodeSystem/v3-Confidentiality in v3-codesystems.xml
+
+
+   .. attribute:: ConfidentialityByAccessKind
+      
+
+      Description: By information type, only for service catalog entries (multiples
+      allowed). Not to be used with actual patient data!
+
+
+                                 Deprecation Comment:Deprecated due to updated
+      confidentiality codes under ActCode
+      From: http://terminology.hl7.org/CodeSystem/v3-Confidentiality in v3-codesystems.xml
+
+
+   .. attribute:: ConfidentialityByInfoType
+      
+
+      Description: Modifiers of role based access rights  (multiple allowed)
+
+
+                                 Deprecation Comment:Deprecated due to updated
+      confidentiality codes under ActCode
+      From: http://terminology.hl7.org/CodeSystem/v3-Confidentiality in v3-codesystems.xml
+
+
+   .. attribute:: ConfidentialityModifiers
+      
+
+      
+
+

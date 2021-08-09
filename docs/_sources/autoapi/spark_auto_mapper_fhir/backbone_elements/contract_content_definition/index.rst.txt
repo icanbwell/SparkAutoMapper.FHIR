@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.contract_content_definition`
+===========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.contract_content_definition
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.contract_content_definition.ContractContentDefinition
+
+
+
+.. class:: ContractContentDefinition(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, type_: spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.contract_resource_definition_type_codes.ContractResourceDefinitionTypeCodesCode], subType: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.contract_resource_definition_subtype_codes.ContractResourceDefinitionSubtypeCodesCode]] = None, publisher: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole, spark_auto_mapper_fhir.resources.organization.Organization)]]] = None, publicationDate: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, publicationStatus: spark_auto_mapper_fhir.value_sets.contract_resource_publication_status_codes.ContractResourcePublicationStatusCodesCode, copyright: Optional[spark_auto_mapper_fhir.fhir_types.markdown.FhirMarkdown] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   Contract.ContentDefinition
+   Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
+
+

@@ -1,0 +1,56 @@
+:mod:`spark_auto_mapper_fhir.value_sets.validation_type`
+========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.validation_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.validation_type.Validation_typeCode
+   spark_auto_mapper_fhir.value_sets.validation_type.Validation_typeCodeValues
+
+
+
+.. class:: Validation_typeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   validation-type
+   From: http://terminology.hl7.org/CodeSystem/validation-type in valuesets.xml
+       What the target is validated against
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/validation-type
+
+      
+
+
+.. class:: Validation_typeCodeValues
+
+   From: http://terminology.hl7.org/CodeSystem/validation-type in valuesets.xml
+
+   .. attribute:: Nothing
+      
+
+      From: http://terminology.hl7.org/CodeSystem/validation-type in valuesets.xml
+
+
+   .. attribute:: PrimarySource
+      
+
+      From: http://terminology.hl7.org/CodeSystem/validation-type in valuesets.xml
+
+
+   .. attribute:: MultipleSources
+      
+
+      
+
+

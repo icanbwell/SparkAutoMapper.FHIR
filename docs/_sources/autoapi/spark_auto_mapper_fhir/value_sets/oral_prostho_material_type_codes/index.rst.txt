@@ -1,0 +1,66 @@
+:mod:`spark_auto_mapper_fhir.value_sets.oral_prostho_material_type_codes`
+=========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.oral_prostho_material_type_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.oral_prostho_material_type_codes.OralProsthoMaterialTypeCodesCode
+   spark_auto_mapper_fhir.value_sets.oral_prostho_material_type_codes.OralProsthoMaterialTypeCodesCodeValues
+
+
+
+.. class:: OralProsthoMaterialTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   OralProsthoMaterialTypeCodes
+   From: http://hl7.org/fhir/ex-oralprostho in valuesets.xml
+       This value set includes sample Oral Prosthodontic Material type codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/ex-oralprostho
+
+      
+
+
+.. class:: OralProsthoMaterialTypeCodesCodeValues
+
+   Fixed Bridge
+   From: http://hl7.org/fhir/ex-oralprostho in valuesets.xml
+
+   .. attribute:: FixedBridge
+      
+
+      Maryland Bridge
+      From: http://hl7.org/fhir/ex-oralprostho in valuesets.xml
+
+
+   .. attribute:: MarylandBridge
+      
+
+      Denture Acrylic
+      From: http://hl7.org/fhir/ex-oralprostho in valuesets.xml
+
+
+   .. attribute:: DentureAcrylic
+      
+
+      Denture Chrome Cobalt
+      From: http://hl7.org/fhir/ex-oralprostho in valuesets.xml
+
+
+   .. attribute:: DentureChromeCobalt
+      
+
+      
+
+

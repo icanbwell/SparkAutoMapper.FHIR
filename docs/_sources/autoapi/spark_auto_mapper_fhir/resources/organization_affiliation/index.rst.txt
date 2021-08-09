@@ -1,0 +1,33 @@
+:mod:`spark_auto_mapper_fhir.resources.organization_affiliation`
+================================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.organization_affiliation
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.organization_affiliation.OrganizationAffiliation
+
+
+
+.. class:: OrganizationAffiliation(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.identifier.Identifier]] = None, active: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, period: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, organization: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.organization.Organization]] = None, participatingOrganization: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.organization.Organization]] = None, network: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.organization.Organization]]] = None, code: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.organization_affiliation_role.OrganizationAffiliationRoleCode]]] = None, specialty: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.practice_setting_code_value_set.PracticeSettingCodeValueSetCode]]] = None, location: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.location.Location]]] = None, healthcareService: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.healthcare_service.HealthcareService]]] = None, telecom: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.contact_point.ContactPoint]] = None, endpoint: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.endpoint.Endpoint]]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   OrganizationAffiliation
+   organizationaffiliation.xsd
+       Defines an affiliation/assotiation/relationship between 2 distinct
+   oganizations, that is not a part-of relationship/sub-division relationship.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

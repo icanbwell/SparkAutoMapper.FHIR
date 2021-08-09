@@ -1,0 +1,39 @@
+:mod:`spark_auto_mapper_fhir.value_sets.fda__method`
+====================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.fda__method
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.fda__method.FDA_MethodCode
+
+
+
+.. class:: FDA_MethodCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   FDA-Method
+   From: http://hl7.org/fhir/ValueSet/sequence-quality-method in valuesets.xml
+       This value set includes sequence quality method
+
+   .. attribute:: codeset_apps
+      :annotation: :FhirUri = https://precision.fda.gov/apps
+
+      https://precision.fda.gov/jobs
+
+
+   .. attribute:: codeset_jobs
+      :annotation: :FhirUri = https://precision.fda.gov/jobs
+
+      
+
+

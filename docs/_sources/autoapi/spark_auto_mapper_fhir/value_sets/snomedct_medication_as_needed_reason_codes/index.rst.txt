@@ -1,0 +1,34 @@
+:mod:`spark_auto_mapper_fhir.value_sets.snomedct_medication_as_needed_reason_codes`
+===================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.snomedct_medication_as_needed_reason_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.snomedct_medication_as_needed_reason_codes.SNOMEDCTMedicationAsNeededReasonCodesCode
+
+
+
+.. class:: SNOMEDCTMedicationAsNeededReasonCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   SNOMEDCTMedicationAsNeededReasonCodes
+   From: http://hl7.org/fhir/ValueSet/medication-as-needed-reason in valuesets.xml
+       This value set includes all clinical findings from SNOMED CT - provided as an
+   exemplar value set.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+

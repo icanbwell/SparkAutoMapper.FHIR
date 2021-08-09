@@ -1,0 +1,33 @@
+:mod:`spark_auto_mapper_fhir.resources.claim_response`
+======================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.claim_response
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.claim_response.ClaimResponse
+
+
+
+.. class:: ClaimResponse(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.identifier.Identifier]] = None, status: spark_auto_mapper_fhir.value_sets.financial_resource_status_codes.FinancialResourceStatusCodesCode, type_: spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.claim_type_codes.ClaimTypeCodesCode], subType: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.example_claim_sub_type_codes.ExampleClaimSubTypeCodesCode]] = None, use: spark_auto_mapper_fhir.value_sets.use.UseCode, patient: spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.patient.Patient], created: spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime, insurer: spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.organization.Organization], requestor: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole, spark_auto_mapper_fhir.resources.organization.Organization)]]] = None, request: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.claim.Claim]] = None, outcome: spark_auto_mapper_fhir.value_sets.claim_processing_codes.ClaimProcessingCodesCode, disposition: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, preAuthRef: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, preAuthPeriod: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, payeeType: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.claim_payee_type_codes.ClaimPayeeTypeCodesCode]] = None, item: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.claim_response_item.ClaimResponseItem]] = None, addItem: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.claim_response_add_item.ClaimResponseAddItem]] = None, adjudication: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.claim_response_adjudication.ClaimResponseAdjudication]] = None, total: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.claim_response_total.ClaimResponseTotal]] = None, payment: Optional[spark_auto_mapper_fhir.backbone_elements.claim_response_payment.ClaimResponsePayment] = None, fundsReserve: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.funds_reservation_codes.FundsReservationCodesCode]] = None, formCode: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.form_codes.FormCodesCode]] = None, form: Optional[spark_auto_mapper_fhir.complex_types.attachment.Attachment] = None, processNote: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.claim_response_process_note.ClaimResponseProcessNote]] = None, communicationRequest: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.communication_request.CommunicationRequest]]] = None, insurance: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.claim_response_insurance.ClaimResponseInsurance]] = None, error: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.claim_response_error.ClaimResponseError]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   ClaimResponse
+   claimresponse.xsd
+       This resource provides the adjudication details from the processing of a Claim
+   resource.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

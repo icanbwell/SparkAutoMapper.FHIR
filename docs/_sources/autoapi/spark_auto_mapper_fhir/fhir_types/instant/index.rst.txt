@@ -1,0 +1,14 @@
+:mod:`spark_auto_mapper_fhir.fhir_types.instant`
+================================================
+
+.. py:module:: spark_auto_mapper_fhir.fhir_types.instant
+
+
+Module Contents
+---------------
+
+.. data:: FhirInstant
+   
+
+   
+

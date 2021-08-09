@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.medicinal_product_packaged_package_item`
+=======================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.medicinal_product_packaged_package_item
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.medicinal_product_packaged_package_item.MedicinalProductPackagedPackageItem
+
+
+
+.. class:: MedicinalProductPackagedPackageItem(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.identifier.Identifier]] = None, type_: spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode], quantity: spark_auto_mapper_fhir.complex_types.quantity.Quantity, material: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]]] = None, alternateMaterial: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]]] = None, device: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.device_definition.DeviceDefinition]]] = None, manufacturedItem: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.medicinal_product_manufactured.MedicinalProductManufactured]]] = None, packageItem: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.medicinal_product_packaged_package_item.MedicinalProductPackagedPackageItem]] = None, physicalCharacteristics: Optional[spark_auto_mapper_fhir.backbone_elements.prod_characteristic.ProdCharacteristic] = None, otherCharacteristics: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]]] = None, shelfLifeStorage: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.product_shelf_life.ProductShelfLife]] = None, manufacturer: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.organization.Organization]]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   MedicinalProductPackaged.PackageItem
+   A medicinal product in a container or package.
+
+

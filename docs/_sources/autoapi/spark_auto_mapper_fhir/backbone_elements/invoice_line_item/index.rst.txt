@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.invoice_line_item`
+=================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.invoice_line_item
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.invoice_line_item.InvoiceLineItem
+
+
+
+.. class:: InvoiceLineItem(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, sequence: Optional[spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt] = None, chargeItemReference: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.charge_item.ChargeItem]] = None, chargeItemCodeableConcept: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, priceComponent: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.invoice_price_component.InvoicePriceComponent]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   Invoice.LineItem
+   Invoice containing collected ChargeItems from an Account with calculated individual and total price for Billing purpose.
+
+

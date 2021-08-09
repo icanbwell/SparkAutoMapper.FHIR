@@ -1,0 +1,34 @@
+:mod:`spark_auto_mapper_fhir.resources.immunization_evaluation`
+===============================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.immunization_evaluation
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.immunization_evaluation.ImmunizationEvaluation
+
+
+
+.. class:: ImmunizationEvaluation(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.identifier.Identifier]] = None, status: spark_auto_mapper_fhir.value_sets.immunization_evaluation_status_codes.ImmunizationEvaluationStatusCodesCode, patient: spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.patient.Patient], date: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, authority: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.organization.Organization]] = None, targetDisease: spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.immunization_evaluation_target_disease_codes.ImmunizationEvaluationTargetDiseaseCodesCode], immunizationEvent: spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.immunization.Immunization], doseStatus: spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.immunization_evaluation_dose_status_codes.ImmunizationEvaluationDoseStatusCodesCode], doseStatusReason: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.immunization_evaluation_dose_status_reason_codes.ImmunizationEvaluationDoseStatusReasonCodesCode]]] = None, description: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, series: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, doseNumberPositiveInt: Optional[spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt] = None, doseNumberString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, seriesDosesPositiveInt: Optional[spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt] = None, seriesDosesString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   ImmunizationEvaluation
+   immunizationevaluation.xsd
+       Describes a comparison of an immunization event against published
+   recommendations to determine if the administration is "valid" in relation to
+   those  recommendations.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

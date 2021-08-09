@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.request_group_related_action`
+============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.request_group_related_action
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.request_group_related_action.RequestGroupRelatedAction
+
+
+
+.. class:: RequestGroupRelatedAction(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, actionId: spark_auto_mapper_fhir.fhir_types.id.FhirId, relationship: spark_auto_mapper_fhir.value_sets.action_relationship_type.ActionRelationshipTypeCode, offsetDuration: Optional[spark_auto_mapper_fhir.complex_types.duration.Duration] = None, offsetRange: Optional[spark_auto_mapper_fhir.complex_types.range.Range] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   RequestGroup.RelatedAction
+   A group of related requests that can be used to capture intended activities that have inter-dependencies such as "give this medication after that one".
+
+

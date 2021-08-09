@@ -1,0 +1,106 @@
+:mod:`spark_auto_mapper_fhir.value_sets.encounter_status`
+=========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.encounter_status
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.encounter_status.EncounterStatusCode
+   spark_auto_mapper_fhir.value_sets.encounter_status.EncounterStatusCodeValues
+
+
+
+.. class:: EncounterStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   EncounterStatus
+   From: http://hl7.org/fhir/encounter-status in valuesets.xml
+       Current state of the encounter.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/encounter-status
+
+      
+
+
+.. class:: EncounterStatusCodeValues
+
+   The Encounter has not yet started.
+   From: http://hl7.org/fhir/encounter-status in valuesets.xml
+
+   .. attribute:: Planned
+      
+
+      The Patient is present for the encounter, however is not currently meeting
+      with a practitioner.
+      From: http://hl7.org/fhir/encounter-status in valuesets.xml
+
+
+   .. attribute:: Arrived
+      
+
+      The patient has been assessed for the priority of their treatment based on the
+      severity of their condition.
+      From: http://hl7.org/fhir/encounter-status in valuesets.xml
+
+
+   .. attribute:: Triaged
+      
+
+      The Encounter has begun and the patient is present / the practitioner and the
+      patient are meeting.
+      From: http://hl7.org/fhir/encounter-status in valuesets.xml
+
+
+   .. attribute:: InProgress
+      
+
+      The Encounter has begun, but the patient is temporarily on leave.
+      From: http://hl7.org/fhir/encounter-status in valuesets.xml
+
+
+   .. attribute:: OnLeave
+      
+
+      The Encounter has ended.
+      From: http://hl7.org/fhir/encounter-status in valuesets.xml
+
+
+   .. attribute:: Finished
+      
+
+      The Encounter has ended before it has begun.
+      From: http://hl7.org/fhir/encounter-status in valuesets.xml
+
+
+   .. attribute:: Cancelled
+      
+
+      This instance should not have been part of this patient's medical record.
+      From: http://hl7.org/fhir/encounter-status in valuesets.xml
+
+
+   .. attribute:: EnteredInError
+      
+
+      The encounter status is unknown. Note that "unknown" is a value of last resort
+      and every attempt should be made to provide a meaningful value other than
+      "unknown".
+      From: http://hl7.org/fhir/encounter-status in valuesets.xml
+
+
+   .. attribute:: Unknown
+      
+
+      
+
+

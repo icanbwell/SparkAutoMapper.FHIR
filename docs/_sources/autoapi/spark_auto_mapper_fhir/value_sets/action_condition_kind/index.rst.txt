@@ -1,0 +1,59 @@
+:mod:`spark_auto_mapper_fhir.value_sets.action_condition_kind`
+==============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.action_condition_kind
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.action_condition_kind.ActionConditionKindCode
+   spark_auto_mapper_fhir.value_sets.action_condition_kind.ActionConditionKindCodeValues
+
+
+
+.. class:: ActionConditionKindCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ActionConditionKind
+   From: http://hl7.org/fhir/action-condition-kind in valuesets.xml
+       Defines the kinds of conditions that can appear on actions.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/action-condition-kind
+
+      
+
+
+.. class:: ActionConditionKindCodeValues
+
+   The condition describes whether or not a given action is applicable.
+   From: http://hl7.org/fhir/action-condition-kind in valuesets.xml
+
+   .. attribute:: Applicability
+      
+
+      The condition is a starting condition for the action.
+      From: http://hl7.org/fhir/action-condition-kind in valuesets.xml
+
+
+   .. attribute:: Start
+      
+
+      The condition is a stop, or exit condition for the action.
+      From: http://hl7.org/fhir/action-condition-kind in valuesets.xml
+
+
+   .. attribute:: Stop
+      
+
+      
+
+

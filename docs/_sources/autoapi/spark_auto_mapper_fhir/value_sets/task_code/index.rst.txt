@@ -1,0 +1,95 @@
+:mod:`spark_auto_mapper_fhir.value_sets.task_code`
+==================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.task_code
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.task_code.TaskCodeCode
+   spark_auto_mapper_fhir.value_sets.task_code.TaskCodeCodeValues
+
+
+
+.. class:: TaskCodeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   TaskCode
+   From: http://hl7.org/fhir/CodeSystem/task-code in valuesets.xml
+       Codes indicating the type of action that is expected to be performed
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/CodeSystem/task-code
+
+      
+
+
+.. class:: TaskCodeCodeValues
+
+   Take what actions are needed to transition the focus resource from 'draft' to
+   'active' or 'in-progress', as appropriate for the resource type.  This may
+   involve additing additional content, approval, validation, etc.
+   From: http://hl7.org/fhir/CodeSystem/task-code in valuesets.xml
+
+   .. attribute:: Activate_approveTheFocalResource
+      
+
+      Act to perform the actions defined in the focus request.  This might result in
+      a 'more assertive' request (order for a plan or proposal, filler order for a
+      placer order), but is intend to eventually result in events.  The degree of
+      fulfillment requested might be limited by Task.restriction.
+      From: http://hl7.org/fhir/CodeSystem/task-code in valuesets.xml
+
+
+   .. attribute:: FulfillTheFocalRequest
+      
+
+      Abort, cancel or withdraw the focal resource, as appropriate for the type of
+      resource.
+      From: http://hl7.org/fhir/CodeSystem/task-code in valuesets.xml
+
+
+   .. attribute:: MarkTheFocalResourceAsNoLongerActive
+      
+
+      Replace the focal resource with the specified input resource
+      From: http://hl7.org/fhir/CodeSystem/task-code in valuesets.xml
+
+
+   .. attribute:: ReplaceTheFocalResourceWithTheInputResource
+      
+
+      Update the focal resource of the owning system to reflect the content
+      specified as the Task.focus
+      From: http://hl7.org/fhir/CodeSystem/task-code in valuesets.xml
+
+
+   .. attribute:: ChangeTheFocalResource
+      
+
+      Transition the focal resource from 'active' or 'in-progress' to 'suspended'
+      From: http://hl7.org/fhir/CodeSystem/task-code in valuesets.xml
+
+
+   .. attribute:: SuspendTheFocalResource
+      
+
+      Transition the focal resource from 'suspended' to 'active' or 'in-progress' as
+      appropriate for the resource type.
+      From: http://hl7.org/fhir/CodeSystem/task-code in valuesets.xml
+
+
+   .. attribute:: Re_activateTheFocalResource
+      
+
+      
+
+

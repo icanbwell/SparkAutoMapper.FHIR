@@ -1,0 +1,140 @@
+:mod:`spark_auto_mapper_fhir.value_sets.marital_status_codes`
+=============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.marital_status_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.marital_status_codes.MaritalStatusCodesCode
+   spark_auto_mapper_fhir.value_sets.marital_status_codes.MaritalStatusCodesCodeValues
+
+
+
+.. class:: MaritalStatusCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   Marital Status Codes
+   From: http://hl7.org/fhir/ValueSet/marital-status in valuesets.xml
+       This value set defines the set of codes that can be used to indicate the
+   marital status of a person.
+
+   .. attribute:: codeset_v3_NullFlavor
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
+
+      http://terminology.hl7.org/CodeSystem/v3-MaritalStatus
+
+
+   .. attribute:: codeset_v3_MaritalStatus
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-MaritalStatus
+
+      
+
+
+.. class:: MaritalStatusCodesCodeValues
+
+   Marriage contract has been declared null and to not have existed
+   From: http://terminology.hl7.org/CodeSystem/v3-MaritalStatus in v3-codesystems.xml
+
+   .. attribute:: Annulled
+      
+
+      Marriage contract has been declared dissolved and inactive
+      From: http://terminology.hl7.org/CodeSystem/v3-MaritalStatus in v3-codesystems.xml
+
+
+   .. attribute:: Divorced
+      
+
+      Subject to an Interlocutory Decree.
+      From: http://terminology.hl7.org/CodeSystem/v3-MaritalStatus in v3-codesystems.xml
+
+
+   .. attribute:: Interlocutory
+      
+
+      Legally Separated
+      From: http://terminology.hl7.org/CodeSystem/v3-MaritalStatus in v3-codesystems.xml
+
+
+   .. attribute:: LegallySeparated
+      
+
+      A current marriage contract is active
+      From: http://terminology.hl7.org/CodeSystem/v3-MaritalStatus in v3-codesystems.xml
+
+
+   .. attribute:: Married
+      
+
+      More than 1 current spouse
+      From: http://terminology.hl7.org/CodeSystem/v3-MaritalStatus in v3-codesystems.xml
+
+
+   .. attribute:: Polygamous
+      
+
+      No marriage contract has ever been entered
+      From: http://terminology.hl7.org/CodeSystem/v3-MaritalStatus in v3-codesystems.xml
+
+
+   .. attribute:: NeverMarried
+      
+
+      Person declares that a domestic partner relationship exists.
+      From: http://terminology.hl7.org/CodeSystem/v3-MaritalStatus in v3-codesystems.xml
+
+
+   .. attribute:: DomesticPartner
+      
+
+      Currently not in a marriage contract.
+      From: http://terminology.hl7.org/CodeSystem/v3-MaritalStatus in v3-codesystems.xml
+
+
+   .. attribute:: Unmarried
+      
+
+      The spouse has died
+      From: http://terminology.hl7.org/CodeSystem/v3-MaritalStatus in v3-codesystems.xml
+
+
+   .. attribute:: Widowed
+      
+
+      Description:The value is exceptional (missing, omitted, incomplete, improper).
+      No information as to the reason for being an exceptional value is provided.
+      This is the most general exceptional value. It is also the default exceptional
+      value.
+      From: http://terminology.hl7.org/CodeSystem/v3-NullFlavor in v3-codesystems.xml
+
+
+   .. attribute:: NoInformation
+      
+
+      Value is not present in a message.  This is only defined in messages, never in
+      application data!  All values not present in the message must be replaced by
+      the applicable default, or no-information (NI) as the default of all defaults.
+      From: http://terminology.hl7.org/CodeSystem/v3-NullFlavor in v3-codesystems.xml
+
+
+   .. attribute:: NotPresent
+      
+
+      From: http://hl7.org/fhir/ValueSet/marital-status in valuesets.xml
+
+
+   .. attribute:: UNK
+      
+
+      
+
+

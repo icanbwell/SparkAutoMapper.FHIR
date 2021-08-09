@@ -1,0 +1,59 @@
+:mod:`spark_auto_mapper_fhir.value_sets.address_type`
+=====================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.address_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.address_type.AddressTypeCode
+   spark_auto_mapper_fhir.value_sets.address_type.AddressTypeCodeValues
+
+
+
+.. class:: AddressTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   AddressType
+   From: http://hl7.org/fhir/address-type in valuesets.xml
+       The type of an address (physical / postal).
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/address-type
+
+      
+
+
+.. class:: AddressTypeCodeValues
+
+   Mailing addresses - PO Boxes and care-of addresses.
+   From: http://hl7.org/fhir/address-type in valuesets.xml
+
+   .. attribute:: Postal
+      
+
+      A physical address that can be visited.
+      From: http://hl7.org/fhir/address-type in valuesets.xml
+
+
+   .. attribute:: Physical
+      
+
+      An address that is both physical and postal.
+      From: http://hl7.org/fhir/address-type in valuesets.xml
+
+
+   .. attribute:: Postal_Physical
+      
+
+      
+
+

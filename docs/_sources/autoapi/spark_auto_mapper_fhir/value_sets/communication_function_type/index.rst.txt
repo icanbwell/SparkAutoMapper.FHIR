@@ -1,0 +1,61 @@
+:mod:`spark_auto_mapper_fhir.value_sets.communication_function_type`
+====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.communication_function_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.communication_function_type.CommunicationFunctionType
+   spark_auto_mapper_fhir.value_sets.communication_function_type.CommunicationFunctionTypeValues
+
+
+
+.. class:: CommunicationFunctionType(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.CommunicationFunctionType
+   From: http://terminology.hl7.org/ValueSet/v3-CommunicationFunctionType in v3-codesystems.xml
+        Describes the type of communication function that the associated entity plays
+   in the associated transmission.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-CommunicationFunctionType
+
+      
+
+
+.. class:: CommunicationFunctionTypeValues
+
+   The entity is the receiver of the transmission.
+   From: http://terminology.hl7.org/CodeSystem/v3-CommunicationFunctionType in v3-codesystems.xml
+
+   .. attribute:: Receiver
+      
+
+      The entity is the one to which the response or reply to the transmission
+      should be sent.
+      From: http://terminology.hl7.org/CodeSystem/v3-CommunicationFunctionType in v3-codesystems.xml
+
+
+   .. attribute:: RespondTo
+      
+
+      The entity is the sender of the transmission.
+      From: http://terminology.hl7.org/CodeSystem/v3-CommunicationFunctionType in v3-codesystems.xml
+
+
+   .. attribute:: Sender
+      
+
+      
+
+

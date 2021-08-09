@@ -1,0 +1,193 @@
+:mod:`spark_auto_mapper_fhir.value_sets.american_indian_alaska_native_languages`
+================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.american_indian_alaska_native_languages
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.american_indian_alaska_native_languages.AmericanIndianAlaskaNativeLanguages
+   spark_auto_mapper_fhir.value_sets.american_indian_alaska_native_languages.AmericanIndianAlaskaNativeLanguagesValues
+
+
+
+.. class:: AmericanIndianAlaskaNativeLanguages(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.AmericanIndianAlaskaNativeLanguages
+   From: http://terminology.hl7.org/ValueSet/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+        American Indian and Alaska Native languages currently being used in the
+   United States.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages
+
+      
+
+
+.. class:: AmericanIndianAlaskaNativeLanguagesValues
+
+   Algic
+   From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+
+   .. attribute:: Algic
+      
+
+      Caddoan
+      From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+
+
+   .. attribute:: Caddoan
+      
+
+      Chimakuan
+      From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+
+
+   .. attribute:: Chimakuan
+      
+
+      EskimoAleut
+      From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+
+
+   .. attribute:: EskimoAleut
+      
+
+      Hokan
+      From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+
+
+   .. attribute:: Hokan
+      
+
+      Iroquoian
+      From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+
+
+   .. attribute:: Iroquoian
+      
+
+      Keresan
+      From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+
+
+   .. attribute:: Keresan
+      
+
+      KiowaTanoan
+      From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+
+
+   .. attribute:: KiowaTanoan
+      
+
+      Muskogean
+      From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+
+
+   .. attribute:: Muskogean
+      
+
+      Nadene
+      From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+
+
+   .. attribute:: Nadene
+      
+
+      Penutian
+      From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+
+
+   .. attribute:: Penutian
+      
+
+      Pidgin
+      From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+
+
+   .. attribute:: Pidgin
+      
+
+      Salishan
+      From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+
+
+   .. attribute:: Salishan
+      
+
+      SiouanCatawba
+      From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+
+
+   .. attribute:: SiouanCatawba
+      
+
+      UtoAztecan
+      From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+
+
+   .. attribute:: UtoAztecan
+      
+
+      Wakashan
+      From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+
+
+   .. attribute:: Wakashan
+      
+
+      Yukian
+      From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+
+
+   .. attribute:: Yukian
+      
+
+      Haida
+      From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+
+
+   .. attribute:: Haida
+      
+
+      Kootenai
+      From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+
+
+   .. attribute:: Kootenai
+      
+
+      Plains Indian Sign Language
+      From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+
+
+   .. attribute:: PlainsIndianSignLanguage
+      
+
+      Yuchi
+      From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+
+
+   .. attribute:: Yuchi
+      
+
+      Zuni
+      From: http://terminology.hl7.org/CodeSystem/v3-AmericanIndianAlaskaNativeLanguages in v3-codesystems.xml
+
+
+   .. attribute:: Zuni
+      
+
+      
+
+

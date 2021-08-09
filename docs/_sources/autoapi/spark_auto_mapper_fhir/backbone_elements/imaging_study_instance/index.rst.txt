@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.imaging_study_instance`
+======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.imaging_study_instance
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.imaging_study_instance.ImagingStudyInstance
+
+
+
+.. class:: ImagingStudyInstance(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, uid: spark_auto_mapper_fhir.fhir_types.id.FhirId, sopClass: spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode], number: Optional[spark_auto_mapper_fhir.fhir_types.unsigned_int.FhirUnsignedInt] = None, title: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   ImagingStudy.Instance
+   Representation of the content produced in a DICOM imaging study. A study comprises a set of series, each of which includes a set of Service-Object Pair Instances (SOP Instances - images or other data) acquired or produced in a common context.  A series is of only one modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple series of different modalities.
+
+

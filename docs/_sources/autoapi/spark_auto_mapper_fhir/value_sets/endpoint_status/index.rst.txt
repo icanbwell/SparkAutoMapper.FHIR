@@ -1,0 +1,82 @@
+:mod:`spark_auto_mapper_fhir.value_sets.endpoint_status`
+========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.endpoint_status
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.endpoint_status.EndpointStatusCode
+   spark_auto_mapper_fhir.value_sets.endpoint_status.EndpointStatusCodeValues
+
+
+
+.. class:: EndpointStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   EndpointStatus
+   From: http://hl7.org/fhir/endpoint-status in valuesets.xml
+       The status of the endpoint.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/endpoint-status
+
+      
+
+
+.. class:: EndpointStatusCodeValues
+
+   This endpoint is expected to be active and can be used.
+   From: http://hl7.org/fhir/endpoint-status in valuesets.xml
+
+   .. attribute:: Active
+      
+
+      This endpoint is temporarily unavailable.
+      From: http://hl7.org/fhir/endpoint-status in valuesets.xml
+
+
+   .. attribute:: Suspended
+      
+
+      This endpoint has exceeded connectivity thresholds and is considered in an
+      error state and should no longer be attempted to connect to until corrective
+      action is taken.
+      From: http://hl7.org/fhir/endpoint-status in valuesets.xml
+
+
+   .. attribute:: Error
+      
+
+      This endpoint is no longer to be used.
+      From: http://hl7.org/fhir/endpoint-status in valuesets.xml
+
+
+   .. attribute:: Off
+      
+
+      This instance should not have been part of this patient's medical record.
+      From: http://hl7.org/fhir/endpoint-status in valuesets.xml
+
+
+   .. attribute:: EnteredInError
+      
+
+      This endpoint is not intended for production usage.
+      From: http://hl7.org/fhir/endpoint-status in valuesets.xml
+
+
+   .. attribute:: Test
+      
+
+      
+
+

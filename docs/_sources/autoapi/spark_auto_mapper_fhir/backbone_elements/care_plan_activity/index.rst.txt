@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.care_plan_activity`
+==================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.care_plan_activity
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.care_plan_activity.CarePlanActivity
+
+
+
+.. class:: CarePlanActivity(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, outcomeCodeableConcept: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.care_plan_activity_outcome.CarePlanActivityOutcomeCode]]] = None, outcomeReference: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.resource.Resource]]] = None, progress: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.annotation.Annotation]] = None, reference: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.appointment.Appointment, spark_auto_mapper_fhir.resources.communication_request.CommunicationRequest, spark_auto_mapper_fhir.resources.device_request.DeviceRequest, spark_auto_mapper_fhir.resources.medication_request.MedicationRequest, spark_auto_mapper_fhir.resources.nutrition_order.NutritionOrder, spark_auto_mapper_fhir.resources.task.Task, spark_auto_mapper_fhir.resources.service_request.ServiceRequest, spark_auto_mapper_fhir.resources.vision_prescription.VisionPrescription, spark_auto_mapper_fhir.resources.request_group.RequestGroup)]]] = None, detail: Optional[spark_auto_mapper_fhir.backbone_elements.care_plan_detail.CarePlanDetail] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   CarePlan.Activity
+   Describes the intention of how one or more practitioners intend to deliver care for a particular patient, group or community for a period of time, possibly limited to care for a specific condition or set of conditions.
+
+

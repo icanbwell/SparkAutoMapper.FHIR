@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.graph_definition_target`
+=======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.graph_definition_target
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.graph_definition_target.GraphDefinitionTarget
+
+
+
+.. class:: GraphDefinitionTarget(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, type_: spark_auto_mapper_fhir.value_sets.resource_type.ResourceTypeCode, params: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, profile: Optional[spark_auto_mapper_fhir.fhir_types.canonical.FhirCanonical] = None, compartment: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.graph_definition_compartment.GraphDefinitionCompartment]] = None, link: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.graph_definition_link.GraphDefinitionLink]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   GraphDefinition.Target
+   A formal computable definition of a graph of resources - that is, a coherent set of resources that form a graph by following references. The Graph Definition resource defines a set and makes rules about the set.
+
+

@@ -1,0 +1,88 @@
+:mod:`spark_auto_mapper_fhir.value_sets.gender_identity`
+========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.gender_identity
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.gender_identity.GenderIdentityCode
+   spark_auto_mapper_fhir.value_sets.gender_identity.GenderIdentityCodeValues
+
+
+
+.. class:: GenderIdentityCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   GenderIdentity
+   From: http://hl7.org/fhir/gender-identity in valuesets.xml
+       This example value set defines a set of codes that can be used to indicate a
+   patient's gender identity.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/gender-identity
+
+      
+
+
+.. class:: GenderIdentityCodeValues
+
+   the patient identifies as transgender male-to-female
+   From: http://hl7.org/fhir/gender-identity in valuesets.xml
+
+   .. attribute:: TransgenderFemale
+      
+
+      the patient identifies as transgender female-to-male
+      From: http://hl7.org/fhir/gender-identity in valuesets.xml
+
+
+   .. attribute:: TransgenderMale
+      
+
+      the patient identifies with neither/both female and male
+      From: http://hl7.org/fhir/gender-identity in valuesets.xml
+
+
+   .. attribute:: Non_binary
+      
+
+      the patient identifies as male
+      From: http://hl7.org/fhir/gender-identity in valuesets.xml
+
+
+   .. attribute:: Male
+      
+
+      the patient identifies as female
+      From: http://hl7.org/fhir/gender-identity in valuesets.xml
+
+
+   .. attribute:: Female
+      
+
+      other gender identity
+      From: http://hl7.org/fhir/gender-identity in valuesets.xml
+
+
+   .. attribute:: Other
+      
+
+      the patient does not wish to disclose his gender identity
+      From: http://hl7.org/fhir/gender-identity in valuesets.xml
+
+
+   .. attribute:: DoesNotWishToDisclose
+      
+
+      
+
+

@@ -1,0 +1,32 @@
+:mod:`spark_auto_mapper_fhir.complex_types.meta`
+================================================
+
+.. py:module:: spark_auto_mapper_fhir.complex_types.meta
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.complex_types.meta.Meta
+
+
+
+.. class:: Meta(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, versionId: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, lastUpdated: Optional[spark_auto_mapper_fhir.fhir_types.instant.FhirInstant] = None, source: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, profile: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.canonical.FhirCanonical]] = None, security: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.all_security_labels.AllSecurityLabelsCode]]] = None, tag: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.common_tags.CommonTagsCode]]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
+
+   Meta
+   fhir-base.xsd
+       The metadata about a resource. This is content in the resource that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
+       If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

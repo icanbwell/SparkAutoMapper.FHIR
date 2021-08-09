@@ -1,0 +1,87 @@
+:mod:`spark_auto_mapper_fhir.value_sets.common_ucum_codes_for_duration`
+=======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.common_ucum_codes_for_duration
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.common_ucum_codes_for_duration.CommonUCUMCodesForDurationCode
+   spark_auto_mapper_fhir.value_sets.common_ucum_codes_for_duration.CommonUCUMCodesForDurationCodeValues
+
+
+
+.. class:: CommonUCUMCodesForDurationCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   CommonUCUMCodesForDuration
+   From: http://hl7.org/fhir/ValueSet/duration-units in valuesets.xml
+       Unified Code for Units of Measure (UCUM). This value set includes all UCUM
+   codes
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://unitsofmeasure.org
+
+      
+
+
+.. class:: CommonUCUMCodesForDurationCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/duration-units in valuesets.xml
+
+   .. attribute:: Milliseconds
+      
+
+      From: http://hl7.org/fhir/ValueSet/duration-units in valuesets.xml
+
+
+   .. attribute:: Seconds
+      
+
+      From: http://hl7.org/fhir/ValueSet/duration-units in valuesets.xml
+
+
+   .. attribute:: Minutes
+      
+
+      From: http://hl7.org/fhir/ValueSet/duration-units in valuesets.xml
+
+
+   .. attribute:: Hours
+      
+
+      From: http://hl7.org/fhir/ValueSet/duration-units in valuesets.xml
+
+
+   .. attribute:: Days
+      
+
+      From: http://hl7.org/fhir/ValueSet/duration-units in valuesets.xml
+
+
+   .. attribute:: Weeks
+      
+
+      From: http://hl7.org/fhir/ValueSet/duration-units in valuesets.xml
+
+
+   .. attribute:: Months
+      
+
+      From: http://hl7.org/fhir/ValueSet/duration-units in valuesets.xml
+
+
+   .. attribute:: Years
+      
+
+      
+
+

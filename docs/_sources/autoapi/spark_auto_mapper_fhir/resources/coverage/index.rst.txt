@@ -1,0 +1,33 @@
+:mod:`spark_auto_mapper_fhir.resources.coverage`
+================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.coverage
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.coverage.Coverage
+
+
+
+.. class:: Coverage(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.identifier.Identifier]] = None, status: spark_auto_mapper_fhir.value_sets.financial_resource_status_codes.FinancialResourceStatusCodesCode, type_: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.coverage_type_and_self__pay_codes.CoverageTypeAndSelf_PayCodesCode]] = None, policyHolder: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.related_person.RelatedPerson, spark_auto_mapper_fhir.resources.organization.Organization)]]] = None, subscriber: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.related_person.RelatedPerson)]]] = None, subscriberId: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, beneficiary: spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.patient.Patient], dependent: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, relationship: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.subscriber_relationship_codes.SubscriberRelationshipCodesCode]] = None, period: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, payor: spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.organization.Organization, spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.related_person.RelatedPerson)]]], class_: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.coverage_class.CoverageClass]] = None, order: Optional[spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt] = None, network: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, costToBeneficiary: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.coverage_cost_to_beneficiary.CoverageCostToBeneficiary]] = None, subrogation: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, contract: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.contract.Contract]]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   Coverage
+   coverage.xsd
+       Financial instrument which may be used to reimburse or pay for health care
+   products and services. Includes both insurance and self-payment.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

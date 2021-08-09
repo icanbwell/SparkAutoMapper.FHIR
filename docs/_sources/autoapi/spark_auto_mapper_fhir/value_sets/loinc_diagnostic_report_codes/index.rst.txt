@@ -1,0 +1,33 @@
+:mod:`spark_auto_mapper_fhir.value_sets.loinc_diagnostic_report_codes`
+======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.loinc_diagnostic_report_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.loinc_diagnostic_report_codes.LOINCDiagnosticReportCodesCode
+
+
+
+.. class:: LOINCDiagnosticReportCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   LOINCDiagnosticReportCodes
+   From: http://hl7.org/fhir/ValueSet/report-codes in valuesets.xml
+       This value set includes LOINC codes that relate to Diagnostic Observations.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://loinc.org
+
+      
+
+

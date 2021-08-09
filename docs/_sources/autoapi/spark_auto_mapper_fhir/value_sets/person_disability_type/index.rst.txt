@@ -1,0 +1,73 @@
+:mod:`spark_auto_mapper_fhir.value_sets.person_disability_type`
+===============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.person_disability_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.person_disability_type.PersonDisabilityType
+   spark_auto_mapper_fhir.value_sets.person_disability_type.PersonDisabilityTypeValues
+
+
+
+.. class:: PersonDisabilityType(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.PersonDisabilityType
+   From: http://terminology.hl7.org/ValueSet/v3-PersonDisabilityType in v3-codesystems.xml
+        A code identifying a person's disability.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-PersonDisabilityType
+
+      
+
+
+.. class:: PersonDisabilityTypeValues
+
+   Vision impaired
+   From: http://terminology.hl7.org/CodeSystem/v3-PersonDisabilityType in v3-codesystems.xml
+
+   .. attribute:: VisionImpaired
+      
+
+      Hearing impaired
+      From: http://terminology.hl7.org/CodeSystem/v3-PersonDisabilityType in v3-codesystems.xml
+
+
+   .. attribute:: HearingImpaired
+      
+
+      Speech impaired
+      From: http://terminology.hl7.org/CodeSystem/v3-PersonDisabilityType in v3-codesystems.xml
+
+
+   .. attribute:: SpeechImpaired
+      
+
+      Mentally impaired
+      From: http://terminology.hl7.org/CodeSystem/v3-PersonDisabilityType in v3-codesystems.xml
+
+
+   .. attribute:: MentallyImpaired
+      
+
+      Mobility impaired
+      From: http://terminology.hl7.org/CodeSystem/v3-PersonDisabilityType in v3-codesystems.xml
+
+
+   .. attribute:: MobilityImpaired
+      
+
+      
+
+

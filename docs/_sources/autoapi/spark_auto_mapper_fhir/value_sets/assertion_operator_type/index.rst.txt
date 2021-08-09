@@ -1,0 +1,115 @@
+:mod:`spark_auto_mapper_fhir.value_sets.assertion_operator_type`
+================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.assertion_operator_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.assertion_operator_type.AssertionOperatorTypeCode
+   spark_auto_mapper_fhir.value_sets.assertion_operator_type.AssertionOperatorTypeCodeValues
+
+
+
+.. class:: AssertionOperatorTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   AssertionOperatorType
+   From: http://hl7.org/fhir/assert-operator-codes in valuesets.xml
+       The type of operator to use for assertion.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/assert-operator-codes
+
+      
+
+
+.. class:: AssertionOperatorTypeCodeValues
+
+   Default value. Equals comparison.
+   From: http://hl7.org/fhir/assert-operator-codes in valuesets.xml
+
+   .. attribute:: Equals
+      
+
+      Not equals comparison.
+      From: http://hl7.org/fhir/assert-operator-codes in valuesets.xml
+
+
+   .. attribute:: NotEquals
+      
+
+      Compare value within a known set of values.
+      From: http://hl7.org/fhir/assert-operator-codes in valuesets.xml
+
+
+   .. attribute:: In
+      
+
+      Compare value not within a known set of values.
+      From: http://hl7.org/fhir/assert-operator-codes in valuesets.xml
+
+
+   .. attribute:: NotIn
+      
+
+      Compare value to be greater than a known value.
+      From: http://hl7.org/fhir/assert-operator-codes in valuesets.xml
+
+
+   .. attribute:: GreaterThan
+      
+
+      Compare value to be less than a known value.
+      From: http://hl7.org/fhir/assert-operator-codes in valuesets.xml
+
+
+   .. attribute:: LessThan
+      
+
+      Compare value is empty.
+      From: http://hl7.org/fhir/assert-operator-codes in valuesets.xml
+
+
+   .. attribute:: Empty
+      
+
+      Compare value is not empty.
+      From: http://hl7.org/fhir/assert-operator-codes in valuesets.xml
+
+
+   .. attribute:: NotEmpty
+      
+
+      Compare value string contains a known value.
+      From: http://hl7.org/fhir/assert-operator-codes in valuesets.xml
+
+
+   .. attribute:: Contains
+      
+
+      Compare value string does not contain a known value.
+      From: http://hl7.org/fhir/assert-operator-codes in valuesets.xml
+
+
+   .. attribute:: NotContains
+      
+
+      Evaluate the FHIRPath expression as a boolean condition.
+      From: http://hl7.org/fhir/assert-operator-codes in valuesets.xml
+
+
+   .. attribute:: Evaluate
+      
+
+      
+
+

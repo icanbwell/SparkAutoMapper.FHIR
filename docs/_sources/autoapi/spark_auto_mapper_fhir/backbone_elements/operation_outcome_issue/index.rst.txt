@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.operation_outcome_issue`
+=======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.operation_outcome_issue
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.operation_outcome_issue.OperationOutcomeIssue
+
+
+
+.. class:: OperationOutcomeIssue(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, severity: spark_auto_mapper_fhir.value_sets.issue_severity.IssueSeverityCode, code: spark_auto_mapper_fhir.value_sets.issue_type.IssueTypeCode, details: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.operation_outcome_codes.OperationOutcomeCodesCode]] = None, diagnostics: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, location: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.string.FhirString]] = None, expression: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.string.FhirString]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   OperationOutcome.Issue
+   A collection of error, warning, or information messages that result from a system action.
+
+

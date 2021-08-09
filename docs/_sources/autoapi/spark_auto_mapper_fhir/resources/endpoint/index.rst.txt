@@ -1,0 +1,34 @@
+:mod:`spark_auto_mapper_fhir.resources.endpoint`
+================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.endpoint
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.endpoint.Endpoint
+
+
+
+.. class:: Endpoint(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.identifier.Identifier]] = None, status: spark_auto_mapper_fhir.value_sets.endpoint_status.EndpointStatusCode, connectionType: spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.endpoint_connection_type.EndpointConnectionTypeCode], name: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, managingOrganization: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.organization.Organization]] = None, contact: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.contact_point.ContactPoint]] = None, period: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, payloadType: spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.endpoint_payload_type.EndpointPayloadTypeCode]], payloadMimeType: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.value_sets.mime_types.MimeTypesCode]] = None, address: spark_auto_mapper_fhir.fhir_types.url.FhirUrl, header: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.string.FhirString]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   Endpoint
+   endpoint.xsd
+       The technical details of an endpoint that can be used for electronic services,
+   such as for web services providing XDS.b or a REST endpoint for another FHIR
+   server. This may include any security context information.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

@@ -1,0 +1,33 @@
+:mod:`spark_auto_mapper_fhir.value_sets.v2_0205`
+================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.v2_0205
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.v2_0205.V2_0205
+
+
+
+.. class:: V2_0205(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v2.0205
+   From: http://terminology.hl7.org/ValueSet/v2-0205 in v2-tables.xml
+       FHIR Value set/code system definition for HL7 v2 table 0205 ( Price Type)
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/ValueSet/v2-0205
+
+      
+
+

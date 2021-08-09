@@ -1,0 +1,129 @@
+:mod:`spark_auto_mapper_fhir.value_sets.example_diagnosis_type_codes`
+=====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.example_diagnosis_type_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.example_diagnosis_type_codes.ExampleDiagnosisTypeCodesCode
+   spark_auto_mapper_fhir.value_sets.example_diagnosis_type_codes.ExampleDiagnosisTypeCodesCodeValues
+
+
+
+.. class:: ExampleDiagnosisTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ExampleDiagnosisTypeCodes
+   From: http://terminology.hl7.org/CodeSystem/ex-diagnosistype in valuesets.xml
+       This value set includes example Diagnosis Type codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/ex-diagnosistype
+
+      
+
+
+.. class:: ExampleDiagnosisTypeCodesCodeValues
+
+   The diagnosis given as the reason why the patient was admitted to the
+   hospital.
+   From: http://terminology.hl7.org/CodeSystem/ex-diagnosistype in valuesets.xml
+
+   .. attribute:: AdmittingDiagnosis
+      
+
+      A diagnosis made on the basis of medical signs and patient-reported symptoms,
+      rather than diagnostic tests.
+      From: http://terminology.hl7.org/CodeSystem/ex-diagnosistype in valuesets.xml
+
+
+   .. attribute:: ClinicalDiagnosis
+      
+
+      One of a set of the possible diagnoses that could be connected to the signs,
+      symptoms, and lab findings.
+      From: http://terminology.hl7.org/CodeSystem/ex-diagnosistype in valuesets.xml
+
+
+   .. attribute:: DifferentialDiagnosis
+      
+
+      The diagnosis given when the patient is discharged from the hospital.
+      From: http://terminology.hl7.org/CodeSystem/ex-diagnosistype in valuesets.xml
+
+
+   .. attribute:: DischargeDiagnosis
+      
+
+      A diagnosis based significantly on laboratory reports or test results, rather
+      than the physical examination of the patient.
+      From: http://terminology.hl7.org/CodeSystem/ex-diagnosistype in valuesets.xml
+
+
+   .. attribute:: LaboratoryDiagnosis
+      
+
+      A diagnosis which identifies people's responses to situations in their lives,
+      such as a readiness to change or a willingness to accept assistance.
+      From: http://terminology.hl7.org/CodeSystem/ex-diagnosistype in valuesets.xml
+
+
+   .. attribute:: NursingDiagnosis
+      
+
+      A diagnosis determined prior to birth.
+      From: http://terminology.hl7.org/CodeSystem/ex-diagnosistype in valuesets.xml
+
+
+   .. attribute:: PrenatalDiagnosis
+      
+
+      The single medical diagnosis that is most relevant to the patient's chief
+      complaint or need for treatment.
+      From: http://terminology.hl7.org/CodeSystem/ex-diagnosistype in valuesets.xml
+
+
+   .. attribute:: PrincipalDiagnosis
+      
+
+      A diagnosis based primarily on the results from medical imaging studies.
+      From: http://terminology.hl7.org/CodeSystem/ex-diagnosistype in valuesets.xml
+
+
+   .. attribute:: RadiologyDiagnosis
+      
+
+      A diagnosis determined using telemedicine techniques.
+      From: http://terminology.hl7.org/CodeSystem/ex-diagnosistype in valuesets.xml
+
+
+   .. attribute:: RemoteDiagnosis
+      
+
+      The labeling of an illness in a specific historical event using modern
+      knowledge, methods and disease classifications.
+      From: http://terminology.hl7.org/CodeSystem/ex-diagnosistype in valuesets.xml
+
+
+   .. attribute:: RetrospectiveDiagnosis
+      
+
+      A diagnosis determined by the patient.
+      From: http://terminology.hl7.org/CodeSystem/ex-diagnosistype in valuesets.xml
+
+
+   .. attribute:: SelfDiagnosis
+      
+
+      
+
+

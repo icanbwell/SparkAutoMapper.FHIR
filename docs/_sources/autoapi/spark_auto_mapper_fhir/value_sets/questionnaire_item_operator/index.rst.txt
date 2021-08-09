@@ -1,0 +1,94 @@
+:mod:`spark_auto_mapper_fhir.value_sets.questionnaire_item_operator`
+====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.questionnaire_item_operator
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.questionnaire_item_operator.QuestionnaireItemOperatorCode
+   spark_auto_mapper_fhir.value_sets.questionnaire_item_operator.QuestionnaireItemOperatorCodeValues
+
+
+
+.. class:: QuestionnaireItemOperatorCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   QuestionnaireItemOperator
+   From: http://hl7.org/fhir/questionnaire-enable-operator in valuesets.xml
+       The criteria by which a question is enabled.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/questionnaire-enable-operator
+
+      
+
+
+.. class:: QuestionnaireItemOperatorCodeValues
+
+   True if whether an answer exists is equal to the enableWhen answer (which must
+   be a boolean).
+   From: http://hl7.org/fhir/questionnaire-enable-operator in valuesets.xml
+
+   .. attribute:: Exists
+      
+
+      True if whether at least one answer has a value that is equal to the
+      enableWhen answer.
+      From: http://hl7.org/fhir/questionnaire-enable-operator in valuesets.xml
+
+
+   .. attribute:: Equals
+      
+
+      True if whether at least no answer has a value that is equal to the enableWhen
+      answer.
+      From: http://hl7.org/fhir/questionnaire-enable-operator in valuesets.xml
+
+
+   .. attribute:: NotEquals
+      
+
+      True if whether at least no answer has a value that is greater than the
+      enableWhen answer.
+      From: http://hl7.org/fhir/questionnaire-enable-operator in valuesets.xml
+
+
+   .. attribute:: GreaterThan
+      
+
+      True if whether at least no answer has a value that is less than the
+      enableWhen answer.
+      From: http://hl7.org/fhir/questionnaire-enable-operator in valuesets.xml
+
+
+   .. attribute:: LessThan
+      
+
+      True if whether at least no answer has a value that is greater or equal to the
+      enableWhen answer.
+      From: http://hl7.org/fhir/questionnaire-enable-operator in valuesets.xml
+
+
+   .. attribute:: GreaterOrEquals
+      
+
+      True if whether at least no answer has a value that is less or equal to the
+      enableWhen answer.
+      From: http://hl7.org/fhir/questionnaire-enable-operator in valuesets.xml
+
+
+   .. attribute:: LessOrEquals
+      
+
+      
+
+

@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.capability_statement_rest`
+=========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.capability_statement_rest
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.capability_statement_rest.CapabilityStatementRest
+
+
+
+.. class:: CapabilityStatementRest(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, mode: spark_auto_mapper_fhir.value_sets.restful_capability_mode.RestfulCapabilityModeCode, documentation: Optional[spark_auto_mapper_fhir.fhir_types.markdown.FhirMarkdown] = None, security: Optional[spark_auto_mapper_fhir.backbone_elements.capability_statement_security.CapabilityStatementSecurity] = None, resource: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.capability_statement_resource.CapabilityStatementResource]] = None, interaction: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.capability_statement_interaction1.CapabilityStatementInteraction1]] = None, searchParam: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.capability_statement_search_param.CapabilityStatementSearchParam]] = None, operation: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.capability_statement_operation.CapabilityStatementOperation]] = None, compartment: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.canonical.FhirCanonical]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   CapabilityStatement.Rest
+   A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+
+

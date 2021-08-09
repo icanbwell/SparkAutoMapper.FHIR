@@ -1,0 +1,33 @@
+:mod:`spark_auto_mapper_fhir.value_sets.manifestation_and_symptom_codes`
+========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.manifestation_and_symptom_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.manifestation_and_symptom_codes.ManifestationAndSymptomCodesCode
+
+
+
+.. class:: ManifestationAndSymptomCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ManifestationAndSymptomCodes
+   From: http://hl7.org/fhir/ValueSet/manifestation-or-symptom in valuesets.xml
+       Example value set for Manifestation and Symptom codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+

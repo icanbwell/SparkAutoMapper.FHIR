@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.example_scenario_operation`
+==========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.example_scenario_operation
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.example_scenario_operation.ExampleScenarioOperation
+
+
+
+.. class:: ExampleScenarioOperation(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, number: spark_auto_mapper_fhir.fhir_types.string.FhirString, type_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, name: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, initiator: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, receiver: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, description: Optional[spark_auto_mapper_fhir.fhir_types.markdown.FhirMarkdown] = None, initiatorActive: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, receiverActive: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, request: Optional[spark_auto_mapper_fhir.backbone_elements.example_scenario_contained_instance.ExampleScenarioContainedInstance] = None, response: Optional[spark_auto_mapper_fhir.backbone_elements.example_scenario_contained_instance.ExampleScenarioContainedInstance] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   ExampleScenario.Operation
+   Example of workflow instance.
+
+

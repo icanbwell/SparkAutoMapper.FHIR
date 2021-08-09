@@ -1,0 +1,71 @@
+:mod:`spark_auto_mapper_fhir.value_sets.provenance_event_history_agent_role_codes`
+==================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.provenance_event_history_agent_role_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.provenance_event_history_agent_role_codes.ProvenanceEventHistoryAgentRoleCodesCode
+   spark_auto_mapper_fhir.value_sets.provenance_event_history_agent_role_codes.ProvenanceEventHistoryAgentRoleCodesCodeValues
+
+
+
+.. class:: ProvenanceEventHistoryAgentRoleCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ProvenanceEventHistoryAgentRoleCodes
+   From: http://hl7.org/fhir/ValueSet/provenance-history-agent-type in valuesets.xml
+       Types of roles indicating how a particular agent was involved with the
+   creation or modification of a resource for use when exposing event history
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
+
+      
+
+
+.. class:: ProvenanceEventHistoryAgentRoleCodesCodeValues
+
+   Indicates that the target of the participation is involved in some manner in
+   the act, but does not qualify how.
+   From: http://terminology.hl7.org/CodeSystem/v3-ParticipationType in v3-codesystems.xml
+
+   .. attribute:: Participation
+      
+
+      From: http://hl7.org/fhir/ValueSet/provenance-history-agent-type in valuesets.xml
+
+
+   .. attribute:: Author
+      
+
+      From: http://hl7.org/fhir/ValueSet/provenance-history-agent-type in valuesets.xml
+
+
+   .. attribute:: Informant
+      
+
+      From: http://hl7.org/fhir/ValueSet/provenance-history-agent-type in valuesets.xml
+
+
+   .. attribute:: Verifier
+      
+
+      From: http://hl7.org/fhir/ValueSet/provenance-history-agent-type in valuesets.xml
+
+
+   .. attribute:: DataEnterer
+      
+
+      
+
+

@@ -1,0 +1,212 @@
+:mod:`spark_auto_mapper_fhir.value_sets.hl7_approval_status`
+============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.hl7_approval_status
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.hl7_approval_status.Hl7ApprovalStatus
+   spark_auto_mapper_fhir.value_sets.hl7_approval_status.Hl7ApprovalStatusValues
+
+
+
+.. class:: Hl7ApprovalStatus(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.hl7ApprovalStatus
+   From: http://terminology.hl7.org/ValueSet/v3-hl7ApprovalStatus in v3-codesystems.xml
+         Description:
+   Codes for concepts describing the approval level of HL7 artifacts.  This code
+   system reflects the concepts expressed in HL7's Governance & Operations Manual
+   (GOM) past and present.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus
+
+      
+
+
+.. class:: Hl7ApprovalStatusValues
+
+   Description: Content that is being presented to an international affiliate for
+   consideration as a realm-specific draft standard for trial use.
+   From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
+
+   .. attribute:: AffiliateBallot_DSTU
+      
+
+      Description: Content that is being presented to an international affiliate for
+      consideration as a realm-specific informative standard.
+      From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
+
+
+   .. attribute:: AffiliateBallot_Informative
+      
+
+      Description: Content that is being presented to an international affiliate for
+      consideration as a realm-specific normative standard.
+      From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
+
+
+   .. attribute:: AffiliateBallot_Normative
+      
+
+      Description: Content that has passed ballot as a realm-specific draft standard
+      for trial use.
+      From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
+
+
+   .. attribute:: ApprovedAffiliateDSTU
+      
+
+      Description: Content that has passed ballot as a realm-specific informative
+      standard.
+      From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
+
+
+   .. attribute:: ApprovedAffiliateInformative
+      
+
+      Description: Content that has passed ballot as a realm-specific normative
+      standard
+      From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
+
+
+   .. attribute:: ApprovedAffiliateNormative
+      
+
+      Description: Content that has passed ballot as a draft standard for trial use.
+      From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
+
+
+   .. attribute:: ApprovedDSTU
+      
+
+      Description: Content that has passed ballot as a normative standard.
+      From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
+
+
+   .. attribute:: ApprovedInformative
+      
+
+      Description: Content that has passed ballot as a normative standard.
+      From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
+
+
+   .. attribute:: ApprovedNormative
+      
+
+      Description: Content prepared by a committee and submitted for internal
+      consideration as an informative standard.
+
+
+
+                                    Deprecation Comment
+                                  No longer supported as ballot statuses within the
+      HL7 Governance and Operations Manual.  Use normative or informative variants
+      instead.
+      From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
+
+
+   .. attribute:: CommitteeBallot_Informative
+      
+
+      Description: Content prepared by a committee and submitted for internal
+      consideration as an informative standard.
+
+
+
+                                    Deprecation Comment
+                                  No longer supported as ballot statuses within the
+      HL7 Governance and Operations Manual.  Use normative or informative variants
+      instead.
+      From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
+
+
+   .. attribute:: CommitteeBallot_Normative
+      
+
+      Description: Content that is under development and is not intended to be used.
+      From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
+
+
+   .. attribute:: Draft
+      
+
+      Description: Content that represents an adaption of a implementable balloted
+      material to represent the needs or capabilities of a particular installation.
+      From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
+
+
+   .. attribute:: LocalizedAdaptation
+      
+
+      Description: Content prepared by a committee and submitted for membership
+      consideration as a draft standard for trial use.
+      From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
+
+
+   .. attribute:: MembershipBallot_DSTU
+      
+
+      Description: Content prepared by a committee and submitted for membership
+      consideration as an informative standard.
+      From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
+
+
+   .. attribute:: MembershipBallot_Informative
+      
+
+      Description: Content prepared by a committee and submitted for membership
+      consideration as a normative standard.
+      From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
+
+
+   .. attribute:: MembershipBallot_Normative
+      
+
+      Description: Content developed independently by an organization or individual
+      that is declared to be 'usable' but for which there is no present intention to
+      submit through the standards submission and review process.
+      From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
+
+
+   .. attribute:: Non_standard_AvailableForUse
+      
+
+      Description: Content submitted to a committee for consideration for future
+      inclusion in the standard.
+      From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
+
+
+   .. attribute:: Proposal
+      
+
+      Description: Content intended to support other content that is subject to
+      approval, but which is not itself subject to formal approval.
+      From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
+
+
+   .. attribute:: Reference
+      
+
+      Description: Content that represents an item that was at one point a normative
+      or informative standard, but was subsequently withdrawn.
+      From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
+
+
+   .. attribute:: Withdrawn
+      
+
+      
+
+

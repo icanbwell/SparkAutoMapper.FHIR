@@ -1,0 +1,87 @@
+:mod:`spark_auto_mapper_fhir.value_sets.care_plan_activity_kind`
+================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.care_plan_activity_kind
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.care_plan_activity_kind.CarePlanActivityKindCode
+   spark_auto_mapper_fhir.value_sets.care_plan_activity_kind.CarePlanActivityKindCodeValues
+
+
+
+.. class:: CarePlanActivityKindCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   CarePlanActivityKind
+   From: http://hl7.org/fhir/ValueSet/care-plan-activity-kind in valuesets.xml
+       Resource types defined as part of FHIR that can be represented as in-line
+   definitions of a care plan activity.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/resource-types
+
+      
+
+
+.. class:: CarePlanActivityKindCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/care-plan-activity-kind in valuesets.xml
+
+   .. attribute:: Appointment
+      
+
+      From: http://hl7.org/fhir/ValueSet/care-plan-activity-kind in valuesets.xml
+
+
+   .. attribute:: CommunicationRequest
+      
+
+      From: http://hl7.org/fhir/ValueSet/care-plan-activity-kind in valuesets.xml
+
+
+   .. attribute:: DeviceRequest
+      
+
+      From: http://hl7.org/fhir/ValueSet/care-plan-activity-kind in valuesets.xml
+
+
+   .. attribute:: MedicationRequest
+      
+
+      From: http://hl7.org/fhir/ValueSet/care-plan-activity-kind in valuesets.xml
+
+
+   .. attribute:: NutritionOrder
+      
+
+      From: http://hl7.org/fhir/ValueSet/care-plan-activity-kind in valuesets.xml
+
+
+   .. attribute:: Task
+      
+
+      From: http://hl7.org/fhir/ValueSet/care-plan-activity-kind in valuesets.xml
+
+
+   .. attribute:: ServiceRequest
+      
+
+      From: http://hl7.org/fhir/ValueSet/care-plan-activity-kind in valuesets.xml
+
+
+   .. attribute:: VisionPrescription
+      
+
+      
+
+

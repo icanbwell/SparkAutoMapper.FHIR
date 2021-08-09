@@ -1,0 +1,14 @@
+:mod:`spark_auto_mapper_fhir.fhir_types.positive_int`
+=====================================================
+
+.. py:module:: spark_auto_mapper_fhir.fhir_types.positive_int
+
+
+Module Contents
+---------------
+
+.. data:: FhirPositiveInt
+   
+
+   
+

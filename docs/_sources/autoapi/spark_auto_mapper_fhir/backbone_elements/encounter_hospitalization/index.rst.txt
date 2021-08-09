@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.encounter_hospitalization`
+=========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.encounter_hospitalization
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.encounter_hospitalization.EncounterHospitalization
+
+
+
+.. class:: EncounterHospitalization(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, preAdmissionIdentifier: Optional[spark_auto_mapper_fhir.complex_types.identifier.Identifier] = None, origin: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.location.Location, spark_auto_mapper_fhir.resources.organization.Organization)]]] = None, admitSource: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.admit_source.AdmitSourceCode]] = None, reAdmission: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.v2_0092.V2_0092]] = None, dietPreference: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.diet.DietCode]]] = None, specialCourtesy: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.special_courtesy.SpecialCourtesyCode]]] = None, specialArrangement: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.special_arrangements.SpecialArrangementsCode]]] = None, destination: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.location.Location, spark_auto_mapper_fhir.resources.organization.Organization)]]] = None, dischargeDisposition: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.discharge_disposition.DischargeDispositionCode]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   Encounter.Hospitalization
+   An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.
+
+

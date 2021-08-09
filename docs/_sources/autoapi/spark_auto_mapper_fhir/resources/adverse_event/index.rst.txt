@@ -1,0 +1,35 @@
+:mod:`spark_auto_mapper_fhir.resources.adverse_event`
+=====================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.adverse_event
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.adverse_event.AdverseEvent
+
+
+
+.. class:: AdverseEvent(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.complex_types.identifier.Identifier] = None, actuality: spark_auto_mapper_fhir.value_sets.adverse_event_actuality.AdverseEventActualityCode, category: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.adverse_event_category.AdverseEventCategoryCode]]] = None, event: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.snomedct_clinical_findings.SNOMEDCTClinicalFindingsCode]] = None, subject: spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.group.Group, spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.related_person.RelatedPerson)]], encounter: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.encounter.Encounter]] = None, date: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, detected: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, recordedDate: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, resultingCondition: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.condition.Condition]]] = None, location: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.location.Location]] = None, seriousness: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.adverse_event_seriousness.AdverseEventSeriousnessCode]] = None, severity: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.adverse_event_severity.AdverseEventSeverityCode]] = None, outcome: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.adverse_event_outcome.AdverseEventOutcomeCode]] = None, recorder: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole, spark_auto_mapper_fhir.resources.related_person.RelatedPerson)]]] = None, contributor: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole, spark_auto_mapper_fhir.resources.device.Device)]]]] = None, suspectEntity: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.adverse_event_suspect_entity.AdverseEventSuspectEntity]] = None, subjectMedicalHistory: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.condition.Condition, spark_auto_mapper_fhir.resources.observation.Observation, spark_auto_mapper_fhir.resources.allergy_intolerance.AllergyIntolerance, spark_auto_mapper_fhir.resources.family_member_history.FamilyMemberHistory, spark_auto_mapper_fhir.resources.immunization.Immunization, spark_auto_mapper_fhir.resources.procedure.Procedure, spark_auto_mapper_fhir.resources.media.Media, spark_auto_mapper_fhir.resources.document_reference.DocumentReference)]]]] = None, referenceDocument: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.document_reference.DocumentReference]]] = None, study: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.research_study.ResearchStudy]]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   AdverseEvent
+   adverseevent.xsd
+       Actual or  potential/avoided event causing unintended physical injury
+   resulting from or contributed to by medical care, a research study or other
+   healthcare setting factors that requires additional monitoring, treatment, or
+   hospitalization, or that results in death.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

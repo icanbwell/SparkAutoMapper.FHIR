@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_benefit_balance`
+======================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_benefit_balance
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_benefit_balance.ExplanationOfBenefitBenefitBalance
+
+
+
+.. class:: ExplanationOfBenefitBenefitBalance(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, category: spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.benefit_category_codes.BenefitCategoryCodesCode], excluded: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, name: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, description: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, network: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.network_type_codes.NetworkTypeCodesCode]] = None, unit: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.unit_type_codes.UnitTypeCodesCode]] = None, term: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.benefit_term_codes.BenefitTermCodesCode]] = None, financial: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_financial.ExplanationOfBenefitFinancial]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   ExplanationOfBenefit.BenefitBalance
+   This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided.
+
+

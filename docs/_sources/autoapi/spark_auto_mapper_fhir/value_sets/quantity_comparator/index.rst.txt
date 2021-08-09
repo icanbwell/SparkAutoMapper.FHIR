@@ -1,0 +1,66 @@
+:mod:`spark_auto_mapper_fhir.value_sets.quantity_comparator`
+============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.quantity_comparator
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.quantity_comparator.QuantityComparatorCode
+   spark_auto_mapper_fhir.value_sets.quantity_comparator.QuantityComparatorCodeValues
+
+
+
+.. class:: QuantityComparatorCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   QuantityComparator
+   From: http://hl7.org/fhir/quantity-comparator in valuesets.xml
+       How the Quantity should be understood and represented.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/quantity-comparator
+
+      
+
+
+.. class:: QuantityComparatorCodeValues
+
+   The actual value is less than the given value.
+   From: http://hl7.org/fhir/quantity-comparator in valuesets.xml
+
+   .. attribute:: LessThan
+      
+
+      The actual value is less than or equal to the given value.
+      From: http://hl7.org/fhir/quantity-comparator in valuesets.xml
+
+
+   .. attribute:: LessOrEqualTo
+      
+
+      The actual value is greater than or equal to the given value.
+      From: http://hl7.org/fhir/quantity-comparator in valuesets.xml
+
+
+   .. attribute:: GreaterOrEqualTo
+      
+
+      The actual value is greater than the given value.
+      From: http://hl7.org/fhir/quantity-comparator in valuesets.xml
+
+
+   .. attribute:: GreaterThan
+      
+
+      
+
+

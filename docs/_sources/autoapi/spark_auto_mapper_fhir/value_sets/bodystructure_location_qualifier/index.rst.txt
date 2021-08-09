@@ -1,0 +1,110 @@
+:mod:`spark_auto_mapper_fhir.value_sets.bodystructure_location_qualifier`
+=========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.bodystructure_location_qualifier
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.bodystructure_location_qualifier.BodystructureLocationQualifierCode
+   spark_auto_mapper_fhir.value_sets.bodystructure_location_qualifier.BodystructureLocationQualifierCodeValues
+
+
+
+.. class:: BodystructureLocationQualifierCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   BodystructureLocationQualifier
+   From: http://hl7.org/fhir/ValueSet/bodystructure-relative-location in valuesets.xml
+       SNOMED-CT concepts modifying the anatomic location
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+
+.. class:: BodystructureLocationQualifierCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/bodystructure-relative-location in valuesets.xml
+
+   .. attribute:: UnilateralLeft
+      
+
+      From: http://hl7.org/fhir/ValueSet/bodystructure-relative-location in valuesets.xml
+
+
+   .. attribute:: UnilateralRight
+      
+
+      From: http://hl7.org/fhir/ValueSet/bodystructure-relative-location in valuesets.xml
+
+
+   .. attribute:: Bilateral
+      
+
+      From: http://hl7.org/fhir/ValueSet/bodystructure-relative-location in valuesets.xml
+
+
+   .. attribute:: Upper
+      
+
+      From: http://hl7.org/fhir/ValueSet/bodystructure-relative-location in valuesets.xml
+
+
+   .. attribute:: Lower
+      
+
+      From: http://hl7.org/fhir/ValueSet/bodystructure-relative-location in valuesets.xml
+
+
+   .. attribute:: Medial
+      
+
+      From: http://hl7.org/fhir/ValueSet/bodystructure-relative-location in valuesets.xml
+
+
+   .. attribute:: Lateral
+      
+
+      From: http://hl7.org/fhir/ValueSet/bodystructure-relative-location in valuesets.xml
+
+
+   .. attribute:: Superior
+      
+
+      From: http://hl7.org/fhir/ValueSet/bodystructure-relative-location in valuesets.xml
+
+
+   .. attribute:: Inferior
+      
+
+      From: http://hl7.org/fhir/ValueSet/bodystructure-relative-location in valuesets.xml
+
+
+   .. attribute:: Posterior
+      
+
+      From: http://hl7.org/fhir/ValueSet/bodystructure-relative-location in valuesets.xml
+
+
+   .. attribute:: Below
+      
+
+      From: http://hl7.org/fhir/ValueSet/bodystructure-relative-location in valuesets.xml
+
+
+   .. attribute:: Above
+      
+
+      
+
+

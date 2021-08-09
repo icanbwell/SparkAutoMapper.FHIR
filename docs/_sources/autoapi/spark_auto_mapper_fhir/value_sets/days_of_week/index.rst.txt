@@ -1,0 +1,87 @@
+:mod:`spark_auto_mapper_fhir.value_sets.days_of_week`
+=====================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.days_of_week
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.days_of_week.DaysOfWeekCode
+   spark_auto_mapper_fhir.value_sets.days_of_week.DaysOfWeekCodeValues
+
+
+
+.. class:: DaysOfWeekCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   DaysOfWeek
+   From: http://hl7.org/fhir/days-of-week in valuesets.xml
+       The days of the week.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/days-of-week
+
+      
+
+
+.. class:: DaysOfWeekCodeValues
+
+   Monday.
+   From: http://hl7.org/fhir/days-of-week in valuesets.xml
+
+   .. attribute:: Monday
+      
+
+      Tuesday.
+      From: http://hl7.org/fhir/days-of-week in valuesets.xml
+
+
+   .. attribute:: Tuesday
+      
+
+      Wednesday.
+      From: http://hl7.org/fhir/days-of-week in valuesets.xml
+
+
+   .. attribute:: Wednesday
+      
+
+      Thursday.
+      From: http://hl7.org/fhir/days-of-week in valuesets.xml
+
+
+   .. attribute:: Thursday
+      
+
+      Friday.
+      From: http://hl7.org/fhir/days-of-week in valuesets.xml
+
+
+   .. attribute:: Friday
+      
+
+      Saturday.
+      From: http://hl7.org/fhir/days-of-week in valuesets.xml
+
+
+   .. attribute:: Saturday
+      
+
+      Sunday.
+      From: http://hl7.org/fhir/days-of-week in valuesets.xml
+
+
+   .. attribute:: Sunday
+      
+
+      
+
+

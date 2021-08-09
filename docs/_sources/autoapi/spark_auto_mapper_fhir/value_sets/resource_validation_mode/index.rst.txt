@@ -1,0 +1,73 @@
+:mod:`spark_auto_mapper_fhir.value_sets.resource_validation_mode`
+=================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.resource_validation_mode
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.resource_validation_mode.ResourceValidationModeCode
+   spark_auto_mapper_fhir.value_sets.resource_validation_mode.ResourceValidationModeCodeValues
+
+
+
+.. class:: ResourceValidationModeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ResourceValidationMode
+   From: http://hl7.org/fhir/resource-validation-mode in valuesets.xml
+       Codes indicating the type of validation to perform.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/resource-validation-mode
+
+      
+
+
+.. class:: ResourceValidationModeCodeValues
+
+   The server checks the content, and then checks that the content would be
+   acceptable as a create (e.g. that the content would not violate any uniqueness
+   constraints).
+   From: http://hl7.org/fhir/resource-validation-mode in valuesets.xml
+
+   .. attribute:: ValidateForCreate
+      
+
+      The server checks the content, and then checks that it would accept it as an
+      update against the nominated specific resource (e.g. that there are no changes
+      to immutable fields the server does not allow to change and checking version
+      integrity if appropriate).
+      From: http://hl7.org/fhir/resource-validation-mode in valuesets.xml
+
+
+   .. attribute:: ValidateForUpdate
+      
+
+      The server ignores the content and checks that the nominated resource is
+      allowed to be deleted (e.g. checking referential integrity rules).
+      From: http://hl7.org/fhir/resource-validation-mode in valuesets.xml
+
+
+   .. attribute:: ValidateForDelete
+      
+
+      The server checks an existing resource (must be nominated by id, not provided
+      as a parameter) as valid against the nominated profile.
+      From: http://hl7.org/fhir/resource-validation-mode in valuesets.xml
+
+
+   .. attribute:: ValidateAgainstAProfile
+      
+
+      
+
+

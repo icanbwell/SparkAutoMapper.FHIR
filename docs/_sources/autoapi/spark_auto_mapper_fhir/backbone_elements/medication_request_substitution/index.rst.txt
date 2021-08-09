@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.medication_request_substitution`
+===============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.medication_request_substitution
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.medication_request_substitution.MedicationRequestSubstitution
+
+
+
+.. class:: MedicationRequestSubstitution(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, allowedBoolean: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, allowedCodeableConcept: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, reason: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.substance_admin_substitution_reason.SubstanceAdminSubstitutionReason]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   MedicationRequest.Substitution
+   An order or request for both supply of the medication and the instructions for administration of the medication to a patient. The resource is called "MedicationRequest" rather than "MedicationPrescription" or "MedicationOrder" to generalize the use across inpatient and outpatient settings, including care plans, etc., and to harmonize with workflow patterns.
+
+

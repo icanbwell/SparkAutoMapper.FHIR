@@ -1,0 +1,33 @@
+:mod:`spark_auto_mapper_fhir.value_sets.clinical_impression_prognosis`
+======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.clinical_impression_prognosis
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.clinical_impression_prognosis.ClinicalImpressionPrognosisCode
+
+
+
+.. class:: ClinicalImpressionPrognosisCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ClinicalImpressionPrognosis
+   From: http://hl7.org/fhir/ValueSet/clinicalimpression-prognosis in valuesets.xml
+       Example value set for clinical impression prognosis.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+

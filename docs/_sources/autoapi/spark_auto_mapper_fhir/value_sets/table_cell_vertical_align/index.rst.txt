@@ -1,0 +1,66 @@
+:mod:`spark_auto_mapper_fhir.value_sets.table_cell_vertical_align`
+==================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.table_cell_vertical_align
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.table_cell_vertical_align.TableCellVerticalAlign
+   spark_auto_mapper_fhir.value_sets.table_cell_vertical_align.TableCellVerticalAlignValues
+
+
+
+.. class:: TableCellVerticalAlign(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.TableCellVerticalAlign
+   From: http://terminology.hl7.org/ValueSet/v3-TableCellVerticalAlign in v3-codesystems.xml
+        These values are defined within the XHTML 4.0 Table Model
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-TableCellVerticalAlign
+
+      
+
+
+.. class:: TableCellVerticalAlignValues
+
+   baseline
+   From: http://terminology.hl7.org/CodeSystem/v3-TableCellVerticalAlign in v3-codesystems.xml
+
+   .. attribute:: Baseline
+      
+
+      bottom
+      From: http://terminology.hl7.org/CodeSystem/v3-TableCellVerticalAlign in v3-codesystems.xml
+
+
+   .. attribute:: Bottom
+      
+
+      middle
+      From: http://terminology.hl7.org/CodeSystem/v3-TableCellVerticalAlign in v3-codesystems.xml
+
+
+   .. attribute:: Middle
+      
+
+      top
+      From: http://terminology.hl7.org/CodeSystem/v3-TableCellVerticalAlign in v3-codesystems.xml
+
+
+   .. attribute:: Top
+      
+
+      
+
+

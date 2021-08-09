@@ -1,0 +1,63 @@
+:mod:`spark_auto_mapper_fhir.value_sets.action_required_behavior`
+=================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.action_required_behavior
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.action_required_behavior.ActionRequiredBehaviorCode
+   spark_auto_mapper_fhir.value_sets.action_required_behavior.ActionRequiredBehaviorCodeValues
+
+
+
+.. class:: ActionRequiredBehaviorCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ActionRequiredBehavior
+   From: http://hl7.org/fhir/action-required-behavior in valuesets.xml
+       Defines expectations around whether an action or action group is required.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/action-required-behavior
+
+      
+
+
+.. class:: ActionRequiredBehaviorCodeValues
+
+   An action with this behavior must be included in the actions processed by the
+   end user; the end user SHALL NOT choose not to include this action.
+   From: http://hl7.org/fhir/action-required-behavior in valuesets.xml
+
+   .. attribute:: Must
+      
+
+      An action with this behavior may be included in the set of actions processed
+      by the end user.
+      From: http://hl7.org/fhir/action-required-behavior in valuesets.xml
+
+
+   .. attribute:: Could
+      
+
+      An action with this behavior must be included in the set of actions processed
+      by the end user, unless the end user provides documentation as to why the
+      action was not included.
+      From: http://hl7.org/fhir/action-required-behavior in valuesets.xml
+
+
+   .. attribute:: MustUnlessDocumented
+      
+
+      
+
+

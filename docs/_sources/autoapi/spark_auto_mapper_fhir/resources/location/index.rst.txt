@@ -1,0 +1,34 @@
+:mod:`spark_auto_mapper_fhir.resources.location`
+================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.location
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.location.Location
+
+
+
+.. class:: Location(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.identifier.Identifier]] = None, status: Optional[spark_auto_mapper_fhir.value_sets.location_status.LocationStatusCode] = None, operationalStatus: Optional[spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.v2_0116.V2_0116]] = None, name: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, alias: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.string.FhirString]] = None, description: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, mode: Optional[spark_auto_mapper_fhir.value_sets.location_mode.LocationModeCode] = None, type_: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.service_delivery_location_role_type.ServiceDeliveryLocationRoleType]]] = None, telecom: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.contact_point.ContactPoint]] = None, address: Optional[spark_auto_mapper_fhir.complex_types.address.Address] = None, physicalType: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.location_type.LocationTypeCode]] = None, position: Optional[spark_auto_mapper_fhir.backbone_elements.location_position.LocationPosition] = None, managingOrganization: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.organization.Organization]] = None, partOf: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.location.Location]] = None, hoursOfOperation: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.location_hours_of_operation.LocationHoursOfOperation]] = None, availabilityExceptions: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, endpoint: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.endpoint.Endpoint]]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   Location
+   location.xsd
+       Details and position information for a physical place where services are
+   provided and resources and participants may be stored, found, contained, or
+   accommodated.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

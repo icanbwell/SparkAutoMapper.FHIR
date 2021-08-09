@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.claim_response_payment`
+======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.claim_response_payment
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.claim_response_payment.ClaimResponsePayment
+
+
+
+.. class:: ClaimResponsePayment(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, type_: spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.example_payment_type_codes.ExamplePaymentTypeCodesCode], adjustment: Optional[spark_auto_mapper_fhir.complex_types.money.Money] = None, adjustmentReason: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.payment_adjustment_reason_codes.PaymentAdjustmentReasonCodesCode]] = None, date: Optional[spark_auto_mapper_fhir.fhir_types.date.FhirDate] = None, amount: spark_auto_mapper_fhir.complex_types.money.Money, identifier: Optional[spark_auto_mapper_fhir.complex_types.identifier.Identifier] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   ClaimResponse.Payment
+   This resource provides the adjudication details from the processing of a Claim resource.
+
+

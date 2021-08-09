@@ -1,0 +1,54 @@
+:mod:`spark_auto_mapper_fhir.value_sets.immunization_recommendation_reason_codes`
+=================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.immunization_recommendation_reason_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.immunization_recommendation_reason_codes.ImmunizationRecommendationReasonCodesCode
+   spark_auto_mapper_fhir.value_sets.immunization_recommendation_reason_codes.ImmunizationRecommendationReasonCodesCodeValues
+
+
+
+.. class:: ImmunizationRecommendationReasonCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ImmunizationRecommendationReasonCodes
+   From: http://hl7.org/fhir/ValueSet/immunization-recommendation-reason in valuesets.xml
+       The value set to instantiate this attribute should be drawn from a
+   terminologically robust code system that consists of or contains concepts to
+   support describing the reasons why a given recommendation status is assigned.
+   This value set is provided as a suggestive example and includes SNOMED CT
+   concepts.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+
+.. class:: ImmunizationRecommendationReasonCodesCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/immunization-recommendation-reason in valuesets.xml
+
+   .. attribute:: _77176002
+      
+
+      From: http://hl7.org/fhir/ValueSet/immunization-recommendation-reason in valuesets.xml
+
+
+   .. attribute:: _77386006
+      
+
+      
+
+

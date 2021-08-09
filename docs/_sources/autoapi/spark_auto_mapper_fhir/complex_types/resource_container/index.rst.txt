@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.complex_types.resource_container`
+==============================================================
+
+.. py:module:: spark_auto_mapper_fhir.complex_types.resource_container
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer
+
+
+
+.. class:: ResourceContainer(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

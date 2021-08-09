@@ -1,0 +1,45 @@
+:mod:`spark_auto_mapper_fhir.value_sets.udi_codes`
+==================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.udi_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.udi_codes.UDICodesCode
+   spark_auto_mapper_fhir.value_sets.udi_codes.UDICodesCodeValues
+
+
+
+.. class:: UDICodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   UDICodes
+   From: http://hl7.org/fhir/ex-udi in valuesets.xml
+       This value set includes sample UDI codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/ex-udi
+
+      
+
+
+.. class:: UDICodesCodeValues
+
+   GUDID (FDA) US Repository
+   From: http://hl7.org/fhir/ex-udi in valuesets.xml
+
+   .. attribute:: GUDID_FDA_
+      
+
+      
+
+

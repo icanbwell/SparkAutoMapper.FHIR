@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.practitioner_role_not_available`
+===============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.practitioner_role_not_available
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.practitioner_role_not_available.PractitionerRoleNotAvailable
+
+
+
+.. class:: PractitionerRoleNotAvailable(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, description: spark_auto_mapper_fhir.fhir_types.string.FhirString, during: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   PractitionerRole.NotAvailable
+   A specific set of Roles/Locations/specialties/services that a practitioner may perform at an organization for a period of time.
+
+

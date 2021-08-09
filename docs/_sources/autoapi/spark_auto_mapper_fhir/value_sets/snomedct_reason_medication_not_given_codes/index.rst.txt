@@ -1,0 +1,68 @@
+:mod:`spark_auto_mapper_fhir.value_sets.snomedct_reason_medication_not_given_codes`
+===================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.snomedct_reason_medication_not_given_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.snomedct_reason_medication_not_given_codes.SNOMEDCTReasonMedicationNotGivenCodesCode
+   spark_auto_mapper_fhir.value_sets.snomedct_reason_medication_not_given_codes.SNOMEDCTReasonMedicationNotGivenCodesCodeValues
+
+
+
+.. class:: SNOMEDCTReasonMedicationNotGivenCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   SNOMEDCTReasonMedicationNotGivenCodes
+   From: http://hl7.org/fhir/reason-medication-not-given in valuesets.xml
+       This value set includes all medication refused, medication not administered,
+   and non-administration of necessary drug or medicine codes from SNOMED CT -
+   provided as an exemplar value set.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/reason-medication-not-given
+
+      
+
+
+.. class:: SNOMEDCTReasonMedicationNotGivenCodesCodeValues
+
+   No reason known.
+   From: http://hl7.org/fhir/reason-medication-not-given in valuesets.xml
+
+   .. attribute:: None_
+      
+
+      The patient was not available when the dose was scheduled.
+      From: http://hl7.org/fhir/reason-medication-not-given in valuesets.xml
+
+
+   .. attribute:: Away
+      
+
+      The patient was asleep when the dose was scheduled.
+      From: http://hl7.org/fhir/reason-medication-not-given in valuesets.xml
+
+
+   .. attribute:: Asleep
+      
+
+      The patient was given the medication and immediately vomited it back.
+      From: http://hl7.org/fhir/reason-medication-not-given in valuesets.xml
+
+
+   .. attribute:: Vomit
+      
+
+      
+
+

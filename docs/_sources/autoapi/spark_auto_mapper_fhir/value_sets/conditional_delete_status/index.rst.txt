@@ -1,0 +1,60 @@
+:mod:`spark_auto_mapper_fhir.value_sets.conditional_delete_status`
+==================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.conditional_delete_status
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.conditional_delete_status.ConditionalDeleteStatusCode
+   spark_auto_mapper_fhir.value_sets.conditional_delete_status.ConditionalDeleteStatusCodeValues
+
+
+
+.. class:: ConditionalDeleteStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ConditionalDeleteStatus
+   From: http://hl7.org/fhir/conditional-delete-status in valuesets.xml
+       A code that indicates how the server supports conditional delete.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/conditional-delete-status
+
+      
+
+
+.. class:: ConditionalDeleteStatusCodeValues
+
+   No support for conditional deletes.
+   From: http://hl7.org/fhir/conditional-delete-status in valuesets.xml
+
+   .. attribute:: NotSupported
+      
+
+      Conditional deletes are supported, but only single resources at a time.
+      From: http://hl7.org/fhir/conditional-delete-status in valuesets.xml
+
+
+   .. attribute:: SingleDeletesSupported
+      
+
+      Conditional deletes are supported, and multiple resources can be deleted in a
+      single interaction.
+      From: http://hl7.org/fhir/conditional-delete-status in valuesets.xml
+
+
+   .. attribute:: MultipleDeletesSupported
+      
+
+      
+
+

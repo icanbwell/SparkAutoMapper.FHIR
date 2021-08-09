@@ -1,0 +1,59 @@
+:mod:`spark_auto_mapper_fhir.value_sets.biologically_derived_product_storage_scale`
+===================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.biologically_derived_product_storage_scale
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.biologically_derived_product_storage_scale.BiologicallyDerivedProductStorageScaleCode
+   spark_auto_mapper_fhir.value_sets.biologically_derived_product_storage_scale.BiologicallyDerivedProductStorageScaleCodeValues
+
+
+
+.. class:: BiologicallyDerivedProductStorageScaleCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   BiologicallyDerivedProductStorageScale
+   From: http://hl7.org/fhir/product-storage-scale in valuesets.xml
+       BiologicallyDerived Product Storage Scale.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/product-storage-scale
+
+      
+
+
+.. class:: BiologicallyDerivedProductStorageScaleCodeValues
+
+   Fahrenheit temperature scale.
+   From: http://hl7.org/fhir/product-storage-scale in valuesets.xml
+
+   .. attribute:: Fahrenheit
+      
+
+      Celsius or centigrade temperature scale.
+      From: http://hl7.org/fhir/product-storage-scale in valuesets.xml
+
+
+   .. attribute:: Celsius
+      
+
+      Kelvin absolute thermodynamic temperature scale.
+      From: http://hl7.org/fhir/product-storage-scale in valuesets.xml
+
+
+   .. attribute:: Kelvin
+      
+
+      
+
+

@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.medication_ingredient`
+=====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.medication_ingredient
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.medication_ingredient.MedicationIngredient
+
+
+
+.. class:: MedicationIngredient(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, itemCodeableConcept: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, itemReference: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.substance.Substance, spark_auto_mapper_fhir.resources.medication.Medication)]]] = None, isActive: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, strength: Optional[spark_auto_mapper_fhir.complex_types.ratio.Ratio] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   Medication.Ingredient
+   This resource is primarily used for the identification and definition of a medication for the purposes of prescribing, dispensing, and administering a medication as well as for making statements about medication use.
+
+

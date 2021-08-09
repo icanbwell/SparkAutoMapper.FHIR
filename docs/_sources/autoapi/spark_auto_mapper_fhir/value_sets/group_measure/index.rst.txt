@@ -1,0 +1,80 @@
+:mod:`spark_auto_mapper_fhir.value_sets.group_measure`
+======================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.group_measure
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.group_measure.GroupMeasureCode
+   spark_auto_mapper_fhir.value_sets.group_measure.GroupMeasureCodeValues
+
+
+
+.. class:: GroupMeasureCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   GroupMeasure
+   From: http://hl7.org/fhir/group-measure in valuesets.xml
+       Possible group measure aggregates (E.g. Mean, Median).
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/group-measure
+
+      
+
+
+.. class:: GroupMeasureCodeValues
+
+   Aggregated using Mean of participant values.
+   From: http://hl7.org/fhir/group-measure in valuesets.xml
+
+   .. attribute:: Mean
+      
+
+      Aggregated using Median of participant values.
+      From: http://hl7.org/fhir/group-measure in valuesets.xml
+
+
+   .. attribute:: Median
+      
+
+      Aggregated using Mean of study mean values.
+      From: http://hl7.org/fhir/group-measure in valuesets.xml
+
+
+   .. attribute:: MeanOfStudyMeans
+      
+
+      Aggregated using Mean of study median values.
+      From: http://hl7.org/fhir/group-measure in valuesets.xml
+
+
+   .. attribute:: MeanOfStudyMedins
+      
+
+      Aggregated using Median of study mean values.
+      From: http://hl7.org/fhir/group-measure in valuesets.xml
+
+
+   .. attribute:: MedianOfStudyMeans
+      
+
+      Aggregated using Median of study median values.
+      From: http://hl7.org/fhir/group-measure in valuesets.xml
+
+
+   .. attribute:: MedianOfStudyMedians
+      
+
+      
+
+

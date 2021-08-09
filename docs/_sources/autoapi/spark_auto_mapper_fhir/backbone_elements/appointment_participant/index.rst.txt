@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.appointment_participant`
+=======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.appointment_participant
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.appointment_participant.AppointmentParticipant
+
+
+
+.. class:: AppointmentParticipant(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, type_: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.participant_type.ParticipantTypeCode]]] = None, actor: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole, spark_auto_mapper_fhir.resources.related_person.RelatedPerson, spark_auto_mapper_fhir.resources.device.Device, spark_auto_mapper_fhir.resources.healthcare_service.HealthcareService, spark_auto_mapper_fhir.resources.location.Location)]]] = None, required: Optional[spark_auto_mapper_fhir.value_sets.participant_required.ParticipantRequiredCode] = None, status: spark_auto_mapper_fhir.value_sets.participation_status.ParticipationStatusCode, period: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   Appointment.Participant
+   A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time. This may result in one or more Encounter(s).
+
+

@@ -1,0 +1,60 @@
+:mod:`spark_auto_mapper_fhir.value_sets.animal_species`
+=======================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.animal_species
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.animal_species.AnimalSpeciesCode
+   spark_auto_mapper_fhir.value_sets.animal_species.AnimalSpeciesCodeValues
+
+
+
+.. class:: AnimalSpeciesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   AnimalSpecies
+   From: http://hl7.org/fhir/animal-species in valuesets.xml
+       This example value set defines a set of codes that can be used to indicate
+   species of animal patients.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/animal-species
+
+      
+
+
+.. class:: AnimalSpeciesCodeValues
+
+   Canis lupus familiaris
+   From: http://hl7.org/fhir/animal-species in valuesets.xml
+
+   .. attribute:: Dog
+      
+
+      Ovis aries
+      From: http://hl7.org/fhir/animal-species in valuesets.xml
+
+
+   .. attribute:: Sheep
+      
+
+      Serinus canaria domestica
+      From: http://hl7.org/fhir/animal-species in valuesets.xml
+
+
+   .. attribute:: DomesticCanary
+      
+
+      
+
+

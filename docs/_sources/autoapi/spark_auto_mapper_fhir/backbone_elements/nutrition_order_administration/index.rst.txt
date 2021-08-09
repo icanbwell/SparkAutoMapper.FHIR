@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.nutrition_order_administration`
+==============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.nutrition_order_administration
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.nutrition_order_administration.NutritionOrderAdministration
+
+
+
+.. class:: NutritionOrderAdministration(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, schedule: Optional[spark_auto_mapper_fhir.backbone_elements.timing.Timing] = None, quantity: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, rateQuantity: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, rateRatio: Optional[spark_auto_mapper_fhir.complex_types.ratio.Ratio] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   NutritionOrder.Administration
+   A request to supply a diet, formula feeding (enteral) or oral nutritional supplement to a patient/resident.
+
+

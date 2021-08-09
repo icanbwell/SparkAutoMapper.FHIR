@@ -1,0 +1,84 @@
+:mod:`spark_auto_mapper_fhir.value_sets.contact_entity_type`
+============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.contact_entity_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.contact_entity_type.ContactEntityTypeCode
+   spark_auto_mapper_fhir.value_sets.contact_entity_type.ContactEntityTypeCodeValues
+
+
+
+.. class:: ContactEntityTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ContactEntityType
+   From: http://terminology.hl7.org/CodeSystem/contactentity-type in valuesets.xml
+       This example value set defines a set of codes that can be used to indicate the
+   purpose for which you would contact a contact party.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/contactentity-type
+
+      
+
+
+.. class:: ContactEntityTypeCodeValues
+
+   Contact details for information regarding to billing/general finance
+   enquiries.
+   From: http://terminology.hl7.org/CodeSystem/contactentity-type in valuesets.xml
+
+   .. attribute:: Billing
+      
+
+      Contact details for administrative enquiries.
+      From: http://terminology.hl7.org/CodeSystem/contactentity-type in valuesets.xml
+
+
+   .. attribute:: Administrative
+      
+
+      Contact details for issues related to Human Resources, such as staff matters,
+      OH&S etc.
+      From: http://terminology.hl7.org/CodeSystem/contactentity-type in valuesets.xml
+
+
+   .. attribute:: HumanResource
+      
+
+      Contact details for dealing with issues related to insurance
+      claims/adjudication/payment.
+      From: http://terminology.hl7.org/CodeSystem/contactentity-type in valuesets.xml
+
+
+   .. attribute:: Payor
+      
+
+      Generic information contact for patients.
+      From: http://terminology.hl7.org/CodeSystem/contactentity-type in valuesets.xml
+
+
+   .. attribute:: Patient
+      
+
+      Dedicated contact point for matters relating to press enquiries.
+      From: http://terminology.hl7.org/CodeSystem/contactentity-type in valuesets.xml
+
+
+   .. attribute:: Press
+      
+
+      
+
+

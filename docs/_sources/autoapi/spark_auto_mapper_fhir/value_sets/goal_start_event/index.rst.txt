@@ -1,0 +1,62 @@
+:mod:`spark_auto_mapper_fhir.value_sets.goal_start_event`
+=========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.goal_start_event
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.goal_start_event.GoalStartEventCode
+   spark_auto_mapper_fhir.value_sets.goal_start_event.GoalStartEventCodeValues
+
+
+
+.. class:: GoalStartEventCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   GoalStartEvent
+   From: http://hl7.org/fhir/ValueSet/goal-start-event in valuesets.xml
+       Identifies types of events that might trigger the start of a goal.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+
+.. class:: GoalStartEventCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/goal-start-event in valuesets.xml
+
+   .. attribute:: AdmissionToHospital
+      
+
+      From: http://hl7.org/fhir/ValueSet/goal-start-event in valuesets.xml
+
+
+   .. attribute:: DischargeFromHospital
+      
+
+      From: http://hl7.org/fhir/ValueSet/goal-start-event in valuesets.xml
+
+
+   .. attribute:: CompletionTimeOfProcedure
+      
+
+      From: http://hl7.org/fhir/ValueSet/goal-start-event in valuesets.xml
+
+
+   .. attribute:: Childbirth
+      
+
+      
+
+

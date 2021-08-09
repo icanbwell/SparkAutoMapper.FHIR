@@ -1,0 +1,35 @@
+:mod:`spark_auto_mapper_fhir.resources.group`
+=============================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.group
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.group.Group
+
+
+
+.. class:: Group(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.identifier.Identifier]] = None, active: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, type_: spark_auto_mapper_fhir.value_sets.group_type.GroupTypeCode, actual: spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean, code: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, name: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, quantity: Optional[spark_auto_mapper_fhir.fhir_types.unsigned_int.FhirUnsignedInt] = None, managingEntity: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.organization.Organization, spark_auto_mapper_fhir.resources.related_person.RelatedPerson, spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole)]]] = None, characteristic: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.group_characteristic.GroupCharacteristic]] = None, member: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.group_member.GroupMember]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   Group
+   group.xsd
+       Represents a defined collection of entities that may be discussed or acted
+   upon collectively but which are not expected to act collectively, and are not
+   formally or legally recognized; i.e. a collection of entities that isn't an
+   Organization.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

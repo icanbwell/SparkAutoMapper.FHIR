@@ -1,0 +1,62 @@
+:mod:`spark_auto_mapper_fhir.value_sets.procedure_device_action_codes`
+======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.procedure_device_action_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.procedure_device_action_codes.ProcedureDeviceActionCodesCode
+   spark_auto_mapper_fhir.value_sets.procedure_device_action_codes.ProcedureDeviceActionCodesCodeValues
+
+
+
+.. class:: ProcedureDeviceActionCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ProcedureDeviceActionCodes
+   From: http://hl7.org/fhir/device-action in valuesets.xml
+       Example codes indicating the change that happened to the device during the
+   procedure.  Note that these are in no way complete and might not even be
+   appropriate for some uses.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/device-action
+
+      
+
+
+.. class:: ProcedureDeviceActionCodesCodeValues
+
+   The device was implanted in the patient during the procedure.
+   From: http://hl7.org/fhir/device-action in valuesets.xml
+
+   .. attribute:: Implanted
+      
+
+      The device was explanted from the patient during the procedure.
+      From: http://hl7.org/fhir/device-action in valuesets.xml
+
+
+   .. attribute:: Explanted
+      
+
+      The device remains in the patient, but its location, settings, or
+      functionality was changed.
+      From: http://hl7.org/fhir/device-action in valuesets.xml
+
+
+   .. attribute:: Manipulated
+      
+
+      
+
+

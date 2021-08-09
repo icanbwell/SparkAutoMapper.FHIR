@@ -1,0 +1,34 @@
+:mod:`spark_auto_mapper_fhir.value_sets.encounter_reason_codes`
+===============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.encounter_reason_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.encounter_reason_codes.EncounterReasonCodesCode
+
+
+
+.. class:: EncounterReasonCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   EncounterReasonCodes
+   From: http://hl7.org/fhir/ValueSet/encounter-reason in valuesets.xml
+       This examples value set defines the set of codes that can be used to indicate
+   reasons for an encounter.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+

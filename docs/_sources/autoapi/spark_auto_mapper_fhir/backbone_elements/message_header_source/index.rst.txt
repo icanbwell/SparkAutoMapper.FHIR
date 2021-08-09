@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.message_header_source`
+=====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.message_header_source
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.message_header_source.MessageHeaderSource
+
+
+
+.. class:: MessageHeaderSource(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, name: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, software: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, version: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, contact: Optional[spark_auto_mapper_fhir.complex_types.contact_point.ContactPoint] = None, endpoint: spark_auto_mapper_fhir.fhir_types.url.FhirUrl)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   MessageHeader.Source
+   The header for a message exchange that is either requesting or responding to an action.  The reference(s) that are the subject of the action as well as other information related to the action are typically transmitted in a bundle in which the MessageHeader resource instance is the first resource in the bundle.
+
+

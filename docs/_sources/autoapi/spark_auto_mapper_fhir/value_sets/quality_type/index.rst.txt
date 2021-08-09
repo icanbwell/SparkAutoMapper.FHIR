@@ -1,0 +1,59 @@
+:mod:`spark_auto_mapper_fhir.value_sets.quality_type`
+=====================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.quality_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.quality_type.QualityTypeCode
+   spark_auto_mapper_fhir.value_sets.quality_type.QualityTypeCodeValues
+
+
+
+.. class:: QualityTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   qualityType
+   From: http://hl7.org/fhir/quality-type in valuesets.xml
+       Type for quality report.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/quality-type
+
+      
+
+
+.. class:: QualityTypeCodeValues
+
+   INDEL Comparison.
+   From: http://hl7.org/fhir/quality-type in valuesets.xml
+
+   .. attribute:: INDELComparison
+      
+
+      SNP Comparison.
+      From: http://hl7.org/fhir/quality-type in valuesets.xml
+
+
+   .. attribute:: SNPComparison
+      
+
+      UNKNOWN Comparison.
+      From: http://hl7.org/fhir/quality-type in valuesets.xml
+
+
+   .. attribute:: UNKNOWNComparison
+      
+
+      
+
+

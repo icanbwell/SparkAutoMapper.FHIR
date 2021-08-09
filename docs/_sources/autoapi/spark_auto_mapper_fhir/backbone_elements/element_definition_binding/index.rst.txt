@@ -1,0 +1,28 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.element_definition_binding`
+==========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.element_definition_binding
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.element_definition_binding.ElementDefinitionBinding
+
+
+
+.. class:: ElementDefinitionBinding(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, strength: spark_auto_mapper_fhir.value_sets.binding_strength.BindingStrengthCode, description: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, valueSet: Optional[spark_auto_mapper_fhir.fhir_types.canonical.FhirCanonical] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   ElementDefinition.Binding
+   Captures constraints on each element within the resource, profile, or extension.
+   If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
+
+

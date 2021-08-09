@@ -1,0 +1,45 @@
+:mod:`spark_auto_mapper_fhir.value_sets.fm_condition_codes`
+===========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.fm_condition_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.fm_condition_codes.FMConditionCodesCode
+   spark_auto_mapper_fhir.value_sets.fm_condition_codes.FMConditionCodesCodeValues
+
+
+
+.. class:: FMConditionCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   FMConditionCodes
+   From: http://hl7.org/fhir/fm-conditions in valuesets.xml
+       This value set includes sample Conditions codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/fm-conditions
+
+      
+
+
+.. class:: FMConditionCodesCodeValues
+
+   Headache
+   From: http://hl7.org/fhir/fm-conditions in valuesets.xml
+
+   .. attribute:: Headache
+      
+
+      
+
+

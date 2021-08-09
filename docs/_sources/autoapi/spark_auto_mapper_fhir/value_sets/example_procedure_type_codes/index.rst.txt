@@ -1,0 +1,54 @@
+:mod:`spark_auto_mapper_fhir.value_sets.example_procedure_type_codes`
+=====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.example_procedure_type_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.example_procedure_type_codes.ExampleProcedureTypeCodesCode
+   spark_auto_mapper_fhir.value_sets.example_procedure_type_codes.ExampleProcedureTypeCodesCodeValues
+
+
+
+.. class:: ExampleProcedureTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ExampleProcedureTypeCodes
+   From: http://terminology.hl7.org/CodeSystem/ex-procedure-type in valuesets.xml
+       This value set includes example Procedure Type codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/ex-procedure-type
+
+      
+
+
+.. class:: ExampleProcedureTypeCodesCodeValues
+
+   The first procedure in a series required to produce and overall patient
+   outcome.
+   From: http://terminology.hl7.org/CodeSystem/ex-procedure-type in valuesets.xml
+
+   .. attribute:: PrimaryProcedure
+      
+
+      The second procedure in a series required to produce and overall patient
+      outcome.
+      From: http://terminology.hl7.org/CodeSystem/ex-procedure-type in valuesets.xml
+
+
+   .. attribute:: SecondaryProcedure
+      
+
+      
+
+

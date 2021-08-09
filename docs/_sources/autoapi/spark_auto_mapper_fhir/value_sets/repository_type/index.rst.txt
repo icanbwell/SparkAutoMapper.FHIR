@@ -1,0 +1,77 @@
+:mod:`spark_auto_mapper_fhir.value_sets.repository_type`
+========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.repository_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.repository_type.RepositoryTypeCode
+   spark_auto_mapper_fhir.value_sets.repository_type.RepositoryTypeCodeValues
+
+
+
+.. class:: RepositoryTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   repositoryType
+   From: http://hl7.org/fhir/repository-type in valuesets.xml
+       Type for access of external URI.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/repository-type
+
+      
+
+
+.. class:: RepositoryTypeCodeValues
+
+   When URL is clicked, the resource can be seen directly (by webpage or by
+   download link format).
+   From: http://hl7.org/fhir/repository-type in valuesets.xml
+
+   .. attribute:: ClickAndSee
+      
+
+      When the API method (e.g. [base_url]/[parameter]) related with the URL of the
+      website is executed, the resource can be seen directly (usually in JSON or XML
+      format).
+      From: http://hl7.org/fhir/repository-type in valuesets.xml
+
+
+   .. attribute:: TheURLIsTheRESTfulOrOtherKindOfAPIThatCanAccessToTheResult_
+      
+
+      When logged into the website, the resource can be seen.
+      From: http://hl7.org/fhir/repository-type in valuesets.xml
+
+
+   .. attribute:: ResultCannotBeAccessUnlessAnAccountIsLoggedIn
+      
+
+      When logged in and  follow the API in the website related with URL, the
+      resource can be seen.
+      From: http://hl7.org/fhir/repository-type in valuesets.xml
+
+
+   .. attribute:: ResultNeedToBeFetchedWithAPIAndNeedLOGIN_OrCookiesAreRequiredWhenVisitingTheLinkOfResource_
+      
+
+      Some other complicated or particular way to get resource from URL.
+      From: http://hl7.org/fhir/repository-type in valuesets.xml
+
+
+   .. attribute:: SomeOtherComplicatedOrParticularWayToGetResourceFromURL_
+      
+
+      
+
+

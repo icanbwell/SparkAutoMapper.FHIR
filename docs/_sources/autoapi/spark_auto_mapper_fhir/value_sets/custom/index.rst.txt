@@ -1,0 +1,15 @@
+:mod:`spark_auto_mapper_fhir.value_sets.custom`
+===============================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.custom
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   search_characteristic/index.rst
+
+

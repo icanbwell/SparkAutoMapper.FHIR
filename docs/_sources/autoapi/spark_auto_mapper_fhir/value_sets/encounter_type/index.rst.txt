@@ -1,0 +1,63 @@
+:mod:`spark_auto_mapper_fhir.value_sets.encounter_type`
+=======================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.encounter_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.encounter_type.EncounterTypeCode
+   spark_auto_mapper_fhir.value_sets.encounter_type.EncounterTypeCodeValues
+
+
+
+.. class:: EncounterTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   EncounterType
+   From: http://terminology.hl7.org/CodeSystem/encounter-type in valuesets.xml
+       This example value set defines a set of codes that can be used to indicate the
+   type of encounter: a specific code indicating type of service provided.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/encounter-type
+
+      
+
+
+.. class:: EncounterTypeCodeValues
+
+   From: http://terminology.hl7.org/CodeSystem/encounter-type in valuesets.xml
+
+   .. attribute:: AnnualDiabetesMellitusScreening
+      
+
+      From: http://terminology.hl7.org/CodeSystem/encounter-type in valuesets.xml
+
+
+   .. attribute:: BoneDrilling_boneMarrowPunctionInClinic
+      
+
+      From: http://terminology.hl7.org/CodeSystem/encounter-type in valuesets.xml
+
+
+   .. attribute:: InfantColonScreening_60Minutes
+      
+
+      From: http://terminology.hl7.org/CodeSystem/encounter-type in valuesets.xml
+
+
+   .. attribute:: OutpatientKenacortInjection
+      
+
+      
+
+

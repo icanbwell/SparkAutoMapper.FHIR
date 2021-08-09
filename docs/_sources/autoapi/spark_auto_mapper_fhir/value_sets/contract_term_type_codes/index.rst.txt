@@ -1,0 +1,53 @@
+:mod:`spark_auto_mapper_fhir.value_sets.contract_term_type_codes`
+=================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.contract_term_type_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.contract_term_type_codes.ContractTermTypeCodesCode
+   spark_auto_mapper_fhir.value_sets.contract_term_type_codes.ContractTermTypeCodesCodeValues
+
+
+
+.. class:: ContractTermTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ContractTermTypeCodes
+   From: http://terminology.hl7.org/CodeSystem/contracttermtypecodes in valuesets.xml
+       This value set includes sample Contract Term Type codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/contracttermtypecodes
+
+      
+
+
+.. class:: ContractTermTypeCodesCodeValues
+
+   Based on specialized statutes that deal with particular subjects.
+   From: http://terminology.hl7.org/CodeSystem/contracttermtypecodes in valuesets.xml
+
+   .. attribute:: Statutory
+      
+
+      Execution of the term in the contract is conditional on the execution of other
+      actions.
+      From: http://terminology.hl7.org/CodeSystem/contracttermtypecodes in valuesets.xml
+
+
+   .. attribute:: SubjectTo
+      
+
+      
+
+

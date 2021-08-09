@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.allergy_intolerance_reaction`
+============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.allergy_intolerance_reaction
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.allergy_intolerance_reaction.AllergyIntoleranceReaction
+
+
+
+.. class:: AllergyIntoleranceReaction(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, substance: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.substance_code.SubstanceCodeCode]] = None, manifestation: spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.snomedct_clinical_findings.SNOMEDCTClinicalFindingsCode]], description: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, onset: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, severity: Optional[spark_auto_mapper_fhir.value_sets.allergy_intolerance_severity.AllergyIntoleranceSeverityCode] = None, exposureRoute: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.snomedct_route_codes.SNOMEDCTRouteCodesCode]] = None, note: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.annotation.Annotation]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   AllergyIntolerance.Reaction
+   Risk of harmful or undesirable, physiological response which is unique to an individual and associated with exposure to a substance.
+
+

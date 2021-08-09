@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.substance_instance`
+==================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.substance_instance
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.substance_instance.SubstanceInstance
+
+
+
+.. class:: SubstanceInstance(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.complex_types.identifier.Identifier] = None, expiry: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, quantity: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   Substance.Instance
+   A homogeneous material with a definite composition.
+
+

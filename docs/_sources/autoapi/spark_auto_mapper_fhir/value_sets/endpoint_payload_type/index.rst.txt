@@ -1,0 +1,59 @@
+:mod:`spark_auto_mapper_fhir.value_sets.endpoint_payload_type`
+==============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.endpoint_payload_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.endpoint_payload_type.EndpointPayloadTypeCode
+   spark_auto_mapper_fhir.value_sets.endpoint_payload_type.EndpointPayloadTypeCodeValues
+
+
+
+.. class:: EndpointPayloadTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   EndpointPayloadType
+   From: http://terminology.hl7.org/CodeSystem/endpoint-payload-type in valuesets.xml
+       This is an example value set defined by the FHIR project, that could be used
+   to represent possible payload document types.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/endpoint-payload-type
+
+      
+
+
+.. class:: EndpointPayloadTypeCodeValues
+
+   Any payload type can be used with this endpoint, it is either a payload
+   agnostic infrastructure (such as a storage repository), or some other type of
+   endpoint where payload considerations are internally handled, and not
+   available
+   From: http://terminology.hl7.org/CodeSystem/endpoint-payload-type in valuesets.xml
+
+   .. attribute:: Any
+      
+
+      This endpoint does not require any content to be sent; simply connecting to
+      the endpoint is enough notification. This can be used as a 'ping' to wakeup a
+      service to retrieve content, which could be to ensure security considerations
+      are correctly handled
+      From: http://terminology.hl7.org/CodeSystem/endpoint-payload-type in valuesets.xml
+
+
+   .. attribute:: None_
+      
+
+      
+
+

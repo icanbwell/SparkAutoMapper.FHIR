@@ -1,0 +1,68 @@
+:mod:`spark_auto_mapper_fhir.value_sets.consent_data_meaning`
+=============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.consent_data_meaning
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.consent_data_meaning.ConsentDataMeaningCode
+   spark_auto_mapper_fhir.value_sets.consent_data_meaning.ConsentDataMeaningCodeValues
+
+
+
+.. class:: ConsentDataMeaningCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ConsentDataMeaning
+   From: http://hl7.org/fhir/consent-data-meaning in valuesets.xml
+       How a resource reference is interpreted when testing consent restrictions.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/consent-data-meaning
+
+      
+
+
+.. class:: ConsentDataMeaningCodeValues
+
+   The consent applies directly to the instance of the resource.
+   From: http://hl7.org/fhir/consent-data-meaning in valuesets.xml
+
+   .. attribute:: Instance
+      
+
+      The consent applies directly to the instance of the resource and instances it
+      refers to.
+      From: http://hl7.org/fhir/consent-data-meaning in valuesets.xml
+
+
+   .. attribute:: Related
+      
+
+      The consent applies directly to the instance of the resource and instances
+      that refer to it.
+      From: http://hl7.org/fhir/consent-data-meaning in valuesets.xml
+
+
+   .. attribute:: Dependents
+      
+
+      The consent applies to instances of resources that are authored by.
+      From: http://hl7.org/fhir/consent-data-meaning in valuesets.xml
+
+
+   .. attribute:: AuthoredBy
+      
+
+      
+
+

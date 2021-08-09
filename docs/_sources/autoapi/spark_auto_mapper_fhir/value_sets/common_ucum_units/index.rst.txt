@@ -1,0 +1,8222 @@
+:mod:`spark_auto_mapper_fhir.value_sets.common_ucum_units`
+==========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.common_ucum_units
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.common_ucum_units.CommonUCUMUnitsCode
+   spark_auto_mapper_fhir.value_sets.common_ucum_units.CommonUCUMUnitsCodeValues
+
+
+
+.. class:: CommonUCUMUnitsCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   Common UCUM units
+   From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+       Commonly encountered UCUM units (for purposes of helping populate look ups.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://unitsofmeasure.org
+
+      
+
+
+.. class:: CommonUCUMUnitsCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+   .. attribute:: Percent
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Percent_100WBC
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Percent0to3Hours
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentAbnormal
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentActivity
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentBasalActivity
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentBinding
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentBlockade
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentCarboxyhemoglobin
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentConversion
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentCound
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentEosSeen
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentExcretion
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentFat
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentFetalErythrocytes
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentHemoglobin
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentHemoglobinA1C
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentHemoglobinSaturation
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentHemolysis
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentHumanResponse
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentIndex
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentInhibition
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentLive
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentNegativeControl
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentNormal
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentNormalControl
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentNormalPooledPlasma
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentOfAvailable
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentOfBacteria
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentOfLymphocytes
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentOfWBCs
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentOxygen
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentPositive
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentPrecipitate
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentReactivity
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentResponse
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentRisk
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentSpermMotility
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentTotal
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentTotalProtein
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentTot_Cholesterol
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentTot_Hgb
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentUptake
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: VolumePercent
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentWeightToWeight
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Per12_Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerArbitraryUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerHighPowerField
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerInternationalUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerLowPowerField
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerEntity
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerHpf
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerLPF
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerOif
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerSpecimen
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerTot
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerTenGiga
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerTrillion
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerTrillionRedBloodCells
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerMillion
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerBillion
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Per100
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Per100Cells
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Per100Neutrophils
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Per100Spermatozoa
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Per100WBC
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Per100WBC
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: _Year
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerCentimeterOfWater
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerDay
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerDeciliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerGram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerGramCreat
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerGramHgb
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerGramTot_nit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerGramTot_prot
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerGramWet_tis
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerHour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerKilogram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerKilogramBodyWt
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerSquareMeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerMilligram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerMinute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerCubicMillimeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerMillimole
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerMonth
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerSecond
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerEnzymeUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerMicrogram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerMicroliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerWeek
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: IgAAnticardiolipinUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: IgAAnticardiolipinUnitPerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ArbitraryUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ArbitaryUnit_Liter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ArbitraryUnitPerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: AllergyUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: BioequivalentAllergenUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: BethesdaUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: BethesdaUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ColonyFormingUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ColonyFormingUnitPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ColonyFormingUnitPerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: French_catheterGauge_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: CubicInch
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Cup
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: DegreeFahrenheit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Dram_USAndBritish_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Drop
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Drop_HPF
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Drop_Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Drop_Minute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Drop_Milliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Drop_Second
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: FluidDram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: FluidOunce
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: FluidOunce
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Feet
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Fathom
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Gallon
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: QueenAnne_sWineGallon
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: IgGAnticardiolipinUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Grain
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Inch_international_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: InternationalUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: InternationalUnitPer2Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: InternationalUnitPer24Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: InternationalUnitPerBillionRedBloodCells
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: InternationalUnitPerDay
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: InternationalUnitPerDeciliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: InternationalUnitPerGram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: InternationalUnitPerGramOfHemoglobin
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: InternationalUnit_GramHgb
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: InternationalUnitPerHour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: InternationalUnitPerKilogram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: InternationalUnitPerKilogramPerDay
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: InternationalUnitPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: InternationalUnitPerMinute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: InternationalUnitPerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Pound_USAndBritish_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: StatuteMile
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Mile
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Minim
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: IgMAnticardiolipinUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NauticalMile
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Ounce_USAndBritish_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Ounce
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PH
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: TheNumberPi_Radian_Minute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PartPerBillion
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PartPerMillion
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PartPerMillionInVolumePerVolume
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PartPerTrillion
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PartsPerThousand
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PartsPerTrillion
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PoundPerSquareInch
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Pint
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Quart
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Quart
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: SquareFoot_international_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: SquareInch_international_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ShortTonU_S_Ton
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: SquareYard
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Tablespoon_US_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: TuberculinUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ToddUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ToddUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Teaspoon
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Yard
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: _OfCalculi
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: _OfDonorInformativeMarkers
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: _OfFetuses
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: _OfInformativeMarkers
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: _
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: _2Or3Times_Day
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: _3Times_Day
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: _4Times_Day
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: _5Times_Day
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Absorbance
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Absorbance_U
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Absorbance_U_Milliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Activity
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ActivityCoefficient
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: AHF_U
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: AntibodyResponse_U
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Applicator
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: IgAAntiphosphatidylserineUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: AspirinReaction_U
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Bead
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Beats_Minute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Bottle
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Bowls_Day
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Breaths_Minute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ComplementActivityEnzymeUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: CagRepeat
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Can
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Cans_Week
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Capsule
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Cell
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Cells
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: CellsPerHighPowerField
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Cells_Milliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: CellsPerMicroliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: CfTiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Cfu
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Cfu_Milliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: CGG_repeats
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: CGG
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ComplementCH100Unit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ClockTime
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Clock_time
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ComplementActivityEnzyme_U
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ComplementCH100_U
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ComplementCH50_U
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: CopiesPerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: CopiesPerMicrogram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Copies_Microliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Count
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Counts_Minute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Dalton
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: DdTiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: DeltaOpticalDensity
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Dilution
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Disintegrations_Minute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Dose
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Drinks_Day
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Each
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EhrlichUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EhrlichUnitPer2Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EhrlichUnitPer100Gram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EhrlichUnitPerDay
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EhrilichUnitPerDeciliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Ehrlich_U_Milliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EIAIndex
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EIATiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EIAUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EIAUnitPerEnzymeUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ElisaIndex
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ELISAUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Elisa_U_Milliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ElisaValue
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ErythrocytePerMicroliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Events
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: FluorescenceIntensity_U
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GliadinIndexValue
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: G_PortionPhospholipids
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: HaTiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: IfaIndex
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: IfaTiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: IgAAntiphosphatidyleserine_U
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: IgAPhospholipid_U
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: IgGAntiphosphatidyleserine_U
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: IgGIndex
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: IgMAntiphosphatidyleserine_U
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: IgMIndex
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ImmuneComplexUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ImmuneStatusRatio
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Immunity
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Index_val
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Index
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: IndexValue
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: InhaledTobaccoUseAmountYears
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: InhaledTobaccoUsePacks_Day
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: InternationalNormalizedRatio
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: INR_unit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: JuvenileDiabetesFoundationUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: JuvenileDiabetesFoundationUnitPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: JuvenileDiabetesFound_U
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: KaolinClottingTime
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: KronusUnitPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: KronusUnitPerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: LgCopies_Milliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Log_base10_CopiesPerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Log_base10_InternationalUnitPerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: LymeIndexValue
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: M_o_M_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MultipleOfTheMedian
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Markers
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Minidrp
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Molecule_Platelet
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: M_PortionPhospholipids
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: IgMAntiphosphatidylserineUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: IgMAntiphosphatidylserineUnitPerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MultOfMean
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NonspecificOunce
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Number
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: OpticalDensityUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Once_Day
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: OpticalDensity
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: OpticalDensityIndex
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: OpticalDensityRatio
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: P2Y12ReactionUnits
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Package
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Packs_Day
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PackYears
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Patch
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Percentile
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Pill
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Pouches_Week
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: RadioactiveT3UptakeRatio
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Ratio
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: RedBloodCellPerMicroliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: RecTiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Relative_U
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: RelativeViscosity
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: RPI_U
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: RubellaVirus
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: SatIndex
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Scoop
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ScoreOf
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Shift
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: SpermatozoaPerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Spray
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: StandardDeviation
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: StandardIgA_U
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: StandardIgG_U
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: StandardIgM_U
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: StdDeviation_U
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: StimulatingIndex
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Streptozyme_U
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ThyroxinUptake_U
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: TIBC_U
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Times_Week
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Tine_U
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Titer
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ToxoplasmaIndexValue
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Vial
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Volume_Vvolume
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: WeeksDays
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: WhiteBloodCell
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: OnePerDay
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: OnePerMinute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: TrillionPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Thousand
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ThousandRedBloodCells
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ThousandPer_Unit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ThousandPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ThousandPerMilliLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ThousandsPerMicroLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ThousandCopiesPerMilliLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: _theNumberTenForArbitraryPowers_3_Polarization_U
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: OneHundredThousand
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Million
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillionInternationalUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillionEquivalentsPerMilliLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: _theNumberTenForArbitraryPowers_6_Unit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillionPerSpecimen
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillionPerKilogram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillionPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillionPerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: _theNumberTenForArbitraryPowers_6_millimeter_3_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillionPerMicroliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: _theNumberTenForArbitraryPowers_6_Immunofluorescence_U
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: TenToEighth
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: BillionPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: BillionPerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: BillionPerMicroliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: _10LiterPerMinutePerSquareMeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: _10LiterPerMinute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: _10_MicroNewton_Second_Centimeter_meter_2_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: _10_MicroNewton_Second_Centimeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: _10_MicroNewton_Second_centimeter_2_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Year
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Amp_re_Meter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: TechnicalAtmosphere
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Bar
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: DegreeCelsius
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Centigram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Centiliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Centimeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: CentimeterOfWater
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: CentimeterOfWaterColumn_Second_Meter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: CentimeterOfWaterPerLiterPerSecond
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: CentimeterOfMercury
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: SquareCentimeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: SquareCentimeterPerSecond
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: CubicCentimeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: CentiPoise
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: CentiStokes
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Day
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Decibel
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Degree
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: DegreePerSecond
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Decigram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Deciliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Decimeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: SquareDecimeterPerSquareSecond
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Equivalents
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Equivalents_Liter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Equivalents_Milliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Equivalents_Millimole
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Equivalents_Micromole
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Erg
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Electronvolt
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Femtogram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Femtoliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Femtoliter_Nanoliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Femtometer
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Femtomole
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: FemtomolePerGram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: FemtomolePerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Femtomole_Milligram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Femtomole_Milliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Gram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Gram_Meter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Gram_Meter_Hb_meter_2_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Gram_Meter_Hb
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramPer100Gram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramPer12Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramPer24Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramPer3Days
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramPer4Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramPer48Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramPer5Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramPer6Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramPer72Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Gram_8_Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Gram_8_Kilogram_Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Gram_Kilogram_Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Gram_Kilogram_Minute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Gram_TotalWeight
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramPerDay
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramPerDeciliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramPerGram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Gram_GramCre
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Gram_GramCreat
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramPerGramOfTissue
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramPerHour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramPerHourPerSquareMeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramPerKilogram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramPerKilogramPerDay
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramsPerSquareMeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramPerMilligram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramPerMinute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramPerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramPerMillimole
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Gram_MillimoleCreat
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramPerMole
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GigaBecquerel
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Hectoliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Hertz
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: InternationalUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Joule
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: JoulePerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Kelvin
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Kelvin_Watt
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: KiloInternationalUnitPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: KiloInternationalUnitPerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Katal_Kilogram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Katal_Liter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: KiloBecquerel
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Kilocalorie
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Kilocalorie_8_Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: KilocaloriePerHour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Kilogram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: KilogramMeterPerSecond
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: KilogramPerSecondPerSquareMeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: KilogramPerHour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: KilogramPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Kilogram_meter_2_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Kilogram_meter_3_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Kilogram_Minute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: KilogramPerMole
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Kilogram_Second
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Kiloliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Kilometer
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: KiloPascal
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Kilosecond
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: KiloenzymeUnitPerGram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: KiloUnit_Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: KiloenzymeUnitPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: KiloEnzymeUnitPerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Liter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Liter_second_2_Second
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: LiterPer8Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: LiterPerMinutePerSquareMeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: LiterPerDay
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: LiterPerHour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: LiterPerKilogram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: LiterPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: LiterPerMinute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Liter_Second
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Lumen_meter_2_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Meter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MeterPerSecond
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MeterPerSquareSecond
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliinternationalUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliInternationalUnitPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliInternationalUnitPerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: SquareMeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: SquareMeterPerSecond
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: CubicMeterPerSecond
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliAmp_re
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Millibar
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillibarSecondPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MegaBecquerel
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliCurie
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Milliequivalent
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliequivalentPer12Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliequivalentPer2Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliequivalentPer24Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliequivalentPer8Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Milliequivalents_8_Hour_Kilogram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Milliequivalents_Kilogram_Day
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Milliequivalents_Specimen
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliequivalentPerDay
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliequivalentPerDeciliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliequivalentPerGram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Milliequivalents_GramCre
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliequivalentPerHour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliequivalentPerKilogram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliequivalentPerKilogramPerHour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Milliequivalents_Kilogram_Minute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliequivalentPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliequivalentPerSquareMeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliequivalentPerMinute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliequivalentPerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Milligram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPer10Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPer12Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPer18Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPer2Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPer24Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPer72Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPer8Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Milligram_8_Hour_Kilogram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Milligram_Kilogram_Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Milligram_Hgb_Gram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Milligram_Specimen
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Milligram_Tot_Volume
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Milligram_Volume
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPerDay
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Milligram_Day_173_theNumberTenForArbitraryPowers_2_meter_2_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPerDeciliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPerGram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Milligram_GramCre
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPerGramOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPerHour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPerKilogram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Milligram_Kilogram_24_Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPerKilogramPerDay
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPerKilogramPerMinute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPerSquareMeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPerCubicMeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPerMilligram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Milligram_MilligramCre
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPerMinute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPerMillimole
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Milligram_MillimoleCre
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPerMillimoleOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPerWeek
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPhenylketones_Deciliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Minute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Milliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Milliliter_H_b_meter_2_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliliterPer10Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliliterPer12Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliliterPer2Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliliterPer24Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliliterPer4Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliliterPer72Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliliterPer8Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Milliliter_Kilogram_Minute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliliterPerSquareInch_international_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliLitersPerHeartbeat_SIVolumeUnits_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Milliliter_CentimeterOfWaterColumn
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliliterPerDay
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliliterPerDeciliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliliterPerHour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliliterPerKilogram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliliterPerKilogramPer8Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliliterPerKilogramPerDay
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliliterPerKilogramPerHour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliliterPerKilogramPerMinute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliliterPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliliterPerSquareMeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliliterPerMillibar
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliliterPerMinute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Milliliter_Minute_173_theNumberTenForArbitraryPowers_2_meter_2_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliliterPerMinutePer1_73SquareMeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliliterPerMinutePerSquareMeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliliterPerMillimeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliliterPerSecond
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Millimeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimeterPerHour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimeterPerMinute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimeterOfWater
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimeterOfMercury
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: SquareMillimeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: CubicMillimeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Millimole
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimolePer12Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimolePer18Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimolePer2Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimolePer24Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimolePer6Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimolePer8Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Millimole_8_Hour_Kilogram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Millimole_Tot_Volume
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimolePerDay
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimolePerDeciliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimolePerGram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimolePerGramOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimolePerGramOfHemoglobin
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimolePerHour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimolePerHourPerMilligramOfHemoglobin
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimolePerHourPerMilligramOfProtein
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimolePerKilogram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimolePerKilogramPerDay
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimolePerKilogramPerHour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimolePerKilogramPerMinute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimolePerKilogramOfWater
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimolePerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimolePerLiterPerSecond
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Millimole_Meter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimolePerSquareMeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimolePerMinute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimolePerMillimole
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimolePerMole
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimolePerMoleOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimolePerSecondPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Month
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Mole
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MolePerDay
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MolePerKilogram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MolePerKilogramPerSecond
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MolePerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MolePerCubicMeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MolePerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MolePerMole
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Mole_MoleCreat
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MolePerSecond
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Milliosmole
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliosmolePerKilogram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliosmolePerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Millipascal
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Millisecond
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillienzymeUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillienzymeUnitPerGram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliUnit_GramHgb
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillienzymeUnitPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliUnit_Milligram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliUnit_MilligramCre
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliUnit_Minute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillienzymeUnitPerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillienzymeUnitPerMilliliterPerMinute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillienzymeUnitPerMillimoleOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillienzymeUnitPerMillimoleOfRedBloodCells
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliVolt
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Newton
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NewtonCentimeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NewtonSecond
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanoCurie
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Nanogram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanogramPer24Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanogramPer8Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Nanogram_8_Hour_Kilogram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Nanogram_Kilogram_Day
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Nanogram_Kilogram_Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Nanogram_Kilogram_Minute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanogramPerMillion
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanogramPerDay
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanogramPerDeciliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Nanogram_Deciliter_Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanogramPerGram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Nanogram_GramCre
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanogramPerGramOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanogramPerHour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanogramPerKilogram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanogramPerKilogramPer8Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanogramPerKilogramPerHour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanogramPerKilogramPerMinute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanogramPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanogramPerSquareMeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanogramPerMilligram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanogramPerMilligramPerHour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Nanogram_MilligramProtein
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanogramPerMinute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanogramPerMillliiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanogramPerMilliliterPerHour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Nanogram_MilliliterRbc
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanogramPerSecond
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Nanokatal
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Nanoliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Nanometer
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanometerPerSecondPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Nanomole
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePer24Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePerDay
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePerDeciliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePerGram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Nanomole_GramCre
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePerGramOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePerGramOfDryWeight
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePerHourPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePerHourPerMilligramOfProtein
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePerHourPerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePerLiterPerMillimoleOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePerLiterPerSecond
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePerLiterOfRedBloodCells
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePerMeterPerMilligramOfProtein
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePerMilligram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePerMilligramPerHour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePerMinutePerMilligramOfHemoglobin
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePerMinutePerMilligramOfProtein
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePerMinutePerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePerMilliliterPerHour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePerMilliliterPerMinute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePerMillimole
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Nanomole_MillimoleCre
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePerMillimoleOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePerMole
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePerNanomole
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePerSecond
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePerSecondPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePerMicromoleOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Nanosecond
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Ohm
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: OsmolePerKilogram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: OsmolePerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Pascal
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Picogram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PicogramPerDeciliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PicogramPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PicogramPerMilligram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PicogramPerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PicogramPerMillimeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Picokatal
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Picoliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Picometer
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Picomole
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PicomolePerDay
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PicomolePerDeciliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PicomolePerGram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PicomolePerHourPerMilligramOfProtein
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PicomolePerHourPerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PicomolePerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PicomolePerMilligramOfProtein
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PicomolePerMinute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PicomolePerMinutePerMilligramOfProtein
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PicomolePerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PicomolePerMillimole
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PicomolePerMillimoleOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PicomolePerMole
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PicomolePerMicromole
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PicomolePerMicromoleOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Picosecond
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Picotesla
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Second
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Stokes
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Tonne
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EnzymeUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EnzymeUnitPer1Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EnzymeUnitPer12Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EnzymeUnitPer18Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EnzymeUnitPer2Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EnzymeUnitPer24Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EnzymeUnitPer10BillionCells
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EnzymeUnitPerTrillion
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EnzymeUnitPerMillion
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EnzymeUnitPerBillion
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EnzymeUnitPerDay
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EnzymeUnitPerDeciliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EnzymeUnitPerGram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Unit_GramCre
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EnzymeUnitPerGramOfHemoglobin
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EnzymeUnitPerGramOfHemoglobin
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: UnitsPerGramHemoglobin
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EnzymeUnitPerHour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Unit_Kilogram_Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EnzymeUnitPerKilogramOfHemoglobin
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EnzymeUnitPerKilogramOfHemoglobin
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EnzymeUnitPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EnzymeUnitPerMinute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EnzymeUnitPerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Unit_MilliliterRBC
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EnzymeUnitPerMilliliterOfRedBloodCells
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EnzymeUnitPerMillimoleOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EnzymeUnitPerMole
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EnzymeUnitPerSecond
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EnzymeUnitPerMicromole
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicroInternationalUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrointernationalUnitPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicroInternationalUnitPerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Microequivalents
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicroequivalentPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicroequivalentPerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Microgram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPer24Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPer8Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Microgram_Kilogram_Day
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Microgram_Kilogram_Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Microgram_Specimen
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicroGramsPerTotalVolume
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPerDay
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPerDeciliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Microgram_DeciliterRbc
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPerGram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Microgram_GramCre
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPerGramOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Microgram_GramDryWeight
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Microgram_GramHgb
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Microgram_GramTissue
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPerHour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPerKilogram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPerKilogramPer8Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPerKilogramPerDay
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPerKilogramPerHour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPerKilogramPerMinute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPerLiterPer24Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Microgram_LiterDDU
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPerSquareMeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPerMilligram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Microgram_MilligramCre
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPerMilligramOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPerMinute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Microgram_MilliliterFEU
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPerMillimole
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPerNanogram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramT4_Deciliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Microkatal
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Microliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicroliterPer2Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicroliterPerHour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Micrometer
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrometerPerSecond
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Micromole
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromolePer24Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromolePerDay
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromolePerDeciliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromolePerGram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Micromole_GramCre
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromolePerGramOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromolePerGramOfHemoglobin
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromolePerGramOfHemoglobin
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Micromole_GramHgb
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromolePerHour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Micromole_Hour_Gram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromolePerHourPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromolePerHourPerMilligramOfProtein
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromolePerKilogram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromolePerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromolePerLiterPerHour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromolePerLiterOfRedBloodCells
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Micromole_Meter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromolePerMilligram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Micromole_MilligramCre
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromolePerMinute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromolePerMinutePerGram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Micromole_Minute_GramProt
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromolePerMinutePerGramOfProtein
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromolePerMinutePerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromolePerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromolePerMilliliterPerMinute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromolePerMillimole
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromolePerMole
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Micromole_MoleCre
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromolePerMoleOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromolePerMoleOfHemoglobin
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromolePerMicromole
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicroOhm
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Microsecond
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicroUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicroEnzymeUnitPerGram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicroEnzymeUnitPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicroEnzymeUnitPerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Microvolt
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Volt
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Week
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: _10MicronewtonSecondPerCentimeterToTheFifthPowerPerSquareMeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: _10ThousandPerMicroliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: _24Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Amp_re
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: AspirinResponseUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: StandardAtmosphere
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: AttogramPerCell
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Becquerel
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: BindingIndex
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: BodanskyUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: CAGTrinucleotideRepeats
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Calorie
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: CentimeterOfWaterPerSecondPerMeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ChangeIn_delta_OpticalDensity
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Copies
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Count
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: CountsPerMinute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: CountsPerMinutePerThousandCells
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: DekaliterPerMinute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: DekaliterPerMinutePerSquareMeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Dilution
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: DyneSecondPerCentimeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: DyneSecondPerCentimeterPerSquareMeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EhrlichUnitPer100Gram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EIAIndex
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EIATiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EIAValue
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EnzymeUnitPer10
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EnzymeUnitPer10Billion
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EnzymeUnitPer10GramOfFeces
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EnzymeUnitPerGramOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EnzymeUnitPerGramOfProtein
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EnzymeUnitPerLiterAt25DegCelsius
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EnzymeUnitPerLiterAt37DegCelsius
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EnzymeUnitPerTrillionRedBloodCells
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Farad
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: FemtomolePerMilligramOfCytosolProtein
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: FemtomolePerMilligramOfProtein
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: FluorescentIntensityUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Fraction
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GAATrinucleotideRepeats
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GenomesPerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Globules_drops_PerHighPowerField
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramMeterPerHeartBeat
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramOfHemoglobin
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramOfTotalNitrogen
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramOfTotalProtein
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramOfWetTissue
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramPerKilogramPer8Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramPer8HourShift
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramPerCubicCentimeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramPerGramOfGlobulin
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramPerKilogramPer8HourShift
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramPerKilogramPerHour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramPerKilogramPerMinute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramPerMoleOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramPerSpecimen
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramPerTotalOutput
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramPerTotalWeight
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Gray
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: HeartBeatsPerMinute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Henry
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: HighPowerField
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: IgGAnticardiolipinUnitPerMilliliter_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: IgGAntiphosphatidylserineUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: IgMAnticardiolipinUnitPerMilliliter_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ImmuneStatusRatio
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ImmunofluorescenceAssayIndex
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ImmunofluorescenceAssayTiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Inch_international_OfWater
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: IndexValue
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: InfluenzaHemagglutinationTiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: InternationalUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: InternationalUnitPerLiterAt37DegreesCelsius
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: InternationalUnitPerMilligramOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Katal
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: KiloEnzymeUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: KiloEnzymeUnitPerLiterClass
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: KilocaloriePerDay
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: KilocaloriePerKilogramPer24Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: KilocaloriePerOunce_US_British_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: KingArmstrongUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: LiterPer24Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: LiterPerSecondPerSquareSecond
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Log_base10_CopiesPerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Log_base10_InternationalUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Log_base10_InternationalUnitPerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: LogBase10
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: LowPowerField
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Lumen
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: LumenSquareMeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: LymeIndexValue
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MacLaganUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Megasecond
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPerGramOfFeces
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramFibrinogenEquivalentUnitPerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPer100Gram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPerCubicMeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPerDeciliterOfRedBloodCells
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPerGramOfDryTissue
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPerGramOfDryWeight
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPerGramOfHair
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPerGramOfHemoglobin
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPerGramOfTissue
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPerLiterOfRedBloodCells
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPerMilliliterClass
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPerMilliliterEquivalent
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPerMillimoleOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPerSpecimen
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicrogramPerSquareFoot_international_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromoleBoneCollagenEquivalentPerMole
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromolePer2Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromolePer8Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromolePerDeciliterOfGlomerularFiltrate
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromolePerKilogramOfFeces
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromolePerLiterOfRedBloodCells
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromolePerMicromoleOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromolePerMilligramOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromolePerMillimoleOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MicromolePerMinutePerGramOfMucosa
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliEnzymeUnitPerMillimoleOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliEnzymeUnitPerGramOfHemoglobin
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliEnzymeUnitPerGramOfProtein
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliEnzymeUnitPerMilligramOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillibarPerLiterPerSecond
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliequivalentPerGramOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliequivalentPerSpecimen
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliequivalentPerTotalVolume
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramFibrinogenEquivalentUnitPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPer6Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPerCollection
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPerDayPer1_73SquareMeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPerDeciliterOfRedBloodCells
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPerGramOfDryTissue
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPerGramOfFeces
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPerGramOfTissue
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPerGramOfWetTissue
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPerKilogramPer8Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPerKilogramPerHour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPerLiterOfRedBloodCells
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPerMilligramOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPerSpecimen
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPerTotalOutput
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramPerTotalVolume
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliliterOfFetalRedBloodCells
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliliterPer5Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliliterPer6Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliliterPerHeartBeat
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliliterPerHeartBeatPerSquareMeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimolePer5Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimolePerEjaculate
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimolePerKilogramPer8Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimolePerLiterOfRedBloodCells
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimolePerMillimoleOfUrea
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimolePerMillmoleOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimolePerSpecimen
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillimolePerTotalVolume
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillionColonyFormingUnitPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillionInternationalUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillionPer24Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MillipascalSecond
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MinidropPerMinute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MinidropPerSecond
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MoleculePerPlatelet
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Month_day_year
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Mutation
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanoenzymeUnitPerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanoenzymeUnitPerRedBloodCell
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanogramFibrinogenEquivalentUnitPerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanogramPerEnzymeUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanogramPerMilligramOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanogramPerMilligramOfProtein
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanogramPerMilliliterOfRedBloodCells
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanogramPerMillionRedBloodCells
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomoleBoneCollagenEquivalent
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomoleBoneCollagenEquivalentPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomoleBoneCollagenEquivalentPerMillimoleOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomoleOf1_2CystinePerMilligramOfProtein
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomoleOfATP
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePerDeciliterOfGlomerularFiltrate
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePerMilligramOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePerMilligramOfProtein
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePerMilligramOfProteinPerHour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePerMinute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePerMinutePerMilligramOfHemoglobin
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NanomolePerMinutePerMillionCells
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NumberPerHighPowerField
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NumberPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NumberPerLowPowerField
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NumberPerMicroliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NumberPerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NumberPerMinute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: OhmMeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Osmole
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PanbioUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Per10ThousandRedBloodCells
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerCubicMeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerEntity
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerGramOfHemoglobin
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerGramOfTotalNitrogen
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerGramOfTotalProtein
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerGramOfWetTissue
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerInternationalUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerKilogramOfBodyWeight
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerMillimeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerMillimoleOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerOilImmersionField
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerThousand
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerThousandRedBloodCells
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerTrillionRedBloodCells
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentLossOfAcetylcholineReceptor
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentPenetration
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentAbnormal
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentActivity
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentAggregation
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentAt60Minute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentBasalActivity
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentBinding
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentBlockade
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentBlocked
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentBound
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentBreakdown
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentDeficient
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentDose
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentExcretion
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentHemoglobin
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentHemolysis
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentIndex
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentInhibition
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentLoss
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentLysis
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentNormal
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentNormalPooledPlasma
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentOfBacteria
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentOfBaseline
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentOfCells
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentOfRedBloodCells
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentOfWhiteBloodCells
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentPositive
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentReactive
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentRecovery
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentReference
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentResidual
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentSaturation
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentTotal
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentUptake
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentViable
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Percentile
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Phenotype
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Picoampere
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PicogramPerCell
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PicogramPerMilligramOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PicogramPerRedBloodCell
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PicomolePer24Hour
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PicomolePerRedBloodCell
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Pint
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: RelativePercent
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: RelativeSaturation
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: RubellaVirus
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Saturation
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: SecondPerControl
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Siemens
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Sievert
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: SignalToCutoffRatio
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: StandardDeviation
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Tesla
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ThousandCopiesPerMilliliter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ThousandRedBloodCells
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Thyroid_stimulatingImmunoglobulinIndex
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Weber
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: WhiteBloodCells
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: _1_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Minute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Second
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentOfSlope
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PercentBound
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Per100Spermatozoa
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PerGramHemoglobin
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Acre
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Acre
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: AmbA1Units
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Barrel
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: BoardFoot
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: BritishThermalUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: BritishThermalUnitAt39_F
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: BritishThermalUnitAt59_F
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: BritishThermalUnitAt60_F
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: InternationalTableBritishThermalUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MeanBritishThermalUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ThermochemicalBritishThermalUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Bushel
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Bushel
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: VelocityOfLight
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NutritionLabelCalories
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: CaratOfGoldAlloys
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MetricCarat
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: CELLCULTUREINFECTIOUSDOSE50_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: CubicFoot
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Gunter_sChain
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Gunter_sChainSurveyor_sChain
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: CiceroDidot_sPica
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: CircularMil
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Cord
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Cord
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: CubicYard
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: D_ANTIGENUNITS
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: DidotDidot_sPoint
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Diopter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: DryPint
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: DryQuart
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: DramDrachm
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: DyeUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ElementaryCharge
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PermittivityOfVacuum
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: FluidDram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: FOCUS_FORMINGUNITS
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Foot
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Foot
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Fathom
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Fathom
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Furlong
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NewtonianConstantOfGravitation
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: HistoricalWinchesterGallon
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Gill
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Gill
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PlanckConstant
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Hand
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: HounsfieldUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Horsepower
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: HOMEOPATHICPOTENCYOFCENTESIMALSERIES
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: HOMEOPATHICPOTENCYOFMILLESIMALSERIES
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: HOMEOPATHICPOTENCYOFQUINTAMILLESIMALSERIES
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: HOMEOPATHICPOTENCYOFDECIMALSERIES
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Inch
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: InchOfMercuryColumn
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Inch
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: InternationalUnitsPerDeciLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: InternationalUnitsPerGram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: InternationalUnitsPerKilogram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: InternationalUnitsPerLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: InternationalUnitsPerMilliLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: BoltzmannConstant
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Knot
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Knot
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: KunkelUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Pound
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Pound
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PoundForce
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: LongHunderdweightBritishHundredweight
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: LIMITOFFLOCCULATION
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: LigneFrenchLine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: LinkForGunter_sChain
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: LinkForGunter_sChain
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Line
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: LongTonBritishTon
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Light_year
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ElectronMass
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ProtonMass
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Mesh
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MetabolicEquivalent
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Mile
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Mil
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Mil
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Minim
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PermeabilityOfVacuum
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: NauticalMile
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Ounce_USAndBritish_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Pace
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Pica
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Printer_sPica
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PrismDiopter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PLAQUE_FORMINGUNITS
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: TheNumberPi
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PiedFrenchFoot
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Peck
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Peck
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Point
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Printer_sPoint
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PROTEINNITROGENUNITS
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PouceFrenchInch
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: PeripheralVascularResistanceUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Pennyweight
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Ramden_sChainEngineer_sChain
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Rod
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Rod
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: LinkForRamden_sChain
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: SvedbergUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Scruple
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Section
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ShortHundredweightU_S_Hundredweight
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: SomogyiUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: SquareMile
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Smoot
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: SquareRod
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: StoneBritishStone
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: TISSUECULTUREINFECTIOUSDOSE50_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Township
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: UNITEDSTATESPHARMACOPEIAUNIT
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Yard
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Yard
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: CellsPerMicroLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: CopiesPerMilliLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: CrossingThreshold
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EhrlichUnitsPerDeciLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: EhrlichUnitsPerDeciLiter_ArbitraryConcentrationUnits_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ElisaUnitsPerMilliLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ElisaUnitsPerMilliLiter_ArbitraryConcentrationUnits_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: HOMEOPATHICPOTENCYOFCENTESIMALKORSAKOVIANSERIES
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: RedBloodCellCount
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: SpermatozoaPerMilliLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Tablets
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ParticlesTotalCount
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: TheNumberTenForArbitraryPowers
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: TheNumberTenForArbitraryPowers
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MeanGregorianYear
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MeanJulianYear
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: TropicalYear
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: _ngstr_m
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Are
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: AstronomicUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Barn
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Bel
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: BelKilowatt
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: BelMillivolt
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: BelSoundPressure
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: BelMicrovolt
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: BelVolt
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: BelWatt
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Baud
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Biot
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Bit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Bit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Byte
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Coulomb
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: CalorieAt15_C
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: CalorieAt20_C
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: InternationalTableCalorie
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MeanCalorie
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: ThermochemicalCalorie
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Candela
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: CURIE
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Circle
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Dyne
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Gauss
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramPercent
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GramMeterPerHeartbeat
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Gal
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Gilbert
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Gram_force
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: GonGrade
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: KiloInternationalUnitsPerMilliLiter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: KilogramOfWetTissue
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Kayser
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Lambert
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Lux
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MeterOfWaterColumn
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MeterOfMercuryColumn
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliGramPerTotalVolume
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramsPerMilligramCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilligramOfCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Mho
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliMolesPerTotalVolume_SubstanceUnits_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MilliMolesPerMoleCreatinine
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MeanGregorianMonth
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MeanJulianMonth
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: SynodalMonth
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Maxwell
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Neper
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Oersted
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Poise
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Parsec
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Phot
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Roentgen
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Radian
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: RadiationAbsorbedDose
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: RadiationEquivalentMan
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Stilb
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Spere
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Steradian
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Stere
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: UnifiedAtomicMassUnit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: MICROCURIE
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-common in valuesets.xml
+
+
+   .. attribute:: Watt
+      
+
+      
+
+

@@ -1,0 +1,28 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.timing_repeat`
+=============================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.timing_repeat
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.timing_repeat.TimingRepeat
+
+
+
+.. class:: TimingRepeat(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, boundsDuration: Optional[spark_auto_mapper_fhir.complex_types.duration.Duration] = None, boundsRange: Optional[spark_auto_mapper_fhir.complex_types.range.Range] = None, boundsPeriod: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, count: Optional[spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt] = None, countMax: Optional[spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt] = None, duration: Optional[spark_auto_mapper_fhir.fhir_types.decimal.FhirDecimal] = None, durationMax: Optional[spark_auto_mapper_fhir.fhir_types.decimal.FhirDecimal] = None, durationUnit: Optional[spark_auto_mapper_fhir.value_sets.units_of_time.UnitsOfTimeCode] = None, frequency: Optional[spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt] = None, frequencyMax: Optional[spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt] = None, period: Optional[spark_auto_mapper_fhir.fhir_types.decimal.FhirDecimal] = None, periodMax: Optional[spark_auto_mapper_fhir.fhir_types.decimal.FhirDecimal] = None, periodUnit: Optional[spark_auto_mapper_fhir.value_sets.units_of_time.UnitsOfTimeCode] = None, dayOfWeek: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.value_sets.days_of_week.DaysOfWeekCode]] = None, timeOfDay: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.time.FhirTime]] = None, when: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.value_sets.event_timing.EventTimingCode]] = None, offset: Optional[spark_auto_mapper_fhir.fhir_types.unsigned_int.FhirUnsignedInt] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   Timing.Repeat
+   Specifies an event that may occur multiple times. Timing schedules are used to record when things are planned, expected or requested to occur. The most common usage is in dosage instructions for medications. They are also used when planning care of various kinds, and may be used for reporting the schedule to which past regular activities were carried out.
+   If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
+
+

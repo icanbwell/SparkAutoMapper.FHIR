@@ -1,0 +1,83 @@
+:mod:`spark_auto_mapper_fhir.value_sets.act_relationship_fulfills`
+==================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.act_relationship_fulfills
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.act_relationship_fulfills.ActRelationshipFulfills
+   spark_auto_mapper_fhir.value_sets.act_relationship_fulfills.ActRelationshipFulfillsValues
+
+
+
+.. class:: ActRelationshipFulfills(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.ActRelationshipFulfills
+   From: http://terminology.hl7.org/ValueSet/v3-ActRelationshipFulfills in v3-codesystems.xml
+        The source act fulfills (in whole or in part) the target act. Source act must
+   be in a mood equal or more actual than the target act.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType
+
+      
+
+
+.. class:: ActRelationshipFulfillsValues
+
+   Description: A directed association between a source Act and a target Act.
+
+
+                              Usage Note: This code should never be transmitted
+   in an instance as the value of ActRelationship.typeCode (attribute)
+   From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType in v3-codesystems.xml
+
+   .. attribute:: ActRelationshipType
+      
+
+      curative indication
+      From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType in v3-codesystems.xml
+
+
+   .. attribute:: CurativeIndication
+      
+
+      adjunct curative indication
+      From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType in v3-codesystems.xml
+
+
+   .. attribute:: AdjunctCurativeIndication
+      
+
+      adjunct mitigation
+      From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType in v3-codesystems.xml
+
+
+   .. attribute:: AdjunctMitigation
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType in v3-codesystems.xml
+
+
+   .. attribute:: RACT
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType in v3-codesystems.xml
+
+
+   .. attribute:: SUGG
+      
+
+      
+
+

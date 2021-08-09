@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.implementation_guide_page`
+=========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.implementation_guide_page
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.implementation_guide_page.ImplementationGuidePage
+
+
+
+.. class:: ImplementationGuidePage(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, nameUrl: Optional[spark_auto_mapper_fhir.fhir_types.url.FhirUrl] = None, nameReference: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.binary.Binary]] = None, title: spark_auto_mapper_fhir.fhir_types.string.FhirString, generation: spark_auto_mapper_fhir.value_sets.guide_page_generation.GuidePageGenerationCode, page: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.implementation_guide_page.ImplementationGuidePage]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   ImplementationGuide.Page
+   A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
+
+

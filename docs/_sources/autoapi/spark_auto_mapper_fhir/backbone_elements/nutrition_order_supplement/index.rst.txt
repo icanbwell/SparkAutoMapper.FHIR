@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.nutrition_order_supplement`
+==========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.nutrition_order_supplement
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.nutrition_order_supplement.NutritionOrderSupplement
+
+
+
+.. class:: NutritionOrderSupplement(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, type_: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.supplement_type_codes.SupplementTypeCodesCode]] = None, productName: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, schedule: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.timing.Timing]] = None, quantity: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, instruction: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   NutritionOrder.Supplement
+   A request to supply a diet, formula feeding (enteral) or oral nutritional supplement to a patient/resident.
+
+

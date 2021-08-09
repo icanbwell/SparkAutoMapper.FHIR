@@ -1,0 +1,32 @@
+:mod:`spark_auto_mapper_fhir.complex_types.identifier`
+======================================================
+
+.. py:module:: spark_auto_mapper_fhir.complex_types.identifier
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.complex_types.identifier.Identifier
+
+
+
+.. class:: Identifier(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, use: Optional[spark_auto_mapper_fhir.value_sets.identifier_use.IdentifierUseCode] = None, type_: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.identifier_type_codes.IdentifierTypeCodesCode]] = None, system: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, value: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, period: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, assigner: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.organization.Organization]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
+
+   Identifier
+   fhir-base.xsd
+       An identifier - identifies some entity uniquely and unambiguously. Typically this is used for business identifiers.
+       If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

@@ -1,0 +1,76 @@
+:mod:`spark_auto_mapper_fhir.value_sets.imaging_study_series_performer_function`
+================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.imaging_study_series_performer_function
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.imaging_study_series_performer_function.ImagingStudySeriesPerformerFunctionCode
+   spark_auto_mapper_fhir.value_sets.imaging_study_series_performer_function.ImagingStudySeriesPerformerFunctionCodeValues
+
+
+
+.. class:: ImagingStudySeriesPerformerFunctionCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ImagingStudySeriesPerformerFunction
+   From: http://hl7.org/fhir/ValueSet/series-performer-function in valuesets.xml
+       Performer function of an agent in an imaging study series
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
+
+      
+
+
+.. class:: ImagingStudySeriesPerformerFunctionCodeValues
+
+   Indicates that the target of the participation is involved in some manner in
+   the act, but does not qualify how.
+   From: http://terminology.hl7.org/CodeSystem/v3-ParticipationType in v3-codesystems.xml
+
+   .. attribute:: Participation
+      
+
+      From: http://hl7.org/fhir/ValueSet/series-performer-function in valuesets.xml
+
+
+   .. attribute:: Consultant
+      
+
+      From: http://hl7.org/fhir/ValueSet/series-performer-function in valuesets.xml
+
+
+   .. attribute:: Verifier
+      
+
+      From: http://hl7.org/fhir/ValueSet/series-performer-function in valuesets.xml
+
+
+   .. attribute:: Performer
+      
+
+      From: http://hl7.org/fhir/ValueSet/series-performer-function in valuesets.xml
+
+
+   .. attribute:: SecondaryPerformer
+      
+
+      From: http://hl7.org/fhir/ValueSet/series-performer-function in valuesets.xml
+
+
+   .. attribute:: Referrer
+      
+
+      
+
+

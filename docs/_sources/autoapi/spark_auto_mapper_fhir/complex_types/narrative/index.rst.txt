@@ -1,0 +1,32 @@
+:mod:`spark_auto_mapper_fhir.complex_types.narrative`
+=====================================================
+
+.. py:module:: spark_auto_mapper_fhir.complex_types.narrative
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.complex_types.narrative.Narrative
+
+
+
+.. class:: Narrative(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, status: spark_auto_mapper_fhir.value_sets.narrative_status.NarrativeStatusCode)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
+
+   Narrative
+   fhir-base.xsd
+       A human-readable summary of the resource conveying the essential clinical and business information for the resource.
+       If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

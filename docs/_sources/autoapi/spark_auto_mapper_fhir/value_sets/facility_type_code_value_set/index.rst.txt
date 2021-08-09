@@ -1,0 +1,515 @@
+:mod:`spark_auto_mapper_fhir.value_sets.facility_type_code_value_set`
+=====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.facility_type_code_value_set
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.facility_type_code_value_set.FacilityTypeCodeValueSetCode
+   spark_auto_mapper_fhir.value_sets.facility_type_code_value_set.FacilityTypeCodeValueSetCodeValues
+
+
+
+.. class:: FacilityTypeCodeValueSetCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   FacilityTypeCodeValueSet
+   From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+       This is the code representing the type of organizational setting where the
+   clinical encounter, service, interaction, or treatment occurred. The value set
+   used for Healthcare Facility Type has been defined by HITSP to be the value
+   set reproduced from HITSP C80 Table 2-147.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+
+.. class:: FacilityTypeCodeValueSetCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+   .. attribute:: Hospital_children_s
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: Hospital_community
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: Hospital_government
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: Hospital_longTermCare
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: Hospital_militaryField
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: Hospital_prison
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: Hospital_psychiatric
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: Hospital_rehabilitation
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: Hospital_traumaCenter
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: Hospital_Veterans_Administration
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: HospiceFacility
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: NursingHome
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: SkilledNursingFacility
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: DialysisUnit_hospital
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: EmergencyDepartment_hospital
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: HospitalAmbulatorySurgeryFacility
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: HospitalBirthingCenter
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: HospitalOutpatientAllergyClinic
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: HospitalOutpatientDentalClinic
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: HospitalOutpatientDermatologyClinic
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: HospitalOutpatientEndocrinologyClinic
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: HospitalOutpatientFamilyMedicineClinic
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: HospitalOutpatientGastroenterologyClinic
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: HospitalOutpatientGeneralSurgeryClinic
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: HospitalOutpatientGeriatricHealthCenter
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: HospitalOutpatientGynecologyClinic
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: HospitalOutpatientHematologyClinic
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: HospitalOutpatientImmunologyClinic
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: HospitalOutpatientInfectiousDiseaseClinic
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: HospitalOutpatientMentalHealthCenter
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: HospitalOutpatientNeurologyClinic
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: HospitalOutpatientObstetricalClinic
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: HospitalOutpatientOncologyClinic
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: HospitalOutpatientOphthalmologyClinic
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: HospitalOutpatientOrthopedicsClinic
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: HospitalOutpatientOtorhinolaryngologyClinic
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: HospitalOutpatientPainClinic
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: HospitalOutpatientPediatricClinic
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: HospitalOutpatientPeripheralVascularClinic
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: HospitalOutpatientRehabilitationClinic
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: HospitalOutpatientRespiratoryDiseaseClinic
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: HospitalOutpatientRheumatologyClinic
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: HospitalOutpatientUrologyClinic
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: HospitalRadiologyFacility
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: Hospital_basedOutpatientClinicOrDepartment_OTHER_NOTLISTED
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: Fee_for_servicePrivatePhysicians_GroupOffice
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: PrivatePhysicians_GroupOffice
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: SoloPracticePrivateOffice
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: IndependentAmbulatoryCareProviderSite_OTHER_NOTLISTED
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: AmbulatorySurgeryCenter
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: CareOfTheElderlyDayHospital
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: ElderlyAssessmentClinic
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: Free_standingAmbulatorySurgeryFacility
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: Free_standingBirthingCenter
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: Free_standingGeriatricHealthCenter
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: Free_standingLaboratoryFacility
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: Free_standingMentalHealthCenter
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: Free_standingRadiologyFacility
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: HealthMaintenanceOrganization
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: LocalCommunityHealthCenter
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: PsychogeriatricDayHospital
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: ResidentialSchoolInfirmary
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: RuralHealthCenter
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: SexuallyTransmittedDiseaseHealthCenter
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: SubstanceAbuseTreatmentCenter
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: VaccinationClinic
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: Walk_inClinic
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: AmbulatoryCareSite_OTHER_NOTLISTED
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: Ambulance_basedCare
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: ContainedCasualtySetting
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: Helicopter_basedCare
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: HospitalShip
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: Traveler_sAidClinic
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: AdultDayCareCenter
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: ChildDayCareCenter
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: PrivateResidentialHome
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: ResidentialInstitution
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: SportsFacility
+      
+
+      From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
+
+
+   .. attribute:: HealthEncounterSite_NOTLISTED
+      
+
+      
+
+

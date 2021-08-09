@@ -1,0 +1,375 @@
+:mod:`spark_auto_mapper_fhir.value_sets.common_languages`
+=========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.common_languages
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode
+   spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCodeValues
+
+
+
+.. class:: CommonLanguagesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   CommonLanguages
+   From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+       This value set includes common codes from BCP-47
+   (http://tools.ietf.org/html/bcp47)
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = urn:ietf:bcp:47
+
+      
+
+
+.. class:: CommonLanguagesCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+   .. attribute:: Arabic
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Bengali
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Czech
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Danish
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: German
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: German_Austria_
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: German_Switzerland_
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: German_Germany_
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Greek
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: English
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: English_Australia_
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: English_Canada_
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: English_GreatBritain_
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: English_India_
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: English_NewZeland_
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: English_Singapore_
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: English_UnitedStates_
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Spanish
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Spanish_Argentina_
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Spanish_Spain_
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Spanish_Uruguay_
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Finnish
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: French
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: French_Belgium_
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: French_Switzerland_
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: French_France_
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Frysian
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Frysian_Netherlands_
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Hindi
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Croatian
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Italian
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Italian_Switzerland_
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Italian_Italy_
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Japanese
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Korean
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Dutch
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Dutch_Belgium_
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Dutch_Netherlands_
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Norwegian
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Norwegian_Norway_
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Punjabi
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Polish
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Portuguese
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Portuguese_Brazil_
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Russian
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Russian_Russia_
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Serbian
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Serbian_Serbia_
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Swedish
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Swedish_Sweden_
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Telegu
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Chinese
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Chinese_China_
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Chinese_HongKong_
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Chinese_Singapore_
+      
+
+      From: http://hl7.org/fhir/ValueSet/languages in valuesets.xml
+
+
+   .. attribute:: Chinese_Taiwan_
+      
+
+      
+
+

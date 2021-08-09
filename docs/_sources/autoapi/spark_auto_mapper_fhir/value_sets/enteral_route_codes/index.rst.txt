@@ -1,0 +1,108 @@
+:mod:`spark_auto_mapper_fhir.value_sets.enteral_route_codes`
+============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.enteral_route_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.enteral_route_codes.EnteralRouteCodesCode
+   spark_auto_mapper_fhir.value_sets.enteral_route_codes.EnteralRouteCodesCodeValues
+
+
+
+.. class:: EnteralRouteCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   EnteralRouteCodes
+   From: http://hl7.org/fhir/ValueSet/enteral-route in valuesets.xml
+       EnteralRouteOfAdministration: Codes specifying the route of administration of
+   enteral formula.  This value set is composed of HL7 V3 codes and is provided
+   as a suggestive example.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration
+
+      
+
+
+.. class:: EnteralRouteCodesCodeValues
+
+   Route of substance administration classified by administration method.
+   From: http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration in v3-codesystems.xml
+
+   .. attribute:: RouteByMethod
+      
+
+      Route of substance administration classified by site.
+      From: http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration in v3-codesystems.xml
+
+
+   .. attribute:: RouteBySite
+      
+
+      From: http://hl7.org/fhir/ValueSet/enteral-route in valuesets.xml
+
+
+   .. attribute:: PO
+      
+
+      From: http://hl7.org/fhir/ValueSet/enteral-route in valuesets.xml
+
+
+   .. attribute:: EFT
+      
+
+      From: http://hl7.org/fhir/ValueSet/enteral-route in valuesets.xml
+
+
+   .. attribute:: ENTINSTL
+      
+
+      From: http://hl7.org/fhir/ValueSet/enteral-route in valuesets.xml
+
+
+   .. attribute:: GT
+      
+
+      From: http://hl7.org/fhir/ValueSet/enteral-route in valuesets.xml
+
+
+   .. attribute:: NGT
+      
+
+      From: http://hl7.org/fhir/ValueSet/enteral-route in valuesets.xml
+
+
+   .. attribute:: OGT
+      
+
+      From: http://hl7.org/fhir/ValueSet/enteral-route in valuesets.xml
+
+
+   .. attribute:: GJT
+      
+
+      From: http://hl7.org/fhir/ValueSet/enteral-route in valuesets.xml
+
+
+   .. attribute:: JJTINSTL
+      
+
+      From: http://hl7.org/fhir/ValueSet/enteral-route in valuesets.xml
+
+
+   .. attribute:: OJJ
+      
+
+      
+
+

@@ -1,0 +1,59 @@
+:mod:`spark_auto_mapper_fhir.value_sets.need`
+=============================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.need
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.need.NeedCode
+   spark_auto_mapper_fhir.value_sets.need.NeedCodeValues
+
+
+
+.. class:: NeedCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   need
+   From: http://terminology.hl7.org/CodeSystem/need in valuesets.xml
+       The frequency with which the target must be validated
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/need
+
+      
+
+
+.. class:: NeedCodeValues
+
+   ***TODO***
+   From: http://terminology.hl7.org/CodeSystem/need in valuesets.xml
+
+   .. attribute:: None_
+      
+
+      ***TODO***
+      From: http://terminology.hl7.org/CodeSystem/need in valuesets.xml
+
+
+   .. attribute:: Initial
+      
+
+      ***TODO***
+      From: http://terminology.hl7.org/CodeSystem/need in valuesets.xml
+
+
+   .. attribute:: Periodic
+      
+
+      
+
+

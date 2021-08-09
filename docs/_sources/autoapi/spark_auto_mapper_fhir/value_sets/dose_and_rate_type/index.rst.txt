@@ -1,0 +1,52 @@
+:mod:`spark_auto_mapper_fhir.value_sets.dose_and_rate_type`
+===========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.dose_and_rate_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.dose_and_rate_type.DoseAndRateTypeCode
+   spark_auto_mapper_fhir.value_sets.dose_and_rate_type.DoseAndRateTypeCodeValues
+
+
+
+.. class:: DoseAndRateTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   DoseAndRateType
+   From: http://terminology.hl7.org/CodeSystem/dose-rate-type in valuesets.xml
+       The kind of dose or rate specified.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/dose-rate-type
+
+      
+
+
+.. class:: DoseAndRateTypeCodeValues
+
+   The dose specified is calculated by the prescriber or the system.
+   From: http://terminology.hl7.org/CodeSystem/dose-rate-type in valuesets.xml
+
+   .. attribute:: Calculated
+      
+
+      The dose specified is as ordered by the prescriber.
+      From: http://terminology.hl7.org/CodeSystem/dose-rate-type in valuesets.xml
+
+
+   .. attribute:: Ordered
+      
+
+      
+
+

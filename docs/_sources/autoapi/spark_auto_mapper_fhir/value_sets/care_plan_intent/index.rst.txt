@@ -1,0 +1,63 @@
+:mod:`spark_auto_mapper_fhir.value_sets.care_plan_intent`
+=========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.care_plan_intent
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.care_plan_intent.CarePlanIntentCode
+   spark_auto_mapper_fhir.value_sets.care_plan_intent.CarePlanIntentCodeValues
+
+
+
+.. class:: CarePlanIntentCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   CarePlanIntent
+   From: http://hl7.org/fhir/ValueSet/care-plan-intent in valuesets.xml
+       Codes indicating the degree of authority/intentionality associated with a care
+   plan.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/request-intent
+
+      
+
+
+.. class:: CarePlanIntentCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/care-plan-intent in valuesets.xml
+
+   .. attribute:: Proposal
+      
+
+      From: http://hl7.org/fhir/ValueSet/care-plan-intent in valuesets.xml
+
+
+   .. attribute:: Plan
+      
+
+      From: http://hl7.org/fhir/ValueSet/care-plan-intent in valuesets.xml
+
+
+   .. attribute:: Order
+      
+
+      From: http://hl7.org/fhir/ValueSet/care-plan-intent in valuesets.xml
+
+
+   .. attribute:: Option
+      
+
+      
+
+

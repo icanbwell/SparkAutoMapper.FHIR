@@ -1,0 +1,34 @@
+:mod:`spark_auto_mapper_fhir.value_sets.acme_chol_codes_plasma`
+===============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.acme_chol_codes_plasma
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.acme_chol_codes_plasma.ACMECholCodesPlasmaCode
+
+
+
+.. class:: ACMECholCodesPlasmaCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ACMECholCodesPlasma
+   From: http://hl7.org/fhir/ValueSet/example-filter in valuesets.xml
+       ACME Codes for Cholesterol: Plasma only - demonstrating the use of a filter
+   defined in a CodeSystem
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/CodeSystem/example
+
+      
+
+

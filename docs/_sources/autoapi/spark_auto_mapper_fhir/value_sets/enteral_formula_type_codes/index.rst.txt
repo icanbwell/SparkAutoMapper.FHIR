@@ -1,0 +1,257 @@
+:mod:`spark_auto_mapper_fhir.value_sets.enteral_formula_type_codes`
+===================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.enteral_formula_type_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.enteral_formula_type_codes.EnteralFormulaTypeCodesCode
+   spark_auto_mapper_fhir.value_sets.enteral_formula_type_codes.EnteralFormulaTypeCodesCodeValues
+
+
+
+.. class:: EnteralFormulaTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   EnteralFormulaTypeCodes
+   From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+       EnteralFormulaType : Codes for type of enteral formula to be administered to
+   patient.  This value set is composed of SNOMED CT (US Extension) Concepts from
+   SCTID 470581016 (Enteral+supplement feeds hierarchy (product)) and is provided
+   as a suggestive example.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+
+.. class:: EnteralFormulaTypeCodesCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+   .. attribute:: AdultCriticalCareFormula
+      
+
+      From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+
+   .. attribute:: AdultDiabetesSpecialtyFormula
+      
+
+      From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+
+   .. attribute:: AdultElementalFormula
+      
+
+      From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+
+   .. attribute:: AdultHepaticSpecialtyFormula
+      
+
+      From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+
+   .. attribute:: AdultHighEnergyFormula
+      
+
+      From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+
+   .. attribute:: AdultHydrolyzedProteinFormula
+      
+
+      From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+
+   .. attribute:: AdultHighProteinFormula
+      
+
+      From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+
+   .. attribute:: AdultHighProteinHighFiberFormula
+      
+
+      From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+
+   .. attribute:: AdultLowCarbohydrateFormula
+      
+
+      From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+
+   .. attribute:: AdultPulmonarySpecialtyFormula
+      
+
+      From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+
+   .. attribute:: AdultRenalSpecialtyFormula
+      
+
+      From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+
+   .. attribute:: AdultStandardFormula
+      
+
+      From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+
+   .. attribute:: AdultSoyProteinIsolateFormula
+      
+
+      From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+
+   .. attribute:: PediatricFormula
+      
+
+      From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+
+   .. attribute:: PediatricElementalFormula
+      
+
+      From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+
+   .. attribute:: PediatricHighEnergyFormula
+      
+
+      From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+
+   .. attribute:: PediatricHighEnergyFormulaWithIncreasedFiber
+      
+
+      From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+
+   .. attribute:: PediatricHydrolyzedProteinFormula
+      
+
+      From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+
+   .. attribute:: PediatricIncreasedFiberFormula
+      
+
+      From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+
+   .. attribute:: PediatricReducedEnergyFormula
+      
+
+      From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+
+   .. attribute:: PediatricStandardFormula
+      
+
+      From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+
+   .. attribute:: StandardEnteralFormulaWithFiber
+      
+
+      From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+
+   .. attribute:: StandardFormula
+      
+
+      From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+
+   .. attribute:: StandardEnteralFormula
+      
+
+      From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+
+   .. attribute:: SoyBasedFormula
+      
+
+      From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+
+   .. attribute:: RenalFormula
+      
+
+      From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+
+   .. attribute:: HighEnergyEnteralFormulaWithFiber
+      
+
+      From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+
+   .. attribute:: DiabeticEnteralFormulaWithFiber
+      
+
+      From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+
+   .. attribute:: DiabeticHighCalorieHighProteinEnteralFormulaWithFiber
+      
+
+      From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+
+   .. attribute:: IncreasedFiberFormula
+      
+
+      From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+
+   .. attribute:: HydrolyzedProteinFormula
+      
+
+      From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+
+   .. attribute:: HydrolyzedPeptide_basedHighProteinEnteralFormula
+      
+
+      From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+
+   .. attribute:: HighProteinFormula
+      
+
+      From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+
+   .. attribute:: HighEnergyFormula
+      
+
+      From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+
+   .. attribute:: ElementalFormula
+      
+
+      From: http://hl7.org/fhir/ValueSet/entformula-type in valuesets.xml
+
+
+   .. attribute:: AdultFormula
+      
+
+      
+
+

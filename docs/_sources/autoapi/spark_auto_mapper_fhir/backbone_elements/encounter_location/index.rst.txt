@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.encounter_location`
+==================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.encounter_location
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.encounter_location.EncounterLocation
+
+
+
+.. class:: EncounterLocation(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, location: spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.location.Location], status: Optional[spark_auto_mapper_fhir.value_sets.encounter_location_status.EncounterLocationStatusCode] = None, physicalType: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.location_type.LocationTypeCode]] = None, period: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   Encounter.Location
+   An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.
+
+

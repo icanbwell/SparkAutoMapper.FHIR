@@ -1,0 +1,33 @@
+:mod:`spark_auto_mapper_fhir.value_sets.care_team_category`
+===========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.care_team_category
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.care_team_category.CareTeamCategoryCode
+
+
+
+.. class:: CareTeamCategoryCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   CareTeamCategory
+   From: http://hl7.org/fhir/ValueSet/care-team-category in valuesets.xml
+       Indicates the type of care team.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://loinc.org
+
+      
+
+

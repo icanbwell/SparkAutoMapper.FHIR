@@ -1,0 +1,40 @@
+:mod:`spark_auto_mapper_fhir.value_sets.v2_0078`
+================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.v2_0078
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.v2_0078.V2_0078
+
+
+
+.. class:: V2_0078(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v2.0078
+   From: http://terminology.hl7.org/ValueSet/v2-0078 in v2-tables.xml
+       HL7-defined code system of concepts which specify a categorical assessment of
+   an observation value.
+
+      Notes:
+
+      This is being communicated in v2.x in OBX-8 (Observation Interpretation),
+   in v3 in ObservationInterpretation (CWE) in R1 (Representative Realm) and in
+   FHIR in    Observation.interpretation.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/ValueSet/v2-0078
+
+      
+
+

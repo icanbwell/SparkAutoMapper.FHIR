@@ -1,0 +1,35 @@
+:mod:`spark_auto_mapper_fhir.value_sets.snomed_ct`
+==================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.snomed_ct
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.snomed_ct.SNOMED_CTCode
+
+
+
+.. class:: SNOMED_CTCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   SNOMED_CT
+   From: http://snomed.info/sct in valuesets.xml
+       SNOMED CT is the most comprehensive and precise clinical health terminology
+   product in the world, owned and distributed around the world by The
+   International Health Terminology Standards Development Organisation (IHTSDO).
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+

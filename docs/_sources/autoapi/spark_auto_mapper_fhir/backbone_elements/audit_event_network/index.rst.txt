@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.audit_event_network`
+===================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.audit_event_network
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.audit_event_network.AuditEventNetwork
+
+
+
+.. class:: AuditEventNetwork(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, address: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, type_: Optional[spark_auto_mapper_fhir.value_sets.audit_event_agent_network_type.AuditEventAgentNetworkTypeCode] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   AuditEvent.Network
+   A record of an event made for purposes of maintaining a security log. Typical uses include detection of intrusion attempts and monitoring for inappropriate usage.
+
+

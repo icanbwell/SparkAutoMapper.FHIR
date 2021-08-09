@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.capability_statement_software`
+=============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.capability_statement_software
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.capability_statement_software.CapabilityStatementSoftware
+
+
+
+.. class:: CapabilityStatementSoftware(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, name: spark_auto_mapper_fhir.fhir_types.string.FhirString, version: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, releaseDate: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   CapabilityStatement.Software
+   A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+
+

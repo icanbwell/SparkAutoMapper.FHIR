@@ -1,0 +1,114 @@
+:mod:`spark_auto_mapper_fhir.value_sets.admit_source`
+=====================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.admit_source
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.admit_source.AdmitSourceCode
+   spark_auto_mapper_fhir.value_sets.admit_source.AdmitSourceCodeValues
+
+
+
+.. class:: AdmitSourceCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   AdmitSource
+   From: http://terminology.hl7.org/CodeSystem/admit-source in valuesets.xml
+       This value set defines a set of codes that can be used to indicate from where
+   the patient came in.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/admit-source
+
+      
+
+
+.. class:: AdmitSourceCodeValues
+
+   The Patient has been transferred from another hospital for this encounter.
+   From: http://terminology.hl7.org/CodeSystem/admit-source in valuesets.xml
+
+   .. attribute:: TransferredFromOtherHospital
+      
+
+      The patient has been transferred from the emergency department within the
+      hospital. This is typically used in the transition to an inpatient encounter
+      From: http://terminology.hl7.org/CodeSystem/admit-source in valuesets.xml
+
+
+   .. attribute:: FromAccident_emergencyDepartment
+      
+
+      The patient has been transferred from an outpatient department within the
+      hospital.
+      From: http://terminology.hl7.org/CodeSystem/admit-source in valuesets.xml
+
+
+   .. attribute:: FromOutpatientDepartment
+      
+
+      The patient is a newborn and the encounter will track the baby related
+      activities (as opposed to the Mothers encounter - that may be associated using
+      the newborn encounters partof property)
+      From: http://terminology.hl7.org/CodeSystem/admit-source in valuesets.xml
+
+
+   .. attribute:: BornInHospital
+      
+
+      The patient has been admitted due to a referred from a General Practitioner.
+      From: http://terminology.hl7.org/CodeSystem/admit-source in valuesets.xml
+
+
+   .. attribute:: GeneralPractitionerReferral
+      
+
+      The patient has been admitted due to a referred from a Specialist (as opposed
+      to a General Practitioner).
+      From: http://terminology.hl7.org/CodeSystem/admit-source in valuesets.xml
+
+
+   .. attribute:: MedicalPractitioner_physicianReferral
+      
+
+      The patient has been transferred from a nursing home.
+      From: http://terminology.hl7.org/CodeSystem/admit-source in valuesets.xml
+
+
+   .. attribute:: FromNursingHome
+      
+
+      The patient has been transferred from a psychiatric facility.
+      From: http://terminology.hl7.org/CodeSystem/admit-source in valuesets.xml
+
+
+   .. attribute:: FromPsychiatricHospital
+      
+
+      The patient has been transferred from a rehabilitation facility or clinic.
+      From: http://terminology.hl7.org/CodeSystem/admit-source in valuesets.xml
+
+
+   .. attribute:: FromRehabilitationFacility
+      
+
+      The patient has been admitted from a source otherwise not specified here.
+      From: http://terminology.hl7.org/CodeSystem/admit-source in valuesets.xml
+
+
+   .. attribute:: Other
+      
+
+      
+
+

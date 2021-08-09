@@ -1,0 +1,87 @@
+:mod:`spark_auto_mapper_fhir.value_sets.template_status_code`
+=============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.template_status_code
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.template_status_code.TemplateStatusCodeCode
+   spark_auto_mapper_fhir.value_sets.template_status_code.TemplateStatusCodeCodeValues
+
+
+
+.. class:: TemplateStatusCodeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   TemplateStatusCode
+   From: http://hl7.org/fhir/ValueSet/template-status-code in valuesets.xml
+       The status indicates the level of maturity of the design and may be used to
+   manage the use of the design.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = urn:oid:2.16.840.1.113883.3.1937.98.5.8
+
+      
+
+
+.. class:: TemplateStatusCodeCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/template-status-code in valuesets.xml
+
+   .. attribute:: Draft
+      
+
+      From: http://hl7.org/fhir/ValueSet/template-status-code in valuesets.xml
+
+
+   .. attribute:: UnderPre_publicationReview
+      
+
+      From: http://hl7.org/fhir/ValueSet/template-status-code in valuesets.xml
+
+
+   .. attribute:: Active
+      
+
+      From: http://hl7.org/fhir/ValueSet/template-status-code in valuesets.xml
+
+
+   .. attribute:: InReview
+      
+
+      From: http://hl7.org/fhir/ValueSet/template-status-code in valuesets.xml
+
+
+   .. attribute:: Cancelled
+      
+
+      From: http://hl7.org/fhir/ValueSet/template-status-code in valuesets.xml
+
+
+   .. attribute:: Rejected
+      
+
+      From: http://hl7.org/fhir/ValueSet/template-status-code in valuesets.xml
+
+
+   .. attribute:: Retired
+      
+
+      From: http://hl7.org/fhir/ValueSet/template-status-code in valuesets.xml
+
+
+   .. attribute:: Terminated
+      
+
+      
+
+

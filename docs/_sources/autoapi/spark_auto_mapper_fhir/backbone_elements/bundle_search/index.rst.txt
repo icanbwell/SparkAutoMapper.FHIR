@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.bundle_search`
+=============================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.bundle_search
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.bundle_search.BundleSearch
+
+
+
+.. class:: BundleSearch(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, mode: Optional[spark_auto_mapper_fhir.value_sets.search_entry_mode.SearchEntryModeCode] = None, score: Optional[spark_auto_mapper_fhir.fhir_types.decimal.FhirDecimal] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   Bundle.Search
+   A container for a collection of resources.
+
+

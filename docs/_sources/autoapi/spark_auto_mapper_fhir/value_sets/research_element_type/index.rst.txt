@@ -1,0 +1,60 @@
+:mod:`spark_auto_mapper_fhir.value_sets.research_element_type`
+==============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.research_element_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.research_element_type.ResearchElementTypeCode
+   spark_auto_mapper_fhir.value_sets.research_element_type.ResearchElementTypeCodeValues
+
+
+
+.. class:: ResearchElementTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ResearchElementType
+   From: http://hl7.org/fhir/research-element-type in valuesets.xml
+       The possible types of research elements (E.g. Population, Exposure, Outcome).
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/research-element-type
+
+      
+
+
+.. class:: ResearchElementTypeCodeValues
+
+   The element defines the population that forms the basis for research.
+   From: http://hl7.org/fhir/research-element-type in valuesets.xml
+
+   .. attribute:: Population
+      
+
+      The element defines an exposure within the population that is being
+      researched.
+      From: http://hl7.org/fhir/research-element-type in valuesets.xml
+
+
+   .. attribute:: Exposure
+      
+
+      The element defines an outcome within the population that is being researched.
+      From: http://hl7.org/fhir/research-element-type in valuesets.xml
+
+
+   .. attribute:: Outcome
+      
+
+      
+
+

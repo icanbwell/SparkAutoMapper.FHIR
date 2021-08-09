@@ -1,0 +1,32 @@
+:mod:`spark_auto_mapper_fhir.complex_types.attachment`
+======================================================
+
+.. py:module:: spark_auto_mapper_fhir.complex_types.attachment
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.complex_types.attachment.Attachment
+
+
+
+.. class:: Attachment(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, contentType: Optional[spark_auto_mapper_fhir.value_sets.mime_types.MimeTypesCode] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, data: Optional[spark_auto_mapper_fhir.fhir_types.base64_binary.FhirBase64Binary] = None, url: Optional[spark_auto_mapper_fhir.fhir_types.url.FhirUrl] = None, size: Optional[spark_auto_mapper_fhir.fhir_types.unsigned_int.FhirUnsignedInt] = None, hash: Optional[spark_auto_mapper_fhir.fhir_types.base64_binary.FhirBase64Binary] = None, title: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, creation: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
+
+   Attachment
+   fhir-base.xsd
+       For referring to data content defined in other formats.
+       If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

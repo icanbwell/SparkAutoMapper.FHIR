@@ -1,0 +1,33 @@
+:mod:`spark_auto_mapper_fhir.resources.research_subject`
+========================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.research_subject
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.research_subject.ResearchSubject
+
+
+
+.. class:: ResearchSubject(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.identifier.Identifier]] = None, status: spark_auto_mapper_fhir.value_sets.research_subject_status.ResearchSubjectStatusCode, period: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, study: spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.research_study.ResearchStudy], individual: spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.patient.Patient], assignedArm: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, actualArm: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, consent: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.consent.Consent]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   ResearchSubject
+   researchsubject.xsd
+       A physical entity which is the primary unit of operational and/or
+   administrative interest in a study.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

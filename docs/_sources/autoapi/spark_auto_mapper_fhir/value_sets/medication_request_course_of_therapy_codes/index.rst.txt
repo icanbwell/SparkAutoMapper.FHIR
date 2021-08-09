@@ -1,0 +1,62 @@
+:mod:`spark_auto_mapper_fhir.value_sets.medication_request_course_of_therapy_codes`
+===================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.medication_request_course_of_therapy_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.medication_request_course_of_therapy_codes.MedicationRequestCourseOfTherapyCodesCode
+   spark_auto_mapper_fhir.value_sets.medication_request_course_of_therapy_codes.MedicationRequestCourseOfTherapyCodesCodeValues
+
+
+
+.. class:: MedicationRequestCourseOfTherapyCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   medicationRequest Course of Therapy Codes
+   From: http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy in valuesets.xml
+       MedicationRequest Course of Therapy Codes
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy
+
+      
+
+
+.. class:: MedicationRequestCourseOfTherapyCodesCodeValues
+
+   A medication which is expected to be continued beyond the present order and
+   which the patient should be assumed to be taking unless explicitly stopped.
+   From: http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy in valuesets.xml
+
+   .. attribute:: ContinuousLongTermTherapy
+      
+
+      A medication which the patient is only expected to consume for the duration of
+      the current order and which is not expected to be renewed.
+      From: http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy in valuesets.xml
+
+
+   .. attribute:: ShortCourse_acute_Therapy
+      
+
+      A medication which is expected to be used on a part time basis at certain
+      times of the year
+      From: http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy in valuesets.xml
+
+
+   .. attribute:: Seasonal
+      
+
+      
+
+

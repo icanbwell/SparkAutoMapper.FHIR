@@ -1,0 +1,32 @@
+:mod:`spark_auto_mapper_fhir.complex_types.parameter_definition`
+================================================================
+
+.. py:module:: spark_auto_mapper_fhir.complex_types.parameter_definition
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.complex_types.parameter_definition.ParameterDefinition
+
+
+
+.. class:: ParameterDefinition(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, name: Optional[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode] = None, use: spark_auto_mapper_fhir.value_sets.operation_parameter_use.OperationParameterUseCode, min: Optional[spark_auto_mapper_fhir.fhir_types.integer.FhirInteger] = None, max: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, documentation: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, type_: spark_auto_mapper_fhir.value_sets.fhir_all_types.FHIRAllTypesCode, profile: Optional[spark_auto_mapper_fhir.fhir_types.canonical.FhirCanonical] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
+
+   ParameterDefinition
+   fhir-base.xsd
+       The parameters to the module. This collection specifies both the input and output parameters. Input parameters are provided by the caller as part of the $evaluate operation. Output parameters are included in the GuidanceResponse.
+       If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

@@ -1,0 +1,148 @@
+:mod:`spark_auto_mapper_fhir.value_sets.request_resource_type`
+==============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.request_resource_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.request_resource_type.RequestResourceTypeCode
+   spark_auto_mapper_fhir.value_sets.request_resource_type.RequestResourceTypeCodeValues
+
+
+
+.. class:: RequestResourceTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   RequestResourceType
+   From: http://hl7.org/fhir/request-resource-types in valuesets.xml
+       A list of all the request resource types defined in this version of the FHIR
+   specification.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/request-resource-types
+
+      
+
+
+.. class:: RequestResourceTypeCodeValues
+
+   A booking of a healthcare event among patient(s), practitioner(s), related
+   person(s) and/or device(s) for a specific date/time. This may result in one or
+   more Encounter(s).
+   From: http://hl7.org/fhir/request-resource-types in valuesets.xml
+
+   .. attribute:: Appointment
+      
+
+      A reply to an appointment request for a patient and/or practitioner(s), such
+      as a confirmation or rejection.
+      From: http://hl7.org/fhir/request-resource-types in valuesets.xml
+
+
+   .. attribute:: AppointmentResponse
+      
+
+      Healthcare plan for patient or group.
+      From: http://hl7.org/fhir/request-resource-types in valuesets.xml
+
+
+   .. attribute:: CarePlan
+      
+
+      Claim, Pre-determination or Pre-authorization.
+      From: http://hl7.org/fhir/request-resource-types in valuesets.xml
+
+
+   .. attribute:: Claim
+      
+
+      A request for information to be sent to a receiver.
+      From: http://hl7.org/fhir/request-resource-types in valuesets.xml
+
+
+   .. attribute:: CommunicationRequest
+      
+
+      Legal Agreement.
+      From: http://hl7.org/fhir/request-resource-types in valuesets.xml
+
+
+   .. attribute:: Contract
+      
+
+      Medical device request.
+      From: http://hl7.org/fhir/request-resource-types in valuesets.xml
+
+
+   .. attribute:: DeviceRequest
+      
+
+      Enrollment request.
+      From: http://hl7.org/fhir/request-resource-types in valuesets.xml
+
+
+   .. attribute:: EnrollmentRequest
+      
+
+      Guidance or advice relating to an immunization.
+      From: http://hl7.org/fhir/request-resource-types in valuesets.xml
+
+
+   .. attribute:: ImmunizationRecommendation
+      
+
+      Ordering of medication for patient or group.
+      From: http://hl7.org/fhir/request-resource-types in valuesets.xml
+
+
+   .. attribute:: MedicationRequest
+      
+
+      Diet, formula or nutritional supplement request.
+      From: http://hl7.org/fhir/request-resource-types in valuesets.xml
+
+
+   .. attribute:: NutritionOrder
+      
+
+      A record of a request for service such as diagnostic investigations,
+      treatments, or operations to be performed.
+      From: http://hl7.org/fhir/request-resource-types in valuesets.xml
+
+
+   .. attribute:: ServiceRequest
+      
+
+      Request for a medication, substance or device.
+      From: http://hl7.org/fhir/request-resource-types in valuesets.xml
+
+
+   .. attribute:: SupplyRequest
+      
+
+      A task to be performed.
+      From: http://hl7.org/fhir/request-resource-types in valuesets.xml
+
+
+   .. attribute:: Task
+      
+
+      Prescription for vision correction products for a patient.
+      From: http://hl7.org/fhir/request-resource-types in valuesets.xml
+
+
+   .. attribute:: VisionPrescription
+      
+
+      
+
+

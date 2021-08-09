@@ -1,0 +1,75 @@
+:mod:`spark_auto_mapper_fhir.value_sets.biologically_derived_product_category`
+==============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.biologically_derived_product_category
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.biologically_derived_product_category.BiologicallyDerivedProductCategoryCode
+   spark_auto_mapper_fhir.value_sets.biologically_derived_product_category.BiologicallyDerivedProductCategoryCodeValues
+
+
+
+.. class:: BiologicallyDerivedProductCategoryCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   BiologicallyDerivedProductCategory
+   From: http://hl7.org/fhir/product-category in valuesets.xml
+       Biologically Derived Product Category.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/product-category
+
+      
+
+
+.. class:: BiologicallyDerivedProductCategoryCodeValues
+
+   A collection of tissues joined in a structural unit to serve a common
+   function.
+   From: http://hl7.org/fhir/product-category in valuesets.xml
+
+   .. attribute:: Organ
+      
+
+      An ensemble of similar cells and their extracellular matrix from the same
+      origin that together carry out a specific function.
+      From: http://hl7.org/fhir/product-category in valuesets.xml
+
+
+   .. attribute:: Tissue
+      
+
+      Body fluid.
+      From: http://hl7.org/fhir/product-category in valuesets.xml
+
+
+   .. attribute:: Fluid
+      
+
+      Collection of cells.
+      From: http://hl7.org/fhir/product-category in valuesets.xml
+
+
+   .. attribute:: Cells
+      
+
+      Biological agent of unspecified type.
+      From: http://hl7.org/fhir/product-category in valuesets.xml
+
+
+   .. attribute:: BiologicalAgent
+      
+
+      
+
+

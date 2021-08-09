@@ -1,0 +1,80 @@
+:mod:`spark_auto_mapper_fhir.value_sets.device_name_type`
+=========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.device_name_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.device_name_type.DeviceNameTypeCode
+   spark_auto_mapper_fhir.value_sets.device_name_type.DeviceNameTypeCodeValues
+
+
+
+.. class:: DeviceNameTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   DeviceNameType
+   From: http://hl7.org/fhir/device-nametype in valuesets.xml
+       The type of name the device is referred by.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/device-nametype
+
+      
+
+
+.. class:: DeviceNameTypeCodeValues
+
+   UDI Label name.
+   From: http://hl7.org/fhir/device-nametype in valuesets.xml
+
+   .. attribute:: UDILabelName
+      
+
+      User Friendly name.
+      From: http://hl7.org/fhir/device-nametype in valuesets.xml
+
+
+   .. attribute:: UserFriendlyName
+      
+
+      Patient Reported name.
+      From: http://hl7.org/fhir/device-nametype in valuesets.xml
+
+
+   .. attribute:: PatientReportedName
+      
+
+      Manufacturer name.
+      From: http://hl7.org/fhir/device-nametype in valuesets.xml
+
+
+   .. attribute:: ManufacturerName
+      
+
+      Model name.
+      From: http://hl7.org/fhir/device-nametype in valuesets.xml
+
+
+   .. attribute:: ModelName
+      
+
+      other.
+      From: http://hl7.org/fhir/device-nametype in valuesets.xml
+
+
+   .. attribute:: Other
+      
+
+      
+
+

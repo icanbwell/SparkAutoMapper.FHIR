@@ -1,0 +1,197 @@
+:mod:`spark_auto_mapper_fhir.value_sets.common_languages__written_`
+===================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.common_languages__written_
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.common_languages__written_.CommonLanguages_Written_Code
+   spark_auto_mapper_fhir.value_sets.common_languages__written_.CommonLanguages_Written_CodeValues
+
+
+
+.. class:: CommonLanguages_Written_Code(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   Common Languages (Written)
+   From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
+       This value set includes common codes from BCP-47
+   (http://tools.ietf.org/html/bcp47) for the purpose of writing; this value set
+   (unlike the common languages value set) doesn't include dialects except where
+   they are relevant for written languages
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = urn:ietf:bcp:47
+
+      
+
+
+.. class:: CommonLanguages_Written_CodeValues
+
+   From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
+
+   .. attribute:: Arabic
+      
+
+      From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
+
+
+   .. attribute:: Bengali
+      
+
+      From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
+
+
+   .. attribute:: Czech
+      
+
+      From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
+
+
+   .. attribute:: Danish
+      
+
+      From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
+
+
+   .. attribute:: German
+      
+
+      From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
+
+
+   .. attribute:: Greek
+      
+
+      From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
+
+
+   .. attribute:: English
+      
+
+      From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
+
+
+   .. attribute:: Spanish
+      
+
+      From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
+
+
+   .. attribute:: Finnish
+      
+
+      From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
+
+
+   .. attribute:: French
+      
+
+      From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
+
+
+   .. attribute:: Frysian
+      
+
+      From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
+
+
+   .. attribute:: Hindi
+      
+
+      From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
+
+
+   .. attribute:: Croatian
+      
+
+      From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
+
+
+   .. attribute:: Italian
+      
+
+      From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
+
+
+   .. attribute:: Japanese
+      
+
+      From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
+
+
+   .. attribute:: Korean
+      
+
+      From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
+
+
+   .. attribute:: Dutch
+      
+
+      From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
+
+
+   .. attribute:: Norwegian
+      
+
+      From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
+
+
+   .. attribute:: Punjabi
+      
+
+      From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
+
+
+   .. attribute:: Polish
+      
+
+      From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
+
+
+   .. attribute:: Portuguese
+      
+
+      From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
+
+
+   .. attribute:: Russian
+      
+
+      From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
+
+
+   .. attribute:: Serbian
+      
+
+      From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
+
+
+   .. attribute:: Swedish
+      
+
+      From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
+
+
+   .. attribute:: Telegu
+      
+
+      From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
+
+
+   .. attribute:: Chinese
+      
+
+      
+
+

@@ -1,0 +1,87 @@
+:mod:`spark_auto_mapper_fhir.value_sets.test_script_request_method_code`
+========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.test_script_request_method_code
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.test_script_request_method_code.TestScriptRequestMethodCodeCode
+   spark_auto_mapper_fhir.value_sets.test_script_request_method_code.TestScriptRequestMethodCodeCodeValues
+
+
+
+.. class:: TestScriptRequestMethodCodeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   TestScriptRequestMethodCode
+   From: http://hl7.org/fhir/http-operations in valuesets.xml
+       The allowable request method or HTTP operation codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/http-operations
+
+      
+
+
+.. class:: TestScriptRequestMethodCodeCodeValues
+
+   HTTP DELETE operation.
+   From: http://hl7.org/fhir/http-operations in valuesets.xml
+
+   .. attribute:: DELETE
+      
+
+      HTTP GET operation.
+      From: http://hl7.org/fhir/http-operations in valuesets.xml
+
+
+   .. attribute:: GET
+      
+
+      HTTP OPTIONS operation.
+      From: http://hl7.org/fhir/http-operations in valuesets.xml
+
+
+   .. attribute:: OPTIONS
+      
+
+      HTTP PATCH operation.
+      From: http://hl7.org/fhir/http-operations in valuesets.xml
+
+
+   .. attribute:: PATCH
+      
+
+      HTTP POST operation.
+      From: http://hl7.org/fhir/http-operations in valuesets.xml
+
+
+   .. attribute:: POST
+      
+
+      HTTP PUT operation.
+      From: http://hl7.org/fhir/http-operations in valuesets.xml
+
+
+   .. attribute:: PUT
+      
+
+      HTTP HEAD operation.
+      From: http://hl7.org/fhir/http-operations in valuesets.xml
+
+
+   .. attribute:: HEAD
+      
+
+      
+
+

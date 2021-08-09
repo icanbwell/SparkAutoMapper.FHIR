@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.structure_map_parameter`
+=======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.structure_map_parameter
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.structure_map_parameter.StructureMapParameter
+
+
+
+.. class:: StructureMapParameter(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, valueId: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, valueString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, valueBoolean: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, valueInteger: Optional[spark_auto_mapper_fhir.fhir_types.integer.FhirInteger] = None, valueDecimal: Optional[spark_auto_mapper_fhir.fhir_types.decimal.FhirDecimal] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   StructureMap.Parameter
+   A Map of relationships between 2 structures that can be used to transform data.
+
+

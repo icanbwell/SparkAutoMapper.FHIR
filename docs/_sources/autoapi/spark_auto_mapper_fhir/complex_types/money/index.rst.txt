@@ -1,0 +1,32 @@
+:mod:`spark_auto_mapper_fhir.complex_types.money`
+=================================================
+
+.. py:module:: spark_auto_mapper_fhir.complex_types.money
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.complex_types.money.Money
+
+
+
+.. class:: Money(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, value: Optional[spark_auto_mapper_fhir.fhir_types.decimal.FhirDecimal] = None, currency: Optional[spark_auto_mapper_fhir.value_sets.currencies.CurrenciesCode] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
+
+   Money
+   fhir-base.xsd
+       An amount of economic utility in some recognized currency.
+       If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

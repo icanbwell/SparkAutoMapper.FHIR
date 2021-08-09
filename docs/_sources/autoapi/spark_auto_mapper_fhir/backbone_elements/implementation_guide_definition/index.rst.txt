@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.implementation_guide_definition`
+===============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.implementation_guide_definition
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.implementation_guide_definition.ImplementationGuideDefinition
+
+
+
+.. class:: ImplementationGuideDefinition(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, grouping: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.implementation_guide_grouping.ImplementationGuideGrouping]] = None, resource: spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.implementation_guide_resource.ImplementationGuideResource], page: Optional[spark_auto_mapper_fhir.backbone_elements.implementation_guide_page.ImplementationGuidePage] = None, parameter: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.implementation_guide_parameter.ImplementationGuideParameter]] = None, template: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.implementation_guide_template.ImplementationGuideTemplate]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   ImplementationGuide.Definition
+   A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
+
+

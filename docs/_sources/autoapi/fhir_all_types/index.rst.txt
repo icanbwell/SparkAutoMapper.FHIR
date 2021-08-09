@@ -1,0 +1,570 @@
+:mod:`fhir_all_types`
+=====================
+
+.. py:module:: fhir_all_types
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   fhir_all_types.FHIRAllTypesCode
+   fhir_all_types.FHIRAllTypesCodeValues
+
+
+
+.. class:: FHIRAllTypesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   FHIRAllTypes
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/ValueSet/all-types
+
+      
+
+
+.. class:: FHIRAllTypesCodeValues
+
+   .. attribute:: Address
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: Annotation
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: BackboneElement
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: Coding
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: ContactPoint
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: Count
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: Distance
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: Duration
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: ElementDefinition
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: Extension
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: Identifier
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: Meta
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: MoneyQuantity
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: ParameterDefinition
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: Population
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: ProductShelfLife
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: Range
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: Reference
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: SampledData
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: SimpleQuantity
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: Timing
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: UsageContext
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: boolean
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: code
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: dateTime
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: id
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: integer
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: oid_
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: string
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: unsignedInt
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: url
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: xhtml
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: ActivityDefinition
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: AllergyIntolerance
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: AppointmentResponse
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: Basic
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: BiologicallyDerivedProduct
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: Bundle
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: CarePlan
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: CatalogEntry
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: ChargeItemDefinition
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: ClaimResponse
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: CodeSystem
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: CommunicationRequest
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: Composition
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: Condition
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: Contract
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: CoverageEligibilityRequest
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: DetectedIssue
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: DeviceDefinition
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: DeviceRequest
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: DiagnosticReport
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: DocumentReference
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: EffectEvidenceSynthesis
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: Endpoint
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: EnrollmentResponse
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: EventDefinition
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: EvidenceVariable
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: ExplanationOfBenefit
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: Flag
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: GraphDefinition
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: GuidanceResponse
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: ImagingStudy
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: ImmunizationEvaluation
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: ImplementationGuide
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: Invoice
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: Linkage
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: Location
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: MeasureReport
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: Medication
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: MedicationDispense
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: MedicationRequest
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: MedicinalProduct
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: MedicinalProductContraindication
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: MedicinalProductIngredient
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: MedicinalProductManufactured
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: MedicinalProductPharmaceutical
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: MessageDefinition
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: MolecularSequence
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: NutritionOrder
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: ObservationDefinition
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: OperationOutcome
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: OrganizationAffiliation
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: Patient
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: PaymentReconciliation
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: PlanDefinition
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: PractitionerRole
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: Provenance
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: QuestionnaireResponse
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: RequestGroup
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: ResearchElementDefinition
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: ResearchSubject
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: RiskAssessment
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: Schedule
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: ServiceRequest
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: Specimen
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: StructureDefinition
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: Subscription
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: SubstanceNucleicAcid
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: SubstanceProtein
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: SubstanceSourceMaterial
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: SupplyDelivery
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: Task
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: TestReport
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: ValueSet
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: VisionPrescription
+      :annotation: :FHIRAllTypesCode
+
+      
+
+   .. attribute:: Any
+      :annotation: :FHIRAllTypesCode
+
+      
+
+

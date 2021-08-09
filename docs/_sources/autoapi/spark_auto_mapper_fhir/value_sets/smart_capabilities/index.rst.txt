@@ -1,0 +1,143 @@
+:mod:`spark_auto_mapper_fhir.value_sets.smart_capabilities`
+===========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.smart_capabilities
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.smart_capabilities.SmartCapabilitiesCode
+   spark_auto_mapper_fhir.value_sets.smart_capabilities.SmartCapabilitiesCodeValues
+
+
+
+.. class:: SmartCapabilitiesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   SmartCapabilities
+   From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
+       Codes that define what the server is capable of.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/smart-capabilities
+
+      
+
+
+.. class:: SmartCapabilitiesCodeValues
+
+   support for SMART’s EHR Launch mode.
+   From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
+
+   .. attribute:: EHRLaunchMode
+      
+
+      support for SMART’s Standalone Launch mode.
+      From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
+
+
+   .. attribute:: StandaloneLaunchMode
+      
+
+      support for SMART’s public client profile (no client authentication).
+      From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
+
+
+   .. attribute:: PublicClientProfile
+      
+
+      support for SMART’s confidential client profile (symmetric client secret
+      authentication).
+      From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
+
+
+   .. attribute:: ConfidentialClientProfile
+      
+
+      support for SMART’s OpenID Connect profile.
+      From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
+
+
+   .. attribute:: SupportsOpenIDConnect
+      
+
+      support for “need patient banner” launch context (conveyed via
+      need_patient_banner token parameter).
+      From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
+
+
+   .. attribute:: Allows_NeedPatientBanner_
+      
+
+      support for “SMART style URL” launch context (conveyed via smart_style_url
+      token parameter).
+      From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
+
+
+   .. attribute:: Allows_SmartStyleStyle_
+      
+
+      support for patient-level launch context (requested by launch/patient scope,
+      conveyed via patient token parameter).
+      From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
+
+
+   .. attribute:: Allows_PatientLevelLaunchContext_EHR_
+      
+
+      support for encounter-level launch context (requested by launch/encounter
+      scope, conveyed via encounter token parameter).
+      From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
+
+
+   .. attribute:: Allows_EncounterLevelLaunchContext_EHR_
+      
+
+      support for patient-level launch context (requested by launch/patient scope,
+      conveyed via patient token parameter).
+      From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
+
+
+   .. attribute:: Allows_PatientLevelLaunchContext_STANDALONE_
+      
+
+      support for encounter-level launch context (requested by launch/encounter
+      scope, conveyed via encounter token parameter).
+      From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
+
+
+   .. attribute:: Allows_EncounterLevelLaunchContext_STANDALONE_
+      
+
+      support for refresh tokens (requested by offline_access scope).
+      From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
+
+
+   .. attribute:: SupportsRefreshToken
+      
+
+      support for patient-level scopes (e.g. patient/Observation.read).
+      From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
+
+
+   .. attribute:: SupportsPatientLevelScopes
+      
+
+      support for user-level scopes (e.g. user/Appointment.read).
+      From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
+
+
+   .. attribute:: SupportsUserLevelScopes
+      
+
+      
+
+

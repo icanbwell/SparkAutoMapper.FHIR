@@ -1,0 +1,94 @@
+:mod:`spark_auto_mapper_fhir.value_sets.certainty_subcomponent_type`
+====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.certainty_subcomponent_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.certainty_subcomponent_type.CertaintySubcomponentTypeCode
+   spark_auto_mapper_fhir.value_sets.certainty_subcomponent_type.CertaintySubcomponentTypeCodeValues
+
+
+
+.. class:: CertaintySubcomponentTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   CertaintySubcomponentType
+   From: http://terminology.hl7.org/CodeSystem/certainty-subcomponent-type in valuesets.xml
+       The subcomponent classification of quality of evidence rating systems.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/certainty-subcomponent-type
+
+      
+
+
+.. class:: CertaintySubcomponentTypeCodeValues
+
+   methodologic concerns reducing internal validity.
+   From: http://terminology.hl7.org/CodeSystem/certainty-subcomponent-type in valuesets.xml
+
+   .. attribute:: RiskOfBias
+      
+
+      concerns that findings are not similar enough to support certainty.
+      From: http://terminology.hl7.org/CodeSystem/certainty-subcomponent-type in valuesets.xml
+
+
+   .. attribute:: Inconsistency
+      
+
+      concerns reducing external validity.
+      From: http://terminology.hl7.org/CodeSystem/certainty-subcomponent-type in valuesets.xml
+
+
+   .. attribute:: Indirectness
+      
+
+      High quality evidence.
+      From: http://terminology.hl7.org/CodeSystem/certainty-subcomponent-type in valuesets.xml
+
+
+   .. attribute:: Imprecision
+      
+
+      likelihood that what is published misrepresents what is available to publish.
+      From: http://terminology.hl7.org/CodeSystem/certainty-subcomponent-type in valuesets.xml
+
+
+   .. attribute:: PublicationBias
+      
+
+      higher certainty due to dose response relationship.
+      From: http://terminology.hl7.org/CodeSystem/certainty-subcomponent-type in valuesets.xml
+
+
+   .. attribute:: DoseResponseGradient
+      
+
+      higher certainty due to risk of bias in opposite direction.
+      From: http://terminology.hl7.org/CodeSystem/certainty-subcomponent-type in valuesets.xml
+
+
+   .. attribute:: PlausibleConfounding
+      
+
+      higher certainty due to large effect size.
+      From: http://terminology.hl7.org/CodeSystem/certainty-subcomponent-type in valuesets.xml
+
+
+   .. attribute:: LargeEffect
+      
+
+      
+
+

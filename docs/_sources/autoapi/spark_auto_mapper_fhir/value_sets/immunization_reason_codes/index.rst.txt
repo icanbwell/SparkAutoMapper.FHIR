@@ -1,0 +1,53 @@
+:mod:`spark_auto_mapper_fhir.value_sets.immunization_reason_codes`
+==================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.immunization_reason_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.immunization_reason_codes.ImmunizationReasonCodesCode
+   spark_auto_mapper_fhir.value_sets.immunization_reason_codes.ImmunizationReasonCodesCodeValues
+
+
+
+.. class:: ImmunizationReasonCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ImmunizationReasonCodes
+   From: http://hl7.org/fhir/ValueSet/immunization-reason in valuesets.xml
+       The value set to instantiate this attribute should be drawn from a
+   terminologically robust code system that consists of or contains concepts to
+   support describing the reason why a dose of vaccine was administered. This
+   value set is provided as a suggestive example.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+
+.. class:: ImmunizationReasonCodesCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/immunization-reason in valuesets.xml
+
+   .. attribute:: _429060002
+      
+
+      From: http://hl7.org/fhir/ValueSet/immunization-reason in valuesets.xml
+
+
+   .. attribute:: _281657000
+      
+
+      
+
+

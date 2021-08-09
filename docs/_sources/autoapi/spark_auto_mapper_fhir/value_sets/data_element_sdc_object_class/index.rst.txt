@@ -1,0 +1,47 @@
+:mod:`spark_auto_mapper_fhir.value_sets.data_element_sdc_object_class`
+======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.data_element_sdc_object_class
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.data_element_sdc_object_class.DataElementSDCObjectClassCode
+
+
+
+.. class:: DataElementSDCObjectClassCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   DataElementSDCObjectClass
+   From: http://hl7.org/fhir/ValueSet/dataelement-sdcobjectclass in valuesets.xml
+       The allowed codes for identifying the ISO 11179 ObjectClass for a particular
+   data element if intended for registration/use within the U.S. Structured Data
+   Capture (SDC) project.
+
+   .. attribute:: codeset_sct
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      http://loinc.org
+
+
+   .. attribute:: codeset_loinc_org
+      :annotation: :FhirUri = http://loinc.org
+
+      http://www.nlm.nih.gov/research/umls/rxnorm
+
+
+   .. attribute:: codeset_rxnorm
+      :annotation: :FhirUri = http://www.nlm.nih.gov/research/umls/rxnorm
+
+      
+
+

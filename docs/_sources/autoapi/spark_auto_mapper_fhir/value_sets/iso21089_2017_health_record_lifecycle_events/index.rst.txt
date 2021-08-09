@@ -1,0 +1,268 @@
+:mod:`spark_auto_mapper_fhir.value_sets.iso21089_2017_health_record_lifecycle_events`
+=====================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.iso21089_2017_health_record_lifecycle_events
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.iso21089_2017_health_record_lifecycle_events.ISO21089_2017HealthRecordLifecycleEventsCode
+   spark_auto_mapper_fhir.value_sets.iso21089_2017_health_record_lifecycle_events.ISO21089_2017HealthRecordLifecycleEventsCodeValues
+
+
+
+.. class:: ISO21089_2017HealthRecordLifecycleEventsCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ISO 21089-2017 Health Record Lifecycle Events
+   From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
+       Attached is vocabulary for the 27 record lifecycle events, as per ISO TS
+   21089-2017, Health Informatics - Trusted End-to-End Information Flows, Section
+   3, Terms and Definitions (2017, at ISO Central Secretariat, passed ballot and
+   ready for publication).  This will also be included in the FHIR EHR Record
+   Lifecycle Event Implementation Guide, balloted and (to be) published with FHIR
+   STU-3.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle
+
+      
+
+
+.. class:: ISO21089_2017HealthRecordLifecycleEventsCodeValues
+
+   Occurs when an agent causes the system to obtain and open a record entry for
+   inspection or review.
+   From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
+
+   .. attribute:: Access_ViewRecordLifecycleEvent
+      
+
+      Occurs when an agent causes the system to tag or otherwise indicate special
+      access management and suspension of record entry deletion/destruction, if
+      deemed relevant to a lawsuit or which are reasonably anticipated to be
+      relevant or to fulfill organizational policy under the legal doctrine of “duty
+      to preserve”.
+      From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
+
+
+   .. attribute:: AddLegalHoldRecordLifecycleEvent
+      
+
+      Occurs when an agent makes any change to record entry content currently
+      residing in storage considered permanent (persistent).
+      From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
+
+
+   .. attribute:: Amend_Update_RecordLifecycleEvent
+      
+
+      Occurs when an agent causes the system to create and move archive artifacts
+      containing record entry content, typically to long-term offline storage.
+      From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
+
+
+   .. attribute:: ArchiveRecordLifecycleEvent
+      
+
+      Occurs when an agent causes the system to capture the agent’s digital
+      signature (or equivalent indication) during formal validation of record entry
+      content.
+      From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
+
+
+   .. attribute:: AttestRecordLifecycleEvent
+      
+
+      Occurs when an agent causes the system to decode record entry content from a
+      cipher.
+      From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
+
+
+   .. attribute:: DecryptRecordLifecycleEvent
+      
+
+      Occurs when an agent causes the system to scrub record entry content to reduce
+      the association between a set of identifying data and the data subject in a
+      way that might or might not be reversible.
+      From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
+
+
+   .. attribute:: De_Identify_Anononymize_RecordLifecycleEvent
+      
+
+      Occurs when an agent causes the system to tag record entry(ies) as obsolete,
+      erroneous or untrustworthy, to warn against its future use.
+      From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
+
+
+   .. attribute:: DeprecateRecordLifecycleEvent
+      
+
+      Occurs when an agent causes the system to permanently erase record entry
+      content from the system.
+      From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
+
+
+   .. attribute:: Destroy_DeleteRecordLifecycleEvent
+      
+
+      Occurs when an agent causes the system to release, transfer, provision access
+      to, or otherwise divulge record entry content.
+      From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
+
+
+   .. attribute:: DiscloseRecordLifecycleEvent
+      
+
+      Occurs when an agent causes the system to encode record entry content in a
+      cipher.
+      From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
+
+
+   .. attribute:: EncryptRecordLifecycleEvent
+      
+
+      Occurs when an agent causes the system to selectively pull out a subset of
+      record entry content, based on explicit criteria.
+      From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
+
+
+   .. attribute:: ExtractRecordLifecycleEvent
+      
+
+      Occurs when an agent causes the system to connect related record entries.
+      From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
+
+
+   .. attribute:: LinkRecordLifecycleEvent
+      
+
+      Occurs when an agent causes the system to combine or join content from two or
+      more record entries, resulting in a single logical record entry.
+      From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
+
+
+   .. attribute:: MergeRecordLifecycleEvent
+      
+
+      Occurs when an agent causes the system to: a) initiate capture of potential
+      record content, and b) incorporate that content into the storage considered a
+      permanent part of the health record.
+      From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
+
+
+   .. attribute:: Originate_RetainRecordLifecycleEvent
+      
+
+      Occurs when an agent causes the system to remove record entry content to
+      reduce the association between a set of identifying data and the data subject
+      in a way that may be reversible.
+      From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
+
+
+   .. attribute:: PseudonymizeRecordLifecycleEvent
+      
+
+      Occurs when an agent causes the system to recreate or restore full status to
+      record entries previously deleted or deprecated.
+      From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
+
+
+   .. attribute:: Re_activateRecordLifecycleEvent
+      
+
+      Occurs when an agent causes the system to a) initiate capture of data content
+      from elsewhere, and b) incorporate that content into the storage considered a
+      permanent part of the health record.
+      From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
+
+
+   .. attribute:: Receive_RetainRecordLifecycleEvent
+      
+
+      Occurs when an agent causes the system to restore information to data that
+      allows identification of information source and/or information subject.
+      From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
+
+
+   .. attribute:: Re_identifyRecordLifecycleEvent
+      
+
+      Occurs when an agent causes the system to remove a tag or other cues for
+      special access management had required to fulfill organizational policy under
+      the legal doctrine of “duty to preserve”.
+      From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
+
+
+   .. attribute:: RemoveLegalHoldRecordLifecycleEvent
+      
+
+      Occurs when an agent causes the system to produce and deliver record entry
+      content in a particular form and manner.
+      From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
+
+
+   .. attribute:: Report_Output_RecordLifecycleEvent
+      
+
+      Occurs when an agent causes the system to recreate record entries and their
+      content from a previous created archive artefact.
+      From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
+
+
+   .. attribute:: RestoreRecordLifecycleEvent
+      
+
+      Occurs when an agent causes the system to change the form, language or code
+      system used to represent record entry content.
+      From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
+
+
+   .. attribute:: Transform_TranslateRecordLifecycleEvent
+      
+
+      Occurs when an agent causes the system to send record entry content from one
+      (EHR/PHR/other) system to another.
+      From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
+
+
+   .. attribute:: TransmitRecordLifecycleEvent
+      
+
+      Occurs when an agent causes the system to disconnect two or more record
+      entries previously connected, rendering them separate (disconnected) again.
+      From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
+
+
+   .. attribute:: UnlinkRecordLifecycleEvent
+      
+
+      Occurs when an agent causes the system to reverse a previous record entry
+      merge operation, rendering them separate again.
+      From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
+
+
+   .. attribute:: UnmergeRecordLifecycleEvent
+      
+
+      Occurs when an agent causes the system to confirm compliance of data or data
+      objects with regulations, requirements, specifications, or other imposed
+      conditions based on organizational policy.
+      From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
+
+
+   .. attribute:: VerifyRecordLifecycleEvent
+      
+
+      
+
+

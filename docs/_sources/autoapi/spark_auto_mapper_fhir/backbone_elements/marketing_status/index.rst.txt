@@ -1,0 +1,28 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.marketing_status`
+================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.marketing_status
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.marketing_status.MarketingStatus
+
+
+
+.. class:: MarketingStatus(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, country: spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode], jurisdiction: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, status: spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode], dateRange: spark_auto_mapper_fhir.complex_types.period.Period, restoreDate: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   MarketingStatus
+   The marketing status describes the date when a medicinal product is actually put on the market or the date as of which it is no longer available.
+   If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
+
+

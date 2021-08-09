@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.test_report_test`
+================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.test_report_test
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.test_report_test.TestReportTest
+
+
+
+.. class:: TestReportTest(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, name: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, description: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, action: spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.test_report_action1.TestReportAction1])
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   TestReport.Test
+   A summary of information based on the results of executing a TestScript.
+
+

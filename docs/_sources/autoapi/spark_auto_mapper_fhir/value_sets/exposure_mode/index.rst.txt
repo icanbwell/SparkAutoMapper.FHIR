@@ -1,0 +1,47 @@
+:mod:`spark_auto_mapper_fhir.value_sets.exposure_mode`
+======================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.exposure_mode
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.exposure_mode.ExposureMode
+   spark_auto_mapper_fhir.value_sets.exposure_mode.ExposureModeValues
+
+
+
+.. class:: ExposureMode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.ExposureMode
+   From: http://terminology.hl7.org/ValueSet/v3-ExposureMode in v3-codesystems.xml
+        Code for the mechanism by which the exposure agent was exchanged or
+   potentially exchanged by the participants involved in the exposure.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ExposureMode
+
+      
+
+
+.. class:: ExposureModeValues
+
+   Code for the mechanism by which the exposure agent was exchanged or
+   potentially exchanged by the participants involved in the exposure.
+   From: http://terminology.hl7.org/CodeSystem/v3-ExposureMode in v3-codesystems.xml
+
+   .. attribute:: ExposureMode_
+      
+
+      
+
+

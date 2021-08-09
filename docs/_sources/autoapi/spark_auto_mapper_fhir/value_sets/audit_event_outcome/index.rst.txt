@@ -1,0 +1,69 @@
+:mod:`spark_auto_mapper_fhir.value_sets.audit_event_outcome`
+============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.audit_event_outcome
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.audit_event_outcome.AuditEventOutcomeCode
+   spark_auto_mapper_fhir.value_sets.audit_event_outcome.AuditEventOutcomeCodeValues
+
+
+
+.. class:: AuditEventOutcomeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   AuditEventOutcome
+   From: http://hl7.org/fhir/audit-event-outcome in valuesets.xml
+       Indicates whether the event succeeded or failed.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/audit-event-outcome
+
+      
+
+
+.. class:: AuditEventOutcomeCodeValues
+
+   The operation completed successfully (whether with warnings or not).
+   From: http://hl7.org/fhir/audit-event-outcome in valuesets.xml
+
+   .. attribute:: Success
+      
+
+      The action was not successful due to some kind of minor failure (often
+      equivalent to an HTTP 400 response).
+      From: http://hl7.org/fhir/audit-event-outcome in valuesets.xml
+
+
+   .. attribute:: MinorFailure
+      
+
+      The action was not successful due to some kind of unexpected error (often
+      equivalent to an HTTP 500 response).
+      From: http://hl7.org/fhir/audit-event-outcome in valuesets.xml
+
+
+   .. attribute:: SeriousFailure
+      
+
+      An error of such magnitude occurred that the system is no longer available for
+      use (i.e. the system died).
+      From: http://hl7.org/fhir/audit-event-outcome in valuesets.xml
+
+
+   .. attribute:: MajorFailure
+      
+
+      
+
+

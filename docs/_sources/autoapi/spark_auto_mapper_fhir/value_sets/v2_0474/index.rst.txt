@@ -1,0 +1,34 @@
+:mod:`spark_auto_mapper_fhir.value_sets.v2_0474`
+================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.v2_0474
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.v2_0474.V2_0474
+
+
+
+.. class:: V2_0474(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v2.0474
+   From: http://terminology.hl7.org/ValueSet/v2-0474 in v2-tables.xml
+       FHIR Value set/code system definition for HL7 v2 table 0474 ( Practitioner
+   Organization Unit Type)
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/ValueSet/v2-0474
+
+      
+
+

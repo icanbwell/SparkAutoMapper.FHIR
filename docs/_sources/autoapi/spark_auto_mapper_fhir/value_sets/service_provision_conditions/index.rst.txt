@@ -1,0 +1,60 @@
+:mod:`spark_auto_mapper_fhir.value_sets.service_provision_conditions`
+=====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.service_provision_conditions
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.service_provision_conditions.ServiceProvisionConditionsCode
+   spark_auto_mapper_fhir.value_sets.service_provision_conditions.ServiceProvisionConditionsCodeValues
+
+
+
+.. class:: ServiceProvisionConditionsCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ServiceProvisionConditions
+   From: http://terminology.hl7.org/CodeSystem/service-provision-conditions in valuesets.xml
+       The code(s) that detail the conditions under which the healthcare service is
+   available/offered.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/service-provision-conditions
+
+      
+
+
+.. class:: ServiceProvisionConditionsCodeValues
+
+   This service is available for no patient cost.
+   From: http://terminology.hl7.org/CodeSystem/service-provision-conditions in valuesets.xml
+
+   .. attribute:: Free
+      
+
+      There are discounts available on this service for qualifying patients.
+      From: http://terminology.hl7.org/CodeSystem/service-provision-conditions in valuesets.xml
+
+
+   .. attribute:: DiscountsAvailable
+      
+
+      Fees apply for this service.
+      From: http://terminology.hl7.org/CodeSystem/service-provision-conditions in valuesets.xml
+
+
+   .. attribute:: FeesApply
+      
+
+      
+
+

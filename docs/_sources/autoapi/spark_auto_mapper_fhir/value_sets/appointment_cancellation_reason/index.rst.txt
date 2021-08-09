@@ -1,0 +1,69 @@
+:mod:`spark_auto_mapper_fhir.value_sets.appointment_cancellation_reason`
+========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.appointment_cancellation_reason
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.appointment_cancellation_reason.AppointmentCancellationReasonCode
+   spark_auto_mapper_fhir.value_sets.appointment_cancellation_reason.AppointmentCancellationReasonCodeValues
+
+
+
+.. class:: AppointmentCancellationReasonCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   AppointmentCancellationReason
+   From: http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason in valuesets.xml
+       This example value set defines a set of reasons for the cancellation of an
+   appointment.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason
+
+      
+
+
+.. class:: AppointmentCancellationReasonCodeValues
+
+   From: http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason in valuesets.xml
+
+   .. attribute:: Patient
+      
+
+      From: http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason in valuesets.xml
+
+
+   .. attribute:: Provider
+      
+
+      From: http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason in valuesets.xml
+
+
+   .. attribute:: EquipmentMaintenance_Repair
+      
+
+      From: http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason in valuesets.xml
+
+
+   .. attribute:: Prep_MedIncomplete
+      
+
+      From: http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason in valuesets.xml
+
+
+   .. attribute:: Other
+      
+
+      
+
+

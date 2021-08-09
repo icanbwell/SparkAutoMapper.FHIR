@@ -1,0 +1,78 @@
+:mod:`spark_auto_mapper_fhir.value_sets.referral_method`
+========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.referral_method
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.referral_method.ReferralMethodCode
+   spark_auto_mapper_fhir.value_sets.referral_method.ReferralMethodCodeValues
+
+
+
+.. class:: ReferralMethodCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ReferralMethod
+   From: http://terminology.hl7.org/CodeSystem/service-referral-method in valuesets.xml
+       The methods of referral can be used when referring to a specific
+   HealthCareService resource.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/service-referral-method
+
+      
+
+
+.. class:: ReferralMethodCodeValues
+
+   Referrals may be accepted by fax.
+   From: http://terminology.hl7.org/CodeSystem/service-referral-method in valuesets.xml
+
+   .. attribute:: Fax
+      
+
+      Referrals may be accepted over the phone from a practitioner.
+      From: http://terminology.hl7.org/CodeSystem/service-referral-method in valuesets.xml
+
+
+   .. attribute:: Phone
+      
+
+      Referrals may be accepted via a secure messaging system. To determine the
+      types of secure messaging systems supported, refer to the identifiers
+      collection. Callers will need to understand the specific identifier system
+      used to know that they are able to transmit messages.
+      From: http://terminology.hl7.org/CodeSystem/service-referral-method in valuesets.xml
+
+
+   .. attribute:: SecureMessaging
+      
+
+      Referrals may be accepted via a secure email. To send please encrypt with the
+      services public key.
+      From: http://terminology.hl7.org/CodeSystem/service-referral-method in valuesets.xml
+
+
+   .. attribute:: SecureEmail
+      
+
+      Referrals may be accepted via regular postage (or hand delivered).
+      From: http://terminology.hl7.org/CodeSystem/service-referral-method in valuesets.xml
+
+
+   .. attribute:: Mail
+      
+
+      
+
+

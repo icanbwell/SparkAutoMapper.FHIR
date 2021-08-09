@@ -1,0 +1,53 @@
+:mod:`spark_auto_mapper_fhir.resources.medication_statement`
+============================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.medication_statement
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.medication_statement.MedicationStatement
+
+
+
+.. class:: MedicationStatement(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.identifier.Identifier]] = None, basedOn: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.medication_request.MedicationRequest, spark_auto_mapper_fhir.resources.care_plan.CarePlan, spark_auto_mapper_fhir.resources.service_request.ServiceRequest)]]]] = None, partOf: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.medication_administration.MedicationAdministration, spark_auto_mapper_fhir.resources.medication_dispense.MedicationDispense, spark_auto_mapper_fhir.resources.medication_statement.MedicationStatement, spark_auto_mapper_fhir.resources.procedure.Procedure, spark_auto_mapper_fhir.resources.observation.Observation)]]]] = None, status: spark_auto_mapper_fhir.value_sets.medication_status_codes.MedicationStatusCodesCode, statusReason: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.snomedct_drug_therapy_status_codes.SNOMEDCTDrugTherapyStatusCodesCode]]] = None, category: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.medication_usage_category_codes.MedicationUsageCategoryCodesCode]] = None, medicationCodeableConcept: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.snomedct_medication_codes.SNOMEDCTMedicationCodesCode]] = None, medicationReference: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.medication.Medication]] = None, subject: spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.group.Group)]], context: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.encounter.Encounter, spark_auto_mapper_fhir.resources.episode_of_care.EpisodeOfCare)]]] = None, effectiveDateTime: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, effectivePeriod: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, dateAsserted: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, informationSource: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole, spark_auto_mapper_fhir.resources.related_person.RelatedPerson, spark_auto_mapper_fhir.resources.organization.Organization)]]] = None, derivedFrom: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.resource.Resource]]] = None, reasonCode: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.condition_or__problem_or__diagnosis_codes.Condition_or_Problem_or_DiagnosisCodesCode]]] = None, reasonReference: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.condition.Condition, spark_auto_mapper_fhir.resources.observation.Observation, spark_auto_mapper_fhir.resources.diagnostic_report.DiagnosticReport)]]]] = None, note: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.annotation.Annotation]] = None, dosage: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.dosage.Dosage]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   MedicationStatement
+   medicationstatement.xsd
+       A record of a medication that is being consumed by a patient.   A
+   MedicationStatement may indicate that the patient may be taking the medication
+   now or has taken the medication in the past or will be taking the medication
+   in the future.  The source of this information can be the patient, significant
+   other (such as a family member or spouse), or a clinician.  A common scenario
+   where this information is captured is during the history taking process during
+   a patient visit or stay.   The medication information may come from sources
+   such as the patient's memory, from a prescription bottle,  or from a list of
+   medications the patient, clinician or other party maintains.
+
+   The primary difference between a medication statement and a medication
+   administration is that the medication administration has complete
+   administration information and is based on actual administration information
+   from the person who administered the medication.  A medication statement is
+   often, if not always, less specific.  There is no required date/time when the
+   medication was administered, in fact we only know that a source has reported
+   the patient is taking this medication, where details such as time, quantity,
+   or rate or even medication product may be incomplete or missing or less
+   precise.  As stated earlier, the medication statement information may come
+   from the patient's memory, from a prescription bottle or from a list of
+   medications the patient, clinician or other party maintains.  Medication
+   administration is more formal and is not missing detailed information.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

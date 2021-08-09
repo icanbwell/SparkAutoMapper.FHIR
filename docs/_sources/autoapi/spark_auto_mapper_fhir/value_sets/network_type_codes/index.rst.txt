@@ -1,0 +1,52 @@
+:mod:`spark_auto_mapper_fhir.value_sets.network_type_codes`
+===========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.network_type_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.network_type_codes.NetworkTypeCodesCode
+   spark_auto_mapper_fhir.value_sets.network_type_codes.NetworkTypeCodesCodeValues
+
+
+
+.. class:: NetworkTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   NetworkTypeCodes
+   From: http://terminology.hl7.org/CodeSystem/benefit-network in valuesets.xml
+       This value set includes a smattering of Network type codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/benefit-network
+
+      
+
+
+.. class:: NetworkTypeCodesCodeValues
+
+   Services rendered by a Network provider
+   From: http://terminology.hl7.org/CodeSystem/benefit-network in valuesets.xml
+
+   .. attribute:: InNetwork
+      
+
+      Services rendered by a provider who is not in the Network
+      From: http://terminology.hl7.org/CodeSystem/benefit-network in valuesets.xml
+
+
+   .. attribute:: OutOfNetwork
+      
+
+      
+
+

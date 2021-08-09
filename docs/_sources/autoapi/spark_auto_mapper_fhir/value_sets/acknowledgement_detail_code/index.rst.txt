@@ -1,0 +1,102 @@
+:mod:`spark_auto_mapper_fhir.value_sets.acknowledgement_detail_code`
+====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.acknowledgement_detail_code
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.acknowledgement_detail_code.AcknowledgementDetailCode
+   spark_auto_mapper_fhir.value_sets.acknowledgement_detail_code.AcknowledgementDetailCodeValues
+
+
+
+.. class:: AcknowledgementDetailCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.AcknowledgementDetailCode
+   From: http://terminology.hl7.org/ValueSet/v3-AcknowledgementDetailCode in v3-codesystems.xml
+         OpenIssue:
+   Missing description.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-AcknowledgementDetailCode
+
+      
+
+
+.. class:: AcknowledgementDetailCodeValues
+
+   Refelects rejections because elements of the communication are not supported
+   in the current context.
+   From: http://terminology.hl7.org/CodeSystem/v3-AcknowledgementDetailCode in v3-codesystems.xml
+
+   .. attribute:: AcknowledgementDetailNotSupportedCode
+      
+
+      An internal software component (database, application, queue mechanism, etc.)
+      has failed, leading to inability to process the message.
+      From: http://terminology.hl7.org/CodeSystem/v3-AcknowledgementDetailCode in v3-codesystems.xml
+
+
+   .. attribute:: InternalSystemError
+      
+
+      Rejection: The message can't be stored by the receiver due to an unspecified
+      internal application issue. The message was neither processed nor stored by
+      the receiving application.
+      From: http://terminology.hl7.org/CodeSystem/v3-AcknowledgementDetailCode in v3-codesystems.xml
+
+
+   .. attribute:: NoStorageSpaceForMessage_
+      
+
+      Error: The destination of this message is known to the receiving application.
+      Messages have been successfully routed to that destination in the past. The
+      link to the destination application or an intermediate application is
+      unavailable.
+      From: http://terminology.hl7.org/CodeSystem/v3-AcknowledgementDetailCode in v3-codesystems.xml
+
+
+   .. attribute:: MessageRoutingError_DestinationUnreachable_
+      
+
+      The destination of this message is unknown to the receiving application. The
+      receiving application in the message does not match the application which
+      received the message. The message was neither routed, processed nor stored by
+      the receiving application.
+      From: http://terminology.hl7.org/CodeSystem/v3-AcknowledgementDetailCode in v3-codesystems.xml
+
+
+   .. attribute:: Error_MessageRoutingError_UnknownDestination_
+      
+
+      Warning: The destination of this message is known to the receiving
+      application. Messages have been successfully routed to that destination in the
+      past. The link to the destination application or an intermediate application
+      is (temporarily) unavailable. The receiving application will forward the
+      message as soon as the destination can be reached again.
+      From: http://terminology.hl7.org/CodeSystem/v3-AcknowledgementDetailCode in v3-codesystems.xml
+
+
+   .. attribute:: MessageRoutingWarning_DestinationUnreachable_
+      
+
+      Reflects errors in the syntax or structure of the communication.
+      From: http://terminology.hl7.org/CodeSystem/v3-AcknowledgementDetailCode in v3-codesystems.xml
+
+
+   .. attribute:: SyntaxError
+      
+
+      
+
+

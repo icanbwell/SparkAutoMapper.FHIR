@@ -1,0 +1,108 @@
+:mod:`spark_auto_mapper_fhir.value_sets.provenance_participant_role`
+====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.provenance_participant_role
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.provenance_participant_role.ProvenanceParticipantRoleCode
+   spark_auto_mapper_fhir.value_sets.provenance_participant_role.ProvenanceParticipantRoleCodeValues
+
+
+
+.. class:: ProvenanceParticipantRoleCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ProvenanceParticipantRole
+   From: http://hl7.org/fhir/provenance-participant-role in valuesets.xml
+       The role that a provenance participant played
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/provenance-participant-role
+
+      
+
+
+.. class:: ProvenanceParticipantRoleCodeValues
+
+   A person entering the data into the originating system
+   From: http://hl7.org/fhir/provenance-participant-role in valuesets.xml
+
+   .. attribute:: Enterer
+      
+
+      A person, animal, organization or device that who actually and principally
+      carries out the activity
+      From: http://hl7.org/fhir/provenance-participant-role in valuesets.xml
+
+
+   .. attribute:: Performer
+      
+
+      A party that originates the resource and therefore has responsibility for the
+      information given in the resource and ownership of this resource
+      From: http://hl7.org/fhir/provenance-participant-role in valuesets.xml
+
+
+   .. attribute:: Author
+      
+
+      A person who verifies the correctness and appropriateness of activity
+      From: http://hl7.org/fhir/provenance-participant-role in valuesets.xml
+
+
+   .. attribute:: Verifier
+      
+
+      A verifier who attests to the accuracy of the resource
+      From: http://hl7.org/fhir/provenance-participant-role in valuesets.xml
+
+
+   .. attribute:: Attester
+      
+
+      A person who reported information that contributed to the resource
+      From: http://hl7.org/fhir/provenance-participant-role in valuesets.xml
+
+
+   .. attribute:: Informant
+      
+
+      The entity that is accountable for maintaining a true an accurate copy of the
+      original record
+      From: http://hl7.org/fhir/provenance-participant-role in valuesets.xml
+
+
+   .. attribute:: Custodian
+      
+
+      A device that operates independently of an author on custodian's algorithms
+      for data extraction of existing information for purpose of generating a new
+      artifact.
+      From: http://hl7.org/fhir/provenance-participant-role in valuesets.xml
+
+
+   .. attribute:: Assembler
+      
+
+      A device used by an author to record new information, which may also be used
+      by the author to select existing information for aggregation with newly
+      recorded information for the purpose of generating a new artifact.
+      From: http://hl7.org/fhir/provenance-participant-role in valuesets.xml
+
+
+   .. attribute:: Composer
+      
+
+      
+
+

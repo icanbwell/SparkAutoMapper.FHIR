@@ -1,0 +1,60 @@
+:mod:`spark_auto_mapper_fhir.value_sets.gender_status`
+======================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.gender_status
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.gender_status.GenderStatusCode
+   spark_auto_mapper_fhir.value_sets.gender_status.GenderStatusCodeValues
+
+
+
+.. class:: GenderStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   GenderStatus
+   From: http://hl7.org/fhir/animal-genderstatus in valuesets.xml
+       This example value set defines a set of codes that can be used to indicate the
+   current state of the animal's reproductive organs.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/animal-genderstatus
+
+      
+
+
+.. class:: GenderStatusCodeValues
+
+   The animal has been sterilized, castrated or otherwise made infertile.
+   From: http://hl7.org/fhir/animal-genderstatus in valuesets.xml
+
+   .. attribute:: Neutered
+      
+
+      The animal's reproductive organs are intact.
+      From: http://hl7.org/fhir/animal-genderstatus in valuesets.xml
+
+
+   .. attribute:: Intact
+      
+
+      Unable to determine whether the animal has been neutered.
+      From: http://hl7.org/fhir/animal-genderstatus in valuesets.xml
+
+
+   .. attribute:: Unknown
+      
+
+      
+
+

@@ -1,0 +1,121 @@
+:mod:`spark_auto_mapper_fhir.value_sets.vital_signs`
+====================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.vital_signs
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.vital_signs.VitalSignsCode
+   spark_auto_mapper_fhir.value_sets.vital_signs.VitalSignsCodeValues
+
+
+
+.. class:: VitalSignsCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   VitalSigns
+   From: http://hl7.org/fhir/ValueSet/observation-vitalsignresult in valuesets.xml
+       This value set indicates the allowed vital sign result types.   The LOINC code
+   for Vitals Signs panel (85353-1) is a grouping structure for a set of vital
+   signs and includes related links (with type=has-member) to the Observations in
+   this set (e.g. respiratory rate, heart rate, BP).  The Blood pressure panel
+   (85354-9) is used to group the component observations Systolic blood pressure
+   (8480-6) and Diastolic blood pressure (8462-4).
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://loinc.org
+
+      
+
+
+.. class:: VitalSignsCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/observation-vitalsignresult in valuesets.xml
+
+   .. attribute:: _85353_1
+      
+
+      From: http://hl7.org/fhir/ValueSet/observation-vitalsignresult in valuesets.xml
+
+
+   .. attribute:: _9279_1
+      
+
+      From: http://hl7.org/fhir/ValueSet/observation-vitalsignresult in valuesets.xml
+
+
+   .. attribute:: _8867_4
+      
+
+      From: http://hl7.org/fhir/ValueSet/observation-vitalsignresult in valuesets.xml
+
+
+   .. attribute:: _2708_6
+      
+
+      From: http://hl7.org/fhir/ValueSet/observation-vitalsignresult in valuesets.xml
+
+
+   .. attribute:: _8310_5
+      
+
+      From: http://hl7.org/fhir/ValueSet/observation-vitalsignresult in valuesets.xml
+
+
+   .. attribute:: _8302_2
+      
+
+      From: http://hl7.org/fhir/ValueSet/observation-vitalsignresult in valuesets.xml
+
+
+   .. attribute:: _9843_4
+      
+
+      From: http://hl7.org/fhir/ValueSet/observation-vitalsignresult in valuesets.xml
+
+
+   .. attribute:: _29463_7
+      
+
+      From: http://hl7.org/fhir/ValueSet/observation-vitalsignresult in valuesets.xml
+
+
+   .. attribute:: _39156_5
+      
+
+      From: http://hl7.org/fhir/ValueSet/observation-vitalsignresult in valuesets.xml
+
+
+   .. attribute:: _85354_9
+      
+
+      From: http://hl7.org/fhir/ValueSet/observation-vitalsignresult in valuesets.xml
+
+
+   .. attribute:: _8480_6
+      
+
+      From: http://hl7.org/fhir/ValueSet/observation-vitalsignresult in valuesets.xml
+
+
+   .. attribute:: _8462_4
+      
+
+      From: http://hl7.org/fhir/ValueSet/observation-vitalsignresult in valuesets.xml
+
+
+   .. attribute:: _8478_0
+      
+
+      
+
+

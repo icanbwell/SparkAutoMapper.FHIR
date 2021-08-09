@@ -1,0 +1,82 @@
+:mod:`spark_auto_mapper_fhir.value_sets.guidance_response_status`
+=================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.guidance_response_status
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.guidance_response_status.GuidanceResponseStatusCode
+   spark_auto_mapper_fhir.value_sets.guidance_response_status.GuidanceResponseStatusCodeValues
+
+
+
+.. class:: GuidanceResponseStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   GuidanceResponseStatus
+   From: http://hl7.org/fhir/guidance-response-status in valuesets.xml
+       The status of a guidance response.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/guidance-response-status
+
+      
+
+
+.. class:: GuidanceResponseStatusCodeValues
+
+   The request was processed successfully.
+   From: http://hl7.org/fhir/guidance-response-status in valuesets.xml
+
+   .. attribute:: Success
+      
+
+      The request was processed successfully, but more data may result in a more
+      complete evaluation.
+      From: http://hl7.org/fhir/guidance-response-status in valuesets.xml
+
+
+   .. attribute:: DataRequested
+      
+
+      The request was processed, but more data is required to complete the
+      evaluation.
+      From: http://hl7.org/fhir/guidance-response-status in valuesets.xml
+
+
+   .. attribute:: DataRequired
+      
+
+      The request is currently being processed.
+      From: http://hl7.org/fhir/guidance-response-status in valuesets.xml
+
+
+   .. attribute:: InProgress
+      
+
+      The request was not processed successfully.
+      From: http://hl7.org/fhir/guidance-response-status in valuesets.xml
+
+
+   .. attribute:: Failure
+      
+
+      The response was entered in error.
+      From: http://hl7.org/fhir/guidance-response-status in valuesets.xml
+
+
+   .. attribute:: EnteredInError
+      
+
+      
+
+

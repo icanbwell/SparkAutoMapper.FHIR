@@ -1,0 +1,78 @@
+:mod:`spark_auto_mapper_fhir.value_sets.financial_task_codes`
+=============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.financial_task_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.financial_task_codes.FinancialTaskCodesCode
+   spark_auto_mapper_fhir.value_sets.financial_task_codes.FinancialTaskCodesCodeValues
+
+
+
+.. class:: FinancialTaskCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   FinancialTaskCodes
+   From: http://terminology.hl7.org/CodeSystem/financialtaskcode in valuesets.xml
+       This value set includes Financial Task codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/financialtaskcode
+
+      
+
+
+.. class:: FinancialTaskCodesCodeValues
+
+   Cancel or reverse a resource, such as a claim or preauthorization, which is
+   in-process or complete.
+   From: http://terminology.hl7.org/CodeSystem/financialtaskcode in valuesets.xml
+
+   .. attribute:: Cancel
+      
+
+      Retrieve selected or all queued resources or messages.
+      From: http://terminology.hl7.org/CodeSystem/financialtaskcode in valuesets.xml
+
+
+   .. attribute:: Poll
+      
+
+      Release any reserved funds or material obligations associated with a resource.
+      For example, any unused but reserved funds or treatment allowance associated
+      with a preauthorization once treatment is complete.
+      From: http://terminology.hl7.org/CodeSystem/financialtaskcode in valuesets.xml
+
+
+   .. attribute:: Release
+      
+
+      Indication that the processing of a resource, such as a claim, for some or all
+      of the required work is now being requested.
+      From: http://terminology.hl7.org/CodeSystem/financialtaskcode in valuesets.xml
+
+
+   .. attribute:: Reprocess
+      
+
+      Check on the processing status of a resource such as the adjudication of a
+      claim.
+      From: http://terminology.hl7.org/CodeSystem/financialtaskcode in valuesets.xml
+
+
+   .. attribute:: StatusCheck
+      
+
+      
+
+

@@ -1,0 +1,73 @@
+:mod:`spark_auto_mapper_fhir.value_sets.property_representation`
+================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.property_representation
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.property_representation.PropertyRepresentationCode
+   spark_auto_mapper_fhir.value_sets.property_representation.PropertyRepresentationCodeValues
+
+
+
+.. class:: PropertyRepresentationCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   PropertyRepresentation
+   From: http://hl7.org/fhir/property-representation in valuesets.xml
+       How a property is represented when serialized.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/property-representation
+
+      
+
+
+.. class:: PropertyRepresentationCodeValues
+
+   In XML, this property is represented as an attribute not an element.
+   From: http://hl7.org/fhir/property-representation in valuesets.xml
+
+   .. attribute:: XMLAttribute
+      
+
+      This element is represented using the XML text attribute (primitives only).
+      From: http://hl7.org/fhir/property-representation in valuesets.xml
+
+
+   .. attribute:: XMLText
+      
+
+      The type of this element is indicated using xsi:type.
+      From: http://hl7.org/fhir/property-representation in valuesets.xml
+
+
+   .. attribute:: TypeAttribute
+      
+
+      Use CDA narrative instead of XHTML.
+      From: http://hl7.org/fhir/property-representation in valuesets.xml
+
+
+   .. attribute:: CDATextFormat
+      
+
+      The property is represented using XHTML.
+      From: http://hl7.org/fhir/property-representation in valuesets.xml
+
+
+   .. attribute:: XHTML
+      
+
+      
+
+

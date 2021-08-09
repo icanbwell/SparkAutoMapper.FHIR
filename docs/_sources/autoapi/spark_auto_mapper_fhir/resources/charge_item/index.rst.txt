@@ -1,0 +1,36 @@
+:mod:`spark_auto_mapper_fhir.resources.charge_item`
+===================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.charge_item
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.charge_item.ChargeItem
+
+
+
+.. class:: ChargeItem(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.identifier.Identifier]] = None, definitionUri: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.uri.FhirUri]] = None, definitionCanonical: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.canonical.FhirCanonical]] = None, status: spark_auto_mapper_fhir.value_sets.charge_item_status.ChargeItemStatusCode, partOf: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.charge_item.ChargeItem]]] = None, code: spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.charge_item_code.ChargeItemCodeCode], subject: spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.group.Group)]], context: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.encounter.Encounter, spark_auto_mapper_fhir.resources.episode_of_care.EpisodeOfCare)]]] = None, occurrenceDateTime: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, occurrencePeriod: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, occurrenceTiming: Optional[spark_auto_mapper_fhir.backbone_elements.timing.Timing] = None, performer: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.charge_item_performer.ChargeItemPerformer]] = None, performingOrganization: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.organization.Organization]] = None, requestingOrganization: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.organization.Organization]] = None, costCenter: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.organization.Organization]] = None, quantity: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, bodysite: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.snomedct_body_structures.SNOMEDCTBodyStructuresCode]]] = None, factorOverride: Optional[spark_auto_mapper_fhir.fhir_types.decimal.FhirDecimal] = None, priceOverride: Optional[spark_auto_mapper_fhir.complex_types.money.Money] = None, overrideReason: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, enterer: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole, spark_auto_mapper_fhir.resources.organization.Organization, spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.device.Device, spark_auto_mapper_fhir.resources.related_person.RelatedPerson)]]] = None, enteredDate: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, reason: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.icd_10_codes.ICD_10CodesCode]]] = None, service: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.diagnostic_report.DiagnosticReport, spark_auto_mapper_fhir.resources.imaging_study.ImagingStudy, spark_auto_mapper_fhir.resources.immunization.Immunization, spark_auto_mapper_fhir.resources.medication_administration.MedicationAdministration, spark_auto_mapper_fhir.resources.medication_dispense.MedicationDispense, spark_auto_mapper_fhir.resources.observation.Observation, spark_auto_mapper_fhir.resources.procedure.Procedure, spark_auto_mapper_fhir.resources.supply_delivery.SupplyDelivery)]]]] = None, productReference: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.device.Device, spark_auto_mapper_fhir.resources.medication.Medication, spark_auto_mapper_fhir.resources.substance.Substance)]]] = None, productCodeableConcept: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, account: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.account.Account]]] = None, note: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.annotation.Annotation]] = None, supportingInformation: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.resource.Resource]]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   ChargeItem
+   chargeitem.xsd
+       The resource ChargeItem describes the provision of healthcare provider
+   products for a certain patient, therefore referring not only to the product,
+   but containing in addition details of the provision, like date, time, amounts
+   and participating organizations and persons. Main Usage of the ChargeItem is
+   to enable the billing process and internal cost allocation.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

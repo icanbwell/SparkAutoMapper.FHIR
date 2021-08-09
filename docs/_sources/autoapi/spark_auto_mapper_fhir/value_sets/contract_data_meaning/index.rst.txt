@@ -1,0 +1,68 @@
+:mod:`spark_auto_mapper_fhir.value_sets.contract_data_meaning`
+==============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.contract_data_meaning
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.contract_data_meaning.ContractDataMeaningCode
+   spark_auto_mapper_fhir.value_sets.contract_data_meaning.ContractDataMeaningCodeValues
+
+
+
+.. class:: ContractDataMeaningCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ContractDataMeaning
+   From: http://terminology.hl7.org/CodeSystem/contract-data-meaning in valuesets.xml
+       How a resource reference is interpreted when evaluating contract offers.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/contract-data-meaning
+
+      
+
+
+.. class:: ContractDataMeaningCodeValues
+
+   The consent applies directly to the instance of the resource.
+   From: http://terminology.hl7.org/CodeSystem/contract-data-meaning in valuesets.xml
+
+   .. attribute:: Instance
+      
+
+      The consent applies directly to the instance of the resource and instances it
+      refers to.
+      From: http://terminology.hl7.org/CodeSystem/contract-data-meaning in valuesets.xml
+
+
+   .. attribute:: Related
+      
+
+      The consent applies directly to the instance of the resource and instances
+      that refer to it.
+      From: http://terminology.hl7.org/CodeSystem/contract-data-meaning in valuesets.xml
+
+
+   .. attribute:: Dependents
+      
+
+      The consent applies to instances of resources that are authored by.
+      From: http://terminology.hl7.org/CodeSystem/contract-data-meaning in valuesets.xml
+
+
+   .. attribute:: AuthoredBy
+      
+
+      
+
+

@@ -1,0 +1,268 @@
+:mod:`spark_auto_mapper_fhir.value_sets.canonical_status_codes_for_fhir_resources`
+==================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.canonical_status_codes_for_fhir_resources
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.canonical_status_codes_for_fhir_resources.CanonicalStatusCodesForFHIRResourcesCode
+   spark_auto_mapper_fhir.value_sets.canonical_status_codes_for_fhir_resources.CanonicalStatusCodesForFHIRResourcesCodeValues
+
+
+
+.. class:: CanonicalStatusCodesForFHIRResourcesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   Canonical Status Codes for FHIR Resources
+   From: http://hl7.org/fhir/resource-status in valuesets.xml
+       The master set of status codes used throughout FHIR. All status codes are
+   mapped to one of these codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/resource-status
+
+      
+
+
+.. class:: CanonicalStatusCodesForFHIRResourcesCodeValues
+
+   The resource was created in error, and should not be treated as valid (note:
+   in many cases, for various data integrity related reasons, the information
+   cannot be removed from the record)
+   From: http://hl7.org/fhir/resource-status in valuesets.xml
+
+   .. attribute:: Error
+      
+
+      The resource describes an action or plan that is proposed, and not yet
+      approved by the participants
+      From: http://hl7.org/fhir/resource-status in valuesets.xml
+
+
+   .. attribute:: Proposed
+      
+
+      The resource describes a course of action that is planned and agreed/approved,
+      but at the time of recording was still future
+      From: http://hl7.org/fhir/resource-status in valuesets.xml
+
+
+   .. attribute:: Planned
+      
+
+      The information in the resource is still being prepared and edited
+      From: http://hl7.org/fhir/resource-status in valuesets.xml
+
+
+   .. attribute:: Draft
+      
+
+      A fulfiller has been asked to perform this action, but it has not yet occurred
+      From: http://hl7.org/fhir/resource-status in valuesets.xml
+
+
+   .. attribute:: Requested
+      
+
+      The fulfiller has received the request, but not yet agreed to carry out the
+      action
+      From: http://hl7.org/fhir/resource-status in valuesets.xml
+
+
+   .. attribute:: Received
+      
+
+      The fulfiller chose not to perform the action
+      From: http://hl7.org/fhir/resource-status in valuesets.xml
+
+
+   .. attribute:: Declined
+      
+
+      The fulfiller has decided to perform the action, and plans are in train to do
+      this in the future
+      From: http://hl7.org/fhir/resource-status in valuesets.xml
+
+
+   .. attribute:: Accepted
+      
+
+      The pre-conditions for the action are all fulfilled, and it is imminent
+      From: http://hl7.org/fhir/resource-status in valuesets.xml
+
+
+   .. attribute:: Arrived
+      
+
+      The resource describes information that is currently valid or a process that
+      is presently occuring
+      From: http://hl7.org/fhir/resource-status in valuesets.xml
+
+
+   .. attribute:: Active
+      
+
+      The process described/requested in this resource has been halted for some
+      reason
+      From: http://hl7.org/fhir/resource-status in valuesets.xml
+
+
+   .. attribute:: Suspended
+      
+
+      The process described/requested in the resource could not be completed, and no
+      further action is planned
+      From: http://hl7.org/fhir/resource-status in valuesets.xml
+
+
+   .. attribute:: Failed
+      
+
+      The information in this resource has been replaced by information in another
+      resource
+      From: http://hl7.org/fhir/resource-status in valuesets.xml
+
+
+   .. attribute:: Replaced
+      
+
+      The process described/requested in the resource has been completed, and no
+      further action is planned
+      From: http://hl7.org/fhir/resource-status in valuesets.xml
+
+
+   .. attribute:: Complete
+      
+
+      The resource describes information that is no longer valid or a process that
+      is stopped occurring
+      From: http://hl7.org/fhir/resource-status in valuesets.xml
+
+
+   .. attribute:: Inactive
+      
+
+      The process described/requested in the resource did not complete - usually due
+      to some workflow error, and no further action is planned
+      From: http://hl7.org/fhir/resource-status in valuesets.xml
+
+
+   .. attribute:: Abandoned
+      
+
+      Authoring system does not know the status
+      From: http://hl7.org/fhir/resource-status in valuesets.xml
+
+
+   .. attribute:: Unknown
+      
+
+      The information in this resource is not yet approved
+      From: http://hl7.org/fhir/resource-status in valuesets.xml
+
+
+   .. attribute:: Unconfirmed
+      
+
+      The information in this resource is approved
+      From: http://hl7.org/fhir/resource-status in valuesets.xml
+
+
+   .. attribute:: Confirmed
+      
+
+      The issue identified by this resource is no longer of concern
+      From: http://hl7.org/fhir/resource-status in valuesets.xml
+
+
+   .. attribute:: Resolved
+      
+
+      This information has been ruled out by testing and evaluation
+      From: http://hl7.org/fhir/resource-status in valuesets.xml
+
+
+   .. attribute:: Refuted
+      
+
+      Potentially true?
+      From: http://hl7.org/fhir/resource-status in valuesets.xml
+
+
+   .. attribute:: Differential
+      
+
+      This information is still being assembled
+      From: http://hl7.org/fhir/resource-status in valuesets.xml
+
+
+   .. attribute:: Partial
+      
+
+      not available at this time/location
+      From: http://hl7.org/fhir/resource-status in valuesets.xml
+
+
+   .. attribute:: Busy_unavailable
+      
+
+      Free for scheduling
+      From: http://hl7.org/fhir/resource-status in valuesets.xml
+
+
+   .. attribute:: Free
+      
+
+      Ready to act
+      From: http://hl7.org/fhir/resource-status in valuesets.xml
+
+
+   .. attribute:: On_target
+      
+
+      Ahead of the planned timelines
+      From: http://hl7.org/fhir/resource-status in valuesets.xml
+
+
+   .. attribute:: Ahead_of_target
+      
+
+      From: http://hl7.org/fhir/resource-status in valuesets.xml
+
+
+   .. attribute:: Behind_target
+      
+
+      Behind the planned timelines
+      From: http://hl7.org/fhir/resource-status in valuesets.xml
+
+
+   .. attribute:: Not_ready
+      
+
+      The device transducer is disconnected
+      From: http://hl7.org/fhir/resource-status in valuesets.xml
+
+
+   .. attribute:: Transduc_discon
+      
+
+      The hardware is disconnected
+      From: http://hl7.org/fhir/resource-status in valuesets.xml
+
+
+   .. attribute:: Hw_discon
+      
+
+      
+
+

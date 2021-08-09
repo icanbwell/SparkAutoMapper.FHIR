@@ -1,0 +1,63 @@
+:mod:`spark_auto_mapper_fhir.value_sets.response_mode`
+======================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.response_mode
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.response_mode.ResponseMode
+   spark_auto_mapper_fhir.value_sets.response_mode.ResponseModeValues
+
+
+
+.. class:: ResponseMode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.ResponseMode
+   From: http://terminology.hl7.org/ValueSet/v3-ResponseMode in v3-codesystems.xml
+        Specifies the mode, immediate versus deferred or queued, by which a receiver
+   should communicate its receiver responsibilities.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ResponseMode
+
+      
+
+
+.. class:: ResponseModeValues
+
+   The receiver may respond in a non-immediate manner. Note: this will be the
+   default value.
+   From: http://terminology.hl7.org/CodeSystem/v3-ResponseMode in v3-codesystems.xml
+
+   .. attribute:: Deferred
+      
+
+      The receiver is required to assume that the sender is blocking and behave
+      appropriately by sending an immediate response.
+      From: http://terminology.hl7.org/CodeSystem/v3-ResponseMode in v3-codesystems.xml
+
+
+   .. attribute:: Immediate
+      
+
+      The receiver shall keep any application responses in a queue until such time
+      as the queue is polled.
+      From: http://terminology.hl7.org/CodeSystem/v3-ResponseMode in v3-codesystems.xml
+
+
+   .. attribute:: Queue
+      
+
+      
+
+

@@ -1,0 +1,70 @@
+:mod:`spark_auto_mapper_fhir.value_sets.participation_status`
+=============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.participation_status
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.participation_status.ParticipationStatusCode
+   spark_auto_mapper_fhir.value_sets.participation_status.ParticipationStatusCodeValues
+
+
+
+.. class:: ParticipationStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ParticipationStatus
+   From: http://hl7.org/fhir/participationstatus in valuesets.xml
+       The Participation status of an appointment.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/participationstatus
+
+      
+
+
+.. class:: ParticipationStatusCodeValues
+
+   The participant has accepted the appointment.
+   From: http://hl7.org/fhir/participationstatus in valuesets.xml
+
+   .. attribute:: Accepted
+      
+
+      The participant has declined the appointment and will not participate in the
+      appointment.
+      From: http://hl7.org/fhir/participationstatus in valuesets.xml
+
+
+   .. attribute:: Declined
+      
+
+      The participant has  tentatively accepted the appointment. This could be
+      automatically created by a system and requires further processing before it
+      can be accepted. There is no commitment that attendance will occur.
+      From: http://hl7.org/fhir/participationstatus in valuesets.xml
+
+
+   .. attribute:: Tentative
+      
+
+      The participant needs to indicate if they accept the appointment by changing
+      this status to one of the other statuses.
+      From: http://hl7.org/fhir/participationstatus in valuesets.xml
+
+
+   .. attribute:: NeedsAction
+      
+
+      
+
+

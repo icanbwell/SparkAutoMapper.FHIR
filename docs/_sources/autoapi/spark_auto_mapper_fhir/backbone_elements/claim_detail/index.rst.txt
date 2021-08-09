@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.claim_detail`
+============================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.claim_detail
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.claim_detail.ClaimDetail
+
+
+
+.. class:: ClaimDetail(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, sequence: spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt, revenue: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.example_revenue_center_codes.ExampleRevenueCenterCodesCode]] = None, category: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.benefit_category_codes.BenefitCategoryCodesCode]] = None, productOrService: spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.uscls_codes.USCLSCodesCode], modifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.modifier_type_codes.ModifierTypeCodesCode]]] = None, programCode: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.example_program_reason_codes.ExampleProgramReasonCodesCode]]] = None, quantity: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, unitPrice: Optional[spark_auto_mapper_fhir.complex_types.money.Money] = None, factor: Optional[spark_auto_mapper_fhir.fhir_types.decimal.FhirDecimal] = None, net: Optional[spark_auto_mapper_fhir.complex_types.money.Money] = None, udi: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.device.Device]]] = None, subDetail: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.claim_sub_detail.ClaimSubDetail]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   Claim.Detail
+   A provider issued list of professional services and products which have been provided, or are to be provided, to a patient which is sent to an insurer for reimbursement.
+
+

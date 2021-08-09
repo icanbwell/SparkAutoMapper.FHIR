@@ -1,0 +1,34 @@
+:mod:`spark_auto_mapper_fhir.value_sets.v2_0305`
+================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.v2_0305
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.v2_0305.V2_0305
+
+
+
+.. class:: V2_0305(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v2.0305
+   From: http://terminology.hl7.org/ValueSet/v2-0305 in v2-tables.xml
+       FHIR Value set/code system definition for HL7 v2 table 0305 ( Person location
+   type)
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/ValueSet/v2-0305
+
+      
+
+

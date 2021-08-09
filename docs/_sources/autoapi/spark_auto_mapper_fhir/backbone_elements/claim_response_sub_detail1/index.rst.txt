@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.claim_response_sub_detail1`
+==========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.claim_response_sub_detail1
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.claim_response_sub_detail1.ClaimResponseSubDetail1
+
+
+
+.. class:: ClaimResponseSubDetail1(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, productOrService: spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.uscls_codes.USCLSCodesCode], modifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.modifier_type_codes.ModifierTypeCodesCode]]] = None, quantity: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, unitPrice: Optional[spark_auto_mapper_fhir.complex_types.money.Money] = None, factor: Optional[spark_auto_mapper_fhir.fhir_types.decimal.FhirDecimal] = None, net: Optional[spark_auto_mapper_fhir.complex_types.money.Money] = None, noteNumber: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt]] = None, adjudication: spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.claim_response_adjudication.ClaimResponseAdjudication])
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   ClaimResponse.SubDetail1
+   This resource provides the adjudication details from the processing of a Claim resource.
+
+

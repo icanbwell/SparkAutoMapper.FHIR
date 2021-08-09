@@ -1,0 +1,33 @@
+:mod:`spark_auto_mapper_fhir.resources.observation_definition`
+==============================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.observation_definition
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.observation_definition.ObservationDefinition
+
+
+
+.. class:: ObservationDefinition(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, category: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.observation_category_codes.ObservationCategoryCodesCode]]] = None, code: spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.loinc_codes.LOINCCodesCode], identifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.identifier.Identifier]] = None, permittedDataType: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.value_sets.observation_data_type.ObservationDataTypeCode]] = None, multipleResultsAllowed: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, method: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.observation_methods.ObservationMethodsCode]] = None, preferredReportName: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, quantitativeDetails: Optional[spark_auto_mapper_fhir.backbone_elements.observation_definition_quantitative_details.ObservationDefinitionQuantitativeDetails] = None, qualifiedInterval: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.observation_definition_qualified_interval.ObservationDefinitionQualifiedInterval]] = None, validCodedValueSet: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.value_set.ValueSet]] = None, normalCodedValueSet: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.value_set.ValueSet]] = None, abnormalCodedValueSet: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.value_set.ValueSet]] = None, criticalCodedValueSet: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.value_set.ValueSet]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   ObservationDefinition
+   observationdefinition.xsd
+       Set of definitional characteristics for a kind of observation or measurement
+   produced or consumed by an orderable health care service.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

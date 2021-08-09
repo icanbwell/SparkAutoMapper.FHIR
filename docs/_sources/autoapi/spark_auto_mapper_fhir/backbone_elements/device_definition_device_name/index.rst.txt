@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.device_definition_device_name`
+=============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.device_definition_device_name
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.device_definition_device_name.DeviceDefinitionDeviceName
+
+
+
+.. class:: DeviceDefinitionDeviceName(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, name: spark_auto_mapper_fhir.fhir_types.string.FhirString, type_: spark_auto_mapper_fhir.value_sets.device_name_type.DeviceNameTypeCode)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   DeviceDefinition.DeviceName
+   The characteristics, operational status and capabilities of a medical-related component of a medical device.
+
+

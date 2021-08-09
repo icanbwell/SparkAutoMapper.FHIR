@@ -1,0 +1,68 @@
+:mod:`spark_auto_mapper_fhir.value_sets.language_ability_proficiency`
+=====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.language_ability_proficiency
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.language_ability_proficiency.LanguageAbilityProficiency
+   spark_auto_mapper_fhir.value_sets.language_ability_proficiency.LanguageAbilityProficiencyValues
+
+
+
+.. class:: LanguageAbilityProficiency(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.LanguageAbilityProficiency
+   From: http://terminology.hl7.org/ValueSet/v3-LanguageAbilityProficiency in v3-codesystems.xml
+        A value representing the level of proficiency in a language.  Example:
+   Excellent, good, fair, poor.  OpenIssue:
+   Description copied from Concept Domain of same name.  Must be verified.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityProficiency
+
+      
+
+
+.. class:: LanguageAbilityProficiencyValues
+
+   Excellent
+   From: http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityProficiency in v3-codesystems.xml
+
+   .. attribute:: Excellent
+      
+
+      Fair
+      From: http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityProficiency in v3-codesystems.xml
+
+
+   .. attribute:: Fair
+      
+
+      Good
+      From: http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityProficiency in v3-codesystems.xml
+
+
+   .. attribute:: Good
+      
+
+      Poor
+      From: http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityProficiency in v3-codesystems.xml
+
+
+   .. attribute:: Poor
+      
+
+      
+
+

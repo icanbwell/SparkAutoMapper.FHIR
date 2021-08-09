@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.contract_valued_item`
+====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.contract_valued_item
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.contract_valued_item.ContractValuedItem
+
+
+
+.. class:: ContractValuedItem(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, entityCodeableConcept: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, entityReference: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.resource.Resource]] = None, identifier: Optional[spark_auto_mapper_fhir.complex_types.identifier.Identifier] = None, effectiveTime: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, quantity: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, unitPrice: Optional[spark_auto_mapper_fhir.complex_types.money.Money] = None, factor: Optional[spark_auto_mapper_fhir.fhir_types.decimal.FhirDecimal] = None, points: Optional[spark_auto_mapper_fhir.fhir_types.decimal.FhirDecimal] = None, net: Optional[spark_auto_mapper_fhir.complex_types.money.Money] = None, payment: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, paymentDate: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, responsible: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.organization.Organization, spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole, spark_auto_mapper_fhir.resources.related_person.RelatedPerson)]]] = None, recipient: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.organization.Organization, spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole, spark_auto_mapper_fhir.resources.related_person.RelatedPerson)]]] = None, linkId: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.string.FhirString]] = None, securityLabelNumber: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.unsigned_int.FhirUnsignedInt]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   Contract.ValuedItem
+   Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
+
+

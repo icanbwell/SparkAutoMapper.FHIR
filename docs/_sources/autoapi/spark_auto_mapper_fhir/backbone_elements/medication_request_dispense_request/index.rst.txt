@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.medication_request_dispense_request`
+===================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.medication_request_dispense_request
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.medication_request_dispense_request.MedicationRequestDispenseRequest
+
+
+
+.. class:: MedicationRequestDispenseRequest(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, initialFill: Optional[spark_auto_mapper_fhir.backbone_elements.medication_request_initial_fill.MedicationRequestInitialFill] = None, dispenseInterval: Optional[spark_auto_mapper_fhir.complex_types.duration.Duration] = None, validityPeriod: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, numberOfRepeatsAllowed: Optional[spark_auto_mapper_fhir.fhir_types.unsigned_int.FhirUnsignedInt] = None, quantity: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, expectedSupplyDuration: Optional[spark_auto_mapper_fhir.complex_types.duration.Duration] = None, performer: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.organization.Organization]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   MedicationRequest.DispenseRequest
+   An order or request for both supply of the medication and the instructions for administration of the medication to a patient. The resource is called "MedicationRequest" rather than "MedicationPrescription" or "MedicationOrder" to generalize the use across inpatient and outpatient settings, including care plans, etc., and to harmonize with workflow patterns.
+
+

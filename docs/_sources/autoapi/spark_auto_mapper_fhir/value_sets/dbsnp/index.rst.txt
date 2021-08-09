@@ -1,0 +1,33 @@
+:mod:`spark_auto_mapper_fhir.value_sets.dbsnp`
+==============================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.dbsnp
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.dbsnp.DBSNPCode
+
+
+
+.. class:: DBSNPCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   DBSNP
+   From: http://hl7.org/fhir/ValueSet/dbsnp in valuesets.xml
+       DBSNP : Single Nucleotide Polymorphism database
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://www.ncbi.nlm.nih.gov/projects/SNP
+
+      
+
+

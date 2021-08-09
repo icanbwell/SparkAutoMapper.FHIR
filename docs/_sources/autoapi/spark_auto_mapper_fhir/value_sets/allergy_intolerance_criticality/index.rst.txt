@@ -1,0 +1,62 @@
+:mod:`spark_auto_mapper_fhir.value_sets.allergy_intolerance_criticality`
+========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.allergy_intolerance_criticality
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.allergy_intolerance_criticality.AllergyIntoleranceCriticalityCode
+   spark_auto_mapper_fhir.value_sets.allergy_intolerance_criticality.AllergyIntoleranceCriticalityCodeValues
+
+
+
+.. class:: AllergyIntoleranceCriticalityCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   AllergyIntoleranceCriticality
+   From: http://hl7.org/fhir/allergy-intolerance-criticality in valuesets.xml
+       Estimate of the potential clinical harm, or seriousness, of a reaction to an
+   identified substance.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/allergy-intolerance-criticality
+
+      
+
+
+.. class:: AllergyIntoleranceCriticalityCodeValues
+
+   Worst case result of a future exposure is not assessed to be life-threatening
+   or having high potential for organ system failure.
+   From: http://hl7.org/fhir/allergy-intolerance-criticality in valuesets.xml
+
+   .. attribute:: LowRisk
+      
+
+      Worst case result of a future exposure is assessed to be life-threatening or
+      having high potential for organ system failure.
+      From: http://hl7.org/fhir/allergy-intolerance-criticality in valuesets.xml
+
+
+   .. attribute:: HighRisk
+      
+
+      Unable to assess the worst case result of a future exposure.
+      From: http://hl7.org/fhir/allergy-intolerance-criticality in valuesets.xml
+
+
+   .. attribute:: UnableToAssessRisk
+      
+
+      
+
+

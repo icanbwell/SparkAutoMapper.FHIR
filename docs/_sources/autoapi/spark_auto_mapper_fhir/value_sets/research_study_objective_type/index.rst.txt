@@ -1,0 +1,62 @@
+:mod:`spark_auto_mapper_fhir.value_sets.research_study_objective_type`
+======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.research_study_objective_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.research_study_objective_type.ResearchStudyObjectiveTypeCode
+   spark_auto_mapper_fhir.value_sets.research_study_objective_type.ResearchStudyObjectiveTypeCodeValues
+
+
+
+.. class:: ResearchStudyObjectiveTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ResearchStudyObjectiveType
+   From: http://terminology.hl7.org/CodeSystem/research-study-objective-type in valuesets.xml
+       Codes for the kind of study objective.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/research-study-objective-type
+
+      
+
+
+.. class:: ResearchStudyObjectiveTypeCodeValues
+
+   The main question to be answered, and the one that drives any statistical
+   planning for the study—e.g., calculation of the sample size to provide the
+   appropriate power for statistical testing.
+   From: http://terminology.hl7.org/CodeSystem/research-study-objective-type in valuesets.xml
+
+   .. attribute:: Primary
+      
+
+      Question to be answered in the study that is of lesser importance than the
+      primary objective.
+      From: http://terminology.hl7.org/CodeSystem/research-study-objective-type in valuesets.xml
+
+
+   .. attribute:: Secondary
+      
+
+      Exploratory questions to be answered in the study.
+      From: http://terminology.hl7.org/CodeSystem/research-study-objective-type in valuesets.xml
+
+
+   .. attribute:: Exploratory
+      
+
+      
+
+

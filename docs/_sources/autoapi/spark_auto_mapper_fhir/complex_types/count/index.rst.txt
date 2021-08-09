@@ -1,0 +1,32 @@
+:mod:`spark_auto_mapper_fhir.complex_types.count`
+=================================================
+
+.. py:module:: spark_auto_mapper_fhir.complex_types.count
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.complex_types.count.Count
+
+
+
+.. class:: Count(*, value: Optional[spark_auto_mapper_fhir.fhir_types.decimal.FhirDecimal] = None, comparator: Optional[spark_auto_mapper_fhir.value_sets.quantity_comparator.QuantityComparatorCode] = None, unit: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, system: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, code: Optional[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
+
+   Count
+   fhir-base.xsd
+       A measured amount (or an amount that can potentially be measured). Note that measured amounts include amounts that are not precisely quantified, including amounts involving arbitrary units and floating currencies.
+       If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

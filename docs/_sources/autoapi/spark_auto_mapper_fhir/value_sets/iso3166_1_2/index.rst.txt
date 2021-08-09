@@ -1,0 +1,1532 @@
+:mod:`spark_auto_mapper_fhir.value_sets.iso3166_1_2`
+====================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.iso3166_1_2
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.iso3166_1_2.Iso3166_1_2Code
+   spark_auto_mapper_fhir.value_sets.iso3166_1_2.Iso3166_1_2CodeValues
+
+
+
+.. class:: Iso3166_1_2Code(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   Iso3166-1-2
+   From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+       This value set defines the ISO 3166 Part 1 2-letter codes
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = urn:iso:std:iso:3166
+
+      
+
+
+.. class:: Iso3166_1_2CodeValues
+
+   From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+   .. attribute:: Andorra
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: UnitedArabEmirates
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Afghanistan
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: AntiguaAndBarbuda
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Anguilla
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Albania
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Armenia
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Angola
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Antarctica
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Argentina
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: AmericanSamoa
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Austria
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Australia
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Aruba
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: _landIslands
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Azerbaijan
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: BosniaAndHerzegovina
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Barbados
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Bangladesh
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Belgium
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: BurkinaFaso
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Bulgaria
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Bahrain
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Burundi
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Benin
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: SaintBarth_lemy
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Bermuda
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: BruneiDarussalam
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Bolivia_PlurinationalStateOf
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Bonaire_SintEustatiusAndSaba
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Brazil
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Bahamas
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Bhutan
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: BouvetIsland
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Botswana
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Belarus
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Belize
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Canada
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Cocos_Keeling_Islands
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Congo_TheDemocraticRepublicOfThe
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: CentralAfricanRepublic
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Congo
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Switzerland
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: C_teD_Ivoire
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: CookIslands
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Chile
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Cameroon
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: China
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Colombia
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: CostaRica
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Cuba
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: CaboVerde
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Cura_ao
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: ChristmasIsland
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Cyprus
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Czechia
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Germany
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Djibouti
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Denmark
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Dominica
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: DominicanRepublic
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Algeria
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Ecuador
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Estonia
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Egypt
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: WesternSahara
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Eritrea
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Spain
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Ethiopia
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Finland
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Fiji
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: FalklandIslands_Malvinas_
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Micronesia_FederatedStatesOf
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: FaroeIslands
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: France
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Gabon
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: UnitedKingdomOfGreatBritainAndNorthernIreland
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Grenada
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Georgia
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: FrenchGuiana
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Guernsey
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Ghana
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Gibraltar
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Greenland
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Gambia
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Guinea
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Guadeloupe
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: EquatorialGuinea
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Greece
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: SouthGeorgiaAndTheSouthSandwichIslands
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Guatemala
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Guam
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Guinea_Bissau
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Guyana
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: HongKong
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: HeardIslandAndMcDonaldIslands
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Honduras
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Croatia
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Haiti
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Hungary
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Indonesia
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Ireland
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Israel
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: IsleOfMan
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: India
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: BritishIndianOceanTerritory
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Iraq
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Iran_IslamicRepublicOf
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Iceland
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Italy
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Jersey
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Jamaica
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Jordan
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Japan
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Kenya
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Kyrgyzstan
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Cambodia
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Kiribati
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Comoros
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: SaintKittsAndNevis
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Korea_DemocraticPeople_sRepublicOf
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Korea_RepublicOf
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Kuwait
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: CaymanIslands
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Kazakhstan
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: LaoPeople_sDemocraticRepublic
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Lebanon
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: SaintLucia
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Liechtenstein
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: SriLanka
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Liberia
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Lesotho
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Lithuania
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Luxembourg
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Latvia
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Libya
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Morocco
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Monaco
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Moldova_RepublicOf
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Montenegro
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: SaintMartin_FrenchPart_
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Madagascar
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: MarshallIslands
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Macedonia_TheFormerYugoslavRepublicOf
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Mali
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Myanmar
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Mongolia
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Macao
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: NorthernMarianaIslands
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Martinique
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Mauritania
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Montserrat
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Malta
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Mauritius
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Maldives
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Malawi
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Mexico
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Malaysia
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Mozambique
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Namibia
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: NewCaledonia
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Niger
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: NorfolkIsland
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Nigeria
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Nicaragua
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Netherlands
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Norway
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Nepal
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Nauru
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Niue
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: NewZealand
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Oman
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Panama
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Peru
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: FrenchPolynesia
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: PapuaNewGuinea
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Philippines
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Pakistan
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Poland
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: SaintPierreAndMiquelon
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Pitcairn
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: PuertoRico
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Palestine_StateOf
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Portugal
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Palau
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Paraguay
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Qatar
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: R_union
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Romania
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Serbia
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: RussianFederation
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Rwanda
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: SaudiArabia
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: SolomonIslands
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Seychelles
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Sudan
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Sweden
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Singapore
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: SaintHelena_AscensionAndTristanDaCunha
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Slovenia
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: SvalbardAndJanMayen
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Slovakia
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: SierraLeone
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: SanMarino
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Senegal
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Somalia
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Suriname
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: SouthSudan
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: SaoTomeAndPrincipe
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: ElSalvador
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: SintMaarten_DutchPart_
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: SyrianArabRepublic
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Swaziland
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: TurksAndCaicosIslands
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Chad
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: FrenchSouthernTerritories
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Togo
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Thailand
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Tajikistan
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Tokelau
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Timor_Leste
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Turkmenistan
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Tunisia
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Tonga
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Turkey
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: TrinidadAndTobago
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Tuvalu
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Taiwan_ProvinceOfChina
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Tanzania_UnitedRepublicOf
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Ukraine
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Uganda
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: UnitedStatesMinorOutlyingIslands
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: UnitedStatesOfAmerica
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Uruguay
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Uzbekistan
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: HolySee
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: SaintVincentAndTheGrenadines
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Venezuela_BolivarianRepublicOf
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: VirginIslands_British
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: VirginIslands_
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: VietNam
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Vanuatu
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: WallisAndFutuna
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Samoa
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Yemen
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Mayotte
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: SouthAfrica
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Zambia
+      
+
+      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
+
+
+   .. attribute:: Zimbabwe
+      
+
+      
+
+

@@ -1,0 +1,36 @@
+:mod:`spark_auto_mapper_fhir.resources.subscription`
+====================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.subscription
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.subscription.Subscription
+
+
+
+.. class:: Subscription(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, status: spark_auto_mapper_fhir.value_sets.subscription_status.SubscriptionStatusCode, contact: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.contact_point.ContactPoint]] = None, end: Optional[spark_auto_mapper_fhir.fhir_types.instant.FhirInstant] = None, reason: spark_auto_mapper_fhir.fhir_types.string.FhirString, criteria: spark_auto_mapper_fhir.fhir_types.string.FhirString, error: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, channel: spark_auto_mapper_fhir.backbone_elements.subscription_channel.SubscriptionChannel)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   Subscription
+   subscription.xsd
+       The subscription resource is used to define a push-based subscription from a
+   server to another system. Once a subscription is registered with the server,
+   the server checks every resource that is created or updated, and if the
+   resource matches the given criteria, it sends a message on the defined
+   "channel" so that another system can take an appropriate action.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

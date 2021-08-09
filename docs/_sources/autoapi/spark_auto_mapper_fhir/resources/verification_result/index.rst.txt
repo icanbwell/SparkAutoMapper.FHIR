@@ -1,0 +1,33 @@
+:mod:`spark_auto_mapper_fhir.resources.verification_result`
+===========================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.verification_result
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.verification_result.VerificationResult
+
+
+
+.. class:: VerificationResult(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, target: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.resource.Resource]]] = None, targetLocation: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.string.FhirString]] = None, need: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.need.NeedCode]] = None, status: spark_auto_mapper_fhir.value_sets.status.StatusCode, statusDate: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, validationType: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.validation_type.Validation_typeCode]] = None, validationProcess: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.validation_process.Validation_processCode]]] = None, frequency: Optional[spark_auto_mapper_fhir.backbone_elements.timing.Timing] = None, lastPerformed: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, nextScheduled: Optional[spark_auto_mapper_fhir.fhir_types.date.FhirDate] = None, failureAction: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.failure_action.Failure_actionCode]] = None, primarySource: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.verification_result_primary_source.VerificationResultPrimarySource]] = None, attestation: Optional[spark_auto_mapper_fhir.backbone_elements.verification_result_attestation.VerificationResultAttestation] = None, validator: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.verification_result_validator.VerificationResultValidator]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   VerificationResult
+   verificationresult.xsd
+       Describes validation requirements, source(s), status and dates for one or more
+   elements.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

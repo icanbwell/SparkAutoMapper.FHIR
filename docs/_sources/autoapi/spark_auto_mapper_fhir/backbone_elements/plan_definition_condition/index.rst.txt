@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.plan_definition_condition`
+=========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.plan_definition_condition
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.plan_definition_condition.PlanDefinitionCondition
+
+
+
+.. class:: PlanDefinitionCondition(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, kind: spark_auto_mapper_fhir.value_sets.action_condition_kind.ActionConditionKindCode, expression: Optional[spark_auto_mapper_fhir.complex_types.expression.Expression] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   PlanDefinition.Condition
+   This resource allows for the definition of various types of plans as a sharable, consumable, and executable artifact. The resource is general enough to support the description of a broad range of clinical artifacts such as clinical decision support rules, order sets and protocols.
+
+

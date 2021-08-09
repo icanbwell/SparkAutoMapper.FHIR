@@ -1,0 +1,33 @@
+:mod:`spark_auto_mapper_fhir.value_sets.fhir_document_type_codes`
+=================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.fhir_document_type_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.fhir_document_type_codes.FHIRDocumentTypeCodesCode
+
+
+
+.. class:: FHIRDocumentTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   FHIRDocumentTypeCodes
+   From: http://hl7.org/fhir/ValueSet/doc-typecodes in valuesets.xml
+       FHIR Document Codes - all LOINC codes where scale type = 'DOC'.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://loinc.org
+
+      
+
+

@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.contract_security_label`
+=======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.contract_security_label
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.contract_security_label.ContractSecurityLabel
+
+
+
+.. class:: ContractSecurityLabel(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, number: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.unsigned_int.FhirUnsignedInt]] = None, classification: spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.contract_resource_scope_codes.ContractResourceScopeCodesCode], category: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.contract_resource_scope_codes.ContractResourceScopeCodesCode]]] = None, control: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.contract_resource_security_control_codes.ContractResourceSecurityControlCodesCode]]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   Contract.SecurityLabel
+   Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
+
+

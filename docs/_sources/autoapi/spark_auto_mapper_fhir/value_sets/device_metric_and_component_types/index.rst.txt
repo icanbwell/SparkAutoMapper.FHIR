@@ -1,0 +1,35 @@
+:mod:`spark_auto_mapper_fhir.value_sets.device_metric_and_component_types`
+==========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.device_metric_and_component_types
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.device_metric_and_component_types.DeviceMetricAndComponentTypesCode
+
+
+
+.. class:: DeviceMetricAndComponentTypesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   DeviceMetricAndComponentTypes
+   From: http://hl7.org/fhir/ValueSet/devicemetric-type in valuesets.xml
+       Codes used to identify health care device metric types and units and component
+   types as part of the ISO/IEEE 11073-10101 Medical Device Communication
+   Nomenclature.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = urn:iso:std:iso:11073:10101
+
+      
+
+

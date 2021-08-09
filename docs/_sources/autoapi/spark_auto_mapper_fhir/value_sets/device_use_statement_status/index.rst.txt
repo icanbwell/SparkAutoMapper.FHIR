@@ -1,0 +1,82 @@
+:mod:`spark_auto_mapper_fhir.value_sets.device_use_statement_status`
+====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.device_use_statement_status
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.device_use_statement_status.DeviceUseStatementStatusCode
+   spark_auto_mapper_fhir.value_sets.device_use_statement_status.DeviceUseStatementStatusCodeValues
+
+
+
+.. class:: DeviceUseStatementStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   DeviceUseStatementStatus
+   From: http://hl7.org/fhir/device-statement-status in valuesets.xml
+       A coded concept indicating the current status of the Device Usage.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/device-statement-status
+
+      
+
+
+.. class:: DeviceUseStatementStatusCodeValues
+
+   The device is still being used.
+   From: http://hl7.org/fhir/device-statement-status in valuesets.xml
+
+   .. attribute:: Active
+      
+
+      The device is no longer being used.
+      From: http://hl7.org/fhir/device-statement-status in valuesets.xml
+
+
+   .. attribute:: Completed
+      
+
+      The statement was recorded incorrectly.
+      From: http://hl7.org/fhir/device-statement-status in valuesets.xml
+
+
+   .. attribute:: EnteredInError
+      
+
+      The device may be used at some time in the future.
+      From: http://hl7.org/fhir/device-statement-status in valuesets.xml
+
+
+   .. attribute:: Intended
+      
+
+      Actions implied by the statement have been permanently halted, before all of
+      them occurred.
+      From: http://hl7.org/fhir/device-statement-status in valuesets.xml
+
+
+   .. attribute:: Stopped
+      
+
+      Actions implied by the statement have been temporarily halted, but are
+      expected to continue later. May also be called "suspended".
+      From: http://hl7.org/fhir/device-statement-status in valuesets.xml
+
+
+   .. attribute:: OnHold
+      
+
+      
+
+

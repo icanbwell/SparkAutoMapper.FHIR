@@ -1,0 +1,36 @@
+:mod:`spark_auto_mapper_fhir.resources.coverage_eligibility_request`
+====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.coverage_eligibility_request
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.coverage_eligibility_request.CoverageEligibilityRequest
+
+
+
+.. class:: CoverageEligibilityRequest(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.identifier.Identifier]] = None, status: spark_auto_mapper_fhir.value_sets.financial_resource_status_codes.FinancialResourceStatusCodesCode, priority: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.process_priority_codes.ProcessPriorityCodesCode]] = None, purpose: spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.value_sets.eligibility_request_purpose.EligibilityRequestPurposeCode], patient: spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.patient.Patient], servicedDate: Optional[spark_auto_mapper_fhir.fhir_types.date.FhirDate] = None, servicedPeriod: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, created: spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime, enterer: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole)]]] = None, provider: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole, spark_auto_mapper_fhir.resources.organization.Organization)]]] = None, insurer: spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.organization.Organization], facility: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.location.Location]] = None, supportingInfo: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.coverage_eligibility_request_supporting_info.CoverageEligibilityRequestSupportingInfo]] = None, insurance: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.coverage_eligibility_request_insurance.CoverageEligibilityRequestInsurance]] = None, item: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.coverage_eligibility_request_item.CoverageEligibilityRequestItem]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   CoverageEligibilityRequest
+   coverageeligibilityrequest.xsd
+       The CoverageEligibilityRequest provides patient and insurance coverage
+   information to an insurer for them to respond, in the form of an
+   CoverageEligibilityResponse, with information regarding whether the stated
+   coverage is valid and in-force and optionally to provide the insurance details
+   of the policy.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

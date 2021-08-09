@@ -1,0 +1,32 @@
+:mod:`spark_auto_mapper_fhir.resources.molecular_sequence`
+==========================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.molecular_sequence
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.molecular_sequence.MolecularSequence
+
+
+
+.. class:: MolecularSequence(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.identifier.Identifier]] = None, type_: Optional[spark_auto_mapper_fhir.value_sets.sequence_type.SequenceTypeCode] = None, coordinateSystem: spark_auto_mapper_fhir.fhir_types.integer.FhirInteger, patient: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.patient.Patient]] = None, specimen: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.specimen.Specimen]] = None, device: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.device.Device]] = None, performer: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.organization.Organization]] = None, quantity: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, referenceSeq: Optional[spark_auto_mapper_fhir.backbone_elements.molecular_sequence_reference_seq.MolecularSequenceReferenceSeq] = None, variant: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.molecular_sequence_variant.MolecularSequenceVariant]] = None, observedSeq: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, quality: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.molecular_sequence_quality.MolecularSequenceQuality]] = None, readCoverage: Optional[spark_auto_mapper_fhir.fhir_types.integer.FhirInteger] = None, repository: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.molecular_sequence_repository.MolecularSequenceRepository]] = None, pointer: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.molecular_sequence.MolecularSequence]]] = None, structureVariant: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.molecular_sequence_structure_variant.MolecularSequenceStructureVariant]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   MolecularSequence
+   molecularsequence.xsd
+       Raw data describing a biological sequence.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

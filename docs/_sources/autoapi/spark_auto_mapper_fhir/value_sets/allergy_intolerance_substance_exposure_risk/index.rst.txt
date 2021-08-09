@@ -1,0 +1,55 @@
+:mod:`spark_auto_mapper_fhir.value_sets.allergy_intolerance_substance_exposure_risk`
+====================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.allergy_intolerance_substance_exposure_risk
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.allergy_intolerance_substance_exposure_risk.AllergyIntoleranceSubstanceExposureRiskCode
+   spark_auto_mapper_fhir.value_sets.allergy_intolerance_substance_exposure_risk.AllergyIntoleranceSubstanceExposureRiskCodeValues
+
+
+
+.. class:: AllergyIntoleranceSubstanceExposureRiskCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   AllergyIntoleranceSubstanceExposureRisk
+   From: http://terminology.hl7.org/CodeSystem/allerg-intol-substance-exp-risk in valuesets.xml
+       The risk of an adverse reaction (allergy or intolerance) for this patient upon
+   exposure to the substance (including pharmaceutical products).
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/allerg-intol-substance-exp-risk
+
+      
+
+
+.. class:: AllergyIntoleranceSubstanceExposureRiskCodeValues
+
+   Known risk of allergy or intolerance reaction upon exposure to the specified
+   substance.
+   From: http://terminology.hl7.org/CodeSystem/allerg-intol-substance-exp-risk in valuesets.xml
+
+   .. attribute:: KnownReactionRisk
+      
+
+      No known risk of allergy or intolerance reaction upon exposure to the
+      specified substance.
+      From: http://terminology.hl7.org/CodeSystem/allerg-intol-substance-exp-risk in valuesets.xml
+
+
+   .. attribute:: NoKnownReactionRisk
+      
+
+      
+
+

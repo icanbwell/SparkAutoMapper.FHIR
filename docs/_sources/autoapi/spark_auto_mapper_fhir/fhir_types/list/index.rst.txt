@@ -1,0 +1,34 @@
+:mod:`spark_auto_mapper_fhir.fhir_types.list`
+=============================================
+
+.. py:module:: spark_auto_mapper_fhir.fhir_types.list
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.fhir_types.list.FhirList
+
+
+
+.. data:: _T
+   
+
+   
+
+.. class:: FhirList(value: Optional[Union[(List[_T], spark_auto_mapper.data_types.array_base.AutoMapperArrayLikeBase)]], include_null_properties: bool = False)
+
+
+   Bases: :class:`AutoMapperList[_T]`
+
+   Base class for lists
+   Generics:  https://mypy.readthedocs.io/en/stable/generics.html
+   Multiple Inheritance:
+   https://stackoverflow.com/questions/52754339/how-to-express-multiple-inheritance-in-python-type-hint
+
+

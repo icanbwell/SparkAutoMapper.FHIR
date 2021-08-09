@@ -1,0 +1,69 @@
+:mod:`spark_auto_mapper_fhir.value_sets.fhir_device_status`
+===========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.fhir_device_status
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.fhir_device_status.FHIRDeviceStatusCode
+   spark_auto_mapper_fhir.value_sets.fhir_device_status.FHIRDeviceStatusCodeValues
+
+
+
+.. class:: FHIRDeviceStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   FHIRDeviceStatus
+   From: http://hl7.org/fhir/device-definition-status in valuesets.xml
+       Codes representing the current status of the device - on, off, suspended, etc.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/device-definition-status
+
+      
+
+
+.. class:: FHIRDeviceStatusCodeValues
+
+   The device is available for use.  Note: For *implanted devices*  this means
+   that the device is implanted in the patient.
+   From: http://hl7.org/fhir/device-definition-status in valuesets.xml
+
+   .. attribute:: Active
+      
+
+      The device is no longer available for use (e.g. lost, expired, damaged).
+      Note: For *implanted devices*  this means that the device has been removed
+      from the patient.
+      From: http://hl7.org/fhir/device-definition-status in valuesets.xml
+
+
+   .. attribute:: Inactive
+      
+
+      The device was entered in error and voided.
+      From: http://hl7.org/fhir/device-definition-status in valuesets.xml
+
+
+   .. attribute:: EnteredInError
+      
+
+      The status of the device has not been determined.
+      From: http://hl7.org/fhir/device-definition-status in valuesets.xml
+
+
+   .. attribute:: Unknown
+      
+
+      
+
+

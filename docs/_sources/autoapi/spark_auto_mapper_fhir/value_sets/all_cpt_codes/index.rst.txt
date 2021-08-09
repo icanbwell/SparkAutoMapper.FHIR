@@ -1,0 +1,33 @@
+:mod:`spark_auto_mapper_fhir.value_sets.all_cpt_codes`
+======================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.all_cpt_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.all_cpt_codes.AllCPTCodesCode
+
+
+
+.. class:: AllCPTCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   All CPT codes
+   From: http://hl7.org/fhir/ValueSet/cpt-all in valuesets.xml
+       A value set that includes all CPT codes
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://www.ama-assn.org/go/cpt
+
+      
+
+

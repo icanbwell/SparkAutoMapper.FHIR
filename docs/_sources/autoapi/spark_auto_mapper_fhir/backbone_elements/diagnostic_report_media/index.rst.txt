@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.diagnostic_report_media`
+=======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.diagnostic_report_media
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.diagnostic_report_media.DiagnosticReportMedia
+
+
+
+.. class:: DiagnosticReportMedia(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, comment: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, link: spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.media.Media])
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   DiagnosticReport.Media
+   The findings and interpretation of diagnostic  tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports.
+
+

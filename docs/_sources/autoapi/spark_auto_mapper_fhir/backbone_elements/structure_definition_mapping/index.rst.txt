@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.structure_definition_mapping`
+============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.structure_definition_mapping
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.structure_definition_mapping.StructureDefinitionMapping
+
+
+
+.. class:: StructureDefinitionMapping(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identity: spark_auto_mapper_fhir.fhir_types.id.FhirId, uri: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, name: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, comment: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   StructureDefinition.Mapping
+   A definition of a FHIR structure. This resource is used to describe the underlying resources, data types defined in FHIR, and also for describing extensions and constraints on resources and data types.
+
+

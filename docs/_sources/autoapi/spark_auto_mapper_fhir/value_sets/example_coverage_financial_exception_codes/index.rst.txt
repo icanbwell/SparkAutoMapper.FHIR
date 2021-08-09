@@ -1,0 +1,52 @@
+:mod:`spark_auto_mapper_fhir.value_sets.example_coverage_financial_exception_codes`
+===================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.example_coverage_financial_exception_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.example_coverage_financial_exception_codes.ExampleCoverageFinancialExceptionCodesCode
+   spark_auto_mapper_fhir.value_sets.example_coverage_financial_exception_codes.ExampleCoverageFinancialExceptionCodesCodeValues
+
+
+
+.. class:: ExampleCoverageFinancialExceptionCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ExampleCoverageFinancialExceptionCodes
+   From: http://terminology.hl7.org/CodeSystem/ex-coverage-financial-exception in valuesets.xml
+       This value set includes Example Coverage Financial Exception Codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/ex-coverage-financial-exception
+
+      
+
+
+.. class:: ExampleCoverageFinancialExceptionCodesCodeValues
+
+   Retired persons have all copays and deductibles reduced.
+   From: http://terminology.hl7.org/CodeSystem/ex-coverage-financial-exception in valuesets.xml
+
+   .. attribute:: Retired
+      
+
+      Children in the foster care have all copays and deductibles waived.
+      From: http://terminology.hl7.org/CodeSystem/ex-coverage-financial-exception in valuesets.xml
+
+
+   .. attribute:: FosterChild
+      
+
+      
+
+

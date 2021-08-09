@@ -1,0 +1,308 @@
+:mod:`spark_auto_mapper_fhir.value_sets.diagnostic_service_section_codes`
+=========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.diagnostic_service_section_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.diagnostic_service_section_codes.DiagnosticServiceSectionCodesCode
+   spark_auto_mapper_fhir.value_sets.diagnostic_service_section_codes.DiagnosticServiceSectionCodesCodeValues
+
+
+
+.. class:: DiagnosticServiceSectionCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   DiagnosticServiceSectionCodes
+   From: http://hl7.org/fhir/ValueSet/diagnostic-service-sections in valuesets.xml
+       This value set includes all the codes in HL7 V2 table 0074.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v2-0074
+
+      
+
+
+.. class:: DiagnosticServiceSectionCodesCodeValues
+
+   From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+   .. attribute:: Audiology
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: BloodGases
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: BloodBank
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: Cytogenetics
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: Chemistry
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: Cytopathology
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: CATScan
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: CardiacCatheterization
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: CardiacUltrasound
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: Electrocardiac_e_g_EKG_EEC_Holter_
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: Electroneuro_EEG_EMG_EP_PSG_
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: Genetics
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: Hematology
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: BedsideICUMonitoring
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: DiagnosticImaging
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: Immunology
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: Laboratory
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: Microbiology
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: Mycobacteriology
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: Mycology
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: NuclearMagneticResonance
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: NuclearMedicineScan
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: NursingServiceMeasures
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: OutsideLab
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: OccupationalTherapy
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: Other
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: OBUltrasound
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: Parasitology
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: Pathology_gross_Histopath_NotSurgical_
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: PulmonaryFunction
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: Pharmacy
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: Physician_Hx_Dx_AdmissionNote_Etc_
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: PhysicalTherapy
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: Radiology
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: RespiratoryCare_therapy_
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: RadiationTherapy
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: RadiologyUltrasound
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: Radiograph
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: SurgicalPathology
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: Serology
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: Toxicology
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: Urinalysis
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: Virology
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: VascularUltrasound
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
+
+
+   .. attribute:: Cineradiograph
+      
+
+      
+
+

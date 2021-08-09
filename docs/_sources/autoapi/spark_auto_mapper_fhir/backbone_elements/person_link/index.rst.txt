@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.person_link`
+===========================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.person_link
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.person_link.PersonLink
+
+
+
+.. class:: PersonLink(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, target: spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.related_person.RelatedPerson, spark_auto_mapper_fhir.resources.person.Person)]], assurance: Optional[spark_auto_mapper_fhir.value_sets.identity_assurance_level.IdentityAssuranceLevelCode] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   Person.Link
+   Demographics and administrative information about a person independent of a specific health-related context.
+
+

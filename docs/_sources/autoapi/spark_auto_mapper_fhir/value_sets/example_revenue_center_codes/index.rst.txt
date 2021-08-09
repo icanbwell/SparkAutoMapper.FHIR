@@ -1,0 +1,101 @@
+:mod:`spark_auto_mapper_fhir.value_sets.example_revenue_center_codes`
+=====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.example_revenue_center_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.example_revenue_center_codes.ExampleRevenueCenterCodesCode
+   spark_auto_mapper_fhir.value_sets.example_revenue_center_codes.ExampleRevenueCenterCodesCodeValues
+
+
+
+.. class:: ExampleRevenueCenterCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ExampleRevenueCenterCodes
+   From: http://terminology.hl7.org/CodeSystem/ex-revenue-center in valuesets.xml
+       This value set includes sample Revenue Center codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/ex-revenue-center
+
+      
+
+
+.. class:: ExampleRevenueCenterCodesCodeValues
+
+   Anaesthesia.
+   From: http://terminology.hl7.org/CodeSystem/ex-revenue-center in valuesets.xml
+
+   .. attribute:: Anaesthesia
+      
+
+      Physical Therapy.
+      From: http://terminology.hl7.org/CodeSystem/ex-revenue-center in valuesets.xml
+
+
+   .. attribute:: PhysicalTherapy
+      
+
+      Physical Therapy - visit charge.
+      From: http://terminology.hl7.org/CodeSystem/ex-revenue-center in valuesets.xml
+
+
+   .. attribute:: PhysicalTherapy_
+      
+
+      Speech-Language Pathology.
+      From: http://terminology.hl7.org/CodeSystem/ex-revenue-center in valuesets.xml
+
+
+   .. attribute:: Speech_LanguagePathology
+      
+
+      Speech-Language Pathology- visit charge
+      From: http://terminology.hl7.org/CodeSystem/ex-revenue-center in valuesets.xml
+
+
+   .. attribute:: Speech_LanguagePathology_Visit
+      
+
+      Emergency Room
+      From: http://terminology.hl7.org/CodeSystem/ex-revenue-center in valuesets.xml
+
+
+   .. attribute:: EmergencyRoom
+      
+
+      Emergency Room - EM/EMTALA
+      From: http://terminology.hl7.org/CodeSystem/ex-revenue-center in valuesets.xml
+
+
+   .. attribute:: EmergencyRoom_EM_EMTALA
+      
+
+      Emergency Room - beyond EMTALA
+      From: http://terminology.hl7.org/CodeSystem/ex-revenue-center in valuesets.xml
+
+
+   .. attribute:: EmergencyRoom_BeyondEMTALA
+      
+
+      Vision Clinic
+      From: http://terminology.hl7.org/CodeSystem/ex-revenue-center in valuesets.xml
+
+
+   .. attribute:: VisionClinic
+      
+
+      
+
+

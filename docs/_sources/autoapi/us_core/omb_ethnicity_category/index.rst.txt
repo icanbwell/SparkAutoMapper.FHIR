@@ -1,0 +1,45 @@
+:mod:`us_core.omb_ethnicity_category`
+=====================================
+
+.. py:module:: us_core.omb_ethnicity_category
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   us_core.omb_ethnicity_category.OMBEthnicityCategory
+   us_core.omb_ethnicity_category.OMBEthnicityCategoryValues
+
+
+
+.. class:: OMBEthnicityCategory(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   https://www.hl7.org/fhir/us/core/ValueSet-omb-ethnicity-category.html
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = urn:oid:2.16.840.1.113883.6.238
+
+      
+
+
+.. class:: OMBEthnicityCategoryValues
+
+   .. attribute:: HispanicOrLatino
+      
+
+      
+
+   .. attribute:: NonHispanicOrLatino
+      
+
+      
+
+

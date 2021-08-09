@@ -1,0 +1,122 @@
+:mod:`spark_auto_mapper_fhir.value_sets.assertion_response_types`
+=================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.assertion_response_types
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.assertion_response_types.AssertionResponseTypesCode
+   spark_auto_mapper_fhir.value_sets.assertion_response_types.AssertionResponseTypesCodeValues
+
+
+
+.. class:: AssertionResponseTypesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   AssertionResponseTypes
+   From: http://hl7.org/fhir/assert-response-code-types in valuesets.xml
+       The type of response code to use for assertion.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/assert-response-code-types
+
+      
+
+
+.. class:: AssertionResponseTypesCodeValues
+
+   Response code is 200.
+   From: http://hl7.org/fhir/assert-response-code-types in valuesets.xml
+
+   .. attribute:: Okay
+      
+
+      Response code is 201.
+      From: http://hl7.org/fhir/assert-response-code-types in valuesets.xml
+
+
+   .. attribute:: Created
+      
+
+      Response code is 204.
+      From: http://hl7.org/fhir/assert-response-code-types in valuesets.xml
+
+
+   .. attribute:: NoContent
+      
+
+      Response code is 304.
+      From: http://hl7.org/fhir/assert-response-code-types in valuesets.xml
+
+
+   .. attribute:: NotModified
+      
+
+      Response code is 400.
+      From: http://hl7.org/fhir/assert-response-code-types in valuesets.xml
+
+
+   .. attribute:: Bad
+      
+
+      Response code is 403.
+      From: http://hl7.org/fhir/assert-response-code-types in valuesets.xml
+
+
+   .. attribute:: Forbidden
+      
+
+      Response code is 404.
+      From: http://hl7.org/fhir/assert-response-code-types in valuesets.xml
+
+
+   .. attribute:: NotFound
+      
+
+      Response code is 405.
+      From: http://hl7.org/fhir/assert-response-code-types in valuesets.xml
+
+
+   .. attribute:: MethodNotAllowed
+      
+
+      Response code is 409.
+      From: http://hl7.org/fhir/assert-response-code-types in valuesets.xml
+
+
+   .. attribute:: Conflict
+      
+
+      Response code is 410.
+      From: http://hl7.org/fhir/assert-response-code-types in valuesets.xml
+
+
+   .. attribute:: Gone
+      
+
+      Response code is 412.
+      From: http://hl7.org/fhir/assert-response-code-types in valuesets.xml
+
+
+   .. attribute:: PreconditionFailed
+      
+
+      Response code is 422.
+      From: http://hl7.org/fhir/assert-response-code-types in valuesets.xml
+
+
+   .. attribute:: Unprocessable
+      
+
+      
+
+

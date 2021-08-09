@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.adverse_event_causality`
+=======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.adverse_event_causality
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.adverse_event_causality.AdverseEventCausality
+
+
+
+.. class:: AdverseEventCausality(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, assessment: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.adverse_event_causality_assessment.AdverseEventCausalityAssessmentCode]] = None, productRelatedness: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, author: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole)]]] = None, method: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.adverse_event_causality_method.AdverseEventCausalityMethodCode]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   AdverseEvent.Causality
+   Actual or  potential/avoided event causing unintended physical injury resulting from or contributed to by medical care, a research study or other healthcare setting factors that requires additional monitoring, treatment, or hospitalization, or that results in death.
+
+

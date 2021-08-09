@@ -1,0 +1,54 @@
+:mod:`spark_auto_mapper_fhir.value_sets.example_claim_sub_type_codes`
+=====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.example_claim_sub_type_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.example_claim_sub_type_codes.ExampleClaimSubTypeCodesCode
+   spark_auto_mapper_fhir.value_sets.example_claim_sub_type_codes.ExampleClaimSubTypeCodesCodeValues
+
+
+
+.. class:: ExampleClaimSubTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ExampleClaimSubTypeCodes
+   From: http://terminology.hl7.org/CodeSystem/ex-claimsubtype in valuesets.xml
+       This value set includes sample Claim SubType codes which are used to
+   distinguish the claim types for example within type institutional there may be
+   subtypes for emergency services, bed stay and transportation.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/ex-claimsubtype
+
+      
+
+
+.. class:: ExampleClaimSubTypeCodesCodeValues
+
+   A claim for Orthodontic Services.
+   From: http://terminology.hl7.org/CodeSystem/ex-claimsubtype in valuesets.xml
+
+   .. attribute:: OrthodonticClaim
+      
+
+      A claim for emergency services.
+      From: http://terminology.hl7.org/CodeSystem/ex-claimsubtype in valuesets.xml
+
+
+   .. attribute:: EmergencyClaim
+      
+
+      
+
+

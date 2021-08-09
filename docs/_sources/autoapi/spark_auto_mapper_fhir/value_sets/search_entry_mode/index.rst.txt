@@ -1,0 +1,63 @@
+:mod:`spark_auto_mapper_fhir.value_sets.search_entry_mode`
+==========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.search_entry_mode
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.search_entry_mode.SearchEntryModeCode
+   spark_auto_mapper_fhir.value_sets.search_entry_mode.SearchEntryModeCodeValues
+
+
+
+.. class:: SearchEntryModeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   SearchEntryMode
+   From: http://hl7.org/fhir/search-entry-mode in valuesets.xml
+       Why an entry is in the result set - whether it's included as a match or
+   because of an _include requirement, or to convey information or warning
+   information about the search process.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/search-entry-mode
+
+      
+
+
+.. class:: SearchEntryModeCodeValues
+
+   This resource matched the search specification.
+   From: http://hl7.org/fhir/search-entry-mode in valuesets.xml
+
+   .. attribute:: Match
+      
+
+      This resource is returned because it is referred to from another resource in
+      the search set.
+      From: http://hl7.org/fhir/search-entry-mode in valuesets.xml
+
+
+   .. attribute:: Include
+      
+
+      An OperationOutcome that provides additional information about the processing
+      of a search.
+      From: http://hl7.org/fhir/search-entry-mode in valuesets.xml
+
+
+   .. attribute:: Outcome
+      
+
+      
+
+

@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.encounter_diagnosis`
+===================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.encounter_diagnosis
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.encounter_diagnosis.EncounterDiagnosis
+
+
+
+.. class:: EncounterDiagnosis(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, condition: spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.condition.Condition, spark_auto_mapper_fhir.resources.procedure.Procedure)]], use: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.diagnosis_role.DiagnosisRoleCode]] = None, rank: Optional[spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   Encounter.Diagnosis
+   An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.
+
+

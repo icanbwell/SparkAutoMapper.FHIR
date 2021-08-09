@@ -1,0 +1,95 @@
+:mod:`spark_auto_mapper_fhir.value_sets.supply_request_status`
+==============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.supply_request_status
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.supply_request_status.SupplyRequestStatusCode
+   spark_auto_mapper_fhir.value_sets.supply_request_status.SupplyRequestStatusCodeValues
+
+
+
+.. class:: SupplyRequestStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   SupplyRequestStatus
+   From: http://hl7.org/fhir/supplyrequest-status in valuesets.xml
+       Status of the supply request.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/supplyrequest-status
+
+      
+
+
+.. class:: SupplyRequestStatusCodeValues
+
+   The request has been created but is not yet complete or ready for action.
+   From: http://hl7.org/fhir/supplyrequest-status in valuesets.xml
+
+   .. attribute:: Draft
+      
+
+      The request is ready to be acted upon.
+      From: http://hl7.org/fhir/supplyrequest-status in valuesets.xml
+
+
+   .. attribute:: Active
+      
+
+      The authorization/request to act has been temporarily withdrawn but is
+      expected to resume in the future.
+      From: http://hl7.org/fhir/supplyrequest-status in valuesets.xml
+
+
+   .. attribute:: Suspended
+      
+
+      The authorization/request to act has been terminated prior to the full
+      completion of the intended actions.  No further activity should occur.
+      From: http://hl7.org/fhir/supplyrequest-status in valuesets.xml
+
+
+   .. attribute:: Cancelled
+      
+
+      Activity against the request has been sufficiently completed to the
+      satisfaction of the requester.
+      From: http://hl7.org/fhir/supplyrequest-status in valuesets.xml
+
+
+   .. attribute:: Completed
+      
+
+      This electronic record should never have existed, though it is possible that
+      real-world decisions were based on it.  (If real-world activity has occurred,
+      the status should be "cancelled" rather than "entered-in-error".).
+      From: http://hl7.org/fhir/supplyrequest-status in valuesets.xml
+
+
+   .. attribute:: EnteredInError
+      
+
+      The authoring/source system does not know which of the status values currently
+      applies for this observation. Note: This concept is not to be used for "other"
+      - one of the listed statuses is presumed to apply, but the authoring/source
+      system does not know which.
+      From: http://hl7.org/fhir/supplyrequest-status in valuesets.xml
+
+
+   .. attribute:: Unknown
+      
+
+      
+
+

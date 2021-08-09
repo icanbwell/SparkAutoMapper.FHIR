@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.audit_event_detail`
+==================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.audit_event_detail
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.audit_event_detail.AuditEventDetail
+
+
+
+.. class:: AuditEventDetail(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, type_: spark_auto_mapper_fhir.fhir_types.string.FhirString, valueString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, valueBase64Binary: Optional[spark_auto_mapper_fhir.fhir_types.base64_binary.FhirBase64Binary] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   AuditEvent.Detail
+   A record of an event made for purposes of maintaining a security log. Typical uses include detection of intrusion attempts and monitoring for inappropriate usage.
+
+

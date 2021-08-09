@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.immunization_recommendation_recommendation`
+==========================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.immunization_recommendation_recommendation
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.immunization_recommendation_recommendation.ImmunizationRecommendationRecommendation
+
+
+
+.. class:: ImmunizationRecommendationRecommendation(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, vaccineCode: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.vaccine_administered_value_set.VaccineAdministeredValueSetCode]]] = None, targetDisease: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.immunization_recommendation_target_disease_codes.ImmunizationRecommendationTargetDiseaseCodesCode]] = None, contraindicatedVaccineCode: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.vaccine_administered_value_set.VaccineAdministeredValueSetCode]]] = None, forecastStatus: spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.immunization_recommendation_status_codes.ImmunizationRecommendationStatusCodesCode], forecastReason: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.immunization_recommendation_reason_codes.ImmunizationRecommendationReasonCodesCode]]] = None, dateCriterion: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.immunization_recommendation_date_criterion.ImmunizationRecommendationDateCriterion]] = None, description: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, series: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, doseNumberPositiveInt: Optional[spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt] = None, doseNumberString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, seriesDosesPositiveInt: Optional[spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt] = None, seriesDosesString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, supportingImmunization: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.immunization.Immunization, spark_auto_mapper_fhir.resources.immunization_evaluation.ImmunizationEvaluation)]]]] = None, supportingPatientInformation: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.resource.Resource]]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   ImmunizationRecommendation.Recommendation
+   A patient's point-in-time set of recommendations (i.e. forecasting) according to a published schedule with optional supporting justification.
+
+

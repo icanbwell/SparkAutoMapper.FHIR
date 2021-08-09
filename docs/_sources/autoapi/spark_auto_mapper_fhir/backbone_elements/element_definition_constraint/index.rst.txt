@@ -1,0 +1,28 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.element_definition_constraint`
+=============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.element_definition_constraint
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.element_definition_constraint.ElementDefinitionConstraint
+
+
+
+.. class:: ElementDefinitionConstraint(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, key: spark_auto_mapper_fhir.fhir_types.id.FhirId, requirements: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, severity: spark_auto_mapper_fhir.value_sets.constraint_severity.ConstraintSeverityCode, human: spark_auto_mapper_fhir.fhir_types.string.FhirString, expression: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, xpath: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, source: Optional[spark_auto_mapper_fhir.fhir_types.canonical.FhirCanonical] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   ElementDefinition.Constraint
+   Captures constraints on each element within the resource, profile, or extension.
+   If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
+
+

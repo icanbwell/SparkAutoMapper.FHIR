@@ -1,0 +1,73 @@
+:mod:`spark_auto_mapper_fhir.value_sets.allergy_intolerance_certainty`
+======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.allergy_intolerance_certainty
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.allergy_intolerance_certainty.AllergyIntoleranceCertaintyCode
+   spark_auto_mapper_fhir.value_sets.allergy_intolerance_certainty.AllergyIntoleranceCertaintyCodeValues
+
+
+
+.. class:: AllergyIntoleranceCertaintyCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   AllergyIntoleranceCertainty
+   From: http://terminology.hl7.org/CodeSystem/reaction-event-certainty in valuesets.xml
+       Statement about the degree of clinical certainty that a specific substance was
+   the cause of the manifestation in a reaction event.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/reaction-event-certainty
+
+      
+
+
+.. class:: AllergyIntoleranceCertaintyCodeValues
+
+   There is a low level of clinical certainty that the reaction was caused by the
+   identified substance.
+   From: http://terminology.hl7.org/CodeSystem/reaction-event-certainty in valuesets.xml
+
+   .. attribute:: Unlikely
+      
+
+      There is a high level of clinical certainty that the reaction was caused by
+      the identified substance.
+      From: http://terminology.hl7.org/CodeSystem/reaction-event-certainty in valuesets.xml
+
+
+   .. attribute:: Likely
+      
+
+      There is a very high level of clinical certainty that the reaction was due to
+      the identified substance, which may include clinical evidence by testing or
+      rechallenge.
+      From: http://terminology.hl7.org/CodeSystem/reaction-event-certainty in valuesets.xml
+
+
+   .. attribute:: Confirmed
+      
+
+      The clinical certainty that the reaction was caused by the identified
+      substance is unknown.  It is an explicit assertion that certainty is not
+      known.
+      From: http://terminology.hl7.org/CodeSystem/reaction-event-certainty in valuesets.xml
+
+
+   .. attribute:: Unknown
+      
+
+      
+
+

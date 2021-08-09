@@ -1,0 +1,286 @@
+:mod:`spark_auto_mapper_fhir.value_sets.event_resource_type`
+============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.event_resource_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.event_resource_type.EventResourceTypeCode
+   spark_auto_mapper_fhir.value_sets.event_resource_type.EventResourceTypeCodeValues
+
+
+
+.. class:: EventResourceTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   EventResourceType
+   From: http://hl7.org/fhir/event-resource-types in valuesets.xml
+       A list of all the event resource types defined in this version of the FHIR
+   specification.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/event-resource-types
+
+      
+
+
+.. class:: EventResourceTypeCodeValues
+
+   Item containing charge code(s) associated with the provision of healthcare
+   provider products.
+   From: http://hl7.org/fhir/event-resource-types in valuesets.xml
+
+   .. attribute:: ChargeItem
+      
+
+      Remittance resource.
+      From: http://hl7.org/fhir/event-resource-types in valuesets.xml
+
+
+   .. attribute:: ClaimResponse
+      
+
+      A clinical assessment performed when planning treatments and management
+      strategies for a patient.
+      From: http://hl7.org/fhir/event-resource-types in valuesets.xml
+
+
+   .. attribute:: ClinicalImpression
+      
+
+      A record of information transmitted from a sender to a receiver.
+      From: http://hl7.org/fhir/event-resource-types in valuesets.xml
+
+
+   .. attribute:: Communication
+      
+
+      A set of resources composed into a single coherent clinical statement with
+      clinical attestation.
+      From: http://hl7.org/fhir/event-resource-types in valuesets.xml
+
+
+   .. attribute:: Composition
+      
+
+      Detailed information about conditions, problems or diagnoses.
+      From: http://hl7.org/fhir/event-resource-types in valuesets.xml
+
+
+   .. attribute:: Condition
+      
+
+      A healthcare consumer's policy choices to permits or denies recipients or
+      roles to perform actions for specific purposes and periods of time.
+      From: http://hl7.org/fhir/event-resource-types in valuesets.xml
+
+
+   .. attribute:: Consent
+      
+
+      Insurance or medical plan or a payment agreement.
+      From: http://hl7.org/fhir/event-resource-types in valuesets.xml
+
+
+   .. attribute:: Coverage
+      
+
+      Record of use of a device.
+      From: http://hl7.org/fhir/event-resource-types in valuesets.xml
+
+
+   .. attribute:: DeviceUseStatement
+      
+
+      A Diagnostic report - a combination of request information, atomic results,
+      images, interpretation, as well as formatted reports.
+      From: http://hl7.org/fhir/event-resource-types in valuesets.xml
+
+
+   .. attribute:: DiagnosticReport
+      
+
+      A list that defines a set of documents.
+      From: http://hl7.org/fhir/event-resource-types in valuesets.xml
+
+
+   .. attribute:: DocumentManifest
+      
+
+      A reference to a document.
+      From: http://hl7.org/fhir/event-resource-types in valuesets.xml
+
+
+   .. attribute:: DocumentReference
+      
+
+      An interaction during which services are provided to the patient.
+      From: http://hl7.org/fhir/event-resource-types in valuesets.xml
+
+
+   .. attribute:: Encounter
+      
+
+      EnrollmentResponse resource.
+      From: http://hl7.org/fhir/event-resource-types in valuesets.xml
+
+
+   .. attribute:: EnrollmentResponse
+      
+
+      An association of a Patient with an Organization and  Healthcare Provider(s)
+      for a period of time that the Organization assumes some level of
+      responsibility.
+      From: http://hl7.org/fhir/event-resource-types in valuesets.xml
+
+
+   .. attribute:: EpisodeOfCare
+      
+
+      Explanation of Benefit resource.
+      From: http://hl7.org/fhir/event-resource-types in valuesets.xml
+
+
+   .. attribute:: ExplanationOfBenefit
+      
+
+      Information about patient's relatives, relevant for patient.
+      From: http://hl7.org/fhir/event-resource-types in valuesets.xml
+
+
+   .. attribute:: FamilyMemberHistory
+      
+
+      The formal response to a guidance request.
+      From: http://hl7.org/fhir/event-resource-types in valuesets.xml
+
+
+   .. attribute:: GuidanceResponse
+      
+
+      A set of images produced in single study (one or more series of references
+      images).
+      From: http://hl7.org/fhir/event-resource-types in valuesets.xml
+
+
+   .. attribute:: ImagingStudy
+      
+
+      Immunization event information.
+      From: http://hl7.org/fhir/event-resource-types in valuesets.xml
+
+
+   .. attribute:: Immunization
+      
+
+      Results of a measure evaluation.
+      From: http://hl7.org/fhir/event-resource-types in valuesets.xml
+
+
+   .. attribute:: MeasureReport
+      
+
+      A photo, video, or audio recording acquired or used in healthcare. The actual
+      content may be inline or provided by direct reference.
+      From: http://hl7.org/fhir/event-resource-types in valuesets.xml
+
+
+   .. attribute:: Media
+      
+
+      Administration of medication to a patient.
+      From: http://hl7.org/fhir/event-resource-types in valuesets.xml
+
+
+   .. attribute:: MedicationAdministration
+      
+
+      Dispensing a medication to a named patient.
+      From: http://hl7.org/fhir/event-resource-types in valuesets.xml
+
+
+   .. attribute:: MedicationDispense
+      
+
+      Record of medication being taken by a patient.
+      From: http://hl7.org/fhir/event-resource-types in valuesets.xml
+
+
+   .. attribute:: MedicationStatement
+      
+
+      Measurements and simple assertions.
+      From: http://hl7.org/fhir/event-resource-types in valuesets.xml
+
+
+   .. attribute:: Observation
+      
+
+      PaymentNotice request.
+      From: http://hl7.org/fhir/event-resource-types in valuesets.xml
+
+
+   .. attribute:: PaymentNotice
+      
+
+      PaymentReconciliation resource.
+      From: http://hl7.org/fhir/event-resource-types in valuesets.xml
+
+
+   .. attribute:: PaymentReconciliation
+      
+
+      An action that is being or was performed on a patient.
+      From: http://hl7.org/fhir/event-resource-types in valuesets.xml
+
+
+   .. attribute:: Procedure
+      
+
+      ProcessResponse resource.
+      From: http://hl7.org/fhir/event-resource-types in valuesets.xml
+
+
+   .. attribute:: ProcessResponse
+      
+
+      A structured set of questions and their answers.
+      From: http://hl7.org/fhir/event-resource-types in valuesets.xml
+
+
+   .. attribute:: QuestionnaireResponse
+      
+
+      Potential outcomes for a subject with likelihood.
+      From: http://hl7.org/fhir/event-resource-types in valuesets.xml
+
+
+   .. attribute:: RiskAssessment
+      
+
+      Delivery of bulk Supplies.
+      From: http://hl7.org/fhir/event-resource-types in valuesets.xml
+
+
+   .. attribute:: SupplyDelivery
+      
+
+      A task to be performed.
+      From: http://hl7.org/fhir/event-resource-types in valuesets.xml
+
+
+   .. attribute:: Task
+      
+
+      
+
+

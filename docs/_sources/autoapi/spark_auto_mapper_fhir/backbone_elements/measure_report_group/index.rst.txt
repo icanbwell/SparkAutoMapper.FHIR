@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.measure_report_group`
+====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.measure_report_group
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.measure_report_group.MeasureReportGroup
+
+
+
+.. class:: MeasureReportGroup(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, code: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, population: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.measure_report_population.MeasureReportPopulation]] = None, measureScore: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, stratifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.measure_report_stratifier.MeasureReportStratifier]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   MeasureReport.Group
+   The MeasureReport resource contains the results of the calculation of a measure; and optionally a reference to the resources involved in that calculation.
+
+

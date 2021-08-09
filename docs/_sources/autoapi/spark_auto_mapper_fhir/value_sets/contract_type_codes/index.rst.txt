@@ -1,0 +1,73 @@
+:mod:`spark_auto_mapper_fhir.value_sets.contract_type_codes`
+============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.contract_type_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.contract_type_codes.ContractTypeCodesCode
+   spark_auto_mapper_fhir.value_sets.contract_type_codes.ContractTypeCodesCodeValues
+
+
+
+.. class:: ContractTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ContractTypeCodes
+   From: http://terminology.hl7.org/CodeSystem/contract-type in valuesets.xml
+       This value set includes sample Contract Type codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/contract-type
+
+      
+
+
+.. class:: ContractTypeCodesCodeValues
+
+   Privacy policy.
+   From: http://terminology.hl7.org/CodeSystem/contract-type in valuesets.xml
+
+   .. attribute:: Privacy
+      
+
+      Information disclosure policy.
+      From: http://terminology.hl7.org/CodeSystem/contract-type in valuesets.xml
+
+
+   .. attribute:: Disclosure
+      
+
+      Health Insurance policy.
+      From: http://terminology.hl7.org/CodeSystem/contract-type in valuesets.xml
+
+
+   .. attribute:: HealthInsurance
+      
+
+      Contract to supply goods or services.
+      From: http://terminology.hl7.org/CodeSystem/contract-type in valuesets.xml
+
+
+   .. attribute:: SupplyContract
+      
+
+      Consent Directive.
+      From: http://terminology.hl7.org/CodeSystem/contract-type in valuesets.xml
+
+
+   .. attribute:: Consent
+      
+
+      
+
+

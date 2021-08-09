@@ -1,0 +1,267 @@
+:mod:`spark_auto_mapper_fhir.value_sets.timing_abbreviation`
+============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.timing_abbreviation
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.timing_abbreviation.TimingAbbreviationCode
+   spark_auto_mapper_fhir.value_sets.timing_abbreviation.TimingAbbreviationCodeValues
+
+
+
+.. class:: TimingAbbreviationCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   TimingAbbreviation
+   From: http://hl7.org/fhir/ValueSet/timing-abbreviation in valuesets.xml
+       Code for a known / defined timing pattern.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation
+
+      
+
+
+.. class:: TimingAbbreviationCodeValues
+
+   Every morning at institution specified times.
+   From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+   .. attribute:: AM
+      
+
+      At bedtime (institution specified time).
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: AtBedtime
+      
+
+      Two times a day at institution specified time
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: BID
+      
+
+      Regular business days (Monday to Friday excluding holidays)
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: JB
+      
+
+      Regular weekends (Saturday and Sunday excluding holidays)
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: JE
+      
+
+      Holidays
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: GTSAbbreviationHolidays
+      
+
+      Monthly at institution specified time.
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: Monthly
+      
+
+      Every afternoon at institution specified times.
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: PM
+      
+
+      Every hour at institution specified times.
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: EveryHour
+      
+
+      Every 2 hours at institution specified times.
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: Every2Hours
+      
+
+      Every 3 hours at institution specified times.
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: Every3Hours
+      
+
+      Every 4 hours at institution specified time
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: Q4H
+      
+
+      Every 6 hours at institution specified time
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: Q6H
+      
+
+      Every 8 hours at institution specified times.
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: Every8Hours
+      
+
+      Every day at institution specified times.
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: QD
+      
+
+      Four times a day at institution specified time
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: QID
+      
+
+      Every other day at institution specified times.
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: QOD
+      
+
+      Three times a day at institution specified time
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: TID
+      
+
+      Weekly at institution specified time.
+      From: http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation in v3-codesystems.xml
+
+
+   .. attribute:: Weekly
+      
+
+      From: http://hl7.org/fhir/ValueSet/timing-abbreviation in valuesets.xml
+
+
+   .. attribute:: BID
+      
+
+      From: http://hl7.org/fhir/ValueSet/timing-abbreviation in valuesets.xml
+
+
+   .. attribute:: TID
+      
+
+      From: http://hl7.org/fhir/ValueSet/timing-abbreviation in valuesets.xml
+
+
+   .. attribute:: QID
+      
+
+      From: http://hl7.org/fhir/ValueSet/timing-abbreviation in valuesets.xml
+
+
+   .. attribute:: AM
+      
+
+      From: http://hl7.org/fhir/ValueSet/timing-abbreviation in valuesets.xml
+
+
+   .. attribute:: PM
+      
+
+      From: http://hl7.org/fhir/ValueSet/timing-abbreviation in valuesets.xml
+
+
+   .. attribute:: QD
+      
+
+      From: http://hl7.org/fhir/ValueSet/timing-abbreviation in valuesets.xml
+
+
+   .. attribute:: QOD
+      
+
+      From: http://hl7.org/fhir/ValueSet/timing-abbreviation in valuesets.xml
+
+
+   .. attribute:: EveryHour
+      
+
+      From: http://hl7.org/fhir/ValueSet/timing-abbreviation in valuesets.xml
+
+
+   .. attribute:: Every2Hours
+      
+
+      From: http://hl7.org/fhir/ValueSet/timing-abbreviation in valuesets.xml
+
+
+   .. attribute:: Every3Hours
+      
+
+      From: http://hl7.org/fhir/ValueSet/timing-abbreviation in valuesets.xml
+
+
+   .. attribute:: Q4H
+      
+
+      From: http://hl7.org/fhir/ValueSet/timing-abbreviation in valuesets.xml
+
+
+   .. attribute:: Q6H
+      
+
+      From: http://hl7.org/fhir/ValueSet/timing-abbreviation in valuesets.xml
+
+
+   .. attribute:: Every8Hours
+      
+
+      From: http://hl7.org/fhir/ValueSet/timing-abbreviation in valuesets.xml
+
+
+   .. attribute:: AtBedtime
+      
+
+      From: http://hl7.org/fhir/ValueSet/timing-abbreviation in valuesets.xml
+
+
+   .. attribute:: Weekly
+      
+
+      From: http://hl7.org/fhir/ValueSet/timing-abbreviation in valuesets.xml
+
+
+   .. attribute:: Monthly
+      
+
+      
+
+

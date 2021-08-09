@@ -1,0 +1,33 @@
+:mod:`spark_auto_mapper_fhir.resources.substance_specification`
+===============================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.substance_specification
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.substance_specification.SubstanceSpecification
+
+
+
+.. class:: SubstanceSpecification(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.complex_types.identifier.Identifier] = None, type_: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, status: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, domain: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, description: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, source: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.document_reference.DocumentReference]]] = None, comment: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, moiety: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.substance_specification_moiety.SubstanceSpecificationMoiety]] = None, property: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.substance_specification_property.SubstanceSpecificationProperty]] = None, referenceInformation: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.substance_reference_information.SubstanceReferenceInformation]] = None, structure: Optional[spark_auto_mapper_fhir.backbone_elements.substance_specification_structure.SubstanceSpecificationStructure] = None, code: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.substance_specification_code.SubstanceSpecificationCode]] = None, name: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.substance_specification_name.SubstanceSpecificationName]] = None, molecularWeight: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.substance_specification_molecular_weight.SubstanceSpecificationMolecularWeight]] = None, relationship: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.substance_specification_relationship.SubstanceSpecificationRelationship]] = None, nucleicAcid: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.substance_nucleic_acid.SubstanceNucleicAcid]] = None, polymer: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.substance_polymer.SubstancePolymer]] = None, protein: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.substance_protein.SubstanceProtein]] = None, sourceMaterial: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.substance_source_material.SubstanceSourceMaterial]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   SubstanceSpecification
+   substancespecification.xsd
+       The detailed description of a substance, typically at a level beyond what is
+   used for prescribing.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

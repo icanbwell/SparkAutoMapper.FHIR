@@ -1,0 +1,48 @@
+:mod:`spark_auto_mapper_fhir.value_sets.custom.search_characteristic`
+=====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.custom.search_characteristic
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.custom.search_characteristic.SearchCharacteristicCode
+   spark_auto_mapper_fhir.value_sets.custom.search_characteristic.SearchCharacteristicCodeValues
+
+
+
+.. class:: SearchCharacteristicCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   Custom codeset for providerSearch.searchCharacteristic extension
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = https://raw.githubusercontent.com/imranq2/SparkAutoMapper.FHIR/main/ValueSet/search_characteristic
+
+      
+
+
+.. class:: SearchCharacteristicCodeValues
+
+   Resource populateS in front-end search results
+
+   .. attribute:: IncludeInSearch
+      
+
+      Resource is available for appointment creations
+
+
+   .. attribute:: Bookable
+      
+
+      
+
+

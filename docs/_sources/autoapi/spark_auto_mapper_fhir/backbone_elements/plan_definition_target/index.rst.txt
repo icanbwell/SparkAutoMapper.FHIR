@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.plan_definition_target`
+======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.plan_definition_target
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.plan_definition_target.PlanDefinitionTarget
+
+
+
+.. class:: PlanDefinitionTarget(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, measure: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.loinc_codes.LOINCCodesCode]] = None, detailQuantity: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, detailRange: Optional[spark_auto_mapper_fhir.complex_types.range.Range] = None, detailCodeableConcept: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, due: Optional[spark_auto_mapper_fhir.complex_types.duration.Duration] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   PlanDefinition.Target
+   This resource allows for the definition of various types of plans as a sharable, consumable, and executable artifact. The resource is general enough to support the description of a broad range of clinical artifacts such as clinical decision support rules, order sets and protocols.
+
+

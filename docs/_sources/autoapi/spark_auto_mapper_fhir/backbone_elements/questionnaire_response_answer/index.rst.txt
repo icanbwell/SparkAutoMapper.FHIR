@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.questionnaire_response_answer`
+=============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.questionnaire_response_answer
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.questionnaire_response_answer.QuestionnaireResponseAnswer
+
+
+
+.. class:: QuestionnaireResponseAnswer(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, valueBoolean: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, valueDecimal: Optional[spark_auto_mapper_fhir.fhir_types.decimal.FhirDecimal] = None, valueInteger: Optional[spark_auto_mapper_fhir.fhir_types.integer.FhirInteger] = None, valueDate: Optional[spark_auto_mapper_fhir.fhir_types.date.FhirDate] = None, valueDateTime: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, valueTime: Optional[spark_auto_mapper_fhir.fhir_types.time.FhirTime] = None, valueString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, valueUri: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, valueAttachment: Optional[spark_auto_mapper_fhir.complex_types.attachment.Attachment] = None, valueCoding: Optional[spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, valueQuantity: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, valueReference: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.resource.Resource]] = None, item: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.questionnaire_response_item.QuestionnaireResponseItem]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   QuestionnaireResponse.Answer
+   A structured set of questions and their answers. The questions are ordered and grouped into coherent subsets, corresponding to the structure of the grouping of the questionnaire being responded to.
+
+

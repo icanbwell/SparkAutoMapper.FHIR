@@ -1,0 +1,36 @@
+:mod:`spark_auto_mapper_fhir.fhir_types.date_time_formats`
+==========================================================
+
+.. py:module:: spark_auto_mapper_fhir.fhir_types.date_time_formats
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.fhir_types.date_time_formats.FhirDateTimeFormat
+
+
+
+.. class:: FhirDateTimeFormat
+
+   .. attribute:: date_format
+      :annotation: :str = yyyy-MM-dd
+
+      
+
+   .. attribute:: date_time_format
+      :annotation: :str = yyyy-MM-dd'T'kk:mm:ss'Z'
+
+      
+
+   .. attribute:: time_format
+      :annotation: :str = kk:mm:ss
+
+      
+
+

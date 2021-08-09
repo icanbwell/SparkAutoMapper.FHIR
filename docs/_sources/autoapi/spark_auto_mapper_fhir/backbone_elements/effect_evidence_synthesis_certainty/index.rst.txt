@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.effect_evidence_synthesis_certainty`
+===================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.effect_evidence_synthesis_certainty
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.effect_evidence_synthesis_certainty.EffectEvidenceSynthesisCertainty
+
+
+
+.. class:: EffectEvidenceSynthesisCertainty(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, rating: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.quality_of_evidence_rating.QualityOfEvidenceRatingCode]]] = None, note: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.annotation.Annotation]] = None, certaintySubcomponent: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.effect_evidence_synthesis_certainty_subcomponent.EffectEvidenceSynthesisCertaintySubcomponent]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   EffectEvidenceSynthesis.Certainty
+   The EffectEvidenceSynthesis resource describes the difference in an outcome between exposures states in a population where the effect estimate is derived from a combination of research studies.
+
+

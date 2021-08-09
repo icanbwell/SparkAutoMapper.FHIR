@@ -1,0 +1,52 @@
+:mod:`spark_auto_mapper_fhir.value_sets.orientation_type`
+=========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.orientation_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.orientation_type.OrientationTypeCode
+   spark_auto_mapper_fhir.value_sets.orientation_type.OrientationTypeCodeValues
+
+
+
+.. class:: OrientationTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   orientationType
+   From: http://hl7.org/fhir/orientation-type in valuesets.xml
+       Type for orientation.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/orientation-type
+
+      
+
+
+.. class:: OrientationTypeCodeValues
+
+   Sense orientation of reference sequence.
+   From: http://hl7.org/fhir/orientation-type in valuesets.xml
+
+   .. attribute:: SenseOrientationOfReferenceSeq
+      
+
+      Antisense orientation of reference sequence.
+      From: http://hl7.org/fhir/orientation-type in valuesets.xml
+
+
+   .. attribute:: AntisenseOrientationOfReferenceSeq
+      
+
+      
+
+

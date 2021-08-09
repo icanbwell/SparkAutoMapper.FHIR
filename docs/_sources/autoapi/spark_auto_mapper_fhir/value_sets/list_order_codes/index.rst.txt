@@ -1,0 +1,101 @@
+:mod:`spark_auto_mapper_fhir.value_sets.list_order_codes`
+=========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.list_order_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.list_order_codes.ListOrderCodesCode
+   spark_auto_mapper_fhir.value_sets.list_order_codes.ListOrderCodesCodeValues
+
+
+
+.. class:: ListOrderCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ListOrderCodes
+   From: http://terminology.hl7.org/CodeSystem/list-order in valuesets.xml
+       Base values for the order of the items in a list resource.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/list-order
+
+      
+
+
+.. class:: ListOrderCodesCodeValues
+
+   The list was sorted by a user. The criteria the user used are not specified.
+   From: http://terminology.hl7.org/CodeSystem/list-order in valuesets.xml
+
+   .. attribute:: SortedByUser
+      
+
+      The list was sorted by the system. The criteria the user used are not
+      specified; define additional codes to specify a particular order (or use other
+      defined codes).
+      From: http://terminology.hl7.org/CodeSystem/list-order in valuesets.xml
+
+
+   .. attribute:: SortedBySystem
+      
+
+      The list is sorted by the data of the event. This can be used when the list
+      has items which are dates with past or future events.
+      From: http://terminology.hl7.org/CodeSystem/list-order in valuesets.xml
+
+
+   .. attribute:: SortedByEventDate
+      
+
+      The list is sorted by the date the item was added to the list. Note that the
+      date added to the list is not explicit in the list itself.
+      From: http://terminology.hl7.org/CodeSystem/list-order in valuesets.xml
+
+
+   .. attribute:: SortedByItemDate
+      
+
+      The list is sorted by priority. The exact method in which priority has been
+      determined is not specified.
+      From: http://terminology.hl7.org/CodeSystem/list-order in valuesets.xml
+
+
+   .. attribute:: SortedByPriority
+      
+
+      The list is sorted alphabetically by an unspecified property of the items in
+      the list.
+      From: http://terminology.hl7.org/CodeSystem/list-order in valuesets.xml
+
+
+   .. attribute:: SortedAlphabetically
+      
+
+      The list is sorted categorically by an unspecified property of the items in
+      the list.
+      From: http://terminology.hl7.org/CodeSystem/list-order in valuesets.xml
+
+
+   .. attribute:: SortedByCategory
+      
+
+      The list is sorted by patient, with items for each patient grouped together.
+      From: http://terminology.hl7.org/CodeSystem/list-order in valuesets.xml
+
+
+   .. attribute:: SortedByPatient
+      
+
+      
+
+

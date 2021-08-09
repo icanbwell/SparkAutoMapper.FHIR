@@ -1,0 +1,67 @@
+:mod:`spark_auto_mapper_fhir.value_sets.act_invoice_element_modifier`
+=====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.act_invoice_element_modifier
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.act_invoice_element_modifier.ActInvoiceElementModifier
+   spark_auto_mapper_fhir.value_sets.act_invoice_element_modifier.ActInvoiceElementModifierValues
+
+
+
+.. class:: ActInvoiceElementModifier(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.ActInvoiceElementModifier
+   From: http://terminology.hl7.org/ValueSet/v3-ActInvoiceElementModifier in v3-codesystems.xml
+        Processing consideration and clarification codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ActInvoiceElementModifier
+
+      
+
+
+.. class:: ActInvoiceElementModifierValues
+
+   Electronic form with supporting information to follow.
+   From: http://terminology.hl7.org/CodeSystem/v3-ActInvoiceElementModifier in v3-codesystems.xml
+
+   .. attribute:: ElectronicFormToFollow
+      
+
+      Fax with supporting information to follow.
+      From: http://terminology.hl7.org/CodeSystem/v3-ActInvoiceElementModifier in v3-codesystems.xml
+
+
+   .. attribute:: FaxToFollow
+      
+
+      Represents the last invoice from the perspective of the provider.
+      From: http://terminology.hl7.org/CodeSystem/v3-ActInvoiceElementModifier in v3-codesystems.xml
+
+
+   .. attribute:: LastInvoice
+      
+
+      Paper documentation (or other physical format) with supporting information to
+      follow.
+      From: http://terminology.hl7.org/CodeSystem/v3-ActInvoiceElementModifier in v3-codesystems.xml
+
+
+   .. attribute:: PaperDocumentationToFollow
+      
+
+      
+
+

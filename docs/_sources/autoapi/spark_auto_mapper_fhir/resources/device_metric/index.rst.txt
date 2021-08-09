@@ -1,0 +1,33 @@
+:mod:`spark_auto_mapper_fhir.resources.device_metric`
+=====================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.device_metric
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.device_metric.DeviceMetric
+
+
+
+.. class:: DeviceMetric(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.identifier.Identifier]] = None, type_: spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.device_metric_and_component_types.DeviceMetricAndComponentTypesCode], unit: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.device_metric_and_component_types.DeviceMetricAndComponentTypesCode]] = None, source: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.device.Device]] = None, parent: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.device.Device]] = None, operationalStatus: Optional[spark_auto_mapper_fhir.value_sets.device_metric_operational_status.DeviceMetricOperationalStatusCode] = None, color: Optional[spark_auto_mapper_fhir.value_sets.device_metric_color.DeviceMetricColorCode] = None, category: spark_auto_mapper_fhir.value_sets.device_metric_category.DeviceMetricCategoryCode, measurementPeriod: Optional[spark_auto_mapper_fhir.backbone_elements.timing.Timing] = None, calibration: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.device_metric_calibration.DeviceMetricCalibration]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   DeviceMetric
+   devicemetric.xsd
+       Describes a measurement, calculation or setting capability of a medical
+   device.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

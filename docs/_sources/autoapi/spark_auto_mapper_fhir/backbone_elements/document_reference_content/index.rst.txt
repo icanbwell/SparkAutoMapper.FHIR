@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.document_reference_content`
+==========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.document_reference_content
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.document_reference_content.DocumentReferenceContent
+
+
+
+.. class:: DocumentReferenceContent(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, attachment: spark_auto_mapper_fhir.complex_types.attachment.Attachment, format: Optional[spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.document_reference_format_code_set.DocumentReferenceFormatCodeSetCode]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   DocumentReference.Content
+   A reference to a document of any kind for any purpose. Provides metadata about the document so that the document can be discovered and managed. The scope of a document is any seralized object with a mime-type, so includes formal patient centric documents (CDA), cliical notes, scanned paper, and non-patient specific documents like policy text.
+
+

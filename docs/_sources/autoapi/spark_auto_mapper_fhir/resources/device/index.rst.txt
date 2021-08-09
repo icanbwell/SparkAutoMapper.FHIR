@@ -1,0 +1,34 @@
+:mod:`spark_auto_mapper_fhir.resources.device`
+==============================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.device
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.device.Device
+
+
+
+.. class:: Device(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.identifier.Identifier]] = None, definition: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.device_definition.DeviceDefinition]] = None, udiCarrier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.device_udi_carrier.DeviceUdiCarrier]] = None, status: Optional[spark_auto_mapper_fhir.value_sets.fhir_device_status.FHIRDeviceStatusCode] = None, statusReason: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.fhir_device_status_reason.FHIRDeviceStatusReasonCode]]] = None, distinctIdentifier: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, manufacturer: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, manufactureDate: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, expirationDate: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, lotNumber: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, serialNumber: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, deviceName: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.device_device_name.DeviceDeviceName]] = None, modelNumber: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, partNumber: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, type_: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.device_type.DeviceTypeCode]] = None, specialization: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.device_specialization.DeviceSpecialization]] = None, version: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.device_version.DeviceVersion]] = None, property: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.device_property.DeviceProperty]] = None, patient: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.patient.Patient]] = None, owner: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.organization.Organization]] = None, contact: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.contact_point.ContactPoint]] = None, location: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.location.Location]] = None, url: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, note: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.annotation.Annotation]] = None, safety: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]]] = None, parent: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.device.Device]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   Device
+   device.xsd
+       A type of a manufactured item that is used in the provision of healthcare
+   without being substantially changed through that activity. The device may be a
+   medical or non-medical device.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

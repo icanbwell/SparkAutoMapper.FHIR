@@ -1,0 +1,60 @@
+:mod:`spark_auto_mapper_fhir.value_sets.living_arrangement`
+===========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.living_arrangement
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.living_arrangement.LivingArrangement
+   spark_auto_mapper_fhir.value_sets.living_arrangement.LivingArrangementValues
+
+
+
+.. class:: LivingArrangement(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.LivingArrangement
+   From: http://terminology.hl7.org/ValueSet/v3-LivingArrangement in v3-codesystems.xml
+        A code depicting the living arrangements of a person
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-LivingArrangement
+
+      
+
+
+.. class:: LivingArrangementValues
+
+   Definition: Living arrangements lacking a permanent residence.
+   From: http://terminology.hl7.org/CodeSystem/v3-LivingArrangement in v3-codesystems.xml
+
+   .. attribute:: Homeless
+      
+
+      Institution
+      From: http://terminology.hl7.org/CodeSystem/v3-LivingArrangement in v3-codesystems.xml
+
+
+   .. attribute:: Institution
+      
+
+      Definition:  A living arrangement within a private residence for single
+      family.
+      From: http://terminology.hl7.org/CodeSystem/v3-LivingArrangement in v3-codesystems.xml
+
+
+   .. attribute:: PrivateResidence
+      
+
+      
+
+

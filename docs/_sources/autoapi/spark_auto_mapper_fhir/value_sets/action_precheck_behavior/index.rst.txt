@@ -1,0 +1,58 @@
+:mod:`spark_auto_mapper_fhir.value_sets.action_precheck_behavior`
+=================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.action_precheck_behavior
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.action_precheck_behavior.ActionPrecheckBehaviorCode
+   spark_auto_mapper_fhir.value_sets.action_precheck_behavior.ActionPrecheckBehaviorCodeValues
+
+
+
+.. class:: ActionPrecheckBehaviorCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ActionPrecheckBehavior
+   From: http://hl7.org/fhir/action-precheck-behavior in valuesets.xml
+       Defines selection frequency behavior for an action or group.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/action-precheck-behavior
+
+      
+
+
+.. class:: ActionPrecheckBehaviorCodeValues
+
+   An action with this behavior is one of the most frequent action that is, or
+   should be, included by an end user, for the particular context in which the
+   action occurs. The system displaying the action to the end user should
+   consider "pre-checking" such an action as a convenience for the user.
+   From: http://hl7.org/fhir/action-precheck-behavior in valuesets.xml
+
+   .. attribute:: Yes
+      
+
+      An action with this behavior is one of the less frequent actions included by
+      the end user, for the particular context in which the action occurs. The
+      system displaying the actions to the end user would typically not "pre-check"
+      such an action.
+      From: http://hl7.org/fhir/action-precheck-behavior in valuesets.xml
+
+
+   .. attribute:: No
+      
+
+      
+
+

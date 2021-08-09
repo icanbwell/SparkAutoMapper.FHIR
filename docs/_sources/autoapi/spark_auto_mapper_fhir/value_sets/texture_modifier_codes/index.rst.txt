@@ -1,0 +1,125 @@
+:mod:`spark_auto_mapper_fhir.value_sets.texture_modifier_codes`
+===============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.texture_modifier_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.texture_modifier_codes.TextureModifierCodesCode
+   spark_auto_mapper_fhir.value_sets.texture_modifier_codes.TextureModifierCodesCodeValues
+
+
+
+.. class:: TextureModifierCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   TextureModifierCodes
+   From: http://hl7.org/fhir/ValueSet/texture-code in valuesets.xml
+       TextureModifier: Codes for food consistency types or texture modifications to
+   apply to foods. This value set is composed of SNOMED CT (US Extension and
+   Core) Concepts from SCTID 229961002 Food consistency types (substance)
+   hierarchy and is provided as a suggestive example.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+
+.. class:: TextureModifierCodesCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/texture-code in valuesets.xml
+
+   .. attribute:: Cut_upFood
+      
+
+      From: http://hl7.org/fhir/ValueSet/texture-code in valuesets.xml
+
+
+   .. attribute:: EasyToChewFood
+      
+
+      From: http://hl7.org/fhir/ValueSet/texture-code in valuesets.xml
+
+
+   .. attribute:: ChoppedFood
+      
+
+      From: http://hl7.org/fhir/ValueSet/texture-code in valuesets.xml
+
+
+   .. attribute:: GroundFood
+      
+
+      From: http://hl7.org/fhir/ValueSet/texture-code in valuesets.xml
+
+
+   .. attribute:: MincedFood
+      
+
+      From: http://hl7.org/fhir/ValueSet/texture-code in valuesets.xml
+
+
+   .. attribute:: MashedFood
+      
+
+      From: http://hl7.org/fhir/ValueSet/texture-code in valuesets.xml
+
+
+   .. attribute:: SoftFood
+      
+
+      From: http://hl7.org/fhir/ValueSet/texture-code in valuesets.xml
+
+
+   .. attribute:: StrainedFood
+      
+
+      From: http://hl7.org/fhir/ValueSet/texture-code in valuesets.xml
+
+
+   .. attribute:: LiquidizedFood
+      
+
+      From: http://hl7.org/fhir/ValueSet/texture-code in valuesets.xml
+
+
+   .. attribute:: LumpyFood
+      
+
+      From: http://hl7.org/fhir/ValueSet/texture-code in valuesets.xml
+
+
+   .. attribute:: MoistFood
+      
+
+      From: http://hl7.org/fhir/ValueSet/texture-code in valuesets.xml
+
+
+   .. attribute:: Semi_solidFood
+      
+
+      From: http://hl7.org/fhir/ValueSet/texture-code in valuesets.xml
+
+
+   .. attribute:: SingleTextureFood
+      
+
+      From: http://hl7.org/fhir/ValueSet/texture-code in valuesets.xml
+
+
+   .. attribute:: SolidFood
+      
+
+      
+
+

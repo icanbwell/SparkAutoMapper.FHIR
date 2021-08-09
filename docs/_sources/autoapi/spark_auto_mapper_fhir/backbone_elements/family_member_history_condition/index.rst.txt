@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.family_member_history_condition`
+===============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.family_member_history_condition
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.family_member_history_condition.FamilyMemberHistoryCondition
+
+
+
+.. class:: FamilyMemberHistoryCondition(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, code: spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.condition_or__problem_or__diagnosis_codes.Condition_or_Problem_or_DiagnosisCodesCode], outcome: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.condition_outcome_codes.ConditionOutcomeCodesCode]] = None, contributedToDeath: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, onsetAge: Optional[spark_auto_mapper_fhir.complex_types.age.Age] = None, onsetRange: Optional[spark_auto_mapper_fhir.complex_types.range.Range] = None, onsetPeriod: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, onsetString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, note: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.annotation.Annotation]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   FamilyMemberHistory.Condition
+   Significant health conditions for a person related to the patient relevant in the context of care for the patient.
+
+

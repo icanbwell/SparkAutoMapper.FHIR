@@ -1,0 +1,33 @@
+:mod:`spark_auto_mapper_fhir.resources.payment_reconciliation`
+==============================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.payment_reconciliation
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.payment_reconciliation.PaymentReconciliation
+
+
+
+.. class:: PaymentReconciliation(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.identifier.Identifier]] = None, status: spark_auto_mapper_fhir.value_sets.financial_resource_status_codes.FinancialResourceStatusCodesCode, period: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, created: spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime, paymentIssuer: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.organization.Organization]] = None, request: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.task.Task]] = None, requestor: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole, spark_auto_mapper_fhir.resources.organization.Organization)]]] = None, outcome: Optional[spark_auto_mapper_fhir.value_sets.claim_processing_codes.ClaimProcessingCodesCode] = None, disposition: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, paymentDate: spark_auto_mapper_fhir.fhir_types.date.FhirDate, paymentAmount: spark_auto_mapper_fhir.complex_types.money.Money, paymentIdentifier: Optional[spark_auto_mapper_fhir.complex_types.identifier.Identifier] = None, detail: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.payment_reconciliation_detail.PaymentReconciliationDetail]] = None, formCode: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.form_codes.FormCodesCode]] = None, processNote: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.payment_reconciliation_process_note.PaymentReconciliationProcessNote]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   PaymentReconciliation
+   paymentreconciliation.xsd
+       This resource provides the details including amount of a payment and allocates
+   the payment items being paid.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

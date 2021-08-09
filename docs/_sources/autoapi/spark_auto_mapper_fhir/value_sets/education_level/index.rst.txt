@@ -1,0 +1,101 @@
+:mod:`spark_auto_mapper_fhir.value_sets.education_level`
+========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.education_level
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.education_level.EducationLevel
+   spark_auto_mapper_fhir.value_sets.education_level.EducationLevelValues
+
+
+
+.. class:: EducationLevel(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.EducationLevel
+   From: http://terminology.hl7.org/ValueSet/v3-EducationLevel in v3-codesystems.xml
+        Years of education that a person has completed
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-EducationLevel
+
+      
+
+
+.. class:: EducationLevelValues
+
+   Associate's or technical degree complete
+   From: http://terminology.hl7.org/CodeSystem/v3-EducationLevel in v3-codesystems.xml
+
+   .. attribute:: Associate_sOrTechnicalDegreeComplete
+      
+
+      College or baccalaureate degree complete
+      From: http://terminology.hl7.org/CodeSystem/v3-EducationLevel in v3-codesystems.xml
+
+
+   .. attribute:: CollegeOrBaccalaureateDegreeComplete
+      
+
+      Elementary School
+      From: http://terminology.hl7.org/CodeSystem/v3-EducationLevel in v3-codesystems.xml
+
+
+   .. attribute:: ElementarySchool
+      
+
+      Graduate or professional Degree complete
+      From: http://terminology.hl7.org/CodeSystem/v3-EducationLevel in v3-codesystems.xml
+
+
+   .. attribute:: GraduateOrProfessionalDegreeComplete
+      
+
+      High School or secondary school degree complete
+      From: http://terminology.hl7.org/CodeSystem/v3-EducationLevel in v3-codesystems.xml
+
+
+   .. attribute:: HighSchoolOrSecondarySchoolDegreeComplete
+      
+
+      Some post-baccalaureate education
+      From: http://terminology.hl7.org/CodeSystem/v3-EducationLevel in v3-codesystems.xml
+
+
+   .. attribute:: SomePost_baccalaureateEducation
+      
+
+      Doctoral or post graduate education
+      From: http://terminology.hl7.org/CodeSystem/v3-EducationLevel in v3-codesystems.xml
+
+
+   .. attribute:: DoctoralOrPostGraduateEducation
+      
+
+      Some College education
+      From: http://terminology.hl7.org/CodeSystem/v3-EducationLevel in v3-codesystems.xml
+
+
+   .. attribute:: SomeCollegeEducation
+      
+
+      Some secondary or high school education
+      From: http://terminology.hl7.org/CodeSystem/v3-EducationLevel in v3-codesystems.xml
+
+
+   .. attribute:: SomeSecondaryOrHighSchoolEducation
+      
+
+      
+
+

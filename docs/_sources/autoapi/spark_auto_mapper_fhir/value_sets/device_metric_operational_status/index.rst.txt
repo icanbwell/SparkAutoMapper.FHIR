@@ -1,0 +1,66 @@
+:mod:`spark_auto_mapper_fhir.value_sets.device_metric_operational_status`
+=========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.device_metric_operational_status
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.device_metric_operational_status.DeviceMetricOperationalStatusCode
+   spark_auto_mapper_fhir.value_sets.device_metric_operational_status.DeviceMetricOperationalStatusCodeValues
+
+
+
+.. class:: DeviceMetricOperationalStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   DeviceMetricOperationalStatus
+   From: http://hl7.org/fhir/metric-operational-status in valuesets.xml
+       Describes the operational status of the DeviceMetric.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/metric-operational-status
+
+      
+
+
+.. class:: DeviceMetricOperationalStatusCodeValues
+
+   The DeviceMetric is operating and will generate DeviceObservations.
+   From: http://hl7.org/fhir/metric-operational-status in valuesets.xml
+
+   .. attribute:: On
+      
+
+      The DeviceMetric is not operating.
+      From: http://hl7.org/fhir/metric-operational-status in valuesets.xml
+
+
+   .. attribute:: Off
+      
+
+      The DeviceMetric is operating, but will not generate any DeviceObservations.
+      From: http://hl7.org/fhir/metric-operational-status in valuesets.xml
+
+
+   .. attribute:: Standby
+      
+
+      The DeviceMetric was entered in error.
+      From: http://hl7.org/fhir/metric-operational-status in valuesets.xml
+
+
+   .. attribute:: EnteredInError
+      
+
+      
+
+

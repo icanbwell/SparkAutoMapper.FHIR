@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.specimen_definition_container`
+=============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.specimen_definition_container
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.specimen_definition_container.SpecimenDefinitionContainer
+
+
+
+.. class:: SpecimenDefinitionContainer(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, material: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.container_materials.ContainerMaterialsCode]] = None, type_: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.specimen_container_type.SpecimenContainerTypeCode]] = None, cap: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.container_cap.ContainerCapCode]] = None, description: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, capacity: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, minimumVolumeQuantity: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, minimumVolumeString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, additive: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.specimen_definition_additive.SpecimenDefinitionAdditive]] = None, preparation: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   SpecimenDefinition.Container
+   A kind of specimen with associated set of requirements.
+
+

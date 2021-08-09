@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.molecular_sequence_reference_seq`
+================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.molecular_sequence_reference_seq
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.molecular_sequence_reference_seq.MolecularSequenceReferenceSeq
+
+
+
+.. class:: MolecularSequenceReferenceSeq(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, chromosome: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.chromosome_human.Chromosome_humanCode]] = None, genomeBuild: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, orientation: Optional[spark_auto_mapper_fhir.value_sets.orientation_type.OrientationTypeCode] = None, referenceSeqId: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.ensembl.ENSEMBLCode]] = None, referenceSeqPointer: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.molecular_sequence.MolecularSequence]] = None, referenceSeqString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, strand: Optional[spark_auto_mapper_fhir.value_sets.strand_type.StrandTypeCode] = None, windowStart: Optional[spark_auto_mapper_fhir.fhir_types.integer.FhirInteger] = None, windowEnd: Optional[spark_auto_mapper_fhir.fhir_types.integer.FhirInteger] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   MolecularSequence.ReferenceSeq
+   Raw data describing a biological sequence.
+
+

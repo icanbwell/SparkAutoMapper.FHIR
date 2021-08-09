@@ -1,0 +1,77 @@
+:mod:`spark_auto_mapper_fhir.value_sets.alternative_code_kind`
+==============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.alternative_code_kind
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.alternative_code_kind.AlternativeCodeKindCode
+   spark_auto_mapper_fhir.value_sets.alternative_code_kind.AlternativeCodeKindCodeValues
+
+
+
+.. class:: AlternativeCodeKindCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   AlternativeCodeKind
+   From: http://terminology.hl7.org/CodeSystem/composition-altcode-kind in valuesets.xml
+       Indicates the type of use for which the code is defined.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/composition-altcode-kind
+
+      
+
+
+.. class:: AlternativeCodeKindCodeValues
+
+   The code is an alternative code that can be used in any of the circumstances
+   that the primary code can be used.
+   From: http://terminology.hl7.org/CodeSystem/composition-altcode-kind in valuesets.xml
+
+   .. attribute:: AlternateCode
+      
+
+      The code should no longer be used, but was used in the past.
+      From: http://terminology.hl7.org/CodeSystem/composition-altcode-kind in valuesets.xml
+
+
+   .. attribute:: Deprecated
+      
+
+      The code is an alternative to be used when a case insensitive code is required
+      (when the primary codes are case sensitive).
+      From: http://terminology.hl7.org/CodeSystem/composition-altcode-kind in valuesets.xml
+
+
+   .. attribute:: CaseInsensitive
+      
+
+      The code is an alternative to be used when a case sensitive code is required
+      (when the primary codes are case insensitive).
+      From: http://terminology.hl7.org/CodeSystem/composition-altcode-kind in valuesets.xml
+
+
+   .. attribute:: CaseSensitive
+      
+
+      The code is an alternative for the primary code that is built using the
+      expression grammar defined by the code system.
+      From: http://terminology.hl7.org/CodeSystem/composition-altcode-kind in valuesets.xml
+
+
+   .. attribute:: Expression
+      
+
+      
+
+

@@ -1,0 +1,92 @@
+:mod:`spark_auto_mapper_fhir.value_sets.x__basic_confidentiality_kind`
+======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.x__basic_confidentiality_kind
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.x__basic_confidentiality_kind.X_BasicConfidentialityKind
+   spark_auto_mapper_fhir.value_sets.x__basic_confidentiality_kind.X_BasicConfidentialityKindValues
+
+
+
+.. class:: X_BasicConfidentialityKind(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.x_BasicConfidentialityKind
+   From: http://terminology.hl7.org/ValueSet/v3-xBasicConfidentialityKind in v3-codesystems.xml
+         Description:
+   Used to enumerate the typical confidentiality constraints placed upon a
+   clinical document.  Usage Note:
+   x_BasicConfidentialityKind is a subset of Confidentiality codes that are used
+   as metadata indicating the receiver responsibility to comply with normally
+   applicable jurisdictional privacy law or disclosure authorization; that the
+   receiver may not disclose this information except as directed by the
+   information custodian, who may be the information subject; or that the
+   receiver may not disclose this information except as directed by the
+   information custodian, who may be the information subject.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-Confidentiality
+
+      
+
+
+.. class:: X_BasicConfidentialityKindValues
+
+   A specializable code and its leaf codes used in Confidentiality value sets to
+   value the Act.Confidentiality and Role.Confidentiality attribute in accordance
+   with the definition for concept domain "Confidentiality".
+   From: http://terminology.hl7.org/CodeSystem/v3-Confidentiality in v3-codesystems.xml
+
+   .. attribute:: Confidentiality
+      
+
+      Description: By accessing subject / role and relationship based  rights
+      (These concepts are mutually exclusive, one and only one is required for a
+      valid confidentiality coding.)
+
+
+                                 Deprecation Comment:Deprecated due to updated
+      confidentiality codes under ActCode
+      From: http://terminology.hl7.org/CodeSystem/v3-Confidentiality in v3-codesystems.xml
+
+
+   .. attribute:: ConfidentialityByAccessKind
+      
+
+      Description: By information type, only for service catalog entries (multiples
+      allowed). Not to be used with actual patient data!
+
+
+                                 Deprecation Comment:Deprecated due to updated
+      confidentiality codes under ActCode
+      From: http://terminology.hl7.org/CodeSystem/v3-Confidentiality in v3-codesystems.xml
+
+
+   .. attribute:: ConfidentialityByInfoType
+      
+
+      Description: Modifiers of role based access rights  (multiple allowed)
+
+
+                                 Deprecation Comment:Deprecated due to updated
+      confidentiality codes under ActCode
+      From: http://terminology.hl7.org/CodeSystem/v3-Confidentiality in v3-codesystems.xml
+
+
+   .. attribute:: ConfidentialityModifiers
+      
+
+      
+
+

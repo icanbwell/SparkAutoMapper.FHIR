@@ -1,0 +1,33 @@
+:mod:`spark_auto_mapper_fhir.value_sets.sequence_ontology`
+==========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.sequence_ontology
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.sequence_ontology.SequenceOntologyCode
+
+
+
+.. class:: SequenceOntologyCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   SequenceOntology
+   From: http://hl7.org/fhir/ValueSet/sequenceontology in valuesets.xml
+       Sequence Ontology
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://www.sequenceontology.org
+
+      
+
+

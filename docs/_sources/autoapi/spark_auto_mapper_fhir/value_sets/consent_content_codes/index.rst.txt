@@ -1,0 +1,33 @@
+:mod:`spark_auto_mapper_fhir.value_sets.consent_content_codes`
+==============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.consent_content_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.consent_content_codes.ConsentContentCodesCode
+
+
+
+.. class:: ConsentContentCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ConsentContentCodes
+   From: http://hl7.org/fhir/ValueSet/consent-content-code in valuesets.xml
+       This example value set contains all LOINC code
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://loinc.org
+
+      
+
+

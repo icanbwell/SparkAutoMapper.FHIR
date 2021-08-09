@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.audit_event_entity`
+==================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.audit_event_entity
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.audit_event_entity.AuditEventEntity
+
+
+
+.. class:: AuditEventEntity(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, what: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.resource.Resource]] = None, type_: Optional[spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.audit_event_entity_type.AuditEventEntityTypeCode]] = None, role: Optional[spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.audit_event_entity_role.AuditEventEntityRoleCode]] = None, lifecycle: Optional[spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.object_lifecycle_events.ObjectLifecycleEventsCode]] = None, securityLabel: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.all_security_labels.AllSecurityLabelsCode]]] = None, name: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, description: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, query: Optional[spark_auto_mapper_fhir.fhir_types.base64_binary.FhirBase64Binary] = None, detail: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.audit_event_detail.AuditEventDetail]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   AuditEvent.Entity
+   A record of an event made for purposes of maintaining a security log. Typical uses include detection of intrusion attempts and monitoring for inappropriate usage.
+
+

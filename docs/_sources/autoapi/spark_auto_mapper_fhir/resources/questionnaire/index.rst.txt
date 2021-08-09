@@ -1,0 +1,34 @@
+:mod:`spark_auto_mapper_fhir.resources.questionnaire`
+=====================================================
+
+.. py:module:: spark_auto_mapper_fhir.resources.questionnaire
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.resources.questionnaire.Questionnaire
+
+
+
+.. class:: Questionnaire(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, url: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, identifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.identifier.Identifier]] = None, version: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, name: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, title: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, derivedFrom: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.canonical.FhirCanonical]] = None, status: spark_auto_mapper_fhir.value_sets.publication_status.PublicationStatusCode, experimental: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, subjectType: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.value_sets.resource_type.ResourceTypeCode]] = None, date: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, publisher: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, contact: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.contact_detail.ContactDetail]] = None, description: Optional[spark_auto_mapper_fhir.fhir_types.markdown.FhirMarkdown] = None, useContext: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.usage_context.UsageContext]] = None, jurisdiction: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.jurisdiction_value_set.JurisdictionValueSetCode]]] = None, purpose: Optional[spark_auto_mapper_fhir.fhir_types.markdown.FhirMarkdown] = None, copyright: Optional[spark_auto_mapper_fhir.fhir_types.markdown.FhirMarkdown] = None, approvalDate: Optional[spark_auto_mapper_fhir.fhir_types.date.FhirDate] = None, lastReviewDate: Optional[spark_auto_mapper_fhir.fhir_types.date.FhirDate] = None, effectivePeriod: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, code: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.questionnaire_question_codes.QuestionnaireQuestionCodesCode]]] = None, item: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.questionnaire_item.QuestionnaireItem]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   Questionnaire
+   questionnaire.xsd
+       A structured set of questions intended to guide the collection of answers from
+   end-users. Questionnaires provide detailed control over order, presentation,
+   phraseology and grouping to allow coherent, consistent data collection.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.episode_of_care_diagnosis`
+=========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.episode_of_care_diagnosis
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.episode_of_care_diagnosis.EpisodeOfCareDiagnosis
+
+
+
+.. class:: EpisodeOfCareDiagnosis(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, condition: spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.condition.Condition], role: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.diagnosis_role.DiagnosisRoleCode]] = None, rank: Optional[spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   EpisodeOfCare.Diagnosis
+   An association between a patient and an organization / healthcare provider(s) during which time encounters may occur. The managing organization assumes a level of responsibility for the patient during this time.
+
+

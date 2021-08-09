@@ -1,0 +1,73 @@
+:mod:`spark_auto_mapper_fhir.value_sets.test_report_action_result`
+==================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.test_report_action_result
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.test_report_action_result.TestReportActionResultCode
+   spark_auto_mapper_fhir.value_sets.test_report_action_result.TestReportActionResultCodeValues
+
+
+
+.. class:: TestReportActionResultCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   TestReportActionResult
+   From: http://hl7.org/fhir/report-action-result-codes in valuesets.xml
+       The results of executing an action.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/report-action-result-codes
+
+      
+
+
+.. class:: TestReportActionResultCodeValues
+
+   The action was successful.
+   From: http://hl7.org/fhir/report-action-result-codes in valuesets.xml
+
+   .. attribute:: Pass
+      
+
+      The action was skipped.
+      From: http://hl7.org/fhir/report-action-result-codes in valuesets.xml
+
+
+   .. attribute:: Skip
+      
+
+      The action failed.
+      From: http://hl7.org/fhir/report-action-result-codes in valuesets.xml
+
+
+   .. attribute:: Fail
+      
+
+      The action passed but with warnings.
+      From: http://hl7.org/fhir/report-action-result-codes in valuesets.xml
+
+
+   .. attribute:: Warning
+      
+
+      The action encountered a fatal error and the engine was unable to process.
+      From: http://hl7.org/fhir/report-action-result-codes in valuesets.xml
+
+
+   .. attribute:: Error
+      
+
+      
+
+

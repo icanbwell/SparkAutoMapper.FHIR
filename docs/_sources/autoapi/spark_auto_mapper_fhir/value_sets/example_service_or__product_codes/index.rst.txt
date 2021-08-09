@@ -1,0 +1,52 @@
+:mod:`spark_auto_mapper_fhir.value_sets.example_service_or__product_codes`
+==========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.example_service_or__product_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.example_service_or__product_codes.ExampleService_or_ProductCodesCode
+   spark_auto_mapper_fhir.value_sets.example_service_or__product_codes.ExampleService_or_ProductCodesCodeValues
+
+
+
+.. class:: ExampleService_or_ProductCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ExampleService/ProductCodes
+   From: http://hl7.org/fhir/ex-serviceproduct in valuesets.xml
+       This value set includes a smattering of Service/Product codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/ex-serviceproduct
+
+      
+
+
+.. class:: ExampleService_or_ProductCodesCodeValues
+
+   Exam
+   From: http://hl7.org/fhir/ex-serviceproduct in valuesets.xml
+
+   .. attribute:: Exam
+      
+
+      Flu shot
+      From: http://hl7.org/fhir/ex-serviceproduct in valuesets.xml
+
+
+   .. attribute:: FluShot
+      
+
+      
+
+

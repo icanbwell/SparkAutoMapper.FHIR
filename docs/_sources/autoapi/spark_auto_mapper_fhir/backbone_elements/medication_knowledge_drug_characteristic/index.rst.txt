@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.medication_knowledge_drug_characteristic`
+========================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.medication_knowledge_drug_characteristic
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.medication_knowledge_drug_characteristic.MedicationKnowledgeDrugCharacteristic
+
+
+
+.. class:: MedicationKnowledgeDrugCharacteristic(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, type_: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.medication_knowledge_characteristic_codes.MedicationKnowledgeCharacteristicCodesCode]] = None, valueCodeableConcept: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, valueString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, valueQuantity: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, valueBase64Binary: Optional[spark_auto_mapper_fhir.fhir_types.base64_binary.FhirBase64Binary] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   MedicationKnowledge.DrugCharacteristic
+   Information about a medication that is used to support knowledge.
+
+

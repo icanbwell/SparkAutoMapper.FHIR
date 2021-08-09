@@ -1,0 +1,52 @@
+:mod:`spark_auto_mapper_fhir.value_sets.example_payment_type_codes`
+===================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.example_payment_type_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.example_payment_type_codes.ExamplePaymentTypeCodesCode
+   spark_auto_mapper_fhir.value_sets.example_payment_type_codes.ExamplePaymentTypeCodesCodeValues
+
+
+
+.. class:: ExamplePaymentTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ExamplePaymentTypeCodes
+   From: http://terminology.hl7.org/CodeSystem/ex-paymenttype in valuesets.xml
+       This value set includes example Payment Type codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/ex-paymenttype
+
+      
+
+
+.. class:: ExamplePaymentTypeCodesCodeValues
+
+   Complete (final) payment of the benefit under the Claim less any adjustments.
+   From: http://terminology.hl7.org/CodeSystem/ex-paymenttype in valuesets.xml
+
+   .. attribute:: Complete
+      
+
+      Partial payment of the benefit under the Claim less any adjustments.
+      From: http://terminology.hl7.org/CodeSystem/ex-paymenttype in valuesets.xml
+
+
+   .. attribute:: Partial
+      
+
+      
+
+

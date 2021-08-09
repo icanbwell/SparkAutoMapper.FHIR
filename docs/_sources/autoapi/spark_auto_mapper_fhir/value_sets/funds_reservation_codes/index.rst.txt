@@ -1,0 +1,63 @@
+:mod:`spark_auto_mapper_fhir.value_sets.funds_reservation_codes`
+================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.funds_reservation_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.funds_reservation_codes.FundsReservationCodesCode
+   spark_auto_mapper_fhir.value_sets.funds_reservation_codes.FundsReservationCodesCodeValues
+
+
+
+.. class:: FundsReservationCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   Funds Reservation Codes
+   From: http://terminology.hl7.org/CodeSystem/fundsreserve in valuesets.xml
+       This value set includes sample funds reservation type codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/fundsreserve
+
+      
+
+
+.. class:: FundsReservationCodesCodeValues
+
+   The payor is requested to reserve funds for the provision of the named
+   services by any provider for settlement of future claims related to this
+   request.
+   From: http://terminology.hl7.org/CodeSystem/fundsreserve in valuesets.xml
+
+   .. attribute:: Patient
+      
+
+      The payor is requested to reserve funds solely for the named provider for
+      settlement of future claims related to this request.
+      From: http://terminology.hl7.org/CodeSystem/fundsreserve in valuesets.xml
+
+
+   .. attribute:: Provider
+      
+
+      The payor is not being requested to reserve any funds for the settlement of
+      future claims.
+      From: http://terminology.hl7.org/CodeSystem/fundsreserve in valuesets.xml
+
+
+   .. attribute:: None_
+      
+
+      
+
+

@@ -1,0 +1,14 @@
+:mod:`spark_auto_mapper_fhir.fhir_types.canonical`
+==================================================
+
+.. py:module:: spark_auto_mapper_fhir.fhir_types.canonical
+
+
+Module Contents
+---------------
+
+.. data:: FhirCanonical
+   
+
+   
+

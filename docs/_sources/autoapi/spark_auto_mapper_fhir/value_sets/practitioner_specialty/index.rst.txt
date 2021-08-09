@@ -1,0 +1,69 @@
+:mod:`spark_auto_mapper_fhir.value_sets.practitioner_specialty`
+===============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.practitioner_specialty
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.practitioner_specialty.PractitionerSpecialtyCode
+   spark_auto_mapper_fhir.value_sets.practitioner_specialty.PractitionerSpecialtyCodeValues
+
+
+
+.. class:: PractitionerSpecialtyCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   PractitionerSpecialty
+   From: http://hl7.org/fhir/practitioner-specialty in valuesets.xml
+       This example value set defines a set of codes that can be used to indicate the
+   specialty of a Practitioner.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/practitioner-specialty
+
+      
+
+
+.. class:: PractitionerSpecialtyCodeValues
+
+   From: http://hl7.org/fhir/practitioner-specialty in valuesets.xml
+
+   .. attribute:: Cardiologist
+      
+
+      From: http://hl7.org/fhir/practitioner-specialty in valuesets.xml
+
+
+   .. attribute:: Dentist
+      
+
+      From: http://hl7.org/fhir/practitioner-specialty in valuesets.xml
+
+
+   .. attribute:: DietaryConsultant
+      
+
+      From: http://hl7.org/fhir/practitioner-specialty in valuesets.xml
+
+
+   .. attribute:: Midwife
+      
+
+      From: http://hl7.org/fhir/practitioner-specialty in valuesets.xml
+
+
+   .. attribute:: SystemsArchitect
+      
+
+      
+
+

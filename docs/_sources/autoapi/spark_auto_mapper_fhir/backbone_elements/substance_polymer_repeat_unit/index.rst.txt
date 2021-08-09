@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.substance_polymer_repeat_unit`
+=============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.substance_polymer_repeat_unit
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.substance_polymer_repeat_unit.SubstancePolymerRepeatUnit
+
+
+
+.. class:: SubstancePolymerRepeatUnit(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, orientationOfPolymerisation: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, repeatUnit: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, amount: Optional[spark_auto_mapper_fhir.backbone_elements.substance_amount.SubstanceAmount] = None, degreeOfPolymerisation: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.substance_polymer_degree_of_polymerisation.SubstancePolymerDegreeOfPolymerisation]] = None, structuralRepresentation: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.substance_polymer_structural_representation.SubstancePolymerStructuralRepresentation]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   SubstancePolymer.RepeatUnit
+   Todo.
+
+

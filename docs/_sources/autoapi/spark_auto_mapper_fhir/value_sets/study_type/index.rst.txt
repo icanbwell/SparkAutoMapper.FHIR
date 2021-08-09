@@ -1,0 +1,87 @@
+:mod:`spark_auto_mapper_fhir.value_sets.study_type`
+===================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.study_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.study_type.StudyTypeCode
+   spark_auto_mapper_fhir.value_sets.study_type.StudyTypeCodeValues
+
+
+
+.. class:: StudyTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   StudyType
+   From: http://terminology.hl7.org/CodeSystem/study-type in valuesets.xml
+       Types of research studies (types of research methods).
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/study-type
+
+      
+
+
+.. class:: StudyTypeCodeValues
+
+   randomized controlled trial.
+   From: http://terminology.hl7.org/CodeSystem/study-type in valuesets.xml
+
+   .. attribute:: RandomizedTrial
+      
+
+      controlled (but not randomized) trial.
+      From: http://terminology.hl7.org/CodeSystem/study-type in valuesets.xml
+
+
+   .. attribute:: ControlledTrial_non_randomized_
+      
+
+      observational study comparing cohorts.
+      From: http://terminology.hl7.org/CodeSystem/study-type in valuesets.xml
+
+
+   .. attribute:: ComparativeCohortStudy
+      
+
+      case-control study.
+      From: http://terminology.hl7.org/CodeSystem/study-type in valuesets.xml
+
+
+   .. attribute:: Case_controlStudy
+      
+
+      uncontrolled cohort or case series.
+      From: http://terminology.hl7.org/CodeSystem/study-type in valuesets.xml
+
+
+   .. attribute:: UncontrolledCohortOrCaseSeries
+      
+
+      a single case report.
+      From: http://terminology.hl7.org/CodeSystem/study-type in valuesets.xml
+
+
+   .. attribute:: CaseReport
+      
+
+      a combination of 1 or more types of studies.
+      From: http://terminology.hl7.org/CodeSystem/study-type in valuesets.xml
+
+
+   .. attribute:: MixedMethods
+      
+
+      
+
+

@@ -1,0 +1,68 @@
+:mod:`spark_auto_mapper_fhir.value_sets.subject_type`
+=====================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.subject_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.subject_type.SubjectTypeCode
+   spark_auto_mapper_fhir.value_sets.subject_type.SubjectTypeCodeValues
+
+
+
+.. class:: SubjectTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   SubjectType
+   From: http://hl7.org/fhir/ValueSet/subject-type in valuesets.xml
+       Possible types of subjects.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/resource-types
+
+      
+
+
+.. class:: SubjectTypeCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/subject-type in valuesets.xml
+
+   .. attribute:: Patient
+      
+
+      From: http://hl7.org/fhir/ValueSet/subject-type in valuesets.xml
+
+
+   .. attribute:: Practitioner
+      
+
+      From: http://hl7.org/fhir/ValueSet/subject-type in valuesets.xml
+
+
+   .. attribute:: Organization
+      
+
+      From: http://hl7.org/fhir/ValueSet/subject-type in valuesets.xml
+
+
+   .. attribute:: Location
+      
+
+      From: http://hl7.org/fhir/ValueSet/subject-type in valuesets.xml
+
+
+   .. attribute:: Device
+      
+
+      
+
+

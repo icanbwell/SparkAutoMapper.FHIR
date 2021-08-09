@@ -1,0 +1,39 @@
+:mod:`spark_auto_mapper_fhir.value_sets.vaccine_administered_value_set`
+=======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.vaccine_administered_value_set
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.vaccine_administered_value_set.VaccineAdministeredValueSetCode
+
+
+
+.. class:: VaccineAdministeredValueSetCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   VaccineAdministeredValueSet
+   From: http://hl7.org/fhir/ValueSet/vaccine-code in valuesets.xml
+       This identifies the vaccine substance administered - CVX codes.
+
+   .. attribute:: codeset_urn_oid_1_2_36_1_2001_1005_17
+      :annotation: :FhirUri = urn:oid:1.2.36.1.2001.1005.17
+
+      http://hl7.org/fhir/sid/cvx
+
+
+   .. attribute:: codeset_cvx
+      :annotation: :FhirUri = http://hl7.org/fhir/sid/cvx
+
+      
+
+

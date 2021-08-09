@@ -1,0 +1,74 @@
+:mod:`spark_auto_mapper_fhir.value_sets.adverse_event_outcome`
+==============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.adverse_event_outcome
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.adverse_event_outcome.AdverseEventOutcomeCode
+   spark_auto_mapper_fhir.value_sets.adverse_event_outcome.AdverseEventOutcomeCodeValues
+
+
+
+.. class:: AdverseEventOutcomeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   AdverseEventOutcome
+   From: http://terminology.hl7.org/CodeSystem/adverse-event-outcome in valuesets.xml
+       TODO (and should this be required?).
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/adverse-event-outcome
+
+      
+
+
+.. class:: AdverseEventOutcomeCodeValues
+
+   From: http://terminology.hl7.org/CodeSystem/adverse-event-outcome in valuesets.xml
+
+   .. attribute:: Resolved
+      
+
+      From: http://terminology.hl7.org/CodeSystem/adverse-event-outcome in valuesets.xml
+
+
+   .. attribute:: Recovering
+      
+
+      From: http://terminology.hl7.org/CodeSystem/adverse-event-outcome in valuesets.xml
+
+
+   .. attribute:: Ongoing
+      
+
+      From: http://terminology.hl7.org/CodeSystem/adverse-event-outcome in valuesets.xml
+
+
+   .. attribute:: ResolvedWithSequelae
+      
+
+      From: http://terminology.hl7.org/CodeSystem/adverse-event-outcome in valuesets.xml
+
+
+   .. attribute:: Fatal
+      
+
+      From: http://terminology.hl7.org/CodeSystem/adverse-event-outcome in valuesets.xml
+
+
+   .. attribute:: Unknown
+      
+
+      
+
+

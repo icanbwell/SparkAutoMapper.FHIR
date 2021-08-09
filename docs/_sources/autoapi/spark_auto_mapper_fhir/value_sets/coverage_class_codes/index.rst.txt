@@ -1,0 +1,115 @@
+:mod:`spark_auto_mapper_fhir.value_sets.coverage_class_codes`
+=============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.coverage_class_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.coverage_class_codes.CoverageClassCodesCode
+   spark_auto_mapper_fhir.value_sets.coverage_class_codes.CoverageClassCodesCodeValues
+
+
+
+.. class:: CoverageClassCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   CoverageClassCodes
+   From: http://terminology.hl7.org/CodeSystem/coverage-class in valuesets.xml
+       This value set includes Coverage Class codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/coverage-class
+
+      
+
+
+.. class:: CoverageClassCodesCodeValues
+
+   An employee group
+   From: http://terminology.hl7.org/CodeSystem/coverage-class in valuesets.xml
+
+   .. attribute:: Group
+      
+
+      A sub-group of an employee group
+      From: http://terminology.hl7.org/CodeSystem/coverage-class in valuesets.xml
+
+
+   .. attribute:: SubGroup
+      
+
+      A specific suite of benefits.
+      From: http://terminology.hl7.org/CodeSystem/coverage-class in valuesets.xml
+
+
+   .. attribute:: Plan
+      
+
+      A subset of a specific suite of benefits.
+      From: http://terminology.hl7.org/CodeSystem/coverage-class in valuesets.xml
+
+
+   .. attribute:: SubPlan
+      
+
+      A class of benefits.
+      From: http://terminology.hl7.org/CodeSystem/coverage-class in valuesets.xml
+
+
+   .. attribute:: Class
+      
+
+      A subset of a class of benefits.
+      From: http://terminology.hl7.org/CodeSystem/coverage-class in valuesets.xml
+
+
+   .. attribute:: SubClass
+      
+
+      A sequence number associated with a short-term continuance of the coverage.
+      From: http://terminology.hl7.org/CodeSystem/coverage-class in valuesets.xml
+
+
+   .. attribute:: Sequence
+      
+
+      Pharmacy benefit manager's Business Identification Number.
+      From: http://terminology.hl7.org/CodeSystem/coverage-class in valuesets.xml
+
+
+   .. attribute:: RXBIN
+      
+
+      A Pharmacy Benefit Manager specified Processor Control Number.
+      From: http://terminology.hl7.org/CodeSystem/coverage-class in valuesets.xml
+
+
+   .. attribute:: RXPCN
+      
+
+      A Pharmacy Benefit Manager specified Member ID.
+      From: http://terminology.hl7.org/CodeSystem/coverage-class in valuesets.xml
+
+
+   .. attribute:: RXId
+      
+
+      A Pharmacy Benefit Manager specified Group number.
+      From: http://terminology.hl7.org/CodeSystem/coverage-class in valuesets.xml
+
+
+   .. attribute:: RXGroup
+      
+
+      
+
+

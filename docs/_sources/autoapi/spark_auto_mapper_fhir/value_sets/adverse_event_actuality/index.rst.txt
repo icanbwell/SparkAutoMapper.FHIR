@@ -1,0 +1,53 @@
+:mod:`spark_auto_mapper_fhir.value_sets.adverse_event_actuality`
+================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.adverse_event_actuality
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.adverse_event_actuality.AdverseEventActualityCode
+   spark_auto_mapper_fhir.value_sets.adverse_event_actuality.AdverseEventActualityCodeValues
+
+
+
+.. class:: AdverseEventActualityCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   AdverseEventActuality
+   From: http://hl7.org/fhir/adverse-event-actuality in valuesets.xml
+       Overall nature of the adverse event, e.g. real or potential.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/adverse-event-actuality
+
+      
+
+
+.. class:: AdverseEventActualityCodeValues
+
+   The adverse event actually happened regardless of whether anyone was affected
+   or harmed.
+   From: http://hl7.org/fhir/adverse-event-actuality in valuesets.xml
+
+   .. attribute:: AdverseEvent
+      
+
+      A potential adverse event.
+      From: http://hl7.org/fhir/adverse-event-actuality in valuesets.xml
+
+
+   .. attribute:: PotentialAdverseEvent
+      
+
+      
+
+

@@ -1,0 +1,80 @@
+:mod:`spark_auto_mapper_fhir.value_sets.communication_not_done_reason`
+======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.communication_not_done_reason
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.communication_not_done_reason.CommunicationNotDoneReasonCode
+   spark_auto_mapper_fhir.value_sets.communication_not_done_reason.CommunicationNotDoneReasonCodeValues
+
+
+
+.. class:: CommunicationNotDoneReasonCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   CommunicationNotDoneReason
+   From: http://terminology.hl7.org/CodeSystem/communication-not-done-reason in valuesets.xml
+       Codes for the reason why a communication did not happen.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/communication-not-done-reason
+
+      
+
+
+.. class:: CommunicationNotDoneReasonCodeValues
+
+   The communication was not done due to an unknown reason.
+   From: http://terminology.hl7.org/CodeSystem/communication-not-done-reason in valuesets.xml
+
+   .. attribute:: Unknown
+      
+
+      The communication was not done due to a system error.
+      From: http://terminology.hl7.org/CodeSystem/communication-not-done-reason in valuesets.xml
+
+
+   .. attribute:: SystemError
+      
+
+      The communication was not done due to an invalid phone number.
+      From: http://terminology.hl7.org/CodeSystem/communication-not-done-reason in valuesets.xml
+
+
+   .. attribute:: InvalidPhoneNumber
+      
+
+      The communication was not done due to the recipient being unavailable.
+      From: http://terminology.hl7.org/CodeSystem/communication-not-done-reason in valuesets.xml
+
+
+   .. attribute:: RecipientUnavailable
+      
+
+      The communication was not done due to a family objection.
+      From: http://terminology.hl7.org/CodeSystem/communication-not-done-reason in valuesets.xml
+
+
+   .. attribute:: FamilyObjection
+      
+
+      The communication was not done due to a patient objection.
+      From: http://terminology.hl7.org/CodeSystem/communication-not-done-reason in valuesets.xml
+
+
+   .. attribute:: PatientObjection
+      
+
+      
+
+

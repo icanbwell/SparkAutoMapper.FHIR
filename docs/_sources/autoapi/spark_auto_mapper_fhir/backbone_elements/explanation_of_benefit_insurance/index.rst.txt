@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_insurance`
+================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_insurance
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_insurance.ExplanationOfBenefitInsurance
+
+
+
+.. class:: ExplanationOfBenefitInsurance(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, focal: spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean, coverage: spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.coverage.Coverage], preAuthRef: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.string.FhirString]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   ExplanationOfBenefit.Insurance
+   This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided.
+
+

@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.medication_administration_dosage`
+================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.medication_administration_dosage
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.medication_administration_dosage.MedicationAdministrationDosage
+
+
+
+.. class:: MedicationAdministrationDosage(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, text: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, site: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.snomedct_anatomical_structure_for_administration_site_codes.SNOMEDCTAnatomicalStructureForAdministrationSiteCodesCode]] = None, route: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.snomedct_route_codes.SNOMEDCTRouteCodesCode]] = None, method: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.snomedct_administration_method_codes.SNOMEDCTAdministrationMethodCodesCode]] = None, dose: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, rateRatio: Optional[spark_auto_mapper_fhir.complex_types.ratio.Ratio] = None, rateQuantity: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   MedicationAdministration.Dosage
+   Describes the event of a patient consuming or otherwise being administered a medication.  This may be as simple as swallowing a tablet or it may be a long running infusion.  Related resources tie this event to the authorizing prescription, and the specific encounter between patient and health care practitioner.
+
+

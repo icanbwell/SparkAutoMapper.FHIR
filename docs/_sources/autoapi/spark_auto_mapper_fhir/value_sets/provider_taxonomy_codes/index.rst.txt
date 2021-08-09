@@ -1,0 +1,33 @@
+:mod:`spark_auto_mapper_fhir.value_sets.provider_taxonomy_codes`
+================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.provider_taxonomy_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.provider_taxonomy_codes.ProviderTaxonomyCodesCode
+
+
+
+.. class:: ProviderTaxonomyCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   Provider Taxonomy Codes
+   From: http://hl7.org/fhir/ValueSet/provider-taxonomy in valuesets.xml
+       NUCC Healthcare Provider Taxonomy codes
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://nucc.org/provider-taxonomy
+
+      
+
+

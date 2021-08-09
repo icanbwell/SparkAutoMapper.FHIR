@@ -1,0 +1,81 @@
+:mod:`spark_auto_mapper_fhir.value_sets.immunization_evaluation_dose_status_reason_codes`
+=========================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.immunization_evaluation_dose_status_reason_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.immunization_evaluation_dose_status_reason_codes.ImmunizationEvaluationDoseStatusReasonCodesCode
+   spark_auto_mapper_fhir.value_sets.immunization_evaluation_dose_status_reason_codes.ImmunizationEvaluationDoseStatusReasonCodesCodeValues
+
+
+
+.. class:: ImmunizationEvaluationDoseStatusReasonCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ImmunizationEvaluationDoseStatusReasonCodes
+   From: http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status-reason in valuesets.xml
+       The value set to instantiate this attribute should be drawn from a
+   terminologically robust code system that consists of or contains concepts to
+   support describing the reason why an administered dose has been assigned a
+   particular status. Often, this reason describes why a dose is considered
+   invalid. This value set is provided as a suggestive example.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status-reason
+
+      
+
+
+.. class:: ImmunizationEvaluationDoseStatusReasonCodesCodeValues
+
+   The product was stored in a manner inconsistent with manufacturer guidelines
+   potentially reducing the effectiveness of the product.
+   From: http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status-reason in valuesets.xml
+
+   .. attribute:: AdverseStorageCondition
+      
+
+      The product was stored at a temperature inconsistent with manufacturer
+      guidelines potentially reducing the effectiveness of the product.
+      From: http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status-reason in valuesets.xml
+
+
+   .. attribute:: ColdChainBreak
+      
+
+      The product was administered after the expiration date associated with lot of
+      vaccine.
+      From: http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status-reason in valuesets.xml
+
+
+   .. attribute:: ExpiredLot
+      
+
+      The product was administered at a time inconsistent with the documented
+      schedule.
+      From: http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status-reason in valuesets.xml
+
+
+   .. attribute:: AdministeredOutsideRecommendedSchedule
+      
+
+      The product administered has been recalled by the manufacturer.
+      From: http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status-reason in valuesets.xml
+
+
+   .. attribute:: ProductRecall
+      
+
+      
+
+

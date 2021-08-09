@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.operation_definition_binding`
+============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.operation_definition_binding
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.operation_definition_binding.OperationDefinitionBinding
+
+
+
+.. class:: OperationDefinitionBinding(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, strength: spark_auto_mapper_fhir.value_sets.binding_strength.BindingStrengthCode, valueSet: spark_auto_mapper_fhir.fhir_types.canonical.FhirCanonical)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   OperationDefinition.Binding
+   A formal computable definition of an operation (on the RESTful interface) or a named query (using the search interaction).
+
+

@@ -1,0 +1,78 @@
+:mod:`spark_auto_mapper_fhir.value_sets.immunization_recommendation_status_codes`
+=================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.immunization_recommendation_status_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.immunization_recommendation_status_codes.ImmunizationRecommendationStatusCodesCode
+   spark_auto_mapper_fhir.value_sets.immunization_recommendation_status_codes.ImmunizationRecommendationStatusCodesCodeValues
+
+
+
+.. class:: ImmunizationRecommendationStatusCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ImmunizationRecommendationStatusCodes
+   From: http://terminology.hl7.org/CodeSystem/immunization-recommendation-status in valuesets.xml
+       The value set to instantiate this attribute should be drawn from a
+   terminologically robust code system that consists of or contains concepts to
+   support describing the status of the patient towards perceived immunity
+   against a vaccine preventable disease. This value set is provided as a
+   suggestive example.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/immunization-recommendation-status
+
+      
+
+
+.. class:: ImmunizationRecommendationStatusCodesCodeValues
+
+   The patient is due for their next vaccination.
+   From: http://terminology.hl7.org/CodeSystem/immunization-recommendation-status in valuesets.xml
+
+   .. attribute:: Due
+      
+
+      The patient is considered overdue for their next vaccination.
+      From: http://terminology.hl7.org/CodeSystem/immunization-recommendation-status in valuesets.xml
+
+
+   .. attribute:: Overdue
+      
+
+      The patient is immune to the target disease and further immunization against
+      the disease is not likely to provide benefit.
+      From: http://terminology.hl7.org/CodeSystem/immunization-recommendation-status in valuesets.xml
+
+
+   .. attribute:: Immune
+      
+
+      The patient is contraindicated for futher doses.
+      From: http://terminology.hl7.org/CodeSystem/immunization-recommendation-status in valuesets.xml
+
+
+   .. attribute:: Contraindicated
+      
+
+      The patient is fully protected and no further doses are recommended.
+      From: http://terminology.hl7.org/CodeSystem/immunization-recommendation-status in valuesets.xml
+
+
+   .. attribute:: Complete
+      
+
+      
+
+

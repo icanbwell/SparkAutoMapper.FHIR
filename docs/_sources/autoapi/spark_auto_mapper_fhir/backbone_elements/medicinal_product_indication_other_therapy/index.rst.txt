@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.medicinal_product_indication_other_therapy`
+==========================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.medicinal_product_indication_other_therapy
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.medicinal_product_indication_other_therapy.MedicinalProductIndicationOtherTherapy
+
+
+
+.. class:: MedicinalProductIndicationOtherTherapy(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, therapyRelationshipType: spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode], medicationCodeableConcept: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, medicationReference: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.medicinal_product.MedicinalProduct, spark_auto_mapper_fhir.resources.medication.Medication, spark_auto_mapper_fhir.resources.substance.Substance, spark_auto_mapper_fhir.resources.substance_specification.SubstanceSpecification)]]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   MedicinalProductIndication.OtherTherapy
+   Indication for the Medicinal Product.
+
+

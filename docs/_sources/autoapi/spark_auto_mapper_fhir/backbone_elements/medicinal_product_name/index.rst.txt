@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.medicinal_product_name`
+======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.medicinal_product_name
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.medicinal_product_name.MedicinalProductName
+
+
+
+.. class:: MedicinalProductName(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, productName: spark_auto_mapper_fhir.fhir_types.string.FhirString, namePart: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.medicinal_product_name_part.MedicinalProductNamePart]] = None, countryLanguage: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.medicinal_product_country_language.MedicinalProductCountryLanguage]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   MedicinalProduct.Name
+   Detailed definition of a medicinal product, typically for uses other than direct patient care (e.g. regulatory use).
+
+

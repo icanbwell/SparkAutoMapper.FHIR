@@ -1,0 +1,26 @@
+:mod:`spark_auto_mapper_fhir.generator`
+=======================================
+
+.. py:module:: spark_auto_mapper_fhir.generator
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   fhir_xml_schema_parser/index.rst
+   generate_classes/index.rst
+   test_clean_name/index.rst
+   test_generator/index.rst
+   test_generator_get_all_property_types/index.rst
+   test_generator_get_types_for_codeable_concepts/index.rst
+   test_generator_get_types_for_references/index.rst
+   test_generator_get_v2_code_systems/index.rst
+   test_generator_get_v3_code_systems/index.rst
+   test_generator_get_value_sets/index.rst
+   test_generator_process_types_for_codeable_concepts/index.rst
+   test_generator_single_file/index.rst
+
+

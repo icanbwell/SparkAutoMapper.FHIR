@@ -1,0 +1,45 @@
+:mod:`spark_auto_mapper_fhir.value_sets.contract_resource_scope_codes`
+======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.contract_resource_scope_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.contract_resource_scope_codes.ContractResourceScopeCodesCode
+   spark_auto_mapper_fhir.value_sets.contract_resource_scope_codes.ContractResourceScopeCodesCodeValues
+
+
+
+.. class:: ContractResourceScopeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ContractResourceScopeCodes
+   From: http://hl7.org/fhir/contract-security-category in valuesets.xml
+       This value set contract specific codes for security category.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/contract-security-category
+
+      
+
+
+.. class:: ContractResourceScopeCodesCodeValues
+
+   To be completed
+   From: http://hl7.org/fhir/contract-security-category in valuesets.xml
+
+   .. attribute:: Policy
+      
+
+      
+
+

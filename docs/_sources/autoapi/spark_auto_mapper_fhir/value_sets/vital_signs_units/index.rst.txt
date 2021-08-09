@@ -1,0 +1,110 @@
+:mod:`spark_auto_mapper_fhir.value_sets.vital_signs_units`
+==========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.vital_signs_units
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.vital_signs_units.VitalSignsUnitsCode
+   spark_auto_mapper_fhir.value_sets.vital_signs_units.VitalSignsUnitsCodeValues
+
+
+
+.. class:: VitalSignsUnitsCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   VitalSignsUnits
+   From: http://hl7.org/fhir/ValueSet/ucum-vitals-common in valuesets.xml
+       Common UCUM units for recording Vital Signs
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://unitsofmeasure.org
+
+      
+
+
+.. class:: VitalSignsUnitsCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/ucum-vitals-common in valuesets.xml
+
+   .. attribute:: Percent
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-vitals-common in valuesets.xml
+
+
+   .. attribute:: Centimeter
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-vitals-common in valuesets.xml
+
+
+   .. attribute:: Inch_international_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-vitals-common in valuesets.xml
+
+
+   .. attribute:: Kilogram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-vitals-common in valuesets.xml
+
+
+   .. attribute:: Gram
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-vitals-common in valuesets.xml
+
+
+   .. attribute:: Pound_USAndBritish_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-vitals-common in valuesets.xml
+
+
+   .. attribute:: DegreeCelsius
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-vitals-common in valuesets.xml
+
+
+   .. attribute:: DegreeFahrenheit
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-vitals-common in valuesets.xml
+
+
+   .. attribute:: MillimeterOfMercury
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-vitals-common in valuesets.xml
+
+
+   .. attribute:: PerMinute
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-vitals-common in valuesets.xml
+
+
+   .. attribute:: Kilogram_meter_2_
+      
+
+      From: http://hl7.org/fhir/ValueSet/ucum-vitals-common in valuesets.xml
+
+
+   .. attribute:: SquareMeter
+      
+
+      
+
+

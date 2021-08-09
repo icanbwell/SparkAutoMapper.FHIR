@@ -1,0 +1,29 @@
+:mod:`spark_auto_mapper_fhir.extensions.match_grade`
+====================================================
+
+.. py:module:: spark_auto_mapper_fhir.extensions.match_grade
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.extensions.match_grade.MatchGrade
+
+
+
+.. class:: MatchGrade(match_grade: spark_auto_mapper_fhir.value_sets.match_grade.MatchGradeCode)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase`
+
+   DO NOT USE DIRECTLY!  ALWAYS USE A SUB_CLASS.
+
+   .. method:: codeset(cls) -> spark_auto_mapper_fhir.fhir_types.uri.FhirUri
+
+
+

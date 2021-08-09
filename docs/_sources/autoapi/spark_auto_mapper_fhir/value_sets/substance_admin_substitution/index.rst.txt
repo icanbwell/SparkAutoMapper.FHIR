@@ -1,0 +1,48 @@
+:mod:`spark_auto_mapper_fhir.value_sets.substance_admin_substitution`
+=====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.substance_admin_substitution
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.substance_admin_substitution.SubstanceAdminSubstitution
+   spark_auto_mapper_fhir.value_sets.substance_admin_substitution.SubstanceAdminSubstitutionValues
+
+
+
+.. class:: SubstanceAdminSubstitution(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.substanceAdminSubstitution
+   From: http://terminology.hl7.org/ValueSet/v3-substanceAdminSubstitution in v3-codesystems.xml
+        Identifies what sort of change is permitted or has occurred between the
+   therapy that was ordered and the therapy that was/will be provided.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution
+
+      
+
+
+.. class:: SubstanceAdminSubstitutionValues
+
+   Description: Substitution occurred or is permitted with another product that
+   may potentially have different ingredients, but having the same biological and
+   therapeutic effects.
+   From: http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution in v3-codesystems.xml
+
+   .. attribute:: ActSubstanceAdminSubstitutionCode
+      
+
+      
+
+

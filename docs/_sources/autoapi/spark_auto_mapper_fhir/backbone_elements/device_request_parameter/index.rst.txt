@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.device_request_parameter`
+========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.device_request_parameter
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.device_request_parameter.DeviceRequestParameter
+
+
+
+.. class:: DeviceRequestParameter(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, code: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, valueCodeableConcept: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, valueQuantity: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, valueRange: Optional[spark_auto_mapper_fhir.complex_types.range.Range] = None, valueBoolean: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   DeviceRequest.Parameter
+   Represents a request for a patient to employ a medical device. The device may be an implantable device, or an external assistive device, such as a walker.
+
+

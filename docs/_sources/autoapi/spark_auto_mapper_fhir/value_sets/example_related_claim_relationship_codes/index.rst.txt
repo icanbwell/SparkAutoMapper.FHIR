@@ -1,0 +1,53 @@
+:mod:`spark_auto_mapper_fhir.value_sets.example_related_claim_relationship_codes`
+=================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.example_related_claim_relationship_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.example_related_claim_relationship_codes.ExampleRelatedClaimRelationshipCodesCode
+   spark_auto_mapper_fhir.value_sets.example_related_claim_relationship_codes.ExampleRelatedClaimRelationshipCodesCodeValues
+
+
+
+.. class:: ExampleRelatedClaimRelationshipCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ExampleRelatedClaimRelationshipCodes
+   From: http://terminology.hl7.org/CodeSystem/ex-relatedclaimrelationship in valuesets.xml
+       This value set includes sample Related Claim Relationship codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/ex-relatedclaimrelationship
+
+      
+
+
+.. class:: ExampleRelatedClaimRelationshipCodesCodeValues
+
+   A prior claim instance for the same intended suite of services.
+   From: http://terminology.hl7.org/CodeSystem/ex-relatedclaimrelationship in valuesets.xml
+
+   .. attribute:: PriorClaim
+      
+
+      A claim for a different suite of services which is related the suite claimed
+      here.
+      From: http://terminology.hl7.org/CodeSystem/ex-relatedclaimrelationship in valuesets.xml
+
+
+   .. attribute:: AssociatedClaim
+      
+
+      
+
+

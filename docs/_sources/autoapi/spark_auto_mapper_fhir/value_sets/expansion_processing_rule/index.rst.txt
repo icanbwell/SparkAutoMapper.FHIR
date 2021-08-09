@@ -1,0 +1,62 @@
+:mod:`spark_auto_mapper_fhir.value_sets.expansion_processing_rule`
+==================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.expansion_processing_rule
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.expansion_processing_rule.ExpansionProcessingRuleCode
+   spark_auto_mapper_fhir.value_sets.expansion_processing_rule.ExpansionProcessingRuleCodeValues
+
+
+
+.. class:: ExpansionProcessingRuleCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ExpansionProcessingRule
+   From: http://terminology.hl7.org/CodeSystem/expansion-processing-rule in valuesets.xml
+       Defines how concepts are processed into the expansion when it's for UI
+   presentation.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/expansion-processing-rule
+
+      
+
+
+.. class:: ExpansionProcessingRuleCodeValues
+
+   The expansion (when in UI mode) includes all codes *and* any defined groups
+   (in extensions).
+   From: http://terminology.hl7.org/CodeSystem/expansion-processing-rule in valuesets.xml
+
+   .. attribute:: AllCodes
+      
+
+      The expanion (when in UI mode) lists the groups, and then any codes that have
+      not been included in a group.
+      From: http://terminology.hl7.org/CodeSystem/expansion-processing-rule in valuesets.xml
+
+
+   .. attribute:: Groups_UngroupedCodes
+      
+
+      The expansion (when in UI mode) only includes the defined groups.
+      From: http://terminology.hl7.org/CodeSystem/expansion-processing-rule in valuesets.xml
+
+
+   .. attribute:: GroupsOnly
+      
+
+      
+
+

@@ -1,0 +1,137 @@
+:mod:`spark_auto_mapper_fhir.value_sets.hl7_update_mode`
+========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.hl7_update_mode
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.hl7_update_mode.HL7UpdateMode
+   spark_auto_mapper_fhir.value_sets.hl7_update_mode.HL7UpdateModeValues
+
+
+
+.. class:: HL7UpdateMode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.HL7UpdateMode
+   From: http://terminology.hl7.org/ValueSet/v3-HL7UpdateMode in v3-codesystems.xml
+        The possible modes of updating that occur when an attribute is received by a
+   system that already contains values for that attribute.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-HL7UpdateMode
+
+      
+
+
+.. class:: HL7UpdateModeValues
+
+   Description:The item was (or is to be) added, having not been present
+   immediately before. (If it is already present, this may be treated as an error
+   condition.)
+   From: http://terminology.hl7.org/CodeSystem/v3-HL7UpdateMode in v3-codesystems.xml
+
+   .. attribute:: Add
+      
+
+      Description:The item was (or is to be) either added or replaced.
+      From: http://terminology.hl7.org/CodeSystem/v3-HL7UpdateMode in v3-codesystems.xml
+
+
+   .. attribute:: AddOrReplace
+      
+
+      Description:The item was (or is to be) removed (sometimes referred to as
+      deleted). If the item is part of a collection, delete any matching items.
+      From: http://terminology.hl7.org/CodeSystem/v3-HL7UpdateMode in v3-codesystems.xml
+
+
+   .. attribute:: Remove
+      
+
+      Description:This item is part of the identifying information for this object.
+      From: http://terminology.hl7.org/CodeSystem/v3-HL7UpdateMode in v3-codesystems.xml
+
+
+   .. attribute:: Key
+      
+
+      Description:There was (or is to be) no change to the item. This is primarily
+      used when this element has not changed, but other attributes in the instance
+      have changed.
+      From: http://terminology.hl7.org/CodeSystem/v3-HL7UpdateMode in v3-codesystems.xml
+
+
+   .. attribute:: NoChange
+      
+
+      Description:The item existed previously and has (or is to be) revised. (If an
+      item does not already exist, this may be treated as an error condition.)
+      From: http://terminology.hl7.org/CodeSystem/v3-HL7UpdateMode in v3-codesystems.xml
+
+
+   .. attribute:: Replace
+      
+
+      Description:This item provides enough information to allow a processing system
+      to locate the full applicable record by identifying the object.
+      From: http://terminology.hl7.org/CodeSystem/v3-HL7UpdateMode in v3-codesystems.xml
+
+
+   .. attribute:: Reference
+      
+
+      Description:Description:</b>It is not specified whether or what kind of change
+      has occurred to the item, or whether the item is present as a reference or
+      identifying property.
+      From: http://terminology.hl7.org/CodeSystem/v3-HL7UpdateMode in v3-codesystems.xml
+
+
+   .. attribute:: Unknown
+      
+
+      These concepts apply when the element and/or message is updating a set of
+      items.
+      From: http://terminology.hl7.org/CodeSystem/v3-HL7UpdateMode in v3-codesystems.xml
+
+
+   .. attribute:: SetUpdateMode
+      
+
+      Description: AU: If this item exists, update it with these values. If it does
+      not exist, create it with these values. If the item is part of the collection,
+      update each item that matches this item, and if no items match, add a new item
+      to the collection.
+      From: http://terminology.hl7.org/CodeSystem/v3-HL7UpdateMode in v3-codesystems.xml
+
+
+   .. attribute:: AddOrUpdate
+      
+
+      Ignore this role, it is not relevant to the update.
+      From: http://terminology.hl7.org/CodeSystem/v3-HL7UpdateMode in v3-codesystems.xml
+
+
+   .. attribute:: Ignore
+      
+
+      Verify - this message element must match a value already in the receiving
+      systems database in order to process the message.
+      From: http://terminology.hl7.org/CodeSystem/v3-HL7UpdateMode in v3-codesystems.xml
+
+
+   .. attribute:: Verify
+      
+
+      
+
+

@@ -1,0 +1,71 @@
+:mod:`spark_auto_mapper_fhir.value_sets.composite_measure_scoring`
+==================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.composite_measure_scoring
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.composite_measure_scoring.CompositeMeasureScoringCode
+   spark_auto_mapper_fhir.value_sets.composite_measure_scoring.CompositeMeasureScoringCodeValues
+
+
+
+.. class:: CompositeMeasureScoringCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   CompositeMeasureScoring
+   From: http://terminology.hl7.org/CodeSystem/composite-measure-scoring in valuesets.xml
+       The composite scoring method of the measure.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/composite-measure-scoring
+
+      
+
+
+.. class:: CompositeMeasureScoringCodeValues
+
+   Opportunity scoring combines the scores from component measures by combining
+   the numerators and denominators for each component.
+   From: http://terminology.hl7.org/CodeSystem/composite-measure-scoring in valuesets.xml
+
+   .. attribute:: Opportunity
+      
+
+      All-or-nothing scoring includes an individual in the numerator of the
+      composite measure if they are in the numerators of all of the component
+      measures in which they are in the denominator.
+      From: http://terminology.hl7.org/CodeSystem/composite-measure-scoring in valuesets.xml
+
+
+   .. attribute:: All_or_nothing
+      
+
+      Linear scoring gives an individual a score based on the number of numerators
+      in which they appear.
+      From: http://terminology.hl7.org/CodeSystem/composite-measure-scoring in valuesets.xml
+
+
+   .. attribute:: Linear
+      
+
+      Weighted scoring gives an individual a score based on a weighted factor for
+      each component numerator in which they appear.
+      From: http://terminology.hl7.org/CodeSystem/composite-measure-scoring in valuesets.xml
+
+
+   .. attribute:: Weighted
+      
+
+      
+
+

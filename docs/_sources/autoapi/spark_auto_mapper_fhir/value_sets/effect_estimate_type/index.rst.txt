@@ -1,0 +1,89 @@
+:mod:`spark_auto_mapper_fhir.value_sets.effect_estimate_type`
+=============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.effect_estimate_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.effect_estimate_type.EffectEstimateTypeCode
+   spark_auto_mapper_fhir.value_sets.effect_estimate_type.EffectEstimateTypeCodeValues
+
+
+
+.. class:: EffectEstimateTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   EffectEstimateType
+   From: http://terminology.hl7.org/CodeSystem/effect-estimate-type in valuesets.xml
+       Whether the effect estimate is an absolute effect estimate (absolute
+   difference) or a relative effect estimate (relative difference), and the
+   specific type of effect estimate (eg relative risk or median difference).
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/effect-estimate-type
+
+      
+
+
+.. class:: EffectEstimateTypeCodeValues
+
+   relative risk (a type of relative effect estimate).
+   From: http://terminology.hl7.org/CodeSystem/effect-estimate-type in valuesets.xml
+
+   .. attribute:: RelativeRisk
+      
+
+      odds ratio (a type of relative effect estimate).
+      From: http://terminology.hl7.org/CodeSystem/effect-estimate-type in valuesets.xml
+
+
+   .. attribute:: OddsRatio
+      
+
+      hazard ratio (a type of relative effect estimate).
+      From: http://terminology.hl7.org/CodeSystem/effect-estimate-type in valuesets.xml
+
+
+   .. attribute:: HazardRatio
+      
+
+      absolute risk difference (a type of absolute effect estimate).
+      From: http://terminology.hl7.org/CodeSystem/effect-estimate-type in valuesets.xml
+
+
+   .. attribute:: AbsoluteRiskDifference
+      
+
+      mean difference (a type of absolute effect estimate).
+      From: http://terminology.hl7.org/CodeSystem/effect-estimate-type in valuesets.xml
+
+
+   .. attribute:: MeanDifference
+      
+
+      standardized mean difference (a type of absolute effect estimate).
+      From: http://terminology.hl7.org/CodeSystem/effect-estimate-type in valuesets.xml
+
+
+   .. attribute:: StandardizedMeanDifference
+      
+
+      median difference (a type of absolute effect estimate).
+      From: http://terminology.hl7.org/CodeSystem/effect-estimate-type in valuesets.xml
+
+
+   .. attribute:: MedianDifference
+      
+
+      
+
+

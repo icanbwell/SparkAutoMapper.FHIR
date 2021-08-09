@@ -1,0 +1,81 @@
+:mod:`spark_auto_mapper_fhir.value_sets.practitioner_role`
+==========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.practitioner_role
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.practitioner_role.PractitionerRoleCode
+   spark_auto_mapper_fhir.value_sets.practitioner_role.PractitionerRoleCodeValues
+
+
+
+.. class:: PractitionerRoleCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   PractitionerRole
+   From: http://terminology.hl7.org/CodeSystem/practitioner-role in valuesets.xml
+       This example value set defines a set of codes that can be used to indicate the
+   role of a Practitioner.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/practitioner-role
+
+      
+
+
+.. class:: PractitionerRoleCodeValues
+
+   A qualified/registered medical practitioner
+   From: http://terminology.hl7.org/CodeSystem/practitioner-role in valuesets.xml
+
+   .. attribute:: Doctor
+      
+
+      A practitioner with nursing experience that may be qualified/registered
+      From: http://terminology.hl7.org/CodeSystem/practitioner-role in valuesets.xml
+
+
+   .. attribute:: Nurse
+      
+
+      A qualified/registered/licensed pharmacist
+      From: http://terminology.hl7.org/CodeSystem/practitioner-role in valuesets.xml
+
+
+   .. attribute:: Pharmacist
+      
+
+      A practitioner that may perform research
+      From: http://terminology.hl7.org/CodeSystem/practitioner-role in valuesets.xml
+
+
+   .. attribute:: Researcher
+      
+
+      Someone who is able to provide educational services
+      From: http://terminology.hl7.org/CodeSystem/practitioner-role in valuesets.xml
+
+
+   .. attribute:: Teacher_educator
+      
+
+      Someone who is qualified in Information and Communication Technologies
+      From: http://terminology.hl7.org/CodeSystem/practitioner-role in valuesets.xml
+
+
+   .. attribute:: ICTProfessional
+      
+
+      
+
+

@@ -1,0 +1,98 @@
+:mod:`spark_auto_mapper_fhir.value_sets.media_type_code`
+========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.media_type_code
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.media_type_code.MediaTypeCodeCode
+   spark_auto_mapper_fhir.value_sets.media_type_code.MediaTypeCodeCodeValues
+
+
+
+.. class:: MediaTypeCodeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   MediaTypeCode
+   From: http://hl7.org/fhir/ValueSet/dicm-405-mediatype in valuesets.xml
+       Media Type Code
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://dicom.nema.org/resources/ontology/DCM
+
+      
+
+
+.. class:: MediaTypeCodeCodeValues
+
+   From: http://hl7.org/fhir/ValueSet/dicm-405-mediatype in valuesets.xml
+
+   .. attribute:: _110030
+      
+
+      From: http://hl7.org/fhir/ValueSet/dicm-405-mediatype in valuesets.xml
+
+
+   .. attribute:: _110031
+      
+
+      From: http://hl7.org/fhir/ValueSet/dicm-405-mediatype in valuesets.xml
+
+
+   .. attribute:: _110032
+      
+
+      From: http://hl7.org/fhir/ValueSet/dicm-405-mediatype in valuesets.xml
+
+
+   .. attribute:: _110033
+      
+
+      From: http://hl7.org/fhir/ValueSet/dicm-405-mediatype in valuesets.xml
+
+
+   .. attribute:: _110034
+      
+
+      From: http://hl7.org/fhir/ValueSet/dicm-405-mediatype in valuesets.xml
+
+
+   .. attribute:: _110035
+      
+
+      From: http://hl7.org/fhir/ValueSet/dicm-405-mediatype in valuesets.xml
+
+
+   .. attribute:: _110036
+      
+
+      From: http://hl7.org/fhir/ValueSet/dicm-405-mediatype in valuesets.xml
+
+
+   .. attribute:: _110037
+      
+
+      From: http://hl7.org/fhir/ValueSet/dicm-405-mediatype in valuesets.xml
+
+
+   .. attribute:: _110010
+      
+
+      From: http://hl7.org/fhir/ValueSet/dicm-405-mediatype in valuesets.xml
+
+
+   .. attribute:: _110038
+      
+
+      
+
+

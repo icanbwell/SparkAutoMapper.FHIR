@@ -1,0 +1,52 @@
+:mod:`spark_auto_mapper_fhir.value_sets.example_vision_prescription_product_codes`
+==================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.example_vision_prescription_product_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.example_vision_prescription_product_codes.ExampleVisionPrescriptionProductCodesCode
+   spark_auto_mapper_fhir.value_sets.example_vision_prescription_product_codes.ExampleVisionPrescriptionProductCodesCodeValues
+
+
+
+.. class:: ExampleVisionPrescriptionProductCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ExampleVisionPrescriptionProductCodes
+   From: http://terminology.hl7.org/CodeSystem/ex-visionprescriptionproduct in valuesets.xml
+       This value set includes a smattering of Prescription Product codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/ex-visionprescriptionproduct
+
+      
+
+
+.. class:: ExampleVisionPrescriptionProductCodesCodeValues
+
+   A lens to be fitted to a frame to comprise a pair of glasses.
+   From: http://terminology.hl7.org/CodeSystem/ex-visionprescriptionproduct in valuesets.xml
+
+   .. attribute:: Lens
+      
+
+      A lens to be fitted for wearing directly on an eye.
+      From: http://terminology.hl7.org/CodeSystem/ex-visionprescriptionproduct in valuesets.xml
+
+
+   .. attribute:: ContactLens
+      
+
+      
+
+

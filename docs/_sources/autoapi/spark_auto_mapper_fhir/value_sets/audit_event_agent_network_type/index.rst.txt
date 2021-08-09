@@ -1,0 +1,73 @@
+:mod:`spark_auto_mapper_fhir.value_sets.audit_event_agent_network_type`
+=======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.audit_event_agent_network_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.audit_event_agent_network_type.AuditEventAgentNetworkTypeCode
+   spark_auto_mapper_fhir.value_sets.audit_event_agent_network_type.AuditEventAgentNetworkTypeCodeValues
+
+
+
+.. class:: AuditEventAgentNetworkTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   AuditEventAgentNetworkType
+   From: http://hl7.org/fhir/network-type in valuesets.xml
+       The type of network access point of this agent in the audit event.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/network-type
+
+      
+
+
+.. class:: AuditEventAgentNetworkTypeCodeValues
+
+   The machine name, including DNS name.
+   From: http://hl7.org/fhir/network-type in valuesets.xml
+
+   .. attribute:: MachineName
+      
+
+      The assigned Internet Protocol (IP) address.
+      From: http://hl7.org/fhir/network-type in valuesets.xml
+
+
+   .. attribute:: IPAddress
+      
+
+      The assigned telephone number.
+      From: http://hl7.org/fhir/network-type in valuesets.xml
+
+
+   .. attribute:: TelephoneNumber
+      
+
+      The assigned email address.
+      From: http://hl7.org/fhir/network-type in valuesets.xml
+
+
+   .. attribute:: EmailAddress
+      
+
+      URI (User directory, HTTP-PUT, ftp, etc.).
+      From: http://hl7.org/fhir/network-type in valuesets.xml
+
+
+   .. attribute:: URI
+      
+
+      
+
+

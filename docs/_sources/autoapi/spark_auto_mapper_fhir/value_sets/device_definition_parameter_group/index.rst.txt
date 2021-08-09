@@ -1,0 +1,101 @@
+:mod:`spark_auto_mapper_fhir.value_sets.device_definition_parameter_group`
+==========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.device_definition_parameter_group
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.device_definition_parameter_group.DeviceDefinitionParameterGroupCode
+   spark_auto_mapper_fhir.value_sets.device_definition_parameter_group.DeviceDefinitionParameterGroupCodeValues
+
+
+
+.. class:: DeviceDefinitionParameterGroupCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   DeviceDefinitionParameterGroup
+   From: http://terminology.hl7.org/CodeSystem/parameter-group in valuesets.xml
+       Codes identifying groupings of parameters; e.g. Cardiovascular.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/parameter-group
+
+      
+
+
+.. class:: DeviceDefinitionParameterGroupCodeValues
+
+   Haemodynamic Parameter Group - MDC_PGRP_HEMO.
+   From: http://terminology.hl7.org/CodeSystem/parameter-group in valuesets.xml
+
+   .. attribute:: HaemodynamicParameterGroup
+      
+
+      ECG Parameter Group - MDC_PGRP_ECG.
+      From: http://terminology.hl7.org/CodeSystem/parameter-group in valuesets.xml
+
+
+   .. attribute:: ECGParameterGroup
+      
+
+      Respiratory Parameter Group - MDC_PGRP_RESP.
+      From: http://terminology.hl7.org/CodeSystem/parameter-group in valuesets.xml
+
+
+   .. attribute:: RespiratoryParameterGroup
+      
+
+      Ventilation Parameter Group - MDC_PGRP_VENT.
+      From: http://terminology.hl7.org/CodeSystem/parameter-group in valuesets.xml
+
+
+   .. attribute:: VentilationParameterGroup
+      
+
+      Neurological Parameter Group - MDC_PGRP_NEURO.
+      From: http://terminology.hl7.org/CodeSystem/parameter-group in valuesets.xml
+
+
+   .. attribute:: NeurologicalParameterGroup
+      
+
+      Drug Delivery Parameter Group - MDC_PGRP_DRUG.
+      From: http://terminology.hl7.org/CodeSystem/parameter-group in valuesets.xml
+
+
+   .. attribute:: DrugDeliveryParameterGroup
+      
+
+      Fluid Chemistry Parameter Group - MDC_PGRP_FLUID.
+      From: http://terminology.hl7.org/CodeSystem/parameter-group in valuesets.xml
+
+
+   .. attribute:: FluidChemistryParameterGroup
+      
+
+      Blood Chemistry Parameter Group - MDC_PGRP_BLOOD_CHEM.
+      From: http://terminology.hl7.org/CodeSystem/parameter-group in valuesets.xml
+
+
+   .. attribute:: BloodChemistryParameterGroup
+      
+
+      Miscellaneous Parameter Group - MDC_PGRP_MISC.
+      From: http://terminology.hl7.org/CodeSystem/parameter-group in valuesets.xml
+
+
+   .. attribute:: MiscellaneousParameterGroup
+      
+
+      
+
+

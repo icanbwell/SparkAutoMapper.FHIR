@@ -1,0 +1,26 @@
+:mod:`spark_auto_mapper_fhir.value_sets.generic_type`
+=====================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.generic_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode
+
+
+
+.. class:: GenericTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.FhirValueSetBase.FhirValueSetBase`
+
+   AbstractType
+
+

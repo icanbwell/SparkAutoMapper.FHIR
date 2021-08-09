@@ -1,0 +1,98 @@
+:mod:`spark_auto_mapper_fhir.value_sets.care_plan_activity_status`
+==================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.care_plan_activity_status
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.care_plan_activity_status.CarePlanActivityStatusCode
+   spark_auto_mapper_fhir.value_sets.care_plan_activity_status.CarePlanActivityStatusCodeValues
+
+
+
+.. class:: CarePlanActivityStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   CarePlanActivityStatus
+   From: http://hl7.org/fhir/care-plan-activity-status in valuesets.xml
+       Codes that reflect the current state of a care plan activity within its
+   overall life cycle.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/care-plan-activity-status
+
+      
+
+
+.. class:: CarePlanActivityStatusCodeValues
+
+   Care plan activity is planned but no action has yet been taken.
+   From: http://hl7.org/fhir/care-plan-activity-status in valuesets.xml
+
+   .. attribute:: NotStarted
+      
+
+      Appointment or other booking has occurred but activity has not yet begun.
+      From: http://hl7.org/fhir/care-plan-activity-status in valuesets.xml
+
+
+   .. attribute:: Scheduled
+      
+
+      Care plan activity has been started but is not yet complete.
+      From: http://hl7.org/fhir/care-plan-activity-status in valuesets.xml
+
+
+   .. attribute:: InProgress
+      
+
+      Care plan activity was started but has temporarily ceased with an expectation
+      of resumption at a future time.
+      From: http://hl7.org/fhir/care-plan-activity-status in valuesets.xml
+
+
+   .. attribute:: OnHold
+      
+
+      Care plan activity has been completed (more or less) as planned.
+      From: http://hl7.org/fhir/care-plan-activity-status in valuesets.xml
+
+
+   .. attribute:: Completed
+      
+
+      The planned care plan activity has been withdrawn.
+      From: http://hl7.org/fhir/care-plan-activity-status in valuesets.xml
+
+
+   .. attribute:: Cancelled
+      
+
+      The current state of the care plan activity is not known.  Note: This concept
+      is not to be used for "other" - one of the listed statuses is presumed to
+      apply, but the authoring/source system does not know which one.
+      From: http://hl7.org/fhir/care-plan-activity-status in valuesets.xml
+
+
+   .. attribute:: Unknown
+      
+
+      Care plan activity was entered in error and voided.
+      From: http://hl7.org/fhir/care-plan-activity-status in valuesets.xml
+
+
+   .. attribute:: EnteredInError
+      
+
+      
+
+

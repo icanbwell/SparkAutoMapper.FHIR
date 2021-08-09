@@ -1,0 +1,237 @@
+:mod:`spark_auto_mapper_fhir.value_sets.audit_event_entity_role`
+================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.audit_event_entity_role
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.audit_event_entity_role.AuditEventEntityRoleCode
+   spark_auto_mapper_fhir.value_sets.audit_event_entity_role.AuditEventEntityRoleCodeValues
+
+
+
+.. class:: AuditEventEntityRoleCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   AuditEventEntityRole
+   From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
+       Code representing the role the entity played in the audit event.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/object-role
+
+      
+
+
+.. class:: AuditEventEntityRoleCodeValues
+
+   This object is the patient that is the subject of care related to this event.
+   It is identifiable by patient ID or equivalent.  The patient may be either
+   human or animal.
+   From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
+
+   .. attribute:: Patient
+      
+
+      This is a location identified as related to the event.  This is usually the
+      location where the event took place.  Note that for shipping, the usual events
+      are arrival at a location or departure from a location.
+      From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
+
+
+   .. attribute:: Location
+      
+
+      This object is any kind of persistent document created as a result of the
+      event.  This could be a paper report, film, electronic report, DICOM Study,
+      etc.  Issues related to medical records life cycle management are conveyed
+      elsewhere.
+      From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
+
+
+   .. attribute:: Report
+      
+
+      A logical object related to a health record event.  This is any healthcare
+      specific resource (object) not restricted to FHIR defined Resources.
+      From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
+
+
+   .. attribute:: DomainResource
+      
+
+      This is any configurable file used to control creation of documents.  Examples
+      include the objects maintained by the HL7 Master File transactions, Value
+      Sets, etc.
+      From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
+
+
+   .. attribute:: MasterFile
+      
+
+      A human participant not otherwise identified by some other category.
+      From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
+
+
+   .. attribute:: User
+      
+
+      (deprecated).
+      From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
+
+
+   .. attribute:: List_
+      
+
+      Typically, a licensed person who is providing or performing care related to
+      the event, generally a physician.   The key distinction between doctor and
+      practitioner is with regards to their role, not the licensing.  The doctor is
+      the human who actually performed the work.  The practitioner is the human or
+      organization that is responsible for the work.
+      From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
+
+
+   .. attribute:: Doctor
+      
+
+      A person or system that is being notified as part of the event.  This is
+      relevant in situations where automated systems provide notifications to other
+      parties when an event took place.
+      From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
+
+
+   .. attribute:: Subscriber
+      
+
+      Insurance company, or any other organization who accepts responsibility for
+      paying for the healthcare event.
+      From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
+
+
+   .. attribute:: Guarantor
+      
+
+      A person or active system object involved in the event with a security role.
+      From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
+
+
+   .. attribute:: SecurityUserEntity
+      
+
+      A person or system object involved in the event with the authority to modify
+      security roles of other objects.
+      From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
+
+
+   .. attribute:: SecurityUserGroup
+      
+
+      A passive object, such as a role table, that is relevant to the event.
+      From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
+
+
+   .. attribute:: SecurityResource
+      
+
+      (deprecated)  Relevant to certain RBAC security methodologies.
+      From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
+
+
+   .. attribute:: SecurityGranularityDefinition
+      
+
+      Any person or organization responsible for providing care.  This encompasses
+      all forms of care, licensed or otherwise, and all sorts of teams and care
+      groups. Note the distinction between practitioner and the doctor that actually
+      provided the care to the patient.
+      From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
+
+
+   .. attribute:: Practitioner
+      
+
+      The source or destination for data transfer, when it does not match some other
+      role.
+      From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
+
+
+   .. attribute:: DataDestination
+      
+
+      A source or destination for data transfer that acts as an archive, database,
+      or similar role.
+      From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
+
+
+   .. attribute:: DataRepository
+      
+
+      An object that holds schedule information.  This could be an appointment book,
+      availability information, etc.
+      From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
+
+
+   .. attribute:: Schedule
+      
+
+      An organization or person that is the recipient of services.  This could be an
+      organization that is buying services for a patient, or a person that is buying
+      services for an animal.
+      From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
+
+
+   .. attribute:: Customer
+      
+
+      An order, task, work item, procedure step, or other description of work to be
+      performed; e.g. a particular instance of an MPPS.
+      From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
+
+
+   .. attribute:: Job
+      
+
+      A list of jobs or a system that provides lists of jobs; e.g. an MWL SCP.
+      From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
+
+
+   .. attribute:: JobStream
+      
+
+      (Deprecated).
+      From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
+
+
+   .. attribute:: Table
+      
+
+      An object that specifies or controls the routing or delivery of items.  For
+      example, a distribution list is the routing criteria for mail.  The items
+      delivered may be documents, jobs, or other objects.
+      From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
+
+
+   .. attribute:: RoutingCriteria
+      
+
+      The contents of a query.  This is used to capture the contents of any kind of
+      query.  For security surveillance purposes knowing the queries being made is
+      very important.
+      From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
+
+
+   .. attribute:: Query
+      
+
+      
+
+

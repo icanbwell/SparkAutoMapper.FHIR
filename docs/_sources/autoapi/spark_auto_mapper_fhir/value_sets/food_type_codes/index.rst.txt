@@ -1,0 +1,35 @@
+:mod:`spark_auto_mapper_fhir.value_sets.food_type_codes`
+========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.food_type_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.food_type_codes.FoodTypeCodesCode
+
+
+
+.. class:: FoodTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   FoodTypeCodes
+   From: http://hl7.org/fhir/ValueSet/food-type in valuesets.xml
+       This value set represents codes for types of foods and is provided as a
+   suggestive example. It include codes from [SNOMED CT](http://snomed.info/sct)
+   where concept is-a 255620007 (Foods (substance)).
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://snomed.info/sct
+
+      
+
+

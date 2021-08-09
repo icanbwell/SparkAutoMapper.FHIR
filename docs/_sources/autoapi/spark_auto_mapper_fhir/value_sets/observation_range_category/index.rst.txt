@@ -1,0 +1,60 @@
+:mod:`spark_auto_mapper_fhir.value_sets.observation_range_category`
+===================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.observation_range_category
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.observation_range_category.ObservationRangeCategoryCode
+   spark_auto_mapper_fhir.value_sets.observation_range_category.ObservationRangeCategoryCodeValues
+
+
+
+.. class:: ObservationRangeCategoryCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ObservationRangeCategory
+   From: http://hl7.org/fhir/observation-range-category in valuesets.xml
+       Codes identifying the category of observation range.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/observation-range-category
+
+      
+
+
+.. class:: ObservationRangeCategoryCodeValues
+
+   Reference (Normal) Range for Ordinal and Continuous Observations.
+   From: http://hl7.org/fhir/observation-range-category in valuesets.xml
+
+   .. attribute:: ReferenceRange
+      
+
+      Critical Range for Ordinal and Continuous Observations.
+      From: http://hl7.org/fhir/observation-range-category in valuesets.xml
+
+
+   .. attribute:: CriticalRange
+      
+
+      Absolute Range for Ordinal and Continuous Observations. Results outside this
+      range are not possible.
+      From: http://hl7.org/fhir/observation-range-category in valuesets.xml
+
+
+   .. attribute:: AbsoluteRange
+      
+
+      
+
+

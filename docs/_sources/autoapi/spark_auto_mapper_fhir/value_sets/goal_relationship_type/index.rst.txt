@@ -1,0 +1,78 @@
+:mod:`spark_auto_mapper_fhir.value_sets.goal_relationship_type`
+===============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.goal_relationship_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.goal_relationship_type.GoalRelationshipTypeCode
+   spark_auto_mapper_fhir.value_sets.goal_relationship_type.GoalRelationshipTypeCodeValues
+
+
+
+.. class:: GoalRelationshipTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   GoalRelationshipType
+   From: http://terminology.hl7.org/CodeSystem/goal-relationship-type in valuesets.xml
+       Types of relationships between two goals.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/goal-relationship-type
+
+      
+
+
+.. class:: GoalRelationshipTypeCodeValues
+
+   Indicates that the target goal is one which must be met before striving for
+   the current goal.
+   From: http://terminology.hl7.org/CodeSystem/goal-relationship-type in valuesets.xml
+
+   .. attribute:: Predecessor
+      
+
+      Indicates that the target goal is a desired objective once the current goal is
+      met.
+      From: http://terminology.hl7.org/CodeSystem/goal-relationship-type in valuesets.xml
+
+
+   .. attribute:: Successor
+      
+
+      Indicates that this goal has been replaced by the target goal.
+      From: http://terminology.hl7.org/CodeSystem/goal-relationship-type in valuesets.xml
+
+
+   .. attribute:: Replacement
+      
+
+      Indicates that the target goal is considered to be a "piece" of attaining this
+      goal.
+      From: http://terminology.hl7.org/CodeSystem/goal-relationship-type in valuesets.xml
+
+
+   .. attribute:: Milestone
+      
+
+      Indicates that the relationship is not covered by one of the pre-defined
+      codes.  (An extension may convey more information about the meaning of the
+      relationship.).
+      From: http://terminology.hl7.org/CodeSystem/goal-relationship-type in valuesets.xml
+
+
+   .. attribute:: Other
+      
+
+      
+
+

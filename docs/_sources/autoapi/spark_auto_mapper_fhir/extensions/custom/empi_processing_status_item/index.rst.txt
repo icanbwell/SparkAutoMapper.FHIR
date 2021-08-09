@@ -1,0 +1,26 @@
+:mod:`spark_auto_mapper_fhir.extensions.custom.empi_processing_status_item`
+===========================================================================
+
+.. py:module:: spark_auto_mapper_fhir.extensions.custom.empi_processing_status_item
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.extensions.custom.empi_processing_status_item.EmpiProcessingStatusExtensionItem
+
+
+
+.. class:: EmpiProcessingStatusExtensionItem(url: str, valueString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, valueDateTime: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.extensions.custom.base_extension_item.BaseExtensionItem`
+
+   DO NOT USE DIRECTLY!  ALWAYS USE A SUB_CLASS.
+
+

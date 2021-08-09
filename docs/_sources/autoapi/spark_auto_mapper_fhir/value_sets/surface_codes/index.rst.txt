@@ -1,0 +1,115 @@
+:mod:`spark_auto_mapper_fhir.value_sets.surface_codes`
+======================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.surface_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.surface_codes.SurfaceCodesCode
+   spark_auto_mapper_fhir.value_sets.surface_codes.SurfaceCodesCodeValues
+
+
+
+.. class:: SurfaceCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   SurfaceCodes
+   From: http://terminology.hl7.org/CodeSystem/FDI-surface in valuesets.xml
+       This value set includes a smattering of FDI tooth surface codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/FDI-surface
+
+      
+
+
+.. class:: SurfaceCodesCodeValues
+
+   The surface of a tooth that is closest to the midline (middle) of the face.
+   From: http://terminology.hl7.org/CodeSystem/FDI-surface in valuesets.xml
+
+   .. attribute:: Mesial
+      
+
+      The chewing surface of posterior teeth.
+      From: http://terminology.hl7.org/CodeSystem/FDI-surface in valuesets.xml
+
+
+   .. attribute:: Occlusal
+      
+
+      The biting edge of anterior teeth.
+      From: http://terminology.hl7.org/CodeSystem/FDI-surface in valuesets.xml
+
+
+   .. attribute:: Incisal
+      
+
+      The surface of a tooth that faces away from the midline of the face.
+      From: http://terminology.hl7.org/CodeSystem/FDI-surface in valuesets.xml
+
+
+   .. attribute:: Distal
+      
+
+      The surface of a posterior tooth facing the cheeks.
+      From: http://terminology.hl7.org/CodeSystem/FDI-surface in valuesets.xml
+
+
+   .. attribute:: Buccal
+      
+
+      The surface of a tooth facing the lips.
+      From: http://terminology.hl7.org/CodeSystem/FDI-surface in valuesets.xml
+
+
+   .. attribute:: Ventral
+      
+
+      The surface of a tooth facing the tongue.
+      From: http://terminology.hl7.org/CodeSystem/FDI-surface in valuesets.xml
+
+
+   .. attribute:: Lingual
+      
+
+      The Mesioclusal surfaces of a tooth.
+      From: http://terminology.hl7.org/CodeSystem/FDI-surface in valuesets.xml
+
+
+   .. attribute:: Mesioclusal
+      
+
+      The Distoclusal surfaces of a tooth.
+      From: http://terminology.hl7.org/CodeSystem/FDI-surface in valuesets.xml
+
+
+   .. attribute:: Distoclusal
+      
+
+      The Distoincisal surfaces of a tooth.
+      From: http://terminology.hl7.org/CodeSystem/FDI-surface in valuesets.xml
+
+
+   .. attribute:: Distoincisal
+      
+
+      The Mesioclusodistal surfaces of a tooth.
+      From: http://terminology.hl7.org/CodeSystem/FDI-surface in valuesets.xml
+
+
+   .. attribute:: Mesioclusodistal
+      
+
+      
+
+

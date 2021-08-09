@@ -1,0 +1,110 @@
+:mod:`spark_auto_mapper_fhir.value_sets.postal_address_use`
+===========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.postal_address_use
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.postal_address_use.PostalAddressUseCode
+   spark_auto_mapper_fhir.value_sets.postal_address_use.PostalAddressUseCodeValues
+
+
+
+.. class:: PostalAddressUseCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   PostalAddressUse
+   From: http://hl7.org/fhir/ValueSet/postal-address-use in valuesets.xml
+       Uses of an address not included in Address.use.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-AddressUse
+
+      
+
+
+.. class:: PostalAddressUseCodeValues
+
+   Description: Address uses that can apply to both postal and telecommunication
+   addresses.
+   From: http://terminology.hl7.org/CodeSystem/v3-AddressUse in v3-codesystems.xml
+
+   .. attribute:: _GeneralAddressUse
+      
+
+      Description: Address uses that only apply to postal addresses, not
+      telecommunication addresses.
+      From: http://terminology.hl7.org/CodeSystem/v3-AddressUse in v3-codesystems.xml
+
+
+   .. attribute:: _PostalAddressUse
+      
+
+      Description: Address uses that only apply to telecommunication addresses, not
+      postal addresses.
+      From: http://terminology.hl7.org/CodeSystem/v3-AddressUse in v3-codesystems.xml
+
+
+   .. attribute:: _TelecommunicationAddressUse
+      
+
+      From: http://hl7.org/fhir/ValueSet/postal-address-use in valuesets.xml
+
+
+   .. attribute:: BadAddress
+      
+
+      From: http://hl7.org/fhir/ValueSet/postal-address-use in valuesets.xml
+
+
+   .. attribute:: ConfidentialAddress
+      
+
+      From: http://hl7.org/fhir/ValueSet/postal-address-use in valuesets.xml
+
+
+   .. attribute:: PrimaryHome
+      
+
+      From: http://hl7.org/fhir/ValueSet/postal-address-use in valuesets.xml
+
+
+   .. attribute:: VacationHome
+      
+
+      From: http://hl7.org/fhir/ValueSet/postal-address-use in valuesets.xml
+
+
+   .. attribute:: Direct
+      
+
+      From: http://hl7.org/fhir/ValueSet/postal-address-use in valuesets.xml
+
+
+   .. attribute:: Public
+      
+
+      From: http://hl7.org/fhir/ValueSet/postal-address-use in valuesets.xml
+
+
+   .. attribute:: PhysicalVisitAddress
+      
+
+      From: http://hl7.org/fhir/ValueSet/postal-address-use in valuesets.xml
+
+
+   .. attribute:: PostalAddress
+      
+
+      
+
+

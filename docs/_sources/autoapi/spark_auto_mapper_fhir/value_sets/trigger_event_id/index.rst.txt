@@ -1,0 +1,124 @@
+:mod:`spark_auto_mapper_fhir.value_sets.trigger_event_id`
+=========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.trigger_event_id
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.trigger_event_id.TriggerEventID
+   spark_auto_mapper_fhir.value_sets.trigger_event_id.TriggerEventIDValues
+
+
+
+.. class:: TriggerEventID(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.triggerEventID
+   From: http://terminology.hl7.org/ValueSet/v3-triggerEventID in v3-codesystems.xml
+         Description:
+   This code system contains all HL7 artifacts of type TE (Trigger Event) that
+   are created by HL7 or its affiliates or their designates using the realm
+   namespacing rules approved by HL7.  Local implementations who create trigger
+   events outside of these namespacing rules, (e.g. using the ZZ realm code) must
+   register their own code system.  The specific list of legal codes can be found
+   by consulting the HL7 publications (editions, ballots, implementation guides,
+   etc.) published by HL7 Inc. and by the various HL7 affiliates and their
+   designates.  Codes shall be expressed in upper case, with separator as shown
+   in HL7 publications with no version id.  E.g. PORX_TE123456UV.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-triggerEventID
+
+      
+
+
+.. class:: TriggerEventIDValues
+
+   Description:
+   From: http://terminology.hl7.org/CodeSystem/v3-triggerEventID in v3-codesystems.xml
+
+   .. attribute:: ResultStatus
+      
+
+      Description:
+      From: http://terminology.hl7.org/CodeSystem/v3-triggerEventID in v3-codesystems.xml
+
+
+   .. attribute:: ResultConfirm
+      
+
+      Description:
+      From: http://terminology.hl7.org/CodeSystem/v3-triggerEventID in v3-codesystems.xml
+
+
+   .. attribute:: ResultReject
+      
+
+      Description:
+      From: http://terminology.hl7.org/CodeSystem/v3-triggerEventID in v3-codesystems.xml
+
+
+   .. attribute:: ResultTracking
+      
+
+      Description:
+      From: http://terminology.hl7.org/CodeSystem/v3-triggerEventID in v3-codesystems.xml
+
+
+   .. attribute:: ResultInProgress
+      
+
+      Description:
+      From: http://terminology.hl7.org/CodeSystem/v3-triggerEventID in v3-codesystems.xml
+
+
+   .. attribute:: ResultActivate
+      
+
+      Description:
+      From: http://terminology.hl7.org/CodeSystem/v3-triggerEventID in v3-codesystems.xml
+
+
+   .. attribute:: ResultCompleteWithFulfillment
+      
+
+      Description:
+      From: http://terminology.hl7.org/CodeSystem/v3-triggerEventID in v3-codesystems.xml
+
+
+   .. attribute:: ResultCorrected
+      
+
+      Description:
+      From: http://terminology.hl7.org/CodeSystem/v3-triggerEventID in v3-codesystems.xml
+
+
+   .. attribute:: ResultComplete
+      
+
+      Description:
+      From: http://terminology.hl7.org/CodeSystem/v3-triggerEventID in v3-codesystems.xml
+
+
+   .. attribute:: ResultAbort
+      
+
+      Description:
+      From: http://terminology.hl7.org/CodeSystem/v3-triggerEventID in v3-codesystems.xml
+
+
+   .. attribute:: ResultNullify
+      
+
+      
+
+

@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.substance_specification_relationship`
+====================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.substance_specification_relationship
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.substance_specification_relationship.SubstanceSpecificationRelationship
+
+
+
+.. class:: SubstanceSpecificationRelationship(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, substanceReference: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.substance_specification.SubstanceSpecification]] = None, substanceCodeableConcept: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, relationship: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, isDefining: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, amountQuantity: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, amountRange: Optional[spark_auto_mapper_fhir.complex_types.range.Range] = None, amountRatio: Optional[spark_auto_mapper_fhir.complex_types.ratio.Ratio] = None, amountString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, amountRatioLowLimit: Optional[spark_auto_mapper_fhir.complex_types.ratio.Ratio] = None, amountType: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, source: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.document_reference.DocumentReference]]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   SubstanceSpecification.Relationship
+   The detailed description of a substance, typically at a level beyond what is used for prescribing.
+
+

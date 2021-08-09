@@ -1,0 +1,86 @@
+:mod:`spark_auto_mapper_fhir.value_sets.specimen_processing_procedure`
+======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.specimen_processing_procedure
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.specimen_processing_procedure.SpecimenProcessingProcedureCode
+   spark_auto_mapper_fhir.value_sets.specimen_processing_procedure.SpecimenProcessingProcedureCodeValues
+
+
+
+.. class:: SpecimenProcessingProcedureCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   SpecimenProcessingProcedure
+   From: http://hl7.org/fhir/ValueSet/specimen-processing-procedure in valuesets.xml
+       The technique that is used to perform the process or preserve the specimen.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v2-0373
+
+      
+
+
+.. class:: SpecimenProcessingProcedureCodeValues
+
+   From: http://terminology.hl7.org/CodeSystem/v2-0373 in v2-tables.xml
+
+   .. attribute:: Acidification
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0373 in v2-tables.xml
+
+
+   .. attribute:: Alkalization
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0373 in v2-tables.xml
+
+
+   .. attribute:: Defibrination
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0373 in v2-tables.xml
+
+
+   .. attribute:: Filtration
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0373 in v2-tables.xml
+
+
+   .. attribute:: LDLPrecipitation
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0373 in v2-tables.xml
+
+
+   .. attribute:: Neutralization
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0373 in v2-tables.xml
+
+
+   .. attribute:: Recalification
+      
+
+      From: http://terminology.hl7.org/CodeSystem/v2-0373 in v2-tables.xml
+
+
+   .. attribute:: Ultrafiltration
+      
+
+      
+
+

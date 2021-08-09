@@ -1,0 +1,108 @@
+:mod:`spark_auto_mapper_fhir.value_sets.search_param_type`
+==========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.search_param_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.search_param_type.SearchParamTypeCode
+   spark_auto_mapper_fhir.value_sets.search_param_type.SearchParamTypeCodeValues
+
+
+
+.. class:: SearchParamTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   SearchParamType
+   From: http://hl7.org/fhir/search-param-type in valuesets.xml
+       Data types allowed to be used for search parameters.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/search-param-type
+
+      
+
+
+.. class:: SearchParamTypeCodeValues
+
+   Search parameter SHALL be a number (a whole number, or a decimal).
+   From: http://hl7.org/fhir/search-param-type in valuesets.xml
+
+   .. attribute:: Number
+      
+
+      Search parameter is on a date/time. The date format is the standard XML
+      format, though other formats may be supported.
+      From: http://hl7.org/fhir/search-param-type in valuesets.xml
+
+
+   .. attribute:: Date_DateTime
+      
+
+      Search parameter is a simple string, like a name part. Search is case-
+      insensitive and accent-insensitive. May match just the start of a string.
+      String parameters may contain spaces.
+      From: http://hl7.org/fhir/search-param-type in valuesets.xml
+
+
+   .. attribute:: String
+      
+
+      Search parameter on a coded element or identifier. May be used to search
+      through the text, display, code and code/codesystem (for codes) and label,
+      system and key (for identifier). Its value is either a string or a pair of
+      namespace and value, separated by a "|", depending on the modifier used.
+      From: http://hl7.org/fhir/search-param-type in valuesets.xml
+
+
+   .. attribute:: Token
+      
+
+      A reference to another resource (Reference or canonical).
+      From: http://hl7.org/fhir/search-param-type in valuesets.xml
+
+
+   .. attribute:: Reference
+      
+
+      A composite search parameter that combines a search on two values together.
+      From: http://hl7.org/fhir/search-param-type in valuesets.xml
+
+
+   .. attribute:: Composite
+      
+
+      A search parameter that searches on a quantity.
+      From: http://hl7.org/fhir/search-param-type in valuesets.xml
+
+
+   .. attribute:: Quantity
+      
+
+      A search parameter that searches on a URI (RFC 3986).
+      From: http://hl7.org/fhir/search-param-type in valuesets.xml
+
+
+   .. attribute:: URI
+      
+
+      Special logic applies to this parameter per the description of the search
+      parameter.
+      From: http://hl7.org/fhir/search-param-type in valuesets.xml
+
+
+   .. attribute:: Special
+      
+
+      
+
+

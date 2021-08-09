@@ -1,0 +1,92 @@
+:mod:`spark_auto_mapper_fhir.value_sets.primary_source_type`
+============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.primary_source_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.primary_source_type.Primary_source_typeCode
+   spark_auto_mapper_fhir.value_sets.primary_source_type.Primary_source_typeCodeValues
+
+
+
+.. class:: Primary_source_typeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   primary-source-type
+   From: http://terminology.hl7.org/CodeSystem/primary-source-type in valuesets.xml
+       Type of the validation primary source
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/primary-source-type
+
+      
+
+
+.. class:: Primary_source_typeCodeValues
+
+   From: http://terminology.hl7.org/CodeSystem/primary-source-type in valuesets.xml
+
+   .. attribute:: LicenseBoard
+      
+
+      From: http://terminology.hl7.org/CodeSystem/primary-source-type in valuesets.xml
+
+
+   .. attribute:: PrimaryEducation
+      
+
+      From: http://terminology.hl7.org/CodeSystem/primary-source-type in valuesets.xml
+
+
+   .. attribute:: ContinuingEducation
+      
+
+      From: http://terminology.hl7.org/CodeSystem/primary-source-type in valuesets.xml
+
+
+   .. attribute:: PostalService
+      
+
+      From: http://terminology.hl7.org/CodeSystem/primary-source-type in valuesets.xml
+
+
+   .. attribute:: RelationshipOwner
+      
+
+      From: http://terminology.hl7.org/CodeSystem/primary-source-type in valuesets.xml
+
+
+   .. attribute:: RegistrationAuthority
+      
+
+      From: http://terminology.hl7.org/CodeSystem/primary-source-type in valuesets.xml
+
+
+   .. attribute:: LegalSource
+      
+
+      From: http://terminology.hl7.org/CodeSystem/primary-source-type in valuesets.xml
+
+
+   .. attribute:: IssuingSource
+      
+
+      From: http://terminology.hl7.org/CodeSystem/primary-source-type in valuesets.xml
+
+
+   .. attribute:: AuthoritativeSource
+      
+
+      
+
+

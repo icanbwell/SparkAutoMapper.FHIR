@@ -1,0 +1,32 @@
+:mod:`spark_auto_mapper_fhir.complex_types.address`
+===================================================
+
+.. py:module:: spark_auto_mapper_fhir.complex_types.address
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.complex_types.address.Address
+
+
+
+.. class:: Address(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, use: Optional[spark_auto_mapper_fhir.value_sets.address_use.AddressUseCode] = None, type_: Optional[spark_auto_mapper_fhir.value_sets.address_type.AddressTypeCode] = None, text: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, line: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.string.FhirString]] = None, city: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, district: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, state: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, postalCode: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, country: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, period: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
+
+   Address
+   fhir-base.xsd
+       An address expressed using postal conventions (as opposed to GPS or other location definition formats).  This data type may be used to convey addresses for use in delivering mail as well as for visiting locations which might not be valid for mail delivery.  There are a variety of postal address formats defined around the world.
+       If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
+
+   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+
+
+

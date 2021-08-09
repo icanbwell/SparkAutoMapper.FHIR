@@ -1,0 +1,52 @@
+:mod:`spark_auto_mapper_fhir.value_sets.operation_kind`
+=======================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.operation_kind
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.operation_kind.OperationKindCode
+   spark_auto_mapper_fhir.value_sets.operation_kind.OperationKindCodeValues
+
+
+
+.. class:: OperationKindCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   OperationKind
+   From: http://hl7.org/fhir/operation-kind in valuesets.xml
+       Whether an operation is a normal operation or a query.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/operation-kind
+
+      
+
+
+.. class:: OperationKindCodeValues
+
+   This operation is invoked as an operation.
+   From: http://hl7.org/fhir/operation-kind in valuesets.xml
+
+   .. attribute:: Operation
+      
+
+      This operation is a named query, invoked using the search mechanism.
+      From: http://hl7.org/fhir/operation-kind in valuesets.xml
+
+
+   .. attribute:: Query
+      
+
+      
+
+

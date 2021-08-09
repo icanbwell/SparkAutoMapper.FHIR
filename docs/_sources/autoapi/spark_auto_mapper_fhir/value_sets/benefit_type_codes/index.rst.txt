@@ -1,0 +1,122 @@
+:mod:`spark_auto_mapper_fhir.value_sets.benefit_type_codes`
+===========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.benefit_type_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.benefit_type_codes.BenefitTypeCodesCode
+   spark_auto_mapper_fhir.value_sets.benefit_type_codes.BenefitTypeCodesCodeValues
+
+
+
+.. class:: BenefitTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   BenefitTypeCodes
+   From: http://terminology.hl7.org/CodeSystem/benefit-type in valuesets.xml
+       This value set includes a smattering of Benefit type codes.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/benefit-type
+
+      
+
+
+.. class:: BenefitTypeCodesCodeValues
+
+   Maximum benefit allowable.
+   From: http://terminology.hl7.org/CodeSystem/benefit-type in valuesets.xml
+
+   .. attribute:: Benefit
+      
+
+      Cost to be incurred before benefits are applied
+      From: http://terminology.hl7.org/CodeSystem/benefit-type in valuesets.xml
+
+
+   .. attribute:: Deductible
+      
+
+      Service visit
+      From: http://terminology.hl7.org/CodeSystem/benefit-type in valuesets.xml
+
+
+   .. attribute:: Visit
+      
+
+      Type of room
+      From: http://terminology.hl7.org/CodeSystem/benefit-type in valuesets.xml
+
+
+   .. attribute:: Room
+      
+
+      Copayment per service
+      From: http://terminology.hl7.org/CodeSystem/benefit-type in valuesets.xml
+
+
+   .. attribute:: CopaymentPerService
+      
+
+      Copayment percentage per service
+      From: http://terminology.hl7.org/CodeSystem/benefit-type in valuesets.xml
+
+
+   .. attribute:: CopaymentPercentPerService
+      
+
+      Copayment maximum per service
+      From: http://terminology.hl7.org/CodeSystem/benefit-type in valuesets.xml
+
+
+   .. attribute:: CopaymentMaximumPerService
+      
+
+      Vision Exam
+      From: http://terminology.hl7.org/CodeSystem/benefit-type in valuesets.xml
+
+
+   .. attribute:: VisionExam
+      
+
+      Frames and lenses
+      From: http://terminology.hl7.org/CodeSystem/benefit-type in valuesets.xml
+
+
+   .. attribute:: VisionGlasses
+      
+
+      Contact Lenses
+      From: http://terminology.hl7.org/CodeSystem/benefit-type in valuesets.xml
+
+
+   .. attribute:: VisionContactsCoverage
+      
+
+      Medical Primary Health Coverage
+      From: http://terminology.hl7.org/CodeSystem/benefit-type in valuesets.xml
+
+
+   .. attribute:: MedicalPrimaryHealthCoverage
+      
+
+      Pharmacy Dispense Coverage
+      From: http://terminology.hl7.org/CodeSystem/benefit-type in valuesets.xml
+
+
+   .. attribute:: PharmacyDispenseCoverage
+      
+
+      
+
+

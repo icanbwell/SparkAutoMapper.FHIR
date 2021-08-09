@@ -1,0 +1,419 @@
+:mod:`spark_auto_mapper_fhir.generator.fhir_xml_schema_parser`
+==============================================================
+
+.. py:module:: spark_auto_mapper_fhir.generator.fhir_xml_schema_parser
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.generator.fhir_xml_schema_parser.SmartName
+   spark_auto_mapper_fhir.generator.fhir_xml_schema_parser.FhirValueSetConcept
+   spark_auto_mapper_fhir.generator.fhir_xml_schema_parser.FhirValueSet
+   spark_auto_mapper_fhir.generator.fhir_xml_schema_parser.FhirCodeableType
+   spark_auto_mapper_fhir.generator.fhir_xml_schema_parser.FhirReferenceType
+   spark_auto_mapper_fhir.generator.fhir_xml_schema_parser.FhirProperty
+   spark_auto_mapper_fhir.generator.fhir_xml_schema_parser.FhirEntity
+   spark_auto_mapper_fhir.generator.fhir_xml_schema_parser.FhirXmlSchemaParser
+
+
+
+.. class:: SmartName
+
+   .. attribute:: name
+      :annotation: :str
+
+      
+
+   .. attribute:: cleaned_name
+      :annotation: :str
+
+      
+
+   .. attribute:: snake_case_name
+      :annotation: :str
+
+      
+
+
+.. class:: FhirValueSetConcept
+
+   .. attribute:: code
+      :annotation: :str
+
+      
+
+   .. attribute:: display
+      :annotation: :Optional[str]
+
+      
+
+   .. attribute:: cleaned_display
+      :annotation: :Optional[str]
+
+      
+
+   .. attribute:: definition
+      :annotation: :Optional[str]
+
+      
+
+   .. attribute:: source
+      :annotation: :str
+
+      
+
+   .. attribute:: value_set_url
+      :annotation: :str
+
+      
+
+
+.. class:: FhirValueSet
+
+   .. attribute:: id_
+      :annotation: :str
+
+      
+
+   .. attribute:: name
+      :annotation: :str
+
+      
+
+   .. attribute:: fhir_name
+      :annotation: :str
+
+      
+
+   .. attribute:: name_snake_case
+      :annotation: :str
+
+      
+
+   .. attribute:: cleaned_name
+      :annotation: :str
+
+      
+
+   .. attribute:: concepts
+      :annotation: :List[FhirValueSetConcept]
+
+      
+
+   .. attribute:: url
+      :annotation: :str
+
+      
+
+   .. attribute:: value_set_url
+      :annotation: :str
+
+      
+
+   .. attribute:: value_set_url_list
+      :annotation: :Set[str]
+
+      
+
+   .. attribute:: documentation
+      :annotation: :List[str]
+
+      
+
+   .. attribute:: source
+      :annotation: :str
+
+      
+
+
+.. class:: FhirCodeableType
+
+   .. attribute:: codeable_type
+      :annotation: :str
+
+      
+
+   .. attribute:: path
+      :annotation: :str
+
+      
+
+   .. attribute:: codeable_type_url
+      :annotation: :str
+
+      
+
+   .. attribute:: is_codeable_concept
+      :annotation: :bool = False
+
+      
+
+
+.. class:: FhirReferenceType
+
+   .. attribute:: target_resources
+      :annotation: :List[str]
+
+      
+
+   .. attribute:: path
+      :annotation: :str
+
+      
+
+
+.. class:: FhirProperty
+
+   .. attribute:: name
+      :annotation: :str
+
+      
+
+   .. attribute:: fhir_name
+      :annotation: :str
+
+      
+
+   .. attribute:: type_
+      :annotation: :str
+
+      
+
+   .. attribute:: cleaned_type
+      :annotation: :str
+
+      
+
+   .. attribute:: type_snake_case
+      :annotation: :str
+
+      
+
+   .. attribute:: optional
+      :annotation: :bool
+
+      
+
+   .. attribute:: is_list
+      :annotation: :bool
+
+      
+
+   .. attribute:: documentation
+      :annotation: :List[str]
+
+      
+
+   .. attribute:: fhir_type
+      :annotation: :Optional[str]
+
+      
+
+   .. attribute:: reference_target_resources
+      :annotation: :List[SmartName]
+
+      
+
+   .. attribute:: reference_target_resources_names
+      :annotation: :List[str]
+
+      
+
+   .. attribute:: is_back_bone_element
+      :annotation: :bool
+
+      
+
+   .. attribute:: is_basic_type
+      :annotation: :bool
+
+      
+
+   .. attribute:: codeable_type
+      :annotation: :Optional[SmartName]
+
+      
+
+   .. attribute:: is_resource
+      :annotation: :bool = False
+
+      
+
+   .. attribute:: is_extension
+      :annotation: :bool = False
+
+      
+
+   .. attribute:: is_code
+      :annotation: :bool = False
+
+      
+
+
+.. class:: FhirEntity
+
+   .. attribute:: fhir_name
+      :annotation: :str
+
+      
+
+   .. attribute:: cleaned_name
+      :annotation: :str
+
+      
+
+   .. attribute:: name_snake_case
+      :annotation: :str
+
+      
+
+   .. attribute:: properties
+      :annotation: :List[FhirProperty]
+
+      
+
+   .. attribute:: documentation
+      :annotation: :List[str]
+
+      
+
+   .. attribute:: type_
+      :annotation: :Optional[str]
+
+      
+
+   .. attribute:: is_back_bone_element
+      :annotation: :bool
+
+      
+
+   .. attribute:: base_type
+      :annotation: :Optional[str]
+
+      
+
+   .. attribute:: base_type_list
+      :annotation: :List[str]
+
+      
+
+   .. attribute:: source
+      :annotation: :str
+
+      
+
+   .. attribute:: is_value_set
+      :annotation: :bool = False
+
+      
+
+   .. attribute:: value_set_concepts
+      :annotation: :Optional[List[FhirValueSetConcept]]
+
+      
+
+   .. attribute:: value_set_url
+      :annotation: :Optional[str]
+
+      
+
+   .. attribute:: is_basic_type
+      :annotation: :bool = False
+
+      
+
+   .. attribute:: value_set_url_list
+      :annotation: :Optional[Set[str]]
+
+      
+
+   .. attribute:: is_resource
+      :annotation: :bool = False
+
+      
+
+   .. attribute:: is_extension
+      :annotation: :bool = False
+
+      
+
+
+.. data:: logger
+   
+
+   
+
+.. class:: FhirXmlSchemaParser
+
+   .. attribute:: cleaned_type_mapping
+      :annotation: :Dict[str, str]
+
+      
+
+   .. method:: camel_to_snake(name: str) -> str
+      :staticmethod:
+
+
+   .. method:: generate_classes(filter_to_resource: Optional[str] = None) -> List[spark_auto_mapper_fhir.generator.fhir_xml_schema_parser.FhirEntity]
+      :staticmethod:
+
+
+   .. method:: process_types_for_codeable_concepts(fhir_entities: List[spark_auto_mapper_fhir.generator.fhir_xml_schema_parser.FhirEntity], value_sets: List[spark_auto_mapper_fhir.generator.fhir_xml_schema_parser.FhirValueSet]) -> None
+      :staticmethod:
+
+
+   .. method:: process_types_for_references(fhir_entities: List[spark_auto_mapper_fhir.generator.fhir_xml_schema_parser.FhirEntity]) -> None
+      :staticmethod:
+
+
+   .. method:: _generate_classes_for_resource(resource_xsd_file: pathlib.Path) -> List[spark_auto_mapper_fhir.generator.fhir_xml_schema_parser.FhirEntity]
+      :staticmethod:
+
+
+   .. method:: generate_properties_for_class(*, entity_name: str, inner_complex_type: lxml.objectify.ObjectifiedElement) -> List[spark_auto_mapper_fhir.generator.fhir_xml_schema_parser.FhirProperty]
+      :staticmethod:
+
+
+   .. method:: fix_python_keywords(name: str) -> str
+      :staticmethod:
+
+
+   .. method:: get_all_property_types() -> List[spark_auto_mapper_fhir.generator.fhir_xml_schema_parser.FhirProperty]
+      :staticmethod:
+
+
+   .. method:: get_types_for_references() -> List[spark_auto_mapper_fhir.generator.fhir_xml_schema_parser.FhirReferenceType]
+      :staticmethod:
+
+
+   .. method:: get_types_for_codeable_concepts() -> List[spark_auto_mapper_fhir.generator.fhir_xml_schema_parser.FhirCodeableType]
+      :staticmethod:
+
+
+   .. method:: get_value_sets() -> List[spark_auto_mapper_fhir.generator.fhir_xml_schema_parser.FhirValueSet]
+      :staticmethod:
+
+
+   .. method:: create_concept(concept: lxml.objectify.ObjectifiedElement, source: str, value_set_url: str) -> spark_auto_mapper_fhir.generator.fhir_xml_schema_parser.FhirValueSetConcept
+      :staticmethod:
+
+
+   .. method:: clean_name(display: str) -> str
+      :staticmethod:
+
+
+   .. method:: get_v3_code_systems(data_dir: pathlib.Path) -> List[spark_auto_mapper_fhir.generator.fhir_xml_schema_parser.FhirValueSet]
+      :staticmethod:
+
+
+   .. method:: get_v2_code_systems(data_dir: pathlib.Path) -> List[spark_auto_mapper_fhir.generator.fhir_xml_schema_parser.FhirValueSet]
+      :staticmethod:
+
+
+

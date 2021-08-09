@@ -1,0 +1,66 @@
+:mod:`spark_auto_mapper_fhir.value_sets.action_participant_type`
+================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.action_participant_type
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.action_participant_type.ActionParticipantTypeCode
+   spark_auto_mapper_fhir.value_sets.action_participant_type.ActionParticipantTypeCodeValues
+
+
+
+.. class:: ActionParticipantTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ActionParticipantType
+   From: http://hl7.org/fhir/action-participant-type in valuesets.xml
+       The type of participant for the action.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/action-participant-type
+
+      
+
+
+.. class:: ActionParticipantTypeCodeValues
+
+   The participant is the patient under evaluation.
+   From: http://hl7.org/fhir/action-participant-type in valuesets.xml
+
+   .. attribute:: Patient
+      
+
+      The participant is a practitioner involved in the patient's care.
+      From: http://hl7.org/fhir/action-participant-type in valuesets.xml
+
+
+   .. attribute:: Practitioner
+      
+
+      The participant is a person related to the patient.
+      From: http://hl7.org/fhir/action-participant-type in valuesets.xml
+
+
+   .. attribute:: RelatedPerson
+      
+
+      The participant is a system or device used in the care of the patient.
+      From: http://hl7.org/fhir/action-participant-type in valuesets.xml
+
+
+   .. attribute:: Device
+      
+
+      
+
+

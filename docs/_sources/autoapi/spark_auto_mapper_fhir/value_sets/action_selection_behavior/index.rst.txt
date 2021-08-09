@@ -1,0 +1,82 @@
+:mod:`spark_auto_mapper_fhir.value_sets.action_selection_behavior`
+==================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.action_selection_behavior
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.action_selection_behavior.ActionSelectionBehaviorCode
+   spark_auto_mapper_fhir.value_sets.action_selection_behavior.ActionSelectionBehaviorCodeValues
+
+
+
+.. class:: ActionSelectionBehaviorCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   ActionSelectionBehavior
+   From: http://hl7.org/fhir/action-selection-behavior in valuesets.xml
+       Defines selection behavior of a group.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/action-selection-behavior
+
+      
+
+
+.. class:: ActionSelectionBehaviorCodeValues
+
+   Any number of the actions in the group may be chosen, from zero to all.
+   From: http://hl7.org/fhir/action-selection-behavior in valuesets.xml
+
+   .. attribute:: Any
+      
+
+      All the actions in the group must be selected as a single unit.
+      From: http://hl7.org/fhir/action-selection-behavior in valuesets.xml
+
+
+   .. attribute:: All
+      
+
+      All the actions in the group are meant to be chosen as a single unit: either
+      all must be selected by the end user, or none may be selected.
+      From: http://hl7.org/fhir/action-selection-behavior in valuesets.xml
+
+
+   .. attribute:: AllOrNone
+      
+
+      The end user must choose one and only one of the selectable actions in the
+      group. The user SHALL NOT choose none of the actions in the group.
+      From: http://hl7.org/fhir/action-selection-behavior in valuesets.xml
+
+
+   .. attribute:: ExactlyOne
+      
+
+      The end user may choose zero or at most one of the actions in the group.
+      From: http://hl7.org/fhir/action-selection-behavior in valuesets.xml
+
+
+   .. attribute:: AtMostOne
+      
+
+      The end user must choose a minimum of one, and as many additional as desired.
+      From: http://hl7.org/fhir/action-selection-behavior in valuesets.xml
+
+
+   .. attribute:: OneOrMore
+      
+
+      
+
+

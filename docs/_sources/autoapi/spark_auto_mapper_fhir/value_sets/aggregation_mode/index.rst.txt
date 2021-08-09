@@ -1,0 +1,53 @@
+:mod:`spark_auto_mapper_fhir.value_sets.aggregation_mode`
+=========================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.aggregation_mode
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.aggregation_mode.AggregationModeCode
+   spark_auto_mapper_fhir.value_sets.aggregation_mode.AggregationModeCodeValues
+
+
+
+.. class:: AggregationModeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   AggregationMode
+   From: http://hl7.org/fhir/resource-aggregation-mode in valuesets.xml
+       How resource references can be aggregated.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/resource-aggregation-mode
+
+      
+
+
+.. class:: AggregationModeCodeValues
+
+   The reference is a local reference to a contained resource.
+   From: http://hl7.org/fhir/resource-aggregation-mode in valuesets.xml
+
+   .. attribute:: Contained
+      
+
+      The reference to a resource that has to be resolved externally to the resource
+      that includes the reference.
+      From: http://hl7.org/fhir/resource-aggregation-mode in valuesets.xml
+
+
+   .. attribute:: Referenced
+      
+
+      
+
+

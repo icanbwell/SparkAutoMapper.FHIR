@@ -1,0 +1,55 @@
+:mod:`spark_auto_mapper_fhir.value_sets.managed_participation_status`
+=====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.managed_participation_status
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.managed_participation_status.ManagedParticipationStatus
+   spark_auto_mapper_fhir.value_sets.managed_participation_status.ManagedParticipationStatusValues
+
+
+
+.. class:: ManagedParticipationStatus(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   v3.ManagedParticipationStatus
+   From: http://terminology.hl7.org/ValueSet/v3-ManagedParticipationStatus in v3-codesystems.xml
+        Codes representing the defined possible states of a Managed Participation, as
+   defined by the Managed Participation class state machine.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ManagedParticipationStatus
+
+      
+
+
+.. class:: ManagedParticipationStatusValues
+
+   The 'typical' state. Excludes "nullified" which represents the termination
+   state of a participation instance that was created in error.
+   From: http://terminology.hl7.org/CodeSystem/v3-ManagedParticipationStatus in v3-codesystems.xml
+
+   .. attribute:: Normal
+      
+
+      The state representing the termination of a Participation instance that was
+      created in error.
+      From: http://terminology.hl7.org/CodeSystem/v3-ManagedParticipationStatus in v3-codesystems.xml
+
+
+   .. attribute:: Nullified
+      
+
+      
+
+

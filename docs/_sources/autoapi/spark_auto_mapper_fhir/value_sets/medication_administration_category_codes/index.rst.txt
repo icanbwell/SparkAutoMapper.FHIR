@@ -1,0 +1,61 @@
+:mod:`spark_auto_mapper_fhir.value_sets.medication_administration_category_codes`
+=================================================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.medication_administration_category_codes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.medication_administration_category_codes.MedicationAdministrationCategoryCodesCode
+   spark_auto_mapper_fhir.value_sets.medication_administration_category_codes.MedicationAdministrationCategoryCodesCodeValues
+
+
+
+.. class:: MedicationAdministrationCategoryCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   MedicationAdministration Category Codes
+   From: http://terminology.hl7.org/CodeSystem/medication-admin-category in valuesets.xml
+       MedicationAdministration Category Codes
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/medication-admin-category
+
+      
+
+
+.. class:: MedicationAdministrationCategoryCodesCodeValues
+
+   Includes administrations in an inpatient or acute care setting
+   From: http://terminology.hl7.org/CodeSystem/medication-admin-category in valuesets.xml
+
+   .. attribute:: Inpatient
+      
+
+      Includes administrations in an outpatient setting (for example, Emergency
+      Department, Outpatient Clinic, Outpatient Surgery, Doctor's office)
+      From: http://terminology.hl7.org/CodeSystem/medication-admin-category in valuesets.xml
+
+
+   .. attribute:: Outpatient
+      
+
+      Includes administrations by the patient in their home (this would include long
+      term care or nursing homes, hospices, etc.)
+      From: http://terminology.hl7.org/CodeSystem/medication-admin-category in valuesets.xml
+
+
+   .. attribute:: Community
+      
+
+      
+
+

@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.nutrition_order_texture`
+=======================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.nutrition_order_texture
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.nutrition_order_texture.NutritionOrderTexture
+
+
+
+.. class:: NutritionOrderTexture(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifier: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.texture_modifier_codes.TextureModifierCodesCode]] = None, foodType: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.texture_modified_food_type_codes.TextureModifiedFoodTypeCodesCode]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   NutritionOrder.Texture
+   A request to supply a diet, formula feeding (enteral) or oral nutritional supplement to a patient/resident.
+
+

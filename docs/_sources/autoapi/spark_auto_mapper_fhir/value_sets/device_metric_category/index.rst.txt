@@ -1,0 +1,67 @@
+:mod:`spark_auto_mapper_fhir.value_sets.device_metric_category`
+===============================================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.device_metric_category
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.device_metric_category.DeviceMetricCategoryCode
+   spark_auto_mapper_fhir.value_sets.device_metric_category.DeviceMetricCategoryCodeValues
+
+
+
+.. class:: DeviceMetricCategoryCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   DeviceMetricCategory
+   From: http://hl7.org/fhir/metric-category in valuesets.xml
+       Describes the category of the metric.
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://hl7.org/fhir/metric-category
+
+      
+
+
+.. class:: DeviceMetricCategoryCodeValues
+
+   DeviceObservations generated for this DeviceMetric are measured.
+   From: http://hl7.org/fhir/metric-category in valuesets.xml
+
+   .. attribute:: Measurement
+      
+
+      DeviceObservations generated for this DeviceMetric is a setting that will
+      influence the behavior of the Device.
+      From: http://hl7.org/fhir/metric-category in valuesets.xml
+
+
+   .. attribute:: Setting
+      
+
+      DeviceObservations generated for this DeviceMetric are calculated.
+      From: http://hl7.org/fhir/metric-category in valuesets.xml
+
+
+   .. attribute:: Calculation
+      
+
+      The category of this DeviceMetric is unspecified.
+      From: http://hl7.org/fhir/metric-category in valuesets.xml
+
+
+   .. attribute:: Unspecified
+      
+
+      
+
+

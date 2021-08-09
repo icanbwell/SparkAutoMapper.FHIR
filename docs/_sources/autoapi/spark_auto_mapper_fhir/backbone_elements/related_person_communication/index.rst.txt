@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.related_person_communication`
+============================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.related_person_communication
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.related_person_communication.RelatedPersonCommunication
+
+
+
+.. class:: RelatedPersonCommunication(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, language: spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode], preferred: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   RelatedPerson.Communication
+   Information about a person that is involved in the care for a patient, but who is not the target of healthcare, nor has a formal responsibility in the care process.
+
+

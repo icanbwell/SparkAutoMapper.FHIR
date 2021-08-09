@@ -1,0 +1,33 @@
+:mod:`spark_auto_mapper_fhir.value_sets.cosmic`
+===============================================
+
+.. py:module:: spark_auto_mapper_fhir.value_sets.cosmic
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.value_sets.cosmic.COSMICCode
+
+
+
+.. class:: COSMICCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+
+   COSMIC
+   From: http://hl7.org/fhir/ValueSet/cosmic in valuesets.xml
+       COSMIC : Catalogue Of Somatic Mutations In Cancer
+
+   .. attribute:: codeset
+      :annotation: :FhirUri = http://cancer.sanger.ac.uk/cancergenome/projects/cosmic
+
+      
+
+

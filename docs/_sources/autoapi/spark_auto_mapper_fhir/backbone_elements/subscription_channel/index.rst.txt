@@ -1,0 +1,27 @@
+:mod:`spark_auto_mapper_fhir.backbone_elements.subscription_channel`
+====================================================================
+
+.. py:module:: spark_auto_mapper_fhir.backbone_elements.subscription_channel
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.backbone_elements.subscription_channel.SubscriptionChannel
+
+
+
+.. class:: SubscriptionChannel(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, type_: spark_auto_mapper_fhir.value_sets.subscription_channel_type.SubscriptionChannelTypeCode, endpoint: Optional[spark_auto_mapper_fhir.fhir_types.url.FhirUrl] = None, payload: Optional[spark_auto_mapper_fhir.value_sets.mime_types.MimeTypesCode] = None, header: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.string.FhirString]] = None)
+
+
+   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+
+   Subscription.Channel
+   The subscription resource is used to define a push-based subscription from a server to another system. Once a subscription is registered with the server, the server checks every resource that is created or updated, and if the resource matches the given criteria, it sends a message on the defined "channel" so that another system can take an appropriate action.
+
+
