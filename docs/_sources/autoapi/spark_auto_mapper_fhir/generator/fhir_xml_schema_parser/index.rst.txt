@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.generator.fhir_xml_schema_parser`
-==============================================================
+:py:mod:`spark_auto_mapper_fhir.generator.fhir_xml_schema_parser`
+=================================================================
 
 .. py:module:: spark_auto_mapper_fhir.generator.fhir_xml_schema_parser
 
@@ -23,396 +23,401 @@ Classes
 
 
 
-.. class:: SmartName
 
-   .. attribute:: name
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   spark_auto_mapper_fhir.generator.fhir_xml_schema_parser.logger
+
+
+.. py:class:: SmartName
+
+   .. py:attribute:: name
       :annotation: :str
 
       
 
-   .. attribute:: cleaned_name
+   .. py:attribute:: cleaned_name
       :annotation: :str
 
       
 
-   .. attribute:: snake_case_name
+   .. py:attribute:: snake_case_name
       :annotation: :str
 
       
 
 
-.. class:: FhirValueSetConcept
+.. py:class:: FhirValueSetConcept
 
-   .. attribute:: code
+   .. py:attribute:: code
       :annotation: :str
 
       
 
-   .. attribute:: display
+   .. py:attribute:: display
       :annotation: :Optional[str]
 
       
 
-   .. attribute:: cleaned_display
+   .. py:attribute:: cleaned_display
       :annotation: :Optional[str]
 
       
 
-   .. attribute:: definition
+   .. py:attribute:: definition
       :annotation: :Optional[str]
 
       
 
-   .. attribute:: source
+   .. py:attribute:: source
       :annotation: :str
 
       
 
-   .. attribute:: value_set_url
+   .. py:attribute:: value_set_url
       :annotation: :str
 
       
 
 
-.. class:: FhirValueSet
+.. py:class:: FhirValueSet
 
-   .. attribute:: id_
+   .. py:attribute:: id_
       :annotation: :str
 
       
 
-   .. attribute:: name
+   .. py:attribute:: name
       :annotation: :str
 
       
 
-   .. attribute:: fhir_name
+   .. py:attribute:: fhir_name
       :annotation: :str
 
       
 
-   .. attribute:: name_snake_case
+   .. py:attribute:: name_snake_case
       :annotation: :str
 
       
 
-   .. attribute:: cleaned_name
+   .. py:attribute:: cleaned_name
       :annotation: :str
 
       
 
-   .. attribute:: concepts
+   .. py:attribute:: concepts
       :annotation: :List[FhirValueSetConcept]
 
       
 
-   .. attribute:: url
+   .. py:attribute:: url
       :annotation: :str
 
       
 
-   .. attribute:: value_set_url
+   .. py:attribute:: value_set_url
       :annotation: :str
 
       
 
-   .. attribute:: value_set_url_list
+   .. py:attribute:: value_set_url_list
       :annotation: :Set[str]
 
       
 
-   .. attribute:: documentation
+   .. py:attribute:: documentation
       :annotation: :List[str]
 
       
 
-   .. attribute:: source
+   .. py:attribute:: source
       :annotation: :str
 
       
 
 
-.. class:: FhirCodeableType
+.. py:class:: FhirCodeableType
 
-   .. attribute:: codeable_type
+   .. py:attribute:: codeable_type
       :annotation: :str
 
       
 
-   .. attribute:: path
+   .. py:attribute:: path
       :annotation: :str
 
       
 
-   .. attribute:: codeable_type_url
+   .. py:attribute:: codeable_type_url
       :annotation: :str
 
       
 
-   .. attribute:: is_codeable_concept
+   .. py:attribute:: is_codeable_concept
       :annotation: :bool = False
 
       
 
 
-.. class:: FhirReferenceType
+.. py:class:: FhirReferenceType
 
-   .. attribute:: target_resources
+   .. py:attribute:: target_resources
       :annotation: :List[str]
 
       
 
-   .. attribute:: path
+   .. py:attribute:: path
       :annotation: :str
 
       
 
 
-.. class:: FhirProperty
+.. py:class:: FhirProperty
 
-   .. attribute:: name
+   .. py:attribute:: name
       :annotation: :str
 
       
 
-   .. attribute:: fhir_name
+   .. py:attribute:: fhir_name
       :annotation: :str
 
       
 
-   .. attribute:: type_
+   .. py:attribute:: type_
       :annotation: :str
 
       
 
-   .. attribute:: cleaned_type
+   .. py:attribute:: cleaned_type
       :annotation: :str
 
       
 
-   .. attribute:: type_snake_case
+   .. py:attribute:: type_snake_case
       :annotation: :str
 
       
 
-   .. attribute:: optional
+   .. py:attribute:: optional
       :annotation: :bool
 
       
 
-   .. attribute:: is_list
+   .. py:attribute:: is_list
       :annotation: :bool
 
       
 
-   .. attribute:: documentation
+   .. py:attribute:: documentation
       :annotation: :List[str]
 
       
 
-   .. attribute:: fhir_type
+   .. py:attribute:: fhir_type
       :annotation: :Optional[str]
 
       
 
-   .. attribute:: reference_target_resources
+   .. py:attribute:: reference_target_resources
       :annotation: :List[SmartName]
 
       
 
-   .. attribute:: reference_target_resources_names
+   .. py:attribute:: reference_target_resources_names
       :annotation: :List[str]
 
       
 
-   .. attribute:: is_back_bone_element
+   .. py:attribute:: is_back_bone_element
       :annotation: :bool
 
       
 
-   .. attribute:: is_basic_type
+   .. py:attribute:: is_basic_type
       :annotation: :bool
 
       
 
-   .. attribute:: codeable_type
+   .. py:attribute:: codeable_type
       :annotation: :Optional[SmartName]
 
       
 
-   .. attribute:: is_resource
+   .. py:attribute:: is_resource
       :annotation: :bool = False
 
       
 
-   .. attribute:: is_extension
+   .. py:attribute:: is_extension
       :annotation: :bool = False
 
       
 
-   .. attribute:: is_code
+   .. py:attribute:: is_code
       :annotation: :bool = False
 
       
 
 
-.. class:: FhirEntity
+.. py:class:: FhirEntity
 
-   .. attribute:: fhir_name
+   .. py:attribute:: fhir_name
       :annotation: :str
 
       
 
-   .. attribute:: cleaned_name
+   .. py:attribute:: cleaned_name
       :annotation: :str
 
       
 
-   .. attribute:: name_snake_case
+   .. py:attribute:: name_snake_case
       :annotation: :str
 
       
 
-   .. attribute:: properties
+   .. py:attribute:: properties
       :annotation: :List[FhirProperty]
 
       
 
-   .. attribute:: documentation
+   .. py:attribute:: documentation
       :annotation: :List[str]
 
       
 
-   .. attribute:: type_
+   .. py:attribute:: type_
       :annotation: :Optional[str]
 
       
 
-   .. attribute:: is_back_bone_element
+   .. py:attribute:: is_back_bone_element
       :annotation: :bool
 
       
 
-   .. attribute:: base_type
+   .. py:attribute:: base_type
       :annotation: :Optional[str]
 
       
 
-   .. attribute:: base_type_list
+   .. py:attribute:: base_type_list
       :annotation: :List[str]
 
       
 
-   .. attribute:: source
+   .. py:attribute:: source
       :annotation: :str
 
       
 
-   .. attribute:: is_value_set
+   .. py:attribute:: is_value_set
       :annotation: :bool = False
 
       
 
-   .. attribute:: value_set_concepts
+   .. py:attribute:: value_set_concepts
       :annotation: :Optional[List[FhirValueSetConcept]]
 
       
 
-   .. attribute:: value_set_url
+   .. py:attribute:: value_set_url
       :annotation: :Optional[str]
 
       
 
-   .. attribute:: is_basic_type
+   .. py:attribute:: is_basic_type
       :annotation: :bool = False
 
       
 
-   .. attribute:: value_set_url_list
+   .. py:attribute:: value_set_url_list
       :annotation: :Optional[Set[str]]
 
       
 
-   .. attribute:: is_resource
+   .. py:attribute:: is_resource
       :annotation: :bool = False
 
       
 
-   .. attribute:: is_extension
+   .. py:attribute:: is_extension
       :annotation: :bool = False
 
       
 
 
-.. data:: logger
+.. py:data:: logger
    
 
    
 
-.. class:: FhirXmlSchemaParser
+.. py:class:: FhirXmlSchemaParser
 
-   .. attribute:: cleaned_type_mapping
+   .. py:attribute:: cleaned_type_mapping
       :annotation: :Dict[str, str]
 
       
 
-   .. method:: camel_to_snake(name: str) -> str
+   .. py:method:: camel_to_snake(name)
       :staticmethod:
 
 
-   .. method:: generate_classes(filter_to_resource: Optional[str] = None) -> List[spark_auto_mapper_fhir.generator.fhir_xml_schema_parser.FhirEntity]
+   .. py:method:: generate_classes(filter_to_resource = None)
       :staticmethod:
 
 
-   .. method:: process_types_for_codeable_concepts(fhir_entities: List[spark_auto_mapper_fhir.generator.fhir_xml_schema_parser.FhirEntity], value_sets: List[spark_auto_mapper_fhir.generator.fhir_xml_schema_parser.FhirValueSet]) -> None
+   .. py:method:: process_types_for_codeable_concepts(fhir_entities, value_sets)
       :staticmethod:
 
 
-   .. method:: process_types_for_references(fhir_entities: List[spark_auto_mapper_fhir.generator.fhir_xml_schema_parser.FhirEntity]) -> None
+   .. py:method:: process_types_for_references(fhir_entities)
       :staticmethod:
 
 
-   .. method:: _generate_classes_for_resource(resource_xsd_file: pathlib.Path) -> List[spark_auto_mapper_fhir.generator.fhir_xml_schema_parser.FhirEntity]
+   .. py:method:: generate_properties_for_class(entity_name, inner_complex_type)
       :staticmethod:
 
 
-   .. method:: generate_properties_for_class(*, entity_name: str, inner_complex_type: lxml.objectify.ObjectifiedElement) -> List[spark_auto_mapper_fhir.generator.fhir_xml_schema_parser.FhirProperty]
+   .. py:method:: fix_python_keywords(name)
       :staticmethod:
 
 
-   .. method:: fix_python_keywords(name: str) -> str
+   .. py:method:: get_all_property_types()
       :staticmethod:
 
 
-   .. method:: get_all_property_types() -> List[spark_auto_mapper_fhir.generator.fhir_xml_schema_parser.FhirProperty]
+   .. py:method:: get_types_for_references()
       :staticmethod:
 
 
-   .. method:: get_types_for_references() -> List[spark_auto_mapper_fhir.generator.fhir_xml_schema_parser.FhirReferenceType]
+   .. py:method:: get_types_for_codeable_concepts()
       :staticmethod:
 
 
-   .. method:: get_types_for_codeable_concepts() -> List[spark_auto_mapper_fhir.generator.fhir_xml_schema_parser.FhirCodeableType]
+   .. py:method:: get_value_sets()
       :staticmethod:
 
 
-   .. method:: get_value_sets() -> List[spark_auto_mapper_fhir.generator.fhir_xml_schema_parser.FhirValueSet]
+   .. py:method:: create_concept(concept, source, value_set_url)
       :staticmethod:
 
 
-   .. method:: create_concept(concept: lxml.objectify.ObjectifiedElement, source: str, value_set_url: str) -> spark_auto_mapper_fhir.generator.fhir_xml_schema_parser.FhirValueSetConcept
+   .. py:method:: clean_name(display)
       :staticmethod:
 
 
-   .. method:: clean_name(display: str) -> str
+   .. py:method:: get_v3_code_systems(data_dir)
       :staticmethod:
 
 
-   .. method:: get_v3_code_systems(data_dir: pathlib.Path) -> List[spark_auto_mapper_fhir.generator.fhir_xml_schema_parser.FhirValueSet]
-      :staticmethod:
-
-
-   .. method:: get_v2_code_systems(data_dir: pathlib.Path) -> List[spark_auto_mapper_fhir.generator.fhir_xml_schema_parser.FhirValueSet]
+   .. py:method:: get_v2_code_systems(data_dir)
       :staticmethod:
 
 

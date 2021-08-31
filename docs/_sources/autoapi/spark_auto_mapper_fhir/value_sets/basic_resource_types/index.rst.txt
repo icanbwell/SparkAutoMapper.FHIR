@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.basic_resource_types`
-=============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.basic_resource_types`
+================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.basic_resource_types
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: BasicResourceTypesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: BasicResourceTypesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    BasicResourceTypes
    From: http://terminology.hl7.org/CodeSystem/basic-resource-type in valuesets.xml
@@ -31,20 +31,20 @@ Classes
    defined by the codes presented here.  Codes in this set will be deprecated
    if/when formal resources are defined that encompass these concepts.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/basic-resource-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/basic-resource-type
 
       
 
 
-.. class:: BasicResourceTypesCodeValues
+.. py:class:: BasicResourceTypesCodeValues
 
    An assertion of permission for an activity or set of activities to occur,
    possibly subject to particular limitations; e.g. surgical consent, information
    disclosure consent, etc.
    From: http://terminology.hl7.org/CodeSystem/basic-resource-type in valuesets.xml
 
-   .. attribute:: Consent
+   .. py:attribute:: Consent
       
 
       A request that care of a particular type be provided to a patient.  Could
@@ -52,7 +52,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/basic-resource-type in valuesets.xml
 
 
-   .. attribute:: Referral
+   .. py:attribute:: Referral
       
 
       An undesired reaction caused by exposure to some agent (e.g. a medication,
@@ -60,7 +60,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/basic-resource-type in valuesets.xml
 
 
-   .. attribute:: AdverseEvent
+   .. py:attribute:: AdverseEvent
       
 
       A request that a time be scheduled for a type of service for a specified
@@ -68,14 +68,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/basic-resource-type in valuesets.xml
 
 
-   .. attribute:: AppointmentRequest
+   .. py:attribute:: AppointmentRequest
       
 
       The transition of a patient or set of material from one location to another
       From: http://terminology.hl7.org/CodeSystem/basic-resource-type in valuesets.xml
 
 
-   .. attribute:: Transfer
+   .. py:attribute:: Transfer
       
 
       The specification of a set of food and/or other nutritional material to be
@@ -83,7 +83,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/basic-resource-type in valuesets.xml
 
 
-   .. attribute:: Diet
+   .. py:attribute:: Diet
       
 
       An occurrence of a non-care-related event in the healthcare domain, such as
@@ -91,7 +91,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/basic-resource-type in valuesets.xml
 
 
-   .. attribute:: AdministrativeActivity
+   .. py:attribute:: AdministrativeActivity
       
 
       Record of a situation where a subject was exposed to a substance.  Usually of
@@ -99,7 +99,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/basic-resource-type in valuesets.xml
 
 
-   .. attribute:: Exposure
+   .. py:attribute:: Exposure
       
 
       A formalized inquiry into the circumstances surrounding a particular unplanned
@@ -108,14 +108,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/basic-resource-type in valuesets.xml
 
 
-   .. attribute:: Investigation
+   .. py:attribute:: Investigation
       
 
       A financial instrument used to track costs, charges or other amounts.
       From: http://terminology.hl7.org/CodeSystem/basic-resource-type in valuesets.xml
 
 
-   .. attribute:: Account
+   .. py:attribute:: Account
       
 
       A request for payment for goods and/or services.  Includes the idea of a
@@ -123,7 +123,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/basic-resource-type in valuesets.xml
 
 
-   .. attribute:: Invoice
+   .. py:attribute:: Invoice
       
 
       The determination of what will be paid against a particular invoice based on
@@ -131,7 +131,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/basic-resource-type in valuesets.xml
 
 
-   .. attribute:: InvoiceAdjudication
+   .. py:attribute:: InvoiceAdjudication
       
 
       A request for a pre-determination of the cost that would be paid under an
@@ -139,7 +139,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/basic-resource-type in valuesets.xml
 
 
-   .. attribute:: Pre_determinationRequest
+   .. py:attribute:: Pre_determinationRequest
       
 
       An adjudication of what would be paid under an insurance plan for a
@@ -147,7 +147,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/basic-resource-type in valuesets.xml
 
 
-   .. attribute:: Predetermination
+   .. py:attribute:: Predetermination
       
 
       An investigation to determine information about a particular therapy or
@@ -155,7 +155,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/basic-resource-type in valuesets.xml
 
 
-   .. attribute:: Study
+   .. py:attribute:: Study
       
 
       A set of (possibly conditional) steps to be taken to achieve some aim.
@@ -163,7 +163,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/basic-resource-type in valuesets.xml
 
 
-   .. attribute:: Protocol
+   .. py:attribute:: Protocol
       
 
       

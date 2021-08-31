@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.medication_status_codes`
-================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.medication_status_codes`
+===================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.medication_status_codes
 
@@ -17,34 +17,34 @@ Classes
 
 
 
-.. class:: MedicationStatusCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: MedicationStatusCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    Medication Status Codes
    From: http://hl7.org/fhir/CodeSystem/medication-statement-status in valuesets.xml
        Medication Status Codes
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/CodeSystem/medication-statement-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/CodeSystem/medication-statement-status
 
       
 
 
-.. class:: MedicationStatusCodesCodeValues
+.. py:class:: MedicationStatusCodesCodeValues
 
    The medication is still being taken.
    From: http://hl7.org/fhir/CodeSystem/medication-statement-status in valuesets.xml
 
-   .. attribute:: Active
+   .. py:attribute:: Active
       
 
       The medication is no longer being taken.
       From: http://hl7.org/fhir/CodeSystem/medication-statement-status in valuesets.xml
 
 
-   .. attribute:: Completed
+   .. py:attribute:: Completed
       
 
       Some of the actions that are implied by the medication statement may have
@@ -53,14 +53,14 @@ Classes
       From: http://hl7.org/fhir/CodeSystem/medication-statement-status in valuesets.xml
 
 
-   .. attribute:: EnteredInError
+   .. py:attribute:: EnteredInError
       
 
       The medication may be taken at some time in the future.
       From: http://hl7.org/fhir/CodeSystem/medication-statement-status in valuesets.xml
 
 
-   .. attribute:: Intended
+   .. py:attribute:: Intended
       
 
       Actions implied by the statement have been permanently halted, before all of
@@ -68,7 +68,7 @@ Classes
       From: http://hl7.org/fhir/CodeSystem/medication-statement-status in valuesets.xml
 
 
-   .. attribute:: Stopped
+   .. py:attribute:: Stopped
       
 
       Actions implied by the statement have been temporarily halted, but are
@@ -76,21 +76,21 @@ Classes
       From: http://hl7.org/fhir/CodeSystem/medication-statement-status in valuesets.xml
 
 
-   .. attribute:: OnHold
+   .. py:attribute:: OnHold
       
 
       The state of the medication use is not currently known.
       From: http://hl7.org/fhir/CodeSystem/medication-statement-status in valuesets.xml
 
 
-   .. attribute:: Unknown
+   .. py:attribute:: Unknown
       
 
       The medication was not consumed by the patient
       From: http://hl7.org/fhir/CodeSystem/medication-statement-status in valuesets.xml
 
 
-   .. attribute:: NotTaken
+   .. py:attribute:: NotTaken
       
 
       

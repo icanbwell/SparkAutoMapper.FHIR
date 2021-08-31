@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.measure_report_type`
-============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.measure_report_type`
+===============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.measure_report_type
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: MeasureReportTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: MeasureReportTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    MeasureReportType
    From: http://hl7.org/fhir/measure-report-type in valuesets.xml
        The type of the measure report.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/measure-report-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/measure-report-type
 
       
 
 
-.. class:: MeasureReportTypeCodeValues
+.. py:class:: MeasureReportTypeCodeValues
 
    An individual report that provides information on the performance for a given
    measure with respect to a single subject.
    From: http://hl7.org/fhir/measure-report-type in valuesets.xml
 
-   .. attribute:: Individual
+   .. py:attribute:: Individual
       
 
       A subject list report that includes a listing of subjects that satisfied each
@@ -46,7 +46,7 @@ Classes
       From: http://hl7.org/fhir/measure-report-type in valuesets.xml
 
 
-   .. attribute:: SubjectList
+   .. py:attribute:: SubjectList
       
 
       A summary report that returns the number of members in each population
@@ -54,14 +54,14 @@ Classes
       From: http://hl7.org/fhir/measure-report-type in valuesets.xml
 
 
-   .. attribute:: Summary
+   .. py:attribute:: Summary
       
 
       A data collection report that contains data-of-interest for the measure.
       From: http://hl7.org/fhir/measure-report-type in valuesets.xml
 
 
-   .. attribute:: DataCollection
+   .. py:attribute:: DataCollection
       
 
       

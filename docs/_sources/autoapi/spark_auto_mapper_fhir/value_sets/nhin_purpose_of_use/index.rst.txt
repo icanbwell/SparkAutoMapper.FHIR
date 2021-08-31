@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.nhin_purpose_of_use`
-============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.nhin_purpose_of_use`
+===============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.nhin_purpose_of_use
 
@@ -17,91 +17,91 @@ Classes
 
 
 
-.. class:: NHINPurposeOfUseCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: NHINPurposeOfUseCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    NHIN PurposeOfUse
    From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
        This value set is suitable for use with the provenance resource. It is derived
    from, but not compatible with, the HL7 v3 Purpose of use Code system.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://healthit.gov/nhin/purposeofuse
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://healthit.gov/nhin/purposeofuse
 
       
 
 
-.. class:: NHINPurposeOfUseCodeValues
+.. py:class:: NHINPurposeOfUseCodeValues
 
    Treatment
    From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
 
-   .. attribute:: Treatment
+   .. py:attribute:: Treatment
       
 
       Payment
       From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
 
 
-   .. attribute:: Payment
+   .. py:attribute:: Payment
       
 
       Healthcare Operations
       From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
 
 
-   .. attribute:: Operations
+   .. py:attribute:: Operations
       
 
       System Administration
       From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
 
 
-   .. attribute:: Sysadmin
+   .. py:attribute:: Sysadmin
       
 
       Fraud detection
       From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
 
 
-   .. attribute:: Fraud
+   .. py:attribute:: Fraud
       
 
       Use or disclosure of Psychotherapy Notes
       From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
 
 
-   .. attribute:: Psychotherapy
+   .. py:attribute:: Psychotherapy
       
 
       Use or disclosure by the covered entity for its own training programs
       From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
 
 
-   .. attribute:: Training
+   .. py:attribute:: Training
       
 
       Use or disclosure by the covered entity to defend itself in a legal action
       From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
 
 
-   .. attribute:: Legal
+   .. py:attribute:: Legal
       
 
       Marketing
       From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
 
 
-   .. attribute:: Marketing
+   .. py:attribute:: Marketing
       
 
       Use and disclosure for facility directories
       From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
 
 
-   .. attribute:: Directory
+   .. py:attribute:: Directory
       
 
       Disclose to a family member, other relative, or a close personal friend of the
@@ -109,14 +109,14 @@ Classes
       From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
 
 
-   .. attribute:: Family
+   .. py:attribute:: Family
       
 
       Uses and disclosures with the individual present.
       From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
 
 
-   .. attribute:: Present
+   .. py:attribute:: Present
       
 
       Permission cannot practicably be provided because of the individual's
@@ -124,105 +124,105 @@ Classes
       From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
 
 
-   .. attribute:: Emergency
+   .. py:attribute:: Emergency
       
 
       Use and disclosures for disaster relief purposes.
       From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
 
 
-   .. attribute:: Disaster
+   .. py:attribute:: Disaster
       
 
       Uses and disclosures for public health activities.
       From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
 
 
-   .. attribute:: PublicHealth
+   .. py:attribute:: PublicHealth
       
 
       Disclosures about victims of abuse, neglect or domestic violence.
       From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
 
 
-   .. attribute:: Abuse
+   .. py:attribute:: Abuse
       
 
       Uses and disclosures for health oversight activities.
       From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
 
 
-   .. attribute:: Oversight
+   .. py:attribute:: Oversight
       
 
       Disclosures for judicial and administrative proceedings.
       From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
 
 
-   .. attribute:: Judicial
+   .. py:attribute:: Judicial
       
 
       Disclosures for law enforcement purposes.
       From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
 
 
-   .. attribute:: LawEnforcement
+   .. py:attribute:: LawEnforcement
       
 
       Uses and disclosures about decedents.
       From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
 
 
-   .. attribute:: Deceased
+   .. py:attribute:: Deceased
       
 
       Uses and disclosures for cadaveric organ,  eye or tissue donation purposes
       From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
 
 
-   .. attribute:: Donation
+   .. py:attribute:: Donation
       
 
       Uses and disclosures for research purposes.
       From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
 
 
-   .. attribute:: Research
+   .. py:attribute:: Research
       
 
       Uses and disclosures to avert a serious threat to health or safety.
       From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
 
 
-   .. attribute:: Threat
+   .. py:attribute:: Threat
       
 
       Uses and disclosures for specialized government functions.
       From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
 
 
-   .. attribute:: Government
+   .. py:attribute:: Government
       
 
       Disclosures for workers' compensation.
       From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
 
 
-   .. attribute:: Worker_sComp
+   .. py:attribute:: Worker_sComp
       
 
       Disclosures for insurance or disability coverage determination
       From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
 
 
-   .. attribute:: Coverage
+   .. py:attribute:: Coverage
       
 
       Request of the Individual
       From: http://healthit.gov/nhin/purposeofuse in valuesets.xml
 
 
-   .. attribute:: Request
+   .. py:attribute:: Request
       
 
       

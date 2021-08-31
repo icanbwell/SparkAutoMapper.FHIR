@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.medication_request_category_codes`
-==========================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.medication_request_category_codes`
+=============================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.medication_request_category_codes
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: MedicationRequestCategoryCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: MedicationRequestCategoryCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    medicationRequest Category Codes
    From: http://terminology.hl7.org/CodeSystem/medicationrequest-category in valuesets.xml
        MedicationRequest Category Codes
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/medicationrequest-category
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/medicationrequest-category
 
       
 
 
-.. class:: MedicationRequestCategoryCodesCodeValues
+.. py:class:: MedicationRequestCategoryCodesCodeValues
 
    Includes requests for medications to be administered or consumed in an
    inpatient or acute care setting
    From: http://terminology.hl7.org/CodeSystem/medicationrequest-category in valuesets.xml
 
-   .. attribute:: Inpatient
+   .. py:attribute:: Inpatient
       
 
       Includes requests for medications to be administered or consumed in an
@@ -47,7 +47,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/medicationrequest-category in valuesets.xml
 
 
-   .. attribute:: Outpatient
+   .. py:attribute:: Outpatient
       
 
       Includes requests for medications to be administered or consumed by the
@@ -56,7 +56,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/medicationrequest-category in valuesets.xml
 
 
-   .. attribute:: Community
+   .. py:attribute:: Community
       
 
       Includes requests for medications created when the patient is being released
@@ -64,7 +64,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/medicationrequest-category in valuesets.xml
 
 
-   .. attribute:: Discharge
+   .. py:attribute:: Discharge
       
 
       

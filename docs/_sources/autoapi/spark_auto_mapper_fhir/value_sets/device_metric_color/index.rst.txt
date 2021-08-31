@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.device_metric_color`
-============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.device_metric_color`
+===============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.device_metric_color
 
@@ -17,76 +17,76 @@ Classes
 
 
 
-.. class:: DeviceMetricColorCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: DeviceMetricColorCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    DeviceMetricColor
    From: http://hl7.org/fhir/metric-color in valuesets.xml
        Describes the typical color of representation.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/metric-color
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/metric-color
 
       
 
 
-.. class:: DeviceMetricColorCodeValues
+.. py:class:: DeviceMetricColorCodeValues
 
    Color for representation - black.
    From: http://hl7.org/fhir/metric-color in valuesets.xml
 
-   .. attribute:: ColorBlack
+   .. py:attribute:: ColorBlack
       
 
       Color for representation - red.
       From: http://hl7.org/fhir/metric-color in valuesets.xml
 
 
-   .. attribute:: ColorRed
+   .. py:attribute:: ColorRed
       
 
       Color for representation - green.
       From: http://hl7.org/fhir/metric-color in valuesets.xml
 
 
-   .. attribute:: ColorGreen
+   .. py:attribute:: ColorGreen
       
 
       Color for representation - yellow.
       From: http://hl7.org/fhir/metric-color in valuesets.xml
 
 
-   .. attribute:: ColorYellow
+   .. py:attribute:: ColorYellow
       
 
       Color for representation - blue.
       From: http://hl7.org/fhir/metric-color in valuesets.xml
 
 
-   .. attribute:: ColorBlue
+   .. py:attribute:: ColorBlue
       
 
       Color for representation - magenta.
       From: http://hl7.org/fhir/metric-color in valuesets.xml
 
 
-   .. attribute:: ColorMagenta
+   .. py:attribute:: ColorMagenta
       
 
       Color for representation - cyan.
       From: http://hl7.org/fhir/metric-color in valuesets.xml
 
 
-   .. attribute:: ColorCyan
+   .. py:attribute:: ColorCyan
       
 
       Color for representation - white.
       From: http://hl7.org/fhir/metric-color in valuesets.xml
 
 
-   .. attribute:: ColorWhite
+   .. py:attribute:: ColorWhite
       
 
       

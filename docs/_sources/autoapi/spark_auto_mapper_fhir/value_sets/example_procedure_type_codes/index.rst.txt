@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.example_procedure_type_codes`
-=====================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.example_procedure_type_codes`
+========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.example_procedure_type_codes
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: ExampleProcedureTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ExampleProcedureTypeCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ExampleProcedureTypeCodes
    From: http://terminology.hl7.org/CodeSystem/ex-procedure-type in valuesets.xml
        This value set includes example Procedure Type codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/ex-procedure-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/ex-procedure-type
 
       
 
 
-.. class:: ExampleProcedureTypeCodesCodeValues
+.. py:class:: ExampleProcedureTypeCodesCodeValues
 
    The first procedure in a series required to produce and overall patient
    outcome.
    From: http://terminology.hl7.org/CodeSystem/ex-procedure-type in valuesets.xml
 
-   .. attribute:: PrimaryProcedure
+   .. py:attribute:: PrimaryProcedure
       
 
       The second procedure in a series required to produce and overall patient
@@ -46,7 +46,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/ex-procedure-type in valuesets.xml
 
 
-   .. attribute:: SecondaryProcedure
+   .. py:attribute:: SecondaryProcedure
       
 
       

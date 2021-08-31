@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.timing_event`
-=====================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.timing_event`
+========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.timing_event
 
@@ -17,55 +17,55 @@ Classes
 
 
 
-.. class:: TimingEvent(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: TimingEvent(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.TimingEvent
    From: http://terminology.hl7.org/ValueSet/v3-TimingEvent in v3-codesystems.xml
        **** MISSING DEFINITIONS ****
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-TimingEvent
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-TimingEvent
 
       
 
 
-.. class:: TimingEventValues
+.. py:class:: TimingEventValues
 
    before meal (from lat. ante cibus)
    From: http://terminology.hl7.org/CodeSystem/v3-TimingEvent in v3-codesystems.xml
 
-   .. attribute:: AC
+   .. py:attribute:: AC
       
 
       before lunch (from lat. ante cibus diurnus)
       From: http://terminology.hl7.org/CodeSystem/v3-TimingEvent in v3-codesystems.xml
 
 
-   .. attribute:: ACD
+   .. py:attribute:: ACD
       
 
       before breakfast (from lat. ante cibus matutinus)
       From: http://terminology.hl7.org/CodeSystem/v3-TimingEvent in v3-codesystems.xml
 
 
-   .. attribute:: ACM
+   .. py:attribute:: ACM
       
 
       before dinner (from lat. ante cibus vespertinus)
       From: http://terminology.hl7.org/CodeSystem/v3-TimingEvent in v3-codesystems.xml
 
 
-   .. attribute:: ACV
+   .. py:attribute:: ACV
       
 
       Description: meal (from lat. ante cibus)
       From: http://terminology.hl7.org/CodeSystem/v3-TimingEvent in v3-codesystems.xml
 
 
-   .. attribute:: C
+   .. py:attribute:: C
       
 
       Description: Prior to beginning a regular period of extended sleep (this would
@@ -74,63 +74,63 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-TimingEvent in v3-codesystems.xml
 
 
-   .. attribute:: HS
+   .. py:attribute:: HS
       
 
       between meals (from lat. inter cibus)
       From: http://terminology.hl7.org/CodeSystem/v3-TimingEvent in v3-codesystems.xml
 
 
-   .. attribute:: IC
+   .. py:attribute:: IC
       
 
       between lunch and dinner
       From: http://terminology.hl7.org/CodeSystem/v3-TimingEvent in v3-codesystems.xml
 
 
-   .. attribute:: ICD
+   .. py:attribute:: ICD
       
 
       between breakfast and lunch
       From: http://terminology.hl7.org/CodeSystem/v3-TimingEvent in v3-codesystems.xml
 
 
-   .. attribute:: ICM
+   .. py:attribute:: ICM
       
 
       between dinner and the hour of sleep
       From: http://terminology.hl7.org/CodeSystem/v3-TimingEvent in v3-codesystems.xml
 
 
-   .. attribute:: ICV
+   .. py:attribute:: ICV
       
 
       after meal (from lat. post cibus)
       From: http://terminology.hl7.org/CodeSystem/v3-TimingEvent in v3-codesystems.xml
 
 
-   .. attribute:: PC
+   .. py:attribute:: PC
       
 
       after lunch (from lat. post cibus diurnus)
       From: http://terminology.hl7.org/CodeSystem/v3-TimingEvent in v3-codesystems.xml
 
 
-   .. attribute:: PCD
+   .. py:attribute:: PCD
       
 
       after breakfast (from lat. post cibus matutinus)
       From: http://terminology.hl7.org/CodeSystem/v3-TimingEvent in v3-codesystems.xml
 
 
-   .. attribute:: PCM
+   .. py:attribute:: PCM
       
 
       after dinner (from lat. post cibus vespertinus)
       From: http://terminology.hl7.org/CodeSystem/v3-TimingEvent in v3-codesystems.xml
 
 
-   .. attribute:: PCV
+   .. py:attribute:: PCV
       
 
       Description: Upon waking up from a regular period of sleep, in order to start
@@ -150,7 +150,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-TimingEvent in v3-codesystems.xml
 
 
-   .. attribute:: WAKE
+   .. py:attribute:: WAKE
       
 
       

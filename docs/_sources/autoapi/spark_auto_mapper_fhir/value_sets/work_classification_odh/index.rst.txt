@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.work_classification_odh`
-================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.work_classification_odh`
+===================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.work_classification_odh
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: WorkClassificationODH(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: WorkClassificationODH(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.WorkClassificationODH
    From: http://terminology.hl7.org/ValueSet/v3-WorkClassificationODH in v3-codesystems.xml
@@ -28,19 +28,19 @@ Classes
    compensation and sector (e.g. paid vs. unpaid, self-employed vs. not self-
    employed, government vs. private, etc.).
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-WorkClassificationODH
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-WorkClassificationODH
 
       
 
 
-.. class:: WorkClassificationODHValues
+.. py:class:: WorkClassificationODHValues
 
    A situation in which an individual serves in a government-sponsored military
    force.
    From: http://terminology.hl7.org/CodeSystem/v3-WorkClassificationODH in v3-codesystems.xml
 
-   .. attribute:: PaidWork_ArmedForces
+   .. py:attribute:: PaidWork_ArmedForces
       
 
       A situation in which an individual works for a national government
@@ -48,7 +48,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-WorkClassificationODH in v3-codesystems.xml
 
 
-   .. attribute:: PaidWork_NationalGovernment_NotArmedForces
+   .. py:attribute:: PaidWork_NationalGovernment_NotArmedForces
       
 
       A situation in which an individual works for a government organization with
@@ -58,7 +58,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-WorkClassificationODH in v3-codesystems.xml
 
 
-   .. attribute:: PaidWork_LocalGovernment_NotArmedForces
+   .. py:attribute:: PaidWork_LocalGovernment_NotArmedForces
       
 
       A situation in which an individual works for a business (not government) that
@@ -66,7 +66,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-WorkClassificationODH in v3-codesystems.xml
 
 
-   .. attribute:: PaidNon_governmentalWork_NotSelf_employed
+   .. py:attribute:: PaidNon_governmentalWork_NotSelf_employed
       
 
       A situation in which an individual earns a salary or wage working for himself
@@ -74,7 +74,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-WorkClassificationODH in v3-codesystems.xml
 
 
-   .. attribute:: PaidWork_Self_employed
+   .. py:attribute:: PaidWork_Self_employed
       
 
       A situation in which an individual works for a government organization with
@@ -85,7 +85,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-WorkClassificationODH in v3-codesystems.xml
 
 
-   .. attribute:: PaidWork_StateGovernment_NotArmedForces
+   .. py:attribute:: PaidWork_StateGovernment_NotArmedForces
       
 
       A situation in which an individual works for a business (not government) that
@@ -93,7 +93,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-WorkClassificationODH in v3-codesystems.xml
 
 
-   .. attribute:: UnpaidNon_governmentalWork_NotSelf_employed
+   .. py:attribute:: UnpaidNon_governmentalWork_NotSelf_employed
       
 
       A situation in which an individual works for himself or herself without
@@ -101,7 +101,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-WorkClassificationODH in v3-codesystems.xml
 
 
-   .. attribute:: UnpaidWork_Self_employed
+   .. py:attribute:: UnpaidWork_Self_employed
       
 
       A situation in which an individual chooses to do something, especially for
@@ -112,7 +112,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-WorkClassificationODH in v3-codesystems.xml
 
 
-   .. attribute:: VoluntaryWork
+   .. py:attribute:: VoluntaryWork
       
 
       

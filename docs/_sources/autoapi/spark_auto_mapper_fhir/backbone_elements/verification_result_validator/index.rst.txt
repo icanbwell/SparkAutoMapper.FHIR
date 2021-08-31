@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.backbone_elements.verification_result_validator`
-=============================================================================
+:py:mod:`spark_auto_mapper_fhir.backbone_elements.verification_result_validator`
+================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.backbone_elements.verification_result_validator
 
@@ -16,12 +16,38 @@ Classes
 
 
 
-.. class:: VerificationResultValidator(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, organization: spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.organization.Organization], identityCertificate: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, attestationSignature: Optional[spark_auto_mapper_fhir.complex_types.signature.Signature] = None)
 
+.. py:class:: VerificationResultValidator(*, id_ = None, extension = None, modifierExtension = None, organization, identityCertificate = None, attestationSignature = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
 
    VerificationResult.Validator
-   Describes validation requirements, source(s), status and dates for one or more elements.
+       Describes validation requirements, source(s), status and dates for one or more elements.
+
+       Describes validation requirements, source(s), status and dates for one or more
+   elements.
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param modifierExtension: May be used to represent additional information that is not part of the basic
+   definition of the element and that modifies the understanding of the element
+   in which it is contained and/or the understanding of the containing element's
+   descendants. Usually modifier elements provide negation or qualification. To
+   make the use of extensions safe and manageable, there is a strict set of
+   governance applied to the definition and use of extensions. Though any
+   implementer can define an extension, there is a set of requirements that SHALL
+   be met as part of the definition of the extension. Applications processing a
+   resource are required to check for modifier extensions.
+
+   Modifier extensions SHALL NOT change the meaning of any elements on Resource
+   or DomainResource (including cannot change the meaning of modifierExtension
+   itself).
+       :param organization: Reference to the organization validating information.
+       :param identityCertificate: A digital identity certificate associated with the validator.
+       :param attestationSignature: Signed assertion by the validator that they have validated the information.
 
 

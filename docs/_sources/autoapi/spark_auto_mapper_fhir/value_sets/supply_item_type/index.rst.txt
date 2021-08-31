@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.supply_item_type`
-=========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.supply_item_type`
+============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.supply_item_type
 
@@ -17,34 +17,34 @@ Classes
 
 
 
-.. class:: SupplyItemTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SupplyItemTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SupplyItemType
    From: http://terminology.hl7.org/CodeSystem/supply-item-type in valuesets.xml
        This value sets refers to a specific supply item.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/supply-item-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/supply-item-type
 
       
 
 
-.. class:: SupplyItemTypeCodeValues
+.. py:class:: SupplyItemTypeCodeValues
 
    Supply is a kind of medication.
    From: http://terminology.hl7.org/CodeSystem/supply-item-type in valuesets.xml
 
-   .. attribute:: Medication
+   .. py:attribute:: Medication
       
 
       What is supplied (or requested) is a device.
       From: http://terminology.hl7.org/CodeSystem/supply-item-type in valuesets.xml
 
 
-   .. attribute:: Device
+   .. py:attribute:: Device
       
 
       

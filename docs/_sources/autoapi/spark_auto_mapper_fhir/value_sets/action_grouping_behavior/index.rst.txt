@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.action_grouping_behavior`
-=================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.action_grouping_behavior`
+====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.action_grouping_behavior
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: ActionGroupingBehaviorCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ActionGroupingBehaviorCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ActionGroupingBehavior
    From: http://hl7.org/fhir/action-grouping-behavior in valuesets.xml
        Defines organization behavior of a group.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/action-grouping-behavior
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/action-grouping-behavior
 
       
 
 
-.. class:: ActionGroupingBehaviorCodeValues
+.. py:class:: ActionGroupingBehaviorCodeValues
 
    Any group marked with this behavior should be displayed as a visual group to
    the end user.
    From: http://hl7.org/fhir/action-grouping-behavior in valuesets.xml
 
-   .. attribute:: VisualGroup
+   .. py:attribute:: VisualGroup
       
 
       A group with this behavior logically groups its sub-elements, and may be shown
@@ -46,7 +46,7 @@ Classes
       From: http://hl7.org/fhir/action-grouping-behavior in valuesets.xml
 
 
-   .. attribute:: LogicalGroup
+   .. py:attribute:: LogicalGroup
       
 
       A group of related alternative actions is a sentence group if the target
@@ -62,7 +62,7 @@ Classes
       From: http://hl7.org/fhir/action-grouping-behavior in valuesets.xml
 
 
-   .. attribute:: SentenceGroup
+   .. py:attribute:: SentenceGroup
       
 
       

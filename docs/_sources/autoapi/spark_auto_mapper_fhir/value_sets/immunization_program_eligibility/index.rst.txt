@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.immunization_program_eligibility`
-=========================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.immunization_program_eligibility`
+============================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.immunization_program_eligibility
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: ImmunizationProgramEligibilityCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ImmunizationProgramEligibilityCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ImmunizationProgramEligibility
    From: http://terminology.hl7.org/CodeSystem/immunization-program-eligibility in valuesets.xml
@@ -29,25 +29,25 @@ Classes
    support describing the patient's eligibility for a vaccination program. This
    value set is provided as a suggestive example.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/immunization-program-eligibility
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/immunization-program-eligibility
 
       
 
 
-.. class:: ImmunizationProgramEligibilityCodeValues
+.. py:class:: ImmunizationProgramEligibilityCodeValues
 
    The patient is not eligible for the funding program.
    From: http://terminology.hl7.org/CodeSystem/immunization-program-eligibility in valuesets.xml
 
-   .. attribute:: NotEligible
+   .. py:attribute:: NotEligible
       
 
       The patient is eligible for the funding program because they are uninsured.
       From: http://terminology.hl7.org/CodeSystem/immunization-program-eligibility in valuesets.xml
 
 
-   .. attribute:: Uninsured
+   .. py:attribute:: Uninsured
       
 
       

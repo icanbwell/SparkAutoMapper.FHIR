@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.backbone_elements.insurance_plan_plan`
-===================================================================
+:py:mod:`spark_auto_mapper_fhir.backbone_elements.insurance_plan_plan`
+======================================================================
 
 .. py:module:: spark_auto_mapper_fhir.backbone_elements.insurance_plan_plan
 
@@ -16,12 +16,41 @@ Classes
 
 
 
-.. class:: InsurancePlanPlan(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.identifier.Identifier]] = None, type_: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, coverageArea: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.location.Location]]] = None, network: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.organization.Organization]]] = None, generalCost: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.insurance_plan_general_cost.InsurancePlanGeneralCost]] = None, specificCost: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.insurance_plan_specific_cost.InsurancePlanSpecificCost]] = None)
 
+.. py:class:: InsurancePlanPlan(*, id_ = None, extension = None, modifierExtension = None, identifier = None, type_ = None, coverageArea = None, network = None, generalCost = None, specificCost = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
 
    InsurancePlan.Plan
-   Details of a Health Insurance product/plan provided by an organization.
+       Details of a Health Insurance product/plan provided by an organization.
+
+       Details of a Health Insurance product/plan provided by an organization.
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param modifierExtension: May be used to represent additional information that is not part of the basic
+   definition of the element and that modifies the understanding of the element
+   in which it is contained and/or the understanding of the containing element's
+   descendants. Usually modifier elements provide negation or qualification. To
+   make the use of extensions safe and manageable, there is a strict set of
+   governance applied to the definition and use of extensions. Though any
+   implementer can define an extension, there is a set of requirements that SHALL
+   be met as part of the definition of the extension. Applications processing a
+   resource are required to check for modifier extensions.
+
+   Modifier extensions SHALL NOT change the meaning of any elements on Resource
+   or DomainResource (including cannot change the meaning of modifierExtension
+   itself).
+       :param identifier: Business identifiers assigned to this health insurance plan which remain
+   constant as the resource is updated and propagates from server to server.
+       :param type_: Type of plan. For example, "Platinum" or "High Deductable".
+       :param coverageArea: The geographic region in which a health insurance plan's benefits apply.
+       :param network: Reference to the network that providing the type of coverage.
+       :param generalCost: Overall costs associated with the plan.
+       :param specificCost: Costs associated with the coverage provided by the product.
 
 

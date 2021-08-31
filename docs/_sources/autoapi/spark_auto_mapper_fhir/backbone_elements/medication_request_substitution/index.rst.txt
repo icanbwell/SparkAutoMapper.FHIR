@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.backbone_elements.medication_request_substitution`
-===============================================================================
+:py:mod:`spark_auto_mapper_fhir.backbone_elements.medication_request_substitution`
+==================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.backbone_elements.medication_request_substitution
 
@@ -16,12 +16,42 @@ Classes
 
 
 
-.. class:: MedicationRequestSubstitution(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, allowedBoolean: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, allowedCodeableConcept: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, reason: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.substance_admin_substitution_reason.SubstanceAdminSubstitutionReason]] = None)
 
+.. py:class:: MedicationRequestSubstitution(*, id_ = None, extension = None, modifierExtension = None, allowedBoolean = None, allowedCodeableConcept = None, reason = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
 
    MedicationRequest.Substitution
-   An order or request for both supply of the medication and the instructions for administration of the medication to a patient. The resource is called "MedicationRequest" rather than "MedicationPrescription" or "MedicationOrder" to generalize the use across inpatient and outpatient settings, including care plans, etc., and to harmonize with workflow patterns.
+       An order or request for both supply of the medication and the instructions for administration of the medication to a patient. The resource is called "MedicationRequest" rather than "MedicationPrescription" or "MedicationOrder" to generalize the use across inpatient and outpatient settings, including care plans, etc., and to harmonize with workflow patterns.
+
+       An order or request for both supply of the medication and the instructions for
+   administration of the medication to a patient. The resource is called
+   "MedicationRequest" rather than "MedicationPrescription" or "MedicationOrder"
+   to generalize the use across inpatient and outpatient settings, including care
+   plans, etc., and to harmonize with workflow patterns.
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param modifierExtension: May be used to represent additional information that is not part of the basic
+   definition of the element and that modifies the understanding of the element
+   in which it is contained and/or the understanding of the containing element's
+   descendants. Usually modifier elements provide negation or qualification. To
+   make the use of extensions safe and manageable, there is a strict set of
+   governance applied to the definition and use of extensions. Though any
+   implementer can define an extension, there is a set of requirements that SHALL
+   be met as part of the definition of the extension. Applications processing a
+   resource are required to check for modifier extensions.
+
+   Modifier extensions SHALL NOT change the meaning of any elements on Resource
+   or DomainResource (including cannot change the meaning of modifierExtension
+   itself).
+       :param allowedBoolean: None
+       :param allowedCodeableConcept: None
+       :param reason: Indicates the reason for the substitution, or why substitution must or must
+   not be performed.
 
 

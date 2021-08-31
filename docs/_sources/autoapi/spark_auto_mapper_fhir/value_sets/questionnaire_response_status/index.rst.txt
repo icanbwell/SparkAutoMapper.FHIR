@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.questionnaire_response_status`
-======================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.questionnaire_response_status`
+=========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.questionnaire_response_status
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: QuestionnaireResponseStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: QuestionnaireResponseStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    QuestionnaireResponseStatus
    From: http://hl7.org/fhir/questionnaire-answers-status in valuesets.xml
        Lifecycle status of the questionnaire response.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/questionnaire-answers-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/questionnaire-answers-status
 
       
 
 
-.. class:: QuestionnaireResponseStatusCodeValues
+.. py:class:: QuestionnaireResponseStatusCodeValues
 
    This QuestionnaireResponse has been partially filled out with answers but
    changes or additions are still expected to be made to it.
    From: http://hl7.org/fhir/questionnaire-answers-status in valuesets.xml
 
-   .. attribute:: InProgress
+   .. py:attribute:: InProgress
       
 
       This QuestionnaireResponse has been filled out with answers and the current
@@ -46,7 +46,7 @@ Classes
       From: http://hl7.org/fhir/questionnaire-answers-status in valuesets.xml
 
 
-   .. attribute:: Completed
+   .. py:attribute:: Completed
       
 
       This QuestionnaireResponse has been filled out with answers, then marked as
@@ -54,14 +54,14 @@ Classes
       From: http://hl7.org/fhir/questionnaire-answers-status in valuesets.xml
 
 
-   .. attribute:: Amended
+   .. py:attribute:: Amended
       
 
       This QuestionnaireResponse was entered in error and voided.
       From: http://hl7.org/fhir/questionnaire-answers-status in valuesets.xml
 
 
-   .. attribute:: EnteredInError
+   .. py:attribute:: EnteredInError
       
 
       This QuestionnaireResponse has been partially filled out with answers but has
@@ -70,7 +70,7 @@ Classes
       From: http://hl7.org/fhir/questionnaire-answers-status in valuesets.xml
 
 
-   .. attribute:: Stopped
+   .. py:attribute:: Stopped
       
 
       

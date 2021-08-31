@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.exposure_state`
-=======================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.exposure_state`
+==========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.exposure_state
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: ExposureStateCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ExposureStateCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ExposureState
    From: http://hl7.org/fhir/exposure-state in valuesets.xml
@@ -28,19 +28,19 @@ Classes
    exposure of interest (exposure) or the alternative state
    (exposureAlternative).
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/exposure-state
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/exposure-state
 
       
 
 
-.. class:: ExposureStateCodeValues
+.. py:class:: ExposureStateCodeValues
 
    used when the results by exposure is describing the results for the primary
    exposure of interest.
    From: http://hl7.org/fhir/exposure-state in valuesets.xml
 
-   .. attribute:: Exposure
+   .. py:attribute:: Exposure
       
 
       used when the results by exposure is describing the results for the
@@ -48,7 +48,7 @@ Classes
       From: http://hl7.org/fhir/exposure-state in valuesets.xml
 
 
-   .. attribute:: ExposureAlternative
+   .. py:attribute:: ExposureAlternative
       
 
       

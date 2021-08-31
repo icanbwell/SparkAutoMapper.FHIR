@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.classproperty`
-===========================================
+:py:mod:`spark_auto_mapper_fhir.classproperty`
+==============================================
 
 .. py:module:: spark_auto_mapper_fhir.classproperty
 
@@ -16,14 +16,14 @@ Classes
 
 
 
-.. class:: genericclassproperty(f: Callable[(Ellipsis, Any)])
 
+.. py:class:: genericclassproperty(f)
 
-   Bases: :class:`object`
+   Bases: :py:obj:`object`
 
    Attribute to have a method treated as class property
 
-   .. method:: __get__(self, obj: Any, owner: Any) -> Any
+   .. py:method:: __get__(self, obj, owner)
 
 
 

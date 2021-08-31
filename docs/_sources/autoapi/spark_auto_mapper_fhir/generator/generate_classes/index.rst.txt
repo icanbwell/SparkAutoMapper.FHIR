@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.generator.generate_classes`
-========================================================
+:py:mod:`spark_auto_mapper_fhir.generator.generate_classes`
+===========================================================
 
 .. py:module:: spark_auto_mapper_fhir.generator.generate_classes
 
@@ -19,15 +19,16 @@ Functions
    spark_auto_mapper_fhir.generator.generate_classes.copy_files_from_base_types_folder
 
 
-.. function:: my_copytree(src: Union[(pathlib.Path, str)], dst: Union[(pathlib.Path, str)], symlinks: bool = False) -> None
+
+.. py:function:: my_copytree(src, dst, symlinks = False)
 
 
-.. function:: clean_duplicate_lines(file_path: Union[(pathlib.Path, str)]) -> None
+.. py:function:: clean_duplicate_lines(file_path)
 
 
-.. function:: main() -> int
+.. py:function:: main()
 
 
-.. function:: copy_files_from_base_types_folder(*, backbone_elements_folder: pathlib.Path, complex_types_folder: pathlib.Path, resources_folder: pathlib.Path, value_sets_folder: pathlib.Path, extensions_folder: pathlib.Path) -> None
+.. py:function:: copy_files_from_base_types_folder(backbone_elements_folder, complex_types_folder, resources_folder, value_sets_folder, extensions_folder)
 
 

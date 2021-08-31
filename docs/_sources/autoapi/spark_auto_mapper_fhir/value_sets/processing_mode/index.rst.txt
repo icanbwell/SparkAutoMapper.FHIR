@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.processing_mode`
-========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.processing_mode`
+===========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.processing_mode
 
@@ -17,48 +17,48 @@ Classes
 
 
 
-.. class:: ProcessingMode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ProcessingMode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.ProcessingMode
    From: http://terminology.hl7.org/ValueSet/v3-ProcessingMode in v3-codesystems.xml
        **** MISSING DEFINITIONS ****
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ProcessingMode
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-ProcessingMode
 
       
 
 
-.. class:: ProcessingModeValues
+.. py:class:: ProcessingModeValues
 
    Identifies archive mode of processing.
    From: http://terminology.hl7.org/CodeSystem/v3-ProcessingMode in v3-codesystems.xml
 
-   .. attribute:: Archive
+   .. py:attribute:: Archive
       
 
       Identifies initial load mode of processing.
       From: http://terminology.hl7.org/CodeSystem/v3-ProcessingMode in v3-codesystems.xml
 
 
-   .. attribute:: InitialLoad
+   .. py:attribute:: InitialLoad
       
 
       Identifies restore mode of processing.
       From: http://terminology.hl7.org/CodeSystem/v3-ProcessingMode in v3-codesystems.xml
 
 
-   .. attribute:: RestoreFromArchive
+   .. py:attribute:: RestoreFromArchive
       
 
       Identifies on-line mode of processing.
       From: http://terminology.hl7.org/CodeSystem/v3-ProcessingMode in v3-codesystems.xml
 
 
-   .. attribute:: CurrentProcessing
+   .. py:attribute:: CurrentProcessing
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.audit_event_sub__type`
-==============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.audit_event_sub__type`
+=================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.audit_event_sub__type
 
@@ -17,167 +17,30 @@ Classes
 
 
 
-.. class:: AuditEventSub_TypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: AuditEventSub_TypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    AuditEventSub-Type
    From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
        More detailed code concerning the type of the audit event - defined by DICOM
    with some FHIR specific additions.
 
-   .. attribute:: codeset_restful_interaction
-      :annotation: :FhirUri = http://hl7.org/fhir/restful-interaction
+   .. py:attribute:: codeset_restful_interaction
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/restful-interaction
 
       http://dicom.nema.org/resources/ontology/DCM
 
 
-   .. attribute:: codeset_DCM
-      :annotation: :FhirUri = http://dicom.nema.org/resources/ontology/DCM
+   .. py:attribute:: codeset_DCM
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://dicom.nema.org/resources/ontology/DCM
 
       
 
 
-.. class:: AuditEventSub_TypeCodeValues
+.. py:class:: AuditEventSub_TypeCodeValues
 
    From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
-
-   .. attribute:: _110120
-      
-
-      From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
-
-
-   .. attribute:: _110121
-      
-
-      From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
-
-
-   .. attribute:: _110122
-      
-
-      From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
-
-
-   .. attribute:: _110123
-      
-
-      From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
-
-
-   .. attribute:: _110124
-      
-
-      From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
-
-
-   .. attribute:: _110125
-      
-
-      From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
-
-
-   .. attribute:: _110126
-      
-
-      From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
-
-
-   .. attribute:: _110127
-      
-
-      From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
-
-
-   .. attribute:: _110128
-      
-
-      From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
-
-
-   .. attribute:: _110129
-      
-
-      From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
-
-
-   .. attribute:: _110130
-      
-
-      From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
-
-
-   .. attribute:: _110131
-      
-
-      From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
-
-
-   .. attribute:: _110132
-      
-
-      From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
-
-
-   .. attribute:: _110133
-      
-
-      From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
-
-
-   .. attribute:: _110134
-      
-
-      From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
-
-
-   .. attribute:: _110135
-      
-
-      From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
-
-
-   .. attribute:: _110136
-      
-
-      From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
-
-
-   .. attribute:: _110137
-      
-
-      From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
-
-
-   .. attribute:: _110138
-      
-
-      From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
-
-
-   .. attribute:: _110139
-      
-
-      From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
-
-
-   .. attribute:: _110140
-      
-
-      From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
-
-
-   .. attribute:: _110141
-      
-
-      From: http://hl7.org/fhir/ValueSet/audit-event-sub-type in valuesets.xml
-
-
-   .. attribute:: _110142
-      
-
-      
 
 

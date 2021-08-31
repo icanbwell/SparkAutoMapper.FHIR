@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.choice_list_orientation`
-================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.choice_list_orientation`
+===================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.choice_list_orientation
 
@@ -17,34 +17,34 @@ Classes
 
 
 
-.. class:: ChoiceListOrientationCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ChoiceListOrientationCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ChoiceListOrientation
    From: http://terminology.hl7.org/CodeSystem/choice-list-orientation in valuesets.xml
        Direction in which lists of possible answers should be displayed.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/choice-list-orientation
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/choice-list-orientation
 
       
 
 
-.. class:: ChoiceListOrientationCodeValues
+.. py:class:: ChoiceListOrientationCodeValues
 
    List choices along the horizontal axis.
    From: http://terminology.hl7.org/CodeSystem/choice-list-orientation in valuesets.xml
 
-   .. attribute:: Horizontal
+   .. py:attribute:: Horizontal
       
 
       List choices down the vertical axis.
       From: http://terminology.hl7.org/CodeSystem/choice-list-orientation in valuesets.xml
 
 
-   .. attribute:: Vertical
+   .. py:attribute:: Vertical
       
 
       

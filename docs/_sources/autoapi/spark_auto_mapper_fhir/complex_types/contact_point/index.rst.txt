@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.complex_types.contact_point`
-=========================================================
+:py:mod:`spark_auto_mapper_fhir.complex_types.contact_point`
+============================================================
 
 .. py:module:: spark_auto_mapper_fhir.complex_types.contact_point
 
@@ -16,17 +16,37 @@ Classes
 
 
 
-.. class:: ContactPoint(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, system: Optional[spark_auto_mapper_fhir.value_sets.contact_point_system.ContactPointSystemCode] = None, value: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, use: Optional[spark_auto_mapper_fhir.value_sets.contact_point_use.ContactPointUseCode] = None, rank: Optional[spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt] = None, period: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None)
 
+.. py:class:: ContactPoint(*, id_ = None, extension = None, system = None, value = None, use = None, rank = None, period = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
 
    ContactPoint
    fhir-base.xsd
        Details for all kinds of technology mediated contact points for a person or organization, including telephone, email, etc.
        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
 
-   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+       Details for all kinds of technology mediated contact points for a person or
+   organization, including telephone, email, etc.
+       If the element is present, it must have a value for at least one of the
+   defined elements, an @id referenced from the Narrative, or extensions
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param system: Telecommunications form for contact point - what communications system is
+   required to make use of the contact.
+       :param value: The actual contact point details, in a form that is meaningful to the
+   designated communication system (i.e. phone number or email address).
+       :param use: Identifies the purpose for the contact point.
+       :param rank: Specifies a preferred order in which to use a set of contacts. ContactPoints
+   with lower rank values are more preferred than those with higher rank values.
+       :param period: Time period when the contact point was/is in use.
+
+   .. py:method:: get_schema(self, include_extension)
 
 
 

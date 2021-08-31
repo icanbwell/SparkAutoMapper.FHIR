@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.observation_data_type`
-==============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.observation_data_type`
+=================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.observation_data_type
 
@@ -17,83 +17,83 @@ Classes
 
 
 
-.. class:: ObservationDataTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ObservationDataTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ObservationDataType
    From: http://hl7.org/fhir/permitted-data-type in valuesets.xml
        Permitted data type for observation value.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/permitted-data-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/permitted-data-type
 
       
 
 
-.. class:: ObservationDataTypeCodeValues
+.. py:class:: ObservationDataTypeCodeValues
 
    A measured amount.
    From: http://hl7.org/fhir/permitted-data-type in valuesets.xml
 
-   .. attribute:: Quantity
+   .. py:attribute:: Quantity
       
 
       A coded concept from a reference terminology and/or text.
       From: http://hl7.org/fhir/permitted-data-type in valuesets.xml
 
 
-   .. attribute:: CodeableConcept
+   .. py:attribute:: CodeableConcept
       
 
       A sequence of Unicode characters.
       From: http://hl7.org/fhir/permitted-data-type in valuesets.xml
 
 
-   .. attribute:: String
+   .. py:attribute:: String
       
 
       true or false.
       From: http://hl7.org/fhir/permitted-data-type in valuesets.xml
 
 
-   .. attribute:: Boolean
+   .. py:attribute:: Boolean
       
 
       A signed integer.
       From: http://hl7.org/fhir/permitted-data-type in valuesets.xml
 
 
-   .. attribute:: Integer
+   .. py:attribute:: Integer
       
 
       A set of values bounded by low and high.
       From: http://hl7.org/fhir/permitted-data-type in valuesets.xml
 
 
-   .. attribute:: Range
+   .. py:attribute:: Range
       
 
       A ratio of two Quantity values - a numerator and a denominator.
       From: http://hl7.org/fhir/permitted-data-type in valuesets.xml
 
 
-   .. attribute:: Ratio
+   .. py:attribute:: Ratio
       
 
       A series of measurements taken by a device.
       From: http://hl7.org/fhir/permitted-data-type in valuesets.xml
 
 
-   .. attribute:: SampledData
+   .. py:attribute:: SampledData
       
 
       A time during the day, in the format hh:mm:ss.
       From: http://hl7.org/fhir/permitted-data-type in valuesets.xml
 
 
-   .. attribute:: Time
+   .. py:attribute:: Time
       
 
       A date, date-time or partial date (e.g. just year or year + month) as used in
@@ -101,14 +101,14 @@ Classes
       From: http://hl7.org/fhir/permitted-data-type in valuesets.xml
 
 
-   .. attribute:: DateTime
+   .. py:attribute:: DateTime
       
 
       A time range defined by start and end date/time.
       From: http://hl7.org/fhir/permitted-data-type in valuesets.xml
 
 
-   .. attribute:: Period
+   .. py:attribute:: Period
       
 
       

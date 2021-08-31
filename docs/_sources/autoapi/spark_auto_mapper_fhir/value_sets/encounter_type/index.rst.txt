@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.encounter_type`
-=======================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.encounter_type`
+==========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.encounter_type
 
@@ -17,45 +17,45 @@ Classes
 
 
 
-.. class:: EncounterTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: EncounterTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    EncounterType
    From: http://terminology.hl7.org/CodeSystem/encounter-type in valuesets.xml
        This example value set defines a set of codes that can be used to indicate the
    type of encounter: a specific code indicating type of service provided.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/encounter-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/encounter-type
 
       
 
 
-.. class:: EncounterTypeCodeValues
+.. py:class:: EncounterTypeCodeValues
 
    From: http://terminology.hl7.org/CodeSystem/encounter-type in valuesets.xml
 
-   .. attribute:: AnnualDiabetesMellitusScreening
+   .. py:attribute:: AnnualDiabetesMellitusScreening
       
 
       From: http://terminology.hl7.org/CodeSystem/encounter-type in valuesets.xml
 
 
-   .. attribute:: BoneDrilling_boneMarrowPunctionInClinic
+   .. py:attribute:: BoneDrilling_boneMarrowPunctionInClinic
       
 
       From: http://terminology.hl7.org/CodeSystem/encounter-type in valuesets.xml
 
 
-   .. attribute:: InfantColonScreening_60Minutes
+   .. py:attribute:: InfantColonScreening_60Minutes
       
 
       From: http://terminology.hl7.org/CodeSystem/encounter-type in valuesets.xml
 
 
-   .. attribute:: OutpatientKenacortInjection
+   .. py:attribute:: OutpatientKenacortInjection
       
 
       

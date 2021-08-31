@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.example_service_place_codes`
-====================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.example_service_place_codes`
+=======================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.example_service_place_codes
 
@@ -17,35 +17,35 @@ Classes
 
 
 
-.. class:: ExampleServicePlaceCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ExampleServicePlaceCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ExampleServicePlaceCodes
    From: http://terminology.hl7.org/CodeSystem/ex-serviceplace in valuesets.xml
        This value set includes a smattering of Service Place codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/ex-serviceplace
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/ex-serviceplace
 
       
 
 
-.. class:: ExampleServicePlaceCodesCodeValues
+.. py:class:: ExampleServicePlaceCodesCodeValues
 
    A facility or location where drugs and other medically related items and
    services are sold, dispensed, or otherwise provided directly to patients.
    From: http://terminology.hl7.org/CodeSystem/ex-serviceplace in valuesets.xml
 
-   .. attribute:: Pharmacy
+   .. py:attribute:: Pharmacy
       
 
       A facility whose primary purpose is education.
       From: http://terminology.hl7.org/CodeSystem/ex-serviceplace in valuesets.xml
 
 
-   .. attribute:: School
+   .. py:attribute:: School
       
 
       A facility or location whose primary purpose is to provide temporary housing
@@ -54,7 +54,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/ex-serviceplace in valuesets.xml
 
 
-   .. attribute:: HomelessShelter
+   .. py:attribute:: HomelessShelter
       
 
       A facility or location, owned and operated by the Indian Health Service, which
@@ -64,7 +64,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/ex-serviceplace in valuesets.xml
 
 
-   .. attribute:: IndianHealthServiceFree_standingFacility
+   .. py:attribute:: IndianHealthServiceFree_standingFacility
       
 
       A facility or location, owned and operated by the Indian Health Service, which
@@ -74,7 +74,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/ex-serviceplace in valuesets.xml
 
 
-   .. attribute:: IndianHealthServiceProvider_basedFacility
+   .. py:attribute:: IndianHealthServiceProvider_basedFacility
       
 
       A facility or location owned and operated by a federally recognized American
@@ -84,7 +84,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/ex-serviceplace in valuesets.xml
 
 
-   .. attribute:: Tribal638Free_StandingFacility
+   .. py:attribute:: Tribal638Free_StandingFacility
       
 
       A facility or location owned and operated by a federally recognized American
@@ -95,7 +95,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/ex-serviceplace in valuesets.xml
 
 
-   .. attribute:: Tribal638Provider_BasedFacility
+   .. py:attribute:: Tribal638Provider_BasedFacility
       
 
       A prison, jail, reformatory, work farm, detention center, or any other similar
@@ -105,7 +105,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/ex-serviceplace in valuesets.xml
 
 
-   .. attribute:: Prison_CorrectionalFacility
+   .. py:attribute:: Prison_CorrectionalFacility
       
 
       Location, other than a hospital, skilled nursing facility (SNF), military
@@ -116,7 +116,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/ex-serviceplace in valuesets.xml
 
 
-   .. attribute:: Office
+   .. py:attribute:: Office
       
 
       Location, other than a hospital or other facility, where the patient receives
@@ -124,7 +124,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/ex-serviceplace in valuesets.xml
 
 
-   .. attribute:: Home
+   .. py:attribute:: Home
       
 
       Congregate residential facility with self-contained living units providing
@@ -134,7 +134,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/ex-serviceplace in valuesets.xml
 
 
-   .. attribute:: AssistedLivingFa
+   .. py:attribute:: AssistedLivingFa
       
 
       A residence, with shared living areas, where clients receive supervision and
@@ -143,7 +143,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/ex-serviceplace in valuesets.xml
 
 
-   .. attribute:: GroupHome
+   .. py:attribute:: GroupHome
       
 
       A facility/unit that moves from place-to-place equipped to provide preventive,
@@ -151,7 +151,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/ex-serviceplace in valuesets.xml
 
 
-   .. attribute:: MobileUnit
+   .. py:attribute:: MobileUnit
       
 
       portion of an off-campus hospital provider-based department which provides
@@ -161,7 +161,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/ex-serviceplace in valuesets.xml
 
 
-   .. attribute:: OffCampus_OutpatientHospital
+   .. py:attribute:: OffCampus_OutpatientHospital
       
 
       Location, distinct from a hospital emergency room, an office, or a clinic,
@@ -170,7 +170,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/ex-serviceplace in valuesets.xml
 
 
-   .. attribute:: UrgentCareFacility
+   .. py:attribute:: UrgentCareFacility
       
 
       A facility, other than psychiatric, which primarily provides diagnostic,
@@ -180,7 +180,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/ex-serviceplace in valuesets.xml
 
 
-   .. attribute:: InpatientHospital
+   .. py:attribute:: InpatientHospital
       
 
       A land vehicle specifically designed, equipped and staffed for lifesaving and
@@ -188,7 +188,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/ex-serviceplace in valuesets.xml
 
 
-   .. attribute:: Ambulance_Land
+   .. py:attribute:: Ambulance_Land
       
 
       

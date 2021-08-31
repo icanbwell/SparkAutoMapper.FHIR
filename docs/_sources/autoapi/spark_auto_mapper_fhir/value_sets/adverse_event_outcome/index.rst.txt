@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.adverse_event_outcome`
-==============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.adverse_event_outcome`
+=================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.adverse_event_outcome
 
@@ -17,56 +17,56 @@ Classes
 
 
 
-.. class:: AdverseEventOutcomeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: AdverseEventOutcomeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    AdverseEventOutcome
    From: http://terminology.hl7.org/CodeSystem/adverse-event-outcome in valuesets.xml
        TODO (and should this be required?).
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/adverse-event-outcome
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/adverse-event-outcome
 
       
 
 
-.. class:: AdverseEventOutcomeCodeValues
+.. py:class:: AdverseEventOutcomeCodeValues
 
    From: http://terminology.hl7.org/CodeSystem/adverse-event-outcome in valuesets.xml
 
-   .. attribute:: Resolved
+   .. py:attribute:: Resolved
       
 
       From: http://terminology.hl7.org/CodeSystem/adverse-event-outcome in valuesets.xml
 
 
-   .. attribute:: Recovering
+   .. py:attribute:: Recovering
       
 
       From: http://terminology.hl7.org/CodeSystem/adverse-event-outcome in valuesets.xml
 
 
-   .. attribute:: Ongoing
+   .. py:attribute:: Ongoing
       
 
       From: http://terminology.hl7.org/CodeSystem/adverse-event-outcome in valuesets.xml
 
 
-   .. attribute:: ResolvedWithSequelae
+   .. py:attribute:: ResolvedWithSequelae
       
 
       From: http://terminology.hl7.org/CodeSystem/adverse-event-outcome in valuesets.xml
 
 
-   .. attribute:: Fatal
+   .. py:attribute:: Fatal
       
 
       From: http://terminology.hl7.org/CodeSystem/adverse-event-outcome in valuesets.xml
 
 
-   .. attribute:: Unknown
+   .. py:attribute:: Unknown
       
 
       

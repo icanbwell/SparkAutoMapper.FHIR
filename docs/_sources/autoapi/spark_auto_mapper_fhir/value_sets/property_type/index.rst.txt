@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.property_type`
-======================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.property_type`
+=========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.property_type
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: PropertyTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: PropertyTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    PropertyType
    From: http://hl7.org/fhir/concept-property-type in valuesets.xml
        The type of a property value.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/concept-property-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/concept-property-type
 
       
 
 
-.. class:: PropertyTypeCodeValues
+.. py:class:: PropertyTypeCodeValues
 
    The property value is a code that identifies a concept defined in the code
    system.
    From: http://hl7.org/fhir/concept-property-type in valuesets.xml
 
-   .. attribute:: Code_internalReference_
+   .. py:attribute:: Code_internalReference_
       
 
       The property  value is a code defined in an external code system. This may be
@@ -46,14 +46,14 @@ Classes
       From: http://hl7.org/fhir/concept-property-type in valuesets.xml
 
 
-   .. attribute:: Coding_externalReference_
+   .. py:attribute:: Coding_externalReference_
       
 
       The property value is a string.
       From: http://hl7.org/fhir/concept-property-type in valuesets.xml
 
 
-   .. attribute:: String
+   .. py:attribute:: String
       
 
       The property value is a string (often used to assign ranking values to
@@ -61,28 +61,28 @@ Classes
       From: http://hl7.org/fhir/concept-property-type in valuesets.xml
 
 
-   .. attribute:: Integer
+   .. py:attribute:: Integer
       
 
       The property value is a boolean true | false.
       From: http://hl7.org/fhir/concept-property-type in valuesets.xml
 
 
-   .. attribute:: Boolean
+   .. py:attribute:: Boolean
       
 
       The property is a date or a date + time.
       From: http://hl7.org/fhir/concept-property-type in valuesets.xml
 
 
-   .. attribute:: DateTime
+   .. py:attribute:: DateTime
       
 
       The property value is a decimal number.
       From: http://hl7.org/fhir/concept-property-type in valuesets.xml
 
 
-   .. attribute:: Decimal
+   .. py:attribute:: Decimal
       
 
       

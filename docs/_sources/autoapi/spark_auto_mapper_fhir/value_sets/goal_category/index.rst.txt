@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.goal_category`
-======================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.goal_category`
+=========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.goal_category
 
@@ -17,55 +17,55 @@ Classes
 
 
 
-.. class:: GoalCategoryCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: GoalCategoryCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    GoalCategory
    From: http://terminology.hl7.org/CodeSystem/goal-category in valuesets.xml
        Example codes for grouping goals to use for filtering or presentation.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/goal-category
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/goal-category
 
       
 
 
-.. class:: GoalCategoryCodeValues
+.. py:class:: GoalCategoryCodeValues
 
    Goals related to the consumption of food and/or beverages.
    From: http://terminology.hl7.org/CodeSystem/goal-category in valuesets.xml
 
-   .. attribute:: Dietary
+   .. py:attribute:: Dietary
       
 
       Goals related to the personal protection of the subject.
       From: http://terminology.hl7.org/CodeSystem/goal-category in valuesets.xml
 
 
-   .. attribute:: Safety
+   .. py:attribute:: Safety
       
 
       Goals related to the manner in which the subject acts.
       From: http://terminology.hl7.org/CodeSystem/goal-category in valuesets.xml
 
 
-   .. attribute:: Behavioral
+   .. py:attribute:: Behavioral
       
 
       Goals related to the practice of nursing or established by nurses.
       From: http://terminology.hl7.org/CodeSystem/goal-category in valuesets.xml
 
 
-   .. attribute:: Nursing
+   .. py:attribute:: Nursing
       
 
       Goals related to the mobility and/or motor capability of the subject.
       From: http://terminology.hl7.org/CodeSystem/goal-category in valuesets.xml
 
 
-   .. attribute:: Physiotherapy
+   .. py:attribute:: Physiotherapy
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.imaging_study_status`
-=============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.imaging_study_status`
+================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.imaging_study_status
 
@@ -17,35 +17,35 @@ Classes
 
 
 
-.. class:: ImagingStudyStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ImagingStudyStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ImagingStudyStatus
    From: http://hl7.org/fhir/imagingstudy-status in valuesets.xml
        The status of the ImagingStudy.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/imagingstudy-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/imagingstudy-status
 
       
 
 
-.. class:: ImagingStudyStatusCodeValues
+.. py:class:: ImagingStudyStatusCodeValues
 
    The existence of the imaging study is registered, but there is nothing yet
    available.
    From: http://hl7.org/fhir/imagingstudy-status in valuesets.xml
 
-   .. attribute:: Registered
+   .. py:attribute:: Registered
       
 
       At least one instance has been associated with this imaging study.
       From: http://hl7.org/fhir/imagingstudy-status in valuesets.xml
 
 
-   .. attribute:: Available
+   .. py:attribute:: Available
       
 
       The imaging study is unavailable because the imaging study was not started or
@@ -53,7 +53,7 @@ Classes
       From: http://hl7.org/fhir/imagingstudy-status in valuesets.xml
 
 
-   .. attribute:: Cancelled
+   .. py:attribute:: Cancelled
       
 
       The imaging study has been withdrawn following a previous final release.  This
@@ -63,7 +63,7 @@ Classes
       From: http://hl7.org/fhir/imagingstudy-status in valuesets.xml
 
 
-   .. attribute:: EnteredInError
+   .. py:attribute:: EnteredInError
       
 
       The system does not know which of the status values currently applies for this
@@ -72,7 +72,7 @@ Classes
       From: http://hl7.org/fhir/imagingstudy-status in valuesets.xml
 
 
-   .. attribute:: Unknown
+   .. py:attribute:: Unknown
       
 
       

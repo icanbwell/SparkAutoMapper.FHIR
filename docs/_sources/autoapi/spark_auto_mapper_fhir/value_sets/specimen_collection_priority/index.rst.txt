@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.specimen_collection_priority`
-=====================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.specimen_collection_priority`
+========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.specimen_collection_priority
 
@@ -17,63 +17,63 @@ Classes
 
 
 
-.. class:: SpecimenCollectionPriorityCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SpecimenCollectionPriorityCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SpecimenCollectionPriority
    From: http://hl7.org/fhir/ValueSet/specimen-collection-priority in valuesets.xml
         This example value set defines a set of codes that can be used to indicate
    the priority of collection of a specimen.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://example.com
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://example.com
 
       
 
 
-.. class:: SpecimenCollectionPriorityCodeValues
+.. py:class:: SpecimenCollectionPriorityCodeValues
 
    From: http://hl7.org/fhir/ValueSet/specimen-collection-priority in valuesets.xml
 
-   .. attribute:: STAT
+   .. py:attribute:: STAT
       
 
       From: http://hl7.org/fhir/ValueSet/specimen-collection-priority in valuesets.xml
 
 
-   .. attribute:: ASAP
+   .. py:attribute:: ASAP
       
 
       From: http://hl7.org/fhir/ValueSet/specimen-collection-priority in valuesets.xml
 
 
-   .. attribute:: ASAP_ED
+   .. py:attribute:: ASAP_ED
       
 
       From: http://hl7.org/fhir/ValueSet/specimen-collection-priority in valuesets.xml
 
 
-   .. attribute:: AM
+   .. py:attribute:: AM
       
 
       From: http://hl7.org/fhir/ValueSet/specimen-collection-priority in valuesets.xml
 
 
-   .. attribute:: ROUTINE
+   .. py:attribute:: ROUTINE
       
 
       From: http://hl7.org/fhir/ValueSet/specimen-collection-priority in valuesets.xml
 
 
-   .. attribute:: NURSECOLLECT
+   .. py:attribute:: NURSECOLLECT
       
 
       From: http://hl7.org/fhir/ValueSet/specimen-collection-priority in valuesets.xml
 
 
-   .. attribute:: CALLORFAX
+   .. py:attribute:: CALLORFAX
       
 
       

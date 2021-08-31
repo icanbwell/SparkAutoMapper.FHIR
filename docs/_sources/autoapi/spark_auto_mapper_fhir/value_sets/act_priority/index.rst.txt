@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.act_priority`
-=====================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.act_priority`
+========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.act_priority
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: ActPriority(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ActPriority(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.ActPriority
    From: http://terminology.hl7.org/ValueSet/v3-ActPriority in v3-codesystems.xml
@@ -28,18 +28,18 @@ Classes
    which the Act happened, can happen, is happening, is intended to happen, or is
    requested/demanded to happen.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ActPriority
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-ActPriority
 
       
 
 
-.. class:: ActPriorityValues
+.. py:class:: ActPriorityValues
 
    As soon as possible, next highest priority after stat.
    From: http://terminology.hl7.org/CodeSystem/v3-ActPriority in v3-codesystems.xml
 
-   .. attribute:: ASAP
+   .. py:attribute:: ASAP
       
 
       Filler should contact the placer as soon as results are available, even for
@@ -47,7 +47,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActPriority in v3-codesystems.xml
 
 
-   .. attribute:: CallbackResults
+   .. py:attribute:: CallbackResults
       
 
       Filler should contact the placer (or target) to schedule the service.  (Was
@@ -55,14 +55,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActPriority in v3-codesystems.xml
 
 
-   .. attribute:: CallbackForScheduling
+   .. py:attribute:: CallbackForScheduling
       
 
       Beneficial to the patient but not essential for survival.
       From: http://terminology.hl7.org/CodeSystem/v3-ActPriority in v3-codesystems.xml
 
 
-   .. attribute:: Elective
+   .. py:attribute:: Elective
       
 
       An unforeseen combination of circumstances or the resulting state that calls
@@ -70,7 +70,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActPriority in v3-codesystems.xml
 
 
-   .. attribute:: Emergency
+   .. py:attribute:: Emergency
       
 
       Used to indicate that a service is to be performed prior to a scheduled
@@ -82,7 +82,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActPriority in v3-codesystems.xml
 
 
-   .. attribute:: Preop
+   .. py:attribute:: Preop
       
 
       An "as needed" order should be accompanied by a description of what
@@ -91,28 +91,28 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActPriority in v3-codesystems.xml
 
 
-   .. attribute:: AsNeeded
+   .. py:attribute:: AsNeeded
       
 
       Routine service, do at usual work hours.
       From: http://terminology.hl7.org/CodeSystem/v3-ActPriority in v3-codesystems.xml
 
 
-   .. attribute:: Routine
+   .. py:attribute:: Routine
       
 
       A report should be prepared and sent as quickly as possible.
       From: http://terminology.hl7.org/CodeSystem/v3-ActPriority in v3-codesystems.xml
 
 
-   .. attribute:: RushReporting
+   .. py:attribute:: RushReporting
       
 
       With highest priority (e.g., emergency).
       From: http://terminology.hl7.org/CodeSystem/v3-ActPriority in v3-codesystems.xml
 
 
-   .. attribute:: Stat
+   .. py:attribute:: Stat
       
 
       It is critical to come as close as possible to the requested time (e.g., for a
@@ -120,21 +120,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActPriority in v3-codesystems.xml
 
 
-   .. attribute:: TimingCritical
+   .. py:attribute:: TimingCritical
       
 
       Drug is to be used as directed by the prescriber.
       From: http://terminology.hl7.org/CodeSystem/v3-ActPriority in v3-codesystems.xml
 
 
-   .. attribute:: UseAsDirected
+   .. py:attribute:: UseAsDirected
       
 
       Calls for prompt action.
       From: http://terminology.hl7.org/CodeSystem/v3-ActPriority in v3-codesystems.xml
 
 
-   .. attribute:: Urgent
+   .. py:attribute:: Urgent
       
 
       

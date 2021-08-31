@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.resource_type`
-======================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.resource_type`
+=========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.resource_type
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: ResourceTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ResourceTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ResourceType
    From: http://hl7.org/fhir/resource-types in valuesets.xml
        One of the resource types defined as part of this version of FHIR.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/resource-types
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/resource-types
 
       
 
 
-.. class:: ResourceTypeCodeValues
+.. py:class:: ResourceTypeCodeValues
 
    A financial tool for tracking value accrued for a particular purpose.  In the
    healthcare field, used to track charges for a patient, cost centers, etc.
    From: http://hl7.org/fhir/resource-types in valuesets.xml
 
-   .. attribute:: Account
+   .. py:attribute:: Account
       
 
       This resource allows for the definition of some activity to be performed,
@@ -47,7 +47,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: ActivityDefinition
+   .. py:attribute:: ActivityDefinition
       
 
       Actual or  potential/avoided event causing unintended physical injury
@@ -57,7 +57,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: AdverseEvent
+   .. py:attribute:: AdverseEvent
       
 
       Risk of harmful or undesirable, physiological response which is unique to an
@@ -65,7 +65,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: AllergyIntolerance
+   .. py:attribute:: AllergyIntolerance
       
 
       A booking of a healthcare event among patient(s), practitioner(s), related
@@ -74,7 +74,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Appointment
+   .. py:attribute:: Appointment
       
 
       A reply to an appointment request for a patient and/or practitioner(s), such
@@ -82,7 +82,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: AppointmentResponse
+   .. py:attribute:: AppointmentResponse
       
 
       A record of an event made for purposes of maintaining a security log. Typical
@@ -91,7 +91,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: AuditEvent
+   .. py:attribute:: AuditEvent
       
 
       Basic is used for handling concepts not yet defined in FHIR, narrative-only
@@ -100,7 +100,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Basic
+   .. py:attribute:: Basic
       
 
       A resource that represents the data of a single raw artifact as digital
@@ -109,7 +109,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Binary
+   .. py:attribute:: Binary
       
 
       A material substance originating from a biological entity intended to be
@@ -118,7 +118,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: BiologicallyDerivedProduct
+   .. py:attribute:: BiologicallyDerivedProduct
       
 
       Record details about an anatomical structure.  This resource may be used when
@@ -126,14 +126,14 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: BodyStructure
+   .. py:attribute:: BodyStructure
       
 
       A container for a collection of resources.
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Bundle
+   .. py:attribute:: Bundle
       
 
       A Capability Statement documents a set of capabilities (behaviors) of a FHIR
@@ -143,7 +143,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: CapabilityStatement
+   .. py:attribute:: CapabilityStatement
       
 
       Describes the intention of how one or more practitioners intend to deliver
@@ -152,7 +152,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: CarePlan
+   .. py:attribute:: CarePlan
       
 
       The Care Team includes all the people and organizations who plan to
@@ -160,14 +160,14 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: CareTeam
+   .. py:attribute:: CareTeam
       
 
       Catalog entries are wrappers that contextualize items included in a catalog.
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: CatalogEntry
+   .. py:attribute:: CatalogEntry
       
 
       The resource ChargeItem describes the provision of healthcare provider
@@ -178,7 +178,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: ChargeItem
+   .. py:attribute:: ChargeItem
       
 
       The ChargeItemDefinition resource provides the properties that apply to the
@@ -188,7 +188,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: ChargeItemDefinition
+   .. py:attribute:: ChargeItemDefinition
       
 
       A provider issued list of professional services and products which have been
@@ -197,7 +197,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Claim
+   .. py:attribute:: Claim
       
 
       This resource provides the adjudication details from the processing of a Claim
@@ -205,7 +205,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: ClaimResponse
+   .. py:attribute:: ClaimResponse
       
 
       A record of a clinical assessment performed to determine what problem(s) may
@@ -218,7 +218,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: ClinicalImpression
+   .. py:attribute:: ClinicalImpression
       
 
       The CodeSystem resource is used to declare the existence of and describe a
@@ -227,7 +227,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: CodeSystem
+   .. py:attribute:: CodeSystem
       
 
       An occurrence of information being transmitted; e.g. an alert that was sent to
@@ -236,7 +236,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Communication
+   .. py:attribute:: Communication
       
 
       A request to convey information; e.g. the CDS system proposes that an alert be
@@ -245,14 +245,14 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: CommunicationRequest
+   .. py:attribute:: CommunicationRequest
       
 
       A compartment definition that defines how resources are accessed on a server.
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: CompartmentDefinition
+   .. py:attribute:: CompartmentDefinition
       
 
       A set of healthcare-related information that is assembled together into a
@@ -267,7 +267,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Composition
+   .. py:attribute:: Composition
       
 
       A statement of relationships from one set of concepts to one or more other
@@ -276,7 +276,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: ConceptMap
+   .. py:attribute:: ConceptMap
       
 
       A clinical condition, problem, diagnosis, or other event, situation, issue, or
@@ -284,7 +284,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Condition
+   .. py:attribute:: Condition
       
 
       A record of a healthcare consumer’s  choices, which permits or denies
@@ -293,7 +293,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Consent
+   .. py:attribute:: Consent
       
 
       Legally enforceable, formally recorded unilateral or bilateral directive i.e.,
@@ -301,7 +301,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Contract
+   .. py:attribute:: Contract
       
 
       Financial instrument which may be used to reimburse or pay for health care
@@ -309,7 +309,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Coverage
+   .. py:attribute:: Coverage
       
 
       The CoverageEligibilityRequest provides patient and insurance coverage
@@ -320,7 +320,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: CoverageEligibilityRequest
+   .. py:attribute:: CoverageEligibilityRequest
       
 
       This resource provides eligibility and plan details from the processing of an
@@ -328,7 +328,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: CoverageEligibilityResponse
+   .. py:attribute:: CoverageEligibilityResponse
       
 
       Indicates an actual or potential clinical issue with or between one or more
@@ -337,7 +337,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: DetectedIssue
+   .. py:attribute:: DetectedIssue
       
 
       A type of a manufactured item that is used in the provision of healthcare
@@ -346,7 +346,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Device
+   .. py:attribute:: Device
       
 
       The characteristics, operational status and capabilities of a medical-related
@@ -354,7 +354,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: DeviceDefinition
+   .. py:attribute:: DeviceDefinition
       
 
       Describes a measurement, calculation or setting capability of a medical
@@ -362,7 +362,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: DeviceMetric
+   .. py:attribute:: DeviceMetric
       
 
       Represents a request for a patient to employ a medical device. The device may
@@ -370,7 +370,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: DeviceRequest
+   .. py:attribute:: DeviceRequest
       
 
       A record of a device being used by a patient where the record is the result of
@@ -378,7 +378,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: DeviceUseStatement
+   .. py:attribute:: DeviceUseStatement
       
 
       The findings and interpretation of diagnostic  tests performed on patients,
@@ -389,7 +389,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: DiagnosticReport
+   .. py:attribute:: DiagnosticReport
       
 
       A collection of documents compiled for a purpose together with metadata that
@@ -397,7 +397,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: DocumentManifest
+   .. py:attribute:: DocumentManifest
       
 
       A reference to a document of any kind for any purpose. Provides metadata about
@@ -408,14 +408,14 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: DocumentReference
+   .. py:attribute:: DocumentReference
       
 
       A resource that includes narrative, extensions, and contained resources.
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: DomainResource
+   .. py:attribute:: DomainResource
       
 
       The EffectEvidenceSynthesis resource describes the difference in an outcome
@@ -424,7 +424,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: EffectEvidenceSynthesis
+   .. py:attribute:: EffectEvidenceSynthesis
       
 
       An interaction between a patient and healthcare provider(s) for the purpose of
@@ -432,7 +432,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Encounter
+   .. py:attribute:: Encounter
       
 
       The technical details of an endpoint that can be used for electronic services,
@@ -441,7 +441,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Endpoint
+   .. py:attribute:: Endpoint
       
 
       This resource provides the insurance enrollment details to the insurer
@@ -449,7 +449,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: EnrollmentRequest
+   .. py:attribute:: EnrollmentRequest
       
 
       This resource provides enrollment and plan details from the processing of an
@@ -457,7 +457,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: EnrollmentResponse
+   .. py:attribute:: EnrollmentResponse
       
 
       An association between a patient and an organization / healthcare provider(s)
@@ -466,7 +466,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: EpisodeOfCare
+   .. py:attribute:: EpisodeOfCare
       
 
       The EventDefinition resource provides a reusable description of when a
@@ -474,7 +474,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: EventDefinition
+   .. py:attribute:: EventDefinition
       
 
       The Evidence resource describes the conditional state (population and any
@@ -483,7 +483,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Evidence
+   .. py:attribute:: Evidence
       
 
       The EvidenceVariable resource describes a "PICO" element that knowledge
@@ -491,14 +491,14 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: EvidenceVariable
+   .. py:attribute:: EvidenceVariable
       
 
       Example of workflow instance.
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: ExampleScenario
+   .. py:attribute:: ExampleScenario
       
 
       This resource provides: the claim details; adjudication details from the
@@ -507,7 +507,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: ExplanationOfBenefit
+   .. py:attribute:: ExplanationOfBenefit
       
 
       Significant health conditions for a person related to the patient relevant in
@@ -515,14 +515,14 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: FamilyMemberHistory
+   .. py:attribute:: FamilyMemberHistory
       
 
       Prospective warnings of potential issues when providing care to the patient.
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Flag
+   .. py:attribute:: Flag
       
 
       Describes the intended objective(s) for a patient, group or organization care,
@@ -531,7 +531,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Goal
+   .. py:attribute:: Goal
       
 
       A formal computable definition of a graph of resources - that is, a coherent
@@ -540,7 +540,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: GraphDefinition
+   .. py:attribute:: GraphDefinition
       
 
       Represents a defined collection of entities that may be discussed or acted
@@ -550,7 +550,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Group
+   .. py:attribute:: Group
       
 
       A guidance response is the formal response to a guidance request, including
@@ -559,14 +559,14 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: GuidanceResponse
+   .. py:attribute:: GuidanceResponse
       
 
       The details of a healthcare service available at a location.
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: HealthcareService
+   .. py:attribute:: HealthcareService
       
 
       Representation of the content produced in a DICOM imaging study. A study
@@ -577,7 +577,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: ImagingStudy
+   .. py:attribute:: ImagingStudy
       
 
       Describes the event of a patient being administered a vaccine or a record of
@@ -585,7 +585,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Immunization
+   .. py:attribute:: Immunization
       
 
       Describes a comparison of an immunization event against published
@@ -594,7 +594,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: ImmunizationEvaluation
+   .. py:attribute:: ImmunizationEvaluation
       
 
       A patient's point-in-time set of recommendations (i.e. forecasting) according
@@ -602,7 +602,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: ImmunizationRecommendation
+   .. py:attribute:: ImmunizationRecommendation
       
 
       A set of rules of how a particular interoperability or standards problem is
@@ -612,14 +612,14 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: ImplementationGuide
+   .. py:attribute:: ImplementationGuide
       
 
       Details of a Health Insurance product/plan provided by an organization.
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: InsurancePlan
+   .. py:attribute:: InsurancePlan
       
 
       Invoice containing collected ChargeItems from an Account with calculated
@@ -627,7 +627,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Invoice
+   .. py:attribute:: Invoice
       
 
       The Library resource is a general-purpose container for knowledge asset
@@ -637,7 +637,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Library
+   .. py:attribute:: Library
       
 
       Identifies two or more records (resource instances) that refer to the same
@@ -645,14 +645,14 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Linkage
+   .. py:attribute:: Linkage
       
 
       A list is a curated collection of resources.
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: List_
+   .. py:attribute:: List_
       
 
       Details and position information for a physical place where services are
@@ -661,14 +661,14 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Location
+   .. py:attribute:: Location
       
 
       The Measure resource provides the definition of a quality measure.
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Measure
+   .. py:attribute:: Measure
       
 
       The MeasureReport resource contains the results of the calculation of a
@@ -677,7 +677,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: MeasureReport
+   .. py:attribute:: MeasureReport
       
 
       A photo, video, or audio recording acquired or used in healthcare. The actual
@@ -685,7 +685,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Media
+   .. py:attribute:: Media
       
 
       This resource is primarily used for the identification and definition of a
@@ -694,7 +694,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Medication
+   .. py:attribute:: Medication
       
 
       Describes the event of a patient consuming or otherwise being administered a
@@ -705,7 +705,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: MedicationAdministration
+   .. py:attribute:: MedicationAdministration
       
 
       Indicates that a medication product is to be or has been dispensed for a named
@@ -716,14 +716,14 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: MedicationDispense
+   .. py:attribute:: MedicationDispense
       
 
       Information about a medication that is used to support knowledge.
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: MedicationKnowledge
+   .. py:attribute:: MedicationKnowledge
       
 
       An order or request for both supply of the medication and the instructions for
@@ -734,7 +734,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: MedicationRequest
+   .. py:attribute:: MedicationRequest
       
 
       A record of a medication that is being consumed by a patient.   A
@@ -762,7 +762,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: MedicationStatement
+   .. py:attribute:: MedicationStatement
       
 
       Detailed definition of a medicinal product, typically for uses other than
@@ -770,14 +770,14 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: MedicinalProduct
+   .. py:attribute:: MedicinalProduct
       
 
       The regulatory authorization of a medicinal product.
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: MedicinalProductAuthorization
+   .. py:attribute:: MedicinalProductAuthorization
       
 
       The clinical particulars - indications, contraindications etc. of a medicinal
@@ -785,21 +785,21 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: MedicinalProductContraindication
+   .. py:attribute:: MedicinalProductContraindication
       
 
       Indication for the Medicinal Product.
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: MedicinalProductIndication
+   .. py:attribute:: MedicinalProductIndication
       
 
       An ingredient of a manufactured item or pharmaceutical product.
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: MedicinalProductIngredient
+   .. py:attribute:: MedicinalProductIngredient
       
 
       The interactions of the medicinal product with other medicinal products, or
@@ -807,35 +807,35 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: MedicinalProductInteraction
+   .. py:attribute:: MedicinalProductInteraction
       
 
       The manufactured item as contained in the packaged medicinal product.
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: MedicinalProductManufactured
+   .. py:attribute:: MedicinalProductManufactured
       
 
       A medicinal product in a container or package.
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: MedicinalProductPackaged
+   .. py:attribute:: MedicinalProductPackaged
       
 
       A pharmaceutical product described in terms of its composition and dose form.
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: MedicinalProductPharmaceutical
+   .. py:attribute:: MedicinalProductPharmaceutical
       
 
       Describe the undesirable effects of the medicinal product.
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: MedicinalProductUndesirableEffect
+   .. py:attribute:: MedicinalProductUndesirableEffect
       
 
       Defines the characteristics of a message that can be shared between systems,
@@ -844,7 +844,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: MessageDefinition
+   .. py:attribute:: MessageDefinition
       
 
       The header for a message exchange that is either requesting or responding to
@@ -855,14 +855,14 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: MessageHeader
+   .. py:attribute:: MessageHeader
       
 
       Raw data describing a biological sequence.
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: MolecularSequence
+   .. py:attribute:: MolecularSequence
       
 
       A curated namespace that issues unique symbols within that namespace for the
@@ -871,7 +871,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: NamingSystem
+   .. py:attribute:: NamingSystem
       
 
       A request to supply a diet, formula feeding (enteral) or oral nutritional
@@ -879,7 +879,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: NutritionOrder
+   .. py:attribute:: NutritionOrder
       
 
       Measurements and simple assertions made about a patient, device or other
@@ -887,7 +887,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Observation
+   .. py:attribute:: Observation
       
 
       Set of definitional characteristics for a kind of observation or measurement
@@ -895,7 +895,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: ObservationDefinition
+   .. py:attribute:: ObservationDefinition
       
 
       A formal computable definition of an operation (on the RESTful interface) or a
@@ -903,7 +903,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: OperationDefinition
+   .. py:attribute:: OperationDefinition
       
 
       A collection of error, warning, or information messages that result from a
@@ -911,7 +911,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: OperationOutcome
+   .. py:attribute:: OperationOutcome
       
 
       A formally or informally recognized grouping of people or organizations formed
@@ -921,7 +921,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Organization
+   .. py:attribute:: Organization
       
 
       Defines an affiliation/assotiation/relationship between 2 distinct
@@ -929,7 +929,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: OrganizationAffiliation
+   .. py:attribute:: OrganizationAffiliation
       
 
       This resource is a non-persisted resource used to pass information into and
@@ -938,7 +938,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Parameters
+   .. py:attribute:: Parameters
       
 
       Demographics and other administrative information about an individual or
@@ -946,7 +946,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Patient
+   .. py:attribute:: Patient
       
 
       This resource provides the status of the payment for goods and services
@@ -954,7 +954,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: PaymentNotice
+   .. py:attribute:: PaymentNotice
       
 
       This resource provides the details including amount of a payment and allocates
@@ -962,7 +962,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: PaymentReconciliation
+   .. py:attribute:: PaymentReconciliation
       
 
       Demographics and administrative information about a person independent of a
@@ -970,7 +970,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Person
+   .. py:attribute:: Person
       
 
       This resource allows for the definition of various types of plans as a
@@ -980,7 +980,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: PlanDefinition
+   .. py:attribute:: PlanDefinition
       
 
       A person who is directly or indirectly involved in the provisioning of
@@ -988,7 +988,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Practitioner
+   .. py:attribute:: Practitioner
       
 
       A specific set of Roles/Locations/specialties/services that a practitioner may
@@ -996,7 +996,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: PractitionerRole
+   .. py:attribute:: PractitionerRole
       
 
       An action that is or was performed on or for a patient. This can be a physical
@@ -1005,7 +1005,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Procedure
+   .. py:attribute:: Procedure
       
 
       Provenance of a resource is a record that describes entities and processes
@@ -1020,7 +1020,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Provenance
+   .. py:attribute:: Provenance
       
 
       A structured set of questions intended to guide the collection of answers from
@@ -1029,7 +1029,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Questionnaire
+   .. py:attribute:: Questionnaire
       
 
       A structured set of questions and their answers. The questions are ordered and
@@ -1038,7 +1038,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: QuestionnaireResponse
+   .. py:attribute:: QuestionnaireResponse
       
 
       Information about a person that is involved in the care for a patient, but who
@@ -1047,7 +1047,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: RelatedPerson
+   .. py:attribute:: RelatedPerson
       
 
       A group of related requests that can be used to capture intended activities
@@ -1055,7 +1055,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: RequestGroup
+   .. py:attribute:: RequestGroup
       
 
       The ResearchDefinition resource describes the conditional state (population
@@ -1064,7 +1064,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: ResearchDefinition
+   .. py:attribute:: ResearchDefinition
       
 
       The ResearchElementDefinition resource describes a "PICO" element that
@@ -1072,7 +1072,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: ResearchElementDefinition
+   .. py:attribute:: ResearchElementDefinition
       
 
       A process where a researcher or organization plans and then executes a series
@@ -1084,7 +1084,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: ResearchStudy
+   .. py:attribute:: ResearchStudy
       
 
       A physical entity which is the primary unit of operational and/or
@@ -1092,14 +1092,14 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: ResearchSubject
+   .. py:attribute:: ResearchSubject
       
 
       This is the base resource type for everything.
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Resource
+   .. py:attribute:: Resource
       
 
       An assessment of the likely outcome(s) for a patient or other subject as well
@@ -1107,7 +1107,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: RiskAssessment
+   .. py:attribute:: RiskAssessment
       
 
       The RiskEvidenceSynthesis resource describes the likelihood of an outcome in a
@@ -1116,14 +1116,14 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: RiskEvidenceSynthesis
+   .. py:attribute:: RiskEvidenceSynthesis
       
 
       A container for slots of time that may be available for booking appointments.
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Schedule
+   .. py:attribute:: Schedule
       
 
       A search parameter that defines a named search item that can be used to
@@ -1131,7 +1131,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: SearchParameter
+   .. py:attribute:: SearchParameter
       
 
       A record of a request for service such as diagnostic investigations,
@@ -1139,28 +1139,28 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: ServiceRequest
+   .. py:attribute:: ServiceRequest
       
 
       A slot of time on a schedule that may be available for booking appointments.
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Slot
+   .. py:attribute:: Slot
       
 
       A sample to be used for analysis.
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Specimen
+   .. py:attribute:: Specimen
       
 
       A kind of specimen with associated set of requirements.
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: SpecimenDefinition
+   .. py:attribute:: SpecimenDefinition
       
 
       A definition of a FHIR structure. This resource is used to describe the
@@ -1169,7 +1169,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: StructureDefinition
+   .. py:attribute:: StructureDefinition
       
 
       A Map of relationships between 2 structures that can be used to transform
@@ -1177,7 +1177,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: StructureMap
+   .. py:attribute:: StructureMap
       
 
       The subscription resource is used to define a push-based subscription from a
@@ -1188,14 +1188,14 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Subscription
+   .. py:attribute:: Subscription
       
 
       A homogeneous material with a definite composition.
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Substance
+   .. py:attribute:: Substance
       
 
       Nucleic acids are defined by three distinct elements: the base, sugar and
@@ -1205,14 +1205,14 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: SubstanceNucleicAcid
+   .. py:attribute:: SubstanceNucleicAcid
       
 
       Todo.
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: SubstancePolymer
+   .. py:attribute:: SubstancePolymer
       
 
       A SubstanceProtein is defined as a single unit of a linear amino acid
@@ -1226,14 +1226,14 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: SubstanceProtein
+   .. py:attribute:: SubstanceProtein
       
 
       Todo.
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: SubstanceReferenceInformation
+   .. py:attribute:: SubstanceReferenceInformation
       
 
       Source material shall capture information on the taxonomic and anatomical
@@ -1253,7 +1253,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: SubstanceSourceMaterial
+   .. py:attribute:: SubstanceSourceMaterial
       
 
       The detailed description of a substance, typically at a level beyond what is
@@ -1261,14 +1261,14 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: SubstanceSpecification
+   .. py:attribute:: SubstanceSpecification
       
 
       Record of delivery of what is supplied.
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: SupplyDelivery
+   .. py:attribute:: SupplyDelivery
       
 
       A record of a request for a medication, substance or device used in the
@@ -1276,14 +1276,14 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: SupplyRequest
+   .. py:attribute:: SupplyRequest
       
 
       A task to be performed.
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: Task
+   .. py:attribute:: Task
       
 
       A TerminologyCapabilities resource documents a set of capabilities (behaviors)
@@ -1292,14 +1292,14 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: TerminologyCapabilities
+   .. py:attribute:: TerminologyCapabilities
       
 
       A summary of information based on the results of executing a TestScript.
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: TestReport
+   .. py:attribute:: TestReport
       
 
       A structured set of tests against a FHIR server or client implementation to
@@ -1307,7 +1307,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: TestScript
+   .. py:attribute:: TestScript
       
 
       A ValueSet resource instance specifies a set of codes drawn from one or more
@@ -1317,7 +1317,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: ValueSet
+   .. py:attribute:: ValueSet
       
 
       Describes validation requirements, source(s), status and dates for one or more
@@ -1325,7 +1325,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: VerificationResult
+   .. py:attribute:: VerificationResult
       
 
       An authorization for the provision of glasses and/or contact lenses to a
@@ -1333,7 +1333,7 @@ Classes
       From: http://hl7.org/fhir/resource-types in valuesets.xml
 
 
-   .. attribute:: VisionPrescription
+   .. py:attribute:: VisionPrescription
       
 
       

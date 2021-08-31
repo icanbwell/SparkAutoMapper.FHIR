@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.uscls_codes`
-====================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.uscls_codes`
+=======================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.uscls_codes
 
@@ -17,160 +17,160 @@ Classes
 
 
 
-.. class:: USCLSCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: USCLSCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    USCLSCodes
    From: http://terminology.hl7.org/CodeSystem/ex-USCLS in valuesets.xml
        This value set includes a smattering of USCLS codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/ex-USCLS
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/ex-USCLS
 
       
 
 
-.. class:: USCLSCodesCodeValues
+.. py:class:: USCLSCodesCodeValues
 
    Exam, comp, primary
    From: http://terminology.hl7.org/CodeSystem/ex-USCLS in valuesets.xml
 
-   .. attribute:: Exam_Comp_Primary
+   .. py:attribute:: Exam_Comp_Primary
       
 
       Exam, comp, mixed
       From: http://terminology.hl7.org/CodeSystem/ex-USCLS in valuesets.xml
 
 
-   .. attribute:: Exam_Comp_Mixed
+   .. py:attribute:: Exam_Comp_Mixed
       
 
       Exam, comp, permanent
       From: http://terminology.hl7.org/CodeSystem/ex-USCLS in valuesets.xml
 
 
-   .. attribute:: Exam_Comp_Permanent
+   .. py:attribute:: Exam_Comp_Permanent
       
 
       Exam, recall
       From: http://terminology.hl7.org/CodeSystem/ex-USCLS in valuesets.xml
 
 
-   .. attribute:: Exam_Recall
+   .. py:attribute:: Exam_Recall
       
 
       Exam, emergency
       From: http://terminology.hl7.org/CodeSystem/ex-USCLS in valuesets.xml
 
 
-   .. attribute:: Exam_Emergency
+   .. py:attribute:: Exam_Emergency
       
 
       Radiograph, series (12)
       From: http://terminology.hl7.org/CodeSystem/ex-USCLS in valuesets.xml
 
 
-   .. attribute:: Radiograph_Series_12_
+   .. py:attribute:: Radiograph_Series_12_
       
 
       Radiograph, series (16)
       From: http://terminology.hl7.org/CodeSystem/ex-USCLS in valuesets.xml
 
 
-   .. attribute:: Radiograph_Series_16_
+   .. py:attribute:: Radiograph_Series_16_
       
 
       Radiograph, bitewing
       From: http://terminology.hl7.org/CodeSystem/ex-USCLS in valuesets.xml
 
 
-   .. attribute:: Radiograph_Bitewing
+   .. py:attribute:: Radiograph_Bitewing
       
 
       Radiograph, panoramic
       From: http://terminology.hl7.org/CodeSystem/ex-USCLS in valuesets.xml
 
 
-   .. attribute:: Radiograph_Panoramic
+   .. py:attribute:: Radiograph_Panoramic
       
 
       Polishing, 1 unit
       From: http://terminology.hl7.org/CodeSystem/ex-USCLS in valuesets.xml
 
 
-   .. attribute:: Polishing_1Unit
+   .. py:attribute:: Polishing_1Unit
       
 
       Polishing, 2 unit
       From: http://terminology.hl7.org/CodeSystem/ex-USCLS in valuesets.xml
 
 
-   .. attribute:: Polishing_2Unit
+   .. py:attribute:: Polishing_2Unit
       
 
       Polishing, 3 unit
       From: http://terminology.hl7.org/CodeSystem/ex-USCLS in valuesets.xml
 
 
-   .. attribute:: Polishing_3Unit
+   .. py:attribute:: Polishing_3Unit
       
 
       Polishing, 4 unit
       From: http://terminology.hl7.org/CodeSystem/ex-USCLS in valuesets.xml
 
 
-   .. attribute:: Polishing_4Unit
+   .. py:attribute:: Polishing_4Unit
       
 
       Amalgam, 1 surface
       From: http://terminology.hl7.org/CodeSystem/ex-USCLS in valuesets.xml
 
 
-   .. attribute:: Amalgam_1Surface
+   .. py:attribute:: Amalgam_1Surface
       
 
       Amalgam, 2 surface
       From: http://terminology.hl7.org/CodeSystem/ex-USCLS in valuesets.xml
 
 
-   .. attribute:: Amalgam_2Surface
+   .. py:attribute:: Amalgam_2Surface
       
 
       Crown, PFM
       From: http://terminology.hl7.org/CodeSystem/ex-USCLS in valuesets.xml
 
 
-   .. attribute:: Crown_PFM
+   .. py:attribute:: Crown_PFM
       
 
       Maryland Bridge
       From: http://terminology.hl7.org/CodeSystem/ex-USCLS in valuesets.xml
 
 
-   .. attribute:: MarylandBridge
+   .. py:attribute:: MarylandBridge
       
 
       Lab, commercial
       From: http://terminology.hl7.org/CodeSystem/ex-USCLS in valuesets.xml
 
 
-   .. attribute:: Lab_Commercial
+   .. py:attribute:: Lab_Commercial
       
 
       Lab, in office
       From: http://terminology.hl7.org/CodeSystem/ex-USCLS in valuesets.xml
 
 
-   .. attribute:: Lab_InOffice
+   .. py:attribute:: Lab_InOffice
       
 
       Expense
       From: http://terminology.hl7.org/CodeSystem/ex-USCLS in valuesets.xml
 
 
-   .. attribute:: Expense
+   .. py:attribute:: Expense
       
 
       

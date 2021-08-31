@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.local_markup_ignore`
-============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.local_markup_ignore`
+===============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.local_markup_ignore
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: LocalMarkupIgnore(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: LocalMarkupIgnore(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.LocalMarkupIgnore
    From: http://terminology.hl7.org/ValueSet/v3-LocalMarkupIgnore in v3-codesystems.xml
@@ -28,25 +28,25 @@ Classes
    local_header, local_attr) when value="markup", or to ignore the local markup
    tags and all contained content when value="all"
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-LocalMarkupIgnore
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-LocalMarkupIgnore
 
       
 
 
-.. class:: LocalMarkupIgnoreValues
+.. py:class:: LocalMarkupIgnoreValues
 
    all
    From: http://terminology.hl7.org/CodeSystem/v3-LocalMarkupIgnore in v3-codesystems.xml
 
-   .. attribute:: All
+   .. py:attribute:: All
       
 
       markup
       From: http://terminology.hl7.org/CodeSystem/v3-LocalMarkupIgnore in v3-codesystems.xml
 
 
-   .. attribute:: Markup
+   .. py:attribute:: Markup
       
 
       

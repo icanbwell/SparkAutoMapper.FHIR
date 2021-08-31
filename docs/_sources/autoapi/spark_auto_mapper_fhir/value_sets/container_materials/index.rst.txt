@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.container_materials`
-============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.container_materials`
+===============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.container_materials
 
@@ -17,39 +17,39 @@ Classes
 
 
 
-.. class:: ContainerMaterialsCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ContainerMaterialsCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ContainerMaterials
    From: http://hl7.org/fhir/ValueSet/container-material in valuesets.xml
        This value set includes SNOMED CT codes for materials that specimen containers
    are made of
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://snomed.info/sct
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://snomed.info/sct
 
       
 
 
-.. class:: ContainerMaterialsCodeValues
+.. py:class:: ContainerMaterialsCodeValues
 
    From: http://hl7.org/fhir/ValueSet/container-material in valuesets.xml
 
-   .. attribute:: Glass
+   .. py:attribute:: Glass
       
 
       From: http://hl7.org/fhir/ValueSet/container-material in valuesets.xml
 
 
-   .. attribute:: Plastic
+   .. py:attribute:: Plastic
       
 
       From: http://hl7.org/fhir/ValueSet/container-material in valuesets.xml
 
 
-   .. attribute:: Metal
+   .. py:attribute:: Metal
       
 
       

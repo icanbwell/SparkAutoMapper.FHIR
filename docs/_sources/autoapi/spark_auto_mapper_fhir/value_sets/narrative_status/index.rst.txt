@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.narrative_status`
-=========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.narrative_status`
+============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.narrative_status
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: NarrativeStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: NarrativeStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    NarrativeStatus
    From: http://hl7.org/fhir/narrative-status in valuesets.xml
        The status of a resource narrative.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/narrative-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/narrative-status
 
       
 
 
-.. class:: NarrativeStatusCodeValues
+.. py:class:: NarrativeStatusCodeValues
 
    The contents of the narrative are entirely generated from the core elements in
    the content.
    From: http://hl7.org/fhir/narrative-status in valuesets.xml
 
-   .. attribute:: Generated
+   .. py:attribute:: Generated
       
 
       The contents of the narrative are entirely generated from the core elements in
@@ -47,7 +47,7 @@ Classes
       From: http://hl7.org/fhir/narrative-status in valuesets.xml
 
 
-   .. attribute:: Extensions
+   .. py:attribute:: Extensions
       
 
       The contents of the narrative may contain additional information not found in
@@ -56,7 +56,7 @@ Classes
       From: http://hl7.org/fhir/narrative-status in valuesets.xml
 
 
-   .. attribute:: Additional
+   .. py:attribute:: Additional
       
 
       The contents of the narrative are some equivalent of "No human-readable text
@@ -64,7 +64,7 @@ Classes
       From: http://hl7.org/fhir/narrative-status in valuesets.xml
 
 
-   .. attribute:: Empty
+   .. py:attribute:: Empty
       
 
       

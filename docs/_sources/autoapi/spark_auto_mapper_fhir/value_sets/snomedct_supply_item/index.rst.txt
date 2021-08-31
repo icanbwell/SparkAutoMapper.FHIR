@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.snomedct_supply_item`
-=============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.snomedct_supply_item`
+================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.snomedct_supply_item
 
@@ -16,10 +16,10 @@ Classes
 
 
 
-.. class:: SNOMEDCTSupplyItemCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SNOMEDCTSupplyItemCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SNOMEDCTSupplyItem
    From: http://hl7.org/fhir/ValueSet/supply-item in valuesets.xml
@@ -27,8 +27,8 @@ Classes
    105590001 (Substance (substance)) or  concept is-a 260787004 (Physical object)
    and provided as an example value set.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://snomed.info/sct
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://snomed.info/sct
 
       
 

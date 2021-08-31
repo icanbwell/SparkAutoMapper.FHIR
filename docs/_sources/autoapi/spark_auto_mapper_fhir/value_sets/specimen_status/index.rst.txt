@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.specimen_status`
-========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.specimen_status`
+===========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.specimen_status
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: SpecimenStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SpecimenStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SpecimenStatus
    From: http://hl7.org/fhir/specimen-status in valuesets.xml
        Codes providing the status/availability of a specimen.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/specimen-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/specimen-status
 
       
 
 
-.. class:: SpecimenStatusCodeValues
+.. py:class:: SpecimenStatusCodeValues
 
    The physical specimen is present and in good condition.
    From: http://hl7.org/fhir/specimen-status in valuesets.xml
 
-   .. attribute:: Available
+   .. py:attribute:: Available
       
 
       There is no physical specimen because it is either lost, destroyed or
@@ -45,7 +45,7 @@ Classes
       From: http://hl7.org/fhir/specimen-status in valuesets.xml
 
 
-   .. attribute:: Unavailable
+   .. py:attribute:: Unavailable
       
 
       The specimen cannot be used because of a quality issue such as a broken
@@ -53,14 +53,14 @@ Classes
       From: http://hl7.org/fhir/specimen-status in valuesets.xml
 
 
-   .. attribute:: Unsatisfactory
+   .. py:attribute:: Unsatisfactory
       
 
       The specimen was entered in error and therefore nullified.
       From: http://hl7.org/fhir/specimen-status in valuesets.xml
 
 
-   .. attribute:: EnteredInError
+   .. py:attribute:: EnteredInError
       
 
       

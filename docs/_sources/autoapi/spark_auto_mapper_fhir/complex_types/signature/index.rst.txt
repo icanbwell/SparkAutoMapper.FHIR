@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.complex_types.signature`
-=====================================================
+:py:mod:`spark_auto_mapper_fhir.complex_types.signature`
+========================================================
 
 .. py:module:: spark_auto_mapper_fhir.complex_types.signature
 
@@ -16,17 +16,47 @@ Classes
 
 
 
-.. class:: Signature(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, type_: spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.signature_type_codes.SignatureTypeCodesCode]], when: spark_auto_mapper_fhir.fhir_types.instant.FhirInstant, who: spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole, spark_auto_mapper_fhir.resources.related_person.RelatedPerson, spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.device.Device, spark_auto_mapper_fhir.resources.organization.Organization)]], onBehalfOf: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole, spark_auto_mapper_fhir.resources.related_person.RelatedPerson, spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.device.Device, spark_auto_mapper_fhir.resources.organization.Organization)]]] = None, targetFormat: Optional[spark_auto_mapper_fhir.value_sets.mime_types.MimeTypesCode] = None, sigFormat: Optional[spark_auto_mapper_fhir.value_sets.mime_types.MimeTypesCode] = None, data: Optional[spark_auto_mapper_fhir.fhir_types.base64_binary.FhirBase64Binary] = None)
 
+.. py:class:: Signature(*, id_ = None, extension = None, type_, when, who, onBehalfOf = None, targetFormat = None, sigFormat = None, data = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
 
    Signature
    fhir-base.xsd
        A signature along with supporting context. The signature may be a digital signature that is cryptographic in nature, or some other signature acceptable to the domain. This other signature may be as simple as a graphical image representing a hand-written signature, or a signature ceremony Different signature approaches have different utilities.
        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
 
-   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+       A signature along with supporting context. The signature may be a digital
+   signature that is cryptographic in nature, or some other signature acceptable
+   to the domain. This other signature may be as simple as a graphical image
+   representing a hand-written signature, or a signature ceremony Different
+   signature approaches have different utilities.
+       If the element is present, it must have a value for at least one of the
+   defined elements, an @id referenced from the Narrative, or extensions
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param type_: An indication of the reason that the entity signed this document. This may be
+   explicitly included as part of the signature information and can be used when
+   determining accountability for various actions concerning the document.
+       :param when: When the digital signature was signed.
+       :param who: A reference to an application-usable description of the identity that signed
+   (e.g. the signature used their private key).
+       :param onBehalfOf: A reference to an application-usable description of the identity that is
+   represented by the signature.
+       :param targetFormat: A mime type that indicates the technical format of the target resources signed
+   by the signature.
+       :param sigFormat: A mime type that indicates the technical format of the signature. Important
+   mime types are application/signature+xml for X ML DigSig, application/jose for
+   JWS, and image/* for a graphical image of a signature, etc.
+       :param data: The base64 encoding of the Signature content. When signature is not recorded
+   electronically this element would be empty.
+
+   .. py:method:: get_schema(self, include_extension)
 
 
 

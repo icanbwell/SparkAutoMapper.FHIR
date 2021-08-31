@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.instance_availability`
-==============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.instance_availability`
+=================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.instance_availability
 
@@ -17,44 +17,44 @@ Classes
 
 
 
-.. class:: InstanceAvailabilityCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: InstanceAvailabilityCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    InstanceAvailability
    From: http://hl7.org/fhir/ValueSet/instance-availability in valuesets.xml
        Availability of the resource.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://dicom.nema.org/resources/ontology/DCM
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://dicom.nema.org/resources/ontology/DCM
 
       
 
 
-.. class:: InstanceAvailabilityCodeValues
+.. py:class:: InstanceAvailabilityCodeValues
 
    From: http://hl7.org/fhir/ValueSet/instance-availability in valuesets.xml
 
-   .. attribute:: ONLINE
+   .. py:attribute:: ONLINE
       
 
       From: http://hl7.org/fhir/ValueSet/instance-availability in valuesets.xml
 
 
-   .. attribute:: OFFLINE
+   .. py:attribute:: OFFLINE
       
 
       From: http://hl7.org/fhir/ValueSet/instance-availability in valuesets.xml
 
 
-   .. attribute:: NEARLINE
+   .. py:attribute:: NEARLINE
       
 
       From: http://hl7.org/fhir/ValueSet/instance-availability in valuesets.xml
 
 
-   .. attribute:: UNAVAILABLE
+   .. py:attribute:: UNAVAILABLE
       
 
       

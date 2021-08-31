@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.service_type`
-=====================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.service_type`
+========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.service_type
 
@@ -17,979 +17,979 @@ Classes
 
 
 
-.. class:: ServiceTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ServiceTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ServiceType
    From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
        This value set defines an example set of codes of service-types.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/service-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/service-type
 
       
 
 
-.. class:: ServiceTypeCodeValues
+.. py:class:: ServiceTypeCodeValues
 
    Adoption & permanent care information/support
    From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
-   .. attribute:: Adoption_PermanentCareInfo_Support
+   .. py:attribute:: Adoption_PermanentCareInfo_Support
       
 
       Aged care assessment
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: AgedCareAssessment
+   .. py:attribute:: AgedCareAssessment
       
 
       Aged Care information/referral
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: AgedCareInformation_Referral
+   .. py:attribute:: AgedCareInformation_Referral
       
 
       Aged Residential Care
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: AgedResidentialCare
+   .. py:attribute:: AgedResidentialCare
       
 
       Case management for older persons
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: CaseManagementForOlderPersons
+   .. py:attribute:: CaseManagementForOlderPersons
       
 
       Delivered meals (meals on wheels)
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: DeliveredMeals_MealsOnWheels_
+   .. py:attribute:: DeliveredMeals_MealsOnWheels_
       
 
       Friendly visiting
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: FriendlyVisiting
+   .. py:attribute:: FriendlyVisiting
       
 
       Home care/housekeeping assistance
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: HomeCare_HousekeepingAssistance
+   .. py:attribute:: HomeCare_HousekeepingAssistance
       
 
       Home maintenance and repair
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: HomeMaintenanceAndRepair
+   .. py:attribute:: HomeMaintenanceAndRepair
       
 
       Personal alarms/alerts
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PersonalAlarms_Alerts
+   .. py:attribute:: PersonalAlarms_Alerts
       
 
       Personal care for older persons
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PersonalCareForOlderPersons
+   .. py:attribute:: PersonalCareForOlderPersons
       
 
       Planned activity groups
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PlannedActivityGroups
+   .. py:attribute:: PlannedActivityGroups
       
 
       Acupuncture
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Acupuncture
+   .. py:attribute:: Acupuncture
       
 
       Alexander technique therapy
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: AlexanderTechniqueTherapy
+   .. py:attribute:: AlexanderTechniqueTherapy
       
 
       Aromatherapy
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Aromatherapy
+   .. py:attribute:: Aromatherapy
       
 
       Biorhythm services
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: BiorhythmServices
+   .. py:attribute:: BiorhythmServices
       
 
       Bowen therapy
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: BowenTherapy
+   .. py:attribute:: BowenTherapy
       
 
       Chinese herbal medicine
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: ChineseHerbalMedicine
+   .. py:attribute:: ChineseHerbalMedicine
       
 
       Feldenkrais
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Feldenkrais
+   .. py:attribute:: Feldenkrais
       
 
       Homoeopathy
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Homoeopathy
+   .. py:attribute:: Homoeopathy
       
 
       Hydrotherapy
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Hydrotherapy
+   .. py:attribute:: Hydrotherapy
       
 
       Hypnotherapy
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Hypnotherapy
+   .. py:attribute:: Hypnotherapy
       
 
       Kinesiology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Kinesiology
+   .. py:attribute:: Kinesiology
       
 
       Magnetic therapy
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: MagneticTherapy
+   .. py:attribute:: MagneticTherapy
       
 
       Massage therapy
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: MassageTherapy
+   .. py:attribute:: MassageTherapy
       
 
       Meditation
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Meditation
+   .. py:attribute:: Meditation
       
 
       Myotherapy
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Myotherapy
+   .. py:attribute:: Myotherapy
       
 
       Naturopathy
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Naturopathy
+   .. py:attribute:: Naturopathy
       
 
       Reflexology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Reflexology
+   .. py:attribute:: Reflexology
       
 
       Reiki
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Reiki
+   .. py:attribute:: Reiki
       
 
       Relaxation therapy
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: RelaxationTherapy
+   .. py:attribute:: RelaxationTherapy
       
 
       Shiatsu
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Shiatsu
+   .. py:attribute:: Shiatsu
       
 
       Western herbal medicine
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: WesternHerbalMedicine
+   .. py:attribute:: WesternHerbalMedicine
       
 
       Family day care
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: FamilyDayCare
+   .. py:attribute:: FamilyDayCare
       
 
       Holiday programs
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: HolidayPrograms
+   .. py:attribute:: HolidayPrograms
       
 
       Kindergarten inclusion support for children with a disability
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: KindergartenInclusionSupport
+   .. py:attribute:: KindergartenInclusionSupport
       
 
       Kindergarten/preschool
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Kindergarten_Preschool
+   .. py:attribute:: Kindergarten_Preschool
       
 
       Long day child care
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: LongDayChildCare
+   .. py:attribute:: LongDayChildCare
       
 
       Occasional child care
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: OccasionalChildCare
+   .. py:attribute:: OccasionalChildCare
       
 
       Outside school hours care
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: OutsideSchoolHoursCare
+   .. py:attribute:: OutsideSchoolHoursCare
       
 
       Children's play programs
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Children_sPlayPrograms
+   .. py:attribute:: Children_sPlayPrograms
       
 
       Parenting & family management support/education
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Parenting_FamilySupport_Education
+   .. py:attribute:: Parenting_FamilySupport_Education
       
 
       Playgroup
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Playgroup
+   .. py:attribute:: Playgroup
       
 
       School nursing
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: SchoolNursing
+   .. py:attribute:: SchoolNursing
       
 
       Toy library
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: ToyLibrary
+   .. py:attribute:: ToyLibrary
       
 
       Child protection/child abuse report
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: ChildProtection_ChildAbuseReport
+   .. py:attribute:: ChildProtection_ChildAbuseReport
       
 
       Foster care
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: FosterCare
+   .. py:attribute:: FosterCare
       
 
       Residential/ out of home care
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Residential_Out_of_HomeCare
+   .. py:attribute:: Residential_Out_of_HomeCare
       
 
       Support for young people leaving care
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Support_YoungPeopleLeavingCare
+   .. py:attribute:: Support_YoungPeopleLeavingCare
       
 
       Audiology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Audiology
+   .. py:attribute:: Audiology
       
 
       Blood donation
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: BloodDonation
+   .. py:attribute:: BloodDonation
       
 
       Chiropractic
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Chiropractic
+   .. py:attribute:: Chiropractic
       
 
       Dietetics
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Dietetics
+   .. py:attribute:: Dietetics
       
 
       Family planning
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: FamilyPlanning
+   .. py:attribute:: FamilyPlanning
       
 
       Health advocacy/Liaison service
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: HealthAdvocacy_LiaisonService
+   .. py:attribute:: HealthAdvocacy_LiaisonService
       
 
       Health information/referral
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: HealthInformation_Referral
+   .. py:attribute:: HealthInformation_Referral
       
 
       Immunization
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Immunization
+   .. py:attribute:: Immunization
       
 
       Maternal & child health
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Maternal_ChildHealth
+   .. py:attribute:: Maternal_ChildHealth
       
 
       Nursing
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Nursing
+   .. py:attribute:: Nursing
       
 
       Nutrition
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Nutrition
+   .. py:attribute:: Nutrition
       
 
       Occupational therapy
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: OccupationalTherapy
+   .. py:attribute:: OccupationalTherapy
       
 
       Optometry
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Optometry
+   .. py:attribute:: Optometry
       
 
       Osteopathy
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Osteopathy
+   .. py:attribute:: Osteopathy
       
 
       Pharmacy
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Pharmacy
+   .. py:attribute:: Pharmacy
       
 
       Physiotherapy
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Physiotherapy
+   .. py:attribute:: Physiotherapy
       
 
       Podiatry
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Podiatry
+   .. py:attribute:: Podiatry
       
 
       Sexual health
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: SexualHealth
+   .. py:attribute:: SexualHealth
       
 
       Speech pathology/therapy
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: SpeechPathology_Therapy
+   .. py:attribute:: SpeechPathology_Therapy
       
 
       Bereavement counselling
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: BereavementCounselling
+   .. py:attribute:: BereavementCounselling
       
 
       Crisis counselling
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: CrisisCounselling
+   .. py:attribute:: CrisisCounselling
       
 
       Family counselling and/or family therapy
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: FamilyCounselling_Therapy
+   .. py:attribute:: FamilyCounselling_Therapy
       
 
       Family violence counselling
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: FamilyViolenceCounselling
+   .. py:attribute:: FamilyViolenceCounselling
       
 
       Financial counselling
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: FinancialCounselling
+   .. py:attribute:: FinancialCounselling
       
 
       Generalist counselling
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: GeneralistCounselling
+   .. py:attribute:: GeneralistCounselling
       
 
       Genetic counselling
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: GeneticCounselling
+   .. py:attribute:: GeneticCounselling
       
 
       Health counselling
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: HealthCounselling
+   .. py:attribute:: HealthCounselling
       
 
       Mediation
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Mediation
+   .. py:attribute:: Mediation
       
 
       Problem gambling counselling
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: ProblemGamblingCounselling
+   .. py:attribute:: ProblemGamblingCounselling
       
 
       Relationship counselling
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: RelationshipCounselling
+   .. py:attribute:: RelationshipCounselling
       
 
       Sexual assault counselling
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: SexualAssaultCounselling
+   .. py:attribute:: SexualAssaultCounselling
       
 
       Trauma counselling
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: TraumaCounselling
+   .. py:attribute:: TraumaCounselling
       
 
       Victims of crime counselling
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: VictimsOfCrimeCounselling
+   .. py:attribute:: VictimsOfCrimeCounselling
       
 
       Cemetery operation
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: CemeteryOperation
+   .. py:attribute:: CemeteryOperation
       
 
       Cremation
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Cremation
+   .. py:attribute:: Cremation
       
 
       Death service information
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: DeathServiceInformation
+   .. py:attribute:: DeathServiceInformation
       
 
       Funeral services
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: FuneralServices
+   .. py:attribute:: FuneralServices
       
 
       Endodontic
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Endodontic
+   .. py:attribute:: Endodontic
       
 
       General dental
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: GeneralDental
+   .. py:attribute:: GeneralDental
       
 
       Oral medicine
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: OralMedicine
+   .. py:attribute:: OralMedicine
       
 
       Oral surgery
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: OralSurgery
+   .. py:attribute:: OralSurgery
       
 
       Orthodontic
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Orthodontic
+   .. py:attribute:: Orthodontic
       
 
       Paediatric Dentistry
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PaediatricDentistry
+   .. py:attribute:: PaediatricDentistry
       
 
       Periodontic
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Periodontic
+   .. py:attribute:: Periodontic
       
 
       Prosthodontic
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Prosthodontic
+   .. py:attribute:: Prosthodontic
       
 
       Acquired brain injury information/referral
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: AcquiredBrainInjuryInfo_Referral
+   .. py:attribute:: AcquiredBrainInjuryInfo_Referral
       
 
       Disability advocacy
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: DisabilityAdvocacy
+   .. py:attribute:: DisabilityAdvocacy
       
 
       Disability aids & equipment
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: DisabilityAids_Equipment
+   .. py:attribute:: DisabilityAids_Equipment
       
 
       Disability case management
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: DisabilityCaseManagement
+   .. py:attribute:: DisabilityCaseManagement
       
 
       Disability day programs & activities
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: DisabilityDayPrograms_Activities
+   .. py:attribute:: DisabilityDayPrograms_Activities
       
 
       Disability information/referral
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: DisabilityInformation_Referral
+   .. py:attribute:: DisabilityInformation_Referral
       
 
       Disability support packages
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: DisabilitySupportPackages
+   .. py:attribute:: DisabilitySupportPackages
       
 
       Disability supported accommodation
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: DisabilitySupportedAccommodation
+   .. py:attribute:: DisabilitySupportedAccommodation
       
 
       Early childhood intervention
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: EarlyChildhoodIntervention
+   .. py:attribute:: EarlyChildhoodIntervention
       
 
       Hearing aids & equipment
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: HearingAids_Equipment
+   .. py:attribute:: HearingAids_Equipment
       
 
       Drug and/or alcohol counselling
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: DrugAnd_orAlcoholCounselling
+   .. py:attribute:: DrugAnd_orAlcoholCounselling
       
 
       Drug and/or alcohol information/referral
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Drug_AlcoholInformation_Referral
+   .. py:attribute:: Drug_AlcoholInformation_Referral
       
 
       Needle & Syringe exchange
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Needle_SyringeExchange
+   .. py:attribute:: Needle_SyringeExchange
       
 
       Non-residential alcohol and/or drug dependence treatment
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Non_resid_Alcohol_DrugTreatment
+   .. py:attribute:: Non_resid_Alcohol_DrugTreatment
       
 
       Pharmacotherapy (eg. methadone) program
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Pharmacotherapy
+   .. py:attribute:: Pharmacotherapy
       
 
       Quit program
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: QuitProgram
+   .. py:attribute:: QuitProgram
       
 
       Residential alcohol and/or drug dependence treatment
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: ResidentialAlcohol_DrugTreatment
+   .. py:attribute:: ResidentialAlcohol_DrugTreatment
       
 
       Adult/community education
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Adult_CommunityEducation
+   .. py:attribute:: Adult_CommunityEducation
       
 
       Higher education
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: HigherEducation
+   .. py:attribute:: HigherEducation
       
 
       Primary education
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PrimaryEducation
+   .. py:attribute:: PrimaryEducation
       
 
       Secondary education
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: SecondaryEducation
+   .. py:attribute:: SecondaryEducation
       
 
       Training & vocational education
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Training_VocationalEducation
+   .. py:attribute:: Training_VocationalEducation
       
 
       Emergency medical
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: EmergencyMedical
+   .. py:attribute:: EmergencyMedical
       
 
       Employment placement and/or support
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: EmploymentPlacementAnd_orSupport
+   .. py:attribute:: EmploymentPlacementAnd_orSupport
       
 
       Vocational Rehabilitation
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: VocationalRehabilitation
+   .. py:attribute:: VocationalRehabilitation
       
 
       Workplace safety and/or accident prevention
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: WorkSafety_AccidentPrevention
+   .. py:attribute:: WorkSafety_AccidentPrevention
       
 
       Financial assistance
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: FinancialAssistance
+   .. py:attribute:: FinancialAssistance
       
 
       Financial information/advice
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: FinancialInformation_Advice
+   .. py:attribute:: FinancialInformation_Advice
       
 
       Material aid
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: MaterialAid
+   .. py:attribute:: MaterialAid
       
 
       General Practice/GP (doctor)
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: GeneralPractice
+   .. py:attribute:: GeneralPractice
       
 
       Accommodation placement and/or support
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: AccommodationPlacement_Support
+   .. py:attribute:: AccommodationPlacement_Support
       
 
       Crisis/emergency accommodation
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Crisis_EmergencyAccommodation
+   .. py:attribute:: Crisis_EmergencyAccommodation
       
 
       Homelessness support
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: HomelessnessSupport
+   .. py:attribute:: HomelessnessSupport
       
 
       Housing information/referral
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: HousingInformation_Referral
+   .. py:attribute:: HousingInformation_Referral
       
 
       Public rental housing
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PublicRentalHousing
+   .. py:attribute:: PublicRentalHousing
       
 
       Interpreting/Multilingual/Language service
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Interpreting_MultilingualService
+   .. py:attribute:: Interpreting_MultilingualService
       
 
       Juvenile Justice
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: JuvenileJustice
+   .. py:attribute:: JuvenileJustice
       
 
       Legal advocacy
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: LegalAdvocacy
+   .. py:attribute:: LegalAdvocacy
       
 
       Legal information/advice/referral
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: LegalInformation_Advice_Referral
+   .. py:attribute:: LegalInformation_Advice_Referral
       
 
       Mental health advocacy
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: MentalHealthAdvocacy
+   .. py:attribute:: MentalHealthAdvocacy
       
 
       Mental health assessment/triage/crisis response
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: MentalHealthAssess_Triage_CrisisResponse
+   .. py:attribute:: MentalHealthAssess_Triage_CrisisResponse
       
 
       Mental health case management/continuing care
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: MentalHealthCaseManagement
+   .. py:attribute:: MentalHealthCaseManagement
       
 
       Mental health information/referral
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: MentalHealthInformation_Referral
+   .. py:attribute:: MentalHealthInformation_Referral
       
 
       Mental health inpatient services (hospital psychiatric unit) - requires
@@ -997,3213 +997,3206 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: MentalHealthInpatientServices
+   .. py:attribute:: MentalHealthInpatientServices
       
 
       Mental health non-residential rehabilitation
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: MentalHealthNon_residentialRehab
+   .. py:attribute:: MentalHealthNon_residentialRehab
       
 
       Mental health residential rehabilitation/community care unit
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: MentalHealthResidentialRehab_CCU
+   .. py:attribute:: MentalHealthResidentialRehab_CCU
       
 
       Psychiatry (requires referral)
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Psychiatry_RequiresReferral_
+   .. py:attribute:: Psychiatry_RequiresReferral_
       
 
       Psychology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Psychology
+   .. py:attribute:: Psychology
       
 
       Martial arts
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: MartialArts
+   .. py:attribute:: MartialArts
       
 
       Personal fitness training
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PersonalFitnessTraining
+   .. py:attribute:: PersonalFitnessTraining
       
 
       Physical activity group
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PhysicalActivityGroup
+   .. py:attribute:: PhysicalActivityGroup
       
 
       Physical activity programs
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PhysicalActivityPrograms
+   .. py:attribute:: PhysicalActivityPrograms
       
 
       Physical fitness testing
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PhysicalFitnessTesting
+   .. py:attribute:: PhysicalFitnessTesting
       
 
       Pilates
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Pilates
+   .. py:attribute:: Pilates
       
 
       Self defence
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Self_Defence
+   .. py:attribute:: Self_Defence
       
 
       Sporting club
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: SportingClub
+   .. py:attribute:: SportingClub
       
 
       Yoga
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Yoga
+   .. py:attribute:: Yoga
       
 
       Food safety
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: FoodSafety
+   .. py:attribute:: FoodSafety
       
 
       Health regulatory, inspection and/or certification
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: HealthRegulatory_Inspection_Cert_
+   .. py:attribute:: HealthRegulatory_Inspection_Cert_
       
 
       Workplace health and/or safety inspection and/or certification
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: WorkHealth_SafetyInspection_Cert_
+   .. py:attribute:: WorkHealth_SafetyInspection_Cert_
       
 
       Carer support
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: CarerSupport
+   .. py:attribute:: CarerSupport
       
 
       Respite care
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: RespiteCare
+   .. py:attribute:: RespiteCare
       
 
       Anatomical Pathology (including Cytopathology & Forensic Pathology)
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: AnatomicalPathology
+   .. py:attribute:: AnatomicalPathology
       
 
       Pathology - Clinical Chemistry
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Pathology_ClinicalChemistry
+   .. py:attribute:: Pathology_ClinicalChemistry
       
 
       Pathology - General
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Pathology_General
+   .. py:attribute:: Pathology_General
       
 
       Pathology - Genetics
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Pathology_Genetics
+   .. py:attribute:: Pathology_Genetics
       
 
       Pathology - Haematology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Pathology_Haematology
+   .. py:attribute:: Pathology_Haematology
       
 
       Pathology - Immunology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Pathology_Immunology
+   .. py:attribute:: Pathology_Immunology
       
 
       Pathology - Microbiology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Pathology_Microbiology
+   .. py:attribute:: Pathology_Microbiology
       
 
       Anaesthesiology - Pain Medicine
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Anaesthesiology_PainMedicine
+   .. py:attribute:: Anaesthesiology_PainMedicine
       
 
       Cardiology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Cardiology
+   .. py:attribute:: Cardiology
       
 
       Clinical Genetics
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: ClinicalGenetics
+   .. py:attribute:: ClinicalGenetics
       
 
       Clinical Pharmacology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: ClinicalPharmacology
+   .. py:attribute:: ClinicalPharmacology
       
 
       Dermatology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Dermatology
+   .. py:attribute:: Dermatology
       
 
       Endocrinology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Endocrinology
+   .. py:attribute:: Endocrinology
       
 
       Gastroenterology & Hepatology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Gastroenterology_Hepatology
+   .. py:attribute:: Gastroenterology_Hepatology
       
 
       Geriatric medicine
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: GeriatricMedicine
+   .. py:attribute:: GeriatricMedicine
       
 
       Immunology & Allergy
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Immunology_Allergy
+   .. py:attribute:: Immunology_Allergy
       
 
       Infectious diseases
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: InfectiousDiseases
+   .. py:attribute:: InfectiousDiseases
       
 
       Intensive care medicine
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: IntensiveCareMedicine
+   .. py:attribute:: IntensiveCareMedicine
       
 
       Medical Oncology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: MedicalOncology
+   .. py:attribute:: MedicalOncology
       
 
       Nephrology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Nephrology
+   .. py:attribute:: Nephrology
       
 
       Neurology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Neurology
+   .. py:attribute:: Neurology
       
 
       Occupational Medicine
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: OccupationalMedicine
+   .. py:attribute:: OccupationalMedicine
       
 
       Palliative Medicine
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PalliativeMedicine
+   .. py:attribute:: PalliativeMedicine
       
 
       Public Health Medicine
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PublicHealthMedicine
+   .. py:attribute:: PublicHealthMedicine
       
 
       Rehabilitation Medicine
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: RehabilitationMedicine
+   .. py:attribute:: RehabilitationMedicine
       
 
       Rheumatology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Rheumatology
+   .. py:attribute:: Rheumatology
       
 
       Sleep Medicine
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: SleepMedicine
+   .. py:attribute:: SleepMedicine
       
 
       Thoracic medicine
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: ThoracicMedicine
+   .. py:attribute:: ThoracicMedicine
       
 
       Gynaecological Oncology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: GynaecologicalOncology
+   .. py:attribute:: GynaecologicalOncology
       
 
       Obstetrics & Gynaecology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Obstetrics_Gynaecology
+   .. py:attribute:: Obstetrics_Gynaecology
       
 
       Reproductive Endocrinology & Infertility
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: ReproductiveEndocrinology_Infertility
+   .. py:attribute:: ReproductiveEndocrinology_Infertility
       
 
       Urogynaecology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Urogynaecology
+   .. py:attribute:: Urogynaecology
       
 
       Neonatology & Perinatology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Neonatology_Perinatology
+   .. py:attribute:: Neonatology_Perinatology
       
 
       Paediatric Cardiology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PaediatricCardiology
+   .. py:attribute:: PaediatricCardiology
       
 
       Paediatric Clinical Genetics
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PaediatricClinicalGenetics
+   .. py:attribute:: PaediatricClinicalGenetics
       
 
       Paediatric Clinical Pharmacology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PaediatricClinicalPharmacology
+   .. py:attribute:: PaediatricClinicalPharmacology
       
 
       Paediatric Endocrinology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PaediatricEndocrinology
+   .. py:attribute:: PaediatricEndocrinology
       
 
       Paediatric Gastroenterology & Hepatology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Paed_Gastroenterology_Hepatology
+   .. py:attribute:: Paed_Gastroenterology_Hepatology
       
 
       Paediatric Haematology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PaediatricHaematology
+   .. py:attribute:: PaediatricHaematology
       
 
       Paediatric Immunology & Allergy
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PaediatricImmunology_Allergy
+   .. py:attribute:: PaediatricImmunology_Allergy
       
 
       Paediatric Infectious diseases
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PaediatricInfectiousDiseases
+   .. py:attribute:: PaediatricInfectiousDiseases
       
 
       Paediatric intensive care medicine
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PaediatricIntensiveCareMedicine
+   .. py:attribute:: PaediatricIntensiveCareMedicine
       
 
       Paediatric Medical Oncology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PaediatricMedicalOncology
+   .. py:attribute:: PaediatricMedicalOncology
       
 
       Paediatric Medicine
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PaediatricMedicine
+   .. py:attribute:: PaediatricMedicine
       
 
       Paediatric Nephrology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PaediatricNephrology
+   .. py:attribute:: PaediatricNephrology
       
 
       Paediatric Neurology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PaediatricNeurology
+   .. py:attribute:: PaediatricNeurology
       
 
       Paediatric Nuclear Medicine
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PaediatricNuclearMedicine
+   .. py:attribute:: PaediatricNuclearMedicine
       
 
       Paediatric Rehabilitation Medicine
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PaediatricRehabilitationMedicine
+   .. py:attribute:: PaediatricRehabilitationMedicine
       
 
       Paediatric Rheumatology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PaediatricRheumatology
+   .. py:attribute:: PaediatricRheumatology
       
 
       Paediatric Sleep Medicine
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PaediatricSleepMedicine
+   .. py:attribute:: PaediatricSleepMedicine
       
 
       Paediatric Surgery
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PaediatricSurgery
+   .. py:attribute:: PaediatricSurgery
       
 
       Paediatric Thoracic Medicine
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PaediatricThoracicMedicine
+   .. py:attribute:: PaediatricThoracicMedicine
       
 
       Diagnostic Radiology/Xray/CT/Fluoroscopy
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Diag_Radiology_Xray_CT_Fluoroscopy
+   .. py:attribute:: Diag_Radiology_Xray_CT_Fluoroscopy
       
 
       Diagnostic Ultrasound
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: DiagnosticUltrasound
+   .. py:attribute:: DiagnosticUltrasound
       
 
       Magnetic Resonance Imaging (MRI)
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: MagneticResonanceImaging_MRI_
+   .. py:attribute:: MagneticResonanceImaging_MRI_
       
 
       Nuclear Medicine
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: NuclearMedicine
+   .. py:attribute:: NuclearMedicine
       
 
       Obstetric & Gynaecological Ultrasound
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Obstetric_GynaecologicalUltrasound
+   .. py:attribute:: Obstetric_GynaecologicalUltrasound
       
 
       Radiation oncology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: RadiationOncology
+   .. py:attribute:: RadiationOncology
       
 
       Cardiothoracic surgery
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: CardiothoracicSurgery
+   .. py:attribute:: CardiothoracicSurgery
       
 
       Neurosurgery
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Neurosurgery
+   .. py:attribute:: Neurosurgery
       
 
       Ophthalmology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Ophthalmology
+   .. py:attribute:: Ophthalmology
       
 
       Orthopaedic surgery
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: OrthopaedicSurgery
+   .. py:attribute:: OrthopaedicSurgery
       
 
       Otolaryngology - Head & Neck Surgery
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Otolaryngology_Head_NeckSurgery
+   .. py:attribute:: Otolaryngology_Head_NeckSurgery
       
 
       Plastic & Reconstructive Surgery
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Plastic_ReconstructiveSurgery
+   .. py:attribute:: Plastic_ReconstructiveSurgery
       
 
       Surgery - General
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Surgery_General
+   .. py:attribute:: Surgery_General
       
 
       Urology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Urology
+   .. py:attribute:: Urology
       
 
       Vascular surgery
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: VascularSurgery
+   .. py:attribute:: VascularSurgery
       
 
       Support groups
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: SupportGroups
+   .. py:attribute:: SupportGroups
       
 
       Air ambulance
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: AirAmbulance
+   .. py:attribute:: AirAmbulance
       
 
       Ambulance
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Ambulance
+   .. py:attribute:: Ambulance
       
 
       Blood transport
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: BloodTransport
+   .. py:attribute:: BloodTransport
       
 
       Community bus
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: CommunityBus
+   .. py:attribute:: CommunityBus
       
 
       Flying doctor service
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: FlyingDoctorService
+   .. py:attribute:: FlyingDoctorService
       
 
       Patient transport
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PatientTransport
+   .. py:attribute:: PatientTransport
       
 
       A&E
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: A_E
+   .. py:attribute:: A_E
       
 
       A&EP
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: A_EP
+   .. py:attribute:: A_EP
       
 
       Abuse
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Abuse
+   .. py:attribute:: Abuse
       
 
       ACAS
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: ACAS
+   .. py:attribute:: ACAS
       
 
       Access
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Access
+   .. py:attribute:: Access
       
 
       Accident
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Accident
+   .. py:attribute:: Accident
       
 
       Acute Inpatient Service's
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: AcuteInpatientServ
+   .. py:attribute:: AcuteInpatientServ
       
 
       Adult Day Programs
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: AdultDayPrograms
+   .. py:attribute:: AdultDayPrograms
       
 
       Adult Mental Health Services
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: AdultMentalHealthServices
+   .. py:attribute:: AdultMentalHealthServices
       
 
       Advice
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Advice
+   .. py:attribute:: Advice
       
 
       Advocacy
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Advocacy
+   .. py:attribute:: Advocacy
       
 
       Aged Persons Mental Health Residential Units
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: AgedPersonsMental
+   .. py:attribute:: AgedPersonsMental
       
 
       Aged Persons Mental Health Services
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: AgedPersonsMental
+   .. py:attribute:: AgedPersonsMental
       
 
       Aged Persons Mental Health Teams
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: AgedPersonsMental
+   .. py:attribute:: AgedPersonsMental
       
 
       Aids
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Aids
+   .. py:attribute:: Aids
       
 
       Al-Anon
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Al_Anon
+   .. py:attribute:: Al_Anon
       
 
       Alcohol
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Alcohol
+   .. py:attribute:: Alcohol
       
 
       Al-Teen
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Al_Teen
+   .. py:attribute:: Al_Teen
       
 
       Antenatal
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Antenatal
+   .. py:attribute:: Antenatal
       
 
       Anxiety
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Anxiety
+   .. py:attribute:: Anxiety
       
 
       Arthritis
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Arthritis
+   .. py:attribute:: Arthritis
       
 
       Assessment
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Assessment
+   .. py:attribute:: Assessment
       
 
       Assistance
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Assistance
+   .. py:attribute:: Assistance
       
 
       Asthma
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Asthma
+   .. py:attribute:: Asthma
       
 
       ATSS
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: ATSS
+   .. py:attribute:: ATSS
       
 
       Attendant Care
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: AttendantCare
+   .. py:attribute:: AttendantCare
       
 
       Babies
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Babies
+   .. py:attribute:: Babies
       
 
       Bathroom Modification
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: BathroomModificatio
+   .. py:attribute:: BathroomModificatio
       
 
       Behavior
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Behavior
+   .. py:attribute:: Behavior
       
 
       Behavior Intervention
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: BehaviorInterventi
+   .. py:attribute:: BehaviorInterventi
       
 
       Bereavement
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Bereavement
+   .. py:attribute:: Bereavement
       
 
       Bipolar
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Bipolar
+   .. py:attribute:: Bipolar
       
 
       Birth
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Birth
+   .. py:attribute:: Birth
       
 
       Birth Control
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: BirthControl
+   .. py:attribute:: BirthControl
       
 
       Birthing Options
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: BirthingOptions
+   .. py:attribute:: BirthingOptions
       
 
       BIST
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: BIST
+   .. py:attribute:: BIST
       
 
       Blood
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Blood
+   .. py:attribute:: Blood
       
 
       Bone
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Bone
+   .. py:attribute:: Bone
       
 
       Bowel
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Bowel
+   .. py:attribute:: Bowel
       
 
       Brain
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Brain
+   .. py:attribute:: Brain
       
 
       Breast Feeding
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: BreastFeeding
+   .. py:attribute:: BreastFeeding
       
 
       Breast Screen
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: BreastScreen
+   .. py:attribute:: BreastScreen
       
 
       Brokerage
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Brokerage
+   .. py:attribute:: Brokerage
       
 
       Cancer
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Cancer
+   .. py:attribute:: Cancer
       
 
       Cancer Support
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: CancerSupport
+   .. py:attribute:: CancerSupport
       
 
       Cardiovascular Disease
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: CardiovascularDisea
+   .. py:attribute:: CardiovascularDisea
       
 
       Care Packages
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: CarePackages
+   .. py:attribute:: CarePackages
       
 
       Carer
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Carer
+   .. py:attribute:: Carer
       
 
       Case Management
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: CaseManagement
+   .. py:attribute:: CaseManagement
       
 
       Casualty
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Casualty
+   .. py:attribute:: Casualty
       
 
       Centrelink
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Centrelink
+   .. py:attribute:: Centrelink
       
 
       Chemists
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Chemists
+   .. py:attribute:: Chemists
       
 
       Child And Adolescent Mental Health Services
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: ChildAndAdolescent
+   .. py:attribute:: ChildAndAdolescent
       
 
       Child Care
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: ChildCare
+   .. py:attribute:: ChildCare
       
 
       Child Services
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: ChildServices
+   .. py:attribute:: ChildServices
       
 
       Children
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Children
+   .. py:attribute:: Children
       
 
       Children's Services
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Children_sServices
+   .. py:attribute:: Children_sServices
       
 
       Cholesterol
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Cholesterol
+   .. py:attribute:: Cholesterol
       
 
       Clothing
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Clothing
+   .. py:attribute:: Clothing
       
 
       Community Based Accommodation
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: CommunityBasedAcco
+   .. py:attribute:: CommunityBasedAcco
       
 
       Community Care Unit
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: CommunityCareUnit
+   .. py:attribute:: CommunityCareUnit
       
 
       Community Child And Adolescent Mental Health Services
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: CommunityChildAnd
+   .. py:attribute:: CommunityChildAnd
       
 
       Community Health
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: CommunityHealth
+   .. py:attribute:: CommunityHealth
       
 
       Community Residential Unit
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: CommunityResidentia
+   .. py:attribute:: CommunityResidentia
       
 
       Community Transport
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: CommunityTransport
+   .. py:attribute:: CommunityTransport
       
 
       Companion Visiting
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: CompanionVisiting
+   .. py:attribute:: CompanionVisiting
       
 
       Companionship
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Companionship
+   .. py:attribute:: Companionship
       
 
       Consumer Advice
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: ConsumerAdvice
+   .. py:attribute:: ConsumerAdvice
       
 
       Consumer Issues
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: ConsumerIssues
+   .. py:attribute:: ConsumerIssues
       
 
       Continuing Care Services
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: ContinuingCareServ
+   .. py:attribute:: ContinuingCareServ
       
 
       Contraception Information
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: ContraceptionInform
+   .. py:attribute:: ContraceptionInform
       
 
       Coordinating Bodies
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: CoordinatingBodies
+   .. py:attribute:: CoordinatingBodies
       
 
       Correctional Services
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: CorrectionalService
+   .. py:attribute:: CorrectionalService
       
 
       Council Environmental Health
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: CouncilEnvironmenta
+   .. py:attribute:: CouncilEnvironmenta
       
 
       Counselling
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Counselling
+   .. py:attribute:: Counselling
       
 
       Criminal
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Criminal
+   .. py:attribute:: Criminal
       
 
       Crises
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Crises
+   .. py:attribute:: Crises
       
 
       Crisis Assessment And Treatment Services (Cats)
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: CrisisAssessmentAn
+   .. py:attribute:: CrisisAssessmentAn
       
 
       Crisis Assistance
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: CrisisAssistance
+   .. py:attribute:: CrisisAssistance
       
 
       Crisis Refuge
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: CrisisRefuge
+   .. py:attribute:: CrisisRefuge
       
 
       Day Program
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: DayProgram
+   .. py:attribute:: DayProgram
       
 
       Deaf
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Deaf
+   .. py:attribute:: Deaf
       
 
       Dental Hygiene
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: DentalHygiene
+   .. py:attribute:: DentalHygiene
       
 
       Dentistry
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Dentistry
+   .. py:attribute:: Dentistry
       
 
       Dentures
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Dentures
+   .. py:attribute:: Dentures
       
 
       Depression
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Depression
+   .. py:attribute:: Depression
       
 
       Detoxification
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Detoxification
+   .. py:attribute:: Detoxification
       
 
       Diabetes
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Diabetes
+   .. py:attribute:: Diabetes
       
 
       Diaphragm Fitting
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: DiaphragmFitting
+   .. py:attribute:: DiaphragmFitting
       
 
       Dieticians
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Dieticians
+   .. py:attribute:: Dieticians
       
 
       Disabled Parking
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: DisabledParking
+   .. py:attribute:: DisabledParking
       
 
       District Nursing
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: DistrictNursing
+   .. py:attribute:: DistrictNursing
       
 
       Divorce
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Divorce
+   .. py:attribute:: Divorce
       
 
       Doctors
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Doctors
+   .. py:attribute:: Doctors
       
 
       Drink-Drive
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Drink_Drive
+   .. py:attribute:: Drink_Drive
       
 
       Dual Diagnosis Services
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: DualDiagnosisServi
+   .. py:attribute:: DualDiagnosisServi
       
 
       Early Choice
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: EarlyChoice
+   .. py:attribute:: EarlyChoice
       
 
       Eating Disorder
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: EatingDisorder
+   .. py:attribute:: EatingDisorder
       
 
       Emergency Relief
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: EmergencyRelief
+   .. py:attribute:: EmergencyRelief
       
 
       Employment And Training
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: EmploymentAndTrain
+   .. py:attribute:: EmploymentAndTrain
       
 
       Environment
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Environment
+   .. py:attribute:: Environment
       
 
       Equipment
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Equipment
+   .. py:attribute:: Equipment
       
 
       Exercise
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Exercise
+   .. py:attribute:: Exercise
       
 
       Facility
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Facility
+   .. py:attribute:: Facility
       
 
       Family Choice
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: FamilyChoice
+   .. py:attribute:: FamilyChoice
       
 
       Family Law
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: FamilyLaw
+   .. py:attribute:: FamilyLaw
       
 
       Family Options
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: FamilyOptions
+   .. py:attribute:: FamilyOptions
       
 
       Family Services
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: FamilyServices
+   .. py:attribute:: FamilyServices
       
 
       FFYA
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: FFYA
+   .. py:attribute:: FFYA
       
 
       Financial Aid
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: FinancialAid
+   .. py:attribute:: FinancialAid
       
 
       Fitness
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Fitness
+   .. py:attribute:: Fitness
       
 
       Flexible Care Packages
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: FlexibleCarePackag
+   .. py:attribute:: FlexibleCarePackag
       
 
       Food
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Food
+   .. py:attribute:: Food
       
 
       Food Vouchers
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: FoodVouchers
+   .. py:attribute:: FoodVouchers
       
 
       Forensic Mental Health Services
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: ForensicMentalHeal
+   .. py:attribute:: ForensicMentalHeal
       
 
       Futures
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Futures
+   .. py:attribute:: Futures
       
 
       Futures For Young Adults
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: FuturesForYoungAd
+   .. py:attribute:: FuturesForYoungAd
       
 
       General Practitioners
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: GeneralPractitioner
+   .. py:attribute:: GeneralPractitioner
       
 
       Grants
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Grants
+   .. py:attribute:: Grants
       
 
       Grief
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Grief
+   .. py:attribute:: Grief
       
 
       Grief Counselling
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: GriefCounselling
+   .. py:attribute:: GriefCounselling
       
 
       HACC
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: HACC
+   .. py:attribute:: HACC
       
 
       Heart Disease
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: HeartDisease
+   .. py:attribute:: HeartDisease
       
 
       Help
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Help
+   .. py:attribute:: Help
       
 
       High Blood Pressure
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: HighBloodPressure
+   .. py:attribute:: HighBloodPressure
       
 
       Home Help
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: HomeHelp
+   .. py:attribute:: HomeHelp
       
 
       Home Nursing
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: HomeNursing
+   .. py:attribute:: HomeNursing
       
 
       Homefirst
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Homefirst
+   .. py:attribute:: Homefirst
       
 
       Hospice Care
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: HospiceCare
+   .. py:attribute:: HospiceCare
       
 
       Hospital Services
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: HospitalServices
+   .. py:attribute:: HospitalServices
       
 
       Hospital To Home
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: HospitalToHome
+   .. py:attribute:: HospitalToHome
       
 
       Hostel
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Hostel
+   .. py:attribute:: Hostel
       
 
       Hostel Accommodation
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: HostelAccommodation
+   .. py:attribute:: HostelAccommodation
       
 
       Household Items
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: HouseholdItems
+   .. py:attribute:: HouseholdItems
       
 
       Hypertension
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Hypertension
+   .. py:attribute:: Hypertension
       
 
       Illness
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Illness
+   .. py:attribute:: Illness
       
 
       Independent Living
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: IndependentLiving
+   .. py:attribute:: IndependentLiving
       
 
       Information
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Information
+   .. py:attribute:: Information
       
 
       Injury
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Injury
+   .. py:attribute:: Injury
       
 
       Intake
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Intake
+   .. py:attribute:: Intake
       
 
       Intensive Mobile Youth Outreach Services (Imyos)
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: IntensiveMobileYou
+   .. py:attribute:: IntensiveMobileYou
       
 
       Intervention
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Intervention
+   .. py:attribute:: Intervention
       
 
       Job Searching
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: JobSearching
+   .. py:attribute:: JobSearching
       
 
       Justice
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Justice
+   .. py:attribute:: Justice
       
 
       Leisure
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Leisure
+   .. py:attribute:: Leisure
       
 
       Loans
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Loans
+   .. py:attribute:: Loans
       
 
       Low Income Earners
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: LowIncomeEarners
+   .. py:attribute:: LowIncomeEarners
       
 
       Lung
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Lung
+   .. py:attribute:: Lung
       
 
       Making A Difference
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: MakingADifference
+   .. py:attribute:: MakingADifference
       
 
       Medical Services
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: MedicalServices
+   .. py:attribute:: MedicalServices
       
 
       Medical Specialists
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: MedicalSpecialists
+   .. py:attribute:: MedicalSpecialists
       
 
       Medication Administration
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: MedicationAdministr
+   .. py:attribute:: MedicationAdministr
       
 
       Menstrual Information
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: MenstrualInformatio
+   .. py:attribute:: MenstrualInformatio
       
 
       Methadone
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Methadone
+   .. py:attribute:: Methadone
       
 
       Mobile Support And Treatment Services (MSTS)
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: MobileSupportAndT
+   .. py:attribute:: MobileSupportAndT
       
 
       Motor Neurone
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: MotorNeurone
+   .. py:attribute:: MotorNeurone
       
 
       Multiple Sclerosis
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: MultipleSclerosis
+   .. py:attribute:: MultipleSclerosis
       
 
       Neighbourhood House
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: NeighbourhoodHouse
+   .. py:attribute:: NeighbourhoodHouse
       
 
       Nursing Home
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: NursingHome
+   .. py:attribute:: NursingHome
       
 
       Nursing Mothers
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: NursingMothers
+   .. py:attribute:: NursingMothers
       
 
       Obesity
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Obesity
+   .. py:attribute:: Obesity
       
 
       Occupational Health & Safety
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: OccupationalHealth
+   .. py:attribute:: OccupationalHealth
       
 
       Optometrist
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Optometrist
+   .. py:attribute:: Optometrist
       
 
       Oral Hygiene
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: OralHygiene
+   .. py:attribute:: OralHygiene
       
 
       Outpatients
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Outpatients
+   .. py:attribute:: Outpatients
       
 
       Outreach Service
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: OutreachService
+   .. py:attribute:: OutreachService
       
 
       PADP
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PADP
+   .. py:attribute:: PADP
       
 
       Pain
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Pain
+   .. py:attribute:: Pain
       
 
       Pap Smear
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PapSmear
+   .. py:attribute:: PapSmear
       
 
       Parenting
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Parenting
+   .. py:attribute:: Parenting
       
 
       Peak Organizations
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PeakOrganizations
+   .. py:attribute:: PeakOrganizations
       
 
       Personal Care
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PersonalCare
+   .. py:attribute:: PersonalCare
       
 
       Pharmacies
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Pharmacies
+   .. py:attribute:: Pharmacies
       
 
       Phobias
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Phobias
+   .. py:attribute:: Phobias
       
 
       Physical
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Physical
+   .. py:attribute:: Physical
       
 
       Physical Activity
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PhysicalActivity
+   .. py:attribute:: PhysicalActivity
       
 
       Postnatal
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Postnatal
+   .. py:attribute:: Postnatal
       
 
       Pregnancy
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Pregnancy
+   .. py:attribute:: Pregnancy
       
 
       Pregnancy Tests
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PregnancyTests
+   .. py:attribute:: PregnancyTests
       
 
       Preschool
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Preschool
+   .. py:attribute:: Preschool
       
 
       Prescriptions
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Prescriptions
+   .. py:attribute:: Prescriptions
       
 
       Primary Mental Health And Early Intervention Teams
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PrimaryMentalHealt
+   .. py:attribute:: PrimaryMentalHealt
       
 
       Property Maintenance
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PropertyMaintenance
+   .. py:attribute:: PropertyMaintenance
       
 
       Prostate
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Prostate
+   .. py:attribute:: Prostate
       
 
       Psychiatric
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Psychiatric
+   .. py:attribute:: Psychiatric
       
 
       Psychiatric Disability Support Services - Home-Based Outreach
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PsychiatricDisabili
+   .. py:attribute:: PsychiatricDisabili
       
 
       Psychiatric Disability Support Services - Planned Respite
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PsychiatricDisabili
+   .. py:attribute:: PsychiatricDisabili
       
 
       Psychiatric Disability Support Services - Residential Rehabilitation
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PsychiatricDisabili
+   .. py:attribute:: PsychiatricDisabili
       
 
       Psychiatric Disability Support Services Home-Based Outreach
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PsychiatricDisabili
+   .. py:attribute:: PsychiatricDisabili
       
 
       Psychiatric Disability Support Services Mutual Support And Self Help
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PsychiatricDisabili
+   .. py:attribute:: PsychiatricDisabili
       
 
       Psychiatric Support
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PsychiatricSupport
+   .. py:attribute:: PsychiatricSupport
       
 
       Recreation
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Recreation
+   .. py:attribute:: Recreation
       
 
       Referral
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Referral
+   .. py:attribute:: Referral
       
 
       Refuge
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Refuge
+   .. py:attribute:: Refuge
       
 
       Rent Assistance
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: RentAssistance
+   .. py:attribute:: RentAssistance
       
 
       Residential Facilities
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: ResidentialFaciliti
+   .. py:attribute:: ResidentialFaciliti
       
 
       Residential Respite
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: ResidentialRespite
+   .. py:attribute:: ResidentialRespite
       
 
       Respiratory
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Respiratory
+   .. py:attribute:: Respiratory
       
 
       Response
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Response
+   .. py:attribute:: Response
       
 
       Rooming Houses
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: RoomingHouses
+   .. py:attribute:: RoomingHouses
       
 
       Safe Sex
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: SafeSex
+   .. py:attribute:: SafeSex
       
 
       Secure Extended Care Inpatient Services
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: SecureExtendedCare
+   .. py:attribute:: SecureExtendedCare
       
 
       Self Help
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: SelfHelp
+   .. py:attribute:: SelfHelp
       
 
       Separation
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Separation
+   .. py:attribute:: Separation
       
 
       Services
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Services
+   .. py:attribute:: Services
       
 
       Sex Education
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: SexEducation
+   .. py:attribute:: SexEducation
       
 
       Sexual Abuse
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: SexualAbuse
+   .. py:attribute:: SexualAbuse
       
 
       Sexual Issues
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: SexualIssues
+   .. py:attribute:: SexualIssues
       
 
       Sexually Transmitted Diseases
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: SexuallyTransmitted
+   .. py:attribute:: SexuallyTransmitted
       
 
       SIDS
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: SIDS
+   .. py:attribute:: SIDS
       
 
       Social Support
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: SocialSupport
+   .. py:attribute:: SocialSupport
       
 
       Socialisation
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Socialisation
+   .. py:attribute:: Socialisation
       
 
       Special Needs
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: SpecialNeeds
+   .. py:attribute:: SpecialNeeds
       
 
       Speech Therapist
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: SpeechTherapist
+   .. py:attribute:: SpeechTherapist
       
 
       Splinting
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Splinting
+   .. py:attribute:: Splinting
       
 
       Sport
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Sport
+   .. py:attribute:: Sport
       
 
       Statewide And Specialist Services
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: StatewideAndSpecia
+   .. py:attribute:: StatewideAndSpecia
       
 
       STD
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: STD
+   .. py:attribute:: STD
       
 
       STI
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: STI
+   .. py:attribute:: STI
       
 
       Stillbirth
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Stillbirth
+   .. py:attribute:: Stillbirth
       
 
       Stomal Care
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: StomalCare
+   .. py:attribute:: StomalCare
       
 
       Stroke
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Stroke
+   .. py:attribute:: Stroke
       
 
       Substance Abuse
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: SubstanceAbuse
+   .. py:attribute:: SubstanceAbuse
       
 
       Support
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Support
+   .. py:attribute:: Support
       
 
       Syringes
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Syringes
+   .. py:attribute:: Syringes
       
 
       Teeth
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Teeth
+   .. py:attribute:: Teeth
       
 
       Tenancy Advice
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: TenancyAdvice
+   .. py:attribute:: TenancyAdvice
       
 
       Terminal Illness
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: TerminalIllness
+   .. py:attribute:: TerminalIllness
       
 
       Therapy
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Therapy
+   .. py:attribute:: Therapy
       
 
       Transcription
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Transcription
+   .. py:attribute:: Transcription
       
 
       Translating Services
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: TranslatingServices
+   .. py:attribute:: TranslatingServices
       
 
       Translator
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Translator
+   .. py:attribute:: Translator
       
 
       Transport
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Transport
+   .. py:attribute:: Transport
       
 
       Vertebrae
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Vertebrae
+   .. py:attribute:: Vertebrae
       
 
       Violence
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Violence
+   .. py:attribute:: Violence
       
 
       Vocational Guidance
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: VocationalGuidance
+   .. py:attribute:: VocationalGuidance
       
 
       Weight
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Weight
+   .. py:attribute:: Weight
       
 
       Welfare Assistance
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: WelfareAssistance
+   .. py:attribute:: WelfareAssistance
       
 
       Welfare Counselling
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: WelfareCounselling
+   .. py:attribute:: WelfareCounselling
       
 
       Wheelchairs
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Wheelchairs
+   .. py:attribute:: Wheelchairs
       
 
       Wound Management
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: WoundManagement
+   .. py:attribute:: WoundManagement
       
 
       Young People At Risk
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: YoungPeopleAtRisk
+   .. py:attribute:: YoungPeopleAtRisk
       
 
       Further Description - Community Health Care
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: FurtherDesc_CommunityHealthCare
+   .. py:attribute:: FurtherDesc_CommunityHealthCare
       
 
       Library
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Library
+   .. py:attribute:: Library
       
 
       Community Hours
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: CommunityHours
+   .. py:attribute:: CommunityHours
       
 
       Further Description - Specialist Medical
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: FurtherDesc_SpecialistMedical
+   .. py:attribute:: FurtherDesc_SpecialistMedical
       
 
       Hepatology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Hepatology
+   .. py:attribute:: Hepatology
       
 
       Gastroenterology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Gastroenterology
+   .. py:attribute:: Gastroenterology
       
 
       Gynaecology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Gynaecology
+   .. py:attribute:: Gynaecology
       
 
       Obstetrics
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Obstetrics
+   .. py:attribute:: Obstetrics
       
 
       Further Description - Specialist Surgical
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: FurtherDesc_SpecialistSurgical
+   .. py:attribute:: FurtherDesc_SpecialistSurgical
       
 
       Placement Protection
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PlacementProtection
+   .. py:attribute:: PlacementProtection
       
 
       Family Violence
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: FamilyViolence
+   .. py:attribute:: FamilyViolence
       
 
       Integrated Family Services
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: IntegratedFamilyServices
+   .. py:attribute:: IntegratedFamilyServices
       
 
       Diabetes Educator
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: DiabetesEducator
+   .. py:attribute:: DiabetesEducator
       
 
       Kinship Care
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: KinshipCare
+   .. py:attribute:: KinshipCare
       
 
       General Mental Health Services
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: GeneralMentalHealthServices
+   .. py:attribute:: GeneralMentalHealthServices
       
 
       Exercise Physiology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: ExercisePhysiology
+   .. py:attribute:: ExercisePhysiology
       
 
       Medical Research
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: MedicalResearch
+   .. py:attribute:: MedicalResearch
       
 
       Youth
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Youth
+   .. py:attribute:: Youth
       
 
       Youth Services
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: YouthServices
+   .. py:attribute:: YouthServices
       
 
       Youth Health
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: YouthHealth
+   .. py:attribute:: YouthHealth
       
 
       Child and Family Services
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: ChildAndFamilySer
+   .. py:attribute:: ChildAndFamilySer
       
 
       Home Visits
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: HomeVisits
+   .. py:attribute:: HomeVisits
       
 
       Mobile Services
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: MobileServices
+   .. py:attribute:: MobileServices
       
 
       Before and/or After School Care
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: BeforeAnd_orAfter
+   .. py:attribute:: BeforeAnd_orAfter
       
 
       Cancer Services
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: CancerServices
+   .. py:attribute:: CancerServices
       
 
       Integrated Cancer Services
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: IntegratedCancerSe
+   .. py:attribute:: IntegratedCancerSe
       
 
       Multidisciplinary Services
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: MultidisciplinarySe
+   .. py:attribute:: MultidisciplinarySe
       
 
       Multidisciplinary Cancer Services
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: MultidisciplinaryCa
+   .. py:attribute:: MultidisciplinaryCa
       
 
       Meetings
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Meetings
+   .. py:attribute:: Meetings
       
 
       Blood pressure monitoring
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: BloodPressureMonit
+   .. py:attribute:: BloodPressureMonit
       
 
       Dose administration aid
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: DoseAdministration
+   .. py:attribute:: DoseAdministration
       
 
       Medical Equipment Hire
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: MedicalEquipmentHi
+   .. py:attribute:: MedicalEquipmentHi
       
 
       Parenting & family support/education
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Parenting_FamilySupport_Education
+   .. py:attribute:: Parenting_FamilySupport_Education
       
 
       Deputising Service
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: DeputisingService
+   .. py:attribute:: DeputisingService
       
 
       Cancer Support Groups
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: CancerSupportGroups
+   .. py:attribute:: CancerSupportGroups
       
 
       Community Cancer Services
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: CommunityCancerServices
+   .. py:attribute:: CommunityCancerServices
       
 
       Disability Care Transport
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: DisabilityCareTransport
+   .. py:attribute:: DisabilityCareTransport
       
 
       Aged Care Transport
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: AgedCareTransport
+   .. py:attribute:: AgedCareTransport
       
 
       Diabetes Education service
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: DiabetesEducationS
+   .. py:attribute:: DiabetesEducationS
       
 
       Cardiac Rehabilitation Service
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: CardiacRehabilitati
+   .. py:attribute:: CardiacRehabilitati
       
 
       Young Adult Diabetes services (YADS)
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: YoungAdultDiabetes
+   .. py:attribute:: YoungAdultDiabetes
       
 
       Pulmonary Rehabilitation Service
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PulmonaryRehabilita
+   .. py:attribute:: PulmonaryRehabilita
       
 
       Art therapy
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: ArtTherapy
+   .. py:attribute:: ArtTherapy
       
 
       Medication Reviews
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: MedicationReviews
+   .. py:attribute:: MedicationReviews
       
 
       Telephone Counselling
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: TelephoneCounselling
+   .. py:attribute:: TelephoneCounselling
       
 
       Telephone Help Line
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: TelephoneHelpLine
+   .. py:attribute:: TelephoneHelpLine
       
 
       Online Service
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: OnlineService
+   .. py:attribute:: OnlineService
       
 
       Crisis - Mental Health
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Crisis_MentalHealth
+   .. py:attribute:: Crisis_MentalHealth
       
 
       Youth Crisis
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: YouthCrisis
+   .. py:attribute:: YouthCrisis
       
 
       Sexual Assault
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: SexualAssault
+   .. py:attribute:: SexualAssault
       
 
       GPAH Other
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: GPAHOther
+   .. py:attribute:: GPAHOther
       
 
       Paediatric Dermatology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PaediatricDermatology
+   .. py:attribute:: PaediatricDermatology
       
 
       Veterans Services
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: VeteransServices
+   .. py:attribute:: VeteransServices
       
 
       Veterans
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Veterans
+   .. py:attribute:: Veterans
       
 
       Food Relief/food/meals
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: FoodRelief_Food_Meals
+   .. py:attribute:: FoodRelief_Food_Meals
       
 
       Dementia Care
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: DementiaCare
+   .. py:attribute:: DementiaCare
       
 
       Alzheimer
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Alzheimer
+   .. py:attribute:: Alzheimer
       
 
       Drug and/or alcohol support groups
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: DrugAnd_orAlcoholSupportGroups
+   .. py:attribute:: DrugAnd_orAlcoholSupportGroups
       
 
       One on One Support/Mentoring/Coaching
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: _1_on_1Support_Mentoring_Coaching
-      
-
-      Chronic Disease Management
-      From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
-
-
-   .. attribute:: ChronicDiseaseManagement
+   .. py:attribute:: ChronicDiseaseManagement
       
 
       Liaison Services
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: LiaisonServices
+   .. py:attribute:: LiaisonServices
       
 
       Walk in Centre / non emergency
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Walk_inCentre_Non_Emergency
+   .. py:attribute:: Walk_inCentre_Non_Emergency
       
 
       Inpatients
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Inpatients
+   .. py:attribute:: Inpatients
       
 
       Spiritual Counselling
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: SpiritualCounselling
+   .. py:attribute:: SpiritualCounselling
       
 
       Women's Health
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Women_sHealth
+   .. py:attribute:: Women_sHealth
       
 
       Men's Health
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Men_sHealth
+   .. py:attribute:: Men_sHealth
       
 
       Health education/Health awareness program
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: HealthEducation_AwarenessProgram
+   .. py:attribute:: HealthEducation_AwarenessProgram
       
 
       Test Message
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: TestMessage
+   .. py:attribute:: TestMessage
       
 
       Remedial Massage
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: RemedialMassage
+   .. py:attribute:: RemedialMassage
       
 
       Adolescent Mental Health Services
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: AdolescentMentalHealthServices
+   .. py:attribute:: AdolescentMentalHealthServices
       
 
       Youth drop in/assistance/support
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: YouthDropIn_Assistance_Support
+   .. py:attribute:: YouthDropIn_Assistance_Support
       
 
       Aboriginal Health Worker
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: AboriginalHealthWorker
+   .. py:attribute:: AboriginalHealthWorker
       
 
       Women's Health Clinic
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Women_sHealthClinic
+   .. py:attribute:: Women_sHealthClinic
       
 
       Men's Health Clinic
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Men_sHealthClinic
+   .. py:attribute:: Men_sHealthClinic
       
 
       Migrant Health Clinic
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: MigrantHealthClinic
+   .. py:attribute:: MigrantHealthClinic
       
 
       Refugee Health Clinic
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: RefugeeHealthClinic
+   .. py:attribute:: RefugeeHealthClinic
       
 
       Aboriginal Health Clinic
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: AboriginalHealthClinic
+   .. py:attribute:: AboriginalHealthClinic
       
 
       Nurse Practitioner lead Clinic/s
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: NursePractitionerLeadClinic_s
+   .. py:attribute:: NursePractitionerLeadClinic_s
       
 
       Nurse lead Clinic/s
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: NurseLeadClinic_s
+   .. py:attribute:: NurseLeadClinic_s
       
 
       Culturally tailored support groups
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: CulturallyTailoredSupportGroups
+   .. py:attribute:: CulturallyTailoredSupportGroups
       
 
       Culturally tailored health promotion
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: CulturallyTailoredHealthPromotion
+   .. py:attribute:: CulturallyTailoredHealthPromotion
       
 
       Rehabilitation
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Rehabilitation
+   .. py:attribute:: Rehabilitation
       
 
       Education information/referral
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: EducationInformation_Referral
+   .. py:attribute:: EducationInformation_Referral
       
 
       Social Work
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: SocialWork
+   .. py:attribute:: SocialWork
       
 
       Haematology
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Haematology
+   .. py:attribute:: Haematology
       
 
       Maternity Shared Care
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: MaternitySharedCar
+   .. py:attribute:: MaternitySharedCar
       
 
       Rehabilitation Service
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: RehabilitationServi
+   .. py:attribute:: RehabilitationServi
       
 
       Cranio-Sacral Therapy
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Cranio_sacralTherapy
+   .. py:attribute:: Cranio_sacralTherapy
       
 
       Prosthetics & Orthotics
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Prosthetics_Orthotics
+   .. py:attribute:: Prosthetics_Orthotics
       
 
       Home Medicine Review
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: HomeMedicineReview
+   .. py:attribute:: HomeMedicineReview
       
 
       GPAH - Medical
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: GPAH_Medical
+   .. py:attribute:: GPAH_Medical
       
 
       Music Therapy
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: MusicTherapy
+   .. py:attribute:: MusicTherapy
       
 
       Falls Prevention
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: FallsPrevention
+   .. py:attribute:: FallsPrevention
       
 
       Accommodation/Tenancy
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Accommodation_Tenancy
+   .. py:attribute:: Accommodation_Tenancy
       
 
       Assess-Skill, Ability, Needs
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Assess_Skill_Ability_Needs
+   .. py:attribute:: Assess_Skill_Ability_Needs
       
 
       Assist Access/Maintain Employ
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: AssistAccess_MaintainEmploy
+   .. py:attribute:: AssistAccess_MaintainEmploy
       
 
       Assist Prod-Pers Care/Safety
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: AssistProd_PersCare_Safety
+   .. py:attribute:: AssistProd_PersCare_Safety
       
 
       Assist-Integrate School/Ed
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Assist_IntegrateSchool_Ed
+   .. py:attribute:: Assist_IntegrateSchool_Ed
       
 
       Assist-Life Stage, Transition
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Assist_LifeStage_Transition
+   .. py:attribute:: Assist_LifeStage_Transition
       
 
       Assist-Personal Activities
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Assist_PersonalActivities
+   .. py:attribute:: Assist_PersonalActivities
       
 
       Assist-Travel/Transport
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Assist_Travel_Transport
+   .. py:attribute:: Assist_Travel_Transport
       
 
       Assistive Equip-General Tasks
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: AssistiveEquip_GeneralTasks
+   .. py:attribute:: AssistiveEquip_GeneralTasks
       
 
       Assistive Equip-Recreation
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: AssistiveEquip_Recreation
+   .. py:attribute:: AssistiveEquip_Recreation
       
 
       Assistive Prod-Household Task
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: AssistiveProd_HouseholdTask
+   .. py:attribute:: AssistiveProd_HouseholdTask
       
 
       Behavior Support
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: BehaviorSupport
+   .. py:attribute:: BehaviorSupport
       
 
       Comms & Info Equipment
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Comms_InfoEquipment
+   .. py:attribute:: Comms_InfoEquipment
       
 
       Community Nursing Care
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: CommunityNursingCare
+   .. py:attribute:: CommunityNursingCare
       
 
       Daily Tasks/Shared Living
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: DailyTasks_SharedLiving
+   .. py:attribute:: DailyTasks_SharedLiving
       
 
       Development-Life Skills
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Development_LifeSkills
+   .. py:attribute:: Development_LifeSkills
       
 
       Early Childhood Supports
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: EarlyChildhoodSupports
+   .. py:attribute:: EarlyChildhoodSupports
       
 
       Equipment Special Assess Setup
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: EquipmentSpecialAssessSetup
+   .. py:attribute:: EquipmentSpecialAssessSetup
       
 
       Hearing Equipment
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: HearingEquipment
+   .. py:attribute:: HearingEquipment
       
 
       Home Modification
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: HomeModification
+   .. py:attribute:: HomeModification
       
 
       Household Tasks
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: HouseholdTasks
+   .. py:attribute:: HouseholdTasks
       
 
       Interpret/Translate
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Interpret_Translate
+   .. py:attribute:: Interpret_Translate
       
 
       Other Innovative Supports
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: OtherInnovativeSupports
+   .. py:attribute:: OtherInnovativeSupports
       
 
       Participate Community
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: ParticipateCommunity
+   .. py:attribute:: ParticipateCommunity
       
 
       Personal Mobility Equipment
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PersonalMobilityEquipment
+   .. py:attribute:: PersonalMobilityEquipment
       
 
       Physical Wellbeing
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PhysicalWellbeing
+   .. py:attribute:: PhysicalWellbeing
       
 
       Plan Management
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: PlanManagement
+   .. py:attribute:: PlanManagement
       
 
       Therapeutic Supports
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: TherapeuticSupports
+   .. py:attribute:: TherapeuticSupports
       
 
       Training-Travel Independence
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: Training_TravelIndependence
+   .. py:attribute:: Training_TravelIndependence
       
 
       Vehicle modifications
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: VehicleModifications
+   .. py:attribute:: VehicleModifications
       
 
       Vision Equipment
       From: http://terminology.hl7.org/CodeSystem/service-type in valuesets.xml
 
 
-   .. attribute:: VisionEquipment
+   .. py:attribute:: VisionEquipment
       
 
       

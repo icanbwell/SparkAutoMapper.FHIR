@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.concept_map_equivalence`
-================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.concept_map_equivalence`
+===================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.concept_map_equivalence
 
@@ -17,35 +17,35 @@ Classes
 
 
 
-.. class:: ConceptMapEquivalenceCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ConceptMapEquivalenceCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ConceptMapEquivalence
    From: http://hl7.org/fhir/concept-map-equivalence in valuesets.xml
        The degree of equivalence between concepts.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/concept-map-equivalence
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/concept-map-equivalence
 
       
 
 
-.. class:: ConceptMapEquivalenceCodeValues
+.. py:class:: ConceptMapEquivalenceCodeValues
 
    The concepts are related to each other, and have at least some overlap in
    meaning, but the exact relationship is not known.
    From: http://hl7.org/fhir/concept-map-equivalence in valuesets.xml
 
-   .. attribute:: RelatedTo
+   .. py:attribute:: RelatedTo
       
 
       There is no match for this concept in the target code system.
       From: http://hl7.org/fhir/concept-map-equivalence in valuesets.xml
 
 
-   .. attribute:: Unmatched
+   .. py:attribute:: Unmatched
       
 
       

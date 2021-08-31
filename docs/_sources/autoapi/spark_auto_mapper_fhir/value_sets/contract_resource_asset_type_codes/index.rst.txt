@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.contract_resource_asset_type_codes`
-===========================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.contract_resource_asset_type_codes`
+==============================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.contract_resource_asset_type_codes
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: ContractResourceAssetTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ContractResourceAssetTypeCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ContractResourceAssetTypeCodes
    From: http://hl7.org/fhir/contract-asset-type in valuesets.xml
        This value set contract specific codes for asset type.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/contract-asset-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/contract-asset-type
 
       
 
 
-.. class:: ContractResourceAssetTypeCodesCodeValues
+.. py:class:: ContractResourceAssetTypeCodesCodeValues
 
    To be completed
    From: http://hl7.org/fhir/contract-asset-type in valuesets.xml
 
-   .. attribute:: Participation
+   .. py:attribute:: Participation
       
 
       

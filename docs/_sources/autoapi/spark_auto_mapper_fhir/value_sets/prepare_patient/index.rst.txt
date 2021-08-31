@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.prepare_patient`
-========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.prepare_patient`
+===========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.prepare_patient
 
@@ -16,18 +16,18 @@ Classes
 
 
 
-.. class:: PreparePatientCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: PreparePatientCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    PreparePatient
    From: http://hl7.org/fhir/ValueSet/prepare-patient-prior-specimen-collection in valuesets.xml
        Checks on the patient prior specimen collection. All SNOMED CT concepts
    descendants of 703763000 |Precondition value (qualifier value)|
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://snomed.info/sct
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://snomed.info/sct
 
       
 

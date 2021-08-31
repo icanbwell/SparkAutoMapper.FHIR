@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.account_status`
-=======================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.account_status`
+==========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.account_status
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: AccountStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: AccountStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    AccountStatus
    From: http://hl7.org/fhir/account-status in valuesets.xml
        Indicates whether the account is available to be used.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/account-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/account-status
 
       
 
 
-.. class:: AccountStatusCodeValues
+.. py:class:: AccountStatusCodeValues
 
    This account is active and may be used.
    From: http://hl7.org/fhir/account-status in valuesets.xml
 
-   .. attribute:: Active
+   .. py:attribute:: Active
       
 
       This account is inactive and should not be used to track financial
@@ -45,28 +45,28 @@ Classes
       From: http://hl7.org/fhir/account-status in valuesets.xml
 
 
-   .. attribute:: Inactive
+   .. py:attribute:: Inactive
       
 
       This instance should not have been part of this patient's medical record.
       From: http://hl7.org/fhir/account-status in valuesets.xml
 
 
-   .. attribute:: EnteredInError
+   .. py:attribute:: EnteredInError
       
 
       This account is on hold.
       From: http://hl7.org/fhir/account-status in valuesets.xml
 
 
-   .. attribute:: OnHold
+   .. py:attribute:: OnHold
       
 
       The account status is unknown.
       From: http://hl7.org/fhir/account-status in valuesets.xml
 
 
-   .. attribute:: Unknown
+   .. py:attribute:: Unknown
       
 
       

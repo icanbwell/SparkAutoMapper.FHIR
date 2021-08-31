@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.extensions.custom.base_extension_item`
-===================================================================
+:py:mod:`spark_auto_mapper_fhir.extensions.custom.base_extension_item`
+======================================================================
 
 .. py:module:: spark_auto_mapper_fhir.extensions.custom.base_extension_item
 
@@ -16,11 +16,15 @@ Classes
 
 
 
-.. class:: BaseExtensionItem(url: str, valueString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, valueDateTime: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, include_null_properties: bool = True)
 
+.. py:class:: BaseExtensionItem(url, valueString = None, valueDateTime = None, include_null_properties = True)
 
-   Bases: :class:`spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase`
 
    DO NOT USE DIRECTLY!  ALWAYS USE A SUB_CLASS.
+
+
+   base class for complex types
+   :param kwargs:
 
 

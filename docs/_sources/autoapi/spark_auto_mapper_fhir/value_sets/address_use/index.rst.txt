@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.address_use`
-====================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.address_use`
+=======================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.address_use
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: AddressUseCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: AddressUseCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    AddressUse
    From: http://hl7.org/fhir/address-use in valuesets.xml
        The use of an address.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/address-use
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/address-use
 
       
 
 
-.. class:: AddressUseCodeValues
+.. py:class:: AddressUseCodeValues
 
    A communication address at a home.
    From: http://hl7.org/fhir/address-use in valuesets.xml
 
-   .. attribute:: Home
+   .. py:attribute:: Home
       
 
       An office address. First choice for business related contacts during business
@@ -45,14 +45,14 @@ Classes
       From: http://hl7.org/fhir/address-use in valuesets.xml
 
 
-   .. attribute:: Work
+   .. py:attribute:: Work
       
 
       A temporary address. The period can provide more detailed information.
       From: http://hl7.org/fhir/address-use in valuesets.xml
 
 
-   .. attribute:: Temporary
+   .. py:attribute:: Temporary
       
 
       This address is no longer in use (or was never correct but retained for
@@ -60,14 +60,14 @@ Classes
       From: http://hl7.org/fhir/address-use in valuesets.xml
 
 
-   .. attribute:: Old_Incorrect
+   .. py:attribute:: Old_Incorrect
       
 
       An address to be used to send bills, invoices, receipts etc.
       From: http://hl7.org/fhir/address-use in valuesets.xml
 
 
-   .. attribute:: Billing
+   .. py:attribute:: Billing
       
 
       

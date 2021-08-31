@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.financial_task_input_type_codes`
-========================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.financial_task_input_type_codes`
+===========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.financial_task_input_type_codes
 
@@ -17,62 +17,62 @@ Classes
 
 
 
-.. class:: FinancialTaskInputTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: FinancialTaskInputTypeCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    FinancialTaskInputTypeCodes
    From: http://terminology.hl7.org/CodeSystem/financialtaskinputtype in valuesets.xml
        This value set includes Financial Task Input Type codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/financialtaskinputtype
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/financialtaskinputtype
 
       
 
 
-.. class:: FinancialTaskInputTypeCodesCodeValues
+.. py:class:: FinancialTaskInputTypeCodesCodeValues
 
    The name of a resource to include in a selection.
    From: http://terminology.hl7.org/CodeSystem/financialtaskinputtype in valuesets.xml
 
-   .. attribute:: Include
+   .. py:attribute:: Include
       
 
       The name of a resource to not include in a selection.
       From: http://terminology.hl7.org/CodeSystem/financialtaskinputtype in valuesets.xml
 
 
-   .. attribute:: Exclude
+   .. py:attribute:: Exclude
       
 
       A reference to the response resource to the original processing of a resource.
       From: http://terminology.hl7.org/CodeSystem/financialtaskinputtype in valuesets.xml
 
 
-   .. attribute:: OriginalResponse
+   .. py:attribute:: OriginalResponse
       
 
       A reference value which must be quoted to authorize an action.
       From: http://terminology.hl7.org/CodeSystem/financialtaskinputtype in valuesets.xml
 
 
-   .. attribute:: ReferenceNumber
+   .. py:attribute:: ReferenceNumber
       
 
       The sequence number associated with an item for reprocessing.
       From: http://terminology.hl7.org/CodeSystem/financialtaskinputtype in valuesets.xml
 
 
-   .. attribute:: ItemNumber
+   .. py:attribute:: ItemNumber
       
 
       The reference period for the action being requested.
       From: http://terminology.hl7.org/CodeSystem/financialtaskinputtype in valuesets.xml
 
 
-   .. attribute:: Period
+   .. py:attribute:: Period
       
 
       The processing status from a check on the processing status of a resource such
@@ -80,7 +80,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/financialtaskinputtype in valuesets.xml
 
 
-   .. attribute:: StatusCode
+   .. py:attribute:: StatusCode
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.identifier_use`
-=======================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.identifier_use`
+==========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.identifier_use
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: IdentifierUseCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: IdentifierUseCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    IdentifierUse
    From: http://hl7.org/fhir/identifier-use in valuesets.xml
        Identifies the purpose for this identifier, if known .
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/identifier-use
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/identifier-use
 
       
 
 
-.. class:: IdentifierUseCodeValues
+.. py:class:: IdentifierUseCodeValues
 
    The identifier recommended for display and use in real-world interactions.
    From: http://hl7.org/fhir/identifier-use in valuesets.xml
 
-   .. attribute:: Usual
+   .. py:attribute:: Usual
       
 
       The identifier considered to be most trusted for the identification of this
@@ -47,14 +47,14 @@ Classes
       From: http://hl7.org/fhir/identifier-use in valuesets.xml
 
 
-   .. attribute:: Official
+   .. py:attribute:: Official
       
 
       A temporary identifier.
       From: http://hl7.org/fhir/identifier-use in valuesets.xml
 
 
-   .. attribute:: Temp
+   .. py:attribute:: Temp
       
 
       An identifier that was assigned in secondary use - it serves to identify the
@@ -63,7 +63,7 @@ Classes
       From: http://hl7.org/fhir/identifier-use in valuesets.xml
 
 
-   .. attribute:: Secondary
+   .. py:attribute:: Secondary
       
 
       The identifier id no longer considered valid, but may be relevant for search
@@ -71,7 +71,7 @@ Classes
       From: http://hl7.org/fhir/identifier-use in valuesets.xml
 
 
-   .. attribute:: Old
+   .. py:attribute:: Old
       
 
       

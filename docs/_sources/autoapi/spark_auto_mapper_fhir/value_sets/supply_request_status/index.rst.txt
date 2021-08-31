@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.supply_request_status`
-==============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.supply_request_status`
+=================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.supply_request_status
 
@@ -17,34 +17,34 @@ Classes
 
 
 
-.. class:: SupplyRequestStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SupplyRequestStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SupplyRequestStatus
    From: http://hl7.org/fhir/supplyrequest-status in valuesets.xml
        Status of the supply request.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/supplyrequest-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/supplyrequest-status
 
       
 
 
-.. class:: SupplyRequestStatusCodeValues
+.. py:class:: SupplyRequestStatusCodeValues
 
    The request has been created but is not yet complete or ready for action.
    From: http://hl7.org/fhir/supplyrequest-status in valuesets.xml
 
-   .. attribute:: Draft
+   .. py:attribute:: Draft
       
 
       The request is ready to be acted upon.
       From: http://hl7.org/fhir/supplyrequest-status in valuesets.xml
 
 
-   .. attribute:: Active
+   .. py:attribute:: Active
       
 
       The authorization/request to act has been temporarily withdrawn but is
@@ -52,7 +52,7 @@ Classes
       From: http://hl7.org/fhir/supplyrequest-status in valuesets.xml
 
 
-   .. attribute:: Suspended
+   .. py:attribute:: Suspended
       
 
       The authorization/request to act has been terminated prior to the full
@@ -60,7 +60,7 @@ Classes
       From: http://hl7.org/fhir/supplyrequest-status in valuesets.xml
 
 
-   .. attribute:: Cancelled
+   .. py:attribute:: Cancelled
       
 
       Activity against the request has been sufficiently completed to the
@@ -68,7 +68,7 @@ Classes
       From: http://hl7.org/fhir/supplyrequest-status in valuesets.xml
 
 
-   .. attribute:: Completed
+   .. py:attribute:: Completed
       
 
       This electronic record should never have existed, though it is possible that
@@ -77,7 +77,7 @@ Classes
       From: http://hl7.org/fhir/supplyrequest-status in valuesets.xml
 
 
-   .. attribute:: EnteredInError
+   .. py:attribute:: EnteredInError
       
 
       The authoring/source system does not know which of the status values currently
@@ -87,7 +87,7 @@ Classes
       From: http://hl7.org/fhir/supplyrequest-status in valuesets.xml
 
 
-   .. attribute:: Unknown
+   .. py:attribute:: Unknown
       
 
       

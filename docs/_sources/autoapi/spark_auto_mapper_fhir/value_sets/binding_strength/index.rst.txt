@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.binding_strength`
-=========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.binding_strength`
+============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.binding_strength
 
@@ -17,29 +17,29 @@ Classes
 
 
 
-.. class:: BindingStrengthCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: BindingStrengthCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    BindingStrength
    From: http://hl7.org/fhir/binding-strength in valuesets.xml
        Indication of the degree of conformance expectations associated with a
    binding.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/binding-strength
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/binding-strength
 
       
 
 
-.. class:: BindingStrengthCodeValues
+.. py:class:: BindingStrengthCodeValues
 
    To be conformant, the concept in this element SHALL be from the specified
    value set.
    From: http://hl7.org/fhir/binding-strength in valuesets.xml
 
-   .. attribute:: Required
+   .. py:attribute:: Required
       
 
       To be conformant, the concept in this element SHALL be from the specified
@@ -50,7 +50,7 @@ Classes
       From: http://hl7.org/fhir/binding-strength in valuesets.xml
 
 
-   .. attribute:: Extensible
+   .. py:attribute:: Extensible
       
 
       Instances are encouraged to draw from the specified codes for interoperability
@@ -58,7 +58,7 @@ Classes
       From: http://hl7.org/fhir/binding-strength in valuesets.xml
 
 
-   .. attribute:: Preferred
+   .. py:attribute:: Preferred
       
 
       Instances are not expected or even encouraged to draw from the specified value
@@ -67,7 +67,7 @@ Classes
       From: http://hl7.org/fhir/binding-strength in valuesets.xml
 
 
-   .. attribute:: Example
+   .. py:attribute:: Example
       
 
       

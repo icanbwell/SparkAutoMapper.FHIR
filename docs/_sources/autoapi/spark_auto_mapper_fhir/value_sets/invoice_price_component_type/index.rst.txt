@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.invoice_price_component_type`
-=====================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.invoice_price_component_type`
+========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.invoice_price_component_type
 
@@ -17,56 +17,56 @@ Classes
 
 
 
-.. class:: InvoicePriceComponentTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: InvoicePriceComponentTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    InvoicePriceComponentType
    From: http://hl7.org/fhir/invoice-priceComponentType in valuesets.xml
        Codes indicating the kind of the price component.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/invoice-priceComponentType
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/invoice-priceComponentType
 
       
 
 
-.. class:: InvoicePriceComponentTypeCodeValues
+.. py:class:: InvoicePriceComponentTypeCodeValues
 
    the amount is the base price used for calculating the total price before
    applying surcharges, discount or taxes.
    From: http://hl7.org/fhir/invoice-priceComponentType in valuesets.xml
 
-   .. attribute:: BasePrice
+   .. py:attribute:: BasePrice
       
 
       the amount is a surcharge applied on the base price.
       From: http://hl7.org/fhir/invoice-priceComponentType in valuesets.xml
 
 
-   .. attribute:: Surcharge
+   .. py:attribute:: Surcharge
       
 
       the amount is a deduction applied on the base price.
       From: http://hl7.org/fhir/invoice-priceComponentType in valuesets.xml
 
 
-   .. attribute:: Deduction
+   .. py:attribute:: Deduction
       
 
       the amount is a discount applied on the base price.
       From: http://hl7.org/fhir/invoice-priceComponentType in valuesets.xml
 
 
-   .. attribute:: Discount
+   .. py:attribute:: Discount
       
 
       the amount is the tax component of the total price.
       From: http://hl7.org/fhir/invoice-priceComponentType in valuesets.xml
 
 
-   .. attribute:: Tax
+   .. py:attribute:: Tax
       
 
       the amount is of informational character, it has not been applied in the
@@ -74,7 +74,7 @@ Classes
       From: http://hl7.org/fhir/invoice-priceComponentType in valuesets.xml
 
 
-   .. attribute:: Informational
+   .. py:attribute:: Informational
       
 
       

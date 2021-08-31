@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.medication_usage_category_codes`
-========================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.medication_usage_category_codes`
+===========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.medication_usage_category_codes
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: MedicationUsageCategoryCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: MedicationUsageCategoryCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    Medication usage category codes
    From: http://terminology.hl7.org/CodeSystem/medication-statement-category in valuesets.xml
        Medication Status Codes
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/medication-statement-category
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/medication-statement-category
 
       
 
 
-.. class:: MedicationUsageCategoryCodesCodeValues
+.. py:class:: MedicationUsageCategoryCodesCodeValues
 
    Includes orders for medications to be administered or consumed in an inpatient
    or acute care setting
    From: http://terminology.hl7.org/CodeSystem/medication-statement-category in valuesets.xml
 
-   .. attribute:: Inpatient
+   .. py:attribute:: Inpatient
       
 
       Includes orders for medications to be administered or consumed in an
@@ -47,7 +47,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/medication-statement-category in valuesets.xml
 
 
-   .. attribute:: Outpatient
+   .. py:attribute:: Outpatient
       
 
       Includes orders for medications to be administered or consumed by the patient
@@ -56,7 +56,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/medication-statement-category in valuesets.xml
 
 
-   .. attribute:: Community
+   .. py:attribute:: Community
       
 
       Includes statements about medication use, including over the counter
@@ -64,7 +64,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/medication-statement-category in valuesets.xml
 
 
-   .. attribute:: PatientSpecified
+   .. py:attribute:: PatientSpecified
       
 
       

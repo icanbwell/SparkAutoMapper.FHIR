@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.form_codes`
-===================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.form_codes`
+======================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.form_codes
 
@@ -17,34 +17,34 @@ Classes
 
 
 
-.. class:: FormCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: FormCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    Form Codes
    From: http://terminology.hl7.org/CodeSystem/forms-codes in valuesets.xml
        This value set includes a sample set of Forms codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/forms-codes
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/forms-codes
 
       
 
 
-.. class:: FormCodesCodeValues
+.. py:class:: FormCodesCodeValues
 
    Example: The #1 form to be used when printing this information.
    From: http://terminology.hl7.org/CodeSystem/forms-codes in valuesets.xml
 
-   .. attribute:: Form_1
+   .. py:attribute:: Form_1
       
 
       Example: The #2 form to be used when printing this information.
       From: http://terminology.hl7.org/CodeSystem/forms-codes in valuesets.xml
 
 
-   .. attribute:: Form_1
+   .. py:attribute:: Form_1
       
 
       

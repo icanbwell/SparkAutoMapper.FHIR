@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.care_plan_activity_kind`
-================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.care_plan_activity_kind`
+===================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.care_plan_activity_kind
 
@@ -17,69 +17,69 @@ Classes
 
 
 
-.. class:: CarePlanActivityKindCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: CarePlanActivityKindCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    CarePlanActivityKind
    From: http://hl7.org/fhir/ValueSet/care-plan-activity-kind in valuesets.xml
        Resource types defined as part of FHIR that can be represented as in-line
    definitions of a care plan activity.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/resource-types
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/resource-types
 
       
 
 
-.. class:: CarePlanActivityKindCodeValues
+.. py:class:: CarePlanActivityKindCodeValues
 
    From: http://hl7.org/fhir/ValueSet/care-plan-activity-kind in valuesets.xml
 
-   .. attribute:: Appointment
+   .. py:attribute:: Appointment
       
 
       From: http://hl7.org/fhir/ValueSet/care-plan-activity-kind in valuesets.xml
 
 
-   .. attribute:: CommunicationRequest
+   .. py:attribute:: CommunicationRequest
       
 
       From: http://hl7.org/fhir/ValueSet/care-plan-activity-kind in valuesets.xml
 
 
-   .. attribute:: DeviceRequest
+   .. py:attribute:: DeviceRequest
       
 
       From: http://hl7.org/fhir/ValueSet/care-plan-activity-kind in valuesets.xml
 
 
-   .. attribute:: MedicationRequest
+   .. py:attribute:: MedicationRequest
       
 
       From: http://hl7.org/fhir/ValueSet/care-plan-activity-kind in valuesets.xml
 
 
-   .. attribute:: NutritionOrder
+   .. py:attribute:: NutritionOrder
       
 
       From: http://hl7.org/fhir/ValueSet/care-plan-activity-kind in valuesets.xml
 
 
-   .. attribute:: Task
+   .. py:attribute:: Task
       
 
       From: http://hl7.org/fhir/ValueSet/care-plan-activity-kind in valuesets.xml
 
 
-   .. attribute:: ServiceRequest
+   .. py:attribute:: ServiceRequest
       
 
       From: http://hl7.org/fhir/ValueSet/care-plan-activity-kind in valuesets.xml
 
 
-   .. attribute:: VisionPrescription
+   .. py:attribute:: VisionPrescription
       
 
       

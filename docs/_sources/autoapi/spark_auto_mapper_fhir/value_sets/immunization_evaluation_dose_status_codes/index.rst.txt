@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.immunization_evaluation_dose_status_codes`
-==================================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.immunization_evaluation_dose_status_codes`
+=====================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.immunization_evaluation_dose_status_codes
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: ImmunizationEvaluationDoseStatusCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ImmunizationEvaluationDoseStatusCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ImmunizationEvaluationDoseStatusCodes
    From: http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status in valuesets.xml
@@ -29,26 +29,26 @@ Classes
    support describing the validity of a dose relative to a particular recommended
    schedule. This value set is provided as a suggestive example.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status
 
       
 
 
-.. class:: ImmunizationEvaluationDoseStatusCodesCodeValues
+.. py:class:: ImmunizationEvaluationDoseStatusCodesCodeValues
 
    The dose counts toward fulfilling a path to immunity for a patient, providing
    protection against the target disease.
    From: http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status in valuesets.xml
 
-   .. attribute:: Valid
+   .. py:attribute:: Valid
       
 
       The dose does not count toward fulfilling a path to immunity for a patient.
       From: http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status in valuesets.xml
 
 
-   .. attribute:: NotValid
+   .. py:attribute:: NotValid
       
 
       

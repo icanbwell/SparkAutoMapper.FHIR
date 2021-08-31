@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.endpoint_connection_type`
-=================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.endpoint_connection_type`
+====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.endpoint_connection_type
 
@@ -17,29 +17,29 @@ Classes
 
 
 
-.. class:: EndpointConnectionTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: EndpointConnectionTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    EndpointConnectionType
    From: http://terminology.hl7.org/CodeSystem/endpoint-connection-type in valuesets.xml
        This is an example value set defined by the FHIR project, that could be used
    to represent possible connection type profile values.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/endpoint-connection-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/endpoint-connection-type
 
       
 
 
-.. class:: EndpointConnectionTypeCodeValues
+.. py:class:: EndpointConnectionTypeCodeValues
 
    IHE Cross Community Patient Discovery Profile (XCPD) -
    http://wiki.ihe.net/index.php/Cross-Community_Patient_Discovery
    From: http://terminology.hl7.org/CodeSystem/endpoint-connection-type in valuesets.xml
 
-   .. attribute:: IHEXCPD
+   .. py:attribute:: IHEXCPD
       
 
       IHE Cross Community Access Profile (XCA) -
@@ -47,7 +47,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/endpoint-connection-type in valuesets.xml
 
 
-   .. attribute:: IHEXCA
+   .. py:attribute:: IHEXCA
       
 
       IHE Cross-Enterprise Document Reliable Exchange (XDR) -
@@ -55,7 +55,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/endpoint-connection-type in valuesets.xml
 
 
-   .. attribute:: IHEXDR
+   .. py:attribute:: IHEXDR
       
 
       IHE Cross-Enterprise Document Sharing (XDS) -
@@ -63,7 +63,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/endpoint-connection-type in valuesets.xml
 
 
-   .. attribute:: IHEXDS
+   .. py:attribute:: IHEXDS
       
 
       IHE Invoke Image Display (IID) -
@@ -71,7 +71,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/endpoint-connection-type in valuesets.xml
 
 
-   .. attribute:: IHEIID
+   .. py:attribute:: IHEIID
       
 
       DICOMweb RESTful Image Retrieve -
@@ -79,7 +79,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/endpoint-connection-type in valuesets.xml
 
 
-   .. attribute:: DICOMWADO_RS
+   .. py:attribute:: DICOMWADO_RS
       
 
       DICOMweb RESTful Image query -
@@ -87,7 +87,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/endpoint-connection-type in valuesets.xml
 
 
-   .. attribute:: DICOMQIDO_RS
+   .. py:attribute:: DICOMQIDO_RS
       
 
       DICOMweb RESTful image sending and storage -
@@ -95,7 +95,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/endpoint-connection-type in valuesets.xml
 
 
-   .. attribute:: DICOMSTOW_RS
+   .. py:attribute:: DICOMSTOW_RS
       
 
       DICOMweb Image Retrieve -
@@ -103,7 +103,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/endpoint-connection-type in valuesets.xml
 
 
-   .. attribute:: DICOMWADO_URI
+   .. py:attribute:: DICOMWADO_URI
       
 
       Interact with the server interface using FHIR's RESTful interface. For details
@@ -112,7 +112,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/endpoint-connection-type in valuesets.xml
 
 
-   .. attribute:: HL7FHIR
+   .. py:attribute:: HL7FHIR
       
 
       Use the servers FHIR Messaging interface. Details can be found on the
@@ -121,14 +121,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/endpoint-connection-type in valuesets.xml
 
 
-   .. attribute:: HL7FHIRMessaging
+   .. py:attribute:: HL7FHIRMessaging
       
 
       HL7v2 messages over an LLP TCP connection
       From: http://terminology.hl7.org/CodeSystem/endpoint-connection-type in valuesets.xml
 
 
-   .. attribute:: HL7V2MLLP
+   .. py:attribute:: HL7V2MLLP
       
 
       Email delivery using a digital certificate to encrypt the content using the
@@ -136,14 +136,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/endpoint-connection-type in valuesets.xml
 
 
-   .. attribute:: SecureEmail
+   .. py:attribute:: SecureEmail
       
 
       Direct Project information - http://wiki.directproject.org/
       From: http://terminology.hl7.org/CodeSystem/endpoint-connection-type in valuesets.xml
 
 
-   .. attribute:: DirectProject
+   .. py:attribute:: DirectProject
       
 
       

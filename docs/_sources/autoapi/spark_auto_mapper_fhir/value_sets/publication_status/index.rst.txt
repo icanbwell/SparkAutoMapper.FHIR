@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.publication_status`
-===========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.publication_status`
+==============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.publication_status
 
@@ -17,42 +17,42 @@ Classes
 
 
 
-.. class:: PublicationStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: PublicationStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    PublicationStatus
    From: http://hl7.org/fhir/publication-status in valuesets.xml
        The lifecycle status of an artifact.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/publication-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/publication-status
 
       
 
 
-.. class:: PublicationStatusCodeValues
+.. py:class:: PublicationStatusCodeValues
 
    This resource is still under development and is not yet considered to be ready
    for normal use.
    From: http://hl7.org/fhir/publication-status in valuesets.xml
 
-   .. attribute:: Draft
+   .. py:attribute:: Draft
       
 
       This resource is ready for normal use.
       From: http://hl7.org/fhir/publication-status in valuesets.xml
 
 
-   .. attribute:: Active
+   .. py:attribute:: Active
       
 
       This resource has been withdrawn or superseded and should no longer be used.
       From: http://hl7.org/fhir/publication-status in valuesets.xml
 
 
-   .. attribute:: Retired
+   .. py:attribute:: Retired
       
 
       The authoring system does not know which of the status values currently
@@ -62,7 +62,7 @@ Classes
       From: http://hl7.org/fhir/publication-status in valuesets.xml
 
 
-   .. attribute:: Unknown
+   .. py:attribute:: Unknown
       
 
       

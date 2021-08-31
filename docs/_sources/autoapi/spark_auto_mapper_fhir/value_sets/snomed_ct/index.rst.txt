@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.snomed_ct`
-==================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.snomed_ct`
+=====================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.snomed_ct
 
@@ -16,10 +16,10 @@ Classes
 
 
 
-.. class:: SNOMED_CTCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SNOMED_CTCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SNOMED_CT
    From: http://snomed.info/sct in valuesets.xml
@@ -27,8 +27,8 @@ Classes
    product in the world, owned and distributed around the world by The
    International Health Terminology Standards Development Organisation (IHTSDO).
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://snomed.info/sct
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://snomed.info/sct
 
       
 

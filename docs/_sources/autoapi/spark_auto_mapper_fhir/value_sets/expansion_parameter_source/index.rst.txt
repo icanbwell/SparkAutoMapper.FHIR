@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.expansion_parameter_source`
-===================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.expansion_parameter_source`
+======================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.expansion_parameter_source
 
@@ -17,34 +17,34 @@ Classes
 
 
 
-.. class:: ExpansionParameterSourceCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ExpansionParameterSourceCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ExpansionParameterSource
    From: http://terminology.hl7.org/CodeSystem/expansion-parameter-source in valuesets.xml
        Declares what the source of a parameter is.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/expansion-parameter-source
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/expansion-parameter-source
 
       
 
 
-.. class:: ExpansionParameterSourceCodeValues
+.. py:class:: ExpansionParameterSourceCodeValues
 
    The parameter was supplied by the client in the $expand request.
    From: http://terminology.hl7.org/CodeSystem/expansion-parameter-source in valuesets.xml
 
-   .. attribute:: ClientInput
+   .. py:attribute:: ClientInput
       
 
       The parameter was added by the expansion engine on the server.
       From: http://terminology.hl7.org/CodeSystem/expansion-parameter-source in valuesets.xml
 
 
-   .. attribute:: ServerEngine
+   .. py:attribute:: ServerEngine
       
 
       The parameter was added from one the code systems used in the $expand
@@ -52,7 +52,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/expansion-parameter-source in valuesets.xml
 
 
-   .. attribute:: CodeSystem
+   .. py:attribute:: CodeSystem
       
 
       

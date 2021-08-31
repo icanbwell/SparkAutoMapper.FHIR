@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.match_grade`
-====================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.match_grade`
+=======================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.match_grade
 
@@ -17,29 +17,29 @@ Classes
 
 
 
-.. class:: MatchGradeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: MatchGradeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    MatchGrade
    From: http://terminology.hl7.org/CodeSystem/match-grade in valuesets.xml
        A Master Patient Index (MPI) assessment of whether a candidate patient record
    is a match or not.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/match-grade
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/match-grade
 
       
 
 
-.. class:: MatchGradeCodeValues
+.. py:class:: MatchGradeCodeValues
 
    This record meets the matching criteria to be automatically considered as a
    full match.
    From: http://terminology.hl7.org/CodeSystem/match-grade in valuesets.xml
 
-   .. attribute:: CertainMatch
+   .. py:attribute:: CertainMatch
       
 
       This record is a close match, but not a certain match. Additional review (e.g.
@@ -47,7 +47,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/match-grade in valuesets.xml
 
 
-   .. attribute:: ProbableMatch
+   .. py:attribute:: ProbableMatch
       
 
       This record may be a matching one. Additional review (e.g. by a human) SHOULD
@@ -55,7 +55,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/match-grade in valuesets.xml
 
 
-   .. attribute:: PossibleMatch
+   .. py:attribute:: PossibleMatch
       
 
       This record is known not to be a match. Note that usually non-matching records
@@ -64,7 +64,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/match-grade in valuesets.xml
 
 
-   .. attribute:: CertainlyNotAMatch
+   .. py:attribute:: CertainlyNotAMatch
       
 
       

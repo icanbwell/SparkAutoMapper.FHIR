@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.entity_risk`
-====================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.entity_risk`
+=======================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.entity_risk
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: EntityRisk(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: EntityRisk(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.EntityRisk
    From: http://terminology.hl7.org/ValueSet/v3-EntityRisk in v3-codesystems.xml
         Kinds of risks associated with the handling of the material..
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-EntityRisk
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-EntityRisk
 
       
 
 
-.. class:: EntityRiskValues
+.. py:class:: EntityRiskValues
 
    A danger that can be associated with certain living subjects, including
    humans.
    From: http://terminology.hl7.org/CodeSystem/v3-EntityRisk in v3-codesystems.xml
 
-   .. attribute:: Aggressive
+   .. py:attribute:: Aggressive
       
 
       The dangers associated with normal biological materials. I.e. potential risk
@@ -46,7 +46,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-EntityRisk in v3-codesystems.xml
 
 
-   .. attribute:: Biological
+   .. py:attribute:: Biological
       
 
       Material is corrosive and may cause severe injury to skin, mucous membranes
@@ -54,14 +54,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-EntityRisk in v3-codesystems.xml
 
 
-   .. attribute:: Corrosive
+   .. py:attribute:: Corrosive
       
 
       The entity is at risk for escaping from containment or control.
       From: http://terminology.hl7.org/CodeSystem/v3-EntityRisk in v3-codesystems.xml
 
 
-   .. attribute:: EscapeRisk
+   .. py:attribute:: EscapeRisk
       
 
       Material is highly inflammable and in certain mixtures (with air) may lead to
@@ -69,7 +69,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-EntityRisk in v3-codesystems.xml
 
 
-   .. attribute:: Inflammable
+   .. py:attribute:: Inflammable
       
 
       Material known to be infectious with human pathogenic microorganisms.  Those
@@ -77,14 +77,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-EntityRisk in v3-codesystems.xml
 
 
-   .. attribute:: Infectious
+   .. py:attribute:: Infectious
       
 
       Material is solid and sharp (e.g., cannulas).  Dispose in hard container.
       From: http://terminology.hl7.org/CodeSystem/v3-EntityRisk in v3-codesystems.xml
 
 
-   .. attribute:: InjuryHazard
+   .. py:attribute:: InjuryHazard
       
 
       Material is poisonous to humans and/or animals.  Special care must be taken to
@@ -92,7 +92,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-EntityRisk in v3-codesystems.xml
 
 
-   .. attribute:: Poison
+   .. py:attribute:: Poison
       
 
       Material is a source for ionizing radiation and must be handled with special
@@ -101,7 +101,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-EntityRisk in v3-codesystems.xml
 
 
-   .. attribute:: Radioactive
+   .. py:attribute:: Radioactive
       
 
       

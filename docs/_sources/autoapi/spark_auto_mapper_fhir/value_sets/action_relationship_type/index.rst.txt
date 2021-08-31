@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.action_relationship_type`
-=================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.action_relationship_type`
+====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.action_relationship_type
 
@@ -17,83 +17,83 @@ Classes
 
 
 
-.. class:: ActionRelationshipTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ActionRelationshipTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ActionRelationshipType
    From: http://hl7.org/fhir/action-relationship-type in valuesets.xml
        Defines the types of relationships between actions.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/action-relationship-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/action-relationship-type
 
       
 
 
-.. class:: ActionRelationshipTypeCodeValues
+.. py:class:: ActionRelationshipTypeCodeValues
 
    The action must be performed before the start of the related action.
    From: http://hl7.org/fhir/action-relationship-type in valuesets.xml
 
-   .. attribute:: BeforeStart
+   .. py:attribute:: BeforeStart
       
 
       The action must be performed before the related action.
       From: http://hl7.org/fhir/action-relationship-type in valuesets.xml
 
 
-   .. attribute:: Before
+   .. py:attribute:: Before
       
 
       The action must be performed before the end of the related action.
       From: http://hl7.org/fhir/action-relationship-type in valuesets.xml
 
 
-   .. attribute:: BeforeEnd
+   .. py:attribute:: BeforeEnd
       
 
       The action must be performed concurrent with the start of the related action.
       From: http://hl7.org/fhir/action-relationship-type in valuesets.xml
 
 
-   .. attribute:: ConcurrentWithStart
+   .. py:attribute:: ConcurrentWithStart
       
 
       The action must be performed concurrent with the related action.
       From: http://hl7.org/fhir/action-relationship-type in valuesets.xml
 
 
-   .. attribute:: Concurrent
+   .. py:attribute:: Concurrent
       
 
       The action must be performed concurrent with the end of the related action.
       From: http://hl7.org/fhir/action-relationship-type in valuesets.xml
 
 
-   .. attribute:: ConcurrentWithEnd
+   .. py:attribute:: ConcurrentWithEnd
       
 
       The action must be performed after the start of the related action.
       From: http://hl7.org/fhir/action-relationship-type in valuesets.xml
 
 
-   .. attribute:: AfterStart
+   .. py:attribute:: AfterStart
       
 
       The action must be performed after the related action.
       From: http://hl7.org/fhir/action-relationship-type in valuesets.xml
 
 
-   .. attribute:: After
+   .. py:attribute:: After
       
 
       The action must be performed after the end of the related action.
       From: http://hl7.org/fhir/action-relationship-type in valuesets.xml
 
 
-   .. attribute:: AfterEnd
+   .. py:attribute:: AfterEnd
       
 
       

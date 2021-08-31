@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.contract_content_derivation_codes`
-==========================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.contract_content_derivation_codes`
+=============================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.contract_content_derivation_codes
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: ContractContentDerivationCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ContractContentDerivationCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ContractContentDerivationCodes
    From: http://terminology.hl7.org/CodeSystem/contract-content-derivative in valuesets.xml
@@ -30,13 +30,13 @@ Classes
    example, in a repository, registry, processes and workflows, for making access
    control decisions, and providing query responses.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/contract-content-derivative
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/contract-content-derivative
 
       
 
 
-.. class:: ContractContentDerivationCodesCodeValues
+.. py:class:: ContractContentDerivationCodesCodeValues
 
    Content derivative that conveys sufficient information needed to register the
    source basal content from which it is derived.  This derivative content may be
@@ -45,7 +45,7 @@ Classes
    updated, inactive, or deleted.
    From: http://terminology.hl7.org/CodeSystem/contract-content-derivative in valuesets.xml
 
-   .. attribute:: ContentRegistration
+   .. py:attribute:: ContentRegistration
       
 
       A content derivative that conveys sufficient information to locate and
@@ -53,7 +53,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contract-content-derivative in valuesets.xml
 
 
-   .. attribute:: ContentRetrieval
+   .. py:attribute:: ContentRetrieval
       
 
       Content derivative that has less than full fidelity to the basal information
@@ -64,7 +64,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contract-content-derivative in valuesets.xml
 
 
-   .. attribute:: ContentStatement
+   .. py:attribute:: ContentStatement
       
 
       A Content Derivative that conveys sufficient information to determine the
@@ -72,7 +72,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contract-content-derivative in valuesets.xml
 
 
-   .. attribute:: ShareableContent
+   .. py:attribute:: ShareableContent
       
 
       

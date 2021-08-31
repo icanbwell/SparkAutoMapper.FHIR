@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.claim_payee_resource_type`
-==================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.claim_payee_resource_type`
+=====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.claim_payee_resource_type
 
@@ -17,48 +17,48 @@ Classes
 
 
 
-.. class:: ClaimPayeeResourceTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ClaimPayeeResourceTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ClaimPayeeResourceType
    From: http://terminology.hl7.org/CodeSystem/ex-payee-resource-type in valuesets.xml
        The type of Claim payee Resource.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/ex-payee-resource-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/ex-payee-resource-type
 
       
 
 
-.. class:: ClaimPayeeResourceTypeCodeValues
+.. py:class:: ClaimPayeeResourceTypeCodeValues
 
    Organization resource.
    From: http://terminology.hl7.org/CodeSystem/ex-payee-resource-type in valuesets.xml
 
-   .. attribute:: Organization
+   .. py:attribute:: Organization
       
 
       Patient resource.
       From: http://terminology.hl7.org/CodeSystem/ex-payee-resource-type in valuesets.xml
 
 
-   .. attribute:: Patient
+   .. py:attribute:: Patient
       
 
       Practitioner resource.
       From: http://terminology.hl7.org/CodeSystem/ex-payee-resource-type in valuesets.xml
 
 
-   .. attribute:: Practitioner
+   .. py:attribute:: Practitioner
       
 
       RelatedPerson resource.
       From: http://terminology.hl7.org/CodeSystem/ex-payee-resource-type in valuesets.xml
 
 
-   .. attribute:: RelatedPerson
+   .. py:attribute:: RelatedPerson
       
 
       

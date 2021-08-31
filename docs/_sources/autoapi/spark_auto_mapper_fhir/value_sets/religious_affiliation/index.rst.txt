@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.religious_affiliation`
-==============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.religious_affiliation`
+=================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.religious_affiliation
 
@@ -17,594 +17,594 @@ Classes
 
 
 
-.. class:: ReligiousAffiliation(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ReligiousAffiliation(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.ReligiousAffiliation
    From: http://terminology.hl7.org/ValueSet/v3-ReligiousAffiliation in v3-codesystems.xml
         Assigment of spiritual faith affiliation
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation
 
       
 
 
-.. class:: ReligiousAffiliationValues
+.. py:class:: ReligiousAffiliationValues
 
    Adventist
    From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
-   .. attribute:: Adventist
+   .. py:attribute:: Adventist
       
 
       African Religions
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: AfricanReligions
+   .. py:attribute:: AfricanReligions
       
 
       Afro-Caribbean Religions
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Afro_CaribbeanReligions
+   .. py:attribute:: Afro_CaribbeanReligions
       
 
       Agnosticism
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Agnosticism
+   .. py:attribute:: Agnosticism
       
 
       Anglican
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Anglican
+   .. py:attribute:: Anglican
       
 
       Animism
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Animism
+   .. py:attribute:: Animism
       
 
       Atheism
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Atheism
+   .. py:attribute:: Atheism
       
 
       Babi & Baha'I faiths
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Babi_Baha_IFaiths
+   .. py:attribute:: Babi_Baha_IFaiths
       
 
       Baptist
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Baptist
+   .. py:attribute:: Baptist
       
 
       Bon
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Bon
+   .. py:attribute:: Bon
       
 
       Cao Dai
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: CaoDai
+   .. py:attribute:: CaoDai
       
 
       Celticism
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Celticism
+   .. py:attribute:: Celticism
       
 
       Christian (non-Catholic, non-specific)
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Christian_non_Catholic_Non_specific_
+   .. py:attribute:: Christian_non_Catholic_Non_specific_
       
 
       Confucianism
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Confucianism
+   .. py:attribute:: Confucianism
       
 
       Cyberculture Religions
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: CybercultureReligions
+   .. py:attribute:: CybercultureReligions
       
 
       Divination
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Divination
+   .. py:attribute:: Divination
       
 
       Fourth Way
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: FourthWay
+   .. py:attribute:: FourthWay
       
 
       Free Daism
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: FreeDaism
+   .. py:attribute:: FreeDaism
       
 
       Gnosis
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Gnosis
+   .. py:attribute:: Gnosis
       
 
       Hinduism
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Hinduism
+   .. py:attribute:: Hinduism
       
 
       Humanism
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Humanism
+   .. py:attribute:: Humanism
       
 
       Independent
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Independent
+   .. py:attribute:: Independent
       
 
       Islam
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Islam
+   .. py:attribute:: Islam
       
 
       Jainism
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Jainism
+   .. py:attribute:: Jainism
       
 
       Jehovah's Witnesses
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Jehovah_sWitnesses
+   .. py:attribute:: Jehovah_sWitnesses
       
 
       Judaism
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Judaism
+   .. py:attribute:: Judaism
       
 
       Latter Day Saints
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: LatterDaySaints
+   .. py:attribute:: LatterDaySaints
       
 
       Lutheran
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Lutheran
+   .. py:attribute:: Lutheran
       
 
       Mahayana
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Mahayana
+   .. py:attribute:: Mahayana
       
 
       Meditation
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Meditation
+   .. py:attribute:: Meditation
       
 
       Messianic Judaism
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: MessianicJudaism
+   .. py:attribute:: MessianicJudaism
       
 
       Mitraism
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Mitraism
+   .. py:attribute:: Mitraism
       
 
       New Age
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: NewAge
+   .. py:attribute:: NewAge
       
 
       non-Roman Catholic
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Non_RomanCatholic
+   .. py:attribute:: Non_RomanCatholic
       
 
       Occult
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Occult
+   .. py:attribute:: Occult
       
 
       Orthodox
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Orthodox
+   .. py:attribute:: Orthodox
       
 
       Paganism
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Paganism
+   .. py:attribute:: Paganism
       
 
       Pentecostal
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Pentecostal
+   .. py:attribute:: Pentecostal
       
 
       Process, The
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Process_The
+   .. py:attribute:: Process_The
       
 
       Reformed/Presbyterian
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Reformed_Presbyterian
+   .. py:attribute:: Reformed_Presbyterian
       
 
       Roman Catholic Church
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: RomanCatholicChurch
+   .. py:attribute:: RomanCatholicChurch
       
 
       Satanism
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Satanism
+   .. py:attribute:: Satanism
       
 
       Scientology
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Scientology
+   .. py:attribute:: Scientology
       
 
       Shamanism
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Shamanism
+   .. py:attribute:: Shamanism
       
 
       Shiite (Islam)
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Shiite_Islam_
+   .. py:attribute:: Shiite_Islam_
       
 
       Shinto
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Shinto
+   .. py:attribute:: Shinto
       
 
       Sikism
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Sikism
+   .. py:attribute:: Sikism
       
 
       Spiritualism
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Spiritualism
+   .. py:attribute:: Spiritualism
       
 
       Sunni (Islam)
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Sunni_Islam_
+   .. py:attribute:: Sunni_Islam_
       
 
       Taoism
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Taoism
+   .. py:attribute:: Taoism
       
 
       Theravada
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Theravada
+   .. py:attribute:: Theravada
       
 
       Unitarian-Universalism
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Unitarian_Universalism
+   .. py:attribute:: Unitarian_Universalism
       
 
       Universal Life Church
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: UniversalLifeChurch
+   .. py:attribute:: UniversalLifeChurch
       
 
       Vajrayana (Tibetan)
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Vajrayana_Tibetan_
+   .. py:attribute:: Vajrayana_Tibetan_
       
 
       Veda
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Veda
+   .. py:attribute:: Veda
       
 
       Voodoo
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Voodoo
+   .. py:attribute:: Voodoo
       
 
       Wicca
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Wicca
+   .. py:attribute:: Wicca
       
 
       Yaohushua
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Yaohushua
+   .. py:attribute:: Yaohushua
       
 
       Zen Buddhism
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: ZenBuddhism
+   .. py:attribute:: ZenBuddhism
       
 
       Zoroastrianism
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Zoroastrianism
+   .. py:attribute:: Zoroastrianism
       
 
       Assembly of God
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: AssemblyOfGod
+   .. py:attribute:: AssemblyOfGod
       
 
       Brethren
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Brethren
+   .. py:attribute:: Brethren
       
 
       Christian Scientist
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: ChristianScientist
+   .. py:attribute:: ChristianScientist
       
 
       Church of Christ
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: ChurchOfChrist
+   .. py:attribute:: ChurchOfChrist
       
 
       Church of God
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: ChurchOfGod
+   .. py:attribute:: ChurchOfGod
       
 
       Congregational
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Congregational
+   .. py:attribute:: Congregational
       
 
       Disciples of Christ
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: DisciplesOfChrist
+   .. py:attribute:: DisciplesOfChrist
       
 
       Eastern Orthodox
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: EasternOrthodox
+   .. py:attribute:: EasternOrthodox
       
 
       Episcopalian
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Episcopalian
+   .. py:attribute:: Episcopalian
       
 
       Evangelical Covenant
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: EvangelicalCovenant
+   .. py:attribute:: EvangelicalCovenant
       
 
       Friends
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Friends
+   .. py:attribute:: Friends
       
 
       Full Gospel
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: FullGospel
+   .. py:attribute:: FullGospel
       
 
       Methodist
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Methodist
+   .. py:attribute:: Methodist
       
 
       Native American
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: NativeAmerican
+   .. py:attribute:: NativeAmerican
       
 
       Nazarene
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Nazarene
+   .. py:attribute:: Nazarene
       
 
       Presbyterian
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Presbyterian
+   .. py:attribute:: Presbyterian
       
 
       Protestant
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Protestant
+   .. py:attribute:: Protestant
       
 
       Protestant, No Denomination
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Protestant_NoDenomination
+   .. py:attribute:: Protestant_NoDenomination
       
 
       Reformed
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: Reformed
+   .. py:attribute:: Reformed
       
 
       Salvation Army
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: SalvationArmy
+   .. py:attribute:: SalvationArmy
       
 
       Unitarian Universalist
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: UnitarianUniversalist
+   .. py:attribute:: UnitarianUniversalist
       
 
       United Church of Christ
       From: http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation in v3-codesystems.xml
 
 
-   .. attribute:: UnitedChurchOfChrist
+   .. py:attribute:: UnitedChurchOfChrist
       
 
       

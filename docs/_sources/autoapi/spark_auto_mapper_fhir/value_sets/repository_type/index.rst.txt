@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.repository_type`
-========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.repository_type`
+===========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.repository_type
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: RepositoryTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: RepositoryTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    repositoryType
    From: http://hl7.org/fhir/repository-type in valuesets.xml
        Type for access of external URI.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/repository-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/repository-type
 
       
 
 
-.. class:: RepositoryTypeCodeValues
+.. py:class:: RepositoryTypeCodeValues
 
    When URL is clicked, the resource can be seen directly (by webpage or by
    download link format).
    From: http://hl7.org/fhir/repository-type in valuesets.xml
 
-   .. attribute:: ClickAndSee
+   .. py:attribute:: ClickAndSee
       
 
       When the API method (e.g. [base_url]/[parameter]) related with the URL of the
@@ -47,14 +47,14 @@ Classes
       From: http://hl7.org/fhir/repository-type in valuesets.xml
 
 
-   .. attribute:: TheURLIsTheRESTfulOrOtherKindOfAPIThatCanAccessToTheResult_
+   .. py:attribute:: TheURLIsTheRESTfulOrOtherKindOfAPIThatCanAccessToTheResult_
       
 
       When logged into the website, the resource can be seen.
       From: http://hl7.org/fhir/repository-type in valuesets.xml
 
 
-   .. attribute:: ResultCannotBeAccessUnlessAnAccountIsLoggedIn
+   .. py:attribute:: ResultCannotBeAccessUnlessAnAccountIsLoggedIn
       
 
       When logged in and  follow the API in the website related with URL, the
@@ -62,14 +62,14 @@ Classes
       From: http://hl7.org/fhir/repository-type in valuesets.xml
 
 
-   .. attribute:: ResultNeedToBeFetchedWithAPIAndNeedLOGIN_OrCookiesAreRequiredWhenVisitingTheLinkOfResource_
+   .. py:attribute:: ResultNeedToBeFetchedWithAPIAndNeedLOGIN_OrCookiesAreRequiredWhenVisitingTheLinkOfResource_
       
 
       Some other complicated or particular way to get resource from URL.
       From: http://hl7.org/fhir/repository-type in valuesets.xml
 
 
-   .. attribute:: SomeOtherComplicatedOrParticularWayToGetResourceFromURL_
+   .. py:attribute:: SomeOtherComplicatedOrParticularWayToGetResourceFromURL_
       
 
       

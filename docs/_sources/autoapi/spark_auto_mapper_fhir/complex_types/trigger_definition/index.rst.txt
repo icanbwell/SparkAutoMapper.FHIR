@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.complex_types.trigger_definition`
-==============================================================
+:py:mod:`spark_auto_mapper_fhir.complex_types.trigger_definition`
+=================================================================
 
 .. py:module:: spark_auto_mapper_fhir.complex_types.trigger_definition
 
@@ -16,17 +16,41 @@ Classes
 
 
 
-.. class:: TriggerDefinition(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, type_: spark_auto_mapper_fhir.value_sets.trigger_type.TriggerTypeCode, name: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, timingTiming: Optional[spark_auto_mapper_fhir.backbone_elements.timing.Timing] = None, timingReference: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.schedule.Schedule]] = None, timingDate: Optional[spark_auto_mapper_fhir.fhir_types.date.FhirDate] = None, timingDateTime: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, data: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.data_requirement.DataRequirement]] = None, condition: Optional[spark_auto_mapper_fhir.complex_types.expression.Expression] = None)
 
+.. py:class:: TriggerDefinition(*, id_ = None, extension = None, type_, name = None, timingTiming = None, timingReference = None, timingDate = None, timingDateTime = None, data = None, condition = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
 
    TriggerDefinition
    fhir-base.xsd
        A description of a triggering event. Triggering events can be named events, data events, or periodic, as determined by the type element.
        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
 
-   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+       A description of a triggering event. Triggering events can be named events,
+   data events, or periodic, as determined by the type element.
+       If the element is present, it must have a value for at least one of the
+   defined elements, an @id referenced from the Narrative, or extensions
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param type_: The type of triggering event.
+       :param name: A formal name for the event. This may be an absolute URI that identifies the
+   event formally (e.g. from a trigger registry), or a simple relative URI that
+   identifies the event in a local context.
+       :param timingTiming: None
+       :param timingReference: None
+       :param timingDate: None
+       :param timingDateTime: None
+       :param data: The triggering data of the event (if this is a data trigger). If more than one
+   data is requirement is specified, then all the data requirements must be true.
+       :param condition: A boolean-valued expression that is evaluated in the context of the container
+   of the trigger definition and returns whether or not the trigger fires.
+
+   .. py:method:: get_schema(self, include_extension)
 
 
 

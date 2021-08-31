@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.fhir_device_status`
-===========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.fhir_device_status`
+==============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.fhir_device_status
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: FHIRDeviceStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: FHIRDeviceStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    FHIRDeviceStatus
    From: http://hl7.org/fhir/device-definition-status in valuesets.xml
        Codes representing the current status of the device - on, off, suspended, etc.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/device-definition-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/device-definition-status
 
       
 
 
-.. class:: FHIRDeviceStatusCodeValues
+.. py:class:: FHIRDeviceStatusCodeValues
 
    The device is available for use.  Note: For *implanted devices*  this means
    that the device is implanted in the patient.
    From: http://hl7.org/fhir/device-definition-status in valuesets.xml
 
-   .. attribute:: Active
+   .. py:attribute:: Active
       
 
       The device is no longer available for use (e.g. lost, expired, damaged).
@@ -47,21 +47,21 @@ Classes
       From: http://hl7.org/fhir/device-definition-status in valuesets.xml
 
 
-   .. attribute:: Inactive
+   .. py:attribute:: Inactive
       
 
       The device was entered in error and voided.
       From: http://hl7.org/fhir/device-definition-status in valuesets.xml
 
 
-   .. attribute:: EnteredInError
+   .. py:attribute:: EnteredInError
       
 
       The status of the device has not been determined.
       From: http://hl7.org/fhir/device-definition-status in valuesets.xml
 
 
-   .. attribute:: Unknown
+   .. py:attribute:: Unknown
       
 
       

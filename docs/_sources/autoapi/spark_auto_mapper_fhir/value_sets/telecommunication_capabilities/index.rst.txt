@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.telecommunication_capabilities`
-=======================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.telecommunication_capabilities`
+==========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.telecommunication_capabilities
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: TelecommunicationCapabilities(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: TelecommunicationCapabilities(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.TelecommunicationCapabilities
    From: http://terminology.hl7.org/ValueSet/v3-TelecommunicationCapabilities in v3-codesystems.xml
@@ -29,39 +29,39 @@ Classes
    device. Used to identify the expected capabilities to be found at a particular
    telecommunication address.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-TelecommunicationCapabilities
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-TelecommunicationCapabilities
 
       
 
 
-.. class:: TelecommunicationCapabilitiesValues
+.. py:class:: TelecommunicationCapabilitiesValues
 
    Description: This device can receive data calls (i.e. modem).
    From: http://terminology.hl7.org/CodeSystem/v3-TelecommunicationCapabilities in v3-codesystems.xml
 
-   .. attribute:: Data
+   .. py:attribute:: Data
       
 
       Description: This device can receive faxes.
       From: http://terminology.hl7.org/CodeSystem/v3-TelecommunicationCapabilities in v3-codesystems.xml
 
 
-   .. attribute:: Fax
+   .. py:attribute:: Fax
       
 
       Description: This device can receive SMS messages.
       From: http://terminology.hl7.org/CodeSystem/v3-TelecommunicationCapabilities in v3-codesystems.xml
 
 
-   .. attribute:: Sms
+   .. py:attribute:: Sms
       
 
       Description: This device is a text telephone.
       From: http://terminology.hl7.org/CodeSystem/v3-TelecommunicationCapabilities in v3-codesystems.xml
 
 
-   .. attribute:: Text
+   .. py:attribute:: Text
       
 
       Description: This device can receive voice calls (i.e. talking to another
@@ -69,7 +69,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-TelecommunicationCapabilities in v3-codesystems.xml
 
 
-   .. attribute:: Voice
+   .. py:attribute:: Voice
       
 
       

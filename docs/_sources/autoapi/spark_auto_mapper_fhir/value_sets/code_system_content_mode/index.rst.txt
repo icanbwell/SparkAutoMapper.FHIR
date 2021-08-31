@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.code_system_content_mode`
-=================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.code_system_content_mode`
+====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.code_system_content_mode
 
@@ -17,29 +17,29 @@ Classes
 
 
 
-.. class:: CodeSystemContentModeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: CodeSystemContentModeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    CodeSystemContentMode
    From: http://hl7.org/fhir/codesystem-content-mode in valuesets.xml
        The extent of the content of the code system (the concepts and codes it
    defines) are represented in a code system resource.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/codesystem-content-mode
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/codesystem-content-mode
 
       
 
 
-.. class:: CodeSystemContentModeCodeValues
+.. py:class:: CodeSystemContentModeCodeValues
 
    None of the concepts defined by the code system are included in the code
    system resource.
    From: http://hl7.org/fhir/codesystem-content-mode in valuesets.xml
 
-   .. attribute:: NotPresent
+   .. py:attribute:: NotPresent
       
 
       A few representative concepts are included in the code system resource. There
@@ -48,7 +48,7 @@ Classes
       From: http://hl7.org/fhir/codesystem-content-mode in valuesets.xml
 
 
-   .. attribute:: Example
+   .. py:attribute:: Example
       
 
       A subset of the code system concepts are included in the code system resource.
@@ -59,7 +59,7 @@ Classes
       From: http://hl7.org/fhir/codesystem-content-mode in valuesets.xml
 
 
-   .. attribute:: Fragment
+   .. py:attribute:: Fragment
       
 
       All the concepts defined by the code system are included in the code system
@@ -67,7 +67,7 @@ Classes
       From: http://hl7.org/fhir/codesystem-content-mode in valuesets.xml
 
 
-   .. attribute:: Complete
+   .. py:attribute:: Complete
       
 
       The resource doesn't define any new concepts; it just provides additional
@@ -75,7 +75,7 @@ Classes
       From: http://hl7.org/fhir/codesystem-content-mode in valuesets.xml
 
 
-   .. attribute:: Supplement
+   .. py:attribute:: Supplement
       
 
       

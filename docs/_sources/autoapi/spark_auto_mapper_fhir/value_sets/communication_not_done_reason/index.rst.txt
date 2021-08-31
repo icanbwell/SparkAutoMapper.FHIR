@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.communication_not_done_reason`
-======================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.communication_not_done_reason`
+=========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.communication_not_done_reason
 
@@ -17,62 +17,62 @@ Classes
 
 
 
-.. class:: CommunicationNotDoneReasonCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: CommunicationNotDoneReasonCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    CommunicationNotDoneReason
    From: http://terminology.hl7.org/CodeSystem/communication-not-done-reason in valuesets.xml
        Codes for the reason why a communication did not happen.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/communication-not-done-reason
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/communication-not-done-reason
 
       
 
 
-.. class:: CommunicationNotDoneReasonCodeValues
+.. py:class:: CommunicationNotDoneReasonCodeValues
 
    The communication was not done due to an unknown reason.
    From: http://terminology.hl7.org/CodeSystem/communication-not-done-reason in valuesets.xml
 
-   .. attribute:: Unknown
+   .. py:attribute:: Unknown
       
 
       The communication was not done due to a system error.
       From: http://terminology.hl7.org/CodeSystem/communication-not-done-reason in valuesets.xml
 
 
-   .. attribute:: SystemError
+   .. py:attribute:: SystemError
       
 
       The communication was not done due to an invalid phone number.
       From: http://terminology.hl7.org/CodeSystem/communication-not-done-reason in valuesets.xml
 
 
-   .. attribute:: InvalidPhoneNumber
+   .. py:attribute:: InvalidPhoneNumber
       
 
       The communication was not done due to the recipient being unavailable.
       From: http://terminology.hl7.org/CodeSystem/communication-not-done-reason in valuesets.xml
 
 
-   .. attribute:: RecipientUnavailable
+   .. py:attribute:: RecipientUnavailable
       
 
       The communication was not done due to a family objection.
       From: http://terminology.hl7.org/CodeSystem/communication-not-done-reason in valuesets.xml
 
 
-   .. attribute:: FamilyObjection
+   .. py:attribute:: FamilyObjection
       
 
       The communication was not done due to a patient objection.
       From: http://terminology.hl7.org/CodeSystem/communication-not-done-reason in valuesets.xml
 
 
-   .. attribute:: PatientObjection
+   .. py:attribute:: PatientObjection
       
 
       

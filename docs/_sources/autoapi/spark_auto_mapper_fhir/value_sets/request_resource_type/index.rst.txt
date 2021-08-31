@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.request_resource_type`
-==============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.request_resource_type`
+=================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.request_resource_type
 
@@ -17,30 +17,30 @@ Classes
 
 
 
-.. class:: RequestResourceTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: RequestResourceTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    RequestResourceType
    From: http://hl7.org/fhir/request-resource-types in valuesets.xml
        A list of all the request resource types defined in this version of the FHIR
    specification.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/request-resource-types
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/request-resource-types
 
       
 
 
-.. class:: RequestResourceTypeCodeValues
+.. py:class:: RequestResourceTypeCodeValues
 
    A booking of a healthcare event among patient(s), practitioner(s), related
    person(s) and/or device(s) for a specific date/time. This may result in one or
    more Encounter(s).
    From: http://hl7.org/fhir/request-resource-types in valuesets.xml
 
-   .. attribute:: Appointment
+   .. py:attribute:: Appointment
       
 
       A reply to an appointment request for a patient and/or practitioner(s), such
@@ -48,70 +48,70 @@ Classes
       From: http://hl7.org/fhir/request-resource-types in valuesets.xml
 
 
-   .. attribute:: AppointmentResponse
+   .. py:attribute:: AppointmentResponse
       
 
       Healthcare plan for patient or group.
       From: http://hl7.org/fhir/request-resource-types in valuesets.xml
 
 
-   .. attribute:: CarePlan
+   .. py:attribute:: CarePlan
       
 
       Claim, Pre-determination or Pre-authorization.
       From: http://hl7.org/fhir/request-resource-types in valuesets.xml
 
 
-   .. attribute:: Claim
+   .. py:attribute:: Claim
       
 
       A request for information to be sent to a receiver.
       From: http://hl7.org/fhir/request-resource-types in valuesets.xml
 
 
-   .. attribute:: CommunicationRequest
+   .. py:attribute:: CommunicationRequest
       
 
       Legal Agreement.
       From: http://hl7.org/fhir/request-resource-types in valuesets.xml
 
 
-   .. attribute:: Contract
+   .. py:attribute:: Contract
       
 
       Medical device request.
       From: http://hl7.org/fhir/request-resource-types in valuesets.xml
 
 
-   .. attribute:: DeviceRequest
+   .. py:attribute:: DeviceRequest
       
 
       Enrollment request.
       From: http://hl7.org/fhir/request-resource-types in valuesets.xml
 
 
-   .. attribute:: EnrollmentRequest
+   .. py:attribute:: EnrollmentRequest
       
 
       Guidance or advice relating to an immunization.
       From: http://hl7.org/fhir/request-resource-types in valuesets.xml
 
 
-   .. attribute:: ImmunizationRecommendation
+   .. py:attribute:: ImmunizationRecommendation
       
 
       Ordering of medication for patient or group.
       From: http://hl7.org/fhir/request-resource-types in valuesets.xml
 
 
-   .. attribute:: MedicationRequest
+   .. py:attribute:: MedicationRequest
       
 
       Diet, formula or nutritional supplement request.
       From: http://hl7.org/fhir/request-resource-types in valuesets.xml
 
 
-   .. attribute:: NutritionOrder
+   .. py:attribute:: NutritionOrder
       
 
       A record of a request for service such as diagnostic investigations,
@@ -119,28 +119,28 @@ Classes
       From: http://hl7.org/fhir/request-resource-types in valuesets.xml
 
 
-   .. attribute:: ServiceRequest
+   .. py:attribute:: ServiceRequest
       
 
       Request for a medication, substance or device.
       From: http://hl7.org/fhir/request-resource-types in valuesets.xml
 
 
-   .. attribute:: SupplyRequest
+   .. py:attribute:: SupplyRequest
       
 
       A task to be performed.
       From: http://hl7.org/fhir/request-resource-types in valuesets.xml
 
 
-   .. attribute:: Task
+   .. py:attribute:: Task
       
 
       Prescription for vision correction products for a patient.
       From: http://hl7.org/fhir/request-resource-types in valuesets.xml
 
 
-   .. attribute:: VisionPrescription
+   .. py:attribute:: VisionPrescription
       
 
       

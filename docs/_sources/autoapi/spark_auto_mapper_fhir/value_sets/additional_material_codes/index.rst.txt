@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.additional_material_codes`
-==================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.additional_material_codes`
+=====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.additional_material_codes
 
@@ -17,62 +17,62 @@ Classes
 
 
 
-.. class:: AdditionalMaterialCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: AdditionalMaterialCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    AdditionalMaterialCodes
    From: http://hl7.org/fhir/additionalmaterials in valuesets.xml
        This value set includes sample additional material type codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/additionalmaterials
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/additionalmaterials
 
       
 
 
-.. class:: AdditionalMaterialCodesCodeValues
+.. py:class:: AdditionalMaterialCodesCodeValues
 
    XRay
    From: http://hl7.org/fhir/additionalmaterials in valuesets.xml
 
-   .. attribute:: XRay
+   .. py:attribute:: XRay
       
 
       Image
       From: http://hl7.org/fhir/additionalmaterials in valuesets.xml
 
 
-   .. attribute:: Image
+   .. py:attribute:: Image
       
 
       Email
       From: http://hl7.org/fhir/additionalmaterials in valuesets.xml
 
 
-   .. attribute:: Email
+   .. py:attribute:: Email
       
 
       Model
       From: http://hl7.org/fhir/additionalmaterials in valuesets.xml
 
 
-   .. attribute:: Model
+   .. py:attribute:: Model
       
 
       Document
       From: http://hl7.org/fhir/additionalmaterials in valuesets.xml
 
 
-   .. attribute:: Document
+   .. py:attribute:: Document
       
 
       Other
       From: http://hl7.org/fhir/additionalmaterials in valuesets.xml
 
 
-   .. attribute:: Other
+   .. py:attribute:: Other
       
 
       

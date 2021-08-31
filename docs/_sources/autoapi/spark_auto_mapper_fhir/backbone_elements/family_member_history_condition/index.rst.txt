@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.backbone_elements.family_member_history_condition`
-===============================================================================
+:py:mod:`spark_auto_mapper_fhir.backbone_elements.family_member_history_condition`
+==================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.backbone_elements.family_member_history_condition
 
@@ -16,12 +16,47 @@ Classes
 
 
 
-.. class:: FamilyMemberHistoryCondition(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, code: spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.condition_or__problem_or__diagnosis_codes.Condition_or_Problem_or_DiagnosisCodesCode], outcome: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.condition_outcome_codes.ConditionOutcomeCodesCode]] = None, contributedToDeath: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, onsetAge: Optional[spark_auto_mapper_fhir.complex_types.age.Age] = None, onsetRange: Optional[spark_auto_mapper_fhir.complex_types.range.Range] = None, onsetPeriod: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, onsetString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, note: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.annotation.Annotation]] = None)
 
+.. py:class:: FamilyMemberHistoryCondition(*, id_ = None, extension = None, modifierExtension = None, code, outcome = None, contributedToDeath = None, onsetAge = None, onsetRange = None, onsetPeriod = None, onsetString = None, note = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
 
    FamilyMemberHistory.Condition
-   Significant health conditions for a person related to the patient relevant in the context of care for the patient.
+       Significant health conditions for a person related to the patient relevant in the context of care for the patient.
+
+       Significant health conditions for a person related to the patient relevant in
+   the context of care for the patient.
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param modifierExtension: May be used to represent additional information that is not part of the basic
+   definition of the element and that modifies the understanding of the element
+   in which it is contained and/or the understanding of the containing element's
+   descendants. Usually modifier elements provide negation or qualification. To
+   make the use of extensions safe and manageable, there is a strict set of
+   governance applied to the definition and use of extensions. Though any
+   implementer can define an extension, there is a set of requirements that SHALL
+   be met as part of the definition of the extension. Applications processing a
+   resource are required to check for modifier extensions.
+
+   Modifier extensions SHALL NOT change the meaning of any elements on Resource
+   or DomainResource (including cannot change the meaning of modifierExtension
+   itself).
+       :param code: The actual condition specified. Could be a coded condition (like MI or
+   Diabetes) or a less specific string like 'cancer' depending on how much is
+   known about the condition and the capabilities of the creating system.
+       :param outcome: Indicates what happened following the condition.  If the condition resulted in
+   death, deceased date is captured on the relation.
+       :param contributedToDeath: This condition contributed to the cause of death of the related person. If
+   contributedToDeath is not populated, then it is unknown.
+       :param onsetAge: None
+       :param onsetRange: None
+       :param onsetPeriod: None
+       :param onsetString: None
+       :param note: An area where general notes can be placed about this specific condition.
 
 

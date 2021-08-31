@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.subscription_tag`
-=========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.subscription_tag`
+============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.subscription_tag
 
@@ -17,34 +17,34 @@ Classes
 
 
 
-.. class:: SubscriptionTagCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SubscriptionTagCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SubscriptionTag
    From: http://terminology.hl7.org/CodeSystem/subscription-tag in valuesets.xml
        Tags to put on a resource after subscriptions have been sent.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/subscription-tag
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/subscription-tag
 
       
 
 
-.. class:: SubscriptionTagCodeValues
+.. py:class:: SubscriptionTagCodeValues
 
    The message has been queued for processing on a destination systems.
    From: http://terminology.hl7.org/CodeSystem/subscription-tag in valuesets.xml
 
-   .. attribute:: Queued
+   .. py:attribute:: Queued
       
 
       The message has been delivered to its intended recipient.
       From: http://terminology.hl7.org/CodeSystem/subscription-tag in valuesets.xml
 
 
-   .. attribute:: Delivered
+   .. py:attribute:: Delivered
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.questionnaire_item_ui_control_codes`
-============================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.questionnaire_item_ui_control_codes`
+===============================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.questionnaire_item_ui_control_codes
 
@@ -17,42 +17,42 @@ Classes
 
 
 
-.. class:: QuestionnaireItemUIControlCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: QuestionnaireItemUIControlCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    QuestionnaireItemUIControlCodes
    From: http://hl7.org/fhir/questionnaire-item-control in valuesets.xml
        Starter set of user interface control/display mechanisms that might be used
    when rendering an item in a questionnaire.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/questionnaire-item-control
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/questionnaire-item-control
 
       
 
 
-.. class:: QuestionnaireItemUIControlCodesCodeValues
+.. py:class:: QuestionnaireItemUIControlCodesCodeValues
 
    UI controls relevant to organizing groups of questions
    From: http://hl7.org/fhir/questionnaire-item-control in valuesets.xml
 
-   .. attribute:: Group
+   .. py:attribute:: Group
       
 
       UI controls relevant to rendering questionnaire text items
       From: http://hl7.org/fhir/questionnaire-item-control in valuesets.xml
 
 
-   .. attribute:: Text
+   .. py:attribute:: Text
       
 
       UI controls relevant to capturing question data
       From: http://hl7.org/fhir/questionnaire-item-control in valuesets.xml
 
 
-   .. attribute:: Question
+   .. py:attribute:: Question
       
 
       

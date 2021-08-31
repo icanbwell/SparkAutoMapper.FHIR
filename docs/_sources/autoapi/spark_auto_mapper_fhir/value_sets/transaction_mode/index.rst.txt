@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.transaction_mode`
-=========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.transaction_mode`
+============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.transaction_mode
 
@@ -17,48 +17,48 @@ Classes
 
 
 
-.. class:: TransactionModeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: TransactionModeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    TransactionMode
    From: http://hl7.org/fhir/transaction-mode in valuesets.xml
        A code that indicates how transactions are supported.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/transaction-mode
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/transaction-mode
 
       
 
 
-.. class:: TransactionModeCodeValues
+.. py:class:: TransactionModeCodeValues
 
    Neither batch or transaction is supported.
    From: http://hl7.org/fhir/transaction-mode in valuesets.xml
 
-   .. attribute:: None_
+   .. py:attribute:: None_
       
 
       Batches are  supported.
       From: http://hl7.org/fhir/transaction-mode in valuesets.xml
 
 
-   .. attribute:: BatchesSupported
+   .. py:attribute:: BatchesSupported
       
 
       Transactions are supported.
       From: http://hl7.org/fhir/transaction-mode in valuesets.xml
 
 
-   .. attribute:: TransactionsSupported
+   .. py:attribute:: TransactionsSupported
       
 
       Both batches and transactions are supported.
       From: http://hl7.org/fhir/transaction-mode in valuesets.xml
 
 
-   .. attribute:: Batches_Transactions
+   .. py:attribute:: Batches_Transactions
       
 
       

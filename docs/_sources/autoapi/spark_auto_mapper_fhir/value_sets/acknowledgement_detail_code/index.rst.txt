@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.acknowledgement_detail_code`
-====================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.acknowledgement_detail_code`
+=======================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.acknowledgement_detail_code
 
@@ -17,29 +17,29 @@ Classes
 
 
 
-.. class:: AcknowledgementDetailCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: AcknowledgementDetailCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.AcknowledgementDetailCode
    From: http://terminology.hl7.org/ValueSet/v3-AcknowledgementDetailCode in v3-codesystems.xml
          OpenIssue:
    Missing description.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-AcknowledgementDetailCode
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-AcknowledgementDetailCode
 
       
 
 
-.. class:: AcknowledgementDetailCodeValues
+.. py:class:: AcknowledgementDetailCodeValues
 
    Refelects rejections because elements of the communication are not supported
    in the current context.
    From: http://terminology.hl7.org/CodeSystem/v3-AcknowledgementDetailCode in v3-codesystems.xml
 
-   .. attribute:: AcknowledgementDetailNotSupportedCode
+   .. py:attribute:: AcknowledgementDetailNotSupportedCode
       
 
       An internal software component (database, application, queue mechanism, etc.)
@@ -47,7 +47,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-AcknowledgementDetailCode in v3-codesystems.xml
 
 
-   .. attribute:: InternalSystemError
+   .. py:attribute:: InternalSystemError
       
 
       Rejection: The message can't be stored by the receiver due to an unspecified
@@ -56,7 +56,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-AcknowledgementDetailCode in v3-codesystems.xml
 
 
-   .. attribute:: NoStorageSpaceForMessage_
+   .. py:attribute:: NoStorageSpaceForMessage_
       
 
       Error: The destination of this message is known to the receiving application.
@@ -66,7 +66,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-AcknowledgementDetailCode in v3-codesystems.xml
 
 
-   .. attribute:: MessageRoutingError_DestinationUnreachable_
+   .. py:attribute:: MessageRoutingError_DestinationUnreachable_
       
 
       The destination of this message is unknown to the receiving application. The
@@ -76,7 +76,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-AcknowledgementDetailCode in v3-codesystems.xml
 
 
-   .. attribute:: Error_MessageRoutingError_UnknownDestination_
+   .. py:attribute:: Error_MessageRoutingError_UnknownDestination_
       
 
       Warning: The destination of this message is known to the receiving
@@ -87,14 +87,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-AcknowledgementDetailCode in v3-codesystems.xml
 
 
-   .. attribute:: MessageRoutingWarning_DestinationUnreachable_
+   .. py:attribute:: MessageRoutingWarning_DestinationUnreachable_
       
 
       Reflects errors in the syntax or structure of the communication.
       From: http://terminology.hl7.org/CodeSystem/v3-AcknowledgementDetailCode in v3-codesystems.xml
 
 
-   .. attribute:: SyntaxError
+   .. py:attribute:: SyntaxError
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.medication_knowledge_package_type_codes`
-================================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.medication_knowledge_package_type_codes`
+===================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.medication_knowledge_package_type_codes
 
@@ -17,152 +17,152 @@ Classes
 
 
 
-.. class:: MedicationKnowledgePackageTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: MedicationKnowledgePackageTypeCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    medicationKnowledge Package Type Codes
    From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
        MedicationKnowledge Package Type Codes
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type
 
       
 
 
-.. class:: MedicationKnowledgePackageTypeCodesCodeValues
+.. py:class:: MedicationKnowledgePackageTypeCodesCodeValues
 
    From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
 
-   .. attribute:: Ampule
+   .. py:attribute:: Ampule
       
 
       From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
 
 
-   .. attribute:: Bag
+   .. py:attribute:: Bag
       
 
       From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
 
 
-   .. attribute:: BlisterPack
+   .. py:attribute:: BlisterPack
       
 
       From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
 
 
-   .. attribute:: Bottle
+   .. py:attribute:: Bottle
       
 
       From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
 
 
-   .. attribute:: Box
+   .. py:attribute:: Box
       
 
       From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
 
 
-   .. attribute:: Can
+   .. py:attribute:: Can
       
 
       From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
 
 
-   .. attribute:: Cartridge
+   .. py:attribute:: Cartridge
       
 
       From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
 
 
-   .. attribute:: Disk
+   .. py:attribute:: Disk
       
 
       From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
 
 
-   .. attribute:: Dosette
+   .. py:attribute:: Dosette
       
 
       From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
 
 
-   .. attribute:: Jar
+   .. py:attribute:: Jar
       
 
       From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
 
 
-   .. attribute:: Jug
+   .. py:attribute:: Jug
       
 
       From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
 
 
-   .. attribute:: Minim
+   .. py:attribute:: Minim
       
 
       From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
 
 
-   .. attribute:: NebuleAmp
+   .. py:attribute:: NebuleAmp
       
 
       From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
 
 
-   .. attribute:: Ovule
+   .. py:attribute:: Ovule
       
 
       From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
 
 
-   .. attribute:: Pouch
+   .. py:attribute:: Pouch
       
 
       From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
 
 
-   .. attribute:: Packet
+   .. py:attribute:: Packet
       
 
       From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
 
 
-   .. attribute:: Sashet
+   .. py:attribute:: Sashet
       
 
       From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
 
 
-   .. attribute:: Strip
+   .. py:attribute:: Strip
       
 
       From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
 
 
-   .. attribute:: Tin
+   .. py:attribute:: Tin
       
 
       From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
 
 
-   .. attribute:: Tub
+   .. py:attribute:: Tub
       
 
       From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
 
 
-   .. attribute:: Tube
+   .. py:attribute:: Tube
       
 
       From: http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type in valuesets.xml
 
 
-   .. attribute:: Vial
+   .. py:attribute:: Vial
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.backbone_elements.message_header_response`
-=======================================================================
+:py:mod:`spark_auto_mapper_fhir.backbone_elements.message_header_response`
+==========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.backbone_elements.message_header_response
 
@@ -16,12 +16,42 @@ Classes
 
 
 
-.. class:: MessageHeaderResponse(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: spark_auto_mapper_fhir.fhir_types.id.FhirId, code: spark_auto_mapper_fhir.value_sets.response_type.ResponseTypeCode, details: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.operation_outcome.OperationOutcome]] = None)
 
+.. py:class:: MessageHeaderResponse(*, id_ = None, extension = None, modifierExtension = None, identifier, code, details = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
 
    MessageHeader.Response
-   The header for a message exchange that is either requesting or responding to an action.  The reference(s) that are the subject of the action as well as other information related to the action are typically transmitted in a bundle in which the MessageHeader resource instance is the first resource in the bundle.
+       The header for a message exchange that is either requesting or responding to an action.  The reference(s) that are the subject of the action as well as other information related to the action are typically transmitted in a bundle in which the MessageHeader resource instance is the first resource in the bundle.
+
+       The header for a message exchange that is either requesting or responding to
+   an action.  The reference(s) that are the subject of the action as well as
+   other information related to the action are typically transmitted in a bundle
+   in which the MessageHeader resource instance is the first resource in the
+   bundle.
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param modifierExtension: May be used to represent additional information that is not part of the basic
+   definition of the element and that modifies the understanding of the element
+   in which it is contained and/or the understanding of the containing element's
+   descendants. Usually modifier elements provide negation or qualification. To
+   make the use of extensions safe and manageable, there is a strict set of
+   governance applied to the definition and use of extensions. Though any
+   implementer can define an extension, there is a set of requirements that SHALL
+   be met as part of the definition of the extension. Applications processing a
+   resource are required to check for modifier extensions.
+
+   Modifier extensions SHALL NOT change the meaning of any elements on Resource
+   or DomainResource (including cannot change the meaning of modifierExtension
+   itself).
+       :param identifier: The MessageHeader.id of the message to which this message is a response.
+       :param code: Code that identifies the type of response to the message - whether it was
+   successful or not, and whether it should be resent or not.
+       :param details: Full details of any issues found in the message.
 
 

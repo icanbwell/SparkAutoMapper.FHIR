@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.security_role_type`
-===========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.security_role_type`
+==============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.security_role_type
 
@@ -17,30 +17,30 @@ Classes
 
 
 
-.. class:: SecurityRoleTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SecurityRoleTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SecurityRoleType
    From: http://terminology.hl7.org/CodeSystem/extra-security-role-type in valuesets.xml
        This CodeSystem contains Additional FHIR-defined Security Role types not
    defined elsewhere
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/extra-security-role-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/extra-security-role-type
 
       
 
 
-.. class:: SecurityRoleTypeCodeValues
+.. py:class:: SecurityRoleTypeCodeValues
 
    An entity providing authorization services to enable the electronic sharing of
    health-related information based on resource owner's preapproved permissions.
    For example, an UMA Authorization Server[UMA]
    From: http://terminology.hl7.org/CodeSystem/extra-security-role-type in valuesets.xml
 
-   .. attribute:: AuthorizationServer
+   .. py:attribute:: AuthorizationServer
       
 
       An entity that collects information over which the data subject may have
@@ -50,7 +50,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/extra-security-role-type in valuesets.xml
 
 
-   .. attribute:: DataCollector
+   .. py:attribute:: DataCollector
       
 
       An entity that processes collected information over which the data subject may
@@ -60,7 +60,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/extra-security-role-type in valuesets.xml
 
 
-   .. attribute:: DataProcessor
+   .. py:attribute:: DataProcessor
       
 
       A person whose personal information is collected or processed, and who may
@@ -70,14 +70,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/extra-security-role-type in valuesets.xml
 
 
-   .. attribute:: DataSubject
+   .. py:attribute:: DataSubject
       
 
       The human user that has participated.
       From: http://terminology.hl7.org/CodeSystem/extra-security-role-type in valuesets.xml
 
 
-   .. attribute:: HumanUser
+   .. py:attribute:: HumanUser
       
 
       

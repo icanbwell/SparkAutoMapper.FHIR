@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.slot_status`
-====================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.slot_status`
+=======================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.slot_status
 
@@ -17,35 +17,35 @@ Classes
 
 
 
-.. class:: SlotStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SlotStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SlotStatus
    From: http://hl7.org/fhir/slotstatus in valuesets.xml
        The free/busy status of the slot.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/slotstatus
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/slotstatus
 
       
 
 
-.. class:: SlotStatusCodeValues
+.. py:class:: SlotStatusCodeValues
 
    Indicates that the time interval is busy because one  or more events have been
    scheduled for that interval.
    From: http://hl7.org/fhir/slotstatus in valuesets.xml
 
-   .. attribute:: Busy
+   .. py:attribute:: Busy
       
 
       Indicates that the time interval is free for scheduling.
       From: http://hl7.org/fhir/slotstatus in valuesets.xml
 
 
-   .. attribute:: Free
+   .. py:attribute:: Free
       
 
       Indicates that the time interval is busy and that the interval cannot be
@@ -53,7 +53,7 @@ Classes
       From: http://hl7.org/fhir/slotstatus in valuesets.xml
 
 
-   .. attribute:: Busy_Unavailable_
+   .. py:attribute:: Busy_Unavailable_
       
 
       Indicates that the time interval is busy because one or more events have been
@@ -61,14 +61,14 @@ Classes
       From: http://hl7.org/fhir/slotstatus in valuesets.xml
 
 
-   .. attribute:: Busy_Tentative_
+   .. py:attribute:: Busy_Tentative_
       
 
       This instance should not have been part of this patient's medical record.
       From: http://hl7.org/fhir/slotstatus in valuesets.xml
 
 
-   .. attribute:: EnteredInError
+   .. py:attribute:: EnteredInError
       
 
       

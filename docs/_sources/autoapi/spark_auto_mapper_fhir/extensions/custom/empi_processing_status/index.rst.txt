@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.extensions.custom.empi_processing_status`
-======================================================================
+:py:mod:`spark_auto_mapper_fhir.extensions.custom.empi_processing_status`
+=========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.extensions.custom.empi_processing_status
 
@@ -16,14 +16,21 @@ Classes
 
 
 
-.. class:: EmpiProcessingStatusExtension(processing_status: spark_auto_mapper_fhir.fhir_types.string.FhirString, request_id: spark_auto_mapper_fhir.fhir_types.string.FhirString, date_processed: spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime)
 
+.. py:class:: EmpiProcessingStatusExtension(processing_status, request_id, date_processed)
 
-   Bases: :class:`spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase`
 
    DO NOT USE DIRECTLY!  ALWAYS USE A SUB_CLASS.
 
-   .. method:: codeset(cls) -> spark_auto_mapper_fhir.fhir_types.uri.FhirUri
+
+   EmpiProcessingStatus Extension type in FHIR
+
+   :param processing_status: The status of empi processing. Single value for now is 'processed'
+   :param date_processed: Timestamp of when the record was processed
+   :param request_id: A globally unique string of numbers to identify a specific request. Max length is 16.
+
+   .. py:method:: codeset(cls)
 
       https://raw.githubusercontent.com/imranq2/SparkAutoMapper.FHIR/main/StructureDefinition/empi_processing_status
       :return:

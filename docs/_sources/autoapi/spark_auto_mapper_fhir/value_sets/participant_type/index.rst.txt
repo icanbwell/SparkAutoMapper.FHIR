@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.participant_type`
-=========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.participant_type`
+============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.participant_type
 
@@ -17,36 +17,36 @@ Classes
 
 
 
-.. class:: ParticipantTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ParticipantTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ParticipantType
    From: http://terminology.hl7.org/CodeSystem/participant-type in valuesets.xml
        This value set defines a set of codes that can be used to indicate how an
    individual participates in an encounter.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/participant-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/participant-type
 
       
 
 
-.. class:: ParticipantTypeCodeValues
+.. py:class:: ParticipantTypeCodeValues
 
    A translator who is facilitating communication with the patient during the
    encounter.
    From: http://terminology.hl7.org/CodeSystem/participant-type in valuesets.xml
 
-   .. attribute:: Translator
+   .. py:attribute:: Translator
       
 
       A person to be contacted in case of an emergency during the encounter.
       From: http://terminology.hl7.org/CodeSystem/participant-type in valuesets.xml
 
 
-   .. attribute:: Emergency
+   .. py:attribute:: Emergency
       
 
       

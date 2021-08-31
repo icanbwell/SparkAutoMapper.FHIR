@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.acknowledgement_type`
-=============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.acknowledgement_type`
+================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.acknowledgement_type
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: AcknowledgementType(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: AcknowledgementType(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.AcknowledgementType
    From: http://terminology.hl7.org/ValueSet/v3-AcknowledgementType in v3-codesystems.xml
@@ -29,18 +29,18 @@ Classes
    Description was copied from attribute and needs to be improved to be
    appropriate for a code system.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-AcknowledgementType
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-AcknowledgementType
 
       
 
 
-.. class:: AcknowledgementTypeValues
+.. py:class:: AcknowledgementTypeValues
 
    Receiving application successfully processed message.
    From: http://terminology.hl7.org/CodeSystem/v3-AcknowledgementType in v3-codesystems.xml
 
-   .. attribute:: ApplicationAcknowledgementAccept
+   .. py:attribute:: ApplicationAcknowledgementAccept
       
 
       Receiving application found error in processing message.  Sending error
@@ -48,7 +48,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-AcknowledgementType in v3-codesystems.xml
 
 
-   .. attribute:: ApplicationAcknowledgementError
+   .. py:attribute:: ApplicationAcknowledgementError
       
 
       Receiving application failed to process message for reason unrelated to
@@ -57,7 +57,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-AcknowledgementType in v3-codesystems.xml
 
 
-   .. attribute:: ApplicationAcknowledgementReject
+   .. py:attribute:: ApplicationAcknowledgementReject
       
 
       Receiving message handling service accepts responsibility for passing message
@@ -65,7 +65,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-AcknowledgementType in v3-codesystems.xml
 
 
-   .. attribute:: AcceptAcknowledgementCommitAccept
+   .. py:attribute:: AcceptAcknowledgementCommitAccept
       
 
       Receiving message handling service cannot accept message for any other reason
@@ -73,7 +73,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-AcknowledgementType in v3-codesystems.xml
 
 
-   .. attribute:: AcceptAcknowledgementCommitError
+   .. py:attribute:: AcceptAcknowledgementCommitError
       
 
       Receiving message handling service rejects message if interaction identifier,
@@ -82,7 +82,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-AcknowledgementType in v3-codesystems.xml
 
 
-   .. attribute:: AcceptAcknowledgementCommitReject
+   .. py:attribute:: AcceptAcknowledgementCommitReject
       
 
       

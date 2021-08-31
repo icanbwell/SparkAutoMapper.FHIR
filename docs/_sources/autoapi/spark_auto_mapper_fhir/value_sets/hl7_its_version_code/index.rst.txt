@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.hl7_its_version_code`
-=============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.hl7_its_version_code`
+================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.hl7_its_version_code
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: Hl7ITSVersionCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: Hl7ITSVersionCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.hl7ITSVersionCode
    From: http://terminology.hl7.org/ValueSet/v3-hl7ITSVersionCode in v3-codesystems.xml
@@ -29,18 +29,18 @@ Classes
    in the instances based upon rules expressed in the ITS, and do not appear in
    the abstract message, either as it is presented to received from the ITS.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-hl7ITSVersionCode
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-hl7ITSVersionCode
 
       
 
 
-.. class:: Hl7ITSVersionCodeValues
+.. py:class:: Hl7ITSVersionCodeValues
 
    XML ITS version 1 pre-release 1.
    From: http://terminology.hl7.org/CodeSystem/v3-hl7ITSVersionCode in v3-codesystems.xml
 
-   .. attribute:: XMLV1PR1
+   .. py:attribute:: XMLV1PR1
       
 
       

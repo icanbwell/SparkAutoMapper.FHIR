@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.document_mode`
-======================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.document_mode`
+=========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.document_mode
 
@@ -17,34 +17,34 @@ Classes
 
 
 
-.. class:: DocumentModeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: DocumentModeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    DocumentMode
    From: http://hl7.org/fhir/document-mode in valuesets.xml
        Whether the application produces or consumes documents.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/document-mode
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/document-mode
 
       
 
 
-.. class:: DocumentModeCodeValues
+.. py:class:: DocumentModeCodeValues
 
    The application produces documents of the specified type.
    From: http://hl7.org/fhir/document-mode in valuesets.xml
 
-   .. attribute:: Producer
+   .. py:attribute:: Producer
       
 
       The application consumes documents of the specified type.
       From: http://hl7.org/fhir/document-mode in valuesets.xml
 
 
-   .. attribute:: Consumer
+   .. py:attribute:: Consumer
       
 
       

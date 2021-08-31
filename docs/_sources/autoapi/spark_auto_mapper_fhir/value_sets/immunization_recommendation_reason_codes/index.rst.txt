@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.immunization_recommendation_reason_codes`
-=================================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.immunization_recommendation_reason_codes`
+====================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.immunization_recommendation_reason_codes
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: ImmunizationRecommendationReasonCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ImmunizationRecommendationReasonCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ImmunizationRecommendationReasonCodes
    From: http://hl7.org/fhir/ValueSet/immunization-recommendation-reason in valuesets.xml
@@ -30,25 +30,14 @@ Classes
    This value set is provided as a suggestive example and includes SNOMED CT
    concepts.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://snomed.info/sct
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://snomed.info/sct
 
       
 
 
-.. class:: ImmunizationRecommendationReasonCodesCodeValues
+.. py:class:: ImmunizationRecommendationReasonCodesCodeValues
 
    From: http://hl7.org/fhir/ValueSet/immunization-recommendation-reason in valuesets.xml
-
-   .. attribute:: _77176002
-      
-
-      From: http://hl7.org/fhir/ValueSet/immunization-recommendation-reason in valuesets.xml
-
-
-   .. attribute:: _77386006
-      
-
-      
 
 

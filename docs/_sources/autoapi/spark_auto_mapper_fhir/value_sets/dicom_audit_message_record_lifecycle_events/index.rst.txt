@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.dicom_audit_message_record_lifecycle_events`
-====================================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.dicom_audit_message_record_lifecycle_events`
+=======================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.dicom_audit_message_record_lifecycle_events
 
@@ -17,111 +17,111 @@ Classes
 
 
 
-.. class:: DICOMAuditMessageRecordLifecycleEventsCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: DICOMAuditMessageRecordLifecycleEventsCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    DICOM Audit Message Record Lifecycle Events
    From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
        Attached is vocabulary for the record lifecycle events, as per DICOM Audit
    Message,
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle
 
       
 
 
-.. class:: DICOMAuditMessageRecordLifecycleEventsCodeValues
+.. py:class:: DICOMAuditMessageRecordLifecycleEventsCodeValues
 
    From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
 
-   .. attribute:: Origination_Creation
+   .. py:attribute:: Origination_Creation
       
 
       From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
 
 
-   .. attribute:: Import_Copy
+   .. py:attribute:: Import_Copy
       
 
       From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
 
 
-   .. attribute:: Amendment
+   .. py:attribute:: Amendment
       
 
       From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
 
 
-   .. attribute:: Verification
+   .. py:attribute:: Verification
       
 
       From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
 
 
-   .. attribute:: Translation
+   .. py:attribute:: Translation
       
 
       From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
 
 
-   .. attribute:: Access_Use
+   .. py:attribute:: Access_Use
       
 
       From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
 
 
-   .. attribute:: De_identification
+   .. py:attribute:: De_identification
       
 
       From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
 
 
-   .. attribute:: Aggregation_Summarization_Derivation
+   .. py:attribute:: Aggregation_Summarization_Derivation
       
 
       From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
 
 
-   .. attribute:: Report
+   .. py:attribute:: Report
       
 
       From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
 
 
-   .. attribute:: Export
+   .. py:attribute:: Export
       
 
       From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
 
 
-   .. attribute:: Disclosure
+   .. py:attribute:: Disclosure
       
 
       From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
 
 
-   .. attribute:: ReceiptOfDisclosure
+   .. py:attribute:: ReceiptOfDisclosure
       
 
       From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
 
 
-   .. attribute:: Archiving
+   .. py:attribute:: Archiving
       
 
       From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
 
 
-   .. attribute:: LogicalDeletion
+   .. py:attribute:: LogicalDeletion
       
 
       From: http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle in valuesets.xml
 
 
-   .. attribute:: PermanentErasure_PhysicalDestruction
+   .. py:attribute:: PermanentErasure_PhysicalDestruction
       
 
       

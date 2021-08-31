@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.action_cardinality_behavior`
-====================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.action_cardinality_behavior`
+=======================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.action_cardinality_behavior
 
@@ -17,35 +17,35 @@ Classes
 
 
 
-.. class:: ActionCardinalityBehaviorCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ActionCardinalityBehaviorCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ActionCardinalityBehavior
    From: http://hl7.org/fhir/action-cardinality-behavior in valuesets.xml
        Defines behavior for an action or a group for how many times that item may be
    repeated.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/action-cardinality-behavior
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/action-cardinality-behavior
 
       
 
 
-.. class:: ActionCardinalityBehaviorCodeValues
+.. py:class:: ActionCardinalityBehaviorCodeValues
 
    The action may only be selected one time.
    From: http://hl7.org/fhir/action-cardinality-behavior in valuesets.xml
 
-   .. attribute:: Single
+   .. py:attribute:: Single
       
 
       The action may be selected multiple times.
       From: http://hl7.org/fhir/action-cardinality-behavior in valuesets.xml
 
 
-   .. attribute:: Multiple
+   .. py:attribute:: Multiple
       
 
       

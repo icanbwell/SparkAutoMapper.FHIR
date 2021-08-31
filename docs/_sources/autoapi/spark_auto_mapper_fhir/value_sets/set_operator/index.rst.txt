@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.set_operator`
-=====================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.set_operator`
+========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.set_operator
 
@@ -17,34 +17,34 @@ Classes
 
 
 
-.. class:: SetOperator(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SetOperator(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.SetOperator
    From: http://terminology.hl7.org/ValueSet/v3-SetOperator in v3-codesystems.xml
        **** MISSING DEFINITIONS ****
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-SetOperator
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-SetOperator
 
       
 
 
-.. class:: SetOperatorValues
+.. py:class:: SetOperatorValues
 
    Operations that can be used to associate concepts in a terminology.
    From: http://terminology.hl7.org/CodeSystem/v3-SetOperator in v3-codesystems.xml
 
-   .. attribute:: ValueSetOperator
+   .. py:attribute:: ValueSetOperator
       
 
       Form the intersection with the value.
       From: http://terminology.hl7.org/CodeSystem/v3-SetOperator in v3-codesystems.xml
 
 
-   .. attribute:: Intersect
+   .. py:attribute:: Intersect
       
 
       Form the convex hull with the value. The convex hull is defined over ordered
@@ -53,7 +53,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-SetOperator in v3-codesystems.xml
 
 
-   .. attribute:: ConvexHull
+   .. py:attribute:: ConvexHull
       
 
       Form the periodic hull with the value. The periodic hull is defined over
@@ -62,7 +62,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-SetOperator in v3-codesystems.xml
 
 
-   .. attribute:: PeriodicHull
+   .. py:attribute:: PeriodicHull
       
 
       

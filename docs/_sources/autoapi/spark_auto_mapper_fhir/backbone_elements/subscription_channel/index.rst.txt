@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.backbone_elements.subscription_channel`
-====================================================================
+:py:mod:`spark_auto_mapper_fhir.backbone_elements.subscription_channel`
+=======================================================================
 
 .. py:module:: spark_auto_mapper_fhir.backbone_elements.subscription_channel
 
@@ -16,12 +16,45 @@ Classes
 
 
 
-.. class:: SubscriptionChannel(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, type_: spark_auto_mapper_fhir.value_sets.subscription_channel_type.SubscriptionChannelTypeCode, endpoint: Optional[spark_auto_mapper_fhir.fhir_types.url.FhirUrl] = None, payload: Optional[spark_auto_mapper_fhir.value_sets.mime_types.MimeTypesCode] = None, header: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.string.FhirString]] = None)
 
+.. py:class:: SubscriptionChannel(*, id_ = None, extension = None, modifierExtension = None, type_, endpoint = None, payload = None, header = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
 
    Subscription.Channel
-   The subscription resource is used to define a push-based subscription from a server to another system. Once a subscription is registered with the server, the server checks every resource that is created or updated, and if the resource matches the given criteria, it sends a message on the defined "channel" so that another system can take an appropriate action.
+       The subscription resource is used to define a push-based subscription from a server to another system. Once a subscription is registered with the server, the server checks every resource that is created or updated, and if the resource matches the given criteria, it sends a message on the defined "channel" so that another system can take an appropriate action.
+
+       The subscription resource is used to define a push-based subscription from a
+   server to another system. Once a subscription is registered with the server,
+   the server checks every resource that is created or updated, and if the
+   resource matches the given criteria, it sends a message on the defined
+   "channel" so that another system can take an appropriate action.
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param modifierExtension: May be used to represent additional information that is not part of the basic
+   definition of the element and that modifies the understanding of the element
+   in which it is contained and/or the understanding of the containing element's
+   descendants. Usually modifier elements provide negation or qualification. To
+   make the use of extensions safe and manageable, there is a strict set of
+   governance applied to the definition and use of extensions. Though any
+   implementer can define an extension, there is a set of requirements that SHALL
+   be met as part of the definition of the extension. Applications processing a
+   resource are required to check for modifier extensions.
+
+   Modifier extensions SHALL NOT change the meaning of any elements on Resource
+   or DomainResource (including cannot change the meaning of modifierExtension
+   itself).
+       :param type_: The type of channel to send notifications on.
+       :param endpoint: The url that describes the actual end-point to send messages to.
+       :param payload: The mime type to send the payload in - either application/fhir+xml, or
+   application/fhir+json. If the payload is not present, then there is no payload
+   in the notification, just a notification. The mime type "text/plain" may also
+   be used for Email and SMS subscriptions.
+       :param header: Additional headers / information to send as part of the notification.
 
 

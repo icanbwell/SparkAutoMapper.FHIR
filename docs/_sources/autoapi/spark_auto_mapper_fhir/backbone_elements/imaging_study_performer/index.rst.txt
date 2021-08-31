@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.backbone_elements.imaging_study_performer`
-=======================================================================
+:py:mod:`spark_auto_mapper_fhir.backbone_elements.imaging_study_performer`
+==========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.backbone_elements.imaging_study_performer
 
@@ -16,12 +16,40 @@ Classes
 
 
 
-.. class:: ImagingStudyPerformer(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, function: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.imaging_study_series_performer_function.ImagingStudySeriesPerformerFunctionCode]] = None, actor: spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole, spark_auto_mapper_fhir.resources.organization.Organization, spark_auto_mapper_fhir.resources.care_team.CareTeam, spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.device.Device, spark_auto_mapper_fhir.resources.related_person.RelatedPerson)]])
 
+.. py:class:: ImagingStudyPerformer(*, id_ = None, extension = None, modifierExtension = None, function = None, actor)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
 
    ImagingStudy.Performer
-   Representation of the content produced in a DICOM imaging study. A study comprises a set of series, each of which includes a set of Service-Object Pair Instances (SOP Instances - images or other data) acquired or produced in a common context.  A series is of only one modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple series of different modalities.
+       Representation of the content produced in a DICOM imaging study. A study comprises a set of series, each of which includes a set of Service-Object Pair Instances (SOP Instances - images or other data) acquired or produced in a common context.  A series is of only one modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple series of different modalities.
+
+       Representation of the content produced in a DICOM imaging study. A study
+   comprises a set of series, each of which includes a set of Service-Object Pair
+   Instances (SOP Instances - images or other data) acquired or produced in a
+   common context.  A series is of only one modality (e.g. X-ray, CT, MR,
+   ultrasound), but a study may have multiple series of different modalities.
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param modifierExtension: May be used to represent additional information that is not part of the basic
+   definition of the element and that modifies the understanding of the element
+   in which it is contained and/or the understanding of the containing element's
+   descendants. Usually modifier elements provide negation or qualification. To
+   make the use of extensions safe and manageable, there is a strict set of
+   governance applied to the definition and use of extensions. Though any
+   implementer can define an extension, there is a set of requirements that SHALL
+   be met as part of the definition of the extension. Applications processing a
+   resource are required to check for modifier extensions.
+
+   Modifier extensions SHALL NOT change the meaning of any elements on Resource
+   or DomainResource (including cannot change the meaning of modifierExtension
+   itself).
+       :param function: Distinguishes the type of involvement of the performer in the series.
+       :param actor: Indicates who or what performed the series.
 
 

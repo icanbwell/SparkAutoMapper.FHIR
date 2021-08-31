@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.act_substance_admin_substitution_code`
-==============================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.act_substance_admin_substitution_code`
+=================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.act_substance_admin_substitution_code
 
@@ -17,29 +17,29 @@ Classes
 
 
 
-.. class:: ActSubstanceAdminSubstitutionCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ActSubstanceAdminSubstitutionCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.ActSubstanceAdminSubstitutionCode
    From: http://terminology.hl7.org/ValueSet/v3-ActSubstanceAdminSubstitutionCode in v3-codesystems.xml
        No Description Provided
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution
 
       
 
 
-.. class:: ActSubstanceAdminSubstitutionCodeValues
+.. py:class:: ActSubstanceAdminSubstitutionCodeValues
 
    Description: Substitution occurred or is permitted with another product that
    may potentially have different ingredients, but having the same biological and
    therapeutic effects.
    From: http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution in v3-codesystems.xml
 
-   .. attribute:: ActSubstanceAdminSubstitutionCode_
+   .. py:attribute:: ActSubstanceAdminSubstitutionCode_
       
 
       

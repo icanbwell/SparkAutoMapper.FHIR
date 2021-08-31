@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.substance_code`
-=======================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.substance_code`
+==========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.substance_code
 
@@ -16,10 +16,10 @@ Classes
 
 
 
-.. class:: SubstanceCodeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SubstanceCodeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SubstanceCode
    From: http://hl7.org/fhir/ValueSet/substance-code in valuesets.xml
@@ -28,8 +28,8 @@ Classes
    (Substance (substance)) and where concept is-a 373873005 (Pharmaceutical /
    biologic product (product))
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://snomed.info/sct
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://snomed.info/sct
 
       
 

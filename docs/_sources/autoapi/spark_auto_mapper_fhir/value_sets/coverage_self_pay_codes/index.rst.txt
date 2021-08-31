@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.coverage_self_pay_codes`
-================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.coverage_self_pay_codes`
+===================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.coverage_self_pay_codes
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: CoverageSelfPayCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: CoverageSelfPayCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    CoverageSelfPayCodes
    From: http://terminology.hl7.org/CodeSystem/coverage-selfpay in valuesets.xml
        This value set includes Coverage SelfPay codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/coverage-selfpay
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/coverage-selfpay
 
       
 
 
-.. class:: CoverageSelfPayCodesCodeValues
+.. py:class:: CoverageSelfPayCodesCodeValues
 
    An individual or organization is paying directly for goods and services.
    From: http://terminology.hl7.org/CodeSystem/coverage-selfpay in valuesets.xml
 
-   .. attribute:: Pay
+   .. py:attribute:: Pay
       
 
       

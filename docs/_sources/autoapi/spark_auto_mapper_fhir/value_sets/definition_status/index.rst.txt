@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.definition_status`
-==========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.definition_status`
+=============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.definition_status
 
@@ -17,42 +17,42 @@ Classes
 
 
 
-.. class:: DefinitionStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: DefinitionStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    DefinitionStatus
    From: http://terminology.hl7.org/CodeSystem/definition-status in valuesets.xml
        Codes identifying the lifecycle stage of a definition.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/definition-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/definition-status
 
       
 
 
-.. class:: DefinitionStatusCodeValues
+.. py:class:: DefinitionStatusCodeValues
 
    The definition is in the design stage and is not yet considered to be "ready
    for use".
    From: http://terminology.hl7.org/CodeSystem/definition-status in valuesets.xml
 
-   .. attribute:: Draft
+   .. py:attribute:: Draft
       
 
       The definition is considered ready for use.
       From: http://terminology.hl7.org/CodeSystem/definition-status in valuesets.xml
 
 
-   .. attribute:: Active
+   .. py:attribute:: Active
       
 
       The definition should no longer be used.
       From: http://terminology.hl7.org/CodeSystem/definition-status in valuesets.xml
 
 
-   .. attribute:: Withdrawn
+   .. py:attribute:: Withdrawn
       
 
       The authoring/source system does not know which of the status values currently
@@ -62,7 +62,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/definition-status in valuesets.xml
 
 
-   .. attribute:: Unknown
+   .. py:attribute:: Unknown
       
 
       

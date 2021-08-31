@@ -4,8 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>resource_container &mdash; Spark Auto Mapper FHIR  documentation</title>
@@ -14,6 +13,8 @@
   
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
 
   
@@ -31,6 +32,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
@@ -84,8 +86,7 @@
               
             
             
-              <p><span class="caption-text">Contents:</span></p>
-<ul>
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">API Reference</a></li>
 </ul>
 
@@ -154,11 +155,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="module-resource_container">
+  <div class="section" id="module-resource_container">
 <span id="resource-container"></span><h1><a class="reference internal" href="#module-resource_container" title="resource_container"><code class="xref py py-mod docutils literal notranslate"><span class="pre">resource_container</span></code></a><a class="headerlink" href="#module-resource_container" title="Permalink to this headline">¶</a></h1>
-<section id="module-contents">
+<div class="section" id="module-contents">
 <h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
-<section id="classes">
+<div class="section" id="classes">
 <h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
 <table class="longtable docutils align-default">
 <colgroup>
@@ -167,24 +168,47 @@
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#resource_container.ResourceContainer" title="resource_container.ResourceContainer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ResourceContainer</span></code></a></p></td>
-<td><p></p></td>
+<td><p>Base class for all Automapper data types</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py class">
-<dt id="resource_container.ResourceContainer">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">resource_container.</span></code><code class="sig-name descname"><span class="pre">ResourceContainer</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id_</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../spark_auto_mapper_fhir/fhir_types/id/index.html#spark_auto_mapper_fhir.fhir_types.id.FhirId" title="spark_auto_mapper_fhir.fhir_types.id.FhirId"><span class="pre">spark_auto_mapper_fhir.fhir_types.id.FhirId</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meta</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../spark_auto_mapper_fhir/complex_types/meta/index.html#spark_auto_mapper_fhir.complex_types.meta.Meta" title="spark_auto_mapper_fhir.complex_types.meta.Meta"><span class="pre">spark_auto_mapper_fhir.complex_types.meta.Meta</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#resource_container.ResourceContainer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="../spark_auto_mapper_fhir/base_types/fhir_resource_base/index.html#spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase" title="spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase</span></code></a></p>
+<dt class="sig sig-object py" id="resource_container.ResourceContainer">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">resource_container.</span></span><span class="sig-name descname"><span class="pre">ResourceContainer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id_</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#resource_container.ResourceContainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../spark_auto_mapper_fhir/base_types/fhir_resource_base/index.html#spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase" title="spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase</span></code></a></p>
+<p>Base class for all Automapper data types</p>
+<p>Resource Resource in FHIR
+IMPORTANT: To comply with the Spark mapping mechanism, please make sure you add all existing FHIR</p>
+<blockquote>
+<div><p>properties not just the ones you need</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> – id of resource</p></li>
+<li><p><strong>id_</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../spark_auto_mapper_fhir/fhir_types/id/index.html#spark_auto_mapper_fhir.fhir_types.id.FhirId" title="spark_auto_mapper_fhir.fhir_types.id.FhirId"><em>spark_auto_mapper_fhir.fhir_types.id.FhirId</em></a><em>]</em>) – </p></li>
+<li><p><strong>meta</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../spark_auto_mapper_fhir/complex_types/meta/index.html#spark_auto_mapper_fhir.complex_types.meta.Meta" title="spark_auto_mapper_fhir.complex_types.meta.Meta"><em>spark_auto_mapper_fhir.complex_types.meta.Meta</em></a><em>]</em>) – </p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
-<dt id="resource_container.ResourceContainer.get_schema">
-<code class="sig-name descname"><span class="pre">get_schema</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_extension</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">pyspark.sql.types.StructType</span><span class="p"><span class="pre">,</span> </span><span class="pre">pyspark.sql.types.DataType</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#resource_container.ResourceContainer.get_schema" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object py" id="resource_container.ResourceContainer.get_schema">
+<span class="sig-name descname"><span class="pre">get_schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_extension</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#resource_container.ResourceContainer.get_schema" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>include_extension</strong> (<em>bool</em>) – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Optional[Union[pyspark.sql.types.StructType, pyspark.sql.types.DataType]]</p>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
            </div>

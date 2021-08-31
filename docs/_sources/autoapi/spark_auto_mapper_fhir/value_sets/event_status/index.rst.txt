@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.event_status`
-=====================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.event_status`
+========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.event_status
 
@@ -17,36 +17,36 @@ Classes
 
 
 
-.. class:: EventStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: EventStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    EventStatus
    From: http://hl7.org/fhir/event-status in valuesets.xml
        Codes identifying the lifecycle stage of an event.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/event-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/event-status
 
       
 
 
-.. class:: EventStatusCodeValues
+.. py:class:: EventStatusCodeValues
 
    The core event has not started yet, but some staging activities have begun
    (e.g. surgical suite preparation).  Preparation stages may be tracked for
    billing purposes.
    From: http://hl7.org/fhir/event-status in valuesets.xml
 
-   .. attribute:: Preparation
+   .. py:attribute:: Preparation
       
 
       The event is currently occurring.
       From: http://hl7.org/fhir/event-status in valuesets.xml
 
 
-   .. attribute:: InProgress
+   .. py:attribute:: InProgress
       
 
       The event was terminated prior to any activity beyond preparation.  I.e. The
@@ -55,7 +55,7 @@ Classes
       From: http://hl7.org/fhir/event-status in valuesets.xml
 
 
-   .. attribute:: NotDone
+   .. py:attribute:: NotDone
       
 
       The event has been temporarily stopped but is expected to resume in the
@@ -63,7 +63,7 @@ Classes
       From: http://hl7.org/fhir/event-status in valuesets.xml
 
 
-   .. attribute:: OnHold
+   .. py:attribute:: OnHold
       
 
       The event was terminated prior to the full completion of the intended activity
@@ -72,14 +72,14 @@ Classes
       From: http://hl7.org/fhir/event-status in valuesets.xml
 
 
-   .. attribute:: Stopped
+   .. py:attribute:: Stopped
       
 
       The event has now concluded.
       From: http://hl7.org/fhir/event-status in valuesets.xml
 
 
-   .. attribute:: Completed
+   .. py:attribute:: Completed
       
 
       This electronic record should never have existed, though it is possible that
@@ -88,7 +88,7 @@ Classes
       From: http://hl7.org/fhir/event-status in valuesets.xml
 
 
-   .. attribute:: EnteredInError
+   .. py:attribute:: EnteredInError
       
 
       The authoring/source system does not know which of the status values currently
@@ -98,7 +98,7 @@ Classes
       From: http://hl7.org/fhir/event-status in valuesets.xml
 
 
-   .. attribute:: Unknown
+   .. py:attribute:: Unknown
       
 
       

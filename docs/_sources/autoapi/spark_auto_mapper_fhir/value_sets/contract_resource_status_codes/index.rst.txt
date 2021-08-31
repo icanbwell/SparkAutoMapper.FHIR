@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.contract_resource_status_codes`
-=======================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.contract_resource_status_codes`
+==========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.contract_resource_status_codes
 
@@ -17,22 +17,22 @@ Classes
 
 
 
-.. class:: ContractResourceStatusCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ContractResourceStatusCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ContractResourceStatusCodes
    From: http://hl7.org/fhir/contract-status in valuesets.xml
        This value set contract specific codes for status.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/contract-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/contract-status
 
       
 
 
-.. class:: ContractResourceStatusCodesCodeValues
+.. py:class:: ContractResourceStatusCodesCodeValues
 
    Contract is augmented with additional information to correct errors in a
    predecessor or to updated values in a predecessor. Usage: Contract altered
@@ -40,7 +40,7 @@ Classes
    codes: revised; replaced.
    From: http://hl7.org/fhir/contract-status in valuesets.xml
 
-   .. attribute:: Amended
+   .. py:attribute:: Amended
       
 
       Contract is augmented with additional information that was missing from a
@@ -49,7 +49,7 @@ Classes
       From: http://hl7.org/fhir/contract-status in valuesets.xml
 
 
-   .. attribute:: Appended
+   .. py:attribute:: Appended
       
 
       Contract is terminated due to failure of the Grantor and/or the Grantee to
@@ -59,7 +59,7 @@ Classes
       From: http://hl7.org/fhir/contract-status in valuesets.xml
 
 
-   .. attribute:: Cancelled
+   .. py:attribute:: Cancelled
       
 
       Contract is pended to rectify failure of the Grantor or the Grantee to fulfil
@@ -69,7 +69,7 @@ Classes
       From: http://hl7.org/fhir/contract-status in valuesets.xml
 
 
-   .. attribute:: Disputed
+   .. py:attribute:: Disputed
       
 
       Contract was created in error. No Precedence Order.  Status may be applied to
@@ -77,7 +77,7 @@ Classes
       From: http://hl7.org/fhir/contract-status in valuesets.xml
 
 
-   .. attribute:: EnteredInError
+   .. py:attribute:: EnteredInError
       
 
       Contract execution pending; may be executed when either the Grantor or the
@@ -91,7 +91,7 @@ Classes
       From: http://hl7.org/fhir/contract-status in valuesets.xml
 
 
-   .. attribute:: Executable
+   .. py:attribute:: Executable
       
 
       Contract is activated for period stipulated when both the Grantor and Grantee
@@ -101,7 +101,7 @@ Classes
       From: http://hl7.org/fhir/contract-status in valuesets.xml
 
 
-   .. attribute:: Executed
+   .. py:attribute:: Executed
       
 
       Contract execution is suspended while either or both the Grantor and Grantee
@@ -116,7 +116,7 @@ Classes
       From: http://hl7.org/fhir/contract-status in valuesets.xml
 
 
-   .. attribute:: Negotiable
+   .. py:attribute:: Negotiable
       
 
       Contract is a proposal by either the Grantor or the Grantee. Aka - A Contract
@@ -128,7 +128,7 @@ Classes
       From: http://hl7.org/fhir/contract-status in valuesets.xml
 
 
-   .. attribute:: Offered
+   .. py:attribute:: Offered
       
 
       Contract template is available as the basis for an application or offer by the
@@ -139,10 +139,10 @@ Classes
       From: http://hl7.org/fhir/contract-status in valuesets.xml
 
 
-   .. attribute:: Policy
+   .. py:attribute:: Policy
       
 
-      Execution of the Contract is not completed because either or both the Grantor
+       Execution of the Contract is not completed because either or both the Grantor
       and Grantee decline to accept some or all of the contract provisions. Usage:
       Optional contract activity between executable and abnormal termination.
       Precedence Order = 5. Comparable FHIR and v.3 status codes:  stopped;
@@ -150,7 +150,7 @@ Classes
       From: http://hl7.org/fhir/contract-status in valuesets.xml
 
 
-   .. attribute:: Rejected
+   .. py:attribute:: Rejected
       
 
       Beginning of a successor Contract at the termination of predecessor Contract
@@ -160,7 +160,7 @@ Classes
       From: http://hl7.org/fhir/contract-status in valuesets.xml
 
 
-   .. attribute:: Renewed
+   .. py:attribute:: Renewed
       
 
       A Contract that is rescinded.  May be required prior to replacing with an
@@ -168,7 +168,7 @@ Classes
       From: http://hl7.org/fhir/contract-status in valuesets.xml
 
 
-   .. attribute:: Revoked
+   .. py:attribute:: Revoked
       
 
       Contract is reactivated after being pended because of faulty execution. *E.g.,
@@ -180,7 +180,7 @@ Classes
       From: http://hl7.org/fhir/contract-status in valuesets.xml
 
 
-   .. attribute:: Resolved
+   .. py:attribute:: Resolved
       
 
       Contract reaches its expiry date. It might or might not be renewed or
@@ -189,7 +189,7 @@ Classes
       From: http://hl7.org/fhir/contract-status in valuesets.xml
 
 
-   .. attribute:: Terminated
+   .. py:attribute:: Terminated
       
 
       

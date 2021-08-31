@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.medicationrequest_status`
-=================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.medicationrequest_status`
+====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.medicationrequest_status
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: MedicationrequestStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: MedicationrequestStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    medicationrequest Status
    From: http://hl7.org/fhir/CodeSystem/medicationrequest-status in valuesets.xml
        MedicationRequest Status Codes
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/CodeSystem/medicationrequest-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/CodeSystem/medicationrequest-status
 
       
 
 
-.. class:: MedicationrequestStatusCodeValues
+.. py:class:: MedicationrequestStatusCodeValues
 
    The prescription is 'actionable', but not all actions that are implied by it
    have occurred yet.
    From: http://hl7.org/fhir/CodeSystem/medicationrequest-status in valuesets.xml
 
-   .. attribute:: Active
+   .. py:attribute:: Active
       
 
       Actions implied by the prescription are to be temporarily halted, but are
@@ -46,21 +46,21 @@ Classes
       From: http://hl7.org/fhir/CodeSystem/medicationrequest-status in valuesets.xml
 
 
-   .. attribute:: OnHold
+   .. py:attribute:: OnHold
       
 
       The prescription has been withdrawn before any administrations have occurred
       From: http://hl7.org/fhir/CodeSystem/medicationrequest-status in valuesets.xml
 
 
-   .. attribute:: Cancelled
+   .. py:attribute:: Cancelled
       
 
       All actions that are implied by the prescription have occurred.
       From: http://hl7.org/fhir/CodeSystem/medicationrequest-status in valuesets.xml
 
 
-   .. attribute:: Completed
+   .. py:attribute:: Completed
       
 
       Some of the actions that are implied by the medication request may have
@@ -70,7 +70,7 @@ Classes
       From: http://hl7.org/fhir/CodeSystem/medicationrequest-status in valuesets.xml
 
 
-   .. attribute:: EnteredInError
+   .. py:attribute:: EnteredInError
       
 
       Actions implied by the prescription are to be permanently halted, before all
@@ -79,7 +79,7 @@ Classes
       From: http://hl7.org/fhir/CodeSystem/medicationrequest-status in valuesets.xml
 
 
-   .. attribute:: Stopped
+   .. py:attribute:: Stopped
       
 
       The prescription is not yet 'actionable', e.g. it is a work in progress,
@@ -88,7 +88,7 @@ Classes
       From: http://hl7.org/fhir/CodeSystem/medicationrequest-status in valuesets.xml
 
 
-   .. attribute:: Draft
+   .. py:attribute:: Draft
       
 
       The authoring/source system does not know which of the status values currently
@@ -98,7 +98,7 @@ Classes
       From: http://hl7.org/fhir/CodeSystem/medicationrequest-status in valuesets.xml
 
 
-   .. attribute:: Unknown
+   .. py:attribute:: Unknown
       
 
       

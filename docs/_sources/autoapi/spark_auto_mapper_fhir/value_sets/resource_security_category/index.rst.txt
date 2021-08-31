@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.resource_security_category`
-===================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.resource_security_category`
+======================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.resource_security_category
 
@@ -17,23 +17,23 @@ Classes
 
 
 
-.. class:: ResourceSecurityCategoryCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ResourceSecurityCategoryCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ResourceSecurityCategory
    From: http://terminology.hl7.org/CodeSystem/resource-security-category in valuesets.xml
        Provides general guidance around the kind of access Control to Read, Search,
    Create, Update, or Delete a resource.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/resource-security-category
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/resource-security-category
 
       
 
 
-.. class:: ResourceSecurityCategoryCodeValues
+.. py:class:: ResourceSecurityCategoryCodeValues
 
    These resources tend to not contain any individual data, or business sensitive
    data. Most often these Resources will be available for anonymous access,
@@ -45,7 +45,7 @@ Classes
    in transit. This is normal web-server use of https.
    From: http://terminology.hl7.org/CodeSystem/resource-security-category in valuesets.xml
 
-   .. attribute:: AnonymousREADAccessResource
+   .. py:attribute:: AnonymousREADAccessResource
       
 
       These Resources tend to not contain any individual data, but do have data that
@@ -62,7 +62,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/resource-security-category in valuesets.xml
 
 
-   .. attribute:: BusinessSensitiveResource
+   .. py:attribute:: BusinessSensitiveResource
       
 
       These Resources do NOT contain Patient data, but do contain individual
@@ -76,7 +76,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/resource-security-category in valuesets.xml
 
 
-   .. attribute:: IndividualSensitiveResource
+   .. py:attribute:: IndividualSensitiveResource
       
 
       These Resources make up the bulk of FHIR and therefore are the most commonly
@@ -89,7 +89,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/resource-security-category in valuesets.xml
 
 
-   .. attribute:: PatientSensitive
+   .. py:attribute:: PatientSensitive
       
 
       Some Resources can be used for a wide scope of use-cases that span very
@@ -101,7 +101,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/resource-security-category in valuesets.xml
 
 
-   .. attribute:: NotClassified
+   .. py:attribute:: NotClassified
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.test_report_participant_type`
-=====================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.test_report_participant_type`
+========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.test_report_participant_type
 
@@ -17,41 +17,41 @@ Classes
 
 
 
-.. class:: TestReportParticipantTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: TestReportParticipantTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    TestReportParticipantType
    From: http://hl7.org/fhir/report-participant-type in valuesets.xml
        The type of participant.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/report-participant-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/report-participant-type
 
       
 
 
-.. class:: TestReportParticipantTypeCodeValues
+.. py:class:: TestReportParticipantTypeCodeValues
 
    The test execution engine.
    From: http://hl7.org/fhir/report-participant-type in valuesets.xml
 
-   .. attribute:: TestEngine
+   .. py:attribute:: TestEngine
       
 
       A FHIR Client.
       From: http://hl7.org/fhir/report-participant-type in valuesets.xml
 
 
-   .. attribute:: Client
+   .. py:attribute:: Client
       
 
       A FHIR Server.
       From: http://hl7.org/fhir/report-participant-type in valuesets.xml
 
 
-   .. attribute:: Server
+   .. py:attribute:: Server
       
 
       

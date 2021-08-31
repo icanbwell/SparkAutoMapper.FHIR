@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.assertion_response_types`
-=================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.assertion_response_types`
+====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.assertion_response_types
 
@@ -17,104 +17,104 @@ Classes
 
 
 
-.. class:: AssertionResponseTypesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: AssertionResponseTypesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    AssertionResponseTypes
    From: http://hl7.org/fhir/assert-response-code-types in valuesets.xml
        The type of response code to use for assertion.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/assert-response-code-types
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/assert-response-code-types
 
       
 
 
-.. class:: AssertionResponseTypesCodeValues
+.. py:class:: AssertionResponseTypesCodeValues
 
    Response code is 200.
    From: http://hl7.org/fhir/assert-response-code-types in valuesets.xml
 
-   .. attribute:: Okay
+   .. py:attribute:: Okay
       
 
       Response code is 201.
       From: http://hl7.org/fhir/assert-response-code-types in valuesets.xml
 
 
-   .. attribute:: Created
+   .. py:attribute:: Created
       
 
       Response code is 204.
       From: http://hl7.org/fhir/assert-response-code-types in valuesets.xml
 
 
-   .. attribute:: NoContent
+   .. py:attribute:: NoContent
       
 
       Response code is 304.
       From: http://hl7.org/fhir/assert-response-code-types in valuesets.xml
 
 
-   .. attribute:: NotModified
+   .. py:attribute:: NotModified
       
 
       Response code is 400.
       From: http://hl7.org/fhir/assert-response-code-types in valuesets.xml
 
 
-   .. attribute:: Bad
+   .. py:attribute:: Bad
       
 
       Response code is 403.
       From: http://hl7.org/fhir/assert-response-code-types in valuesets.xml
 
 
-   .. attribute:: Forbidden
+   .. py:attribute:: Forbidden
       
 
       Response code is 404.
       From: http://hl7.org/fhir/assert-response-code-types in valuesets.xml
 
 
-   .. attribute:: NotFound
+   .. py:attribute:: NotFound
       
 
       Response code is 405.
       From: http://hl7.org/fhir/assert-response-code-types in valuesets.xml
 
 
-   .. attribute:: MethodNotAllowed
+   .. py:attribute:: MethodNotAllowed
       
 
       Response code is 409.
       From: http://hl7.org/fhir/assert-response-code-types in valuesets.xml
 
 
-   .. attribute:: Conflict
+   .. py:attribute:: Conflict
       
 
       Response code is 410.
       From: http://hl7.org/fhir/assert-response-code-types in valuesets.xml
 
 
-   .. attribute:: Gone
+   .. py:attribute:: Gone
       
 
       Response code is 412.
       From: http://hl7.org/fhir/assert-response-code-types in valuesets.xml
 
 
-   .. attribute:: PreconditionFailed
+   .. py:attribute:: PreconditionFailed
       
 
       Response code is 422.
       From: http://hl7.org/fhir/assert-response-code-types in valuesets.xml
 
 
-   .. attribute:: Unprocessable
+   .. py:attribute:: Unprocessable
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.capability_statement_kind`
-==================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.capability_statement_kind`
+=====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.capability_statement_kind
 
@@ -17,29 +17,29 @@ Classes
 
 
 
-.. class:: CapabilityStatementKindCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: CapabilityStatementKindCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    CapabilityStatementKind
    From: http://hl7.org/fhir/capability-statement-kind in valuesets.xml
        How a capability statement is intended to be used.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/capability-statement-kind
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/capability-statement-kind
 
       
 
 
-.. class:: CapabilityStatementKindCodeValues
+.. py:class:: CapabilityStatementKindCodeValues
 
    The CapabilityStatement instance represents the present capabilities of a
    specific system instance.  This is the kind returned by /metadata for a FHIR
    server end-point.
    From: http://hl7.org/fhir/capability-statement-kind in valuesets.xml
 
-   .. attribute:: Instance
+   .. py:attribute:: Instance
       
 
       The CapabilityStatement instance represents the capabilities of a system or
@@ -47,7 +47,7 @@ Classes
       From: http://hl7.org/fhir/capability-statement-kind in valuesets.xml
 
 
-   .. attribute:: Capability
+   .. py:attribute:: Capability
       
 
       The CapabilityStatement instance represents a set of requirements for other
@@ -56,7 +56,7 @@ Classes
       From: http://hl7.org/fhir/capability-statement-kind in valuesets.xml
 
 
-   .. attribute:: Requirements
+   .. py:attribute:: Requirements
       
 
       

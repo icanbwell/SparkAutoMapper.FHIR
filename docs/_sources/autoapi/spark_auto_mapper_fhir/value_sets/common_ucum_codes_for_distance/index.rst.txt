@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.common_ucum_codes_for_distance`
-=======================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.common_ucum_codes_for_distance`
+==========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.common_ucum_codes_for_distance
 
@@ -17,51 +17,51 @@ Classes
 
 
 
-.. class:: CommonUCUMCodesForDistanceCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: CommonUCUMCodesForDistanceCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    CommonUCUMCodesForDistance
    From: http://hl7.org/fhir/ValueSet/distance-units in valuesets.xml
        Unified Code for Units of Measure (UCUM). This value set includes common UCUM
    codes for units of distance
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://unitsofmeasure.org
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://unitsofmeasure.org
 
       
 
 
-.. class:: CommonUCUMCodesForDistanceCodeValues
+.. py:class:: CommonUCUMCodesForDistanceCodeValues
 
    From: http://hl7.org/fhir/ValueSet/distance-units in valuesets.xml
 
-   .. attribute:: Nanometers
+   .. py:attribute:: Nanometers
       
 
       From: http://hl7.org/fhir/ValueSet/distance-units in valuesets.xml
 
 
-   .. attribute:: Micrometers
+   .. py:attribute:: Micrometers
       
 
       From: http://hl7.org/fhir/ValueSet/distance-units in valuesets.xml
 
 
-   .. attribute:: Millimeters
+   .. py:attribute:: Millimeters
       
 
       From: http://hl7.org/fhir/ValueSet/distance-units in valuesets.xml
 
 
-   .. attribute:: Meters
+   .. py:attribute:: Meters
       
 
       From: http://hl7.org/fhir/ValueSet/distance-units in valuesets.xml
 
 
-   .. attribute:: Kilometers
+   .. py:attribute:: Kilometers
       
 
       

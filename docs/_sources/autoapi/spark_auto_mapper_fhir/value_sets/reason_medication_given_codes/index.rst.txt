@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.reason_medication_given_codes`
-======================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.reason_medication_given_codes`
+=========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.reason_medication_given_codes
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: ReasonMedicationGivenCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ReasonMedicationGivenCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ReasonMedicationGivenCodes
    From: http://terminology.hl7.org/CodeSystem/reason-medication-given in valuesets.xml
@@ -28,32 +28,32 @@ Classes
    attribute should be drawn from a robust terminology code system that consists
    of or contains concepts to support the medication process.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/reason-medication-given
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/reason-medication-given
 
       
 
 
-.. class:: ReasonMedicationGivenCodesCodeValues
+.. py:class:: ReasonMedicationGivenCodesCodeValues
 
    No reason known.
    From: http://terminology.hl7.org/CodeSystem/reason-medication-given in valuesets.xml
 
-   .. attribute:: None_
+   .. py:attribute:: None_
       
 
       The administration was following an ordered protocol.
       From: http://terminology.hl7.org/CodeSystem/reason-medication-given in valuesets.xml
 
 
-   .. attribute:: GivenAsOrdered
+   .. py:attribute:: GivenAsOrdered
       
 
       The administration was needed to treat an emergency.
       From: http://terminology.hl7.org/CodeSystem/reason-medication-given in valuesets.xml
 
 
-   .. attribute:: Emergency
+   .. py:attribute:: Emergency
       
 
       

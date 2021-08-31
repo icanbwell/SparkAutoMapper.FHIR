@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.financial_resource_status_codes`
-========================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.financial_resource_status_codes`
+===========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.financial_resource_status_codes
 
@@ -17,48 +17,48 @@ Classes
 
 
 
-.. class:: FinancialResourceStatusCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: FinancialResourceStatusCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    FinancialResourceStatusCodes
    From: http://hl7.org/fhir/fm-status in valuesets.xml
        This value set includes Status codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/fm-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/fm-status
 
       
 
 
-.. class:: FinancialResourceStatusCodesCodeValues
+.. py:class:: FinancialResourceStatusCodesCodeValues
 
    The instance is currently in-force.
    From: http://hl7.org/fhir/fm-status in valuesets.xml
 
-   .. attribute:: Active
+   .. py:attribute:: Active
       
 
       The instance is withdrawn, rescinded or reversed.
       From: http://hl7.org/fhir/fm-status in valuesets.xml
 
 
-   .. attribute:: Cancelled
+   .. py:attribute:: Cancelled
       
 
       A new instance the contents of which is not complete.
       From: http://hl7.org/fhir/fm-status in valuesets.xml
 
 
-   .. attribute:: Draft
+   .. py:attribute:: Draft
       
 
       The instance was entered in error.
       From: http://hl7.org/fhir/fm-status in valuesets.xml
 
 
-   .. attribute:: EnteredInError
+   .. py:attribute:: EnteredInError
       
 
       

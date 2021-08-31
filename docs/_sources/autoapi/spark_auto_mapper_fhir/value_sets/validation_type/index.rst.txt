@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.validation_type`
-========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.validation_type`
+===========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.validation_type
 
@@ -17,38 +17,38 @@ Classes
 
 
 
-.. class:: Validation_typeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: Validation_typeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    validation-type
    From: http://terminology.hl7.org/CodeSystem/validation-type in valuesets.xml
        What the target is validated against
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/validation-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/validation-type
 
       
 
 
-.. class:: Validation_typeCodeValues
+.. py:class:: Validation_typeCodeValues
 
    From: http://terminology.hl7.org/CodeSystem/validation-type in valuesets.xml
 
-   .. attribute:: Nothing
+   .. py:attribute:: Nothing
       
 
       From: http://terminology.hl7.org/CodeSystem/validation-type in valuesets.xml
 
 
-   .. attribute:: PrimarySource
+   .. py:attribute:: PrimarySource
       
 
       From: http://terminology.hl7.org/CodeSystem/validation-type in valuesets.xml
 
 
-   .. attribute:: MultipleSources
+   .. py:attribute:: MultipleSources
       
 
       

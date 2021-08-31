@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.communication_topic`
-============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.communication_topic`
+===============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.communication_topic
 
@@ -17,62 +17,62 @@ Classes
 
 
 
-.. class:: CommunicationTopicCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: CommunicationTopicCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    CommunicationTopic
    From: http://terminology.hl7.org/CodeSystem/communication-topic in valuesets.xml
        Codes describing the purpose or content of the communication.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/communication-topic
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/communication-topic
 
       
 
 
-.. class:: CommunicationTopicCodeValues
+.. py:class:: CommunicationTopicCodeValues
 
    The purpose or content of the communication is a prescription refill request.
    From: http://terminology.hl7.org/CodeSystem/communication-topic in valuesets.xml
 
-   .. attribute:: PrescriptionRefillRequest
+   .. py:attribute:: PrescriptionRefillRequest
       
 
       The purpose or content of the communication is a progress update.
       From: http://terminology.hl7.org/CodeSystem/communication-topic in valuesets.xml
 
 
-   .. attribute:: ProgressUpdate
+   .. py:attribute:: ProgressUpdate
       
 
       The purpose or content of the communication is to report labs.
       From: http://terminology.hl7.org/CodeSystem/communication-topic in valuesets.xml
 
 
-   .. attribute:: ReportLabs
+   .. py:attribute:: ReportLabs
       
 
       The purpose or content of the communication is an appointment reminder.
       From: http://terminology.hl7.org/CodeSystem/communication-topic in valuesets.xml
 
 
-   .. attribute:: AppointmentReminder
+   .. py:attribute:: AppointmentReminder
       
 
       The purpose or content of the communication is a phone consult.
       From: http://terminology.hl7.org/CodeSystem/communication-topic in valuesets.xml
 
 
-   .. attribute:: PhoneConsult
+   .. py:attribute:: PhoneConsult
       
 
       The purpose or content of the communication is a summary report.
       From: http://terminology.hl7.org/CodeSystem/communication-topic in valuesets.xml
 
 
-   .. attribute:: SummaryReport
+   .. py:attribute:: SummaryReport
       
 
       

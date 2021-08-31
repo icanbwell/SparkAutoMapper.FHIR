@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.alternative_code_kind`
-==============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.alternative_code_kind`
+=================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.alternative_code_kind
 
@@ -17,35 +17,35 @@ Classes
 
 
 
-.. class:: AlternativeCodeKindCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: AlternativeCodeKindCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    AlternativeCodeKind
    From: http://terminology.hl7.org/CodeSystem/composition-altcode-kind in valuesets.xml
        Indicates the type of use for which the code is defined.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/composition-altcode-kind
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/composition-altcode-kind
 
       
 
 
-.. class:: AlternativeCodeKindCodeValues
+.. py:class:: AlternativeCodeKindCodeValues
 
    The code is an alternative code that can be used in any of the circumstances
    that the primary code can be used.
    From: http://terminology.hl7.org/CodeSystem/composition-altcode-kind in valuesets.xml
 
-   .. attribute:: AlternateCode
+   .. py:attribute:: AlternateCode
       
 
       The code should no longer be used, but was used in the past.
       From: http://terminology.hl7.org/CodeSystem/composition-altcode-kind in valuesets.xml
 
 
-   .. attribute:: Deprecated
+   .. py:attribute:: Deprecated
       
 
       The code is an alternative to be used when a case insensitive code is required
@@ -53,7 +53,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/composition-altcode-kind in valuesets.xml
 
 
-   .. attribute:: CaseInsensitive
+   .. py:attribute:: CaseInsensitive
       
 
       The code is an alternative to be used when a case sensitive code is required
@@ -61,7 +61,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/composition-altcode-kind in valuesets.xml
 
 
-   .. attribute:: CaseSensitive
+   .. py:attribute:: CaseSensitive
       
 
       The code is an alternative for the primary code that is built using the
@@ -69,7 +69,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/composition-altcode-kind in valuesets.xml
 
 
-   .. attribute:: Expression
+   .. py:attribute:: Expression
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.adverse_event_causality_assessment`
-===========================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.adverse_event_causality_assessment`
+==============================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.adverse_event_causality_assessment
 
@@ -17,22 +17,22 @@ Classes
 
 
 
-.. class:: AdverseEventCausalityAssessmentCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: AdverseEventCausalityAssessmentCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    AdverseEventCausalityAssessment
    From: http://terminology.hl7.org/CodeSystem/adverse-event-causality-assess in valuesets.xml
        Codes for the assessment of whether the entity caused the event.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/adverse-event-causality-assess
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/adverse-event-causality-assess
 
       
 
 
-.. class:: AdverseEventCausalityAssessmentCodeValues
+.. py:class:: AdverseEventCausalityAssessmentCodeValues
 
    i) Event or laboratory test abnormality, with plausible time relationship to
    drug intake; ii) Cannot be explained by disease or other drugs; iii) Response
@@ -42,7 +42,7 @@ Classes
    Re-challenge satisfactory, if necessary.
    From: http://terminology.hl7.org/CodeSystem/adverse-event-causality-assess in valuesets.xml
 
-   .. attribute:: Certain
+   .. py:attribute:: Certain
       
 
       i) Event or laboratory test abnormality, with reasonable time relationship to
@@ -52,7 +52,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/adverse-event-causality-assess in valuesets.xml
 
 
-   .. attribute:: Probably_Likely
+   .. py:attribute:: Probably_Likely
       
 
       i) Event or laboratory test abnormality, with reasonable time relationship to
@@ -61,7 +61,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/adverse-event-causality-assess in valuesets.xml
 
 
-   .. attribute:: Possible
+   .. py:attribute:: Possible
       
 
       i) Event or laboratory test abnormality, with a time to drug intake that makes
@@ -70,7 +70,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/adverse-event-causality-assess in valuesets.xml
 
 
-   .. attribute:: Unlikely
+   .. py:attribute:: Unlikely
       
 
       i) Event or laboratory test abnormality; ii) More data for proper assessment
@@ -78,7 +78,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/adverse-event-causality-assess in valuesets.xml
 
 
-   .. attribute:: Conditional_Classified
+   .. py:attribute:: Conditional_Classified
       
 
       i) Report suggesting an adverse reaction; ii) Cannot be judged because
@@ -87,7 +87,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/adverse-event-causality-assess in valuesets.xml
 
 
-   .. attribute:: Unassessable_Unclassifiable
+   .. py:attribute:: Unassessable_Unclassifiable
       
 
       

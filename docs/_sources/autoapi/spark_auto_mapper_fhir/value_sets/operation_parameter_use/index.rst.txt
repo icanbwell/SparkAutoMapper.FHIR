@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.operation_parameter_use`
-================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.operation_parameter_use`
+===================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.operation_parameter_use
 
@@ -17,34 +17,34 @@ Classes
 
 
 
-.. class:: OperationParameterUseCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: OperationParameterUseCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    OperationParameterUse
    From: http://hl7.org/fhir/operation-parameter-use in valuesets.xml
        Whether an operation parameter is an input or an output parameter.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/operation-parameter-use
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/operation-parameter-use
 
       
 
 
-.. class:: OperationParameterUseCodeValues
+.. py:class:: OperationParameterUseCodeValues
 
    This is an input parameter.
    From: http://hl7.org/fhir/operation-parameter-use in valuesets.xml
 
-   .. attribute:: In
+   .. py:attribute:: In
       
 
       This is an output parameter.
       From: http://hl7.org/fhir/operation-parameter-use in valuesets.xml
 
 
-   .. attribute:: Out
+   .. py:attribute:: Out
       
 
       

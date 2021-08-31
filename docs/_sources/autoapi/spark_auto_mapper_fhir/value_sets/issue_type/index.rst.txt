@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.issue_type`
-===================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.issue_type`
+======================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.issue_type
 
@@ -17,34 +17,34 @@ Classes
 
 
 
-.. class:: IssueTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: IssueTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    IssueType
    From: http://hl7.org/fhir/issue-type in valuesets.xml
        A code that describes the type of issue.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/issue-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/issue-type
 
       
 
 
-.. class:: IssueTypeCodeValues
+.. py:class:: IssueTypeCodeValues
 
    Content invalid against the specification or a profile.
    From: http://hl7.org/fhir/issue-type in valuesets.xml
 
-   .. attribute:: InvalidContent
+   .. py:attribute:: InvalidContent
       
 
       An authentication/authorization/permissions issue of some kind.
       From: http://hl7.org/fhir/issue-type in valuesets.xml
 
 
-   .. attribute:: SecurityProblem
+   .. py:attribute:: SecurityProblem
       
 
       Processing issues. These are expected to be final e.g. there is no point
@@ -52,7 +52,7 @@ Classes
       From: http://hl7.org/fhir/issue-type in valuesets.xml
 
 
-   .. attribute:: ProcessingFailure
+   .. py:attribute:: ProcessingFailure
       
 
       Transient processing issues. The system receiving the message may be able to
@@ -60,7 +60,7 @@ Classes
       From: http://hl7.org/fhir/issue-type in valuesets.xml
 
 
-   .. attribute:: TransientIssue
+   .. py:attribute:: TransientIssue
       
 
       A message unrelated to the processing success of the completed operation
@@ -69,7 +69,7 @@ Classes
       From: http://hl7.org/fhir/issue-type in valuesets.xml
 
 
-   .. attribute:: InformationalNote
+   .. py:attribute:: InformationalNote
       
 
       

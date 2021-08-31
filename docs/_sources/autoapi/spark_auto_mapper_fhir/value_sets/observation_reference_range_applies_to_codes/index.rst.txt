@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.observation_reference_range_applies_to_codes`
-=====================================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.observation_reference_range_applies_to_codes`
+========================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.observation_reference_range_applies_to_codes
 
@@ -17,62 +17,62 @@ Classes
 
 
 
-.. class:: ObservationReferenceRangeAppliesToCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ObservationReferenceRangeAppliesToCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ObservationReferenceRangeAppliesToCodes
    From: http://hl7.org/fhir/ValueSet/referencerange-appliesto in valuesets.xml
        This value set defines a set of codes that can be used to indicate the
    particular target population the reference range applies to.
 
-   .. attribute:: codeset_sct
-      :annotation: :FhirUri = http://snomed.info/sct
+   .. py:attribute:: codeset_sct
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://snomed.info/sct
 
       http://terminology.hl7.org/CodeSystem/v3-Race
 
 
-   .. attribute:: codeset_v3_Race
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-Race
+   .. py:attribute:: codeset_v3_Race
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-Race
 
       
 
 
-.. class:: ObservationReferenceRangeAppliesToCodesCodeValues
+.. py:class:: ObservationReferenceRangeAppliesToCodesCodeValues
 
    American Indian or Alaska Native
    From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
 
-   .. attribute:: AmericanIndianOrAlaskaNative
+   .. py:attribute:: AmericanIndianOrAlaskaNative
       
 
       Asian
       From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
 
 
-   .. attribute:: Asian
+   .. py:attribute:: Asian
       
 
       Black or African American
       From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
 
 
-   .. attribute:: BlackOrAfricanAmerican
+   .. py:attribute:: BlackOrAfricanAmerican
       
 
       Native Hawaiian or Other Pacific Islander
       From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
 
 
-   .. attribute:: NativeHawaiianOrOtherPacificIslander
+   .. py:attribute:: NativeHawaiianOrOtherPacificIslander
       
 
       White
       From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
 
 
-   .. attribute:: White
+   .. py:attribute:: White
       
 
       Note that this term remains in the table for completeness, even though within
@@ -80,27 +80,10 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
 
 
-   .. attribute:: OtherRace
+   .. py:attribute:: OtherRace
       
 
       From: http://hl7.org/fhir/ValueSet/referencerange-appliesto in valuesets.xml
 
-
-   .. attribute:: _248153007
-      
-
-      From: http://hl7.org/fhir/ValueSet/referencerange-appliesto in valuesets.xml
-
-
-   .. attribute:: _248152002
-      
-
-      From: http://hl7.org/fhir/ValueSet/referencerange-appliesto in valuesets.xml
-
-
-   .. attribute:: _77386006
-      
-
-      
 
 

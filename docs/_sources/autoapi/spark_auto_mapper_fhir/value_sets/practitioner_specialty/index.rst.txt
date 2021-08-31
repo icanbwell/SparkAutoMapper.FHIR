@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.practitioner_specialty`
-===============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.practitioner_specialty`
+==================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.practitioner_specialty
 
@@ -17,51 +17,51 @@ Classes
 
 
 
-.. class:: PractitionerSpecialtyCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: PractitionerSpecialtyCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    PractitionerSpecialty
    From: http://hl7.org/fhir/practitioner-specialty in valuesets.xml
        This example value set defines a set of codes that can be used to indicate the
    specialty of a Practitioner.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/practitioner-specialty
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/practitioner-specialty
 
       
 
 
-.. class:: PractitionerSpecialtyCodeValues
+.. py:class:: PractitionerSpecialtyCodeValues
 
    From: http://hl7.org/fhir/practitioner-specialty in valuesets.xml
 
-   .. attribute:: Cardiologist
+   .. py:attribute:: Cardiologist
       
 
       From: http://hl7.org/fhir/practitioner-specialty in valuesets.xml
 
 
-   .. attribute:: Dentist
+   .. py:attribute:: Dentist
       
 
       From: http://hl7.org/fhir/practitioner-specialty in valuesets.xml
 
 
-   .. attribute:: DietaryConsultant
+   .. py:attribute:: DietaryConsultant
       
 
       From: http://hl7.org/fhir/practitioner-specialty in valuesets.xml
 
 
-   .. attribute:: Midwife
+   .. py:attribute:: Midwife
       
 
       From: http://hl7.org/fhir/practitioner-specialty in valuesets.xml
 
 
-   .. attribute:: SystemsArchitect
+   .. py:attribute:: SystemsArchitect
       
 
       

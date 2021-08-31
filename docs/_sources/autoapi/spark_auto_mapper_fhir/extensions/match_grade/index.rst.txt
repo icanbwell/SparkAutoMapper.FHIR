@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.extensions.match_grade`
-====================================================
+:py:mod:`spark_auto_mapper_fhir.extensions.match_grade`
+=======================================================
 
 .. py:module:: spark_auto_mapper_fhir.extensions.match_grade
 
@@ -16,14 +16,19 @@ Classes
 
 
 
-.. class:: MatchGrade(match_grade: spark_auto_mapper_fhir.value_sets.match_grade.MatchGradeCode)
 
+.. py:class:: MatchGrade(match_grade)
 
-   Bases: :class:`spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase`
 
    DO NOT USE DIRECTLY!  ALWAYS USE A SUB_CLASS.
 
-   .. method:: codeset(cls) -> spark_auto_mapper_fhir.fhir_types.uri.FhirUri
+
+   MatchGrade Extension type in FHIR
+
+   :param match_grade: Assessment of resource match outcome - how likely this resource is to be a match.
+
+   .. py:method:: codeset(cls)
 
 
 

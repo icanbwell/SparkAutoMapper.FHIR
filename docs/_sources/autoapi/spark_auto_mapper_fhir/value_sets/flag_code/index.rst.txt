@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.flag_code`
-==================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.flag_code`
+=====================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.flag_code
 
@@ -16,18 +16,18 @@ Classes
 
 
 
-.. class:: FlagCodeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: FlagCodeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    FlagCode
    From: http://hl7.org/fhir/ValueSet/flag-code in valuesets.xml
        Example list of detail codes for flagged issues.  (Not complete or necessarily
    appropriate.)
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://snomed.info/sct
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://snomed.info/sct
 
       
 

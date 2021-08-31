@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.backbone_elements.bundle_response`
-===============================================================
+:py:mod:`spark_auto_mapper_fhir.backbone_elements.bundle_response`
+==================================================================
 
 .. py:module:: spark_auto_mapper_fhir.backbone_elements.bundle_response
 
@@ -16,12 +16,45 @@ Classes
 
 
 
-.. class:: BundleResponse(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, status: spark_auto_mapper_fhir.fhir_types.string.FhirString, location: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, etag: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, lastModified: Optional[spark_auto_mapper_fhir.fhir_types.instant.FhirInstant] = None, outcome: Optional[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer] = None)
 
+.. py:class:: BundleResponse(*, id_ = None, extension = None, modifierExtension = None, status, location = None, etag = None, lastModified = None, outcome = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
 
    Bundle.Response
-   A container for a collection of resources.
+       A container for a collection of resources.
+
+       A container for a collection of resources.
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param modifierExtension: May be used to represent additional information that is not part of the basic
+   definition of the element and that modifies the understanding of the element
+   in which it is contained and/or the understanding of the containing element's
+   descendants. Usually modifier elements provide negation or qualification. To
+   make the use of extensions safe and manageable, there is a strict set of
+   governance applied to the definition and use of extensions. Though any
+   implementer can define an extension, there is a set of requirements that SHALL
+   be met as part of the definition of the extension. Applications processing a
+   resource are required to check for modifier extensions.
+
+   Modifier extensions SHALL NOT change the meaning of any elements on Resource
+   or DomainResource (including cannot change the meaning of modifierExtension
+   itself).
+       :param status: The status code returned by processing this entry. The status SHALL start with
+   a 3 digit HTTP code (e.g. 404) and may contain the standard HTTP description
+   associated with the status code.
+       :param location: The location header created by processing this operation, populated if the
+   operation returns a location.
+       :param etag: The Etag for the resource, if the operation for the entry produced a versioned
+   resource (see [Resource Metadata and Versioning](http.html#versioning) and
+   [Managing Resource Contention](http.html#concurrency)).
+       :param lastModified: The date/time that the resource was modified on the server.
+       :param outcome: An OperationOutcome containing hints and warnings produced as part of
+   processing this entry in a batch or transaction.
 
 

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.task_intent`
-====================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.task_intent`
+=======================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.task_intent
 
@@ -17,29 +17,29 @@ Classes
 
 
 
-.. class:: TaskIntentCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: TaskIntentCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    TaskIntent
    From: http://hl7.org/fhir/task-intent in valuesets.xml
        Distinguishes whether the task is a proposal, plan or full order.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/task-intent
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/task-intent
 
       
 
 
-.. class:: TaskIntentCodeValues
+.. py:class:: TaskIntentCodeValues
 
    The intent is not known.  When dealing with Task, it's not always known (or
    relevant) how the task was initiated - i.e. whether it was proposed, planned,
    ordered or just done spontaneously.
    From: http://hl7.org/fhir/task-intent in valuesets.xml
 
-   .. attribute:: Unknown
+   .. py:attribute:: Unknown
       
 
       

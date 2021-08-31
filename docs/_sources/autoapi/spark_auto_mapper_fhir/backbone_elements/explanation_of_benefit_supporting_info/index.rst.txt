@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_supporting_info`
-======================================================================================
+:py:mod:`spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_supporting_info`
+=========================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.backbone_elements.explanation_of_benefit_supporting_info
 
@@ -16,12 +16,51 @@ Classes
 
 
 
-.. class:: ExplanationOfBenefitSupportingInfo(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, sequence: spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt, category: spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.claim_information_category_codes.ClaimInformationCategoryCodesCode], code: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.exception_codes.ExceptionCodesCode]] = None, timingDate: Optional[spark_auto_mapper_fhir.fhir_types.date.FhirDate] = None, timingPeriod: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, valueBoolean: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, valueString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, valueQuantity: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, valueAttachment: Optional[spark_auto_mapper_fhir.complex_types.attachment.Attachment] = None, valueReference: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.resource.Resource]] = None, reason: Optional[spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.missing_tooth_reason_codes.MissingToothReasonCodesCode]] = None)
 
+.. py:class:: ExplanationOfBenefitSupportingInfo(*, id_ = None, extension = None, modifierExtension = None, sequence, category, code = None, timingDate = None, timingPeriod = None, valueBoolean = None, valueString = None, valueQuantity = None, valueAttachment = None, valueReference = None, reason = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
 
    ExplanationOfBenefit.SupportingInfo
-   This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided.
+       This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided.
+
+       This resource provides: the claim details; adjudication details from the
+   processing of a Claim; and optionally account balance information, for
+   informing the subscriber of the benefits provided.
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param modifierExtension: May be used to represent additional information that is not part of the basic
+   definition of the element and that modifies the understanding of the element
+   in which it is contained and/or the understanding of the containing element's
+   descendants. Usually modifier elements provide negation or qualification. To
+   make the use of extensions safe and manageable, there is a strict set of
+   governance applied to the definition and use of extensions. Though any
+   implementer can define an extension, there is a set of requirements that SHALL
+   be met as part of the definition of the extension. Applications processing a
+   resource are required to check for modifier extensions.
+
+   Modifier extensions SHALL NOT change the meaning of any elements on Resource
+   or DomainResource (including cannot change the meaning of modifierExtension
+   itself).
+       :param sequence: A number to uniquely identify supporting information entries.
+       :param category: The general class of the information supplied: information; exception;
+   accident, employment; onset, etc.
+       :param code: System and code pertaining to the specific information regarding special
+   conditions relating to the setting, treatment or patient  for which care is
+   sought.
+       :param timingDate: None
+       :param timingPeriod: None
+       :param valueBoolean: None
+       :param valueString: None
+       :param valueQuantity: None
+       :param valueAttachment: None
+       :param valueReference: None
+       :param reason: Provides the reason in the situation where a reason code is required in
+   addition to the content.
 
 

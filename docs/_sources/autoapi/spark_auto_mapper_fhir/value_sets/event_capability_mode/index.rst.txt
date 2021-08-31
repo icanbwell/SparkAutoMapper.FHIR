@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.event_capability_mode`
-==============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.event_capability_mode`
+=================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.event_capability_mode
 
@@ -17,34 +17,34 @@ Classes
 
 
 
-.. class:: EventCapabilityModeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: EventCapabilityModeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    EventCapabilityMode
    From: http://hl7.org/fhir/event-capability-mode in valuesets.xml
        The mode of a message capability statement.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/event-capability-mode
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/event-capability-mode
 
       
 
 
-.. class:: EventCapabilityModeCodeValues
+.. py:class:: EventCapabilityModeCodeValues
 
    The application sends requests and receives responses.
    From: http://hl7.org/fhir/event-capability-mode in valuesets.xml
 
-   .. attribute:: Sender
+   .. py:attribute:: Sender
       
 
       The application receives requests and sends responses.
       From: http://hl7.org/fhir/event-capability-mode in valuesets.xml
 
 
-   .. attribute:: Receiver
+   .. py:attribute:: Receiver
       
 
       

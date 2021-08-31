@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.ethnicity`
-==================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.ethnicity`
+=====================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.ethnicity
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: Ethnicity(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: Ethnicity(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.Ethnicity
    From: http://terminology.hl7.org/ValueSet/v3-Ethnicity in v3-codesystems.xml
@@ -41,18 +41,18 @@ Classes
    addition, the standards stipulate that an individual can be Hispanic or Latino
    or can be Not Hispanic or Latino, but cannot be both.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-Ethnicity
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-Ethnicity
 
       
 
 
-.. class:: EthnicityValues
+.. py:class:: EthnicityValues
 
    Hispanic or Latino
    From: http://terminology.hl7.org/CodeSystem/v3-Ethnicity in v3-codesystems.xml
 
-   .. attribute:: HispanicOrLatino
+   .. py:attribute:: HispanicOrLatino
       
 
       Note that this term remains in the table for completeness, even though within
@@ -60,7 +60,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-Ethnicity in v3-codesystems.xml
 
 
-   .. attribute:: NotHispanicOrLatino
+   .. py:attribute:: NotHispanicOrLatino
       
 
       

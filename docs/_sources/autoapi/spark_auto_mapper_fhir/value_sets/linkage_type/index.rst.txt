@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.linkage_type`
-=====================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.linkage_type`
+========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.linkage_type
 
@@ -17,29 +17,29 @@ Classes
 
 
 
-.. class:: LinkageTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: LinkageTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    LinkageType
    From: http://hl7.org/fhir/linkage-type in valuesets.xml
        Used to distinguish different roles a resource can play within a set of linked
    resources.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/linkage-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/linkage-type
 
       
 
 
-.. class:: LinkageTypeCodeValues
+.. py:class:: LinkageTypeCodeValues
 
    The resource represents the "source of truth" (from the perspective of this
    Linkage resource) for the underlying event/condition/etc.
    From: http://hl7.org/fhir/linkage-type in valuesets.xml
 
-   .. attribute:: SourceOfTruth
+   .. py:attribute:: SourceOfTruth
       
 
       The resource represents an alternative view of the underlying
@@ -48,7 +48,7 @@ Classes
       From: http://hl7.org/fhir/linkage-type in valuesets.xml
 
 
-   .. attribute:: AlternateRecord
+   .. py:attribute:: AlternateRecord
       
 
       The resource represents an obsolete record of the underlying
@@ -56,7 +56,7 @@ Classes
       From: http://hl7.org/fhir/linkage-type in valuesets.xml
 
 
-   .. attribute:: Historical_ObsoleteRecord
+   .. py:attribute:: Historical_ObsoleteRecord
       
 
       

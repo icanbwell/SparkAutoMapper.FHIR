@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.conditional_read_status`
-================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.conditional_read_status`
+===================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.conditional_read_status
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: ConditionalReadStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ConditionalReadStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ConditionalReadStatus
    From: http://hl7.org/fhir/conditional-read-status in valuesets.xml
        A code that indicates how the server supports conditional read.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/conditional-read-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/conditional-read-status
 
       
 
 
-.. class:: ConditionalReadStatusCodeValues
+.. py:class:: ConditionalReadStatusCodeValues
 
    No support for conditional reads.
    From: http://hl7.org/fhir/conditional-read-status in valuesets.xml
 
-   .. attribute:: NotSupported
+   .. py:attribute:: NotSupported
       
 
       Conditional reads are supported, but only with the If-Modified-Since HTTP
@@ -45,14 +45,14 @@ Classes
       From: http://hl7.org/fhir/conditional-read-status in valuesets.xml
 
 
-   .. attribute:: If_Modified_Since
+   .. py:attribute:: If_Modified_Since
       
 
       Conditional reads are supported, but only with the If-None-Match HTTP Header.
       From: http://hl7.org/fhir/conditional-read-status in valuesets.xml
 
 
-   .. attribute:: If_None_Match
+   .. py:attribute:: If_None_Match
       
 
       Conditional reads are supported, with both If-Modified-Since and If-None-Match
@@ -60,7 +60,7 @@ Classes
       From: http://hl7.org/fhir/conditional-read-status in valuesets.xml
 
 
-   .. attribute:: FullSupport
+   .. py:attribute:: FullSupport
       
 
       

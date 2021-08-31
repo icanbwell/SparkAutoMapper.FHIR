@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.hl7_publishing_section`
-===============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.hl7_publishing_section`
+==================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.hl7_publishing_section
 
@@ -17,23 +17,23 @@ Classes
 
 
 
-.. class:: Hl7PublishingSection(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: Hl7PublishingSection(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.hl7PublishingSection
    From: http://terminology.hl7.org/ValueSet/v3-hl7PublishingSection in v3-codesystems.xml
          Description:
    Codes for HL7 publishing sections (major business categories)
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSection
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSection
 
       
 
 
-.. class:: Hl7PublishingSectionValues
+.. py:class:: Hl7PublishingSectionValues
 
    Description: Represents the HL7 V3 publishing section that deals with the
    administration and management of health care activities and organizations.
@@ -49,7 +49,7 @@ Classes
    further aggregated into three major sets.
    From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSection in v3-codesystems.xml
 
-   .. attribute:: AdministrativeManagement
+   .. py:attribute:: AdministrativeManagement
       
 
       Description: Represents the HL7 V3 publishing section that deals with the
@@ -67,7 +67,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSection in v3-codesystems.xml
 
 
-   .. attribute:: HealthAndClinicalManagement
+   .. py:attribute:: HealthAndClinicalManagement
       
 
       Description: Represents the HL7 V3 publishing section that deals with the
@@ -86,7 +86,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSection in v3-codesystems.xml
 
 
-   .. attribute:: InfrastructureManagement
+   .. py:attribute:: InfrastructureManagement
       
 
       Description: Represents the HL7 V3 publishing section that holds
@@ -105,7 +105,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSection in v3-codesystems.xml
 
 
-   .. attribute:: Unknown
+   .. py:attribute:: Unknown
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.calendar_cycle`
-=======================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.calendar_cycle`
+==========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.calendar_cycle
 
@@ -17,34 +17,34 @@ Classes
 
 
 
-.. class:: CalendarCycle(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: CalendarCycle(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.CalendarCycle
    From: http://terminology.hl7.org/ValueSet/v3-CalendarCycle in v3-codesystems.xml
         Calendar cycle identifiers
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-CalendarCycle
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-CalendarCycle
 
       
 
 
-.. class:: CalendarCycleValues
+.. py:class:: CalendarCycleValues
 
    CalendarCycleOneLetter
    From: http://terminology.hl7.org/CodeSystem/v3-CalendarCycle in v3-codesystems.xml
 
-   .. attribute:: CalendarCycleOneLetter
+   .. py:attribute:: CalendarCycleOneLetter
       
 
       CalendarCycleTwoLetter
       From: http://terminology.hl7.org/CodeSystem/v3-CalendarCycle in v3-codesystems.xml
 
 
-   .. attribute:: CalendarCycleTwoLetter
+   .. py:attribute:: CalendarCycleTwoLetter
       
 
       The week with the month's first Thursday in it (analagous to the ISO 8601
@@ -52,7 +52,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-CalendarCycle in v3-codesystems.xml
 
 
-   .. attribute:: WeekOfTheMonth
+   .. py:attribute:: WeekOfTheMonth
       
 
       

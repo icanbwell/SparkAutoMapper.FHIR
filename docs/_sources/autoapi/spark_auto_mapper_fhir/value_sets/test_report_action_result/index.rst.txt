@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.test_report_action_result`
-==================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.test_report_action_result`
+=====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.test_report_action_result
 
@@ -17,55 +17,55 @@ Classes
 
 
 
-.. class:: TestReportActionResultCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: TestReportActionResultCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    TestReportActionResult
    From: http://hl7.org/fhir/report-action-result-codes in valuesets.xml
        The results of executing an action.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/report-action-result-codes
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/report-action-result-codes
 
       
 
 
-.. class:: TestReportActionResultCodeValues
+.. py:class:: TestReportActionResultCodeValues
 
    The action was successful.
    From: http://hl7.org/fhir/report-action-result-codes in valuesets.xml
 
-   .. attribute:: Pass
+   .. py:attribute:: Pass
       
 
       The action was skipped.
       From: http://hl7.org/fhir/report-action-result-codes in valuesets.xml
 
 
-   .. attribute:: Skip
+   .. py:attribute:: Skip
       
 
       The action failed.
       From: http://hl7.org/fhir/report-action-result-codes in valuesets.xml
 
 
-   .. attribute:: Fail
+   .. py:attribute:: Fail
       
 
       The action passed but with warnings.
       From: http://hl7.org/fhir/report-action-result-codes in valuesets.xml
 
 
-   .. attribute:: Warning
+   .. py:attribute:: Warning
       
 
       The action encountered a fatal error and the engine was unable to process.
       From: http://hl7.org/fhir/report-action-result-codes in valuesets.xml
 
 
-   .. attribute:: Error
+   .. py:attribute:: Error
       
 
       

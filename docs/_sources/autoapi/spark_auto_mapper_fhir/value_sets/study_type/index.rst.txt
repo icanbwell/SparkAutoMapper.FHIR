@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.study_type`
-===================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.study_type`
+======================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.study_type
 
@@ -17,69 +17,69 @@ Classes
 
 
 
-.. class:: StudyTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: StudyTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    StudyType
    From: http://terminology.hl7.org/CodeSystem/study-type in valuesets.xml
        Types of research studies (types of research methods).
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/study-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/study-type
 
       
 
 
-.. class:: StudyTypeCodeValues
+.. py:class:: StudyTypeCodeValues
 
    randomized controlled trial.
    From: http://terminology.hl7.org/CodeSystem/study-type in valuesets.xml
 
-   .. attribute:: RandomizedTrial
+   .. py:attribute:: RandomizedTrial
       
 
       controlled (but not randomized) trial.
       From: http://terminology.hl7.org/CodeSystem/study-type in valuesets.xml
 
 
-   .. attribute:: ControlledTrial_non_randomized_
+   .. py:attribute:: ControlledTrial_non_randomized_
       
 
       observational study comparing cohorts.
       From: http://terminology.hl7.org/CodeSystem/study-type in valuesets.xml
 
 
-   .. attribute:: ComparativeCohortStudy
+   .. py:attribute:: ComparativeCohortStudy
       
 
       case-control study.
       From: http://terminology.hl7.org/CodeSystem/study-type in valuesets.xml
 
 
-   .. attribute:: Case_controlStudy
+   .. py:attribute:: Case_controlStudy
       
 
       uncontrolled cohort or case series.
       From: http://terminology.hl7.org/CodeSystem/study-type in valuesets.xml
 
 
-   .. attribute:: UncontrolledCohortOrCaseSeries
+   .. py:attribute:: UncontrolledCohortOrCaseSeries
       
 
       a single case report.
       From: http://terminology.hl7.org/CodeSystem/study-type in valuesets.xml
 
 
-   .. attribute:: CaseReport
+   .. py:attribute:: CaseReport
       
 
       a combination of 1 or more types of studies.
       From: http://terminology.hl7.org/CodeSystem/study-type in valuesets.xml
 
 
-   .. attribute:: MixedMethods
+   .. py:attribute:: MixedMethods
       
 
       

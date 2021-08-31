@@ -4,8 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>spark_auto_mapper_fhir.resources.bundle &mdash; Spark Auto Mapper FHIR  documentation</title>
@@ -14,6 +13,8 @@
   
   <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
 
   
@@ -31,6 +32,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
         <script src="../../../../_static/jquery.js"></script>
         <script src="../../../../_static/underscore.js"></script>
         <script src="../../../../_static/doctools.js"></script>
@@ -84,8 +86,7 @@
               
             
             
-              <p><span class="caption-text">Contents:</span></p>
-<ul>
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../index.html">API Reference</a></li>
 </ul>
 
@@ -154,11 +155,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="module-spark_auto_mapper_fhir.resources.bundle">
+  <div class="section" id="module-spark_auto_mapper_fhir.resources.bundle">
 <span id="spark-auto-mapper-fhir-resources-bundle"></span><h1><a class="reference internal" href="#module-spark_auto_mapper_fhir.resources.bundle" title="spark_auto_mapper_fhir.resources.bundle"><code class="xref py py-mod docutils literal notranslate"><span class="pre">spark_auto_mapper_fhir.resources.bundle</span></code></a><a class="headerlink" href="#module-spark_auto_mapper_fhir.resources.bundle" title="Permalink to this headline">¶</a></h1>
-<section id="module-contents">
+<div class="section" id="module-contents">
 <h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
-<section id="classes">
+<div class="section" id="classes">
 <h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
 <table class="longtable docutils align-default">
 <colgroup>
@@ -172,25 +173,125 @@
 </tbody>
 </table>
 <dl class="py class">
-<dt id="spark_auto_mapper_fhir.resources.bundle.Bundle">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">spark_auto_mapper_fhir.resources.bundle.</span></code><code class="sig-name descname"><span class="pre">Bundle</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id_</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../fhir_types/id/index.html#spark_auto_mapper_fhir.fhir_types.id.FhirId" title="spark_auto_mapper_fhir.fhir_types.id.FhirId"><span class="pre">spark_auto_mapper_fhir.fhir_types.id.FhirId</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meta</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../complex_types/meta/index.html#spark_auto_mapper_fhir.complex_types.meta.Meta" title="spark_auto_mapper_fhir.complex_types.meta.Meta"><span class="pre">spark_auto_mapper_fhir.complex_types.meta.Meta</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">implicitRules</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../fhir_types/uri/index.html#spark_auto_mapper_fhir.fhir_types.uri.FhirUri" title="spark_auto_mapper_fhir.fhir_types.uri.FhirUri"><span class="pre">spark_auto_mapper_fhir.fhir_types.uri.FhirUri</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../value_sets/common_languages/index.html#spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode" title="spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode"><span class="pre">spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">identifier</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../complex_types/identifier/index.html#spark_auto_mapper_fhir.complex_types.identifier.Identifier" title="spark_auto_mapper_fhir.complex_types.identifier.Identifier"><span class="pre">spark_auto_mapper_fhir.complex_types.identifier.Identifier</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="../../value_sets/bundle_type/index.html#spark_auto_mapper_fhir.value_sets.bundle_type.BundleTypeCode" title="spark_auto_mapper_fhir.value_sets.bundle_type.BundleTypeCode"><span class="pre">spark_auto_mapper_fhir.value_sets.bundle_type.BundleTypeCode</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../fhir_types/instant/index.html#spark_auto_mapper_fhir.fhir_types.instant.FhirInstant" title="spark_auto_mapper_fhir.fhir_types.instant.FhirInstant"><span class="pre">spark_auto_mapper_fhir.fhir_types.instant.FhirInstant</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">total</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../fhir_types/unsigned_int/index.html#spark_auto_mapper_fhir.fhir_types.unsigned_int.FhirUnsignedInt" title="spark_auto_mapper_fhir.fhir_types.unsigned_int.FhirUnsignedInt"><span class="pre">spark_auto_mapper_fhir.fhir_types.unsigned_int.FhirUnsignedInt</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">link</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../fhir_types/list/index.html#spark_auto_mapper_fhir.fhir_types.list.FhirList" title="spark_auto_mapper_fhir.fhir_types.list.FhirList"><span class="pre">spark_auto_mapper_fhir.fhir_types.list.FhirList</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../backbone_elements/bundle_link/index.html#spark_auto_mapper_fhir.backbone_elements.bundle_link.BundleLink" title="spark_auto_mapper_fhir.backbone_elements.bundle_link.BundleLink"><span class="pre">spark_auto_mapper_fhir.backbone_elements.bundle_link.BundleLink</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entry</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../fhir_types/list/index.html#spark_auto_mapper_fhir.fhir_types.list.FhirList" title="spark_auto_mapper_fhir.fhir_types.list.FhirList"><span class="pre">spark_auto_mapper_fhir.fhir_types.list.FhirList</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../backbone_elements/bundle_entry/index.html#spark_auto_mapper_fhir.backbone_elements.bundle_entry.BundleEntry" title="spark_auto_mapper_fhir.backbone_elements.bundle_entry.BundleEntry"><span class="pre">spark_auto_mapper_fhir.backbone_elements.bundle_entry.BundleEntry</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">signature</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../complex_types/signature/index.html#spark_auto_mapper_fhir.complex_types.signature.Signature" title="spark_auto_mapper_fhir.complex_types.signature.Signature"><span class="pre">spark_auto_mapper_fhir.complex_types.signature.Signature</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#spark_auto_mapper_fhir.resources.bundle.Bundle" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="../../base_types/fhir_resource_base/index.html#spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase" title="spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase</span></code></a></p>
+<dt class="sig sig-object py" id="spark_auto_mapper_fhir.resources.bundle.Bundle">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">spark_auto_mapper_fhir.resources.bundle.</span></span><span class="sig-name descname"><span class="pre">Bundle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id_</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">implicitRules</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">identifier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">total</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">link</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">signature</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#spark_auto_mapper_fhir.resources.bundle.Bundle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../../base_types/fhir_resource_base/index.html#spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase" title="spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase</span></code></a></p>
 <p>Bundle
 bundle.xsd</p>
 <blockquote>
 <div><p>A container for a collection of resources.
 If the element is present, it must have either a &#64;value, an &#64;id, or extensions</p>
+<p>A container for a collection of resources.
+If the element is present, it must have either a &#64;value, an &#64;id, or extensions</p>
+<dl class="field-list simple">
+<dt class="field-odd">param <a href="#id1"><span class="problematic" id="id2">id_</span></a></dt>
+<dd class="field-odd"><p>The logical id of the resource, as used in the URL for the resource. Once</p>
+</dd>
+</dl>
 </div></blockquote>
+<dl class="simple">
+<dt>assigned, this value never changes.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param meta</dt>
+<dd class="field-odd"><p>The metadata about the resource. This is content that is maintained by the</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>infrastructure. Changes to the content might not always be associated with
+version changes to the resource.</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">param implicitRules</dt>
+<dd class="field-odd"><p>A reference to a set of rules that were followed when the resource was</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>constructed, and which must be understood when processing the content. Often,
+this is a reference to an implementation guide that defines the special rules
+along with other profiles etc.</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">param language</dt>
+<dd class="field-odd"><p>The base language in which the resource is written.</p>
+</dd>
+<dt class="field-even">param identifier</dt>
+<dd class="field-even"><p>A persistent identifier for the bundle that won’t change as a bundle is copied</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="simple">
+<dt>from server to server.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param <a href="#id3"><span class="problematic" id="id4">type_</span></a></dt>
+<dd class="field-odd"><p>Indicates the purpose of this bundle - how it is intended to be used.</p>
+</dd>
+<dt class="field-even">param timestamp</dt>
+<dd class="field-even"><p>The date/time that the bundle was assembled - i.e. when the resources were</p>
+</dd>
+</dl>
+</dd>
+<dt>placed in the bundle.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param total</dt>
+<dd class="field-odd"><p>If a set of search matches, this is the total number of entries of type</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>‘match’ across all pages in the search.  It does not include search.mode =
+‘include’ or ‘outcome’ entries and it does not provide a count of the number
+of entries in the Bundle.</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">param link</dt>
+<dd class="field-odd"><p>A series of links that provide context to this bundle.</p>
+</dd>
+<dt class="field-even">param entry</dt>
+<dd class="field-even"><p>An entry in a bundle resource - will either contain a resource or information</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="simple">
+<dt>about a resource (transactions and history only).</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param signature</dt>
+<dd class="field-odd"><p>Digital Signature - base64 encoded. XML-DSig or a JWT.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id_</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../../fhir_types/id/index.html#spark_auto_mapper_fhir.fhir_types.id.FhirId" title="spark_auto_mapper_fhir.fhir_types.id.FhirId"><em>spark_auto_mapper_fhir.fhir_types.id.FhirId</em></a><em>]</em>) – </p></li>
+<li><p><strong>meta</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../../complex_types/meta/index.html#spark_auto_mapper_fhir.complex_types.meta.Meta" title="spark_auto_mapper_fhir.complex_types.meta.Meta"><em>spark_auto_mapper_fhir.complex_types.meta.Meta</em></a><em>]</em>) – </p></li>
+<li><p><strong>implicitRules</strong> (<em>Optional</em><em>[</em><em>spark_auto_mapper_fhir.fhir_types.uri.FhirUri</em><em>]</em>) – </p></li>
+<li><p><strong>language</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../../value_sets/common_languages/index.html#spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode" title="spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode"><em>spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode</em></a><em>]</em>) – </p></li>
+<li><p><strong>identifier</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../../complex_types/identifier/index.html#spark_auto_mapper_fhir.complex_types.identifier.Identifier" title="spark_auto_mapper_fhir.complex_types.identifier.Identifier"><em>spark_auto_mapper_fhir.complex_types.identifier.Identifier</em></a><em>]</em>) – </p></li>
+<li><p><strong>type_</strong> (<a class="reference internal" href="../../value_sets/bundle_type/index.html#spark_auto_mapper_fhir.value_sets.bundle_type.BundleTypeCode" title="spark_auto_mapper_fhir.value_sets.bundle_type.BundleTypeCode"><em>spark_auto_mapper_fhir.value_sets.bundle_type.BundleTypeCode</em></a>) – </p></li>
+<li><p><strong>timestamp</strong> (<em>Optional</em><em>[</em><em>spark_auto_mapper_fhir.fhir_types.instant.FhirInstant</em><em>]</em>) – </p></li>
+<li><p><strong>total</strong> (<em>Optional</em><em>[</em><em>spark_auto_mapper_fhir.fhir_types.unsigned_int.FhirUnsignedInt</em><em>]</em>) – </p></li>
+<li><p><strong>link</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../../fhir_types/list/index.html#spark_auto_mapper_fhir.fhir_types.list.FhirList" title="spark_auto_mapper_fhir.fhir_types.list.FhirList"><em>spark_auto_mapper_fhir.fhir_types.list.FhirList</em></a><em>[</em><a class="reference internal" href="../../backbone_elements/bundle_link/index.html#spark_auto_mapper_fhir.backbone_elements.bundle_link.BundleLink" title="spark_auto_mapper_fhir.backbone_elements.bundle_link.BundleLink"><em>spark_auto_mapper_fhir.backbone_elements.bundle_link.BundleLink</em></a><em>]</em><em>]</em>) – </p></li>
+<li><p><strong>entry</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../../fhir_types/list/index.html#spark_auto_mapper_fhir.fhir_types.list.FhirList" title="spark_auto_mapper_fhir.fhir_types.list.FhirList"><em>spark_auto_mapper_fhir.fhir_types.list.FhirList</em></a><em>[</em><a class="reference internal" href="../../backbone_elements/bundle_entry/index.html#spark_auto_mapper_fhir.backbone_elements.bundle_entry.BundleEntry" title="spark_auto_mapper_fhir.backbone_elements.bundle_entry.BundleEntry"><em>spark_auto_mapper_fhir.backbone_elements.bundle_entry.BundleEntry</em></a><em>]</em><em>]</em>) – </p></li>
+<li><p><strong>signature</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../../complex_types/signature/index.html#spark_auto_mapper_fhir.complex_types.signature.Signature" title="spark_auto_mapper_fhir.complex_types.signature.Signature"><em>spark_auto_mapper_fhir.complex_types.signature.Signature</em></a><em>]</em>) – </p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
-<dt id="spark_auto_mapper_fhir.resources.bundle.Bundle.get_schema">
-<code class="sig-name descname"><span class="pre">get_schema</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_extension</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">pyspark.sql.types.StructType</span><span class="p"><span class="pre">,</span> </span><span class="pre">pyspark.sql.types.DataType</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#spark_auto_mapper_fhir.resources.bundle.Bundle.get_schema" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object py" id="spark_auto_mapper_fhir.resources.bundle.Bundle.get_schema">
+<span class="sig-name descname"><span class="pre">get_schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_extension</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#spark_auto_mapper_fhir.resources.bundle.Bundle.get_schema" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>include_extension</strong> (<em>bool</em>) – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Optional[Union[pyspark.sql.types.StructType, pyspark.sql.types.DataType]]</p>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
            </div>

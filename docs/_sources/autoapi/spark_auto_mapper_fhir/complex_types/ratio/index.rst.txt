@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.complex_types.ratio`
-=================================================
+:py:mod:`spark_auto_mapper_fhir.complex_types.ratio`
+====================================================
 
 .. py:module:: spark_auto_mapper_fhir.complex_types.ratio
 
@@ -16,17 +16,31 @@ Classes
 
 
 
-.. class:: Ratio(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, numerator: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, denominator: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None)
 
+.. py:class:: Ratio(*, id_ = None, extension = None, numerator = None, denominator = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
 
    Ratio
    fhir-base.xsd
        A relationship of two Quantity values - expressed as a numerator and a denominator.
        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
 
-   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+       A relationship of two Quantity values - expressed as a numerator and a
+   denominator.
+       If the element is present, it must have a value for at least one of the
+   defined elements, an @id referenced from the Narrative, or extensions
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param numerator: The value of the numerator.
+       :param denominator: The value of the denominator.
+
+   .. py:method:: get_schema(self, include_extension)
 
 
 

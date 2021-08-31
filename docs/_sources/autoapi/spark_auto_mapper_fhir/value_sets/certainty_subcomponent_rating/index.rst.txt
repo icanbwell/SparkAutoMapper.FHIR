@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.certainty_subcomponent_rating`
-======================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.certainty_subcomponent_rating`
+=========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.certainty_subcomponent_rating
 
@@ -17,83 +17,83 @@ Classes
 
 
 
-.. class:: CertaintySubcomponentRatingCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: CertaintySubcomponentRatingCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    CertaintySubcomponentRating
    From: http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating in valuesets.xml
        The quality rating of the subcomponent of a quality of evidence rating.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating
 
       
 
 
-.. class:: CertaintySubcomponentRatingCodeValues
+.. py:class:: CertaintySubcomponentRatingCodeValues
 
    no change to quality rating.
    From: http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating in valuesets.xml
 
-   .. attribute:: NoChangeToRating
+   .. py:attribute:: NoChangeToRating
       
 
       reduce quality rating by 1.
       From: http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating in valuesets.xml
 
 
-   .. attribute:: ReduceRating_1
+   .. py:attribute:: ReduceRating_1
       
 
       reduce quality rating by 2.
       From: http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating in valuesets.xml
 
 
-   .. attribute:: ReduceRating_2
+   .. py:attribute:: ReduceRating_2
       
 
       reduce quality rating by 3.
       From: http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating in valuesets.xml
 
 
-   .. attribute:: ReduceRating_3
+   .. py:attribute:: ReduceRating_3
       
 
       increase quality rating by 1.
       From: http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating in valuesets.xml
 
 
-   .. attribute:: IncreaseRating_1
+   .. py:attribute:: IncreaseRating_1
       
 
       increase quality rating by 2.
       From: http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating in valuesets.xml
 
 
-   .. attribute:: IncreaseRating_2
+   .. py:attribute:: IncreaseRating_2
       
 
       no serious concern.
       From: http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating in valuesets.xml
 
 
-   .. attribute:: NoSeriousConcern
+   .. py:attribute:: NoSeriousConcern
       
 
       serious concern.
       From: http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating in valuesets.xml
 
 
-   .. attribute:: SeriousConcern
+   .. py:attribute:: SeriousConcern
       
 
       critical concern.
       From: http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating in valuesets.xml
 
 
-   .. attribute:: CriticalConcern
+   .. py:attribute:: CriticalConcern
       
 
       possible reason for increasing quality rating was checked and found to
@@ -101,7 +101,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating in valuesets.xml
 
 
-   .. attribute:: Present
+   .. py:attribute:: Present
       
 
       possible reason for increasing quality rating was checked and found to be
@@ -109,7 +109,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating in valuesets.xml
 
 
-   .. attribute:: Absent
+   .. py:attribute:: Absent
       
 
       

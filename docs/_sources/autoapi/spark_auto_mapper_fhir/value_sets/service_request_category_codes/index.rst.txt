@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.service_request_category_codes`
-=======================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.service_request_category_codes`
+==========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.service_request_category_codes
 
@@ -17,51 +17,51 @@ Classes
 
 
 
-.. class:: ServiceRequestCategoryCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ServiceRequestCategoryCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ServiceRequestCategoryCodes
    From: http://hl7.org/fhir/ValueSet/servicerequest-category in valuesets.xml
        An example value set of SNOMED CT concepts that can classify a requested
    service
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://snomed.info/sct
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://snomed.info/sct
 
       
 
 
-.. class:: ServiceRequestCategoryCodesCodeValues
+.. py:class:: ServiceRequestCategoryCodesCodeValues
 
    From: http://hl7.org/fhir/ValueSet/servicerequest-category in valuesets.xml
 
-   .. attribute:: LaboratoryProcedure
+   .. py:attribute:: LaboratoryProcedure
       
 
       From: http://hl7.org/fhir/ValueSet/servicerequest-category in valuesets.xml
 
 
-   .. attribute:: Imaging
+   .. py:attribute:: Imaging
       
 
       From: http://hl7.org/fhir/ValueSet/servicerequest-category in valuesets.xml
 
 
-   .. attribute:: Counselling
+   .. py:attribute:: Counselling
       
 
       From: http://hl7.org/fhir/ValueSet/servicerequest-category in valuesets.xml
 
 
-   .. attribute:: Education
+   .. py:attribute:: Education
       
 
       From: http://hl7.org/fhir/ValueSet/servicerequest-category in valuesets.xml
 
 
-   .. attribute:: SurgicalProcedure
+   .. py:attribute:: SurgicalProcedure
       
 
       

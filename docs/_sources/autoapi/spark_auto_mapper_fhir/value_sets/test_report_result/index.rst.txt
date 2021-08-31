@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.test_report_result`
-===========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.test_report_result`
+==============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.test_report_result
 
@@ -17,41 +17,41 @@ Classes
 
 
 
-.. class:: TestReportResultCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: TestReportResultCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    TestReportResult
    From: http://hl7.org/fhir/report-result-codes in valuesets.xml
        The reported execution result.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/report-result-codes
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/report-result-codes
 
       
 
 
-.. class:: TestReportResultCodeValues
+.. py:class:: TestReportResultCodeValues
 
    All test operations successfully passed all asserts.
    From: http://hl7.org/fhir/report-result-codes in valuesets.xml
 
-   .. attribute:: Pass
+   .. py:attribute:: Pass
       
 
       One or more test operations failed one or more asserts.
       From: http://hl7.org/fhir/report-result-codes in valuesets.xml
 
 
-   .. attribute:: Fail
+   .. py:attribute:: Fail
       
 
       One or more test operations is pending execution completion.
       From: http://hl7.org/fhir/report-result-codes in valuesets.xml
 
 
-   .. attribute:: Pending
+   .. py:attribute:: Pending
       
 
       

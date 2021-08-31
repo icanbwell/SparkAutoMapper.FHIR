@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.sort_direction`
-=======================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.sort_direction`
+==========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.sort_direction
 
@@ -17,34 +17,34 @@ Classes
 
 
 
-.. class:: SortDirectionCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SortDirectionCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SortDirection
    From: http://hl7.org/fhir/sort-direction in valuesets.xml
        The possible sort directions, ascending or descending.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/sort-direction
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/sort-direction
 
       
 
 
-.. class:: SortDirectionCodeValues
+.. py:class:: SortDirectionCodeValues
 
    Sort by the value ascending, so that lower values appear first.
    From: http://hl7.org/fhir/sort-direction in valuesets.xml
 
-   .. attribute:: Ascending
+   .. py:attribute:: Ascending
       
 
       Sort by the value descending, so that lower values appear last.
       From: http://hl7.org/fhir/sort-direction in valuesets.xml
 
 
-   .. attribute:: Descending
+   .. py:attribute:: Descending
       
 
       

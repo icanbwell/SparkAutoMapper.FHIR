@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.subscriber_relationship_codes`
-======================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.subscriber_relationship_codes`
+=========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.subscriber_relationship_codes
 
@@ -17,70 +17,70 @@ Classes
 
 
 
-.. class:: SubscriberRelationshipCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SubscriberRelationshipCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SubscriberRelationshipCodes
    From: http://terminology.hl7.org/CodeSystem/subscriber-relationship in valuesets.xml
        This value set includes codes for the relationship between the Subscriber and
    the Beneficiary (insured/covered party/patient).
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/subscriber-relationship
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/subscriber-relationship
 
       
 
 
-.. class:: SubscriberRelationshipCodesCodeValues
+.. py:class:: SubscriberRelationshipCodesCodeValues
 
    The Beneficiary is a child of the Subscriber
    From: http://terminology.hl7.org/CodeSystem/subscriber-relationship in valuesets.xml
 
-   .. attribute:: Child
+   .. py:attribute:: Child
       
 
       The Beneficiary is a parent of the Subscriber
       From: http://terminology.hl7.org/CodeSystem/subscriber-relationship in valuesets.xml
 
 
-   .. attribute:: Parent
+   .. py:attribute:: Parent
       
 
       The Beneficiary is a spouse or equivalent of the Subscriber
       From: http://terminology.hl7.org/CodeSystem/subscriber-relationship in valuesets.xml
 
 
-   .. attribute:: Spouse
+   .. py:attribute:: Spouse
       
 
       The Beneficiary is a common law spouse or equivalent of the Subscriber
       From: http://terminology.hl7.org/CodeSystem/subscriber-relationship in valuesets.xml
 
 
-   .. attribute:: CommonLawSpouse
+   .. py:attribute:: CommonLawSpouse
       
 
       The Beneficiary has some other relationship the Subscriber
       From: http://terminology.hl7.org/CodeSystem/subscriber-relationship in valuesets.xml
 
 
-   .. attribute:: Other
+   .. py:attribute:: Other
       
 
       The Beneficiary is the Subscriber
       From: http://terminology.hl7.org/CodeSystem/subscriber-relationship in valuesets.xml
 
 
-   .. attribute:: Self
+   .. py:attribute:: Self
       
 
       The Beneficiary is covered under insurance of the subscriber due to an injury.
       From: http://terminology.hl7.org/CodeSystem/subscriber-relationship in valuesets.xml
 
 
-   .. attribute:: InjuredParty
+   .. py:attribute:: InjuredParty
       
 
       

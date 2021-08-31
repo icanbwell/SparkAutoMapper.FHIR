@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.currencies`
-===================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.currencies`
+======================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.currencies
 
@@ -16,18 +16,18 @@ Classes
 
 
 
-.. class:: CurrenciesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: CurrenciesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    Currencies
    From: http://hl7.org/fhir/ValueSet/currencies in valuesets.xml
        Currency codes from ISO 4217 (see https://www.iso.org/iso-4217-currency-
    codes.html)
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = urn:iso:std:iso:4217
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = urn:iso:std:iso:4217
 
       
 

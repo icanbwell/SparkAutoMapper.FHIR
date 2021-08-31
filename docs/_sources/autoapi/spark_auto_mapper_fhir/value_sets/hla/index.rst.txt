@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.hla`
-============================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.hla`
+===============================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.hla
 
@@ -16,17 +16,17 @@ Classes
 
 
 
-.. class:: HLACode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: HLACode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    HLA
    From: http://hl7.org/fhir/ValueSet/allelename in valuesets.xml
        European Bioinformatics Institute
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://www.ebi.ac.uk/ipd/imgt/hla
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://www.ebi.ac.uk/ipd/imgt/hla
 
       
 

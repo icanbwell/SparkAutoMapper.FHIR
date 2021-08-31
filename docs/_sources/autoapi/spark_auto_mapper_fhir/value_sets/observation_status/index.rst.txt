@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.observation_status`
-===========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.observation_status`
+==============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.observation_status
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: ObservationStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ObservationStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ObservationStatus
    From: http://hl7.org/fhir/observation-status in valuesets.xml
        Codes providing the status of an observation.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/observation-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/observation-status
 
       
 
 
-.. class:: ObservationStatusCodeValues
+.. py:class:: ObservationStatusCodeValues
 
    The existence of the observation is registered, but there is no result yet
    available.
    From: http://hl7.org/fhir/observation-status in valuesets.xml
 
-   .. attribute:: Registered
+   .. py:attribute:: Registered
       
 
       This is an initial or interim observation: data may be incomplete or
@@ -46,7 +46,7 @@ Classes
       From: http://hl7.org/fhir/observation-status in valuesets.xml
 
 
-   .. attribute:: Preliminary
+   .. py:attribute:: Preliminary
       
 
       The observation is complete and there are no further actions needed.
@@ -58,7 +58,7 @@ Classes
       From: http://hl7.org/fhir/observation-status in valuesets.xml
 
 
-   .. attribute:: Final
+   .. py:attribute:: Final
       
 
       Subsequent to being Final, the observation has been modified subsequent.  This
@@ -66,7 +66,7 @@ Classes
       From: http://hl7.org/fhir/observation-status in valuesets.xml
 
 
-   .. attribute:: Amended
+   .. py:attribute:: Amended
       
 
       The observation is unavailable because the measurement was not started or not
@@ -74,7 +74,7 @@ Classes
       From: http://hl7.org/fhir/observation-status in valuesets.xml
 
 
-   .. attribute:: Cancelled
+   .. py:attribute:: Cancelled
       
 
       The observation has been withdrawn following previous final release.  This
@@ -84,7 +84,7 @@ Classes
       From: http://hl7.org/fhir/observation-status in valuesets.xml
 
 
-   .. attribute:: EnteredInError
+   .. py:attribute:: EnteredInError
       
 
       The authoring/source system does not know which of the status values currently
@@ -94,7 +94,7 @@ Classes
       From: http://hl7.org/fhir/observation-status in valuesets.xml
 
 
-   .. attribute:: Unknown
+   .. py:attribute:: Unknown
       
 
       

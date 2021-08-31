@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.beneficiary_relationship_codes`
-=======================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.beneficiary_relationship_codes`
+==========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.beneficiary_relationship_codes
 
@@ -17,48 +17,48 @@ Classes
 
 
 
-.. class:: BeneficiaryRelationshipCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: BeneficiaryRelationshipCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    Beneficiary Relationship Codes
    From: http://hl7.org/fhir/relationship in valuesets.xml
        This value set includes the Patient to subscriber relationship codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/relationship
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/relationship
 
       
 
 
-.. class:: BeneficiaryRelationshipCodesCodeValues
+.. py:class:: BeneficiaryRelationshipCodesCodeValues
 
    The patient is the subscriber (policy holder)
    From: http://hl7.org/fhir/relationship in valuesets.xml
 
-   .. attribute:: Self
+   .. py:attribute:: Self
       
 
       The patient is the spouse or equivalent of the subscriber (policy holder)
       From: http://hl7.org/fhir/relationship in valuesets.xml
 
 
-   .. attribute:: Spouse
+   .. py:attribute:: Spouse
       
 
       The patient is the child of the subscriber (policy holder)
       From: http://hl7.org/fhir/relationship in valuesets.xml
 
 
-   .. attribute:: Child
+   .. py:attribute:: Child
       
 
       The patient is the common law spouse of the subscriber (policy holder)
       From: http://hl7.org/fhir/relationship in valuesets.xml
 
 
-   .. attribute:: CommonLawSpouse
+   .. py:attribute:: CommonLawSpouse
       
 
       The patient has some other relationship, such as parent, to the subscriber
@@ -66,7 +66,7 @@ Classes
       From: http://hl7.org/fhir/relationship in valuesets.xml
 
 
-   .. attribute:: Other
+   .. py:attribute:: Other
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.financial_task_codes`
-=============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.financial_task_codes`
+================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.financial_task_codes
 
@@ -17,35 +17,35 @@ Classes
 
 
 
-.. class:: FinancialTaskCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: FinancialTaskCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    FinancialTaskCodes
    From: http://terminology.hl7.org/CodeSystem/financialtaskcode in valuesets.xml
        This value set includes Financial Task codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/financialtaskcode
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/financialtaskcode
 
       
 
 
-.. class:: FinancialTaskCodesCodeValues
+.. py:class:: FinancialTaskCodesCodeValues
 
    Cancel or reverse a resource, such as a claim or preauthorization, which is
    in-process or complete.
    From: http://terminology.hl7.org/CodeSystem/financialtaskcode in valuesets.xml
 
-   .. attribute:: Cancel
+   .. py:attribute:: Cancel
       
 
       Retrieve selected or all queued resources or messages.
       From: http://terminology.hl7.org/CodeSystem/financialtaskcode in valuesets.xml
 
 
-   .. attribute:: Poll
+   .. py:attribute:: Poll
       
 
       Release any reserved funds or material obligations associated with a resource.
@@ -54,7 +54,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/financialtaskcode in valuesets.xml
 
 
-   .. attribute:: Release
+   .. py:attribute:: Release
       
 
       Indication that the processing of a resource, such as a claim, for some or all
@@ -62,7 +62,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/financialtaskcode in valuesets.xml
 
 
-   .. attribute:: Reprocess
+   .. py:attribute:: Reprocess
       
 
       Check on the processing status of a resource such as the adjudication of a
@@ -70,7 +70,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/financialtaskcode in valuesets.xml
 
 
-   .. attribute:: StatusCheck
+   .. py:attribute:: StatusCheck
       
 
       

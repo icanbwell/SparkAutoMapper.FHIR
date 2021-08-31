@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.service_category`
-=========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.service_category`
+============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.service_category
 
@@ -17,287 +17,287 @@ Classes
 
 
 
-.. class:: ServiceCategoryCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ServiceCategoryCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ServiceCategory
    From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
        This value set defines an example set of codes that can be used to classify
    groupings of service-types/specialties.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/service-category
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/service-category
 
       
 
 
-.. class:: ServiceCategoryCodeValues
+.. py:class:: ServiceCategoryCodeValues
 
    Adoption
    From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
-   .. attribute:: Adoption
+   .. py:attribute:: Adoption
       
 
       Aged Care
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: AgedCare
+   .. py:attribute:: AgedCare
       
 
       Allied Health
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: AlliedHealth
+   .. py:attribute:: AlliedHealth
       
 
       Alternative & Complementary Therapies
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: Alternative_ComplementaryTherapies
+   .. py:attribute:: Alternative_ComplementaryTherapies
       
 
       Child Care and/or Kindergarten
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: ChildCare_Kindergarten
+   .. py:attribute:: ChildCare_Kindergarten
       
 
       Child Development
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: ChildDevelopment
+   .. py:attribute:: ChildDevelopment
       
 
       Child Protection & Family Services
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: ChildProtection_FamilyServices
+   .. py:attribute:: ChildProtection_FamilyServices
       
 
       Community Health Care
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: CommunityHealthCare
+   .. py:attribute:: CommunityHealthCare
       
 
       Counselling
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: Counselling
+   .. py:attribute:: Counselling
       
 
       Crisis Line (GPAH use only)
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: CrisisLine_GPAHUseOnly_
+   .. py:attribute:: CrisisLine_GPAHUseOnly_
       
 
       Death Services
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: DeathServices
+   .. py:attribute:: DeathServices
       
 
       Dental
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: Dental
+   .. py:attribute:: Dental
       
 
       Disability Support
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: DisabilitySupport
+   .. py:attribute:: DisabilitySupport
       
 
       Drug/Alcohol
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: Drug_Alcohol
+   .. py:attribute:: Drug_Alcohol
       
 
       Education & Learning
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: Education_Learning
+   .. py:attribute:: Education_Learning
       
 
       Emergency Department
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: EmergencyDepartment
+   .. py:attribute:: EmergencyDepartment
       
 
       Employment
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: Employment
+   .. py:attribute:: Employment
       
 
       Financial & Material aid
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: Financial_MaterialAid
+   .. py:attribute:: Financial_MaterialAid
       
 
       General Practice/GP (doctor)
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: GeneralPractice
+   .. py:attribute:: GeneralPractice
       
 
       Hospital
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: Hospital
+   .. py:attribute:: Hospital
       
 
       Housing/Homelessness
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: Housing_Homelessness
+   .. py:attribute:: Housing_Homelessness
       
 
       Interpreting
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: Interpreting
+   .. py:attribute:: Interpreting
       
 
       Justice
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: Justice
+   .. py:attribute:: Justice
       
 
       Legal
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: Legal
+   .. py:attribute:: Legal
       
 
       Mental Health
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: MentalHealth
+   .. py:attribute:: MentalHealth
       
 
       NDIA
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: NDIA
+   .. py:attribute:: NDIA
       
 
       Physical Activity & Recreation
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: PhysicalActivity_Recreation
+   .. py:attribute:: PhysicalActivity_Recreation
       
 
       Regulation
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: Regulation
+   .. py:attribute:: Regulation
       
 
       Respite/Carer Support
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: Respite_CarerSupport
+   .. py:attribute:: Respite_CarerSupport
       
 
       Specialist Clinical Pathology - requires referral
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: SpecialistClinicalPathology
+   .. py:attribute:: SpecialistClinicalPathology
       
 
       Specialist Medical - requires referral
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: SpecialistMedical
+   .. py:attribute:: SpecialistMedical
       
 
       Specialist Obstetrics & Gynecology - requires referral
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: SpecialistObstetrics_Gynecology
+   .. py:attribute:: SpecialistObstetrics_Gynecology
       
 
       Specialist Paediatric - requires referral
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: SpecialistPaediatric
+   .. py:attribute:: SpecialistPaediatric
       
 
       Specialist Radiology/Imaging - requires referral
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: SpecialistRadiology_Imaging
+   .. py:attribute:: SpecialistRadiology_Imaging
       
 
       Specialist Surgical - requires referral
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: SpecialistSurgical
+   .. py:attribute:: SpecialistSurgical
       
 
       Support group/s
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: SupportGroup_s
+   .. py:attribute:: SupportGroup_s
       
 
       Test Message (HSD admin use only)
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: TestMessage_HSDAdmin_
+   .. py:attribute:: TestMessage_HSDAdmin_
       
 
       Transport
       From: http://terminology.hl7.org/CodeSystem/service-category in valuesets.xml
 
 
-   .. attribute:: Transport
+   .. py:attribute:: Transport
       
 
       

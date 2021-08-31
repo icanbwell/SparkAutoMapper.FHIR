@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.constraint_severity`
-============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.constraint_severity`
+===============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.constraint_severity
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: ConstraintSeverityCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ConstraintSeverityCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ConstraintSeverity
    From: http://hl7.org/fhir/constraint-severity in valuesets.xml
        SHALL applications comply with this constraint?
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/constraint-severity
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/constraint-severity
 
       
 
 
-.. class:: ConstraintSeverityCodeValues
+.. py:class:: ConstraintSeverityCodeValues
 
    If the constraint is violated, the resource is not conformant.
    From: http://hl7.org/fhir/constraint-severity in valuesets.xml
 
-   .. attribute:: Error
+   .. py:attribute:: Error
       
 
       If the constraint is violated, the resource is conformant, but it is not
@@ -45,7 +45,7 @@ Classes
       From: http://hl7.org/fhir/constraint-severity in valuesets.xml
 
 
-   .. attribute:: Warning
+   .. py:attribute:: Warning
       
 
       

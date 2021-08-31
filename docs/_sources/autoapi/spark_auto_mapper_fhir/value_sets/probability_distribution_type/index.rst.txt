@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.probability_distribution_type`
-======================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.probability_distribution_type`
+=========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.probability_distribution_type
 
@@ -17,22 +17,22 @@ Classes
 
 
 
-.. class:: ProbabilityDistributionTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ProbabilityDistributionTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ProbabilityDistributionType
    From: http://hl7.org/fhir/ValueSet/probability-distribution-type in valuesets.xml
        Codes specifying the type of probability distribution.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ProbabilityDistributionType
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-ProbabilityDistributionType
 
       
 
 
-.. class:: ProbabilityDistributionTypeCodeValues
+.. py:class:: ProbabilityDistributionTypeCodeValues
 
    The beta-distribution is used for data that is bounded on both sides and may
    or may not be skewed (e.g., occurs when probabilities are estimated.)  Two
@@ -41,7 +41,7 @@ Classes
    1)).
    From: http://terminology.hl7.org/CodeSystem/v3-ProbabilityDistributionType in v3-codesystems.xml
 
-   .. attribute:: Beta
+   .. py:attribute:: Beta
       
 
       Used for data that describes extinction.  The exponential distribution is a
@@ -50,7 +50,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ProbabilityDistributionType in v3-codesystems.xml
 
 
-   .. attribute:: Exponential
+   .. py:attribute:: Exponential
       
 
       Used to describe the quotient of two c2 random variables.  The F-distribution
@@ -61,7 +61,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ProbabilityDistributionType in v3-codesystems.xml
 
 
-   .. attribute:: F
+   .. py:attribute:: F
       
 
       The gamma-distribution used for data that is skewed and bounded to the right,
@@ -71,22 +71,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ProbabilityDistributionType in v3-codesystems.xml
 
 
-   .. attribute:: _gamma_
-      
-
-      The logarithmic normal distribution is used to transform skewed random
-      variable X into a normally distributed random variable U = log X. The log-
-      normal distribution can be specified with the properties mean m and standard
-      deviation s.  Note however that mean m and standard deviation s are the
-      parameters of the raw value distribution, not the transformed parameters of
-      the lognormal distribution that are conventionally referred to by the same
-      letters.  Those log-normal parameters mlog and slog relate to the mean m and
-      standard deviation s of the data value through slog2 = log (s2/m2 + 1) and
-      mlog = log m - slog2/2.
-      From: http://terminology.hl7.org/CodeSystem/v3-ProbabilityDistributionType in v3-codesystems.xml
-
-
-   .. attribute:: Log_normal
+   .. py:attribute:: Log_normal
       
 
       This is the well-known bell-shaped normal distribution.  Because of the
@@ -98,7 +83,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ProbabilityDistributionType in v3-codesystems.xml
 
 
-   .. attribute:: Normal_Gaussian_
+   .. py:attribute:: Normal_Gaussian_
       
 
       Used to describe the quotient of a normal random variable and the square root
@@ -108,7 +93,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ProbabilityDistributionType in v3-codesystems.xml
 
 
-   .. attribute:: T
+   .. py:attribute:: T
       
 
       The uniform distribution assigns a constant probability over the entire
@@ -120,7 +105,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ProbabilityDistributionType in v3-codesystems.xml
 
 
-   .. attribute:: Uniform
+   .. py:attribute:: Uniform
       
 
       Used to describe the sum of squares of random variables which occurs when a
@@ -132,61 +117,55 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ProbabilityDistributionType in v3-codesystems.xml
 
 
-   .. attribute:: ChiSquare
+   .. py:attribute:: ChiSquare
       
 
       From: http://hl7.org/fhir/ValueSet/probability-distribution-type in valuesets.xml
 
 
-   .. attribute:: Beta
+   .. py:attribute:: Beta
       
 
       From: http://hl7.org/fhir/ValueSet/probability-distribution-type in valuesets.xml
 
 
-   .. attribute:: Exponential
+   .. py:attribute:: Exponential
       
 
       From: http://hl7.org/fhir/ValueSet/probability-distribution-type in valuesets.xml
 
 
-   .. attribute:: F
+   .. py:attribute:: F
       
 
       From: http://hl7.org/fhir/ValueSet/probability-distribution-type in valuesets.xml
 
 
-   .. attribute:: _gamma_
+   .. py:attribute:: Log_normal
       
 
       From: http://hl7.org/fhir/ValueSet/probability-distribution-type in valuesets.xml
 
 
-   .. attribute:: Log_normal
+   .. py:attribute:: Normal_Gaussian_
       
 
       From: http://hl7.org/fhir/ValueSet/probability-distribution-type in valuesets.xml
 
 
-   .. attribute:: Normal_Gaussian_
+   .. py:attribute:: T
       
 
       From: http://hl7.org/fhir/ValueSet/probability-distribution-type in valuesets.xml
 
 
-   .. attribute:: T
+   .. py:attribute:: Uniform
       
 
       From: http://hl7.org/fhir/ValueSet/probability-distribution-type in valuesets.xml
 
 
-   .. attribute:: Uniform
-      
-
-      From: http://hl7.org/fhir/ValueSet/probability-distribution-type in valuesets.xml
-
-
-   .. attribute:: ChiSquare
+   .. py:attribute:: ChiSquare
       
 
       

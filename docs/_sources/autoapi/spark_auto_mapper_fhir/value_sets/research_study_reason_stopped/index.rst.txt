@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.research_study_reason_stopped`
-======================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.research_study_reason_stopped`
+=========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.research_study_reason_stopped
 
@@ -17,48 +17,48 @@ Classes
 
 
 
-.. class:: ResearchStudyReasonStoppedCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ResearchStudyReasonStoppedCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ResearchStudyReasonStopped
    From: http://terminology.hl7.org/CodeSystem/research-study-reason-stopped in valuesets.xml
        Codes for why the study ended prematurely.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/research-study-reason-stopped
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/research-study-reason-stopped
 
       
 
 
-.. class:: ResearchStudyReasonStoppedCodeValues
+.. py:class:: ResearchStudyReasonStoppedCodeValues
 
    The study prematurely ended because the accrual goal was met.
    From: http://terminology.hl7.org/CodeSystem/research-study-reason-stopped in valuesets.xml
 
-   .. attribute:: AccrualGoalMet
+   .. py:attribute:: AccrualGoalMet
       
 
       The study prematurely ended due to toxicity.
       From: http://terminology.hl7.org/CodeSystem/research-study-reason-stopped in valuesets.xml
 
 
-   .. attribute:: ClosedDueToToxicity
+   .. py:attribute:: ClosedDueToToxicity
       
 
       The study prematurely ended due to lack of study progress.
       From: http://terminology.hl7.org/CodeSystem/research-study-reason-stopped in valuesets.xml
 
 
-   .. attribute:: ClosedDueToLackOfStudyProgress
+   .. py:attribute:: ClosedDueToLackOfStudyProgress
       
 
       The study prematurely ended temporarily per study design.
       From: http://terminology.hl7.org/CodeSystem/research-study-reason-stopped in valuesets.xml
 
 
-   .. attribute:: TemporarilyClosedPerStudyDesign
+   .. py:attribute:: TemporarilyClosedPerStudyDesign
       
 
       

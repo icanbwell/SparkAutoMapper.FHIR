@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.goal_lifecycle_status`
-==============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.goal_lifecycle_status`
+=================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.goal_lifecycle_status
 
@@ -17,63 +17,63 @@ Classes
 
 
 
-.. class:: GoalLifecycleStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: GoalLifecycleStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    GoalLifecycleStatus
    From: http://hl7.org/fhir/goal-status in valuesets.xml
        Codes that reflect the current state of a goal and whether the goal is still
    being targeted.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/goal-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/goal-status
 
       
 
 
-.. class:: GoalLifecycleStatusCodeValues
+.. py:class:: GoalLifecycleStatusCodeValues
 
    A goal is proposed for this patient.
    From: http://hl7.org/fhir/goal-status in valuesets.xml
 
-   .. attribute:: Proposed
+   .. py:attribute:: Proposed
       
 
       A goal is planned for this patient.
       From: http://hl7.org/fhir/goal-status in valuesets.xml
 
 
-   .. attribute:: Planned
+   .. py:attribute:: Planned
       
 
       A proposed goal was accepted or acknowledged.
       From: http://hl7.org/fhir/goal-status in valuesets.xml
 
 
-   .. attribute:: Accepted
+   .. py:attribute:: Accepted
       
 
       The goal has been abandoned.
       From: http://hl7.org/fhir/goal-status in valuesets.xml
 
 
-   .. attribute:: Cancelled
+   .. py:attribute:: Cancelled
       
 
       The goal was entered in error and voided.
       From: http://hl7.org/fhir/goal-status in valuesets.xml
 
 
-   .. attribute:: EnteredInError
+   .. py:attribute:: EnteredInError
       
 
       A proposed goal was rejected.
       From: http://hl7.org/fhir/goal-status in valuesets.xml
 
 
-   .. attribute:: Rejected
+   .. py:attribute:: Rejected
       
 
       

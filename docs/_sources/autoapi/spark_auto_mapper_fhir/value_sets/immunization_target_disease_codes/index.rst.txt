@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.immunization_target_disease_codes`
-==========================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.immunization_target_disease_codes`
+=============================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.immunization_target_disease_codes
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: ImmunizationTargetDiseaseCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ImmunizationTargetDiseaseCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ImmunizationTargetDiseaseCodes
    From: http://hl7.org/fhir/ValueSet/immunization-target-disease in valuesets.xml
@@ -30,67 +30,14 @@ Classes
    This value set is provided as a suggestive example and includes the SNOMED CT
    concepts from the 64572001 (Disease) hierarchy.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://snomed.info/sct
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://snomed.info/sct
 
       
 
 
-.. class:: ImmunizationTargetDiseaseCodesCodeValues
+.. py:class:: ImmunizationTargetDiseaseCodesCodeValues
 
    From: http://hl7.org/fhir/ValueSet/immunization-target-disease in valuesets.xml
-
-   .. attribute:: _1857005
-      
-
-      From: http://hl7.org/fhir/ValueSet/immunization-target-disease in valuesets.xml
-
-
-   .. attribute:: _397430003
-      
-
-      From: http://hl7.org/fhir/ValueSet/immunization-target-disease in valuesets.xml
-
-
-   .. attribute:: _14189004
-      
-
-      From: http://hl7.org/fhir/ValueSet/immunization-target-disease in valuesets.xml
-
-
-   .. attribute:: _36989005
-      
-
-      From: http://hl7.org/fhir/ValueSet/immunization-target-disease in valuesets.xml
-
-
-   .. attribute:: _36653000
-      
-
-      From: http://hl7.org/fhir/ValueSet/immunization-target-disease in valuesets.xml
-
-
-   .. attribute:: _76902006
-      
-
-      From: http://hl7.org/fhir/ValueSet/immunization-target-disease in valuesets.xml
-
-
-   .. attribute:: _709410003
-      
-
-      From: http://hl7.org/fhir/ValueSet/immunization-target-disease in valuesets.xml
-
-
-   .. attribute:: _27836007
-      
-
-      From: http://hl7.org/fhir/ValueSet/immunization-target-disease in valuesets.xml
-
-
-   .. attribute:: _398102009
-      
-
-      
 
 

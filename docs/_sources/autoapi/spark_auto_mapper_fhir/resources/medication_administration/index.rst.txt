@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.resources.medication_administration`
-=================================================================
+:py:mod:`spark_auto_mapper_fhir.resources.medication_administration`
+====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.resources.medication_administration
 
@@ -16,10 +16,10 @@ Classes
 
 
 
-.. class:: MedicationAdministration(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.identifier.Identifier]] = None, instantiates: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.uri.FhirUri]] = None, partOf: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.medication_administration.MedicationAdministration, spark_auto_mapper_fhir.resources.procedure.Procedure)]]]] = None, status: spark_auto_mapper_fhir.value_sets.medication_administration_status_codes.MedicationAdministrationStatusCodesCode, statusReason: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.snomedct_reason_medication_not_given_codes.SNOMEDCTReasonMedicationNotGivenCodesCode]]] = None, category: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.medication_administration_category_codes.MedicationAdministrationCategoryCodesCode]] = None, medicationCodeableConcept: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.snomedct_medication_codes.SNOMEDCTMedicationCodesCode]] = None, medicationReference: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.medication.Medication]] = None, subject: spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.group.Group)]], context: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.encounter.Encounter, spark_auto_mapper_fhir.resources.episode_of_care.EpisodeOfCare)]]] = None, supportingInformation: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.resource.Resource]]] = None, effectiveDateTime: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, effectivePeriod: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, performer: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.medication_administration_performer.MedicationAdministrationPerformer]] = None, reasonCode: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.reason_medication_given_codes.ReasonMedicationGivenCodesCode]]] = None, reasonReference: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.condition.Condition, spark_auto_mapper_fhir.resources.observation.Observation, spark_auto_mapper_fhir.resources.diagnostic_report.DiagnosticReport)]]]] = None, request: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.medication_request.MedicationRequest]] = None, device: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.device.Device]]] = None, note: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.annotation.Annotation]] = None, dosage: Optional[spark_auto_mapper_fhir.backbone_elements.medication_administration_dosage.MedicationAdministrationDosage] = None, eventHistory: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.provenance.Provenance]]] = None)
 
+.. py:class:: MedicationAdministration(*, id_ = None, meta = None, implicitRules = None, language = None, text = None, contained = None, extension = None, modifierExtension = None, identifier = None, instantiates = None, partOf = None, status, statusReason = None, category = None, medicationCodeableConcept = None, medicationReference = None, subject, context = None, supportingInformation = None, effectiveDateTime = None, effectivePeriod = None, performer = None, reasonCode = None, reasonReference = None, request = None, device = None, note = None, dosage = None, eventHistory = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
 
    MedicationAdministration
    medicationadministration.xsd
@@ -30,7 +30,88 @@ Classes
    practitioner.
        If the element is present, it must have either a @value, an @id, or extensions
 
-   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+       Describes the event of a patient consuming or otherwise being administered a
+   medication.  This may be as simple as swallowing a tablet or it may be a long
+   running infusion.  Related resources tie this event to the authorizing
+   prescription, and the specific encounter between patient and health care
+   practitioner.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+       :param id_: The logical id of the resource, as used in the URL for the resource. Once
+   assigned, this value never changes.
+       :param meta: The metadata about the resource. This is content that is maintained by the
+   infrastructure. Changes to the content might not always be associated with
+   version changes to the resource.
+       :param implicitRules: A reference to a set of rules that were followed when the resource was
+   constructed, and which must be understood when processing the content. Often,
+   this is a reference to an implementation guide that defines the special rules
+   along with other profiles etc.
+       :param language: The base language in which the resource is written.
+       :param text: A human-readable narrative that contains a summary of the resource and can be
+   used to represent the content of the resource to a human. The narrative need
+   not encode all the structured data, but is required to contain sufficient
+   detail to make it "clinically safe" for a human to just read the narrative.
+   Resource definitions may define what content should be represented in the
+   narrative to ensure clinical safety.
+       :param contained: These resources do not have an independent existence apart from the resource
+   that contains them - they cannot be identified independently, and nor can they
+   have their own independent transaction scope.
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the resource. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param modifierExtension: May be used to represent additional information that is not part of the basic
+   definition of the resource and that modifies the understanding of the element
+   that contains it and/or the understanding of the containing element's
+   descendants. Usually modifier elements provide negation or qualification. To
+   make the use of extensions safe and manageable, there is a strict set of
+   governance applied to the definition and use of extensions. Though any
+   implementer is allowed to define an extension, there is a set of requirements
+   that SHALL be met as part of the definition of the extension. Applications
+   processing a resource are required to check for modifier extensions.
+
+   Modifier extensions SHALL NOT change the meaning of any elements on Resource
+   or DomainResource (including cannot change the meaning of modifierExtension
+   itself).
+       :param identifier: Identifiers associated with this Medication Administration that are defined by
+   business processes and/or used to refer to it when a direct URL reference to
+   the resource itself is not appropriate. They are business identifiers assigned
+   to this resource by the performer or other systems and remain constant as the
+   resource is updated and propagates from server to server.
+       :param instantiates: A protocol, guideline, orderset, or other definition that was adhered to in
+   whole or in part by this event.
+       :param partOf: A larger event of which this particular event is a component or step.
+       :param status: Will generally be set to show that the administration has been completed.  For
+   some long running administrations such as infusions, it is possible for an
+   administration to be started but not completed or it may be paused while some
+   other process is under way.
+       :param statusReason: A code indicating why the administration was not performed.
+       :param category: Indicates where the medication is expected to be consumed or administered.
+       :param medicationCodeableConcept: None
+       :param medicationReference: None
+       :param subject: The person or animal or group receiving the medication.
+       :param context: The visit, admission, or other contact between patient and health care
+   provider during which the medication administration was performed.
+       :param supportingInformation: Additional information (for example, patient height and weight) that supports
+   the administration of the medication.
+       :param effectiveDateTime: None
+       :param effectivePeriod: None
+       :param performer: Indicates who or what performed the medication administration and how they
+   were involved.
+       :param reasonCode: A code indicating why the medication was given.
+       :param reasonReference: Condition or observation that supports why the medication was administered.
+       :param request: The original request, instruction or authority to perform the administration.
+       :param device: The device used in administering the medication to the patient.  For example,
+   a particular infusion pump.
+       :param note: Extra information about the medication administration that is not conveyed by
+   the other attributes.
+       :param dosage: Describes the medication dosage information details e.g. dose, rate, site,
+   route, etc.
+       :param eventHistory: A summary of the events of interest that have occurred, such as when the
+   administration was verified.
+
+   .. py:method:: get_schema(self, include_extension)
 
 
 

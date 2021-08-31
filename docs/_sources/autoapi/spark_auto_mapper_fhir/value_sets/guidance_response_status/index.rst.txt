@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.guidance_response_status`
-=================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.guidance_response_status`
+====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.guidance_response_status
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: GuidanceResponseStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: GuidanceResponseStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    GuidanceResponseStatus
    From: http://hl7.org/fhir/guidance-response-status in valuesets.xml
        The status of a guidance response.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/guidance-response-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/guidance-response-status
 
       
 
 
-.. class:: GuidanceResponseStatusCodeValues
+.. py:class:: GuidanceResponseStatusCodeValues
 
    The request was processed successfully.
    From: http://hl7.org/fhir/guidance-response-status in valuesets.xml
 
-   .. attribute:: Success
+   .. py:attribute:: Success
       
 
       The request was processed successfully, but more data may result in a more
@@ -45,7 +45,7 @@ Classes
       From: http://hl7.org/fhir/guidance-response-status in valuesets.xml
 
 
-   .. attribute:: DataRequested
+   .. py:attribute:: DataRequested
       
 
       The request was processed, but more data is required to complete the
@@ -53,28 +53,28 @@ Classes
       From: http://hl7.org/fhir/guidance-response-status in valuesets.xml
 
 
-   .. attribute:: DataRequired
+   .. py:attribute:: DataRequired
       
 
       The request is currently being processed.
       From: http://hl7.org/fhir/guidance-response-status in valuesets.xml
 
 
-   .. attribute:: InProgress
+   .. py:attribute:: InProgress
       
 
       The request was not processed successfully.
       From: http://hl7.org/fhir/guidance-response-status in valuesets.xml
 
 
-   .. attribute:: Failure
+   .. py:attribute:: Failure
       
 
       The response was entered in error.
       From: http://hl7.org/fhir/guidance-response-status in valuesets.xml
 
 
-   .. attribute:: EnteredInError
+   .. py:attribute:: EnteredInError
       
 
       

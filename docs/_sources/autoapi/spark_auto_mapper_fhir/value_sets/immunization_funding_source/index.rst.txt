@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.immunization_funding_source`
-====================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.immunization_funding_source`
+=======================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.immunization_funding_source
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: ImmunizationFundingSourceCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ImmunizationFundingSourceCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ImmunizationFundingSource
    From: http://terminology.hl7.org/CodeSystem/immunization-funding-source in valuesets.xml
@@ -29,25 +29,25 @@ Classes
    support describing the source of the vaccine administered. This value set is
    provided as a suggestive example.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/immunization-funding-source
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/immunization-funding-source
 
       
 
 
-.. class:: ImmunizationFundingSourceCodeValues
+.. py:class:: ImmunizationFundingSourceCodeValues
 
    The vaccine was purchased with private funds.
    From: http://terminology.hl7.org/CodeSystem/immunization-funding-source in valuesets.xml
 
-   .. attribute:: Private
+   .. py:attribute:: Private
       
 
       The vaccine was purchased with public funds.
       From: http://terminology.hl7.org/CodeSystem/immunization-funding-source in valuesets.xml
 
 
-   .. attribute:: Public
+   .. py:attribute:: Public
       
 
       

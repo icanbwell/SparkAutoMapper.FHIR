@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.endpoint_payload_type`
-==============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.endpoint_payload_type`
+=================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.endpoint_payload_type
 
@@ -17,23 +17,23 @@ Classes
 
 
 
-.. class:: EndpointPayloadTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: EndpointPayloadTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    EndpointPayloadType
    From: http://terminology.hl7.org/CodeSystem/endpoint-payload-type in valuesets.xml
        This is an example value set defined by the FHIR project, that could be used
    to represent possible payload document types.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/endpoint-payload-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/endpoint-payload-type
 
       
 
 
-.. class:: EndpointPayloadTypeCodeValues
+.. py:class:: EndpointPayloadTypeCodeValues
 
    Any payload type can be used with this endpoint, it is either a payload
    agnostic infrastructure (such as a storage repository), or some other type of
@@ -41,7 +41,7 @@ Classes
    available
    From: http://terminology.hl7.org/CodeSystem/endpoint-payload-type in valuesets.xml
 
-   .. attribute:: Any
+   .. py:attribute:: Any
       
 
       This endpoint does not require any content to be sent; simply connecting to
@@ -51,7 +51,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/endpoint-payload-type in valuesets.xml
 
 
-   .. attribute:: None_
+   .. py:attribute:: None_
       
 
       

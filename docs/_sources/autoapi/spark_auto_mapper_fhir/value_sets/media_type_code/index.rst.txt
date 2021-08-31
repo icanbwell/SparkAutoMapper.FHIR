@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.media_type_code`
-========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.media_type_code`
+===========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.media_type_code
 
@@ -17,82 +17,23 @@ Classes
 
 
 
-.. class:: MediaTypeCodeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: MediaTypeCodeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    MediaTypeCode
    From: http://hl7.org/fhir/ValueSet/dicm-405-mediatype in valuesets.xml
        Media Type Code
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://dicom.nema.org/resources/ontology/DCM
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://dicom.nema.org/resources/ontology/DCM
 
       
 
 
-.. class:: MediaTypeCodeCodeValues
+.. py:class:: MediaTypeCodeCodeValues
 
    From: http://hl7.org/fhir/ValueSet/dicm-405-mediatype in valuesets.xml
-
-   .. attribute:: _110030
-      
-
-      From: http://hl7.org/fhir/ValueSet/dicm-405-mediatype in valuesets.xml
-
-
-   .. attribute:: _110031
-      
-
-      From: http://hl7.org/fhir/ValueSet/dicm-405-mediatype in valuesets.xml
-
-
-   .. attribute:: _110032
-      
-
-      From: http://hl7.org/fhir/ValueSet/dicm-405-mediatype in valuesets.xml
-
-
-   .. attribute:: _110033
-      
-
-      From: http://hl7.org/fhir/ValueSet/dicm-405-mediatype in valuesets.xml
-
-
-   .. attribute:: _110034
-      
-
-      From: http://hl7.org/fhir/ValueSet/dicm-405-mediatype in valuesets.xml
-
-
-   .. attribute:: _110035
-      
-
-      From: http://hl7.org/fhir/ValueSet/dicm-405-mediatype in valuesets.xml
-
-
-   .. attribute:: _110036
-      
-
-      From: http://hl7.org/fhir/ValueSet/dicm-405-mediatype in valuesets.xml
-
-
-   .. attribute:: _110037
-      
-
-      From: http://hl7.org/fhir/ValueSet/dicm-405-mediatype in valuesets.xml
-
-
-   .. attribute:: _110010
-      
-
-      From: http://hl7.org/fhir/ValueSet/dicm-405-mediatype in valuesets.xml
-
-
-   .. attribute:: _110038
-      
-
-      
 
 

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.participation_status`
-=============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.participation_status`
+================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.participation_status
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: ParticipationStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ParticipationStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ParticipationStatus
    From: http://hl7.org/fhir/participationstatus in valuesets.xml
        The Participation status of an appointment.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/participationstatus
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/participationstatus
 
       
 
 
-.. class:: ParticipationStatusCodeValues
+.. py:class:: ParticipationStatusCodeValues
 
    The participant has accepted the appointment.
    From: http://hl7.org/fhir/participationstatus in valuesets.xml
 
-   .. attribute:: Accepted
+   .. py:attribute:: Accepted
       
 
       The participant has declined the appointment and will not participate in the
@@ -45,7 +45,7 @@ Classes
       From: http://hl7.org/fhir/participationstatus in valuesets.xml
 
 
-   .. attribute:: Declined
+   .. py:attribute:: Declined
       
 
       The participant has  tentatively accepted the appointment. This could be
@@ -54,7 +54,7 @@ Classes
       From: http://hl7.org/fhir/participationstatus in valuesets.xml
 
 
-   .. attribute:: Tentative
+   .. py:attribute:: Tentative
       
 
       The participant needs to indicate if they accept the appointment by changing
@@ -62,7 +62,7 @@ Classes
       From: http://hl7.org/fhir/participationstatus in valuesets.xml
 
 
-   .. attribute:: NeedsAction
+   .. py:attribute:: NeedsAction
       
 
       

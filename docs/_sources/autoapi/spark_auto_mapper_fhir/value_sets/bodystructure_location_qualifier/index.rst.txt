@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.bodystructure_location_qualifier`
-=========================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.bodystructure_location_qualifier`
+============================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.bodystructure_location_qualifier
 
@@ -17,92 +17,92 @@ Classes
 
 
 
-.. class:: BodystructureLocationQualifierCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: BodystructureLocationQualifierCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    BodystructureLocationQualifier
    From: http://hl7.org/fhir/ValueSet/bodystructure-relative-location in valuesets.xml
        SNOMED-CT concepts modifying the anatomic location
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://snomed.info/sct
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://snomed.info/sct
 
       
 
 
-.. class:: BodystructureLocationQualifierCodeValues
+.. py:class:: BodystructureLocationQualifierCodeValues
 
    From: http://hl7.org/fhir/ValueSet/bodystructure-relative-location in valuesets.xml
 
-   .. attribute:: UnilateralLeft
+   .. py:attribute:: UnilateralLeft
       
 
       From: http://hl7.org/fhir/ValueSet/bodystructure-relative-location in valuesets.xml
 
 
-   .. attribute:: UnilateralRight
+   .. py:attribute:: UnilateralRight
       
 
       From: http://hl7.org/fhir/ValueSet/bodystructure-relative-location in valuesets.xml
 
 
-   .. attribute:: Bilateral
+   .. py:attribute:: Bilateral
       
 
       From: http://hl7.org/fhir/ValueSet/bodystructure-relative-location in valuesets.xml
 
 
-   .. attribute:: Upper
+   .. py:attribute:: Upper
       
 
       From: http://hl7.org/fhir/ValueSet/bodystructure-relative-location in valuesets.xml
 
 
-   .. attribute:: Lower
+   .. py:attribute:: Lower
       
 
       From: http://hl7.org/fhir/ValueSet/bodystructure-relative-location in valuesets.xml
 
 
-   .. attribute:: Medial
+   .. py:attribute:: Medial
       
 
       From: http://hl7.org/fhir/ValueSet/bodystructure-relative-location in valuesets.xml
 
 
-   .. attribute:: Lateral
+   .. py:attribute:: Lateral
       
 
       From: http://hl7.org/fhir/ValueSet/bodystructure-relative-location in valuesets.xml
 
 
-   .. attribute:: Superior
+   .. py:attribute:: Superior
       
 
       From: http://hl7.org/fhir/ValueSet/bodystructure-relative-location in valuesets.xml
 
 
-   .. attribute:: Inferior
+   .. py:attribute:: Inferior
       
 
       From: http://hl7.org/fhir/ValueSet/bodystructure-relative-location in valuesets.xml
 
 
-   .. attribute:: Posterior
+   .. py:attribute:: Posterior
       
 
       From: http://hl7.org/fhir/ValueSet/bodystructure-relative-location in valuesets.xml
 
 
-   .. attribute:: Below
+   .. py:attribute:: Below
       
 
       From: http://hl7.org/fhir/ValueSet/bodystructure-relative-location in valuesets.xml
 
 
-   .. attribute:: Above
+   .. py:attribute:: Above
       
 
       

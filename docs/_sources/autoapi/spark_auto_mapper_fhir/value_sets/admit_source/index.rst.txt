@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.admit_source`
-=====================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.admit_source`
+========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.admit_source
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: AdmitSourceCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: AdmitSourceCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    AdmitSource
    From: http://terminology.hl7.org/CodeSystem/admit-source in valuesets.xml
        This value set defines a set of codes that can be used to indicate from where
    the patient came in.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/admit-source
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/admit-source
 
       
 
 
-.. class:: AdmitSourceCodeValues
+.. py:class:: AdmitSourceCodeValues
 
    The Patient has been transferred from another hospital for this encounter.
    From: http://terminology.hl7.org/CodeSystem/admit-source in valuesets.xml
 
-   .. attribute:: TransferredFromOtherHospital
+   .. py:attribute:: TransferredFromOtherHospital
       
 
       The patient has been transferred from the emergency department within the
@@ -46,7 +46,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/admit-source in valuesets.xml
 
 
-   .. attribute:: FromAccident_emergencyDepartment
+   .. py:attribute:: FromAccident_emergencyDepartment
       
 
       The patient has been transferred from an outpatient department within the
@@ -54,7 +54,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/admit-source in valuesets.xml
 
 
-   .. attribute:: FromOutpatientDepartment
+   .. py:attribute:: FromOutpatientDepartment
       
 
       The patient is a newborn and the encounter will track the baby related
@@ -63,14 +63,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/admit-source in valuesets.xml
 
 
-   .. attribute:: BornInHospital
+   .. py:attribute:: BornInHospital
       
 
       The patient has been admitted due to a referred from a General Practitioner.
       From: http://terminology.hl7.org/CodeSystem/admit-source in valuesets.xml
 
 
-   .. attribute:: GeneralPractitionerReferral
+   .. py:attribute:: GeneralPractitionerReferral
       
 
       The patient has been admitted due to a referred from a Specialist (as opposed
@@ -78,35 +78,35 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/admit-source in valuesets.xml
 
 
-   .. attribute:: MedicalPractitioner_physicianReferral
+   .. py:attribute:: MedicalPractitioner_physicianReferral
       
 
       The patient has been transferred from a nursing home.
       From: http://terminology.hl7.org/CodeSystem/admit-source in valuesets.xml
 
 
-   .. attribute:: FromNursingHome
+   .. py:attribute:: FromNursingHome
       
 
       The patient has been transferred from a psychiatric facility.
       From: http://terminology.hl7.org/CodeSystem/admit-source in valuesets.xml
 
 
-   .. attribute:: FromPsychiatricHospital
+   .. py:attribute:: FromPsychiatricHospital
       
 
       The patient has been transferred from a rehabilitation facility or clinic.
       From: http://terminology.hl7.org/CodeSystem/admit-source in valuesets.xml
 
 
-   .. attribute:: FromRehabilitationFacility
+   .. py:attribute:: FromRehabilitationFacility
       
 
       The patient has been admitted from a source otherwise not specified here.
       From: http://terminology.hl7.org/CodeSystem/admit-source in valuesets.xml
 
 
-   .. attribute:: Other
+   .. py:attribute:: Other
       
 
       

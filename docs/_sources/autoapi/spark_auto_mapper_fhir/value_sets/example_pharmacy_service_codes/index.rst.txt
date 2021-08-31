@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.example_pharmacy_service_codes`
-=======================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.example_pharmacy_service_codes`
+==========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.example_pharmacy_service_codes
 
@@ -17,62 +17,62 @@ Classes
 
 
 
-.. class:: ExamplePharmacyServiceCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ExamplePharmacyServiceCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ExamplePharmacyServiceCodes
    From: http://hl7.org/fhir/ex-pharmaservice in valuesets.xml
        This value set includes a smattering of Pharmacy Service codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/ex-pharmaservice
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/ex-pharmaservice
 
       
 
 
-.. class:: ExamplePharmacyServiceCodesCodeValues
+.. py:class:: ExamplePharmacyServiceCodesCodeValues
 
    Smoking cessation
    From: http://hl7.org/fhir/ex-pharmaservice in valuesets.xml
 
-   .. attribute:: SmokingCessation
+   .. py:attribute:: SmokingCessation
       
 
       Flu Shot
       From: http://hl7.org/fhir/ex-pharmaservice in valuesets.xml
 
 
-   .. attribute:: FluShot
+   .. py:attribute:: FluShot
       
 
       The wholesale price of the medication.
       From: http://hl7.org/fhir/ex-pharmaservice in valuesets.xml
 
 
-   .. attribute:: DrugCost
+   .. py:attribute:: DrugCost
       
 
       The additional cost assessed on the drug.
       From: http://hl7.org/fhir/ex-pharmaservice in valuesets.xml
 
 
-   .. attribute:: Markup
+   .. py:attribute:: Markup
       
 
       The professional fee charged for dispensing the product or service.
       From: http://hl7.org/fhir/ex-pharmaservice in valuesets.xml
 
 
-   .. attribute:: DispenseFee
+   .. py:attribute:: DispenseFee
       
 
       The professional fee charged for compounding the medication.
       From: http://hl7.org/fhir/ex-pharmaservice in valuesets.xml
 
 
-   .. attribute:: CompoundingFee
+   .. py:attribute:: CompoundingFee
       
 
       

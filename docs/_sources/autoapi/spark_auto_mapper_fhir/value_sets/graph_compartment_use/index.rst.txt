@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.graph_compartment_use`
-==============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.graph_compartment_use`
+=================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.graph_compartment_use
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: GraphCompartmentUseCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: GraphCompartmentUseCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    GraphCompartmentUse
    From: http://hl7.org/fhir/graph-compartment-use in valuesets.xml
        Defines how a compartment rule is used.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/graph-compartment-use
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/graph-compartment-use
 
       
 
 
-.. class:: GraphCompartmentUseCodeValues
+.. py:class:: GraphCompartmentUseCodeValues
 
    This compartment rule is a condition for whether the rule applies.
    From: http://hl7.org/fhir/graph-compartment-use in valuesets.xml
 
-   .. attribute:: Condition
+   .. py:attribute:: Condition
       
 
       This compartment rule is enforced on any relationships that meet the
@@ -45,7 +45,7 @@ Classes
       From: http://hl7.org/fhir/graph-compartment-use in valuesets.xml
 
 
-   .. attribute:: Requirement
+   .. py:attribute:: Requirement
       
 
       

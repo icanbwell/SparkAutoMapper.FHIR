@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.act_class_document`
-===========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.act_class_document`
+==============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.act_class_document
 
@@ -17,23 +17,23 @@ Classes
 
 
 
-.. class:: ActClassDocument(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ActClassDocument(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.ActClassDocument
    From: http://terminology.hl7.org/ValueSet/v3-ActClassDocument in v3-codesystems.xml
         Specialization of Act to add the characteristics unique to document
    management services.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ActClass
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-ActClass
 
       
 
 
-.. class:: ActClassDocumentValues
+.. py:class:: ActClassDocumentValues
 
    A record of something that is being done, has been done, can be done, or is
    intended or requested to be done.
@@ -138,121 +138,121 @@ Classes
    completeness of the information.
    From: http://terminology.hl7.org/CodeSystem/v3-ActClass in v3-codesystems.xml
 
-   .. attribute:: Act
+   .. py:attribute:: Act
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActClass in v3-codesystems.xml
 
 
-   .. attribute:: DOCCNTNT
+   .. py:attribute:: DOCCNTNT
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActClass in v3-codesystems.xml
 
 
-   .. attribute:: DOCLIST
+   .. py:attribute:: DOCLIST
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActClass in v3-codesystems.xml
 
 
-   .. attribute:: DOCLSTITM
+   .. py:attribute:: DOCLSTITM
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActClass in v3-codesystems.xml
 
 
-   .. attribute:: DOCPARA
+   .. py:attribute:: DOCPARA
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActClass in v3-codesystems.xml
 
 
-   .. attribute:: DOCTBL
+   .. py:attribute:: DOCTBL
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActClass in v3-codesystems.xml
 
 
-   .. attribute:: LINKHTML
+   .. py:attribute:: LINKHTML
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActClass in v3-codesystems.xml
 
 
-   .. attribute:: LOCALATTR
+   .. py:attribute:: LOCALATTR
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActClass in v3-codesystems.xml
 
 
-   .. attribute:: LOCALMRKP
+   .. py:attribute:: LOCALMRKP
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActClass in v3-codesystems.xml
 
 
-   .. attribute:: Ordered
+   .. py:attribute:: Ordered
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActClass in v3-codesystems.xml
 
 
-   .. attribute:: REFR
+   .. py:attribute:: REFR
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActClass in v3-codesystems.xml
 
 
-   .. attribute:: TBLCOL
+   .. py:attribute:: TBLCOL
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActClass in v3-codesystems.xml
 
 
-   .. attribute:: TBLCOLGP
+   .. py:attribute:: TBLCOLGP
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActClass in v3-codesystems.xml
 
 
-   .. attribute:: TBLDATA
+   .. py:attribute:: TBLDATA
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActClass in v3-codesystems.xml
 
 
-   .. attribute:: TBLHDR
+   .. py:attribute:: TBLHDR
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActClass in v3-codesystems.xml
 
 
-   .. attribute:: TBLROW
+   .. py:attribute:: TBLROW
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActClass in v3-codesystems.xml
 
 
-   .. attribute:: Tbody
+   .. py:attribute:: Tbody
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActClass in v3-codesystems.xml
 
 
-   .. attribute:: Tfoot
+   .. py:attribute:: Tfoot
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActClass in v3-codesystems.xml
 
 
-   .. attribute:: Thead
+   .. py:attribute:: Thead
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActClass in v3-codesystems.xml
 
 
-   .. attribute:: Unordered
+   .. py:attribute:: Unordered
       
 
       

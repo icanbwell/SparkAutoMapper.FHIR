@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.jurisdiction_value_set`
-===============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.jurisdiction_value_set`
+==================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.jurisdiction_value_set
 
@@ -16,10 +16,10 @@ Classes
 
 
 
-.. class:: JurisdictionValueSetCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: JurisdictionValueSetCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    Jurisdiction ValueSet
    From: http://hl7.org/fhir/ValueSet/jurisdiction in valuesets.xml
@@ -31,20 +31,20 @@ Classes
    for "supra-national" regions are from    [UN Standard country or area codes
    for statistical use (M49)](http://unstats.un.org/unsd/methods/m49/m49.htm).
 
-   .. attribute:: codeset_m49_htm
-      :annotation: :FhirUri = http://unstats.un.org/unsd/methods/m49/m49.htm
+   .. py:attribute:: codeset_m49_htm
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://unstats.un.org/unsd/methods/m49/m49.htm
 
       urn:iso:std:iso:3166:-2
 
 
-   .. attribute:: codeset_urn_iso_std_iso_3166__2
-      :annotation: :FhirUri = urn:iso:std:iso:3166:-2
+   .. py:attribute:: codeset_urn_iso_std_iso_3166__2
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = urn:iso:std:iso:3166:-2
 
       urn:iso:std:iso:3166
 
 
-   .. attribute:: codeset_urn_iso_std_iso_3166
-      :annotation: :FhirUri = urn:iso:std:iso:3166
+   .. py:attribute:: codeset_urn_iso_std_iso_3166
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = urn:iso:std:iso:3166
 
       
 

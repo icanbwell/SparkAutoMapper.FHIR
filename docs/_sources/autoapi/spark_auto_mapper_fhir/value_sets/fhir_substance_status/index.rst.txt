@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.fhir_substance_status`
-==============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.fhir_substance_status`
+=================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.fhir_substance_status
 
@@ -17,41 +17,41 @@ Classes
 
 
 
-.. class:: FHIRSubstanceStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: FHIRSubstanceStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    FHIRSubstanceStatus
    From: http://hl7.org/fhir/substance-status in valuesets.xml
        A code to indicate if the substance is actively used.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/substance-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/substance-status
 
       
 
 
-.. class:: FHIRSubstanceStatusCodeValues
+.. py:class:: FHIRSubstanceStatusCodeValues
 
    The substance is considered for use or reference.
    From: http://hl7.org/fhir/substance-status in valuesets.xml
 
-   .. attribute:: Active
+   .. py:attribute:: Active
       
 
       The substance is considered for reference, but not for use.
       From: http://hl7.org/fhir/substance-status in valuesets.xml
 
 
-   .. attribute:: Inactive
+   .. py:attribute:: Inactive
       
 
       The substance was entered in error.
       From: http://hl7.org/fhir/substance-status in valuesets.xml
 
 
-   .. attribute:: EnteredInError
+   .. py:attribute:: EnteredInError
       
 
       

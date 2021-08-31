@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.icd_10_codes`
-=====================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.icd_10_codes`
+========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.icd_10_codes
 
@@ -17,62 +17,62 @@ Classes
 
 
 
-.. class:: ICD_10CodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ICD_10CodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ICD-10Codes
    From: http://hl7.org/fhir/ValueSet/icd-10 in valuesets.xml
        This value set includes sample ICD-10 codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/sid/icd-10
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/sid/icd-10
 
       
 
 
-.. class:: ICD_10CodesCodeValues
+.. py:class:: ICD_10CodesCodeValues
 
    From: http://hl7.org/fhir/ValueSet/icd-10 in valuesets.xml
 
-   .. attribute:: DIAG_1
+   .. py:attribute:: DIAG_1
       
 
       From: http://hl7.org/fhir/ValueSet/icd-10 in valuesets.xml
 
 
-   .. attribute:: DIAG_1a
+   .. py:attribute:: DIAG_1a
       
 
       From: http://hl7.org/fhir/ValueSet/icd-10 in valuesets.xml
 
 
-   .. attribute:: DIAG_2
+   .. py:attribute:: DIAG_2
       
 
       From: http://hl7.org/fhir/ValueSet/icd-10 in valuesets.xml
 
 
-   .. attribute:: DIAG_3
+   .. py:attribute:: DIAG_3
       
 
       From: http://hl7.org/fhir/ValueSet/icd-10 in valuesets.xml
 
 
-   .. attribute:: DIAG_4
+   .. py:attribute:: DIAG_4
       
 
       From: http://hl7.org/fhir/ValueSet/icd-10 in valuesets.xml
 
 
-   .. attribute:: DIAG_5
+   .. py:attribute:: DIAG_5
       
 
       From: http://hl7.org/fhir/ValueSet/icd-10 in valuesets.xml
 
 
-   .. attribute:: DIAG_6
+   .. py:attribute:: DIAG_6
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.entity_code`
-====================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.entity_code`
+=======================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.entity_code
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: EntityCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: EntityCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.EntityCode
    From: http://terminology.hl7.org/ValueSet/v3-EntityCode in v3-codesystems.xml
          OpenIssue:
    Missing description.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-EntityCode
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-EntityCode
 
       
 
 
-.. class:: EntityCodeValues
+.. py:class:: EntityCodeValues
 
    Types of Material for EntityClass "MAT"
    From: http://terminology.hl7.org/CodeSystem/v3-EntityCode in v3-codesystems.xml
 
-   .. attribute:: MaterialEntityClassType
+   .. py:attribute:: MaterialEntityClassType
       
 
       Indicates types of allergy and intolerance agents which are non-drugs.  (E.g.
@@ -46,21 +46,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-EntityCode in v3-codesystems.xml
 
 
-   .. attribute:: NonDrugAgentEntity
+   .. py:attribute:: NonDrugAgentEntity
       
 
       Further classifies entities of classCode ORG.
       From: http://terminology.hl7.org/CodeSystem/v3-EntityCode in v3-codesystems.xml
 
 
-   .. attribute:: OrganizationEntityType
+   .. py:attribute:: OrganizationEntityType
       
 
       Types of places for EntityClass "PLC"
       From: http://terminology.hl7.org/CodeSystem/v3-EntityCode in v3-codesystems.xml
 
 
-   .. attribute:: PlaceEntityType
+   .. py:attribute:: PlaceEntityType
       
 
       Codes to characterize a Resource Group using categories that typify its
@@ -73,7 +73,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-EntityCode in v3-codesystems.xml
 
 
-   .. attribute:: ResourceGroupEntityType
+   .. py:attribute:: ResourceGroupEntityType
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.medication_administration_category_codes`
-=================================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.medication_administration_category_codes`
+====================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.medication_administration_category_codes
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: MedicationAdministrationCategoryCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: MedicationAdministrationCategoryCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    MedicationAdministration Category Codes
    From: http://terminology.hl7.org/CodeSystem/medication-admin-category in valuesets.xml
        MedicationAdministration Category Codes
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/medication-admin-category
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/medication-admin-category
 
       
 
 
-.. class:: MedicationAdministrationCategoryCodesCodeValues
+.. py:class:: MedicationAdministrationCategoryCodesCodeValues
 
    Includes administrations in an inpatient or acute care setting
    From: http://terminology.hl7.org/CodeSystem/medication-admin-category in valuesets.xml
 
-   .. attribute:: Inpatient
+   .. py:attribute:: Inpatient
       
 
       Includes administrations in an outpatient setting (for example, Emergency
@@ -45,7 +45,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/medication-admin-category in valuesets.xml
 
 
-   .. attribute:: Outpatient
+   .. py:attribute:: Outpatient
       
 
       Includes administrations by the patient in their home (this would include long
@@ -53,7 +53,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/medication-admin-category in valuesets.xml
 
 
-   .. attribute:: Community
+   .. py:attribute:: Community
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.measure_data_usage`
-===========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.measure_data_usage`
+==============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.measure_data_usage
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: MeasureDataUsageCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: MeasureDataUsageCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    MeasureDataUsage
    From: http://terminology.hl7.org/CodeSystem/measure-data-usage in valuesets.xml
        The intended usage for supplemental data elements in the measure.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/measure-data-usage
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/measure-data-usage
 
       
 
 
-.. class:: MeasureDataUsageCodeValues
+.. py:class:: MeasureDataUsageCodeValues
 
    The data is intended to be provided as additional information alongside the
    measure results.
    From: http://terminology.hl7.org/CodeSystem/measure-data-usage in valuesets.xml
 
-   .. attribute:: SupplementalData
+   .. py:attribute:: SupplementalData
       
 
       The data is intended to be used to calculate and apply a risk adjustment model
@@ -46,7 +46,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/measure-data-usage in valuesets.xml
 
 
-   .. attribute:: RiskAdjustmentFactor
+   .. py:attribute:: RiskAdjustmentFactor
       
 
       

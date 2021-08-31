@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.task_status`
-====================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.task_status`
+=======================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.task_status
 
@@ -17,34 +17,34 @@ Classes
 
 
 
-.. class:: TaskStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: TaskStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    TaskStatus
    From: http://hl7.org/fhir/task-status in valuesets.xml
        The current status of the task.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/task-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/task-status
 
       
 
 
-.. class:: TaskStatusCodeValues
+.. py:class:: TaskStatusCodeValues
 
    The task is not yet ready to be acted upon.
    From: http://hl7.org/fhir/task-status in valuesets.xml
 
-   .. attribute:: Draft
+   .. py:attribute:: Draft
       
 
       The task is ready to be acted upon and action is sought.
       From: http://hl7.org/fhir/task-status in valuesets.xml
 
 
-   .. attribute:: Requested
+   .. py:attribute:: Requested
       
 
       A potential performer has claimed ownership of the task and is evaluating
@@ -52,7 +52,7 @@ Classes
       From: http://hl7.org/fhir/task-status in valuesets.xml
 
 
-   .. attribute:: Received
+   .. py:attribute:: Received
       
 
       The potential performer has agreed to execute the task but has not yet started
@@ -60,7 +60,7 @@ Classes
       From: http://hl7.org/fhir/task-status in valuesets.xml
 
 
-   .. attribute:: Accepted
+   .. py:attribute:: Accepted
       
 
       The potential performer who claimed ownership of the task has decided not to
@@ -68,7 +68,7 @@ Classes
       From: http://hl7.org/fhir/task-status in valuesets.xml
 
 
-   .. attribute:: Rejected
+   .. py:attribute:: Rejected
       
 
       The task is ready to be performed, but no action has yet been taken.  Used in
@@ -77,42 +77,42 @@ Classes
       From: http://hl7.org/fhir/task-status in valuesets.xml
 
 
-   .. attribute:: Ready
+   .. py:attribute:: Ready
       
 
       The task was not completed.
       From: http://hl7.org/fhir/task-status in valuesets.xml
 
 
-   .. attribute:: Cancelled
+   .. py:attribute:: Cancelled
       
 
       The task has been started but is not yet complete.
       From: http://hl7.org/fhir/task-status in valuesets.xml
 
 
-   .. attribute:: InProgress
+   .. py:attribute:: InProgress
       
 
       The task has been started but work has been paused.
       From: http://hl7.org/fhir/task-status in valuesets.xml
 
 
-   .. attribute:: OnHold
+   .. py:attribute:: OnHold
       
 
       The task was attempted but could not be completed due to some error.
       From: http://hl7.org/fhir/task-status in valuesets.xml
 
 
-   .. attribute:: Failed
+   .. py:attribute:: Failed
       
 
       The task has been completed.
       From: http://hl7.org/fhir/task-status in valuesets.xml
 
 
-   .. attribute:: Completed
+   .. py:attribute:: Completed
       
 
       The task should never have existed and is retained only because of the
@@ -120,7 +120,7 @@ Classes
       From: http://hl7.org/fhir/task-status in valuesets.xml
 
 
-   .. attribute:: EnteredInError
+   .. py:attribute:: EnteredInError
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.provenance_event_current_state-dc`
-==========================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.provenance_event_current_state-dc`
+=============================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.provenance_event_current_state-dc
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: ProvenanceEventCurrentState_DC(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ProvenanceEventCurrentState_DC(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.ProvenanceEventCurrentState-DC
    From: http://terminology.hl7.org/ValueSet/v3-ProvenanceEventCurrentState-DC in v3-codesystems.xml
@@ -30,13 +30,13 @@ Classes
    target Act, the source ProvenanceEventCurrentState Act code would be
    "obsoleted".
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion
 
       
 
 
-.. class:: ProvenanceEventCurrentState_DCValues
+.. py:class:: ProvenanceEventCurrentState_DCValues
 
    A completion status in which a document has been signed manually or
    electronically by one or more individuals who attest to its accuracy.  No
@@ -46,7 +46,7 @@ Classes
    authentication, usually by the assigned individual.
    From: http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion in v3-codesystems.xml
 
-   .. attribute:: Authenticated
+   .. py:attribute:: Authenticated
       
 
       A completion status in which information has been orally recorded but not yet
@@ -54,7 +54,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion in v3-codesystems.xml
 
 
-   .. attribute:: Dictated
+   .. py:attribute:: Dictated
       
 
       A completion status in which document content, other than dictation, has been
@@ -64,7 +64,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion in v3-codesystems.xml
 
 
-   .. attribute:: Documented
+   .. py:attribute:: Documented
       
 
       A completion status in which information is known to be missing from a
@@ -72,7 +72,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion in v3-codesystems.xml
 
 
-   .. attribute:: Incomplete
+   .. py:attribute:: Incomplete
       
 
       A workflow status where the material has been assigned to personnel to perform
@@ -81,7 +81,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion in v3-codesystems.xml
 
 
-   .. attribute:: InProgress
+   .. py:attribute:: InProgress
       
 
       A completion status in which a document has been signed manually or
@@ -90,7 +90,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion in v3-codesystems.xml
 
 
-   .. attribute:: LegallyAuthenticated
+   .. py:attribute:: LegallyAuthenticated
       
 
       A completion status in which a document was created in error or was placed in
@@ -98,14 +98,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion in v3-codesystems.xml
 
 
-   .. attribute:: NullifiedDocument
+   .. py:attribute:: NullifiedDocument
       
 
       A completion status in which a document is transcribed but not authenticated.
       From: http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion in v3-codesystems.xml
 
 
-   .. attribute:: Pre_authenticated
+   .. py:attribute:: Pre_authenticated
       
 
       A completion status where the document is complete and there is no expectation
@@ -113,7 +113,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion in v3-codesystems.xml
 
 
-   .. attribute:: UnsignedCompletedDocument
+   .. py:attribute:: UnsignedCompletedDocument
       
 
       

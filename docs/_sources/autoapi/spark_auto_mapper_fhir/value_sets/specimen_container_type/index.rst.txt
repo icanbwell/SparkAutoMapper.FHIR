@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.specimen_container_type`
-================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.specimen_container_type`
+===================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.specimen_container_type
 
@@ -16,10 +16,10 @@ Classes
 
 
 
-.. class:: SpecimenContainerTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SpecimenContainerTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SpecimenContainerType
    From: http://hl7.org/fhir/ValueSet/specimen-container-type in valuesets.xml
@@ -27,8 +27,8 @@ Classes
    descendants of 706041008 |Device for body fluid and tissue
    collection/transfer/processing (physical object)|
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://snomed.info/sct
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://snomed.info/sct
 
       
 

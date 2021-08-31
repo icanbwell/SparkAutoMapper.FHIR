@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base`
-===================================================================
+:py:mod:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base`
+======================================================================
 
 .. py:module:: spark_auto_mapper_fhir.base_types.fhir_backbone_element_base
 
@@ -16,9 +16,14 @@ Classes
 
 
 
-.. class:: FhirBackboneElementBase(**kwargs: Any)
 
+.. py:class:: FhirBackboneElementBase(**kwargs)
 
-   Bases: :class:`spark_auto_mapper.data_types.complex.complex_base.AutoMapperDataTypeComplexBase`
+   Bases: :py:obj:`spark_auto_mapper.data_types.complex.complex_base.AutoMapperDataTypeComplexBase`
+
+   Base class for all Automapper data types
+
+   base class for complex types
+   :param kwargs:
 
 

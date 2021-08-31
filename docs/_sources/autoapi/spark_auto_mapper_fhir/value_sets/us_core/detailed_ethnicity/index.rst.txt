@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.us_core.detailed_ethnicity`
-===================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.us_core.detailed_ethnicity`
+======================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.us_core.detailed_ethnicity
 
@@ -17,23 +17,23 @@ Classes
 
 
 
-.. class:: DetailedEthnicity(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: DetailedEthnicity(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    https://www.hl7.org/fhir/us/core/ValueSet-detailed-ethnicity.html
    All codes from https://www.hl7.org/fhir/us/core/CodeSystem-cdcrec.html
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = urn:oid:2.16.840.1.113883.6.238
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = urn:oid:2.16.840.1.113883.6.238
 
       
 
 
-.. class:: DetailedEthnicityValues
+.. py:class:: DetailedEthnicityValues
 
-   .. attribute:: Mexican
+   .. py:attribute:: Mexican
       
 
       

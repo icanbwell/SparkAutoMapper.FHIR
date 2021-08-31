@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.graph_compartment_rule`
-===============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.graph_compartment_rule`
+==================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.graph_compartment_rule
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: GraphCompartmentRuleCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: GraphCompartmentRuleCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    GraphCompartmentRule
    From: http://hl7.org/fhir/graph-compartment-rule in valuesets.xml
        How a compartment must be linked.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/graph-compartment-rule
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/graph-compartment-rule
 
       
 
 
-.. class:: GraphCompartmentRuleCodeValues
+.. py:class:: GraphCompartmentRuleCodeValues
 
    The compartment must be identical (the same literal reference).
    From: http://hl7.org/fhir/graph-compartment-rule in valuesets.xml
 
-   .. attribute:: Identical
+   .. py:attribute:: Identical
       
 
       The compartment must be the same - the record must be about the same patient,
@@ -45,21 +45,21 @@ Classes
       From: http://hl7.org/fhir/graph-compartment-rule in valuesets.xml
 
 
-   .. attribute:: Matching
+   .. py:attribute:: Matching
       
 
       The compartment must be different.
       From: http://hl7.org/fhir/graph-compartment-rule in valuesets.xml
 
 
-   .. attribute:: Different
+   .. py:attribute:: Different
       
 
       The compartment rule is defined in the accompanying FHIRPath expression.
       From: http://hl7.org/fhir/graph-compartment-rule in valuesets.xml
 
 
-   .. attribute:: Custom
+   .. py:attribute:: Custom
       
 
       

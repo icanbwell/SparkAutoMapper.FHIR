@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.usage_context_type`
-===========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.usage_context_type`
+==============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.usage_context_type
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: UsageContextTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: UsageContextTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    UsageContextType
    From: http://terminology.hl7.org/CodeSystem/usage-context-type in valuesets.xml
        A code that specifies a type of context being specified by a usage context.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/usage-context-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/usage-context-type
 
       
 
 
-.. class:: UsageContextTypeCodeValues
+.. py:class:: UsageContextTypeCodeValues
 
    The gender of the patient. For this context type, appropriate values can be
    found in the http://hl7.org/fhir/ValueSet/administrative-gender value set.
    From: http://terminology.hl7.org/CodeSystem/usage-context-type in valuesets.xml
 
-   .. attribute:: Gender
+   .. py:attribute:: Gender
       
 
       The age of the patient. For this context type, the value could be a range that
@@ -48,7 +48,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/usage-context-type in valuesets.xml
 
 
-   .. attribute:: AgeRange
+   .. py:attribute:: AgeRange
       
 
       The clinical concept(s) addressed by the artifact. For example, disease,
@@ -57,7 +57,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/usage-context-type in valuesets.xml
 
 
-   .. attribute:: ClinicalFocus
+   .. py:attribute:: ClinicalFocus
       
 
       The clinical specialty of the context in which the patient is being treated -
@@ -68,7 +68,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/usage-context-type in valuesets.xml
 
 
-   .. attribute:: UserType
+   .. py:attribute:: UserType
       
 
       The settings in which the artifact is intended for use. For example,
@@ -77,7 +77,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/usage-context-type in valuesets.xml
 
 
-   .. attribute:: WorkflowSetting
+   .. py:attribute:: WorkflowSetting
       
 
       The context for the clinical task(s) represented by this artifact. For
@@ -88,7 +88,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/usage-context-type in valuesets.xml
 
 
-   .. attribute:: WorkflowTask
+   .. py:attribute:: WorkflowTask
       
 
       The venue in which an artifact could be used. For example, Outpatient,
@@ -98,7 +98,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/usage-context-type in valuesets.xml
 
 
-   .. attribute:: ClinicalVenue
+   .. py:attribute:: ClinicalVenue
       
 
       The species to which an artifact applies. For example, SNOMED - 387961004 |
@@ -106,14 +106,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/usage-context-type in valuesets.xml
 
 
-   .. attribute:: Species
+   .. py:attribute:: Species
       
 
       A program/project of work for which this artifact is applicable.
       From: http://terminology.hl7.org/CodeSystem/usage-context-type in valuesets.xml
 
 
-   .. attribute:: Program
+   .. py:attribute:: Program
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.medication_request_intent`
-==================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.medication_request_intent`
+=====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.medication_request_intent
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: MedicationRequestIntentCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: MedicationRequestIntentCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    medicationRequest Intent
    From: http://hl7.org/fhir/CodeSystem/medicationrequest-intent in valuesets.xml
        MedicationRequest Intent Codes
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/CodeSystem/medicationrequest-intent
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/CodeSystem/medicationrequest-intent
 
       
 
 
-.. class:: MedicationRequestIntentCodeValues
+.. py:class:: MedicationRequestIntentCodeValues
 
    The request is a suggestion made by someone/something that doesn't have an
    intention to ensure it occurs and without providing an authorization to act
    From: http://hl7.org/fhir/CodeSystem/medicationrequest-intent in valuesets.xml
 
-   .. attribute:: Proposal
+   .. py:attribute:: Proposal
       
 
       The request represents an intention to ensure something occurs without
@@ -46,21 +46,21 @@ Classes
       From: http://hl7.org/fhir/CodeSystem/medicationrequest-intent in valuesets.xml
 
 
-   .. attribute:: Plan
+   .. py:attribute:: Plan
       
 
       The request represents a request/demand and authorization for action
       From: http://hl7.org/fhir/CodeSystem/medicationrequest-intent in valuesets.xml
 
 
-   .. attribute:: Order
+   .. py:attribute:: Order
       
 
       The request represents the original authorization for the medication request.
       From: http://hl7.org/fhir/CodeSystem/medicationrequest-intent in valuesets.xml
 
 
-   .. attribute:: OriginalOrder
+   .. py:attribute:: OriginalOrder
       
 
       The request represents an automatically generated supplemental authorization
@@ -69,7 +69,7 @@ Classes
       From: http://hl7.org/fhir/CodeSystem/medicationrequest-intent in valuesets.xml
 
 
-   .. attribute:: ReflexOrder
+   .. py:attribute:: ReflexOrder
       
 
       The request represents the view of an authorization instantiated by a
@@ -78,7 +78,7 @@ Classes
       From: http://hl7.org/fhir/CodeSystem/medicationrequest-intent in valuesets.xml
 
 
-   .. attribute:: FillerOrder
+   .. py:attribute:: FillerOrder
       
 
       The request represents an instance for the particular order, for example a
@@ -86,7 +86,7 @@ Classes
       From: http://hl7.org/fhir/CodeSystem/medicationrequest-intent in valuesets.xml
 
 
-   .. attribute:: InstanceOrder
+   .. py:attribute:: InstanceOrder
       
 
       The request represents a component or option for a RequestGroup that
@@ -95,7 +95,7 @@ Classes
       From: http://hl7.org/fhir/CodeSystem/medicationrequest-intent in valuesets.xml
 
 
-   .. attribute:: Option
+   .. py:attribute:: Option
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.dose_and_rate_type`
-===========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.dose_and_rate_type`
+==============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.dose_and_rate_type
 
@@ -17,34 +17,34 @@ Classes
 
 
 
-.. class:: DoseAndRateTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: DoseAndRateTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    DoseAndRateType
    From: http://terminology.hl7.org/CodeSystem/dose-rate-type in valuesets.xml
        The kind of dose or rate specified.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/dose-rate-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/dose-rate-type
 
       
 
 
-.. class:: DoseAndRateTypeCodeValues
+.. py:class:: DoseAndRateTypeCodeValues
 
    The dose specified is calculated by the prescriber or the system.
    From: http://terminology.hl7.org/CodeSystem/dose-rate-type in valuesets.xml
 
-   .. attribute:: Calculated
+   .. py:attribute:: Calculated
       
 
       The dose specified is as ordered by the prescriber.
       From: http://terminology.hl7.org/CodeSystem/dose-rate-type in valuesets.xml
 
 
-   .. attribute:: Ordered
+   .. py:attribute:: Ordered
       
 
       

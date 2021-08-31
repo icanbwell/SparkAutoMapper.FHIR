@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.complex_types.contributor`
-=======================================================
+:py:mod:`spark_auto_mapper_fhir.complex_types.contributor`
+==========================================================
 
 .. py:module:: spark_auto_mapper_fhir.complex_types.contributor
 
@@ -16,17 +16,33 @@ Classes
 
 
 
-.. class:: Contributor(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, type_: spark_auto_mapper_fhir.value_sets.contributor_type.ContributorTypeCode, name: spark_auto_mapper_fhir.fhir_types.string.FhirString, contact: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.contact_detail.ContactDetail]] = None)
 
+.. py:class:: Contributor(*, id_ = None, extension = None, type_, name, contact = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
 
    Contributor
    fhir-base.xsd
        A contributor to the content of a knowledge asset, including authors, editors, reviewers, and endorsers.
        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
 
-   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+       A contributor to the content of a knowledge asset, including authors, editors,
+   reviewers, and endorsers.
+       If the element is present, it must have a value for at least one of the
+   defined elements, an @id referenced from the Narrative, or extensions
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param type_: The type of contributor.
+       :param name: The name of the individual or organization responsible for the contribution.
+       :param contact: Contact details to assist a user in finding and communicating with the
+   contributor.
+
+   .. py:method:: get_schema(self, include_extension)
 
 
 

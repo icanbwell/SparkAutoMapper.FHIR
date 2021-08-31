@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.contract_actor_role_codes`
-==================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.contract_actor_role_codes`
+=====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.contract_actor_role_codes
 
@@ -17,35 +17,35 @@ Classes
 
 
 
-.. class:: ContractActorRoleCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ContractActorRoleCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ContractActorRoleCodes
    From: http://terminology.hl7.org/CodeSystem/contractactorrole in valuesets.xml
        This value set includes sample Contract Actor Role codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/contractactorrole
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/contractactorrole
 
       
 
 
-.. class:: ContractActorRoleCodesCodeValues
+.. py:class:: ContractActorRoleCodesCodeValues
 
    Someone who provides health care related services to people or animals
    including both clinical and support services.
    From: http://terminology.hl7.org/CodeSystem/contractactorrole in valuesets.xml
 
-   .. attribute:: Practitioner
+   .. py:attribute:: Practitioner
       
 
       A receiver, human or animal, of health care related goods and services.
       From: http://terminology.hl7.org/CodeSystem/contractactorrole in valuesets.xml
 
 
-   .. attribute:: Patient
+   .. py:attribute:: Patient
       
 
       

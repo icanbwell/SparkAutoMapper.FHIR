@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.diagnosis_role`
-=======================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.diagnosis_role`
+==========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.diagnosis_role
 
@@ -17,63 +17,63 @@ Classes
 
 
 
-.. class:: DiagnosisRoleCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: DiagnosisRoleCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    DiagnosisRole
    From: http://terminology.hl7.org/CodeSystem/diagnosis-role in valuesets.xml
        This value set defines a set of codes that can be used to express the role of
    a diagnosis on the Encounter or EpisodeOfCare record.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/diagnosis-role
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/diagnosis-role
 
       
 
 
-.. class:: DiagnosisRoleCodeValues
+.. py:class:: DiagnosisRoleCodeValues
 
    From: http://terminology.hl7.org/CodeSystem/diagnosis-role in valuesets.xml
 
-   .. attribute:: AdmissionDiagnosis
+   .. py:attribute:: AdmissionDiagnosis
       
 
       From: http://terminology.hl7.org/CodeSystem/diagnosis-role in valuesets.xml
 
 
-   .. attribute:: DischargeDiagnosis
+   .. py:attribute:: DischargeDiagnosis
       
 
       From: http://terminology.hl7.org/CodeSystem/diagnosis-role in valuesets.xml
 
 
-   .. attribute:: ChiefComplaint
+   .. py:attribute:: ChiefComplaint
       
 
       From: http://terminology.hl7.org/CodeSystem/diagnosis-role in valuesets.xml
 
 
-   .. attribute:: ComorbidityDiagnosis
+   .. py:attribute:: ComorbidityDiagnosis
       
 
       From: http://terminology.hl7.org/CodeSystem/diagnosis-role in valuesets.xml
 
 
-   .. attribute:: Pre_opDiagnosis
+   .. py:attribute:: Pre_opDiagnosis
       
 
       From: http://terminology.hl7.org/CodeSystem/diagnosis-role in valuesets.xml
 
 
-   .. attribute:: Post_opDiagnosis
+   .. py:attribute:: Post_opDiagnosis
       
 
       From: http://terminology.hl7.org/CodeSystem/diagnosis-role in valuesets.xml
 
 
-   .. attribute:: Billing
+   .. py:attribute:: Billing
       
 
       

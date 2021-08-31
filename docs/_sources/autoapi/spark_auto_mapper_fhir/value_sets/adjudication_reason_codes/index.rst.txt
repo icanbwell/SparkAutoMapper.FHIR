@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.adjudication_reason_codes`
-==================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.adjudication_reason_codes`
+=====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.adjudication_reason_codes
 
@@ -17,34 +17,34 @@ Classes
 
 
 
-.. class:: AdjudicationReasonCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: AdjudicationReasonCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    AdjudicationReasonCodes
    From: http://terminology.hl7.org/CodeSystem/adjudication-reason in valuesets.xml
        This value set includes smattering of Adjudication Reason codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/adjudication-reason
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/adjudication-reason
 
       
 
 
-.. class:: AdjudicationReasonCodesCodeValues
+.. py:class:: AdjudicationReasonCodesCodeValues
 
    Not covered
    From: http://terminology.hl7.org/CodeSystem/adjudication-reason in valuesets.xml
 
-   .. attribute:: NotCovered
+   .. py:attribute:: NotCovered
       
 
       Plan Limit Reached
       From: http://terminology.hl7.org/CodeSystem/adjudication-reason in valuesets.xml
 
 
-   .. attribute:: PlanLimitReached
+   .. py:attribute:: PlanLimitReached
       
 
       

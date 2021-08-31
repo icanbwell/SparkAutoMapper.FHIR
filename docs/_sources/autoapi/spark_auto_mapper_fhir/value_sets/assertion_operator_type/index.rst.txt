@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.assertion_operator_type`
-================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.assertion_operator_type`
+===================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.assertion_operator_type
 
@@ -17,97 +17,97 @@ Classes
 
 
 
-.. class:: AssertionOperatorTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: AssertionOperatorTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    AssertionOperatorType
    From: http://hl7.org/fhir/assert-operator-codes in valuesets.xml
        The type of operator to use for assertion.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/assert-operator-codes
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/assert-operator-codes
 
       
 
 
-.. class:: AssertionOperatorTypeCodeValues
+.. py:class:: AssertionOperatorTypeCodeValues
 
    Default value. Equals comparison.
    From: http://hl7.org/fhir/assert-operator-codes in valuesets.xml
 
-   .. attribute:: Equals
+   .. py:attribute:: Equals
       
 
       Not equals comparison.
       From: http://hl7.org/fhir/assert-operator-codes in valuesets.xml
 
 
-   .. attribute:: NotEquals
+   .. py:attribute:: NotEquals
       
 
       Compare value within a known set of values.
       From: http://hl7.org/fhir/assert-operator-codes in valuesets.xml
 
 
-   .. attribute:: In
+   .. py:attribute:: In
       
 
       Compare value not within a known set of values.
       From: http://hl7.org/fhir/assert-operator-codes in valuesets.xml
 
 
-   .. attribute:: NotIn
+   .. py:attribute:: NotIn
       
 
       Compare value to be greater than a known value.
       From: http://hl7.org/fhir/assert-operator-codes in valuesets.xml
 
 
-   .. attribute:: GreaterThan
+   .. py:attribute:: GreaterThan
       
 
       Compare value to be less than a known value.
       From: http://hl7.org/fhir/assert-operator-codes in valuesets.xml
 
 
-   .. attribute:: LessThan
+   .. py:attribute:: LessThan
       
 
       Compare value is empty.
       From: http://hl7.org/fhir/assert-operator-codes in valuesets.xml
 
 
-   .. attribute:: Empty
+   .. py:attribute:: Empty
       
 
       Compare value is not empty.
       From: http://hl7.org/fhir/assert-operator-codes in valuesets.xml
 
 
-   .. attribute:: NotEmpty
+   .. py:attribute:: NotEmpty
       
 
       Compare value string contains a known value.
       From: http://hl7.org/fhir/assert-operator-codes in valuesets.xml
 
 
-   .. attribute:: Contains
+   .. py:attribute:: Contains
       
 
       Compare value string does not contain a known value.
       From: http://hl7.org/fhir/assert-operator-codes in valuesets.xml
 
 
-   .. attribute:: NotContains
+   .. py:attribute:: NotContains
       
 
       Evaluate the FHIRPath expression as a boolean condition.
       From: http://hl7.org/fhir/assert-operator-codes in valuesets.xml
 
 
-   .. attribute:: Evaluate
+   .. py:attribute:: Evaluate
       
 
       

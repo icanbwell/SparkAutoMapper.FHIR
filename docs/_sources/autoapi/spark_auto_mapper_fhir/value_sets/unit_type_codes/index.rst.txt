@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.unit_type_codes`
-========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.unit_type_codes`
+===========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.unit_type_codes
 
@@ -17,34 +17,34 @@ Classes
 
 
 
-.. class:: UnitTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: UnitTypeCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    UnitTypeCodes
    From: http://terminology.hl7.org/CodeSystem/benefit-unit in valuesets.xml
        This value set includes a smattering of Unit type codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/benefit-unit
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/benefit-unit
 
       
 
 
-.. class:: UnitTypeCodesCodeValues
+.. py:class:: UnitTypeCodesCodeValues
 
    A single individual
    From: http://terminology.hl7.org/CodeSystem/benefit-unit in valuesets.xml
 
-   .. attribute:: Individual
+   .. py:attribute:: Individual
       
 
       A family, typically includes self, spouse(s) and children to a defined age
       From: http://terminology.hl7.org/CodeSystem/benefit-unit in valuesets.xml
 
 
-   .. attribute:: Family
+   .. py:attribute:: Family
       
 
       

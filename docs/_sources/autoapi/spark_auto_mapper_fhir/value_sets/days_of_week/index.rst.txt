@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.days_of_week`
-=====================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.days_of_week`
+========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.days_of_week
 
@@ -17,69 +17,69 @@ Classes
 
 
 
-.. class:: DaysOfWeekCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: DaysOfWeekCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    DaysOfWeek
    From: http://hl7.org/fhir/days-of-week in valuesets.xml
        The days of the week.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/days-of-week
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/days-of-week
 
       
 
 
-.. class:: DaysOfWeekCodeValues
+.. py:class:: DaysOfWeekCodeValues
 
    Monday.
    From: http://hl7.org/fhir/days-of-week in valuesets.xml
 
-   .. attribute:: Monday
+   .. py:attribute:: Monday
       
 
       Tuesday.
       From: http://hl7.org/fhir/days-of-week in valuesets.xml
 
 
-   .. attribute:: Tuesday
+   .. py:attribute:: Tuesday
       
 
       Wednesday.
       From: http://hl7.org/fhir/days-of-week in valuesets.xml
 
 
-   .. attribute:: Wednesday
+   .. py:attribute:: Wednesday
       
 
       Thursday.
       From: http://hl7.org/fhir/days-of-week in valuesets.xml
 
 
-   .. attribute:: Thursday
+   .. py:attribute:: Thursday
       
 
       Friday.
       From: http://hl7.org/fhir/days-of-week in valuesets.xml
 
 
-   .. attribute:: Friday
+   .. py:attribute:: Friday
       
 
       Saturday.
       From: http://hl7.org/fhir/days-of-week in valuesets.xml
 
 
-   .. attribute:: Saturday
+   .. py:attribute:: Saturday
       
 
       Sunday.
       From: http://hl7.org/fhir/days-of-week in valuesets.xml
 
 
-   .. attribute:: Sunday
+   .. py:attribute:: Sunday
       
 
       

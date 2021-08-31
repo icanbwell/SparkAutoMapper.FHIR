@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.http_verb`
-==================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.http_verb`
+=====================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.http_verb
 
@@ -17,63 +17,63 @@ Classes
 
 
 
-.. class:: HTTPVerbCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: HTTPVerbCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    HTTPVerb
    From: http://hl7.org/fhir/http-verb in valuesets.xml
        HTTP verbs (in the HTTP command line). See [HTTP
    rfc](https://tools.ietf.org/html/rfc7231) for details.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/http-verb
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/http-verb
 
       
 
 
-.. class:: HTTPVerbCodeValues
+.. py:class:: HTTPVerbCodeValues
 
    HTTP GET Command.
    From: http://hl7.org/fhir/http-verb in valuesets.xml
 
-   .. attribute:: GET
+   .. py:attribute:: GET
       
 
       HTTP HEAD Command.
       From: http://hl7.org/fhir/http-verb in valuesets.xml
 
 
-   .. attribute:: HEAD
+   .. py:attribute:: HEAD
       
 
       HTTP POST Command.
       From: http://hl7.org/fhir/http-verb in valuesets.xml
 
 
-   .. attribute:: POST
+   .. py:attribute:: POST
       
 
       HTTP PUT Command.
       From: http://hl7.org/fhir/http-verb in valuesets.xml
 
 
-   .. attribute:: PUT
+   .. py:attribute:: PUT
       
 
       HTTP DELETE Command.
       From: http://hl7.org/fhir/http-verb in valuesets.xml
 
 
-   .. attribute:: DELETE
+   .. py:attribute:: DELETE
       
 
       HTTP PATCH Command.
       From: http://hl7.org/fhir/http-verb in valuesets.xml
 
 
-   .. attribute:: PATCH
+   .. py:attribute:: PATCH
       
 
       

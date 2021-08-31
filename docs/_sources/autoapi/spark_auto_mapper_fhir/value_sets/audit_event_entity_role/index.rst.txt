@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.audit_event_entity_role`
-================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.audit_event_entity_role`
+===================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.audit_event_entity_role
 
@@ -17,29 +17,29 @@ Classes
 
 
 
-.. class:: AuditEventEntityRoleCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: AuditEventEntityRoleCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    AuditEventEntityRole
    From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
        Code representing the role the entity played in the audit event.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/object-role
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/object-role
 
       
 
 
-.. class:: AuditEventEntityRoleCodeValues
+.. py:class:: AuditEventEntityRoleCodeValues
 
    This object is the patient that is the subject of care related to this event.
    It is identifiable by patient ID or equivalent.  The patient may be either
    human or animal.
    From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
 
-   .. attribute:: Patient
+   .. py:attribute:: Patient
       
 
       This is a location identified as related to the event.  This is usually the
@@ -48,7 +48,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
 
 
-   .. attribute:: Location
+   .. py:attribute:: Location
       
 
       This object is any kind of persistent document created as a result of the
@@ -58,7 +58,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
 
 
-   .. attribute:: Report
+   .. py:attribute:: Report
       
 
       A logical object related to a health record event.  This is any healthcare
@@ -66,7 +66,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
 
 
-   .. attribute:: DomainResource
+   .. py:attribute:: DomainResource
       
 
       This is any configurable file used to control creation of documents.  Examples
@@ -75,21 +75,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
 
 
-   .. attribute:: MasterFile
+   .. py:attribute:: MasterFile
       
 
       A human participant not otherwise identified by some other category.
       From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
 
 
-   .. attribute:: User
+   .. py:attribute:: User
       
 
       (deprecated).
       From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
 
 
-   .. attribute:: List_
+   .. py:attribute:: List_
       
 
       Typically, a licensed person who is providing or performing care related to
@@ -100,7 +100,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
 
 
-   .. attribute:: Doctor
+   .. py:attribute:: Doctor
       
 
       A person or system that is being notified as part of the event.  This is
@@ -109,7 +109,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
 
 
-   .. attribute:: Subscriber
+   .. py:attribute:: Subscriber
       
 
       Insurance company, or any other organization who accepts responsibility for
@@ -117,14 +117,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
 
 
-   .. attribute:: Guarantor
+   .. py:attribute:: Guarantor
       
 
       A person or active system object involved in the event with a security role.
       From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
 
 
-   .. attribute:: SecurityUserEntity
+   .. py:attribute:: SecurityUserEntity
       
 
       A person or system object involved in the event with the authority to modify
@@ -132,21 +132,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
 
 
-   .. attribute:: SecurityUserGroup
+   .. py:attribute:: SecurityUserGroup
       
 
       A passive object, such as a role table, that is relevant to the event.
       From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
 
 
-   .. attribute:: SecurityResource
+   .. py:attribute:: SecurityResource
       
 
       (deprecated)  Relevant to certain RBAC security methodologies.
       From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
 
 
-   .. attribute:: SecurityGranularityDefinition
+   .. py:attribute:: SecurityGranularityDefinition
       
 
       Any person or organization responsible for providing care.  This encompasses
@@ -156,7 +156,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
 
 
-   .. attribute:: Practitioner
+   .. py:attribute:: Practitioner
       
 
       The source or destination for data transfer, when it does not match some other
@@ -164,7 +164,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
 
 
-   .. attribute:: DataDestination
+   .. py:attribute:: DataDestination
       
 
       A source or destination for data transfer that acts as an archive, database,
@@ -172,7 +172,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
 
 
-   .. attribute:: DataRepository
+   .. py:attribute:: DataRepository
       
 
       An object that holds schedule information.  This could be an appointment book,
@@ -180,7 +180,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
 
 
-   .. attribute:: Schedule
+   .. py:attribute:: Schedule
       
 
       An organization or person that is the recipient of services.  This could be an
@@ -189,7 +189,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
 
 
-   .. attribute:: Customer
+   .. py:attribute:: Customer
       
 
       An order, task, work item, procedure step, or other description of work to be
@@ -197,21 +197,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
 
 
-   .. attribute:: Job
+   .. py:attribute:: Job
       
 
       A list of jobs or a system that provides lists of jobs; e.g. an MWL SCP.
       From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
 
 
-   .. attribute:: JobStream
+   .. py:attribute:: JobStream
       
 
       (Deprecated).
       From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
 
 
-   .. attribute:: Table
+   .. py:attribute:: Table
       
 
       An object that specifies or controls the routing or delivery of items.  For
@@ -220,7 +220,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
 
 
-   .. attribute:: RoutingCriteria
+   .. py:attribute:: RoutingCriteria
       
 
       The contents of a query.  This is used to capture the contents of any kind of
@@ -229,7 +229,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/object-role in valuesets.xml
 
 
-   .. attribute:: Query
+   .. py:attribute:: Query
       
 
       

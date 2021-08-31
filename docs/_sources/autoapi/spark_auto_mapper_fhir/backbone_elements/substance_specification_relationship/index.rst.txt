@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.backbone_elements.substance_specification_relationship`
-====================================================================================
+:py:mod:`spark_auto_mapper_fhir.backbone_elements.substance_specification_relationship`
+=======================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.backbone_elements.substance_specification_relationship
 
@@ -16,12 +16,49 @@ Classes
 
 
 
-.. class:: SubstanceSpecificationRelationship(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, substanceReference: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.substance_specification.SubstanceSpecification]] = None, substanceCodeableConcept: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, relationship: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, isDefining: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, amountQuantity: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, amountRange: Optional[spark_auto_mapper_fhir.complex_types.range.Range] = None, amountRatio: Optional[spark_auto_mapper_fhir.complex_types.ratio.Ratio] = None, amountString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, amountRatioLowLimit: Optional[spark_auto_mapper_fhir.complex_types.ratio.Ratio] = None, amountType: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, source: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.document_reference.DocumentReference]]] = None)
 
+.. py:class:: SubstanceSpecificationRelationship(*, id_ = None, extension = None, modifierExtension = None, substanceReference = None, substanceCodeableConcept = None, relationship = None, isDefining = None, amountQuantity = None, amountRange = None, amountRatio = None, amountString = None, amountRatioLowLimit = None, amountType = None, source = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
 
    SubstanceSpecification.Relationship
-   The detailed description of a substance, typically at a level beyond what is used for prescribing.
+       The detailed description of a substance, typically at a level beyond what is used for prescribing.
+
+       The detailed description of a substance, typically at a level beyond what is
+   used for prescribing.
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param modifierExtension: May be used to represent additional information that is not part of the basic
+   definition of the element and that modifies the understanding of the element
+   in which it is contained and/or the understanding of the containing element's
+   descendants. Usually modifier elements provide negation or qualification. To
+   make the use of extensions safe and manageable, there is a strict set of
+   governance applied to the definition and use of extensions. Though any
+   implementer can define an extension, there is a set of requirements that SHALL
+   be met as part of the definition of the extension. Applications processing a
+   resource are required to check for modifier extensions.
+
+   Modifier extensions SHALL NOT change the meaning of any elements on Resource
+   or DomainResource (including cannot change the meaning of modifierExtension
+   itself).
+       :param substanceReference: None
+       :param substanceCodeableConcept: None
+       :param relationship: For example "salt to parent", "active moiety", "starting material".
+       :param isDefining: For example where an enzyme strongly bonds with a particular substance, this
+   is a defining relationship for that enzyme, out of several possible substance
+   relationships.
+       :param amountQuantity: None
+       :param amountRange: None
+       :param amountRatio: None
+       :param amountString: None
+       :param amountRatioLowLimit: For use when the numeric.
+       :param amountType: An operator for the amount, for example "average", "approximately", "less
+   than".
+       :param source: Supporting literature.
 
 

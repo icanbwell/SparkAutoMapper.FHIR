@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.adverse_event_category`
-===============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.adverse_event_category`
+==================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.adverse_event_category
 
@@ -17,48 +17,48 @@ Classes
 
 
 
-.. class:: AdverseEventCategoryCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: AdverseEventCategoryCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    AdverseEventCategory
    From: http://terminology.hl7.org/CodeSystem/adverse-event-category in valuesets.xml
        Overall categorization of the event, e.g. product-related or situational.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/adverse-event-category
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/adverse-event-category
 
       
 
 
-.. class:: AdverseEventCategoryCodeValues
+.. py:class:: AdverseEventCategoryCodeValues
 
    The adverse event pertains to a product problem.
    From: http://terminology.hl7.org/CodeSystem/adverse-event-category in valuesets.xml
 
-   .. attribute:: ProductProblem
+   .. py:attribute:: ProductProblem
       
 
       The adverse event pertains to product quality.
       From: http://terminology.hl7.org/CodeSystem/adverse-event-category in valuesets.xml
 
 
-   .. attribute:: ProductQuality
+   .. py:attribute:: ProductQuality
       
 
       The adverse event pertains to a product use error.
       From: http://terminology.hl7.org/CodeSystem/adverse-event-category in valuesets.xml
 
 
-   .. attribute:: ProductUseError
+   .. py:attribute:: ProductUseError
       
 
       The adverse event pertains to a medical device use error.
       From: http://terminology.hl7.org/CodeSystem/adverse-event-category in valuesets.xml
 
 
-   .. attribute:: MedicalDeviceUseError
+   .. py:attribute:: MedicalDeviceUseError
       
 
       The adverse event pertains to a problem with a different manufacturer of the
@@ -66,14 +66,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/adverse-event-category in valuesets.xml
 
 
-   .. attribute:: ProblemWithDifferentManufacturerOfSameMedicine
+   .. py:attribute:: ProblemWithDifferentManufacturerOfSameMedicine
       
 
       The adverse event pertains to an unsafe physical environment.
       From: http://terminology.hl7.org/CodeSystem/adverse-event-category in valuesets.xml
 
 
-   .. attribute:: UnsafePhysicalEnvironment
+   .. py:attribute:: UnsafePhysicalEnvironment
       
 
       

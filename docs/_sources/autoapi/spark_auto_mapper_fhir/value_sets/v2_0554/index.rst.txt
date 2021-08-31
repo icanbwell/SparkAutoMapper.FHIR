@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.v2_0554`
-================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.v2_0554`
+===================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.v2_0554
 
@@ -16,18 +16,18 @@ Classes
 
 
 
-.. class:: V2_0554(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: V2_0554(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v2.0554
    From: http://terminology.hl7.org/ValueSet/v2-0554 in v2-tables.xml
        FHIR Value set/code system definition for HL7 v2 table 0554 ( Invoice Reason
    Codes)
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/ValueSet/v2-0554
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/ValueSet/v2-0554
 
       
 

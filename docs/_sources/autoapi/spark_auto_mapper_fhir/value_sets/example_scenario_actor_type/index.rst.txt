@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.example_scenario_actor_type`
-====================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.example_scenario_actor_type`
+=======================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.example_scenario_actor_type
 
@@ -17,34 +17,34 @@ Classes
 
 
 
-.. class:: ExampleScenarioActorTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ExampleScenarioActorTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ExampleScenarioActorType
    From: http://hl7.org/fhir/examplescenario-actor-type in valuesets.xml
        The type of actor - system or human.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/examplescenario-actor-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/examplescenario-actor-type
 
       
 
 
-.. class:: ExampleScenarioActorTypeCodeValues
+.. py:class:: ExampleScenarioActorTypeCodeValues
 
    A person.
    From: http://hl7.org/fhir/examplescenario-actor-type in valuesets.xml
 
-   .. attribute:: Person
+   .. py:attribute:: Person
       
 
       A system.
       From: http://hl7.org/fhir/examplescenario-actor-type in valuesets.xml
 
 
-   .. attribute:: System
+   .. py:attribute:: System
       
 
       

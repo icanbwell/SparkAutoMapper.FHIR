@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.test_report_status`
-===========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.test_report_status`
+==============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.test_report_status
 
@@ -17,55 +17,55 @@ Classes
 
 
 
-.. class:: TestReportStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: TestReportStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    TestReportStatus
    From: http://hl7.org/fhir/report-status-codes in valuesets.xml
        The current status of the test report.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/report-status-codes
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/report-status-codes
 
       
 
 
-.. class:: TestReportStatusCodeValues
+.. py:class:: TestReportStatusCodeValues
 
    All test operations have completed.
    From: http://hl7.org/fhir/report-status-codes in valuesets.xml
 
-   .. attribute:: Completed
+   .. py:attribute:: Completed
       
 
       A test operations is currently executing.
       From: http://hl7.org/fhir/report-status-codes in valuesets.xml
 
 
-   .. attribute:: InProgress
+   .. py:attribute:: InProgress
       
 
       A test operation is waiting for an external client request.
       From: http://hl7.org/fhir/report-status-codes in valuesets.xml
 
 
-   .. attribute:: Waiting
+   .. py:attribute:: Waiting
       
 
       The test script execution was manually stopped.
       From: http://hl7.org/fhir/report-status-codes in valuesets.xml
 
 
-   .. attribute:: Stopped
+   .. py:attribute:: Stopped
       
 
       This test report was entered or created in error.
       From: http://hl7.org/fhir/report-status-codes in valuesets.xml
 
 
-   .. attribute:: EnteredInError
+   .. py:attribute:: EnteredInError
       
 
       

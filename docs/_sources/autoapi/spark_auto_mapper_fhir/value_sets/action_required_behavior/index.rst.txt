@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.action_required_behavior`
-=================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.action_required_behavior`
+====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.action_required_behavior
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: ActionRequiredBehaviorCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ActionRequiredBehaviorCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ActionRequiredBehavior
    From: http://hl7.org/fhir/action-required-behavior in valuesets.xml
        Defines expectations around whether an action or action group is required.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/action-required-behavior
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/action-required-behavior
 
       
 
 
-.. class:: ActionRequiredBehaviorCodeValues
+.. py:class:: ActionRequiredBehaviorCodeValues
 
    An action with this behavior must be included in the actions processed by the
    end user; the end user SHALL NOT choose not to include this action.
    From: http://hl7.org/fhir/action-required-behavior in valuesets.xml
 
-   .. attribute:: Must
+   .. py:attribute:: Must
       
 
       An action with this behavior may be included in the set of actions processed
@@ -46,7 +46,7 @@ Classes
       From: http://hl7.org/fhir/action-required-behavior in valuesets.xml
 
 
-   .. attribute:: Could
+   .. py:attribute:: Could
       
 
       An action with this behavior must be included in the set of actions processed
@@ -55,7 +55,7 @@ Classes
       From: http://hl7.org/fhir/action-required-behavior in valuesets.xml
 
 
-   .. attribute:: MustUnlessDocumented
+   .. py:attribute:: MustUnlessDocumented
       
 
       

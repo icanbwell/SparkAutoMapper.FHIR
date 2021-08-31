@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.hl7_publishing_sub_section`
-===================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.hl7_publishing_sub_section`
+======================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.hl7_publishing_sub_section
 
@@ -17,23 +17,23 @@ Classes
 
 
 
-.. class:: Hl7PublishingSubSection(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: Hl7PublishingSubSection(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.hl7PublishingSubSection
    From: http://terminology.hl7.org/ValueSet/v3-hl7PublishingSubSection in v3-codesystems.xml
          Description:
    Codes for HL7 publishing sub-sections (business sub-categories)
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSubSection
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSubSection
 
       
 
 
-.. class:: Hl7PublishingSubSectionValues
+.. py:class:: Hl7PublishingSubSectionValues
 
    Description: Represents the HL7 V3 publishing sub-section that holds common or
    shared specifications within the Infrastructure Management (IM) section.
@@ -49,7 +49,7 @@ Classes
    further aggregated into three major sets.
    From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSubSection in v3-codesystems.xml
 
-   .. attribute:: Common
+   .. py:attribute:: Common
       
 
       Description: Represents the HL7 V3 publishing sub-section that holds
@@ -68,7 +68,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSubSection in v3-codesystems.xml
 
 
-   .. attribute:: FinancialInformation
+   .. py:attribute:: FinancialInformation
       
 
       Description: Represents the HL7 V3 publishing sub-section that holds
@@ -87,7 +87,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSubSection in v3-codesystems.xml
 
 
-   .. attribute:: MessageControl
+   .. py:attribute:: MessageControl
       
 
       Description: Represents the HL7 V3 publishing sub-section that holds
@@ -106,7 +106,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSubSection in v3-codesystems.xml
 
 
-   .. attribute:: MasterFile
+   .. py:attribute:: MasterFile
       
 
       Description: Represents the HL7 V3 publishing sub-section that holds
@@ -125,7 +125,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSubSection in v3-codesystems.xml
 
 
-   .. attribute:: Operations
+   .. py:attribute:: Operations
       
 
       Description: Represents the HL7 V3 publishing sub-section that holds
@@ -144,7 +144,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSubSection in v3-codesystems.xml
 
 
-   .. attribute:: Practice
+   .. py:attribute:: Practice
       
 
       Description: Represents the HL7 V3 publishing sub-section that holds
@@ -163,7 +163,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSubSection in v3-codesystems.xml
 
 
-   .. attribute:: Query
+   .. py:attribute:: Query
       
 
       Description: Represents the HL7 V3 publishing sub-section that holds
@@ -182,7 +182,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSubSection in v3-codesystems.xml
 
 
-   .. attribute:: Records
+   .. py:attribute:: Records
       
 
       Description: Represents the HL7 V3 publishing sub-section that holds
@@ -201,7 +201,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSubSection in v3-codesystems.xml
 
 
-   .. attribute:: Reasoning
+   .. py:attribute:: Reasoning
       
 
       Description: Represents the HL7 V3 publishing sub-section that holds
@@ -220,7 +220,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingSubSection in v3-codesystems.xml
 
 
-   .. attribute:: Unknown
+   .. py:attribute:: Unknown
       
 
       

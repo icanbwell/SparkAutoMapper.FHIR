@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.fhir_device_status_reason`
-==================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.fhir_device_status_reason`
+=====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.fhir_device_status_reason
 
@@ -17,76 +17,76 @@ Classes
 
 
 
-.. class:: FHIRDeviceStatusReasonCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: FHIRDeviceStatusReasonCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    FHIRDeviceStatusReason
    From: http://terminology.hl7.org/CodeSystem/device-status-reason in valuesets.xml
        The availability status reason of the device.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/device-status-reason
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/device-status-reason
 
       
 
 
-.. class:: FHIRDeviceStatusReasonCodeValues
+.. py:class:: FHIRDeviceStatusReasonCodeValues
 
    The device is off.
    From: http://terminology.hl7.org/CodeSystem/device-status-reason in valuesets.xml
 
-   .. attribute:: Online
+   .. py:attribute:: Online
       
 
       The device is paused.
       From: http://terminology.hl7.org/CodeSystem/device-status-reason in valuesets.xml
 
 
-   .. attribute:: Paused
+   .. py:attribute:: Paused
       
 
       The device is ready but not actively operating.
       From: http://terminology.hl7.org/CodeSystem/device-status-reason in valuesets.xml
 
 
-   .. attribute:: Standby
+   .. py:attribute:: Standby
       
 
       The device is offline.
       From: http://terminology.hl7.org/CodeSystem/device-status-reason in valuesets.xml
 
 
-   .. attribute:: Offline
+   .. py:attribute:: Offline
       
 
       The device is not ready.
       From: http://terminology.hl7.org/CodeSystem/device-status-reason in valuesets.xml
 
 
-   .. attribute:: NotReady
+   .. py:attribute:: NotReady
       
 
       The device transducer is disconnected.
       From: http://terminology.hl7.org/CodeSystem/device-status-reason in valuesets.xml
 
 
-   .. attribute:: TransducerDisconnected
+   .. py:attribute:: TransducerDisconnected
       
 
       The device hardware is disconnected.
       From: http://terminology.hl7.org/CodeSystem/device-status-reason in valuesets.xml
 
 
-   .. attribute:: HardwareDisconnected
+   .. py:attribute:: HardwareDisconnected
       
 
       The device is off.
       From: http://terminology.hl7.org/CodeSystem/device-status-reason in valuesets.xml
 
 
-   .. attribute:: Off
+   .. py:attribute:: Off
       
 
       

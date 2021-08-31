@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.research_study_phase`
-=============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.research_study_phase`
+================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.research_study_phase
 
@@ -17,29 +17,29 @@ Classes
 
 
 
-.. class:: ResearchStudyPhaseCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ResearchStudyPhaseCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ResearchStudyPhase
    From: http://terminology.hl7.org/CodeSystem/research-study-phase in valuesets.xml
        Codes for the stage in the progression of a therapy from initial experimental
    use in humans in clinical trials to post-market evaluation.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/research-study-phase
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/research-study-phase
 
       
 
 
-.. class:: ResearchStudyPhaseCodeValues
+.. py:class:: ResearchStudyPhaseCodeValues
 
    Trials without phases (for example, studies of devices or behavioral
    interventions).
    From: http://terminology.hl7.org/CodeSystem/research-study-phase in valuesets.xml
 
-   .. attribute:: N_A
+   .. py:attribute:: N_A
       
 
       Designation for optional exploratory trials conducted in accordance with the
@@ -48,7 +48,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/research-study-phase in valuesets.xml
 
 
-   .. attribute:: EarlyPhase1
+   .. py:attribute:: EarlyPhase1
       
 
       Includes initial studies to determine the metabolism and pharmacologic actions
@@ -58,14 +58,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/research-study-phase in valuesets.xml
 
 
-   .. attribute:: Phase1
+   .. py:attribute:: Phase1
       
 
       Trials that are a combination of phases 1 and 2.
       From: http://terminology.hl7.org/CodeSystem/research-study-phase in valuesets.xml
 
 
-   .. attribute:: Phase1_Phase2
+   .. py:attribute:: Phase1_Phase2
       
 
       Includes controlled clinical studies conducted to evaluate the effectiveness
@@ -75,14 +75,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/research-study-phase in valuesets.xml
 
 
-   .. attribute:: Phase2
+   .. py:attribute:: Phase2
       
 
       Trials that are a combination of phases 2 and 3.
       From: http://terminology.hl7.org/CodeSystem/research-study-phase in valuesets.xml
 
 
-   .. attribute:: Phase2_Phase3
+   .. py:attribute:: Phase2_Phase3
       
 
       Includes trials conducted after preliminary evidence suggesting effectiveness
@@ -91,7 +91,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/research-study-phase in valuesets.xml
 
 
-   .. attribute:: Phase3
+   .. py:attribute:: Phase3
       
 
       Studies of FDA-approved drugs to delineate additional information including
@@ -99,7 +99,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/research-study-phase in valuesets.xml
 
 
-   .. attribute:: Phase4
+   .. py:attribute:: Phase4
       
 
       

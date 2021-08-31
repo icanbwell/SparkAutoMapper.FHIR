@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.complex_types.usage_context`
-=========================================================
+:py:mod:`spark_auto_mapper_fhir.complex_types.usage_context`
+============================================================
 
 .. py:module:: spark_auto_mapper_fhir.complex_types.usage_context
 
@@ -16,17 +16,37 @@ Classes
 
 
 
-.. class:: UsageContext(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, code: spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.usage_context_type.UsageContextTypeCode], valueCodeableConcept: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.context_of_use_value_set.ContextOfUseValueSetCode]] = None, valueQuantity: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, valueRange: Optional[spark_auto_mapper_fhir.complex_types.range.Range] = None, valueReference: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.plan_definition.PlanDefinition, spark_auto_mapper_fhir.resources.research_study.ResearchStudy, spark_auto_mapper_fhir.resources.insurance_plan.InsurancePlan, spark_auto_mapper_fhir.resources.healthcare_service.HealthcareService, spark_auto_mapper_fhir.resources.group.Group, spark_auto_mapper_fhir.resources.location.Location, spark_auto_mapper_fhir.resources.organization.Organization)]]] = None)
 
+.. py:class:: UsageContext(*, id_ = None, extension = None, code, valueCodeableConcept = None, valueQuantity = None, valueRange = None, valueReference = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
 
    UsageContext
    fhir-base.xsd
        Specifies clinical/business/etc. metadata that can be used to retrieve, index and/or categorize an artifact. This metadata can either be specific to the applicable population (e.g., age category, DRG) or the specific context of care (e.g., venue, care setting, provider of care).
        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
 
-   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+       Specifies clinical/business/etc. metadata that can be used to retrieve, index
+   and/or categorize an artifact. This metadata can either be specific to the
+   applicable population (e.g., age category, DRG) or the specific context of
+   care (e.g., venue, care setting, provider of care).
+       If the element is present, it must have a value for at least one of the
+   defined elements, an @id referenced from the Narrative, or extensions
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param code: A code that identifies the type of context being specified by this usage
+   context.
+       :param valueCodeableConcept: None
+       :param valueQuantity: None
+       :param valueRange: None
+       :param valueReference: None
+
+   .. py:method:: get_schema(self, include_extension)
 
 
 

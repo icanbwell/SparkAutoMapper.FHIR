@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.immunization_origin_codes`
-==================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.immunization_origin_codes`
+=====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.immunization_origin_codes
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: ImmunizationOriginCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ImmunizationOriginCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ImmunizationOriginCodes
    From: http://terminology.hl7.org/CodeSystem/immunization-origin in valuesets.xml
@@ -30,18 +30,18 @@ Classes
    event is not based on information from the person, entity or organization who
    administered the vaccine. This value set is provided as a suggestive example.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/immunization-origin
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/immunization-origin
 
       
 
 
-.. class:: ImmunizationOriginCodesCodeValues
+.. py:class:: ImmunizationOriginCodesCodeValues
 
    The data for the immunization event originated with another provider.
    From: http://terminology.hl7.org/CodeSystem/immunization-origin in valuesets.xml
 
-   .. attribute:: OtherProvider
+   .. py:attribute:: OtherProvider
       
 
       The data for the immunization event originated with a written record for the
@@ -49,7 +49,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/immunization-origin in valuesets.xml
 
 
-   .. attribute:: WrittenRecord
+   .. py:attribute:: WrittenRecord
       
 
       The data for the immunization event originated from the recollection of the
@@ -57,7 +57,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/immunization-origin in valuesets.xml
 
 
-   .. attribute:: Parent_Guardian_PatientRecall
+   .. py:attribute:: Parent_Guardian_PatientRecall
       
 
       The data for the immunization event originated with a school record for the
@@ -65,7 +65,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/immunization-origin in valuesets.xml
 
 
-   .. attribute:: SchoolRecord
+   .. py:attribute:: SchoolRecord
       
 
       The data for the immunization event originated with an immunization
@@ -73,7 +73,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/immunization-origin in valuesets.xml
 
 
-   .. attribute:: JurisdictionalIIS
+   .. py:attribute:: JurisdictionalIIS
       
 
       

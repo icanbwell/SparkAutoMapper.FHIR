@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.test_script_profile_destination_type`
-=============================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.test_script_profile_destination_type`
+================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.test_script_profile_destination_type
 
@@ -17,49 +17,49 @@ Classes
 
 
 
-.. class:: TestScriptProfileDestinationTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: TestScriptProfileDestinationTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    TestScriptProfileDestinationType
    From: http://terminology.hl7.org/CodeSystem/testscript-profile-destination-types in valuesets.xml
        This value set defines a set of codes that are used to indicate the profile
    type of a test system when acting as the destination within a TestScript.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/testscript-profile-destination-types
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/testscript-profile-destination-types
 
       
 
 
-.. class:: TestScriptProfileDestinationTypeCodeValues
+.. py:class:: TestScriptProfileDestinationTypeCodeValues
 
    General FHIR server used to respond to operations sent from a FHIR client.
    From: http://terminology.hl7.org/CodeSystem/testscript-profile-destination-types in valuesets.xml
 
-   .. attribute:: FHIRServer
+   .. py:attribute:: FHIRServer
       
 
       A FHIR server acting as a Structured Data Capture Form Manager.
       From: http://terminology.hl7.org/CodeSystem/testscript-profile-destination-types in valuesets.xml
 
 
-   .. attribute:: FHIRSDCFormManager
+   .. py:attribute:: FHIRSDCFormManager
       
 
       A FHIR server acting as a Structured Data Capture Form Processor.
       From: http://terminology.hl7.org/CodeSystem/testscript-profile-destination-types in valuesets.xml
 
 
-   .. attribute:: FHIRSDCFormProcessor
+   .. py:attribute:: FHIRSDCFormProcessor
       
 
       A FHIR server acting as a Structured Data Capture Form Receiver.
       From: http://terminology.hl7.org/CodeSystem/testscript-profile-destination-types in valuesets.xml
 
 
-   .. attribute:: FHIRSDCFormReceiver
+   .. py:attribute:: FHIRSDCFormReceiver
       
 
       

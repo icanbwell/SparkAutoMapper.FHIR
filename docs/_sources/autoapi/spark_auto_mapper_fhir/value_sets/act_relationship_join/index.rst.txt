@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.act_relationship_join`
-==============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.act_relationship_join`
+=================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.act_relationship_join
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: ActRelationshipJoin(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ActRelationshipJoin(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.ActRelationshipJoin
    From: http://terminology.hl7.org/ValueSet/v3-ActRelationshipJoin in v3-codesystems.xml
        **** MISSING DEFINITIONS ****
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ActRelationshipJoin
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-ActRelationshipJoin
 
       
 
 
-.. class:: ActRelationshipJoinValues
+.. py:class:: ActRelationshipJoinValues
 
    Detach this branch from the other branches so it will not be resynchronized
    with the other branches.
    From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipJoin in v3-codesystems.xml
 
-   .. attribute:: Detached
+   .. py:attribute:: Detached
       
 
       When all other concurrent branches are terminated, interrupt and discontinue
@@ -46,14 +46,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipJoin in v3-codesystems.xml
 
 
-   .. attribute:: Kill
+   .. py:attribute:: Kill
       
 
       Wait for this branch to terminate.
       From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipJoin in v3-codesystems.xml
 
 
-   .. attribute:: Wait
+   .. py:attribute:: Wait
       
 
       Wait for any one of the branches in the set of exclusive wait branches to
@@ -61,7 +61,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipJoin in v3-codesystems.xml
 
 
-   .. attribute:: ExclusiveWait
+   .. py:attribute:: ExclusiveWait
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.allergy_intolerance_clinical_status_codes`
-==================================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.allergy_intolerance_clinical_status_codes`
+=====================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.allergy_intolerance_clinical_status_codes
 
@@ -17,35 +17,35 @@ Classes
 
 
 
-.. class:: AllergyIntoleranceClinicalStatusCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: AllergyIntoleranceClinicalStatusCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    AllergyIntoleranceClinicalStatusCodes
    From: http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical in valuesets.xml
        Preferred value set for AllergyIntolerance Clinical Status.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
 
       
 
 
-.. class:: AllergyIntoleranceClinicalStatusCodesCodeValues
+.. py:class:: AllergyIntoleranceClinicalStatusCodesCodeValues
 
    The subject is currently experiencing, or is at risk of, a reaction to the
    identified substance.
    From: http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical in valuesets.xml
 
-   .. attribute:: Active
+   .. py:attribute:: Active
       
 
       The subject is no longer at risk of a reaction to the identified substance.
       From: http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical in valuesets.xml
 
 
-   .. attribute:: Inactive
+   .. py:attribute:: Inactive
       
 
       

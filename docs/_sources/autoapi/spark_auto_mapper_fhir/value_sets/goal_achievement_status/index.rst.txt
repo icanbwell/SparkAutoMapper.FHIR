@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.goal_achievement_status`
-================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.goal_achievement_status`
+===================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.goal_achievement_status
 
@@ -17,37 +17,37 @@ Classes
 
 
 
-.. class:: GoalAchievementStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: GoalAchievementStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    GoalAchievementStatus
    From: http://terminology.hl7.org/CodeSystem/goal-achievement in valuesets.xml
        Describes the progression, or lack thereof, towards the goal against the
    target.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/goal-achievement
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/goal-achievement
 
       
 
 
-.. class:: GoalAchievementStatusCodeValues
+.. py:class:: GoalAchievementStatusCodeValues
 
    The goal is being sought but has not yet been reached. (Also applies if the
    goal was reached in the past but there has been regression and the goal is
    again being sought).
    From: http://terminology.hl7.org/CodeSystem/goal-achievement in valuesets.xml
 
-   .. attribute:: InProgress
+   .. py:attribute:: InProgress
       
 
       The goal has been met.
       From: http://terminology.hl7.org/CodeSystem/goal-achievement in valuesets.xml
 
 
-   .. attribute:: Achieved
+   .. py:attribute:: Achieved
       
 
       The goal has not been met and there might or might not have been progress
@@ -55,7 +55,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/goal-achievement in valuesets.xml
 
 
-   .. attribute:: NotAchieved
+   .. py:attribute:: NotAchieved
       
 
       

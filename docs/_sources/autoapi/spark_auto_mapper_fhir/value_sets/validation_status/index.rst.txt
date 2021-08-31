@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.validation_status`
-==========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.validation_status`
+=============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.validation_status
 
@@ -17,39 +17,39 @@ Classes
 
 
 
-.. class:: Validation_statusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: Validation_statusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    validation-status
    From: http://terminology.hl7.org/CodeSystem/validation-status in valuesets.xml
        Status of the validation of the target against the primary source
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/validation-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/validation-status
 
       
 
 
-.. class:: Validation_statusCodeValues
+.. py:class:: Validation_statusCodeValues
 
    From: http://terminology.hl7.org/CodeSystem/validation-status in valuesets.xml
 
-   .. attribute:: Successful
+   .. py:attribute:: Successful
       
 
       From: http://terminology.hl7.org/CodeSystem/validation-status in valuesets.xml
 
 
-   .. attribute:: Failed
+   .. py:attribute:: Failed
       
 
       The validations status has not been determined yet
       From: http://terminology.hl7.org/CodeSystem/validation-status in valuesets.xml
 
 
-   .. attribute:: Unknown
+   .. py:attribute:: Unknown
       
 
       

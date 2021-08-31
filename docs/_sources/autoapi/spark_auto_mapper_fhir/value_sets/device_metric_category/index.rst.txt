@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.device_metric_category`
-===============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.device_metric_category`
+==================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.device_metric_category
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: DeviceMetricCategoryCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: DeviceMetricCategoryCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    DeviceMetricCategory
    From: http://hl7.org/fhir/metric-category in valuesets.xml
        Describes the category of the metric.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/metric-category
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/metric-category
 
       
 
 
-.. class:: DeviceMetricCategoryCodeValues
+.. py:class:: DeviceMetricCategoryCodeValues
 
    DeviceObservations generated for this DeviceMetric are measured.
    From: http://hl7.org/fhir/metric-category in valuesets.xml
 
-   .. attribute:: Measurement
+   .. py:attribute:: Measurement
       
 
       DeviceObservations generated for this DeviceMetric is a setting that will
@@ -45,21 +45,21 @@ Classes
       From: http://hl7.org/fhir/metric-category in valuesets.xml
 
 
-   .. attribute:: Setting
+   .. py:attribute:: Setting
       
 
       DeviceObservations generated for this DeviceMetric are calculated.
       From: http://hl7.org/fhir/metric-category in valuesets.xml
 
 
-   .. attribute:: Calculation
+   .. py:attribute:: Calculation
       
 
       The category of this DeviceMetric is unspecified.
       From: http://hl7.org/fhir/metric-category in valuesets.xml
 
 
-   .. attribute:: Unspecified
+   .. py:attribute:: Unspecified
       
 
       

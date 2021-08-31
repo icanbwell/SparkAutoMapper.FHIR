@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.v2_0394`
-================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.v2_0394`
+===================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.v2_0394
 
@@ -16,18 +16,18 @@ Classes
 
 
 
-.. class:: V2_0394(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: V2_0394(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v2.0394
    From: http://terminology.hl7.org/ValueSet/v2-0394 in v2-tables.xml
        FHIR Value set/code system definition for HL7 v2 table 0394 ( Response
    modality)
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/ValueSet/v2-0394
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/ValueSet/v2-0394
 
       
 

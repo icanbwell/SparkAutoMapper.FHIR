@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.audit_event_source_type`
-================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.audit_event_source_type`
+===================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.audit_event_source_type
 
@@ -17,76 +17,76 @@ Classes
 
 
 
-.. class:: AuditEventSourceTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: AuditEventSourceTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    AuditEventSourceType
    From: http://terminology.hl7.org/CodeSystem/security-source-type in valuesets.xml
        The type of process where the audit event originated from.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/security-source-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/security-source-type
 
       
 
 
-.. class:: AuditEventSourceTypeCodeValues
+.. py:class:: AuditEventSourceTypeCodeValues
 
    End-user display device, diagnostic device.
    From: http://terminology.hl7.org/CodeSystem/security-source-type in valuesets.xml
 
-   .. attribute:: UserDevice
+   .. py:attribute:: UserDevice
       
 
       Data acquisition device or instrument.
       From: http://terminology.hl7.org/CodeSystem/security-source-type in valuesets.xml
 
 
-   .. attribute:: DataInterface
+   .. py:attribute:: DataInterface
       
 
       Web Server process or thread.
       From: http://terminology.hl7.org/CodeSystem/security-source-type in valuesets.xml
 
 
-   .. attribute:: WebServer
+   .. py:attribute:: WebServer
       
 
       Application Server process or thread.
       From: http://terminology.hl7.org/CodeSystem/security-source-type in valuesets.xml
 
 
-   .. attribute:: ApplicationServer
+   .. py:attribute:: ApplicationServer
       
 
       Database Server process or thread.
       From: http://terminology.hl7.org/CodeSystem/security-source-type in valuesets.xml
 
 
-   .. attribute:: DatabaseServer
+   .. py:attribute:: DatabaseServer
       
 
       Security server, e.g. a domain controller.
       From: http://terminology.hl7.org/CodeSystem/security-source-type in valuesets.xml
 
 
-   .. attribute:: SecurityServer
+   .. py:attribute:: SecurityServer
       
 
       ISO level 1-3 network component.
       From: http://terminology.hl7.org/CodeSystem/security-source-type in valuesets.xml
 
 
-   .. attribute:: NetworkDevice
+   .. py:attribute:: NetworkDevice
       
 
       ISO level 4-6 operating software.
       From: http://terminology.hl7.org/CodeSystem/security-source-type in valuesets.xml
 
 
-   .. attribute:: NetworkRouter
+   .. py:attribute:: NetworkRouter
       
 
       Other kind of device (defined by DICOM, but some other code/system can be
@@ -94,7 +94,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/security-source-type in valuesets.xml
 
 
-   .. attribute:: Other
+   .. py:attribute:: Other
       
 
       

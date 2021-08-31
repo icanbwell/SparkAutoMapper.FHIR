@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.practice_setting_code_value_set`
-========================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.practice_setting_code_value_set`
+===========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.practice_setting_code_value_set
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: PracticeSettingCodeValueSetCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: PracticeSettingCodeValueSetCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    PracticeSettingCodeValueSet
    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
@@ -30,713 +30,713 @@ Classes
    to the value set reproduced from HITSP C80 Table 2-149 Clinical Specialty
    Value Set Definition.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://snomed.info/sct
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://snomed.info/sct
 
       
 
 
-.. class:: PracticeSettingCodeValueSetCodeValues
+.. py:class:: PracticeSettingCodeValueSetCodeValues
 
    From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
-   .. attribute:: AdultMentalIllness
+   .. py:attribute:: AdultMentalIllness
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Anesthetics
+   .. py:attribute:: Anesthetics
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: AudiologicalMedicine
+   .. py:attribute:: AudiologicalMedicine
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: BloodBankingAndTransfusionMedicine
+   .. py:attribute:: BloodBankingAndTransfusionMedicine
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: BurnsCare
+   .. py:attribute:: BurnsCare
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Cardiology
+   .. py:attribute:: Cardiology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: ClinicalCytogeneticsAndMolecularGenetics
+   .. py:attribute:: ClinicalCytogeneticsAndMolecularGenetics
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: ClinicalGenetics
+   .. py:attribute:: ClinicalGenetics
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: ClinicalHematology
+   .. py:attribute:: ClinicalHematology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: ClinicalImmunology
+   .. py:attribute:: ClinicalImmunology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: ClinicalMicrobiology
+   .. py:attribute:: ClinicalMicrobiology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: ClinicalNeuro_physiology
+   .. py:attribute:: ClinicalNeuro_physiology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: ClinicalOncology
+   .. py:attribute:: ClinicalOncology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: ClinicalPharmacology
+   .. py:attribute:: ClinicalPharmacology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: ClinicalPhysiology
+   .. py:attribute:: ClinicalPhysiology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: CommunityMedicine
+   .. py:attribute:: CommunityMedicine
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: CriticalCareMedicine
+   .. py:attribute:: CriticalCareMedicine
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: DentalMedicineSpecialties
+   .. py:attribute:: DentalMedicineSpecialties
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Dental_GeneralDentalPractice
+   .. py:attribute:: Dental_GeneralDentalPractice
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Dermatology
+   .. py:attribute:: Dermatology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: DiabeticMedicine
+   .. py:attribute:: DiabeticMedicine
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: DiveMedicine
+   .. py:attribute:: DiveMedicine
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Endocrinology
+   .. py:attribute:: Endocrinology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: FamilyPractice
+   .. py:attribute:: FamilyPractice
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Gastroenterology
+   .. py:attribute:: Gastroenterology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: GeneralMedicalPractice
+   .. py:attribute:: GeneralMedicalPractice
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: GeneralMedicine
+   .. py:attribute:: GeneralMedicine
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: GeneralPathology
+   .. py:attribute:: GeneralPathology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: GeneralPractice
+   .. py:attribute:: GeneralPractice
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Genito_urinaryMedicine
+   .. py:attribute:: Genito_urinaryMedicine
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: GeriatricMedicine
+   .. py:attribute:: GeriatricMedicine
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: GynecologicalOncology
+   .. py:attribute:: GynecologicalOncology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Gynecology
+   .. py:attribute:: Gynecology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Hematopathology
+   .. py:attribute:: Hematopathology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Hepatology
+   .. py:attribute:: Hepatology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Histopathology
+   .. py:attribute:: Histopathology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Immunopathology
+   .. py:attribute:: Immunopathology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: InfectiousDiseases
+   .. py:attribute:: InfectiousDiseases
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: InternalMedicine
+   .. py:attribute:: InternalMedicine
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: LearningDisability
+   .. py:attribute:: LearningDisability
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: MedicalOncology
+   .. py:attribute:: MedicalOncology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: MedicalOphthalmology
+   .. py:attribute:: MedicalOphthalmology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: MilitaryMedicine
+   .. py:attribute:: MilitaryMedicine
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Nephrology
+   .. py:attribute:: Nephrology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Neurology
+   .. py:attribute:: Neurology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Neuropathology
+   .. py:attribute:: Neuropathology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: NuclearMedicine
+   .. py:attribute:: NuclearMedicine
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Obstetrics
+   .. py:attribute:: Obstetrics
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: ObstetricsAndGynecology
+   .. py:attribute:: ObstetricsAndGynecology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: OccupationalMedicine
+   .. py:attribute:: OccupationalMedicine
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: OphthalmicSurgery
+   .. py:attribute:: OphthalmicSurgery
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Ophthalmology
+   .. py:attribute:: Ophthalmology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: OsteopathicManipulativeMedicine
+   .. py:attribute:: OsteopathicManipulativeMedicine
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Otolaryngology
+   .. py:attribute:: Otolaryngology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: PainManagement
+   .. py:attribute:: PainManagement
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: PalliativeMedicine
+   .. py:attribute:: PalliativeMedicine
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Pediatric_ChildAndAdolescent_Psychiatry
+   .. py:attribute:: Pediatric_ChildAndAdolescent_Psychiatry
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: PediatricCardiology
+   .. py:attribute:: PediatricCardiology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: PediatricDentistry
+   .. py:attribute:: PediatricDentistry
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: PediatricEndocrinology
+   .. py:attribute:: PediatricEndocrinology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: PediatricGastroenterology
+   .. py:attribute:: PediatricGastroenterology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: PediatricGenetics
+   .. py:attribute:: PediatricGenetics
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: PediatricHematology
+   .. py:attribute:: PediatricHematology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: PediatricImmunology
+   .. py:attribute:: PediatricImmunology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: PediatricInfectiousDiseases
+   .. py:attribute:: PediatricInfectiousDiseases
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: PediatricNephrology
+   .. py:attribute:: PediatricNephrology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: PediatricOncology
+   .. py:attribute:: PediatricOncology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: PediatricOphthalmology
+   .. py:attribute:: PediatricOphthalmology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: PediatricPulmonology
+   .. py:attribute:: PediatricPulmonology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: PediatricRheumatology
+   .. py:attribute:: PediatricRheumatology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: PediatricSurgery
+   .. py:attribute:: PediatricSurgery
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: PediatricSurgery_boneMarrowTransplantation
+   .. py:attribute:: PediatricSurgery_boneMarrowTransplantation
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: PreventiveMedicine
+   .. py:attribute:: PreventiveMedicine
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Psychiatry
+   .. py:attribute:: Psychiatry
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Psychotherapy
+   .. py:attribute:: Psychotherapy
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: PublicHealthMedicine
+   .. py:attribute:: PublicHealthMedicine
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: PulmonaryMedicine
+   .. py:attribute:: PulmonaryMedicine
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: RadiationOncology
+   .. py:attribute:: RadiationOncology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Radiology
+   .. py:attribute:: Radiology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Radiology_InterventionalRadiology
+   .. py:attribute:: Radiology_InterventionalRadiology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Rehabilitation
+   .. py:attribute:: Rehabilitation
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: RespiteCare
+   .. py:attribute:: RespiteCare
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Rheumatology
+   .. py:attribute:: Rheumatology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: SleepStudies
+   .. py:attribute:: SleepStudies
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Surgery_BoneAndMarrowTransplantation
+   .. py:attribute:: Surgery_BoneAndMarrowTransplantation
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Surgery_BreastSurgery
+   .. py:attribute:: Surgery_BreastSurgery
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Surgery_CardiacSurgery
+   .. py:attribute:: Surgery_CardiacSurgery
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Surgery_CardiothoracicTransplantation
+   .. py:attribute:: Surgery_CardiothoracicTransplantation
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Surgery_ColorectalSurgery
+   .. py:attribute:: Surgery_ColorectalSurgery
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Surgery_Dental_Endodontics
+   .. py:attribute:: Surgery_Dental_Endodontics
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Surgery_Dental_OralAndMaxillofacialSurgery
+   .. py:attribute:: Surgery_Dental_OralAndMaxillofacialSurgery
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Surgery_Dental_OralSurgery
+   .. py:attribute:: Surgery_Dental_OralSurgery
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Surgery_Dental_Orthodontics
+   .. py:attribute:: Surgery_Dental_Orthodontics
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Surgery_Dental_PeriodontalSurgery
+   .. py:attribute:: Surgery_Dental_PeriodontalSurgery
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Surgery_Dental_ProstheticDentistry_Prosthodontics_
+   .. py:attribute:: Surgery_Dental_ProstheticDentistry_Prosthodontics_
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Surgery_Dental_surgical_Prosthodontics
+   .. py:attribute:: Surgery_Dental_surgical_Prosthodontics
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Surgery_Dentistry_RestorativeDentistry
+   .. py:attribute:: Surgery_Dentistry_RestorativeDentistry
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Surgery_Dentistry_surgical
+   .. py:attribute:: Surgery_Dentistry_surgical
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Surgery_Dentistry_surgical_Orthodontics
+   .. py:attribute:: Surgery_Dentistry_surgical_Orthodontics
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Surgery_DermatologicSurgery
+   .. py:attribute:: Surgery_DermatologicSurgery
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Surgery_Ear_NoseAndThroatSurgery
+   .. py:attribute:: Surgery_Ear_NoseAndThroatSurgery
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Surgery_general
+   .. py:attribute:: Surgery_general
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Surgery_HepatobiliaryAndPancreaticSurgery
+   .. py:attribute:: Surgery_HepatobiliaryAndPancreaticSurgery
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Surgery_Neurosurgery
+   .. py:attribute:: Surgery_Neurosurgery
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Surgery_PlasticSurgery
+   .. py:attribute:: Surgery_PlasticSurgery
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Surgery_TransplantationSurgery
+   .. py:attribute:: Surgery_TransplantationSurgery
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Surgery_TraumaAndOrthopedics
+   .. py:attribute:: Surgery_TraumaAndOrthopedics
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Surgery_Vascular
+   .. py:attribute:: Surgery_Vascular
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: SurgicalOncology
+   .. py:attribute:: SurgicalOncology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Surgical_Accident_Emergency
+   .. py:attribute:: Surgical_Accident_Emergency
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: ThoracicMedicine
+   .. py:attribute:: ThoracicMedicine
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Toxicology
+   .. py:attribute:: Toxicology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: TropicalMedicine
+   .. py:attribute:: TropicalMedicine
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: UrologicalOncology
+   .. py:attribute:: UrologicalOncology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: Urology
+   .. py:attribute:: Urology
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: MedicalSpecialty_OTHER_NOTLISTED
+   .. py:attribute:: MedicalSpecialty_OTHER_NOTLISTED
       
 
       From: http://hl7.org/fhir/ValueSet/c80-practice-codes in valuesets.xml
 
 
-   .. attribute:: SurgicalSpecialty_OTHER_NOTLISTED
+   .. py:attribute:: SurgicalSpecialty_OTHER_NOTLISTED
       
 
       

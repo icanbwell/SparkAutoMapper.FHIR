@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.backbone_elements.audit_event_agent`
-=================================================================
+:py:mod:`spark_auto_mapper_fhir.backbone_elements.audit_event_agent`
+====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.backbone_elements.audit_event_agent
 
@@ -16,12 +16,59 @@ Classes
 
 
 
-.. class:: AuditEventAgent(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, type_: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.participation_role_type.ParticipationRoleTypeCode]] = None, role: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.security_role_type.SecurityRoleTypeCode]]] = None, who: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole, spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.organization.Organization, spark_auto_mapper_fhir.resources.device.Device, spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.related_person.RelatedPerson)]]] = None, altId: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, name: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, requestor: spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean, location: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.location.Location]] = None, policy: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.uri.FhirUri]] = None, media: Optional[spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.media_type_code.MediaTypeCodeCode]] = None, network: Optional[spark_auto_mapper_fhir.backbone_elements.audit_event_network.AuditEventNetwork] = None, purposeOfUse: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.purpose_of_use.PurposeOfUse]]] = None)
 
+.. py:class:: AuditEventAgent(*, id_ = None, extension = None, modifierExtension = None, type_ = None, role = None, who = None, altId = None, name = None, requestor, location = None, policy = None, media = None, network = None, purposeOfUse = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
 
    AuditEvent.Agent
-   A record of an event made for purposes of maintaining a security log. Typical uses include detection of intrusion attempts and monitoring for inappropriate usage.
+       A record of an event made for purposes of maintaining a security log. Typical uses include detection of intrusion attempts and monitoring for inappropriate usage.
+
+       A record of an event made for purposes of maintaining a security log. Typical
+   uses include detection of intrusion attempts and monitoring for inappropriate
+   usage.
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param modifierExtension: May be used to represent additional information that is not part of the basic
+   definition of the element and that modifies the understanding of the element
+   in which it is contained and/or the understanding of the containing element's
+   descendants. Usually modifier elements provide negation or qualification. To
+   make the use of extensions safe and manageable, there is a strict set of
+   governance applied to the definition and use of extensions. Though any
+   implementer can define an extension, there is a set of requirements that SHALL
+   be met as part of the definition of the extension. Applications processing a
+   resource are required to check for modifier extensions.
+
+   Modifier extensions SHALL NOT change the meaning of any elements on Resource
+   or DomainResource (including cannot change the meaning of modifierExtension
+   itself).
+       :param type_: Specification of the participation type the user plays when performing the
+   event.
+       :param role: The security role that the user was acting under, that come from local codes
+   defined by the access control security system (e.g. RBAC, ABAC) used in the
+   local context.
+       :param who: Reference to who this agent is that was involved in the event.
+       :param altId: Alternative agent Identifier. For a human, this should be a user identifier
+   text string from authentication system. This identifier would be one known to
+   a common authentication system (e.g. single sign-on), if available.
+       :param name: Human-meaningful name for the agent.
+       :param requestor: Indicator that the user is or is not the requestor, or initiator, for the
+   event being audited.
+       :param location: Where the event occurred.
+       :param policy: The policy or plan that authorized the activity being recorded. Typically, a
+   single activity may have multiple applicable policies, such as patient
+   consent, guarantor funding, etc. The policy would also indicate the security
+   token used.
+       :param media: Type of media involved. Used when the event is about exporting/importing onto
+   media.
+       :param network: Logical network location for application activity, if the activity has a
+   network location.
+       :param purposeOfUse: The reason (purpose of use), specific to this agent, that was used during the
+   event being recorded.
 
 

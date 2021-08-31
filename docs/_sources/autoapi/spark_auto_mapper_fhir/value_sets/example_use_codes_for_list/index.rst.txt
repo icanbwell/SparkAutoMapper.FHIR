@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.example_use_codes_for_list`
-===================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.example_use_codes_for_list`
+======================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.example_use_codes_for_list
 
@@ -17,48 +17,48 @@ Classes
 
 
 
-.. class:: ExampleUseCodesForListCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ExampleUseCodesForListCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ExampleUseCodesForList
    From: http://terminology.hl7.org/CodeSystem/list-example-use-codes in valuesets.xml
        Example use codes for the List resource - typical kinds of use.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/list-example-use-codes
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/list-example-use-codes
 
       
 
 
-.. class:: ExampleUseCodesForListCodeValues
+.. py:class:: ExampleUseCodesForListCodeValues
 
    A list of alerts for the patient.
    From: http://terminology.hl7.org/CodeSystem/list-example-use-codes in valuesets.xml
 
-   .. attribute:: Alerts
+   .. py:attribute:: Alerts
       
 
       A list of part adverse reactions.
       From: http://terminology.hl7.org/CodeSystem/list-example-use-codes in valuesets.xml
 
 
-   .. attribute:: AdverseReactions
+   .. py:attribute:: AdverseReactions
       
 
       A list of Allergies for the patient.
       From: http://terminology.hl7.org/CodeSystem/list-example-use-codes in valuesets.xml
 
 
-   .. attribute:: Allergies
+   .. py:attribute:: Allergies
       
 
       A list of medication statements for the patient.
       From: http://terminology.hl7.org/CodeSystem/list-example-use-codes in valuesets.xml
 
 
-   .. attribute:: MedicationList
+   .. py:attribute:: MedicationList
       
 
       A list of problems that the patient is known of have (or have had in the
@@ -66,7 +66,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/list-example-use-codes in valuesets.xml
 
 
-   .. attribute:: ProblemList
+   .. py:attribute:: ProblemList
       
 
       A list of items that constitute a set of work to be performed (typically this
@@ -74,7 +74,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/list-example-use-codes in valuesets.xml
 
 
-   .. attribute:: Worklist
+   .. py:attribute:: Worklist
       
 
       A list of items waiting for an event (perhaps a surgical patient waiting
@@ -82,21 +82,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/list-example-use-codes in valuesets.xml
 
 
-   .. attribute:: WaitingList
+   .. py:attribute:: WaitingList
       
 
       A set of protocols to be followed.
       From: http://terminology.hl7.org/CodeSystem/list-example-use-codes in valuesets.xml
 
 
-   .. attribute:: Protocols
+   .. py:attribute:: Protocols
       
 
       A set of care plans that apply in a particular context of care.
       From: http://terminology.hl7.org/CodeSystem/list-example-use-codes in valuesets.xml
 
 
-   .. attribute:: CarePlans
+   .. py:attribute:: CarePlans
       
 
       

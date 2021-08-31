@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.feeding_device_codes`
-=============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.feeding_device_codes`
+================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.feeding_device_codes
 
@@ -17,174 +17,174 @@ Classes
 
 
 
-.. class:: FeedingDeviceCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: FeedingDeviceCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    FeedingDeviceCodes
    From: http://hl7.org/fhir/feeding-device in valuesets.xml
        Materials used or needed to feed the patient.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/feeding-device
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/feeding-device
 
       
 
 
-.. class:: FeedingDeviceCodesCodeValues
+.. py:class:: FeedingDeviceCodesCodeValues
 
    Standard nipple definition:
    From: http://hl7.org/fhir/feeding-device in valuesets.xml
 
-   .. attribute:: StandardNipple
+   .. py:attribute:: StandardNipple
       
 
       Preemie nipple definition:
       From: http://hl7.org/fhir/feeding-device in valuesets.xml
 
 
-   .. attribute:: PreemieNipple
+   .. py:attribute:: PreemieNipple
       
 
       Orthodontic nipple definition:
       From: http://hl7.org/fhir/feeding-device in valuesets.xml
 
 
-   .. attribute:: OrthodonticNipple
+   .. py:attribute:: OrthodonticNipple
       
 
       Slow flow nipple definition:
       From: http://hl7.org/fhir/feeding-device in valuesets.xml
 
 
-   .. attribute:: SlowFlowNipple
+   .. py:attribute:: SlowFlowNipple
       
 
       Middle flow nipple definition:
       From: http://hl7.org/fhir/feeding-device in valuesets.xml
 
 
-   .. attribute:: MiddleFlowNipple
+   .. py:attribute:: MiddleFlowNipple
       
 
       Enlarged, cross-cut nipple definition:
       From: http://hl7.org/fhir/feeding-device in valuesets.xml
 
 
-   .. attribute:: Enlarged_Cross_cutNipple
+   .. py:attribute:: Enlarged_Cross_cutNipple
       
 
       Haberman bottle definition:
       From: http://hl7.org/fhir/feeding-device in valuesets.xml
 
 
-   .. attribute:: HabermanBottle
+   .. py:attribute:: HabermanBottle
       
 
       Sippy cup with valve definition:
       From: http://hl7.org/fhir/feeding-device in valuesets.xml
 
 
-   .. attribute:: SippyCupWithValve
+   .. py:attribute:: SippyCupWithValve
       
 
       Sippy cup without valve definition:
       From: http://hl7.org/fhir/feeding-device in valuesets.xml
 
 
-   .. attribute:: SippyCupWithoutValve
+   .. py:attribute:: SippyCupWithoutValve
       
 
       Provale Cup definition:
       From: http://hl7.org/fhir/feeding-device in valuesets.xml
 
 
-   .. attribute:: ProvaleCup
+   .. py:attribute:: ProvaleCup
       
 
       Glass with lid/sippy cup definition:
       From: http://hl7.org/fhir/feeding-device in valuesets.xml
 
 
-   .. attribute:: GlassWithLid_sippyCup
+   .. py:attribute:: GlassWithLid_sippyCup
       
 
       Double handhold on glass/cup definition:
       From: http://hl7.org/fhir/feeding-device in valuesets.xml
 
 
-   .. attribute:: DoubleHandholdOnGlass_cup
+   .. py:attribute:: DoubleHandholdOnGlass_cup
       
 
       Rubber matting under tray definition:
       From: http://hl7.org/fhir/feeding-device in valuesets.xml
 
 
-   .. attribute:: RubberMattingUnderTray
+   .. py:attribute:: RubberMattingUnderTray
       
 
       Straw definition:
       From: http://hl7.org/fhir/feeding-device in valuesets.xml
 
 
-   .. attribute:: Straw
+   .. py:attribute:: Straw
       
 
       Nose cup definition:
       From: http://hl7.org/fhir/feeding-device in valuesets.xml
 
 
-   .. attribute:: NoseCup
+   .. py:attribute:: NoseCup
       
 
       Scoop plate definition:
       From: http://hl7.org/fhir/feeding-device in valuesets.xml
 
 
-   .. attribute:: ScoopPlate
+   .. py:attribute:: ScoopPlate
       
 
       Hand wrap utensil holder definition:
       From: http://hl7.org/fhir/feeding-device in valuesets.xml
 
 
-   .. attribute:: HandWrapUtensilHolder
+   .. py:attribute:: HandWrapUtensilHolder
       
 
       Foam handle utensils definition:
       From: http://hl7.org/fhir/feeding-device in valuesets.xml
 
 
-   .. attribute:: FoamHandleUtensils
+   .. py:attribute:: FoamHandleUtensils
       
 
       Angled utensils definition:
       From: http://hl7.org/fhir/feeding-device in valuesets.xml
 
 
-   .. attribute:: AngledUtensils
+   .. py:attribute:: AngledUtensils
       
 
       Spout cup definition:
       From: http://hl7.org/fhir/feeding-device in valuesets.xml
 
 
-   .. attribute:: SpoutCup
+   .. py:attribute:: SpoutCup
       
 
       Automated feeding devices definition:
       From: http://hl7.org/fhir/feeding-device in valuesets.xml
 
 
-   .. attribute:: AutomatedFeedingDevices
+   .. py:attribute:: AutomatedFeedingDevices
       
 
       Rocker knife definition:
       From: http://hl7.org/fhir/feeding-device in valuesets.xml
 
 
-   .. attribute:: RockerKnife
+   .. py:attribute:: RockerKnife
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.charset`
-================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.charset`
+===================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.charset
 
@@ -17,90 +17,90 @@ Classes
 
 
 
-.. class:: Charset(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: Charset(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.Charset
    From: http://terminology.hl7.org/ValueSet/v3-Charset in v3-codesystems.xml
         Internet Assigned Numbers Authority (IANA) Charset Types
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-Charset
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-Charset
 
       
 
 
-.. class:: CharsetValues
+.. py:class:: CharsetValues
 
    HL7 is indifferent to the use of this Charset.
    From: http://terminology.hl7.org/CodeSystem/v3-Charset in v3-codesystems.xml
 
-   .. attribute:: EBCDIC
+   .. py:attribute:: EBCDIC
       
 
       Deprecated for HL7 use.
       From: http://terminology.hl7.org/CodeSystem/v3-Charset in v3-codesystems.xml
 
 
-   .. attribute:: ISO_10646_UCS_2
+   .. py:attribute:: ISO_10646_UCS_2
       
 
       Deprecated for HL7 use.
       From: http://terminology.hl7.org/CodeSystem/v3-Charset in v3-codesystems.xml
 
 
-   .. attribute:: ISO_10646_UCS_4
+   .. py:attribute:: ISO_10646_UCS_4
       
 
       HL7 is indifferent to the use of this Charset.
       From: http://terminology.hl7.org/CodeSystem/v3-Charset in v3-codesystems.xml
 
 
-   .. attribute:: ISO_8859_1
+   .. py:attribute:: ISO_8859_1
       
 
       HL7 is indifferent to the use of this Charset.
       From: http://terminology.hl7.org/CodeSystem/v3-Charset in v3-codesystems.xml
 
 
-   .. attribute:: ISO_8859_2
+   .. py:attribute:: ISO_8859_2
       
 
       HL7 is indifferent to the use of this Charset.
       From: http://terminology.hl7.org/CodeSystem/v3-Charset in v3-codesystems.xml
 
 
-   .. attribute:: ISO_8859_5
+   .. py:attribute:: ISO_8859_5
       
 
       HL7 is indifferent to the use of this Charset.
       From: http://terminology.hl7.org/CodeSystem/v3-Charset in v3-codesystems.xml
 
 
-   .. attribute:: JIS_2022_JP
+   .. py:attribute:: JIS_2022_JP
       
 
       Required for HL7 use.
       From: http://terminology.hl7.org/CodeSystem/v3-Charset in v3-codesystems.xml
 
 
-   .. attribute:: US_ASCII
+   .. py:attribute:: US_ASCII
       
 
       HL7 is indifferent to the use of this Charset.
       From: http://terminology.hl7.org/CodeSystem/v3-Charset in v3-codesystems.xml
 
 
-   .. attribute:: UTF_7
+   .. py:attribute:: UTF_7
       
 
       Required for Unicode support.
       From: http://terminology.hl7.org/CodeSystem/v3-Charset in v3-codesystems.xml
 
 
-   .. attribute:: UTF_8
+   .. py:attribute:: UTF_8
       
 
       

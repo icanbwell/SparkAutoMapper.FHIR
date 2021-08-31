@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.act_relationship_subset`
-================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.act_relationship_subset`
+===================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.act_relationship_subset
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: ActRelationshipSubset(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ActRelationshipSubset(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.ActRelationshipSubset
    From: http://terminology.hl7.org/ValueSet/v3-ActRelationshipSubset in v3-codesystems.xml
@@ -30,13 +30,13 @@ Classes
    next, the total, the average or some other filtered or calculated
    subset.</ns1:p>
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ActRelationshipSubset
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-ActRelationshipSubset
 
       
 
 
-.. class:: ActRelationshipSubsetValues
+.. py:class:: ActRelationshipSubsetValues
 
    Used to indicate that the participation is a filtered subset of the total
    participations of the same type owned by the Act.
@@ -45,21 +45,21 @@ Classes
    to the first, the last, the next or some other filtered subset.
    From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipSubset in v3-codesystems.xml
 
-   .. attribute:: ParticipationSubset
+   .. py:attribute:: ParticipationSubset
       
 
       ActRelationshipExpectedSubset
       From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipSubset in v3-codesystems.xml
 
 
-   .. attribute:: ActRelationshipExpectedSubset
+   .. py:attribute:: ActRelationshipExpectedSubset
       
 
       ActRelationshipPastSubset
       From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipSubset in v3-codesystems.xml
 
 
-   .. attribute:: ActRelationshipPastSubset
+   .. py:attribute:: ActRelationshipPastSubset
       
 
       The occurrence whose value attribute is greater than all other occurrences at
@@ -67,7 +67,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipSubset in v3-codesystems.xml
 
 
-   .. attribute:: Maximum
+   .. py:attribute:: Maximum
       
 
       The occurrence whose value attribute is less than all other occurrences at the
@@ -75,7 +75,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipSubset in v3-codesystems.xml
 
 
-   .. attribute:: Minimum
+   .. py:attribute:: Minimum
       
 
       

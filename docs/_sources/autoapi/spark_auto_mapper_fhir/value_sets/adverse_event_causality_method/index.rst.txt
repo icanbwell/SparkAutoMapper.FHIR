@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.adverse_event_causality_method`
-=======================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.adverse_event_causality_method`
+==========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.adverse_event_causality_method
 
@@ -17,38 +17,38 @@ Classes
 
 
 
-.. class:: AdverseEventCausalityMethodCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: AdverseEventCausalityMethodCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    AdverseEventCausalityMethod
    From: http://terminology.hl7.org/CodeSystem/adverse-event-causality-method in valuesets.xml
        TODO.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/adverse-event-causality-method
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/adverse-event-causality-method
 
       
 
 
-.. class:: AdverseEventCausalityMethodCodeValues
+.. py:class:: AdverseEventCausalityMethodCodeValues
 
    From: http://terminology.hl7.org/CodeSystem/adverse-event-causality-method in valuesets.xml
 
-   .. attribute:: ProbabilityScale
+   .. py:attribute:: ProbabilityScale
       
 
       From: http://terminology.hl7.org/CodeSystem/adverse-event-causality-method in valuesets.xml
 
 
-   .. attribute:: Bayesian
+   .. py:attribute:: Bayesian
       
 
       From: http://terminology.hl7.org/CodeSystem/adverse-event-causality-method in valuesets.xml
 
 
-   .. attribute:: Checklist
+   .. py:attribute:: Checklist
       
 
       

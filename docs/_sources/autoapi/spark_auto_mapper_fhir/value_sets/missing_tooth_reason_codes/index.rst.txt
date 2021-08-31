@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.missing_tooth_reason_codes`
-===================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.missing_tooth_reason_codes`
+======================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.missing_tooth_reason_codes
 
@@ -17,48 +17,48 @@ Classes
 
 
 
-.. class:: MissingToothReasonCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: MissingToothReasonCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    MissingToothReasonCodes
    From: http://terminology.hl7.org/CodeSystem/missingtoothreason in valuesets.xml
        This value set includes sample Missing Tooth Reason codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/missingtoothreason
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/missingtoothreason
 
       
 
 
-.. class:: MissingToothReasonCodesCodeValues
+.. py:class:: MissingToothReasonCodesCodeValues
 
    Extraction
    From: http://terminology.hl7.org/CodeSystem/missingtoothreason in valuesets.xml
 
-   .. attribute:: E
+   .. py:attribute:: E
       
 
       Congenital
       From: http://terminology.hl7.org/CodeSystem/missingtoothreason in valuesets.xml
 
 
-   .. attribute:: C
+   .. py:attribute:: C
       
 
       Unknown
       From: http://terminology.hl7.org/CodeSystem/missingtoothreason in valuesets.xml
 
 
-   .. attribute:: U
+   .. py:attribute:: U
       
 
       Other
       From: http://terminology.hl7.org/CodeSystem/missingtoothreason in valuesets.xml
 
 
-   .. attribute:: O
+   .. py:attribute:: O
       
 
       

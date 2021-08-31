@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.action_selection_behavior`
-==================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.action_selection_behavior`
+=====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.action_selection_behavior
 
@@ -17,34 +17,34 @@ Classes
 
 
 
-.. class:: ActionSelectionBehaviorCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ActionSelectionBehaviorCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ActionSelectionBehavior
    From: http://hl7.org/fhir/action-selection-behavior in valuesets.xml
        Defines selection behavior of a group.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/action-selection-behavior
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/action-selection-behavior
 
       
 
 
-.. class:: ActionSelectionBehaviorCodeValues
+.. py:class:: ActionSelectionBehaviorCodeValues
 
    Any number of the actions in the group may be chosen, from zero to all.
    From: http://hl7.org/fhir/action-selection-behavior in valuesets.xml
 
-   .. attribute:: Any
+   .. py:attribute:: Any
       
 
       All the actions in the group must be selected as a single unit.
       From: http://hl7.org/fhir/action-selection-behavior in valuesets.xml
 
 
-   .. attribute:: All
+   .. py:attribute:: All
       
 
       All the actions in the group are meant to be chosen as a single unit: either
@@ -52,7 +52,7 @@ Classes
       From: http://hl7.org/fhir/action-selection-behavior in valuesets.xml
 
 
-   .. attribute:: AllOrNone
+   .. py:attribute:: AllOrNone
       
 
       The end user must choose one and only one of the selectable actions in the
@@ -60,21 +60,21 @@ Classes
       From: http://hl7.org/fhir/action-selection-behavior in valuesets.xml
 
 
-   .. attribute:: ExactlyOne
+   .. py:attribute:: ExactlyOne
       
 
       The end user may choose zero or at most one of the actions in the group.
       From: http://hl7.org/fhir/action-selection-behavior in valuesets.xml
 
 
-   .. attribute:: AtMostOne
+   .. py:attribute:: AtMostOne
       
 
       The end user must choose a minimum of one, and as many additional as desired.
       From: http://hl7.org/fhir/action-selection-behavior in valuesets.xml
 
 
-   .. attribute:: OneOrMore
+   .. py:attribute:: OneOrMore
       
 
       

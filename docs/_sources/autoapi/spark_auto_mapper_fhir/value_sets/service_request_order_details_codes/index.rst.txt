@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.service_request_order_details_codes`
-============================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.service_request_order_details_codes`
+===============================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.service_request_order_details_codes
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: ServiceRequestOrderDetailsCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ServiceRequestOrderDetailsCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ServiceRequestOrderDetailsCodes
    From: http://hl7.org/fhir/ValueSet/servicerequest-orderdetail in valuesets.xml
@@ -28,41 +28,41 @@ Classes
    only make sense in the context of what is being ordered.  This example is for
    a patient ventilation order
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://snomed.info/sct
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://snomed.info/sct
 
       
 
 
-.. class:: ServiceRequestOrderDetailsCodesCodeValues
+.. py:class:: ServiceRequestOrderDetailsCodesCodeValues
 
    From: http://hl7.org/fhir/ValueSet/servicerequest-orderdetail in valuesets.xml
 
-   .. attribute:: ContinuousPositiveAirwayPressureVentilationTreatment_regime_therapy_
+   .. py:attribute:: ContinuousPositiveAirwayPressureVentilationTreatment_regime_therapy_
       
 
       From: http://hl7.org/fhir/ValueSet/servicerequest-orderdetail in valuesets.xml
 
 
-   .. attribute:: PressureControlledVentilation_procedure_
+   .. py:attribute:: PressureControlledVentilation_procedure_
       
 
       From: http://hl7.org/fhir/ValueSet/servicerequest-orderdetail in valuesets.xml
 
 
-   .. attribute:: PatientTriggeredInspiratoryAssistance_procedure_
+   .. py:attribute:: PatientTriggeredInspiratoryAssistance_procedure_
       
 
       From: http://hl7.org/fhir/ValueSet/servicerequest-orderdetail in valuesets.xml
 
 
-   .. attribute:: AssistedControlledMandatoryVentilation_procedure_
+   .. py:attribute:: AssistedControlledMandatoryVentilation_procedure_
       
 
       From: http://hl7.org/fhir/ValueSet/servicerequest-orderdetail in valuesets.xml
 
 
-   .. attribute:: SynchronizedIntermittentMandatoryVentilation_procedure_
+   .. py:attribute:: SynchronizedIntermittentMandatoryVentilation_procedure_
       
 
       

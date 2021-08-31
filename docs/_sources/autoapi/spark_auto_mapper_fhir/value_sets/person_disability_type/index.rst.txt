@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.person_disability_type`
-===============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.person_disability_type`
+==================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.person_disability_type
 
@@ -17,55 +17,55 @@ Classes
 
 
 
-.. class:: PersonDisabilityType(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: PersonDisabilityType(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.PersonDisabilityType
    From: http://terminology.hl7.org/ValueSet/v3-PersonDisabilityType in v3-codesystems.xml
         A code identifying a person's disability.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-PersonDisabilityType
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-PersonDisabilityType
 
       
 
 
-.. class:: PersonDisabilityTypeValues
+.. py:class:: PersonDisabilityTypeValues
 
    Vision impaired
    From: http://terminology.hl7.org/CodeSystem/v3-PersonDisabilityType in v3-codesystems.xml
 
-   .. attribute:: VisionImpaired
+   .. py:attribute:: VisionImpaired
       
 
       Hearing impaired
       From: http://terminology.hl7.org/CodeSystem/v3-PersonDisabilityType in v3-codesystems.xml
 
 
-   .. attribute:: HearingImpaired
+   .. py:attribute:: HearingImpaired
       
 
       Speech impaired
       From: http://terminology.hl7.org/CodeSystem/v3-PersonDisabilityType in v3-codesystems.xml
 
 
-   .. attribute:: SpeechImpaired
+   .. py:attribute:: SpeechImpaired
       
 
       Mentally impaired
       From: http://terminology.hl7.org/CodeSystem/v3-PersonDisabilityType in v3-codesystems.xml
 
 
-   .. attribute:: MentallyImpaired
+   .. py:attribute:: MentallyImpaired
       
 
       Mobility impaired
       From: http://terminology.hl7.org/CodeSystem/v3-PersonDisabilityType in v3-codesystems.xml
 
 
-   .. attribute:: MobilityImpaired
+   .. py:attribute:: MobilityImpaired
       
 
       

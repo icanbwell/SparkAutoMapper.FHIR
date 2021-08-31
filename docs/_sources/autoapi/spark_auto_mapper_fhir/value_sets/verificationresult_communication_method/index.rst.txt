@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.verificationresult_communication_method`
-================================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.verificationresult_communication_method`
+===================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.verificationresult_communication_method
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: Verificationresult_communication_methodCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: Verificationresult_communication_methodCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    verificationresult-communication-method
    From: http://terminology.hl7.org/CodeSystem/verificationresult-communication-method in valuesets.xml
@@ -30,33 +30,33 @@ Classes
    record. This value set defines a set of codes to describing the process, the
    how, a resource or data element is validated.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/verificationresult-communication-method
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/verificationresult-communication-method
 
       
 
 
-.. class:: Verificationresult_communication_methodCodeValues
+.. py:class:: Verificationresult_communication_methodCodeValues
 
    The information is submitted/retrieved manually (e.g. by phone, fax, paper-
    based)
    From: http://terminology.hl7.org/CodeSystem/verificationresult-communication-method in valuesets.xml
 
-   .. attribute:: Manual
+   .. py:attribute:: Manual
       
 
       The information is submitted/retrieved via a portal
       From: http://terminology.hl7.org/CodeSystem/verificationresult-communication-method in valuesets.xml
 
 
-   .. attribute:: Portal
+   .. py:attribute:: Portal
       
 
       The information is retrieved (i.e. pulled) from a source (e.g. over an API)
       From: http://terminology.hl7.org/CodeSystem/verificationresult-communication-method in valuesets.xml
 
 
-   .. attribute:: Pull
+   .. py:attribute:: Pull
       
 
       The information is sent (i.e. pushed) from a source (e.g. over an API,
@@ -64,7 +64,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/verificationresult-communication-method in valuesets.xml
 
 
-   .. attribute:: Push
+   .. py:attribute:: Push
       
 
       

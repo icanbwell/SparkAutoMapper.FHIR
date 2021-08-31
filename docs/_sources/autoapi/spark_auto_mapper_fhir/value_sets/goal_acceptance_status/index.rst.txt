@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.goal_acceptance_status`
-===============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.goal_acceptance_status`
+==================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.goal_acceptance_status
 
@@ -17,41 +17,41 @@ Classes
 
 
 
-.. class:: GoalAcceptanceStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: GoalAcceptanceStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    GoalAcceptanceStatus
    From: http://terminology.hl7.org/CodeSystem/goal-acceptance-status in valuesets.xml
        Codes indicating whether the goal has been accepted by a stakeholder.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/goal-acceptance-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/goal-acceptance-status
 
       
 
 
-.. class:: GoalAcceptanceStatusCodeValues
+.. py:class:: GoalAcceptanceStatusCodeValues
 
    Stakeholder supports pursuit of the goal.
    From: http://terminology.hl7.org/CodeSystem/goal-acceptance-status in valuesets.xml
 
-   .. attribute:: Agree
+   .. py:attribute:: Agree
       
 
       Stakeholder is not in support of the pursuit of the goal.
       From: http://terminology.hl7.org/CodeSystem/goal-acceptance-status in valuesets.xml
 
 
-   .. attribute:: Disagree
+   .. py:attribute:: Disagree
       
 
       Stakeholder has not yet made a decision on whether they support the goal.
       From: http://terminology.hl7.org/CodeSystem/goal-acceptance-status in valuesets.xml
 
 
-   .. attribute:: Pending
+   .. py:attribute:: Pending
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.backbone_elements.contract_asset`
-==============================================================
+:py:mod:`spark_auto_mapper_fhir.backbone_elements.contract_asset`
+=================================================================
 
 .. py:module:: spark_auto_mapper_fhir.backbone_elements.contract_asset
 
@@ -16,12 +16,55 @@ Classes
 
 
 
-.. class:: ContractAsset(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, scope: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.contract_resource_asset_scope_codes.ContractResourceAssetScopeCodesCode]] = None, type_: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.contract_resource_asset_type_codes.ContractResourceAssetTypeCodesCode]]] = None, typeReference: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.resource.Resource]]] = None, subtype: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.contract_resource_asset_sub__type_codes.ContractResourceAssetSub_TypeCodesCode]]] = None, relationship: Optional[spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.consent_content_class.ConsentContentClassCode]] = None, context: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.contract_context.ContractContext]] = None, condition: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, periodType: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.contract_resource_asset_availiability_codes.ContractResourceAssetAvailiabilityCodesCode]]] = None, period: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.period.Period]] = None, usePeriod: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.period.Period]] = None, text: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, linkId: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.string.FhirString]] = None, answer: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.contract_answer.ContractAnswer]] = None, securityLabelNumber: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.unsigned_int.FhirUnsignedInt]] = None, valuedItem: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.contract_valued_item.ContractValuedItem]] = None)
 
+.. py:class:: ContractAsset(*, id_ = None, extension = None, modifierExtension = None, scope = None, type_ = None, typeReference = None, subtype = None, relationship = None, context = None, condition = None, periodType = None, period = None, usePeriod = None, text = None, linkId = None, answer = None, securityLabelNumber = None, valuedItem = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
 
    Contract.Asset
-   Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
+       Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
+
+       Legally enforceable, formally recorded unilateral or bilateral directive i.e.,
+   a policy or agreement.
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param modifierExtension: May be used to represent additional information that is not part of the basic
+   definition of the element and that modifies the understanding of the element
+   in which it is contained and/or the understanding of the containing element's
+   descendants. Usually modifier elements provide negation or qualification. To
+   make the use of extensions safe and manageable, there is a strict set of
+   governance applied to the definition and use of extensions. Though any
+   implementer can define an extension, there is a set of requirements that SHALL
+   be met as part of the definition of the extension. Applications processing a
+   resource are required to check for modifier extensions.
+
+   Modifier extensions SHALL NOT change the meaning of any elements on Resource
+   or DomainResource (including cannot change the meaning of modifierExtension
+   itself).
+       :param scope: Differentiates the kind of the asset .
+       :param type_: Target entity type about which the term may be concerned.
+       :param typeReference: Associated entities.
+       :param subtype: May be a subtype or part of an offered asset.
+       :param relationship: Specifies the applicability of the term to an asset resource instance, and
+   instances it refers to orinstances that refer to it, and/or are owned by the
+   offeree.
+       :param context: Circumstance of the asset.
+       :param condition: Description of the quality and completeness of the asset that imay be a factor
+   in its valuation.
+       :param periodType: Type of Asset availability for use or ownership.
+       :param period: Asset relevant contractual time period.
+       :param usePeriod: Time period of asset use.
+       :param text: Clause or question text (Prose Object) concerning the asset in a linked form,
+   such as a QuestionnaireResponse used in the formation of the contract.
+       :param linkId: Id [identifier??] of the clause or question text about the asset in the
+   referenced form or QuestionnaireResponse.
+       :param answer: Response to assets.
+       :param securityLabelNumber: Security labels that protects the asset.
+       :param valuedItem: Contract Valued Item List.
 
 

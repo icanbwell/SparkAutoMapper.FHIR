@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.message_event`
-======================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.message_event`
+=========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.message_event
 
@@ -16,17 +16,17 @@ Classes
 
 
 
-.. class:: MessageEventCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: MessageEventCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    MessageEvent
    From: http://hl7.org/fhir/message-events in valuesets.xml
        One of the message events defined as part of this version of FHIR.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/message-events
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/message-events
 
       
 

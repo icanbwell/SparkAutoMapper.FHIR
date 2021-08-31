@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.enteral_formula_additive_type_code`
-===========================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.enteral_formula_additive_type_code`
+==============================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.enteral_formula_additive_type_code
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: EnteralFormulaAdditiveTypeCodeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: EnteralFormulaAdditiveTypeCodeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    EnteralFormulaAdditiveTypeCode
    From: http://terminology.hl7.org/CodeSystem/entformula-additive in valuesets.xml
@@ -28,46 +28,46 @@ Classes
    protein, carbohydrate or fiber to be provided in addition to or mixed with the
    base formula. This value set is provided as a suggestive example.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/entformula-additive
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/entformula-additive
 
       
 
 
-.. class:: EnteralFormulaAdditiveTypeCodeCodeValues
+.. py:class:: EnteralFormulaAdditiveTypeCodeCodeValues
 
    Modular lipid enteral formula component
    From: http://terminology.hl7.org/CodeSystem/entformula-additive in valuesets.xml
 
-   .. attribute:: Lipid
+   .. py:attribute:: Lipid
       
 
       Modular protein enteral formula component
       From: http://terminology.hl7.org/CodeSystem/entformula-additive in valuesets.xml
 
 
-   .. attribute:: Protein
+   .. py:attribute:: Protein
       
 
       Modular carbohydrate enteral formula component
       From: http://terminology.hl7.org/CodeSystem/entformula-additive in valuesets.xml
 
 
-   .. attribute:: Carbohydrate
+   .. py:attribute:: Carbohydrate
       
 
       Modular fiber enteral formula component
       From: http://terminology.hl7.org/CodeSystem/entformula-additive in valuesets.xml
 
 
-   .. attribute:: Fiber
+   .. py:attribute:: Fiber
       
 
       Added water
       From: http://terminology.hl7.org/CodeSystem/entformula-additive in valuesets.xml
 
 
-   .. attribute:: Water
+   .. py:attribute:: Water
       
 
       

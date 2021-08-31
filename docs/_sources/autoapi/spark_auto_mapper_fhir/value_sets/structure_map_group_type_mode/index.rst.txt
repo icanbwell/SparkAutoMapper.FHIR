@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.structure_map_group_type_mode`
-======================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.structure_map_group_type_mode`
+=========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.structure_map_group_type_mode
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: StructureMapGroupTypeModeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: StructureMapGroupTypeModeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    StructureMapGroupTypeMode
    From: http://hl7.org/fhir/map-group-type-mode in valuesets.xml
        If this is the default rule set to apply for the source type, or this
    combination of types.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/map-group-type-mode
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/map-group-type-mode
 
       
 
 
-.. class:: StructureMapGroupTypeModeCodeValues
+.. py:class:: StructureMapGroupTypeModeCodeValues
 
    This group is not a default group for the types.
    From: http://hl7.org/fhir/map-group-type-mode in valuesets.xml
 
-   .. attribute:: NotADefault
+   .. py:attribute:: NotADefault
       
 
       This group is a default mapping group for the specified types and for the
@@ -46,14 +46,14 @@ Classes
       From: http://hl7.org/fhir/map-group-type-mode in valuesets.xml
 
 
-   .. attribute:: DefaultForTypeCombination
+   .. py:attribute:: DefaultForTypeCombination
       
 
       This group is a default mapping group for the specified types.
       From: http://hl7.org/fhir/map-group-type-mode in valuesets.xml
 
 
-   .. attribute:: DefaultForType_Combination
+   .. py:attribute:: DefaultForType_Combination
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.contract_resource_security_control_codes`
-=================================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.contract_resource_security_control_codes`
+====================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.contract_resource_security_control_codes
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: ContractResourceSecurityControlCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ContractResourceSecurityControlCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ContractResourceSecurityControlCodes
    From: http://hl7.org/fhir/contract-security-control in valuesets.xml
        This value set contract specific codes for security control.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/contract-security-control
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/contract-security-control
 
       
 
 
-.. class:: ContractResourceSecurityControlCodesCodeValues
+.. py:class:: ContractResourceSecurityControlCodesCodeValues
 
    To be completed
    From: http://hl7.org/fhir/contract-security-control in valuesets.xml
 
-   .. attribute:: Policy
+   .. py:attribute:: Policy
       
 
       

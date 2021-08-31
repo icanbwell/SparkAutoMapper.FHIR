@@ -1,5 +1,5 @@
-:mod:`da_vinci`
-===============
+:py:mod:`da_vinci`
+==================
 
 .. py:module:: da_vinci
 

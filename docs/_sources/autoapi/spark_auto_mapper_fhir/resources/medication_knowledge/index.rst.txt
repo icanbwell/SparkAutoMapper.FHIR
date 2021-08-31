@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.resources.medication_knowledge`
-============================================================
+:py:mod:`spark_auto_mapper_fhir.resources.medication_knowledge`
+===============================================================
 
 .. py:module:: spark_auto_mapper_fhir.resources.medication_knowledge
 
@@ -16,17 +16,98 @@ Classes
 
 
 
-.. class:: MedicationKnowledge(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, code: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.snomedct_medication_codes.SNOMEDCTMedicationCodesCode]] = None, status: Optional[spark_auto_mapper_fhir.value_sets.medication_knowledge_status_codes.MedicationKnowledgeStatusCodesCode] = None, manufacturer: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.organization.Organization]] = None, doseForm: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.snomedct_form_codes.SNOMEDCTFormCodesCode]] = None, amount: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, synonym: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.string.FhirString]] = None, relatedMedicationKnowledge: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.medication_knowledge_related_medication_knowledge.MedicationKnowledgeRelatedMedicationKnowledge]] = None, associatedMedication: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.medication.Medication]]] = None, productType: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]]] = None, monograph: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.medication_knowledge_monograph.MedicationKnowledgeMonograph]] = None, ingredient: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.medication_knowledge_ingredient.MedicationKnowledgeIngredient]] = None, preparationInstruction: Optional[spark_auto_mapper_fhir.fhir_types.markdown.FhirMarkdown] = None, intendedRoute: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.snomedct_route_codes.SNOMEDCTRouteCodesCode]]] = None, cost: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.medication_knowledge_cost.MedicationKnowledgeCost]] = None, monitoringProgram: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.medication_knowledge_monitoring_program.MedicationKnowledgeMonitoringProgram]] = None, administrationGuidelines: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.medication_knowledge_administration_guidelines.MedicationKnowledgeAdministrationGuidelines]] = None, medicineClassification: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.medication_knowledge_medicine_classification.MedicationKnowledgeMedicineClassification]] = None, packaging: Optional[spark_auto_mapper_fhir.backbone_elements.medication_knowledge_packaging.MedicationKnowledgePackaging] = None, drugCharacteristic: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.medication_knowledge_drug_characteristic.MedicationKnowledgeDrugCharacteristic]] = None, contraindication: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.detected_issue.DetectedIssue]]] = None, regulatory: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.medication_knowledge_regulatory.MedicationKnowledgeRegulatory]] = None, kinetics: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.medication_knowledge_kinetics.MedicationKnowledgeKinetics]] = None)
 
+.. py:class:: MedicationKnowledge(*, id_ = None, meta = None, implicitRules = None, language = None, text = None, contained = None, extension = None, modifierExtension = None, code = None, status = None, manufacturer = None, doseForm = None, amount = None, synonym = None, relatedMedicationKnowledge = None, associatedMedication = None, productType = None, monograph = None, ingredient = None, preparationInstruction = None, intendedRoute = None, cost = None, monitoringProgram = None, administrationGuidelines = None, medicineClassification = None, packaging = None, drugCharacteristic = None, contraindication = None, regulatory = None, kinetics = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
 
    MedicationKnowledge
    medicationknowledge.xsd
        Information about a medication that is used to support knowledge.
        If the element is present, it must have either a @value, an @id, or extensions
 
-   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+       Information about a medication that is used to support knowledge.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+       :param id_: The logical id of the resource, as used in the URL for the resource. Once
+   assigned, this value never changes.
+       :param meta: The metadata about the resource. This is content that is maintained by the
+   infrastructure. Changes to the content might not always be associated with
+   version changes to the resource.
+       :param implicitRules: A reference to a set of rules that were followed when the resource was
+   constructed, and which must be understood when processing the content. Often,
+   this is a reference to an implementation guide that defines the special rules
+   along with other profiles etc.
+       :param language: The base language in which the resource is written.
+       :param text: A human-readable narrative that contains a summary of the resource and can be
+   used to represent the content of the resource to a human. The narrative need
+   not encode all the structured data, but is required to contain sufficient
+   detail to make it "clinically safe" for a human to just read the narrative.
+   Resource definitions may define what content should be represented in the
+   narrative to ensure clinical safety.
+       :param contained: These resources do not have an independent existence apart from the resource
+   that contains them - they cannot be identified independently, and nor can they
+   have their own independent transaction scope.
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the resource. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param modifierExtension: May be used to represent additional information that is not part of the basic
+   definition of the resource and that modifies the understanding of the element
+   that contains it and/or the understanding of the containing element's
+   descendants. Usually modifier elements provide negation or qualification. To
+   make the use of extensions safe and manageable, there is a strict set of
+   governance applied to the definition and use of extensions. Though any
+   implementer is allowed to define an extension, there is a set of requirements
+   that SHALL be met as part of the definition of the extension. Applications
+   processing a resource are required to check for modifier extensions.
+
+   Modifier extensions SHALL NOT change the meaning of any elements on Resource
+   or DomainResource (including cannot change the meaning of modifierExtension
+   itself).
+       :param code: A code that specifies this medication, or a textual description if no code is
+   available. Usage note: This could be a standard medication code such as a code
+   from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local
+   formulary code, optionally with translations to other code systems.
+       :param status: A code to indicate if the medication is in active use.  The status refers to
+   the validity about the information of the medication and not to its medicinal
+   properties.
+       :param manufacturer: Describes the details of the manufacturer of the medication product.  This is
+   not intended to represent the distributor of a medication product.
+       :param doseForm: Describes the form of the item.  Powder; tablets; capsule.
+       :param amount: Specific amount of the drug in the packaged product.  For example, when
+   specifying a product that has the same strength (For example, Insulin glargine
+   100 unit per mL solution for injection), this attribute provides additional
+   clarification of the package amount (For example, 3 mL, 10mL, etc.).
+       :param synonym: Additional names for a medication, for example, the name(s) given to a
+   medication in different countries.  For example, acetaminophen and paracetamol
+   or salbutamol and albuterol.
+       :param relatedMedicationKnowledge: Associated or related knowledge about a medication.
+       :param associatedMedication: Associated or related medications.  For example, if the medication is a
+   branded product (e.g. Crestor), this is the Therapeutic Moeity (e.g.
+   Rosuvastatin) or if this is a generic medication (e.g. Rosuvastatin), this
+   would link to a branded product (e.g. Crestor).
+       :param productType: Category of the medication or product (e.g. branded product, therapeutic
+   moeity, generic product, innovator product, etc.).
+       :param monograph: Associated documentation about the medication.
+       :param ingredient: Identifies a particular constituent of interest in the product.
+       :param preparationInstruction: The instructions for preparing the medication.
+       :param intendedRoute: The intended or approved route of administration.
+       :param cost: The price of the medication.
+       :param monitoringProgram: The program under which the medication is reviewed.
+       :param administrationGuidelines: Guidelines for the administration of the medication.
+       :param medicineClassification: Categorization of the medication within a formulary or classification system.
+       :param packaging: Information that only applies to packages (not products).
+       :param drugCharacteristic: Specifies descriptive properties of the medicine, such as color, shape,
+   imprints, etc.
+       :param contraindication: Potential clinical issue with or between medication(s) (for example, drug-drug
+   interaction, drug-disease contraindication, drug-allergy interaction, etc.).
+       :param regulatory: Regulatory information about a medication.
+       :param kinetics: The time course of drug absorption, distribution, metabolism and excretion of
+   a medication from the body.
+
+   .. py:method:: get_schema(self, include_extension)
 
 
 

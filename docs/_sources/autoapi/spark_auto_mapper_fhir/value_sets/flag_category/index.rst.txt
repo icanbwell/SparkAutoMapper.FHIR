@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.flag_category`
-======================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.flag_category`
+=========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.flag_category
 
@@ -17,35 +17,35 @@ Classes
 
 
 
-.. class:: FlagCategoryCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: FlagCategoryCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    FlagCategory
    From: http://terminology.hl7.org/CodeSystem/flag-category in valuesets.xml
        Example list of general categories for flagged issues. (Not complete or
    necessarily appropriate.)
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/flag-category
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/flag-category
 
       
 
 
-.. class:: FlagCategoryCodeValues
+.. py:class:: FlagCategoryCodeValues
 
    Flags related to the subject's dietary needs.
    From: http://terminology.hl7.org/CodeSystem/flag-category in valuesets.xml
 
-   .. attribute:: Diet
+   .. py:attribute:: Diet
       
 
       Flags related to the subject's medications.
       From: http://terminology.hl7.org/CodeSystem/flag-category in valuesets.xml
 
 
-   .. attribute:: Drug
+   .. py:attribute:: Drug
       
 
       Flags related to performing laboratory tests and related processes (e.g.
@@ -53,56 +53,56 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/flag-category in valuesets.xml
 
 
-   .. attribute:: Lab
+   .. py:attribute:: Lab
       
 
       Flags related to administrative and financial processes.
       From: http://terminology.hl7.org/CodeSystem/flag-category in valuesets.xml
 
 
-   .. attribute:: Administrative
+   .. py:attribute:: Administrative
       
 
       Flags related to coming into contact with the patient.
       From: http://terminology.hl7.org/CodeSystem/flag-category in valuesets.xml
 
 
-   .. attribute:: SubjectContact
+   .. py:attribute:: SubjectContact
       
 
       Flags related to the subject's clinical data.
       From: http://terminology.hl7.org/CodeSystem/flag-category in valuesets.xml
 
 
-   .. attribute:: Clinical
+   .. py:attribute:: Clinical
       
 
       Flags related to behavior.
       From: http://terminology.hl7.org/CodeSystem/flag-category in valuesets.xml
 
 
-   .. attribute:: Behavioral
+   .. py:attribute:: Behavioral
       
 
       Flags related to research.
       From: http://terminology.hl7.org/CodeSystem/flag-category in valuesets.xml
 
 
-   .. attribute:: Research
+   .. py:attribute:: Research
       
 
       Flags related to subject's advance directives.
       From: http://terminology.hl7.org/CodeSystem/flag-category in valuesets.xml
 
 
-   .. attribute:: AdvanceDirective
+   .. py:attribute:: AdvanceDirective
       
 
       Flags related to safety precautions.
       From: http://terminology.hl7.org/CodeSystem/flag-category in valuesets.xml
 
 
-   .. attribute:: Safety
+   .. py:attribute:: Safety
       
 
       

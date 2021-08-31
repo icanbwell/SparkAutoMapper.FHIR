@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.type_restful_interaction`
-=================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.type_restful_interaction`
+====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.type_restful_interaction
 
@@ -17,74 +17,74 @@ Classes
 
 
 
-.. class:: TypeRestfulInteractionCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: TypeRestfulInteractionCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    TypeRestfulInteraction
    From: http://hl7.org/fhir/ValueSet/type-restful-interaction in valuesets.xml
        Operations supported by REST at the type or instance level.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/restful-interaction
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/restful-interaction
 
       
 
 
-.. class:: TypeRestfulInteractionCodeValues
+.. py:class:: TypeRestfulInteractionCodeValues
 
    From: http://hl7.org/fhir/ValueSet/type-restful-interaction in valuesets.xml
 
-   .. attribute:: Read
+   .. py:attribute:: Read
       
 
       From: http://hl7.org/fhir/ValueSet/type-restful-interaction in valuesets.xml
 
 
-   .. attribute:: Vread
+   .. py:attribute:: Vread
       
 
       From: http://hl7.org/fhir/ValueSet/type-restful-interaction in valuesets.xml
 
 
-   .. attribute:: Update
+   .. py:attribute:: Update
       
 
       From: http://hl7.org/fhir/ValueSet/type-restful-interaction in valuesets.xml
 
 
-   .. attribute:: Patch
+   .. py:attribute:: Patch
       
 
       From: http://hl7.org/fhir/ValueSet/type-restful-interaction in valuesets.xml
 
 
-   .. attribute:: Delete
+   .. py:attribute:: Delete
       
 
       From: http://hl7.org/fhir/ValueSet/type-restful-interaction in valuesets.xml
 
 
-   .. attribute:: History_instance
+   .. py:attribute:: History_instance
       
 
       From: http://hl7.org/fhir/ValueSet/type-restful-interaction in valuesets.xml
 
 
-   .. attribute:: History_type
+   .. py:attribute:: History_type
       
 
       From: http://hl7.org/fhir/ValueSet/type-restful-interaction in valuesets.xml
 
 
-   .. attribute:: Create
+   .. py:attribute:: Create
       
 
       From: http://hl7.org/fhir/ValueSet/type-restful-interaction in valuesets.xml
 
 
-   .. attribute:: Search_type
+   .. py:attribute:: Search_type
       
 
       

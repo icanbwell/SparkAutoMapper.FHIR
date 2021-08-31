@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.backbone_elements.invoice_participant`
-===================================================================
+:py:mod:`spark_auto_mapper_fhir.backbone_elements.invoice_participant`
+======================================================================
 
 .. py:module:: spark_auto_mapper_fhir.backbone_elements.invoice_participant
 
@@ -16,12 +16,39 @@ Classes
 
 
 
-.. class:: InvoiceParticipant(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, role: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, actor: spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.organization.Organization, spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole, spark_auto_mapper_fhir.resources.device.Device, spark_auto_mapper_fhir.resources.related_person.RelatedPerson)]])
 
+.. py:class:: InvoiceParticipant(*, id_ = None, extension = None, modifierExtension = None, role = None, actor)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
 
    Invoice.Participant
-   Invoice containing collected ChargeItems from an Account with calculated individual and total price for Billing purpose.
+       Invoice containing collected ChargeItems from an Account with calculated individual and total price for Billing purpose.
+
+       Invoice containing collected ChargeItems from an Account with calculated
+   individual and total price for Billing purpose.
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param modifierExtension: May be used to represent additional information that is not part of the basic
+   definition of the element and that modifies the understanding of the element
+   in which it is contained and/or the understanding of the containing element's
+   descendants. Usually modifier elements provide negation or qualification. To
+   make the use of extensions safe and manageable, there is a strict set of
+   governance applied to the definition and use of extensions. Though any
+   implementer can define an extension, there is a set of requirements that SHALL
+   be met as part of the definition of the extension. Applications processing a
+   resource are required to check for modifier extensions.
+
+   Modifier extensions SHALL NOT change the meaning of any elements on Resource
+   or DomainResource (including cannot change the meaning of modifierExtension
+   itself).
+       :param role: Describes the type of involvement (e.g. transcriptionist, creator etc.). If
+   the invoice has been created automatically, the Participant may be a billing
+   engine or another kind of device.
+       :param actor: The device, practitioner, etc. who performed or participated in the service.
 
 

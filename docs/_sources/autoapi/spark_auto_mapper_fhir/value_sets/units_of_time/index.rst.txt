@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.units_of_time`
-======================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.units_of_time`
+=========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.units_of_time
 
@@ -17,62 +17,62 @@ Classes
 
 
 
-.. class:: UnitsOfTimeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: UnitsOfTimeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    UnitsOfTime
    From: http://hl7.org/fhir/ValueSet/units-of-time in valuesets.xml
        A unit of time (units from UCUM).
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://unitsofmeasure.org
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://unitsofmeasure.org
 
       
 
 
-.. class:: UnitsOfTimeCodeValues
+.. py:class:: UnitsOfTimeCodeValues
 
    From: http://hl7.org/fhir/ValueSet/units-of-time in valuesets.xml
 
-   .. attribute:: Second
+   .. py:attribute:: Second
       
 
       From: http://hl7.org/fhir/ValueSet/units-of-time in valuesets.xml
 
 
-   .. attribute:: Minute
+   .. py:attribute:: Minute
       
 
       From: http://hl7.org/fhir/ValueSet/units-of-time in valuesets.xml
 
 
-   .. attribute:: Hour
+   .. py:attribute:: Hour
       
 
       From: http://hl7.org/fhir/ValueSet/units-of-time in valuesets.xml
 
 
-   .. attribute:: Day
+   .. py:attribute:: Day
       
 
       From: http://hl7.org/fhir/ValueSet/units-of-time in valuesets.xml
 
 
-   .. attribute:: Week
+   .. py:attribute:: Week
       
 
       From: http://hl7.org/fhir/ValueSet/units-of-time in valuesets.xml
 
 
-   .. attribute:: Month
+   .. py:attribute:: Month
       
 
       From: http://hl7.org/fhir/ValueSet/units-of-time in valuesets.xml
 
 
-   .. attribute:: Year
+   .. py:attribute:: Year
       
 
       

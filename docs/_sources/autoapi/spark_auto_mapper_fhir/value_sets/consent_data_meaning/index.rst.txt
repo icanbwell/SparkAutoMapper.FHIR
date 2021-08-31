@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.consent_data_meaning`
-=============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.consent_data_meaning`
+================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.consent_data_meaning
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: ConsentDataMeaningCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ConsentDataMeaningCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ConsentDataMeaning
    From: http://hl7.org/fhir/consent-data-meaning in valuesets.xml
        How a resource reference is interpreted when testing consent restrictions.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/consent-data-meaning
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/consent-data-meaning
 
       
 
 
-.. class:: ConsentDataMeaningCodeValues
+.. py:class:: ConsentDataMeaningCodeValues
 
    The consent applies directly to the instance of the resource.
    From: http://hl7.org/fhir/consent-data-meaning in valuesets.xml
 
-   .. attribute:: Instance
+   .. py:attribute:: Instance
       
 
       The consent applies directly to the instance of the resource and instances it
@@ -45,7 +45,7 @@ Classes
       From: http://hl7.org/fhir/consent-data-meaning in valuesets.xml
 
 
-   .. attribute:: Related
+   .. py:attribute:: Related
       
 
       The consent applies directly to the instance of the resource and instances
@@ -53,14 +53,14 @@ Classes
       From: http://hl7.org/fhir/consent-data-meaning in valuesets.xml
 
 
-   .. attribute:: Dependents
+   .. py:attribute:: Dependents
       
 
       The consent applies to instances of resources that are authored by.
       From: http://hl7.org/fhir/consent-data-meaning in valuesets.xml
 
 
-   .. attribute:: AuthoredBy
+   .. py:attribute:: AuthoredBy
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.audit_event_action`
-===========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.audit_event_action`
+==============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.audit_event_action
 
@@ -17,49 +17,49 @@ Classes
 
 
 
-.. class:: AuditEventActionCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: AuditEventActionCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    AuditEventAction
    From: http://hl7.org/fhir/audit-event-action in valuesets.xml
        Indicator for type of action performed during the event that generated the
    event.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/audit-event-action
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/audit-event-action
 
       
 
 
-.. class:: AuditEventActionCodeValues
+.. py:class:: AuditEventActionCodeValues
 
    Create a new database object, such as placing an order.
    From: http://hl7.org/fhir/audit-event-action in valuesets.xml
 
-   .. attribute:: Create
+   .. py:attribute:: Create
       
 
       Display or print data, such as a doctor census.
       From: http://hl7.org/fhir/audit-event-action in valuesets.xml
 
 
-   .. attribute:: Read_View_Print
+   .. py:attribute:: Read_View_Print
       
 
       Update data, such as revise patient information.
       From: http://hl7.org/fhir/audit-event-action in valuesets.xml
 
 
-   .. attribute:: Update
+   .. py:attribute:: Update
       
 
       Delete items, such as a doctor master file record.
       From: http://hl7.org/fhir/audit-event-action in valuesets.xml
 
 
-   .. attribute:: Delete
+   .. py:attribute:: Delete
       
 
       Perform a system or application function such as log-on, program execution or
@@ -67,7 +67,7 @@ Classes
       From: http://hl7.org/fhir/audit-event-action in valuesets.xml
 
 
-   .. attribute:: Execute
+   .. py:attribute:: Execute
       
 
       

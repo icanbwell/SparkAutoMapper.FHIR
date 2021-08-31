@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.benefit_category_codes`
-===============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.benefit_category_codes`
+==================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.benefit_category_codes
 
@@ -17,216 +17,216 @@ Classes
 
 
 
-.. class:: BenefitCategoryCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: BenefitCategoryCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    BenefitCategoryCodes
    From: http://terminology.hl7.org/CodeSystem/ex-benefitcategory in valuesets.xml
        This value set includes examples of Benefit Category codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/ex-benefitcategory
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/ex-benefitcategory
 
       
 
 
-.. class:: BenefitCategoryCodesCodeValues
+.. py:class:: BenefitCategoryCodesCodeValues
 
    Medical Care.
    From: http://terminology.hl7.org/CodeSystem/ex-benefitcategory in valuesets.xml
 
-   .. attribute:: MedicalCare
+   .. py:attribute:: MedicalCare
       
 
       Surgical.
       From: http://terminology.hl7.org/CodeSystem/ex-benefitcategory in valuesets.xml
 
 
-   .. attribute:: Surgical
+   .. py:attribute:: Surgical
       
 
       Consultation.
       From: http://terminology.hl7.org/CodeSystem/ex-benefitcategory in valuesets.xml
 
 
-   .. attribute:: Consultation
+   .. py:attribute:: Consultation
       
 
       Diagnostic XRay.
       From: http://terminology.hl7.org/CodeSystem/ex-benefitcategory in valuesets.xml
 
 
-   .. attribute:: DiagnosticXRay
+   .. py:attribute:: DiagnosticXRay
       
 
       Diagnostic Lab.
       From: http://terminology.hl7.org/CodeSystem/ex-benefitcategory in valuesets.xml
 
 
-   .. attribute:: DiagnosticLab
+   .. py:attribute:: DiagnosticLab
       
 
       Renal Supplies excluding Dialysis.
       From: http://terminology.hl7.org/CodeSystem/ex-benefitcategory in valuesets.xml
 
 
-   .. attribute:: RenalSupplies
+   .. py:attribute:: RenalSupplies
       
 
       Diagnostic Dental.
       From: http://terminology.hl7.org/CodeSystem/ex-benefitcategory in valuesets.xml
 
 
-   .. attribute:: DiagnosticDental
+   .. py:attribute:: DiagnosticDental
       
 
       Periodontics.
       From: http://terminology.hl7.org/CodeSystem/ex-benefitcategory in valuesets.xml
 
 
-   .. attribute:: Periodontics
+   .. py:attribute:: Periodontics
       
 
       Restorative.
       From: http://terminology.hl7.org/CodeSystem/ex-benefitcategory in valuesets.xml
 
 
-   .. attribute:: Restorative
+   .. py:attribute:: Restorative
       
 
       Endodontics.
       From: http://terminology.hl7.org/CodeSystem/ex-benefitcategory in valuesets.xml
 
 
-   .. attribute:: Endodontics
+   .. py:attribute:: Endodontics
       
 
       Maxillofacial Prosthetics.
       From: http://terminology.hl7.org/CodeSystem/ex-benefitcategory in valuesets.xml
 
 
-   .. attribute:: MaxillofacialProsthetics
+   .. py:attribute:: MaxillofacialProsthetics
       
 
       Adjunctive Dental Services.
       From: http://terminology.hl7.org/CodeSystem/ex-benefitcategory in valuesets.xml
 
 
-   .. attribute:: AdjunctiveDentalServices
+   .. py:attribute:: AdjunctiveDentalServices
       
 
       Health Benefit Plan Coverage.
       From: http://terminology.hl7.org/CodeSystem/ex-benefitcategory in valuesets.xml
 
 
-   .. attribute:: HealthBenefitPlanCoverage
+   .. py:attribute:: HealthBenefitPlanCoverage
       
 
       Dental Care.
       From: http://terminology.hl7.org/CodeSystem/ex-benefitcategory in valuesets.xml
 
 
-   .. attribute:: DentalCare
+   .. py:attribute:: DentalCare
       
 
       Dental Crowns.
       From: http://terminology.hl7.org/CodeSystem/ex-benefitcategory in valuesets.xml
 
 
-   .. attribute:: DentalCrowns
+   .. py:attribute:: DentalCrowns
       
 
       Dental Accident.
       From: http://terminology.hl7.org/CodeSystem/ex-benefitcategory in valuesets.xml
 
 
-   .. attribute:: DentalAccident
+   .. py:attribute:: DentalAccident
       
 
       Hospital Room and Board.
       From: http://terminology.hl7.org/CodeSystem/ex-benefitcategory in valuesets.xml
 
 
-   .. attribute:: HospitalRoomAndBoard
+   .. py:attribute:: HospitalRoomAndBoard
       
 
       Major Medical.
       From: http://terminology.hl7.org/CodeSystem/ex-benefitcategory in valuesets.xml
 
 
-   .. attribute:: MajorMedical
+   .. py:attribute:: MajorMedical
       
 
       Medically Related Transportation.
       From: http://terminology.hl7.org/CodeSystem/ex-benefitcategory in valuesets.xml
 
 
-   .. attribute:: MedicallyRelatedTransportation
+   .. py:attribute:: MedicallyRelatedTransportation
       
 
       In-vitro Fertilization.
       From: http://terminology.hl7.org/CodeSystem/ex-benefitcategory in valuesets.xml
 
 
-   .. attribute:: In_vitroFertilization
+   .. py:attribute:: In_vitroFertilization
       
 
       MRI Scan.
       From: http://terminology.hl7.org/CodeSystem/ex-benefitcategory in valuesets.xml
 
 
-   .. attribute:: MRIScan
+   .. py:attribute:: MRIScan
       
 
       Donor Procedures such as organ harvest.
       From: http://terminology.hl7.org/CodeSystem/ex-benefitcategory in valuesets.xml
 
 
-   .. attribute:: DonorProcedures
+   .. py:attribute:: DonorProcedures
       
 
       Maternity.
       From: http://terminology.hl7.org/CodeSystem/ex-benefitcategory in valuesets.xml
 
 
-   .. attribute:: Maternity
+   .. py:attribute:: Maternity
       
 
       Renal dialysis.
       From: http://terminology.hl7.org/CodeSystem/ex-benefitcategory in valuesets.xml
 
 
-   .. attribute:: RenalDialysis
+   .. py:attribute:: RenalDialysis
       
 
       Medical Coverage.
       From: http://terminology.hl7.org/CodeSystem/ex-benefitcategory in valuesets.xml
 
 
-   .. attribute:: MedicalCoverage
+   .. py:attribute:: MedicalCoverage
       
 
       Dental Coverage.
       From: http://terminology.hl7.org/CodeSystem/ex-benefitcategory in valuesets.xml
 
 
-   .. attribute:: DentalCoverage
+   .. py:attribute:: DentalCoverage
       
 
       Hearing Coverage.
       From: http://terminology.hl7.org/CodeSystem/ex-benefitcategory in valuesets.xml
 
 
-   .. attribute:: HearingCoverage
+   .. py:attribute:: HearingCoverage
       
 
       Vision Coverage.
       From: http://terminology.hl7.org/CodeSystem/ex-benefitcategory in valuesets.xml
 
 
-   .. attribute:: VisionCoverage
+   .. py:attribute:: VisionCoverage
       
 
       

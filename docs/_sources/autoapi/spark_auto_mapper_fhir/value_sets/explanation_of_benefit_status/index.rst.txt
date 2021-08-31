@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.explanation_of_benefit_status`
-======================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.explanation_of_benefit_status`
+=========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.explanation_of_benefit_status
 
@@ -17,48 +17,48 @@ Classes
 
 
 
-.. class:: ExplanationOfBenefitStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ExplanationOfBenefitStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ExplanationOfBenefitStatus
    From: http://hl7.org/fhir/explanationofbenefit-status in valuesets.xml
        A code specifying the state of the resource instance.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/explanationofbenefit-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/explanationofbenefit-status
 
       
 
 
-.. class:: ExplanationOfBenefitStatusCodeValues
+.. py:class:: ExplanationOfBenefitStatusCodeValues
 
    The resource instance is currently in-force.
    From: http://hl7.org/fhir/explanationofbenefit-status in valuesets.xml
 
-   .. attribute:: Active
+   .. py:attribute:: Active
       
 
       The resource instance is withdrawn, rescinded or reversed.
       From: http://hl7.org/fhir/explanationofbenefit-status in valuesets.xml
 
 
-   .. attribute:: Cancelled
+   .. py:attribute:: Cancelled
       
 
       A new resource instance the contents of which is not complete.
       From: http://hl7.org/fhir/explanationofbenefit-status in valuesets.xml
 
 
-   .. attribute:: Draft
+   .. py:attribute:: Draft
       
 
       The resource instance was entered in error.
       From: http://hl7.org/fhir/explanationofbenefit-status in valuesets.xml
 
 
-   .. attribute:: EnteredInError
+   .. py:attribute:: EnteredInError
       
 
       

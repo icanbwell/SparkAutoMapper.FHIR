@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.request_status`
-=======================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.request_status`
+==========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.request_status
 
@@ -17,34 +17,34 @@ Classes
 
 
 
-.. class:: RequestStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: RequestStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    RequestStatus
    From: http://hl7.org/fhir/request-status in valuesets.xml
        Codes identifying the lifecycle stage of a request.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/request-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/request-status
 
       
 
 
-.. class:: RequestStatusCodeValues
+.. py:class:: RequestStatusCodeValues
 
    The request has been created but is not yet complete or ready for action.
    From: http://hl7.org/fhir/request-status in valuesets.xml
 
-   .. attribute:: Draft
+   .. py:attribute:: Draft
       
 
       The request is in force and ready to be acted upon.
       From: http://hl7.org/fhir/request-status in valuesets.xml
 
 
-   .. attribute:: Active
+   .. py:attribute:: Active
       
 
       The request (and any implicit authorization to act) has been temporarily
@@ -52,7 +52,7 @@ Classes
       From: http://hl7.org/fhir/request-status in valuesets.xml
 
 
-   .. attribute:: OnHold
+   .. py:attribute:: OnHold
       
 
       The request (and any implicit authorization to act) has been terminated prior
@@ -61,7 +61,7 @@ Classes
       From: http://hl7.org/fhir/request-status in valuesets.xml
 
 
-   .. attribute:: Revoked
+   .. py:attribute:: Revoked
       
 
       The activity described by the request has been fully performed.  No further
@@ -69,7 +69,7 @@ Classes
       From: http://hl7.org/fhir/request-status in valuesets.xml
 
 
-   .. attribute:: Completed
+   .. py:attribute:: Completed
       
 
       This request should never have existed and should be considered 'void'.  (It
@@ -79,7 +79,7 @@ Classes
       From: http://hl7.org/fhir/request-status in valuesets.xml
 
 
-   .. attribute:: EnteredInError
+   .. py:attribute:: EnteredInError
       
 
       The authoring/source system does not know which of the status values currently
@@ -89,7 +89,7 @@ Classes
       From: http://hl7.org/fhir/request-status in valuesets.xml
 
 
-   .. attribute:: Unknown
+   .. py:attribute:: Unknown
       
 
       

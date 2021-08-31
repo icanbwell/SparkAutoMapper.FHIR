@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.contract_resource_definition_type_codes`
-================================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.contract_resource_definition_type_codes`
+===================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.contract_resource_definition_type_codes
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: ContractResourceDefinitionTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ContractResourceDefinitionTypeCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ContractResourceDefinitionTypeCodes
    From: http://hl7.org/fhir/contract-definition-type in valuesets.xml
        This value set contract specific codes for status.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/contract-definition-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/contract-definition-type
 
       
 
 
-.. class:: ContractResourceDefinitionTypeCodesCodeValues
+.. py:class:: ContractResourceDefinitionTypeCodesCodeValues
 
    To be completed
    From: http://hl7.org/fhir/contract-definition-type in valuesets.xml
 
-   .. attribute:: TemporaryValue
+   .. py:attribute:: TemporaryValue
       
 
       

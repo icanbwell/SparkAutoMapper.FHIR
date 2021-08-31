@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.subscription_channel_type`
-==================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.subscription_channel_type`
+=====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.subscription_channel_type
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: SubscriptionChannelTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SubscriptionChannelTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SubscriptionChannelType
    From: http://hl7.org/fhir/subscription-channel-type in valuesets.xml
        The type of method used to execute a subscription.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/subscription-channel-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/subscription-channel-type
 
       
 
 
-.. class:: SubscriptionChannelTypeCodeValues
+.. py:class:: SubscriptionChannelTypeCodeValues
 
    The channel is executed by making a post to the URI. If a payload is included,
    the URL is interpreted as the service base, and an update (PUT) is made.
    From: http://hl7.org/fhir/subscription-channel-type in valuesets.xml
 
-   .. attribute:: RestHook
+   .. py:attribute:: RestHook
       
 
       The channel is executed by sending a packet across a web socket connection
@@ -47,7 +47,7 @@ Classes
       From: http://hl7.org/fhir/subscription-channel-type in valuesets.xml
 
 
-   .. attribute:: Websocket
+   .. py:attribute:: Websocket
       
 
       The channel is executed by sending an email to the email addressed in the URI
@@ -55,7 +55,7 @@ Classes
       From: http://hl7.org/fhir/subscription-channel-type in valuesets.xml
 
 
-   .. attribute:: Email
+   .. py:attribute:: Email
       
 
       The channel is executed by sending an SMS message to the phone number
@@ -63,7 +63,7 @@ Classes
       From: http://hl7.org/fhir/subscription-channel-type in valuesets.xml
 
 
-   .. attribute:: SMS
+   .. py:attribute:: SMS
       
 
       The channel is executed by sending a message (e.g. a Bundle with a
@@ -71,7 +71,7 @@ Classes
       From: http://hl7.org/fhir/subscription-channel-type in valuesets.xml
 
 
-   .. attribute:: Message
+   .. py:attribute:: Message
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.backbone_elements.effect_evidence_synthesis_effect_estimate`
-=========================================================================================
+:py:mod:`spark_auto_mapper_fhir.backbone_elements.effect_evidence_synthesis_effect_estimate`
+============================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.backbone_elements.effect_evidence_synthesis_effect_estimate
 
@@ -16,12 +16,42 @@ Classes
 
 
 
-.. class:: EffectEvidenceSynthesisEffectEstimate(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, description: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, type_: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.effect_estimate_type.EffectEstimateTypeCode]] = None, variantState: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.evidence_variant_state.EvidenceVariantStateCode]] = None, value: Optional[spark_auto_mapper_fhir.fhir_types.decimal.FhirDecimal] = None, unitOfMeasure: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.ucum_codes.UCUMCodesCode]] = None, precisionEstimate: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.effect_evidence_synthesis_precision_estimate.EffectEvidenceSynthesisPrecisionEstimate]] = None)
 
+.. py:class:: EffectEvidenceSynthesisEffectEstimate(*, id_ = None, extension = None, modifierExtension = None, description = None, type_ = None, variantState = None, value = None, unitOfMeasure = None, precisionEstimate = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
 
    EffectEvidenceSynthesis.EffectEstimate
-   The EffectEvidenceSynthesis resource describes the difference in an outcome between exposures states in a population where the effect estimate is derived from a combination of research studies.
+       The EffectEvidenceSynthesis resource describes the difference in an outcome between exposures states in a population where the effect estimate is derived from a combination of research studies.
+
+       The EffectEvidenceSynthesis resource describes the difference in an outcome
+   between exposures states in a population where the effect estimate is derived
+   from a combination of research studies.
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param modifierExtension: May be used to represent additional information that is not part of the basic
+   definition of the element and that modifies the understanding of the element
+   in which it is contained and/or the understanding of the containing element's
+   descendants. Usually modifier elements provide negation or qualification. To
+   make the use of extensions safe and manageable, there is a strict set of
+   governance applied to the definition and use of extensions. Though any
+   implementer can define an extension, there is a set of requirements that SHALL
+   be met as part of the definition of the extension. Applications processing a
+   resource are required to check for modifier extensions.
+
+   Modifier extensions SHALL NOT change the meaning of any elements on Resource
+   or DomainResource (including cannot change the meaning of modifierExtension
+   itself).
+       :param description: Human-readable summary of effect estimate.
+       :param type_: Examples include relative risk and mean difference.
+       :param variantState: Used to define variant exposure states such as low-risk state.
+       :param value: The point estimate of the effect estimate.
+       :param unitOfMeasure: Specifies the UCUM unit for the outcome.
+       :param precisionEstimate: A description of the precision of the estimate for the effect.
 
 

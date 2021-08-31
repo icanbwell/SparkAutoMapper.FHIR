@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.contributor_type`
-=========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.contributor_type`
+============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.contributor_type
 
@@ -17,48 +17,48 @@ Classes
 
 
 
-.. class:: ContributorTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ContributorTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ContributorType
    From: http://hl7.org/fhir/contributor-type in valuesets.xml
        The type of contributor.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/contributor-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/contributor-type
 
       
 
 
-.. class:: ContributorTypeCodeValues
+.. py:class:: ContributorTypeCodeValues
 
    An author of the content of the module.
    From: http://hl7.org/fhir/contributor-type in valuesets.xml
 
-   .. attribute:: Author
+   .. py:attribute:: Author
       
 
       An editor of the content of the module.
       From: http://hl7.org/fhir/contributor-type in valuesets.xml
 
 
-   .. attribute:: Editor
+   .. py:attribute:: Editor
       
 
       A reviewer of the content of the module.
       From: http://hl7.org/fhir/contributor-type in valuesets.xml
 
 
-   .. attribute:: Reviewer
+   .. py:attribute:: Reviewer
       
 
       An endorser of the content of the module.
       From: http://hl7.org/fhir/contributor-type in valuesets.xml
 
 
-   .. attribute:: Endorser
+   .. py:attribute:: Endorser
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.complex_types.duration`
-====================================================
+:py:mod:`spark_auto_mapper_fhir.complex_types.duration`
+=======================================================
 
 .. py:module:: spark_auto_mapper_fhir.complex_types.duration
 
@@ -16,17 +16,36 @@ Classes
 
 
 
-.. class:: Duration(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, value: Optional[spark_auto_mapper_fhir.fhir_types.decimal.FhirDecimal] = None, comparator: Optional[spark_auto_mapper_fhir.value_sets.quantity_comparator.QuantityComparatorCode] = None, unit: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, system: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, code: Optional[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode] = None)
 
+.. py:class:: Duration(*, id_ = None, extension = None, value = None, comparator = None, unit = None, system = None, code = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
 
    Duration
    fhir-base.xsd
        A length of time.
        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
 
-   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+       A length of time.
+       If the element is present, it must have a value for at least one of the
+   defined elements, an @id referenced from the Narrative, or extensions
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param value: The value of the measured amount. The value includes an implicit precision in
+   the presentation of the value.
+       :param comparator: How the value should be understood and represented - whether the actual value
+   is greater or less than the stated value due to measurement issues; e.g. if
+   the comparator is "<" , then the real value is < stated value.
+       :param unit: A human-readable form of the unit.
+       :param system: The identification of the system that provides the coded form of the unit.
+       :param code: A computer processable form of the unit in some unit representation system.
+
+   .. py:method:: get_schema(self, include_extension)
 
 
 

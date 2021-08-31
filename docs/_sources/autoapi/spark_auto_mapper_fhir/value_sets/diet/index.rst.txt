@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.diet`
-=============================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.diet`
+================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.diet
 
@@ -17,49 +17,49 @@ Classes
 
 
 
-.. class:: DietCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: DietCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    Diet
    From: http://terminology.hl7.org/CodeSystem/diet in valuesets.xml
        This value set defines a set of codes that can be used to indicate dietary
    preferences or restrictions a patient may have.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/diet
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/diet
 
       
 
 
-.. class:: DietCodeValues
+.. py:class:: DietCodeValues
 
    Food without meat, poultry or seafood.
    From: http://terminology.hl7.org/CodeSystem/diet in valuesets.xml
 
-   .. attribute:: Vegetarian
+   .. py:attribute:: Vegetarian
       
 
       Excludes dairy products.
       From: http://terminology.hl7.org/CodeSystem/diet in valuesets.xml
 
 
-   .. attribute:: DairyFree
+   .. py:attribute:: DairyFree
       
 
       Excludes ingredients containing nuts.
       From: http://terminology.hl7.org/CodeSystem/diet in valuesets.xml
 
 
-   .. attribute:: NutFree
+   .. py:attribute:: NutFree
       
 
       Excludes ingredients containing gluten.
       From: http://terminology.hl7.org/CodeSystem/diet in valuesets.xml
 
 
-   .. attribute:: GlutenFree
+   .. py:attribute:: GlutenFree
       
 
       Food without meat, poultry, seafood, eggs, dairy products and other animal-
@@ -67,21 +67,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/diet in valuesets.xml
 
 
-   .. attribute:: Vegan
+   .. py:attribute:: Vegan
       
 
       Foods that conform to Islamic law.
       From: http://terminology.hl7.org/CodeSystem/diet in valuesets.xml
 
 
-   .. attribute:: Halal
+   .. py:attribute:: Halal
       
 
       Foods that conform to Jewish dietary law.
       From: http://terminology.hl7.org/CodeSystem/diet in valuesets.xml
 
 
-   .. attribute:: Kosher
+   .. py:attribute:: Kosher
       
 
       

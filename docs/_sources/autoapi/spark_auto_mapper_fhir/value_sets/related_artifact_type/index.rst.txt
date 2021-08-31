@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.related_artifact_type`
-==============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.related_artifact_type`
+=================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.related_artifact_type
 
@@ -17,29 +17,29 @@ Classes
 
 
 
-.. class:: RelatedArtifactTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: RelatedArtifactTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    RelatedArtifactType
    From: http://hl7.org/fhir/related-artifact-type in valuesets.xml
        The type of relationship to the related artifact.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/related-artifact-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/related-artifact-type
 
       
 
 
-.. class:: RelatedArtifactTypeCodeValues
+.. py:class:: RelatedArtifactTypeCodeValues
 
    Additional documentation for the knowledge resource. This would include
    additional instructions on usage as well as additional information on clinical
    context or appropriateness.
    From: http://hl7.org/fhir/related-artifact-type in valuesets.xml
 
-   .. attribute:: Documentation
+   .. py:attribute:: Documentation
       
 
       A summary of the justification for the knowledge resource including supporting
@@ -50,7 +50,7 @@ Classes
       From: http://hl7.org/fhir/related-artifact-type in valuesets.xml
 
 
-   .. attribute:: Justification
+   .. py:attribute:: Justification
       
 
       Bibliographic citation for papers, references, or other relevant material for
@@ -60,21 +60,21 @@ Classes
       From: http://hl7.org/fhir/related-artifact-type in valuesets.xml
 
 
-   .. attribute:: Citation
+   .. py:attribute:: Citation
       
 
       The previous version of the knowledge resource.
       From: http://hl7.org/fhir/related-artifact-type in valuesets.xml
 
 
-   .. attribute:: Predecessor
+   .. py:attribute:: Predecessor
       
 
       The next version of the knowledge resource.
       From: http://hl7.org/fhir/related-artifact-type in valuesets.xml
 
 
-   .. attribute:: Successor
+   .. py:attribute:: Successor
       
 
       The knowledge resource is derived from the related artifact. This is intended
@@ -85,21 +85,21 @@ Classes
       From: http://hl7.org/fhir/related-artifact-type in valuesets.xml
 
 
-   .. attribute:: DerivedFrom
+   .. py:attribute:: DerivedFrom
       
 
       The knowledge resource depends on the given related artifact.
       From: http://hl7.org/fhir/related-artifact-type in valuesets.xml
 
 
-   .. attribute:: DependsOn
+   .. py:attribute:: DependsOn
       
 
       The knowledge resource is composed of the given related artifact.
       From: http://hl7.org/fhir/related-artifact-type in valuesets.xml
 
 
-   .. attribute:: ComposedOf
+   .. py:attribute:: ComposedOf
       
 
       

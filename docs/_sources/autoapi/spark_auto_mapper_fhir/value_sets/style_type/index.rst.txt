@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.style_type`
-===================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.style_type`
+======================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.style_type
 
@@ -17,42 +17,42 @@ Classes
 
 
 
-.. class:: StyleType(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: StyleType(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.styleType
    From: http://terminology.hl7.org/ValueSet/v3-styleType in v3-codesystems.xml
         <ns1:p>The style code is used within the CDA/SPL narrative block to give the
    instance author some control over various aspects of style</ns1:p>
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-styleType
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-styleType
 
       
 
 
-.. class:: StyleTypeValues
+.. py:class:: StyleTypeValues
 
    Defines font rendering characteristics
    From: http://terminology.hl7.org/CodeSystem/v3-styleType in v3-codesystems.xml
 
-   .. attribute:: FontStyle
+   .. py:attribute:: FontStyle
       
 
       Defines list rendering characteristics
       From: http://terminology.hl7.org/CodeSystem/v3-styleType in v3-codesystems.xml
 
 
-   .. attribute:: ListStyle
+   .. py:attribute:: ListStyle
       
 
       Defines table cell rendering characteristics
       From: http://terminology.hl7.org/CodeSystem/v3-styleType in v3-codesystems.xml
 
 
-   .. attribute:: TableRuleStyle
+   .. py:attribute:: TableRuleStyle
       
 
       

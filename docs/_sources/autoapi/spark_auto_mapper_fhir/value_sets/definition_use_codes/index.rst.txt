@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.definition_use_codes`
-=============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.definition_use_codes`
+================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.definition_use_codes
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: DefinitionUseCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: DefinitionUseCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    DefinitionUseCodes
    From: http://terminology.hl7.org/CodeSystem/definition-use in valuesets.xml
        Structure Definition Use Codes / Keywords
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/definition-use
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/definition-use
 
       
 
 
-.. class:: DefinitionUseCodesCodeValues
+.. py:class:: DefinitionUseCodesCodeValues
 
    This structure is defined as part of the base FHIR Specification
    From: http://terminology.hl7.org/CodeSystem/definition-use in valuesets.xml
 
-   .. attribute:: FHIRStructure
+   .. py:attribute:: FHIRStructure
       
 
       This structure is intended to be treated like a FHIR resource (e.g. on the
@@ -45,35 +45,35 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/definition-use in valuesets.xml
 
 
-   .. attribute:: CustomResource
+   .. py:attribute:: CustomResource
       
 
       This structure captures an analysis of a domain
       From: http://terminology.hl7.org/CodeSystem/definition-use in valuesets.xml
 
 
-   .. attribute:: DomainAnalysisModel
+   .. py:attribute:: DomainAnalysisModel
       
 
       This structure represents and existing structure (e.g. CDA, HL7 v2)
       From: http://terminology.hl7.org/CodeSystem/definition-use in valuesets.xml
 
 
-   .. attribute:: WireFormat
+   .. py:attribute:: WireFormat
       
 
       This structure captures an analysis of a domain
       From: http://terminology.hl7.org/CodeSystem/definition-use in valuesets.xml
 
 
-   .. attribute:: DomainAnalysisModel
+   .. py:attribute:: DomainAnalysisModel
       
 
       This structure is a template (n.b: 'template' has many meanings)
       From: http://terminology.hl7.org/CodeSystem/definition-use in valuesets.xml
 
 
-   .. attribute:: Template
+   .. py:attribute:: Template
       
 
       

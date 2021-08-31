@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.link_type`
-==================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.link_type`
+=====================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.link_type
 
@@ -17,29 +17,29 @@ Classes
 
 
 
-.. class:: LinkTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: LinkTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    LinkType
    From: http://hl7.org/fhir/link-type in valuesets.xml
        The type of link between this patient resource and another patient resource.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/link-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/link-type
 
       
 
 
-.. class:: LinkTypeCodeValues
+.. py:class:: LinkTypeCodeValues
 
    The patient resource containing this link must no longer be used. The link
    points forward to another patient resource that must be used in lieu of the
    patient resource that contains this link.
    From: http://hl7.org/fhir/link-type in valuesets.xml
 
-   .. attribute:: Replaced_by
+   .. py:attribute:: Replaced_by
       
 
       The patient resource containing this link is the current active patient
@@ -49,7 +49,7 @@ Classes
       From: http://hl7.org/fhir/link-type in valuesets.xml
 
 
-   .. attribute:: Replaces
+   .. py:attribute:: Replaces
       
 
       The patient resource containing this link is in use and valid but not
@@ -59,7 +59,7 @@ Classes
       From: http://hl7.org/fhir/link-type in valuesets.xml
 
 
-   .. attribute:: Refer
+   .. py:attribute:: Refer
       
 
       The patient resource containing this link is in use and valid, but points to
@@ -70,7 +70,7 @@ Classes
       From: http://hl7.org/fhir/link-type in valuesets.xml
 
 
-   .. attribute:: SeeAlso
+   .. py:attribute:: SeeAlso
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.backbone_elements.specimen_definition_container`
-=============================================================================
+:py:mod:`spark_auto_mapper_fhir.backbone_elements.specimen_definition_container`
+================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.backbone_elements.specimen_definition_container
 
@@ -16,12 +16,45 @@ Classes
 
 
 
-.. class:: SpecimenDefinitionContainer(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, material: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.container_materials.ContainerMaterialsCode]] = None, type_: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.specimen_container_type.SpecimenContainerTypeCode]] = None, cap: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.container_cap.ContainerCapCode]] = None, description: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, capacity: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, minimumVolumeQuantity: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, minimumVolumeString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, additive: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.specimen_definition_additive.SpecimenDefinitionAdditive]] = None, preparation: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None)
 
+.. py:class:: SpecimenDefinitionContainer(*, id_ = None, extension = None, modifierExtension = None, material = None, type_ = None, cap = None, description = None, capacity = None, minimumVolumeQuantity = None, minimumVolumeString = None, additive = None, preparation = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
 
    SpecimenDefinition.Container
-   A kind of specimen with associated set of requirements.
+       A kind of specimen with associated set of requirements.
+
+       A kind of specimen with associated set of requirements.
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param modifierExtension: May be used to represent additional information that is not part of the basic
+   definition of the element and that modifies the understanding of the element
+   in which it is contained and/or the understanding of the containing element's
+   descendants. Usually modifier elements provide negation or qualification. To
+   make the use of extensions safe and manageable, there is a strict set of
+   governance applied to the definition and use of extensions. Though any
+   implementer can define an extension, there is a set of requirements that SHALL
+   be met as part of the definition of the extension. Applications processing a
+   resource are required to check for modifier extensions.
+
+   Modifier extensions SHALL NOT change the meaning of any elements on Resource
+   or DomainResource (including cannot change the meaning of modifierExtension
+   itself).
+       :param material: The type of material of the container.
+       :param type_: The type of container used to contain this kind of specimen.
+       :param cap: Color of container cap.
+       :param description: The textual description of the kind of container.
+       :param capacity: The capacity (volume or other measure) of this kind of container.
+       :param minimumVolumeQuantity: None
+       :param minimumVolumeString: None
+       :param additive: Substance introduced in the kind of container to preserve, maintain or enhance
+   the specimen. Examples: Formalin, Citrate, EDTA.
+       :param preparation: Special processing that should be applied to the container for this kind of
+   specimen.
 
 

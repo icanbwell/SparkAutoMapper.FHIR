@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.language_ability_proficiency`
-=====================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.language_ability_proficiency`
+========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.language_ability_proficiency
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: LanguageAbilityProficiency(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: LanguageAbilityProficiency(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.LanguageAbilityProficiency
    From: http://terminology.hl7.org/ValueSet/v3-LanguageAbilityProficiency in v3-codesystems.xml
@@ -28,39 +28,39 @@ Classes
    Excellent, good, fair, poor.  OpenIssue:
    Description copied from Concept Domain of same name.  Must be verified.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityProficiency
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityProficiency
 
       
 
 
-.. class:: LanguageAbilityProficiencyValues
+.. py:class:: LanguageAbilityProficiencyValues
 
    Excellent
    From: http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityProficiency in v3-codesystems.xml
 
-   .. attribute:: Excellent
+   .. py:attribute:: Excellent
       
 
       Fair
       From: http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityProficiency in v3-codesystems.xml
 
 
-   .. attribute:: Fair
+   .. py:attribute:: Fair
       
 
       Good
       From: http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityProficiency in v3-codesystems.xml
 
 
-   .. attribute:: Good
+   .. py:attribute:: Good
       
 
       Poor
       From: http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityProficiency in v3-codesystems.xml
 
 
-   .. attribute:: Poor
+   .. py:attribute:: Poor
       
 
       

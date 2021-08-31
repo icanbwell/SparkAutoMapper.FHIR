@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.backbone_elements.specimen_definition_type_tested`
-===============================================================================
+:py:mod:`spark_auto_mapper_fhir.backbone_elements.specimen_definition_type_tested`
+==================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.backbone_elements.specimen_definition_type_tested
 
@@ -16,12 +16,45 @@ Classes
 
 
 
-.. class:: SpecimenDefinitionTypeTested(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, isDerived: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, type_: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.v2_0487.V2_0487]] = None, preference: spark_auto_mapper_fhir.value_sets.specimen_contained_preference.SpecimenContainedPreferenceCode, container: Optional[spark_auto_mapper_fhir.backbone_elements.specimen_definition_container.SpecimenDefinitionContainer] = None, requirement: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, retentionTime: Optional[spark_auto_mapper_fhir.complex_types.duration.Duration] = None, rejectionCriterion: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.rejection_criterion.RejectionCriterionCode]]] = None, handling: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.specimen_definition_handling.SpecimenDefinitionHandling]] = None)
 
+.. py:class:: SpecimenDefinitionTypeTested(*, id_ = None, extension = None, modifierExtension = None, isDerived = None, type_ = None, preference, container = None, requirement = None, retentionTime = None, rejectionCriterion = None, handling = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
 
    SpecimenDefinition.TypeTested
-   A kind of specimen with associated set of requirements.
+       A kind of specimen with associated set of requirements.
+
+       A kind of specimen with associated set of requirements.
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param modifierExtension: May be used to represent additional information that is not part of the basic
+   definition of the element and that modifies the understanding of the element
+   in which it is contained and/or the understanding of the containing element's
+   descendants. Usually modifier elements provide negation or qualification. To
+   make the use of extensions safe and manageable, there is a strict set of
+   governance applied to the definition and use of extensions. Though any
+   implementer can define an extension, there is a set of requirements that SHALL
+   be met as part of the definition of the extension. Applications processing a
+   resource are required to check for modifier extensions.
+
+   Modifier extensions SHALL NOT change the meaning of any elements on Resource
+   or DomainResource (including cannot change the meaning of modifierExtension
+   itself).
+       :param isDerived: Primary of secondary specimen.
+       :param type_: The kind of specimen conditioned for testing expected by lab.
+       :param preference: The preference for this type of conditioned specimen.
+       :param container: The specimen's container.
+       :param requirement: Requirements for delivery and special handling of this kind of conditioned
+   specimen.
+       :param retentionTime: The usual time that a specimen of this kind is retained after the ordered
+   tests are completed, for the purpose of additional testing.
+       :param rejectionCriterion: Criterion for rejection of the specimen in its container by the laboratory.
+       :param handling: Set of instructions for preservation/transport of the specimen at a defined
+   temperature interval, prior the testing process.
 
 

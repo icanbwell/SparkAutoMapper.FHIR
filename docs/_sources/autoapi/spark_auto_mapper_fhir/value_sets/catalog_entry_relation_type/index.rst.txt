@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.catalog_entry_relation_type`
-====================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.catalog_entry_relation_type`
+=======================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.catalog_entry_relation_type
 
@@ -17,35 +17,35 @@ Classes
 
 
 
-.. class:: CatalogEntryRelationTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: CatalogEntryRelationTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    CatalogEntryRelationType
    From: http://hl7.org/fhir/relation-type in valuesets.xml
        The type of relations between entries.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/relation-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/relation-type
 
       
 
 
-.. class:: CatalogEntryRelationTypeCodeValues
+.. py:class:: CatalogEntryRelationTypeCodeValues
 
    the related entry represents an activity that may be triggered by the current
    item.
    From: http://hl7.org/fhir/relation-type in valuesets.xml
 
-   .. attribute:: Triggers
+   .. py:attribute:: Triggers
       
 
       the related entry represents an item that replaces the current retired item.
       From: http://hl7.org/fhir/relation-type in valuesets.xml
 
 
-   .. attribute:: ReplacedBy
+   .. py:attribute:: ReplacedBy
       
 
       

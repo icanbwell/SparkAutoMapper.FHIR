@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.provenance_entity_role`
-===============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.provenance_entity_role`
+==================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.provenance_entity_role
 
@@ -17,29 +17,29 @@ Classes
 
 
 
-.. class:: ProvenanceEntityRoleCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ProvenanceEntityRoleCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ProvenanceEntityRole
    From: http://hl7.org/fhir/provenance-entity-role in valuesets.xml
        How an entity was used in an activity.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/provenance-entity-role
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/provenance-entity-role
 
       
 
 
-.. class:: ProvenanceEntityRoleCodeValues
+.. py:class:: ProvenanceEntityRoleCodeValues
 
    A transformation of an entity into another, an update of an entity resulting
    in a new one, or the construction of a new entity based on a pre-existing
    entity.
    From: http://hl7.org/fhir/provenance-entity-role in valuesets.xml
 
-   .. attribute:: Derivation
+   .. py:attribute:: Derivation
       
 
       

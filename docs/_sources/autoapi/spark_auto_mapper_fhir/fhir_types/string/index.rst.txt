@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.fhir_types.string`
-===============================================
+:py:mod:`spark_auto_mapper_fhir.fhir_types.string`
+==================================================
 
 .. py:module:: spark_auto_mapper_fhir.fhir_types.string
 
@@ -7,7 +7,7 @@
 Module Contents
 ---------------
 
-.. data:: FhirString
+.. py:data:: FhirString
    
 
    

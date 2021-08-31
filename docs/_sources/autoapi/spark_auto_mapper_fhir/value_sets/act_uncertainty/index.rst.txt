@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.act_uncertainty`
-========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.act_uncertainty`
+===========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.act_uncertainty
 
@@ -17,30 +17,30 @@ Classes
 
 
 
-.. class:: ActUncertainty(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ActUncertainty(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.ActUncertainty
    From: http://terminology.hl7.org/ValueSet/v3-ActUncertainty in v3-codesystems.xml
          OpenIssue:
    Missing Description
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ActUncertainty
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-ActUncertainty
 
       
 
 
-.. class:: ActUncertaintyValues
+.. py:class:: ActUncertaintyValues
 
    Specifies that the act statement is made without explicit tagging of
    uncertainty. This is the normal statement, meaning that it is not free of
    errors and uncertainty may still exist.
    From: http://terminology.hl7.org/CodeSystem/v3-ActUncertainty in v3-codesystems.xml
 
-   .. attribute:: StatedWithNoAssertionOfUncertainty
+   .. py:attribute:: StatedWithNoAssertionOfUncertainty
       
 
       Specifies that the originator of the Act statement does not have full
@@ -49,7 +49,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActUncertainty in v3-codesystems.xml
 
 
-   .. attribute:: StatedWithUncertainty
+   .. py:attribute:: StatedWithUncertainty
       
 
       

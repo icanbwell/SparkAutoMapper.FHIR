@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.naming_system_type`
-===========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.naming_system_type`
+==============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.naming_system_type
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: NamingSystemTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: NamingSystemTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    NamingSystemType
    From: http://hl7.org/fhir/namingsystem-type in valuesets.xml
        Identifies the purpose of the naming system.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/namingsystem-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/namingsystem-type
 
       
 
 
-.. class:: NamingSystemTypeCodeValues
+.. py:class:: NamingSystemTypeCodeValues
 
    The naming system is used to define concepts and symbols to represent those
    concepts; e.g. UCUM, LOINC, NDC code, local lab codes, etc.
    From: http://hl7.org/fhir/namingsystem-type in valuesets.xml
 
-   .. attribute:: CodeSystem
+   .. py:attribute:: CodeSystem
       
 
       The naming system is used to manage identifiers (e.g. license numbers, order
@@ -46,7 +46,7 @@ Classes
       From: http://hl7.org/fhir/namingsystem-type in valuesets.xml
 
 
-   .. attribute:: Identifier
+   .. py:attribute:: Identifier
       
 
       The naming system is used as the root for other identifiers and naming
@@ -54,7 +54,7 @@ Classes
       From: http://hl7.org/fhir/namingsystem-type in valuesets.xml
 
 
-   .. attribute:: Root
+   .. py:attribute:: Root
       
 
       

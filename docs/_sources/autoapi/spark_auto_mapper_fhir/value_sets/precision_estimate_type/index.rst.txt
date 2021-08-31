@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.precision_estimate_type`
-================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.precision_estimate_type`
+===================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.precision_estimate_type
 
@@ -17,49 +17,49 @@ Classes
 
 
 
-.. class:: PrecisionEstimateTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: PrecisionEstimateTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    PrecisionEstimateType
    From: http://terminology.hl7.org/CodeSystem/precision-estimate-type in valuesets.xml
        Method of reporting variability of estimates, such as confidence intervals,
    interquartile range or standard deviation.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/precision-estimate-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/precision-estimate-type
 
       
 
 
-.. class:: PrecisionEstimateTypeCodeValues
+.. py:class:: PrecisionEstimateTypeCodeValues
 
    confidence interval.
    From: http://terminology.hl7.org/CodeSystem/precision-estimate-type in valuesets.xml
 
-   .. attribute:: ConfidenceInterval
+   .. py:attribute:: ConfidenceInterval
       
 
       interquartile range.
       From: http://terminology.hl7.org/CodeSystem/precision-estimate-type in valuesets.xml
 
 
-   .. attribute:: InterquartileRange
+   .. py:attribute:: InterquartileRange
       
 
       standard deviation.
       From: http://terminology.hl7.org/CodeSystem/precision-estimate-type in valuesets.xml
 
 
-   .. attribute:: StandardDeviation
+   .. py:attribute:: StandardDeviation
       
 
       standard error.
       From: http://terminology.hl7.org/CodeSystem/precision-estimate-type in valuesets.xml
 
 
-   .. attribute:: StandardError
+   .. py:attribute:: StandardError
       
 
       

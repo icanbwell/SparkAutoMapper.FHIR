@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.immunization_subpotent_reason`
-======================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.immunization_subpotent_reason`
+=========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.immunization_subpotent_reason
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: ImmunizationSubpotentReasonCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ImmunizationSubpotentReasonCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ImmunizationSubpotentReason
    From: http://terminology.hl7.org/CodeSystem/immunization-subpotent-reason in valuesets.xml
@@ -29,32 +29,32 @@ Classes
    support describing the reason why a dose is considered to be subpotent. This
    value set is provided as a suggestive example.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/immunization-subpotent-reason
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/immunization-subpotent-reason
 
       
 
 
-.. class:: ImmunizationSubpotentReasonCodeValues
+.. py:class:: ImmunizationSubpotentReasonCodeValues
 
    The full volume of the dose was not administered to the patient.
    From: http://terminology.hl7.org/CodeSystem/immunization-subpotent-reason in valuesets.xml
 
-   .. attribute:: PartialDose
+   .. py:attribute:: PartialDose
       
 
       The vaccine experienced a cold chain break.
       From: http://terminology.hl7.org/CodeSystem/immunization-subpotent-reason in valuesets.xml
 
 
-   .. attribute:: ColdChainBreak
+   .. py:attribute:: ColdChainBreak
       
 
       The vaccine was recalled by the manufacturer.
       From: http://terminology.hl7.org/CodeSystem/immunization-subpotent-reason in valuesets.xml
 
 
-   .. attribute:: ManufacturerRecall
+   .. py:attribute:: ManufacturerRecall
       
 
       

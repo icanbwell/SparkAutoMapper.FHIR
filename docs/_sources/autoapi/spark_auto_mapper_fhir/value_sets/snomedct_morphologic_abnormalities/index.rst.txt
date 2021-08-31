@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.snomedct_morphologic_abnormalities`
-===========================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.snomedct_morphologic_abnormalities`
+==============================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.snomedct_morphologic_abnormalities
 
@@ -16,10 +16,10 @@ Classes
 
 
 
-.. class:: SNOMEDCTMorphologicAbnormalitiesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SNOMEDCTMorphologicAbnormalitiesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SNOMEDCTMorphologicAbnormalities
    From: http://hl7.org/fhir/ValueSet/bodystructure-code in valuesets.xml
@@ -27,8 +27,8 @@ Classes
    where concept is-a 442083009 (Anatomical or acquired body site (body
    structure)).
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://snomed.info/sct
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://snomed.info/sct
 
       
 

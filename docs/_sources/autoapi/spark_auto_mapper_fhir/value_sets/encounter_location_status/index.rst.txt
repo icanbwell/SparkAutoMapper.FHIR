@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.encounter_location_status`
-==================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.encounter_location_status`
+=====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.encounter_location_status
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: EncounterLocationStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: EncounterLocationStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    EncounterLocationStatus
    From: http://hl7.org/fhir/encounter-location-status in valuesets.xml
        The status of the location.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/encounter-location-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/encounter-location-status
 
       
 
 
-.. class:: EncounterLocationStatusCodeValues
+.. py:class:: EncounterLocationStatusCodeValues
 
    The patient is planned to be moved to this location at some point in the
    future.
    From: http://hl7.org/fhir/encounter-location-status in valuesets.xml
 
-   .. attribute:: Planned
+   .. py:attribute:: Planned
       
 
       The patient is currently at this location, or was between the period
@@ -49,14 +49,14 @@ Classes
       From: http://hl7.org/fhir/encounter-location-status in valuesets.xml
 
 
-   .. attribute:: Active
+   .. py:attribute:: Active
       
 
       This location is held empty for this patient.
       From: http://hl7.org/fhir/encounter-location-status in valuesets.xml
 
 
-   .. attribute:: Reserved
+   .. py:attribute:: Reserved
       
 
       The patient was at this location during the period specified.
@@ -65,7 +65,7 @@ Classes
       From: http://hl7.org/fhir/encounter-location-status in valuesets.xml
 
 
-   .. attribute:: Completed
+   .. py:attribute:: Completed
       
 
       

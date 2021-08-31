@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.enteral_route_codes`
-============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.enteral_route_codes`
+===============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.enteral_route_codes
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: EnteralRouteCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: EnteralRouteCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    EnteralRouteCodes
    From: http://hl7.org/fhir/ValueSet/enteral-route in valuesets.xml
@@ -28,79 +28,79 @@ Classes
    enteral formula.  This value set is composed of HL7 V3 codes and is provided
    as a suggestive example.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration
 
       
 
 
-.. class:: EnteralRouteCodesCodeValues
+.. py:class:: EnteralRouteCodesCodeValues
 
    Route of substance administration classified by administration method.
    From: http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration in v3-codesystems.xml
 
-   .. attribute:: RouteByMethod
+   .. py:attribute:: RouteByMethod
       
 
       Route of substance administration classified by site.
       From: http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration in v3-codesystems.xml
 
 
-   .. attribute:: RouteBySite
+   .. py:attribute:: RouteBySite
       
 
       From: http://hl7.org/fhir/ValueSet/enteral-route in valuesets.xml
 
 
-   .. attribute:: PO
+   .. py:attribute:: PO
       
 
       From: http://hl7.org/fhir/ValueSet/enteral-route in valuesets.xml
 
 
-   .. attribute:: EFT
+   .. py:attribute:: EFT
       
 
       From: http://hl7.org/fhir/ValueSet/enteral-route in valuesets.xml
 
 
-   .. attribute:: ENTINSTL
+   .. py:attribute:: ENTINSTL
       
 
       From: http://hl7.org/fhir/ValueSet/enteral-route in valuesets.xml
 
 
-   .. attribute:: GT
+   .. py:attribute:: GT
       
 
       From: http://hl7.org/fhir/ValueSet/enteral-route in valuesets.xml
 
 
-   .. attribute:: NGT
+   .. py:attribute:: NGT
       
 
       From: http://hl7.org/fhir/ValueSet/enteral-route in valuesets.xml
 
 
-   .. attribute:: OGT
+   .. py:attribute:: OGT
       
 
       From: http://hl7.org/fhir/ValueSet/enteral-route in valuesets.xml
 
 
-   .. attribute:: GJT
+   .. py:attribute:: GJT
       
 
       From: http://hl7.org/fhir/ValueSet/enteral-route in valuesets.xml
 
 
-   .. attribute:: JJTINSTL
+   .. py:attribute:: JJTINSTL
       
 
       From: http://hl7.org/fhir/ValueSet/enteral-route in valuesets.xml
 
 
-   .. attribute:: OJJ
+   .. py:attribute:: OJJ
       
 
       

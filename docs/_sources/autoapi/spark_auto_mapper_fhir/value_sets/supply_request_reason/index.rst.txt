@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.supply_request_reason`
-==============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.supply_request_reason`
+=================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.supply_request_reason
 
@@ -17,34 +17,34 @@ Classes
 
 
 
-.. class:: SupplyRequestReasonCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SupplyRequestReasonCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SupplyRequestReason
    From: http://terminology.hl7.org/CodeSystem/supplyrequest-reason in valuesets.xml
        The reason why the supply item was requested.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/supplyrequest-reason
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/supplyrequest-reason
 
       
 
 
-.. class:: SupplyRequestReasonCodeValues
+.. py:class:: SupplyRequestReasonCodeValues
 
    The supply has been requested for use in direct patient care.
    From: http://terminology.hl7.org/CodeSystem/supplyrequest-reason in valuesets.xml
 
-   .. attribute:: PatientCare
+   .. py:attribute:: PatientCare
       
 
       The supply has been requested for creating or replenishing ward stock.
       From: http://terminology.hl7.org/CodeSystem/supplyrequest-reason in valuesets.xml
 
 
-   .. attribute:: WardStock
+   .. py:attribute:: WardStock
       
 
       

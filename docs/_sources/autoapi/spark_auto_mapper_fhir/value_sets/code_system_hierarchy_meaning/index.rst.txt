@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.code_system_hierarchy_meaning`
-======================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.code_system_hierarchy_meaning`
+=========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.code_system_hierarchy_meaning
 
@@ -17,22 +17,22 @@ Classes
 
 
 
-.. class:: CodeSystemHierarchyMeaningCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: CodeSystemHierarchyMeaningCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    CodeSystemHierarchyMeaning
    From: http://hl7.org/fhir/codesystem-hierarchy-meaning in valuesets.xml
        The meaning of the hierarchy of concepts in a code system.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/codesystem-hierarchy-meaning
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/codesystem-hierarchy-meaning
 
       
 
 
-.. class:: CodeSystemHierarchyMeaningCodeValues
+.. py:class:: CodeSystemHierarchyMeaningCodeValues
 
    No particular relationship between the concepts can be assumed, except what
    can be determined by inspection of the definitions of the elements (possible
@@ -40,7 +40,7 @@ Classes
    where various parts of the hierarchy have different meanings).
    From: http://hl7.org/fhir/codesystem-hierarchy-meaning in valuesets.xml
 
-   .. attribute:: GroupedBy
+   .. py:attribute:: GroupedBy
       
 
       A hierarchy where the child concepts have an IS-A relationship with the
@@ -51,7 +51,7 @@ Classes
       From: http://hl7.org/fhir/codesystem-hierarchy-meaning in valuesets.xml
 
 
-   .. attribute:: Is_A
+   .. py:attribute:: Is_A
       
 
       Child elements list the individual parts of a composite whole (e.g. body
@@ -59,7 +59,7 @@ Classes
       From: http://hl7.org/fhir/codesystem-hierarchy-meaning in valuesets.xml
 
 
-   .. attribute:: PartOf
+   .. py:attribute:: PartOf
       
 
       Child concepts in the hierarchy may have only one parent, and there is a
@@ -69,7 +69,7 @@ Classes
       From: http://hl7.org/fhir/codesystem-hierarchy-meaning in valuesets.xml
 
 
-   .. attribute:: ClassifiedWith
+   .. py:attribute:: ClassifiedWith
       
 
       

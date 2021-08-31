@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.payment_type_codes`
-===========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.payment_type_codes`
+==============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.payment_type_codes
 
@@ -17,41 +17,41 @@ Classes
 
 
 
-.. class:: PaymentTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: PaymentTypeCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    PaymentTypeCodes
    From: http://terminology.hl7.org/CodeSystem/payment-type in valuesets.xml
        This value set includes sample Payment Type codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/payment-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/payment-type
 
       
 
 
-.. class:: PaymentTypeCodesCodeValues
+.. py:class:: PaymentTypeCodesCodeValues
 
    The amount is partial or complete settlement of the amounts due.
    From: http://terminology.hl7.org/CodeSystem/payment-type in valuesets.xml
 
-   .. attribute:: Payment
+   .. py:attribute:: Payment
       
 
       The amount is an adjustment regarding claims already paid.
       From: http://terminology.hl7.org/CodeSystem/payment-type in valuesets.xml
 
 
-   .. attribute:: Adjustment
+   .. py:attribute:: Adjustment
       
 
       The amount is an advance against future claims.
       From: http://terminology.hl7.org/CodeSystem/payment-type in valuesets.xml
 
 
-   .. attribute:: Advance
+   .. py:attribute:: Advance
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.messageheader_response_request`
-=======================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.messageheader_response_request`
+==========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.messageheader_response_request
 
@@ -17,49 +17,49 @@ Classes
 
 
 
-.. class:: Messageheader_response_requestCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: Messageheader_response_requestCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    messageheader-response-request
    From: http://hl7.org/fhir/messageheader-response-request in valuesets.xml
        HL7-defined table of codes which identify conditions under which
    acknowledgments are required to be returned in response to a message.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/messageheader-response-request
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/messageheader-response-request
 
       
 
 
-.. class:: Messageheader_response_requestCodeValues
+.. py:class:: Messageheader_response_requestCodeValues
 
    initiator expects a response for this message.
    From: http://hl7.org/fhir/messageheader-response-request in valuesets.xml
 
-   .. attribute:: Always
+   .. py:attribute:: Always
       
 
       initiator expects a response only if in error.
       From: http://hl7.org/fhir/messageheader-response-request in valuesets.xml
 
 
-   .. attribute:: Error_rejectConditionsOnly
+   .. py:attribute:: Error_rejectConditionsOnly
       
 
       initiator does not expect a response.
       From: http://hl7.org/fhir/messageheader-response-request in valuesets.xml
 
 
-   .. attribute:: Never
+   .. py:attribute:: Never
       
 
       initiator expects a response only if successful.
       From: http://hl7.org/fhir/messageheader-response-request in valuesets.xml
 
 
-   .. attribute:: SuccessfulCompletionOnly
+   .. py:attribute:: SuccessfulCompletionOnly
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.allergy_intolerance_severity`
-=====================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.allergy_intolerance_severity`
+========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.allergy_intolerance_severity
 
@@ -17,42 +17,42 @@ Classes
 
 
 
-.. class:: AllergyIntoleranceSeverityCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: AllergyIntoleranceSeverityCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    AllergyIntoleranceSeverity
    From: http://hl7.org/fhir/reaction-event-severity in valuesets.xml
        Clinical assessment of the severity of a reaction event as a whole,
    potentially considering multiple different manifestations.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/reaction-event-severity
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/reaction-event-severity
 
       
 
 
-.. class:: AllergyIntoleranceSeverityCodeValues
+.. py:class:: AllergyIntoleranceSeverityCodeValues
 
    Causes mild physiological effects.
    From: http://hl7.org/fhir/reaction-event-severity in valuesets.xml
 
-   .. attribute:: Mild
+   .. py:attribute:: Mild
       
 
       Causes moderate physiological effects.
       From: http://hl7.org/fhir/reaction-event-severity in valuesets.xml
 
 
-   .. attribute:: Moderate
+   .. py:attribute:: Moderate
       
 
       Causes severe physiological effects.
       From: http://hl7.org/fhir/reaction-event-severity in valuesets.xml
 
 
-   .. attribute:: Severe
+   .. py:attribute:: Severe
       
 
       

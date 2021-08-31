@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.extensions.us_core.birth_sex`
-==========================================================
+:py:mod:`spark_auto_mapper_fhir.extensions.us_core.birth_sex`
+=============================================================
 
 .. py:module:: spark_auto_mapper_fhir.extensions.us_core.birth_sex
 
@@ -16,14 +16,17 @@ Classes
 
 
 
-.. class:: BirthSex(url: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, valueCode: Optional[spark_auto_mapper_fhir.base_types.FhirValueSetBase.FhirValueSetBase] = None)
 
+.. py:class:: BirthSex(url = None, valueCode = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase`
 
    DO NOT USE DIRECTLY!  ALWAYS USE A SUB_CLASS.
 
-   .. method:: codeset(cls) -> spark_auto_mapper_fhir.fhir_types.uri.FhirUri
+
+   Extension type in FHIR
+
+   .. py:method:: codeset(cls)
 
 
 

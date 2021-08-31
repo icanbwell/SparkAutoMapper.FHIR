@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.trigger_type`
-=====================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.trigger_type`
+========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.trigger_type
 
@@ -17,29 +17,29 @@ Classes
 
 
 
-.. class:: TriggerTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: TriggerTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    TriggerType
    From: http://hl7.org/fhir/trigger-type in valuesets.xml
        The type of trigger.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/trigger-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/trigger-type
 
       
 
 
-.. class:: TriggerTypeCodeValues
+.. py:class:: TriggerTypeCodeValues
 
    The trigger occurs in response to a specific named event, and no other
    information about the trigger is specified. Named events are completely pre-
    coordinated, and the formal semantics of the trigger are not provided.
    From: http://hl7.org/fhir/trigger-type in valuesets.xml
 
-   .. attribute:: NamedEvent
+   .. py:attribute:: NamedEvent
       
 
       The trigger occurs at a specific time or periodically as described by a timing
@@ -48,7 +48,7 @@ Classes
       From: http://hl7.org/fhir/trigger-type in valuesets.xml
 
 
-   .. attribute:: Periodic
+   .. py:attribute:: Periodic
       
 
       The trigger occurs whenever data of a particular type is changed in any way,
@@ -56,21 +56,21 @@ Classes
       From: http://hl7.org/fhir/trigger-type in valuesets.xml
 
 
-   .. attribute:: DataChanged
+   .. py:attribute:: DataChanged
       
 
       The trigger occurs whenever data of a particular type is accessed.
       From: http://hl7.org/fhir/trigger-type in valuesets.xml
 
 
-   .. attribute:: DataAccessed
+   .. py:attribute:: DataAccessed
       
 
       The trigger occurs whenever access to data of a particular type is completed.
       From: http://hl7.org/fhir/trigger-type in valuesets.xml
 
 
-   .. attribute:: DataAccessEnded
+   .. py:attribute:: DataAccessEnded
       
 
       

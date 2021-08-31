@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.backbone_elements.contract_valued_item`
-====================================================================
+:py:mod:`spark_auto_mapper_fhir.backbone_elements.contract_valued_item`
+=======================================================================
 
 .. py:module:: spark_auto_mapper_fhir.backbone_elements.contract_valued_item
 
@@ -16,12 +16,62 @@ Classes
 
 
 
-.. class:: ContractValuedItem(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, entityCodeableConcept: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, entityReference: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.resource.Resource]] = None, identifier: Optional[spark_auto_mapper_fhir.complex_types.identifier.Identifier] = None, effectiveTime: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, quantity: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, unitPrice: Optional[spark_auto_mapper_fhir.complex_types.money.Money] = None, factor: Optional[spark_auto_mapper_fhir.fhir_types.decimal.FhirDecimal] = None, points: Optional[spark_auto_mapper_fhir.fhir_types.decimal.FhirDecimal] = None, net: Optional[spark_auto_mapper_fhir.complex_types.money.Money] = None, payment: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, paymentDate: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, responsible: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.organization.Organization, spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole, spark_auto_mapper_fhir.resources.related_person.RelatedPerson)]]] = None, recipient: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.organization.Organization, spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole, spark_auto_mapper_fhir.resources.related_person.RelatedPerson)]]] = None, linkId: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.string.FhirString]] = None, securityLabelNumber: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.unsigned_int.FhirUnsignedInt]] = None)
 
+.. py:class:: ContractValuedItem(*, id_ = None, extension = None, modifierExtension = None, entityCodeableConcept = None, entityReference = None, identifier = None, effectiveTime = None, quantity = None, unitPrice = None, factor = None, points = None, net = None, payment = None, paymentDate = None, responsible = None, recipient = None, linkId = None, securityLabelNumber = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
 
    Contract.ValuedItem
-   Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
+       Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
+
+       Legally enforceable, formally recorded unilateral or bilateral directive i.e.,
+   a policy or agreement.
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param modifierExtension: May be used to represent additional information that is not part of the basic
+   definition of the element and that modifies the understanding of the element
+   in which it is contained and/or the understanding of the containing element's
+   descendants. Usually modifier elements provide negation or qualification. To
+   make the use of extensions safe and manageable, there is a strict set of
+   governance applied to the definition and use of extensions. Though any
+   implementer can define an extension, there is a set of requirements that SHALL
+   be met as part of the definition of the extension. Applications processing a
+   resource are required to check for modifier extensions.
+
+   Modifier extensions SHALL NOT change the meaning of any elements on Resource
+   or DomainResource (including cannot change the meaning of modifierExtension
+   itself).
+       :param entityCodeableConcept: None
+       :param entityReference: None
+       :param identifier: Identifies a Contract Valued Item instance.
+       :param effectiveTime: Indicates the time during which this Contract ValuedItem information is
+   effective.
+       :param quantity: Specifies the units by which the Contract Valued Item is measured or counted,
+   and quantifies the countable or measurable Contract Valued Item instances.
+       :param unitPrice: A Contract Valued Item unit valuation measure.
+       :param factor: A real number that represents a multiplier used in determining the overall
+   value of the Contract Valued Item delivered. The concept of a Factor allows
+   for a discount or surcharge multiplier to be applied to a monetary amount.
+       :param points: An amount that expresses the weighting (based on difficulty, cost and/or
+   resource intensiveness) associated with the Contract Valued Item delivered.
+   The concept of Points allows for assignment of point values for a Contract
+   Valued Item, such that a monetary amount can be assigned to each point.
+       :param net: Expresses the product of the Contract Valued Item unitQuantity and the
+   unitPriceAmt. For example, the formula: unit Quantity * unit Price (Cost per
+   Point) * factor Number  * points = net Amount. Quantity, factor and points are
+   assumed to be 1 if not supplied.
+       :param payment: Terms of valuation.
+       :param paymentDate: When payment is due.
+       :param responsible: Who will make payment.
+       :param recipient: Who will receive payment.
+       :param linkId: Id  of the clause or question text related to the context of this valuedItem
+   in the referenced form or QuestionnaireResponse.
+       :param securityLabelNumber: A set of security labels that define which terms are controlled by this
+   condition.
 
 

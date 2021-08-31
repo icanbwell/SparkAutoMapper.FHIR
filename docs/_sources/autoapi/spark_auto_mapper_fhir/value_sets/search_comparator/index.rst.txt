@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.search_comparator`
-==========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.search_comparator`
+=============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.search_comparator
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: SearchComparatorCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SearchComparatorCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SearchComparator
    From: http://hl7.org/fhir/search-comparator in valuesets.xml
        What Search Comparator Codes are supported in search.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/search-comparator
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/search-comparator
 
       
 
 
-.. class:: SearchComparatorCodeValues
+.. py:class:: SearchComparatorCodeValues
 
    the value for the parameter in the resource is equal to the provided value.
    From: http://hl7.org/fhir/search-comparator in valuesets.xml
 
-   .. attribute:: Equals
+   .. py:attribute:: Equals
       
 
       the value for the parameter in the resource is not equal to the provided
@@ -45,7 +45,7 @@ Classes
       From: http://hl7.org/fhir/search-comparator in valuesets.xml
 
 
-   .. attribute:: NotEquals
+   .. py:attribute:: NotEquals
       
 
       the value for the parameter in the resource is greater than the provided
@@ -53,14 +53,14 @@ Classes
       From: http://hl7.org/fhir/search-comparator in valuesets.xml
 
 
-   .. attribute:: GreaterThan
+   .. py:attribute:: GreaterThan
       
 
       the value for the parameter in the resource is less than the provided value.
       From: http://hl7.org/fhir/search-comparator in valuesets.xml
 
 
-   .. attribute:: LessThan
+   .. py:attribute:: LessThan
       
 
       the value for the parameter in the resource is greater or equal to the
@@ -68,7 +68,7 @@ Classes
       From: http://hl7.org/fhir/search-comparator in valuesets.xml
 
 
-   .. attribute:: GreaterOrEquals
+   .. py:attribute:: GreaterOrEquals
       
 
       the value for the parameter in the resource is less or equal to the provided
@@ -76,21 +76,21 @@ Classes
       From: http://hl7.org/fhir/search-comparator in valuesets.xml
 
 
-   .. attribute:: LessOfEqual
+   .. py:attribute:: LessOfEqual
       
 
       the value for the parameter in the resource starts after the provided value.
       From: http://hl7.org/fhir/search-comparator in valuesets.xml
 
 
-   .. attribute:: StartsAfter
+   .. py:attribute:: StartsAfter
       
 
       the value for the parameter in the resource ends before the provided value.
       From: http://hl7.org/fhir/search-comparator in valuesets.xml
 
 
-   .. attribute:: EndsBefore
+   .. py:attribute:: EndsBefore
       
 
       the value for the parameter in the resource is approximately the same to the
@@ -98,7 +98,7 @@ Classes
       From: http://hl7.org/fhir/search-comparator in valuesets.xml
 
 
-   .. attribute:: Approximately
+   .. py:attribute:: Approximately
       
 
       

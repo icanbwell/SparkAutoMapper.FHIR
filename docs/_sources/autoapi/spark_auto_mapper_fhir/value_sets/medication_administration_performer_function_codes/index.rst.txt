@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.medication_administration_performer_function_codes`
-===========================================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.medication_administration_performer_function_codes`
+==============================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.medication_administration_performer_function_codes
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: MedicationAdministrationPerformerFunctionCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: MedicationAdministrationPerformerFunctionCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    MedicationAdministration Performer Function Codes
    From: http://terminology.hl7.org/CodeSystem/med-admin-perform-function in valuesets.xml
        MedicationAdministration Performer Function Codes
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/med-admin-perform-function
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/med-admin-perform-function
 
       
 
 
-.. class:: MedicationAdministrationPerformerFunctionCodesCodeValues
+.. py:class:: MedicationAdministrationPerformerFunctionCodesCodeValues
 
    A person, non-person living subject, organization or device that who actually
    and principally carries out the action
    From: http://terminology.hl7.org/CodeSystem/med-admin-perform-function in valuesets.xml
 
-   .. attribute:: Performer
+   .. py:attribute:: Performer
       
 
       A person who verifies the correctness and appropriateness of the service
@@ -46,7 +46,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/med-admin-perform-function in valuesets.xml
 
 
-   .. attribute:: Verifier
+   .. py:attribute:: Verifier
       
 
       A person witnessing the action happening without doing anything. A witness is
@@ -56,7 +56,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/med-admin-perform-function in valuesets.xml
 
 
-   .. attribute:: Witness
+   .. py:attribute:: Witness
       
 
       
