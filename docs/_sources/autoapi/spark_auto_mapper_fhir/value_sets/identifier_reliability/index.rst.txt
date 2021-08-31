@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.identifier_reliability`
-===============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.identifier_reliability`
+==================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.identifier_reliability
 
@@ -17,29 +17,29 @@ Classes
 
 
 
-.. class:: IdentifierReliability(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: IdentifierReliability(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.IdentifierReliability
    From: http://terminology.hl7.org/ValueSet/v3-IdentifierReliability in v3-codesystems.xml
         Specifies the reliability with which the identifier is known. This attribute
    MAY be used to assist with identifier matching algorithms.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-IdentifierReliability
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-IdentifierReliability
 
       
 
 
-.. class:: IdentifierReliabilityValues
+.. py:class:: IdentifierReliabilityValues
 
    Description: The identifier was issued by the system responsible for
    constructing the instance.
    From: http://terminology.hl7.org/CodeSystem/v3-IdentifierReliability in v3-codesystems.xml
 
-   .. attribute:: IssuedBySystem
+   .. py:attribute:: IssuedBySystem
       
 
       Description: The identifier was provided to the system that constructed the
@@ -48,7 +48,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-IdentifierReliability in v3-codesystems.xml
 
 
-   .. attribute:: UnverifiedBySystem
+   .. py:attribute:: UnverifiedBySystem
       
 
       Description: The identifier was not issued by the system responsible for
@@ -58,7 +58,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-IdentifierReliability in v3-codesystems.xml
 
 
-   .. attribute:: VerifiedBySystem
+   .. py:attribute:: VerifiedBySystem
       
 
       

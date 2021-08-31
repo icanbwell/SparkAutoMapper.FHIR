@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.generator`
-=======================================
+:py:mod:`spark_auto_mapper_fhir.generator`
+==========================================
 
 .. py:module:: spark_auto_mapper_fhir.generator
 

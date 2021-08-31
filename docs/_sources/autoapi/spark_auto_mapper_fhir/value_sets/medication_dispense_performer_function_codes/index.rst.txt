@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.medication_dispense_performer_function_codes`
-=====================================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.medication_dispense_performer_function_codes`
+========================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.medication_dispense_performer_function_codes
 
@@ -17,41 +17,41 @@ Classes
 
 
 
-.. class:: MedicationDispensePerformerFunctionCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: MedicationDispensePerformerFunctionCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    MedicationDispense Performer Function Codes
    From: http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function in valuesets.xml
        MedicationDispense Performer Function Codes
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function
 
       
 
 
-.. class:: MedicationDispensePerformerFunctionCodesCodeValues
+.. py:class:: MedicationDispensePerformerFunctionCodesCodeValues
 
    Recorded the details of the request
    From: http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function in valuesets.xml
 
-   .. attribute:: DataEnterer
+   .. py:attribute:: DataEnterer
       
 
       Prepared the medication.
       From: http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function in valuesets.xml
 
 
-   .. attribute:: Packager
+   .. py:attribute:: Packager
       
 
       Performed initial quality assurance on the prepared medication
       From: http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function in valuesets.xml
 
 
-   .. attribute:: Checker
+   .. py:attribute:: Checker
       
 
       Performed the final quality assurance on the prepared medication against the
@@ -59,7 +59,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function in valuesets.xml
 
 
-   .. attribute:: FinalChecker
+   .. py:attribute:: FinalChecker
       
 
       

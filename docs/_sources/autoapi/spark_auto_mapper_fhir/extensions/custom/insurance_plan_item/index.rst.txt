@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.extensions.custom.insurance_plan_item`
-===================================================================
+:py:mod:`spark_auto_mapper_fhir.extensions.custom.insurance_plan_item`
+======================================================================
 
 .. py:module:: spark_auto_mapper_fhir.extensions.custom.insurance_plan_item
 
@@ -16,14 +16,22 @@ Classes
 
 
 
-.. class:: InsurancePlanItemExtension(url: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, valueReference: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.insurance_plan.InsurancePlan]] = None)
 
+.. py:class:: InsurancePlanItemExtension(url = None, valueReference = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase`
 
    DO NOT USE DIRECTLY!  ALWAYS USE A SUB_CLASS.
 
-   .. method:: codeset(cls) -> spark_auto_mapper_fhir.fhir_types.uri.FhirUri
+
+   InsurancePlanItemExtension Extension type in FHIR
+   Used to define relationship between practitioner and insurance plan
+
+
+   :param url: Set to "plan" if not passed in
+   :param valueReference:
+
+   .. py:method:: codeset(cls)
 
       plan
       :return:

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.role_link_status`
-=========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.role_link_status`
+============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.role_link_status
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: RoleLinkStatus(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: RoleLinkStatus(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.RoleLinkStatus
    From: http://terminology.hl7.org/ValueSet/v3-RoleLinkStatus in v3-codesystems.xml
@@ -28,19 +28,19 @@ Classes
    Codes representing possible states of a RoleLink, as defined by the RoleLink
    class state machine.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-RoleLinkStatus
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-RoleLinkStatus
 
       
 
 
-.. class:: RoleLinkStatusValues
+.. py:class:: RoleLinkStatusValues
 
    Description: The 'typical' state. Excludes "nullified" which represents the
    termination state of a RoleLink instance that was created in error.
    From: http://terminology.hl7.org/CodeSystem/v3-RoleLinkStatus in v3-codesystems.xml
 
-   .. attribute:: Normal
+   .. py:attribute:: Normal
       
 
       Description: The state representing the termination of a RoleLink instance
@@ -48,7 +48,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-RoleLinkStatus in v3-codesystems.xml
 
 
-   .. attribute:: Nullified
+   .. py:attribute:: Nullified
       
 
       

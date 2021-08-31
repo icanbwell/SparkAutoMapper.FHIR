@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.backbone_elements.observation_definition_qualified_interval`
-=========================================================================================
+:py:mod:`spark_auto_mapper_fhir.backbone_elements.observation_definition_qualified_interval`
+============================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.backbone_elements.observation_definition_qualified_interval
 
@@ -16,12 +16,48 @@ Classes
 
 
 
-.. class:: ObservationDefinitionQualifiedInterval(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, category: Optional[spark_auto_mapper_fhir.value_sets.observation_range_category.ObservationRangeCategoryCode] = None, range: Optional[spark_auto_mapper_fhir.complex_types.range.Range] = None, context: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.observation_reference_range_meaning_codes.ObservationReferenceRangeMeaningCodesCode]] = None, appliesTo: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.observation_reference_range_applies_to_codes.ObservationReferenceRangeAppliesToCodesCode]]] = None, gender: Optional[spark_auto_mapper_fhir.value_sets.administrative_gender.AdministrativeGenderCode] = None, age: Optional[spark_auto_mapper_fhir.complex_types.range.Range] = None, gestationalAge: Optional[spark_auto_mapper_fhir.complex_types.range.Range] = None, condition: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None)
 
+.. py:class:: ObservationDefinitionQualifiedInterval(*, id_ = None, extension = None, modifierExtension = None, category = None, range = None, context = None, appliesTo = None, gender = None, age = None, gestationalAge = None, condition = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
 
    ObservationDefinition.QualifiedInterval
-   Set of definitional characteristics for a kind of observation or measurement produced or consumed by an orderable health care service.
+       Set of definitional characteristics for a kind of observation or measurement produced or consumed by an orderable health care service.
+
+       Set of definitional characteristics for a kind of observation or measurement
+   produced or consumed by an orderable health care service.
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param modifierExtension: May be used to represent additional information that is not part of the basic
+   definition of the element and that modifies the understanding of the element
+   in which it is contained and/or the understanding of the containing element's
+   descendants. Usually modifier elements provide negation or qualification. To
+   make the use of extensions safe and manageable, there is a strict set of
+   governance applied to the definition and use of extensions. Though any
+   implementer can define an extension, there is a set of requirements that SHALL
+   be met as part of the definition of the extension. Applications processing a
+   resource are required to check for modifier extensions.
+
+   Modifier extensions SHALL NOT change the meaning of any elements on Resource
+   or DomainResource (including cannot change the meaning of modifierExtension
+   itself).
+       :param category: The category of interval of values for continuous or ordinal observations
+   conforming to this ObservationDefinition.
+       :param range: The low and high values determining the interval. There may be only one of the
+   two.
+       :param context: Codes to indicate the health context the range applies to. For example, the
+   normal or therapeutic range.
+       :param appliesTo: Codes to indicate the target population this reference range applies to.
+       :param gender: Sex of the population the range applies to.
+       :param age: The age at which this reference range is applicable. This is a neonatal age
+   (e.g. number of weeks at term) if the meaning says so.
+       :param gestationalAge: The gestational age to which this reference range is applicable, in the
+   context of pregnancy.
+       :param condition: Text based condition for which the reference range is valid.
 
 

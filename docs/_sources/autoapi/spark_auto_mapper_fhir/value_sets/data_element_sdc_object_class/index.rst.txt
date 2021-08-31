@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.data_element_sdc_object_class`
-======================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.data_element_sdc_object_class`
+=========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.data_element_sdc_object_class
 
@@ -16,10 +16,10 @@ Classes
 
 
 
-.. class:: DataElementSDCObjectClassCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: DataElementSDCObjectClassCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    DataElementSDCObjectClass
    From: http://hl7.org/fhir/ValueSet/dataelement-sdcobjectclass in valuesets.xml
@@ -27,20 +27,20 @@ Classes
    data element if intended for registration/use within the U.S. Structured Data
    Capture (SDC) project.
 
-   .. attribute:: codeset_sct
-      :annotation: :FhirUri = http://snomed.info/sct
+   .. py:attribute:: codeset_sct
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://snomed.info/sct
 
       http://loinc.org
 
 
-   .. attribute:: codeset_loinc_org
-      :annotation: :FhirUri = http://loinc.org
+   .. py:attribute:: codeset_loinc_org
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://loinc.org
 
       http://www.nlm.nih.gov/research/umls/rxnorm
 
 
-   .. attribute:: codeset_rxnorm
-      :annotation: :FhirUri = http://www.nlm.nih.gov/research/umls/rxnorm
+   .. py:attribute:: codeset_rxnorm
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://www.nlm.nih.gov/research/umls/rxnorm
 
       
 

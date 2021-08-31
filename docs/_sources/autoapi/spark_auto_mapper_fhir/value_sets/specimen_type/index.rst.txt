@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.specimen_type`
-======================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.specimen_type`
+=========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.specimen_type
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: SpecimenType(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SpecimenType(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.SpecimenType
    From: http://terminology.hl7.org/ValueSet/v3-SpecimenType in v3-codesystems.xml
        **** MISSING DEFINITIONS ****
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-SpecimenType
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-SpecimenType
 
       
 
 
-.. class:: SpecimenTypeValues
+.. py:class:: SpecimenTypeValues
 
    SpecimenEntityType
    From: http://terminology.hl7.org/CodeSystem/v3-SpecimenType in v3-codesystems.xml
 
-   .. attribute:: SpecimenEntityType
+   .. py:attribute:: SpecimenEntityType
       
 
       

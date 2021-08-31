@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.action_type`
-====================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.action_type`
+=======================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.action_type
 
@@ -17,48 +17,48 @@ Classes
 
 
 
-.. class:: ActionTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ActionTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ActionType
    From: http://terminology.hl7.org/CodeSystem/action-type in valuesets.xml
        The type of action to be performed.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/action-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/action-type
 
       
 
 
-.. class:: ActionTypeCodeValues
+.. py:class:: ActionTypeCodeValues
 
    The action is to create a new resource.
    From: http://terminology.hl7.org/CodeSystem/action-type in valuesets.xml
 
-   .. attribute:: Create
+   .. py:attribute:: Create
       
 
       The action is to update an existing resource.
       From: http://terminology.hl7.org/CodeSystem/action-type in valuesets.xml
 
 
-   .. attribute:: Update
+   .. py:attribute:: Update
       
 
       The action is to remove an existing resource.
       From: http://terminology.hl7.org/CodeSystem/action-type in valuesets.xml
 
 
-   .. attribute:: Remove
+   .. py:attribute:: Remove
       
 
       The action is to fire a specific event.
       From: http://terminology.hl7.org/CodeSystem/action-type in valuesets.xml
 
 
-   .. attribute:: FireEvent
+   .. py:attribute:: FireEvent
       
 
       

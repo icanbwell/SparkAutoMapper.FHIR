@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.allergy_intolerance_substance_or__product__condition_and_negation_codes`
-================================================================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.allergy_intolerance_substance_or__product__condition_and_negation_codes`
+===================================================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.allergy_intolerance_substance_or__product__condition_and_negation_codes
 
@@ -16,10 +16,10 @@ Classes
 
 
 
-.. class:: AllergyIntoleranceSubstance_or_Product_ConditionAndNegationCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: AllergyIntoleranceSubstance_or_Product_ConditionAndNegationCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    AllergyIntoleranceSubstance/Product,ConditionAndNegationCodes
    From: http://hl7.org/fhir/ValueSet/allergyintolerance-code in valuesets.xml
@@ -27,8 +27,8 @@ Classes
    products, allergy or intolerance conditions, and negation/exclusion codes to
    specify the absence of specific types of allergies or intolerances.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://snomed.info/sct
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://snomed.info/sct
 
       
 

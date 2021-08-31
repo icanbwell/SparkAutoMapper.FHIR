@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.medication_request_status_reason_codes`
-===============================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.medication_request_status_reason_codes`
+==================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.medication_request_status_reason_codes
 
@@ -17,35 +17,35 @@ Classes
 
 
 
-.. class:: MedicationRequestStatusReasonCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: MedicationRequestStatusReasonCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    medicationRequest Status Reason Codes
    From: http://terminology.hl7.org/CodeSystem/medicationrequest-status-reason in valuesets.xml
        MedicationRequest Status Reason Codes
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/medicationrequest-status-reason
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/medicationrequest-status-reason
 
       
 
 
-.. class:: MedicationRequestStatusReasonCodesCodeValues
+.. py:class:: MedicationRequestStatusReasonCodesCodeValues
 
    This therapy has been ordered as a backup to a preferred therapy. This order
    will be released when and if the preferred therapy is unsuccessful.
    From: http://terminology.hl7.org/CodeSystem/medicationrequest-status-reason in valuesets.xml
 
-   .. attribute:: TryAnotherTreatmentFirst
+   .. py:attribute:: TryAnotherTreatmentFirst
       
 
       Clarification is required before the order can be acted upon.
       From: http://terminology.hl7.org/CodeSystem/medicationrequest-status-reason in valuesets.xml
 
 
-   .. attribute:: PrescriptionRequiresClarification
+   .. py:attribute:: PrescriptionRequiresClarification
       
 
       The current level of the medication in the patient's system is too high. The
@@ -53,7 +53,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/medicationrequest-status-reason in valuesets.xml
 
 
-   .. attribute:: DrugLevelTooHigh
+   .. py:attribute:: DrugLevelTooHigh
       
 
       The patient has been admitted to a care facility and their community
@@ -61,7 +61,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/medicationrequest-status-reason in valuesets.xml
 
 
-   .. attribute:: AdmissionToHospital
+   .. py:attribute:: AdmissionToHospital
       
 
       The therapy would interfere with a planned lab test and the therapy is being
@@ -69,7 +69,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/medicationrequest-status-reason in valuesets.xml
 
 
-   .. attribute:: LabInterferenceIssues
+   .. py:attribute:: LabInterferenceIssues
       
 
       Patient not available for a period of time due to a scheduled therapy, leave
@@ -77,7 +77,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/medicationrequest-status-reason in valuesets.xml
 
 
-   .. attribute:: PatientNotAvailable
+   .. py:attribute:: PatientNotAvailable
       
 
       The patient is pregnant or breast feeding. The therapy will be resumed when
@@ -85,7 +85,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/medicationrequest-status-reason in valuesets.xml
 
 
-   .. attribute:: ParentIsPregnant_breastFeeding
+   .. py:attribute:: ParentIsPregnant_breastFeeding
       
 
       The patient is believed to be allergic to a substance that is part of the
@@ -93,7 +93,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/medicationrequest-status-reason in valuesets.xml
 
 
-   .. attribute:: Allergy
+   .. py:attribute:: Allergy
       
 
       The drug interacts with a short-term treatment that is more urgently required.
@@ -101,7 +101,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/medicationrequest-status-reason in valuesets.xml
 
 
-   .. attribute:: DrugInteractsWithAnotherDrug
+   .. py:attribute:: DrugInteractsWithAnotherDrug
       
 
       The drug interacts with a short-term treatment that is more urgently required.
@@ -109,7 +109,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/medicationrequest-status-reason in valuesets.xml
 
 
-   .. attribute:: DuplicateTherapy
+   .. py:attribute:: DuplicateTherapy
       
 
       The drug interacts with a short-term treatment that is more urgently required.
@@ -117,7 +117,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/medicationrequest-status-reason in valuesets.xml
 
 
-   .. attribute:: SuspectedIntolerance
+   .. py:attribute:: SuspectedIntolerance
       
 
       The drug is contraindicated for patients receiving surgery and the patient is
@@ -126,7 +126,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/medicationrequest-status-reason in valuesets.xml
 
 
-   .. attribute:: PatientScheduledForSurgery_
+   .. py:attribute:: PatientScheduledForSurgery_
       
 
       The patient was previously receiving a medication contraindicated with the
@@ -135,7 +135,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/medicationrequest-status-reason in valuesets.xml
 
 
-   .. attribute:: WaitingForOldDrugToWashOut
+   .. py:attribute:: WaitingForOldDrugToWashOut
       
 
       

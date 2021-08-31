@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.canonical_status_codes_for_fhir_resources`
-==================================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.canonical_status_codes_for_fhir_resources`
+=====================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.canonical_status_codes_for_fhir_resources
 
@@ -17,30 +17,30 @@ Classes
 
 
 
-.. class:: CanonicalStatusCodesForFHIRResourcesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: CanonicalStatusCodesForFHIRResourcesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    Canonical Status Codes for FHIR Resources
    From: http://hl7.org/fhir/resource-status in valuesets.xml
        The master set of status codes used throughout FHIR. All status codes are
    mapped to one of these codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/resource-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/resource-status
 
       
 
 
-.. class:: CanonicalStatusCodesForFHIRResourcesCodeValues
+.. py:class:: CanonicalStatusCodesForFHIRResourcesCodeValues
 
    The resource was created in error, and should not be treated as valid (note:
    in many cases, for various data integrity related reasons, the information
    cannot be removed from the record)
    From: http://hl7.org/fhir/resource-status in valuesets.xml
 
-   .. attribute:: Error
+   .. py:attribute:: Error
       
 
       The resource describes an action or plan that is proposed, and not yet
@@ -48,7 +48,7 @@ Classes
       From: http://hl7.org/fhir/resource-status in valuesets.xml
 
 
-   .. attribute:: Proposed
+   .. py:attribute:: Proposed
       
 
       The resource describes a course of action that is planned and agreed/approved,
@@ -56,21 +56,21 @@ Classes
       From: http://hl7.org/fhir/resource-status in valuesets.xml
 
 
-   .. attribute:: Planned
+   .. py:attribute:: Planned
       
 
       The information in the resource is still being prepared and edited
       From: http://hl7.org/fhir/resource-status in valuesets.xml
 
 
-   .. attribute:: Draft
+   .. py:attribute:: Draft
       
 
       A fulfiller has been asked to perform this action, but it has not yet occurred
       From: http://hl7.org/fhir/resource-status in valuesets.xml
 
 
-   .. attribute:: Requested
+   .. py:attribute:: Requested
       
 
       The fulfiller has received the request, but not yet agreed to carry out the
@@ -78,14 +78,14 @@ Classes
       From: http://hl7.org/fhir/resource-status in valuesets.xml
 
 
-   .. attribute:: Received
+   .. py:attribute:: Received
       
 
       The fulfiller chose not to perform the action
       From: http://hl7.org/fhir/resource-status in valuesets.xml
 
 
-   .. attribute:: Declined
+   .. py:attribute:: Declined
       
 
       The fulfiller has decided to perform the action, and plans are in train to do
@@ -93,14 +93,14 @@ Classes
       From: http://hl7.org/fhir/resource-status in valuesets.xml
 
 
-   .. attribute:: Accepted
+   .. py:attribute:: Accepted
       
 
       The pre-conditions for the action are all fulfilled, and it is imminent
       From: http://hl7.org/fhir/resource-status in valuesets.xml
 
 
-   .. attribute:: Arrived
+   .. py:attribute:: Arrived
       
 
       The resource describes information that is currently valid or a process that
@@ -108,7 +108,7 @@ Classes
       From: http://hl7.org/fhir/resource-status in valuesets.xml
 
 
-   .. attribute:: Active
+   .. py:attribute:: Active
       
 
       The process described/requested in this resource has been halted for some
@@ -116,7 +116,7 @@ Classes
       From: http://hl7.org/fhir/resource-status in valuesets.xml
 
 
-   .. attribute:: Suspended
+   .. py:attribute:: Suspended
       
 
       The process described/requested in the resource could not be completed, and no
@@ -124,7 +124,7 @@ Classes
       From: http://hl7.org/fhir/resource-status in valuesets.xml
 
 
-   .. attribute:: Failed
+   .. py:attribute:: Failed
       
 
       The information in this resource has been replaced by information in another
@@ -132,7 +132,7 @@ Classes
       From: http://hl7.org/fhir/resource-status in valuesets.xml
 
 
-   .. attribute:: Replaced
+   .. py:attribute:: Replaced
       
 
       The process described/requested in the resource has been completed, and no
@@ -140,7 +140,7 @@ Classes
       From: http://hl7.org/fhir/resource-status in valuesets.xml
 
 
-   .. attribute:: Complete
+   .. py:attribute:: Complete
       
 
       The resource describes information that is no longer valid or a process that
@@ -148,7 +148,7 @@ Classes
       From: http://hl7.org/fhir/resource-status in valuesets.xml
 
 
-   .. attribute:: Inactive
+   .. py:attribute:: Inactive
       
 
       The process described/requested in the resource did not complete - usually due
@@ -156,111 +156,111 @@ Classes
       From: http://hl7.org/fhir/resource-status in valuesets.xml
 
 
-   .. attribute:: Abandoned
+   .. py:attribute:: Abandoned
       
 
       Authoring system does not know the status
       From: http://hl7.org/fhir/resource-status in valuesets.xml
 
 
-   .. attribute:: Unknown
+   .. py:attribute:: Unknown
       
 
       The information in this resource is not yet approved
       From: http://hl7.org/fhir/resource-status in valuesets.xml
 
 
-   .. attribute:: Unconfirmed
+   .. py:attribute:: Unconfirmed
       
 
       The information in this resource is approved
       From: http://hl7.org/fhir/resource-status in valuesets.xml
 
 
-   .. attribute:: Confirmed
+   .. py:attribute:: Confirmed
       
 
       The issue identified by this resource is no longer of concern
       From: http://hl7.org/fhir/resource-status in valuesets.xml
 
 
-   .. attribute:: Resolved
+   .. py:attribute:: Resolved
       
 
       This information has been ruled out by testing and evaluation
       From: http://hl7.org/fhir/resource-status in valuesets.xml
 
 
-   .. attribute:: Refuted
+   .. py:attribute:: Refuted
       
 
       Potentially true?
       From: http://hl7.org/fhir/resource-status in valuesets.xml
 
 
-   .. attribute:: Differential
+   .. py:attribute:: Differential
       
 
       This information is still being assembled
       From: http://hl7.org/fhir/resource-status in valuesets.xml
 
 
-   .. attribute:: Partial
+   .. py:attribute:: Partial
       
 
       not available at this time/location
       From: http://hl7.org/fhir/resource-status in valuesets.xml
 
 
-   .. attribute:: Busy_unavailable
+   .. py:attribute:: Busy_unavailable
       
 
       Free for scheduling
       From: http://hl7.org/fhir/resource-status in valuesets.xml
 
 
-   .. attribute:: Free
+   .. py:attribute:: Free
       
 
       Ready to act
       From: http://hl7.org/fhir/resource-status in valuesets.xml
 
 
-   .. attribute:: On_target
+   .. py:attribute:: On_target
       
 
       Ahead of the planned timelines
       From: http://hl7.org/fhir/resource-status in valuesets.xml
 
 
-   .. attribute:: Ahead_of_target
+   .. py:attribute:: Ahead_of_target
       
 
       From: http://hl7.org/fhir/resource-status in valuesets.xml
 
 
-   .. attribute:: Behind_target
+   .. py:attribute:: Behind_target
       
 
       Behind the planned timelines
       From: http://hl7.org/fhir/resource-status in valuesets.xml
 
 
-   .. attribute:: Not_ready
+   .. py:attribute:: Not_ready
       
 
       The device transducer is disconnected
       From: http://hl7.org/fhir/resource-status in valuesets.xml
 
 
-   .. attribute:: Transduc_discon
+   .. py:attribute:: Transduc_discon
       
 
       The hardware is disconnected
       From: http://hl7.org/fhir/resource-status in valuesets.xml
 
 
-   .. attribute:: Hw_discon
+   .. py:attribute:: Hw_discon
       
 
       

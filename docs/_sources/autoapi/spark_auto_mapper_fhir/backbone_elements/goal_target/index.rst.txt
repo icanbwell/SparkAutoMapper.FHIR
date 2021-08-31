@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.backbone_elements.goal_target`
-===========================================================
+:py:mod:`spark_auto_mapper_fhir.backbone_elements.goal_target`
+==============================================================
 
 .. py:module:: spark_auto_mapper_fhir.backbone_elements.goal_target
 
@@ -16,12 +16,47 @@ Classes
 
 
 
-.. class:: GoalTarget(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, measure: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.loinc_codes.LOINCCodesCode]] = None, detailQuantity: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, detailRange: Optional[spark_auto_mapper_fhir.complex_types.range.Range] = None, detailCodeableConcept: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, detailString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, detailBoolean: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, detailInteger: Optional[spark_auto_mapper_fhir.fhir_types.integer.FhirInteger] = None, detailRatio: Optional[spark_auto_mapper_fhir.complex_types.ratio.Ratio] = None, dueDate: Optional[spark_auto_mapper_fhir.fhir_types.date.FhirDate] = None, dueDuration: Optional[spark_auto_mapper_fhir.complex_types.duration.Duration] = None)
 
+.. py:class:: GoalTarget(*, id_ = None, extension = None, modifierExtension = None, measure = None, detailQuantity = None, detailRange = None, detailCodeableConcept = None, detailString = None, detailBoolean = None, detailInteger = None, detailRatio = None, dueDate = None, dueDuration = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
 
    Goal.Target
-   Describes the intended objective(s) for a patient, group or organization care, for example, weight loss, restoring an activity of daily living, obtaining herd immunity via immunization, meeting a process improvement objective, etc.
+       Describes the intended objective(s) for a patient, group or organization care, for example, weight loss, restoring an activity of daily living, obtaining herd immunity via immunization, meeting a process improvement objective, etc.
+
+       Describes the intended objective(s) for a patient, group or organization care,
+   for example, weight loss, restoring an activity of daily living, obtaining
+   herd immunity via immunization, meeting a process improvement objective, etc.
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param modifierExtension: May be used to represent additional information that is not part of the basic
+   definition of the element and that modifies the understanding of the element
+   in which it is contained and/or the understanding of the containing element's
+   descendants. Usually modifier elements provide negation or qualification. To
+   make the use of extensions safe and manageable, there is a strict set of
+   governance applied to the definition and use of extensions. Though any
+   implementer can define an extension, there is a set of requirements that SHALL
+   be met as part of the definition of the extension. Applications processing a
+   resource are required to check for modifier extensions.
+
+   Modifier extensions SHALL NOT change the meaning of any elements on Resource
+   or DomainResource (including cannot change the meaning of modifierExtension
+   itself).
+       :param measure: The parameter whose value is being tracked, e.g. body weight, blood pressure,
+   or hemoglobin A1c level.
+       :param detailQuantity: None
+       :param detailRange: None
+       :param detailCodeableConcept: None
+       :param detailString: None
+       :param detailBoolean: None
+       :param detailInteger: None
+       :param detailRatio: None
+       :param dueDate: None
+       :param dueDuration: None
 
 

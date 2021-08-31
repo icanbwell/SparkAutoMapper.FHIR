@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.compartment_type`
-=========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.compartment_type`
+============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.compartment_type
 
@@ -17,55 +17,55 @@ Classes
 
 
 
-.. class:: CompartmentTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: CompartmentTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    CompartmentType
    From: http://hl7.org/fhir/compartment-type in valuesets.xml
        Which type a compartment definition describes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/compartment-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/compartment-type
 
       
 
 
-.. class:: CompartmentTypeCodeValues
+.. py:class:: CompartmentTypeCodeValues
 
    The compartment definition is for the patient compartment.
    From: http://hl7.org/fhir/compartment-type in valuesets.xml
 
-   .. attribute:: Patient
+   .. py:attribute:: Patient
       
 
       The compartment definition is for the encounter compartment.
       From: http://hl7.org/fhir/compartment-type in valuesets.xml
 
 
-   .. attribute:: Encounter
+   .. py:attribute:: Encounter
       
 
       The compartment definition is for the related-person compartment.
       From: http://hl7.org/fhir/compartment-type in valuesets.xml
 
 
-   .. attribute:: RelatedPerson
+   .. py:attribute:: RelatedPerson
       
 
       The compartment definition is for the practitioner compartment.
       From: http://hl7.org/fhir/compartment-type in valuesets.xml
 
 
-   .. attribute:: Practitioner
+   .. py:attribute:: Practitioner
       
 
       The compartment definition is for the device compartment.
       From: http://hl7.org/fhir/compartment-type in valuesets.xml
 
 
-   .. attribute:: Device
+   .. py:attribute:: Device
       
 
       

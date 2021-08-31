@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.resource_version_policy`
-================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.resource_version_policy`
+===================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.resource_version_policy
 
@@ -17,34 +17,34 @@ Classes
 
 
 
-.. class:: ResourceVersionPolicyCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ResourceVersionPolicyCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ResourceVersionPolicy
    From: http://hl7.org/fhir/versioning-policy in valuesets.xml
        How the system supports versioning for a resource.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/versioning-policy
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/versioning-policy
 
       
 
 
-.. class:: ResourceVersionPolicyCodeValues
+.. py:class:: ResourceVersionPolicyCodeValues
 
    VersionId meta-property is not supported (server) or used (client).
    From: http://hl7.org/fhir/versioning-policy in valuesets.xml
 
-   .. attribute:: NoVersionIdSupport
+   .. py:attribute:: NoVersionIdSupport
       
 
       VersionId meta-property is supported (server) or used (client).
       From: http://hl7.org/fhir/versioning-policy in valuesets.xml
 
 
-   .. attribute:: Versioned
+   .. py:attribute:: Versioned
       
 
       VersionId must be correct for updates (server) or will be specified (If-match
@@ -52,7 +52,7 @@ Classes
       From: http://hl7.org/fhir/versioning-policy in valuesets.xml
 
 
-   .. attribute:: VersionIdTrackedFully
+   .. py:attribute:: VersionIdTrackedFully
       
 
       

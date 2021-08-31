@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.backbone_elements.medicinal_product_pharmaceutical_route_of_administration`
-========================================================================================================
+:py:mod:`spark_auto_mapper_fhir.backbone_elements.medicinal_product_pharmaceutical_route_of_administration`
+===========================================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.backbone_elements.medicinal_product_pharmaceutical_route_of_administration
 
@@ -16,12 +16,50 @@ Classes
 
 
 
-.. class:: MedicinalProductPharmaceuticalRouteOfAdministration(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, code: spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode], firstDose: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, maxSingleDose: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, maxDosePerDay: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, maxDosePerTreatmentPeriod: Optional[spark_auto_mapper_fhir.complex_types.ratio.Ratio] = None, maxTreatmentPeriod: Optional[spark_auto_mapper_fhir.complex_types.duration.Duration] = None, targetSpecies: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.medicinal_product_pharmaceutical_target_species.MedicinalProductPharmaceuticalTargetSpecies]] = None)
 
+.. py:class:: MedicinalProductPharmaceuticalRouteOfAdministration(*, id_ = None, extension = None, modifierExtension = None, code, firstDose = None, maxSingleDose = None, maxDosePerDay = None, maxDosePerTreatmentPeriod = None, maxTreatmentPeriod = None, targetSpecies = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
 
    MedicinalProductPharmaceutical.RouteOfAdministration
-   A pharmaceutical product described in terms of its composition and dose form.
+       A pharmaceutical product described in terms of its composition and dose form.
+
+       A pharmaceutical product described in terms of its composition and dose form.
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param modifierExtension: May be used to represent additional information that is not part of the basic
+   definition of the element and that modifies the understanding of the element
+   in which it is contained and/or the understanding of the containing element's
+   descendants. Usually modifier elements provide negation or qualification. To
+   make the use of extensions safe and manageable, there is a strict set of
+   governance applied to the definition and use of extensions. Though any
+   implementer can define an extension, there is a set of requirements that SHALL
+   be met as part of the definition of the extension. Applications processing a
+   resource are required to check for modifier extensions.
+
+   Modifier extensions SHALL NOT change the meaning of any elements on Resource
+   or DomainResource (including cannot change the meaning of modifierExtension
+   itself).
+       :param code: Coded expression for the route.
+       :param firstDose: The first dose (dose quantity) administered in humans can be specified, for a
+   product under investigation, using a numerical value and its unit of
+   measurement.
+       :param maxSingleDose: The maximum single dose that can be administered as per the protocol of a
+   clinical trial can be specified using a numerical value and its unit of
+   measurement.
+       :param maxDosePerDay: The maximum dose per day (maximum dose quantity to be administered in any one
+   24-h period) that can be administered as per the protocol referenced in the
+   clinical trial authorisation.
+       :param maxDosePerTreatmentPeriod: The maximum dose per treatment period that can be administered as per the
+   protocol referenced in the clinical trial authorisation.
+       :param maxTreatmentPeriod: The maximum treatment period during which an Investigational Medicinal Product
+   can be administered as per the protocol referenced in the clinical trial
+   authorisation.
+       :param targetSpecies: A species for which this route applies.
 
 

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.iso3166_1_3`
-====================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.iso3166_1_3`
+=======================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.iso3166_1_3
 
@@ -16,17 +16,17 @@ Classes
 
 
 
-.. class:: Iso3166_1_3Code(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: Iso3166_1_3Code(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    Iso3166-1-3
    From: http://hl7.org/fhir/ValueSet/iso3166-1-3 in valuesets.xml
        This value set defines the ISO 3166 Part 1 3-letter codes
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = urn:iso:std:iso:3166
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = urn:iso:std:iso:3166
 
       
 

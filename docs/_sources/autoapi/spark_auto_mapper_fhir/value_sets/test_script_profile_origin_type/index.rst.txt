@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.test_script_profile_origin_type`
-========================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.test_script_profile_origin_type`
+===========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.test_script_profile_origin_type
 
@@ -17,35 +17,35 @@ Classes
 
 
 
-.. class:: TestScriptProfileOriginTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: TestScriptProfileOriginTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    TestScriptProfileOriginType
    From: http://terminology.hl7.org/CodeSystem/testscript-profile-origin-types in valuesets.xml
        This value set defines a set of codes that are used to indicate the profile
    type of a test system when acting as the origin within a TestScript.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/testscript-profile-origin-types
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/testscript-profile-origin-types
 
       
 
 
-.. class:: TestScriptProfileOriginTypeCodeValues
+.. py:class:: TestScriptProfileOriginTypeCodeValues
 
    General FHIR client used to initiate operations against a FHIR server.
    From: http://terminology.hl7.org/CodeSystem/testscript-profile-origin-types in valuesets.xml
 
-   .. attribute:: FHIRClient
+   .. py:attribute:: FHIRClient
       
 
       A FHIR client acting as a Structured Data Capture Form Filler.
       From: http://terminology.hl7.org/CodeSystem/testscript-profile-origin-types in valuesets.xml
 
 
-   .. attribute:: FHIRSDCFormFiller
+   .. py:attribute:: FHIRSDCFormFiller
       
 
       

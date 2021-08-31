@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.hl7_workgroup`
-======================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.hl7_workgroup`
+=========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.hl7_workgroup
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: HL7WorkgroupCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: HL7WorkgroupCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    HL7Workgroup
    From: http://terminology.hl7.org/CodeSystem/hl7-work-group in valuesets.xml
        An HL7 administrative unit that owns artifacts in the FHIR specification.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/hl7-work-group
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/hl7-work-group
 
       
 
 
-.. class:: HL7WorkgroupCodeValues
+.. py:class:: HL7WorkgroupCodeValues
 
    Community Based Collaborative Care
    (http://www.hl7.org/Special/committees/cbcc/index.cfm).
    From: http://terminology.hl7.org/CodeSystem/hl7-work-group in valuesets.xml
 
-   .. attribute:: CommunityBasedCollaborativeCare
+   .. py:attribute:: CommunityBasedCollaborativeCare
       
 
       Clinical Decision Support
@@ -46,7 +46,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/hl7-work-group in valuesets.xml
 
 
-   .. attribute:: ClinicalDecisionSupport
+   .. py:attribute:: ClinicalDecisionSupport
       
 
       Clinical Quality Information
@@ -54,7 +54,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/hl7-work-group in valuesets.xml
 
 
-   .. attribute:: ClinicalQualityInformation
+   .. py:attribute:: ClinicalQualityInformation
       
 
       Clinical Genomics
@@ -62,7 +62,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/hl7-work-group in valuesets.xml
 
 
-   .. attribute:: ClinicalGenomics
+   .. py:attribute:: ClinicalGenomics
       
 
       Health Care Devices
@@ -70,7 +70,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/hl7-work-group in valuesets.xml
 
 
-   .. attribute:: HealthCareDevices
+   .. py:attribute:: HealthCareDevices
       
 
       Electronic Health Records
@@ -78,21 +78,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/hl7-work-group in valuesets.xml
 
 
-   .. attribute:: ElectronicHealthRecords
+   .. py:attribute:: ElectronicHealthRecords
       
 
       FHIR Infrastructure (http://www.hl7.org/Special/committees/fiwg/index.cfm).
       From: http://terminology.hl7.org/CodeSystem/hl7-work-group in valuesets.xml
 
 
-   .. attribute:: FHIRInfrastructure
+   .. py:attribute:: FHIRInfrastructure
       
 
       Financial Management (http://www.hl7.org/Special/committees/fm/index.cfm).
       From: http://terminology.hl7.org/CodeSystem/hl7-work-group in valuesets.xml
 
 
-   .. attribute:: FinancialManagement
+   .. py:attribute:: FinancialManagement
       
 
       Health Standards Integration
@@ -100,7 +100,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/hl7-work-group in valuesets.xml
 
 
-   .. attribute:: HealthStandardsIntegration
+   .. py:attribute:: HealthStandardsIntegration
       
 
       Imaging Integration
@@ -108,7 +108,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/hl7-work-group in valuesets.xml
 
 
-   .. attribute:: ImagingIntegration
+   .. py:attribute:: ImagingIntegration
       
 
       Infrastructure And Messaging
@@ -116,7 +116,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/hl7-work-group in valuesets.xml
 
 
-   .. attribute:: InfrastructureAndMessaging
+   .. py:attribute:: InfrastructureAndMessaging
       
 
       Implementable Technology Specifications
@@ -124,7 +124,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/hl7-work-group in valuesets.xml
 
 
-   .. attribute:: ImplementableTechnologySpecifications
+   .. py:attribute:: ImplementableTechnologySpecifications
       
 
       Modeling and Methodology
@@ -132,7 +132,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/hl7-work-group in valuesets.xml
 
 
-   .. attribute:: ModelingAndMethodology
+   .. py:attribute:: ModelingAndMethodology
       
 
       Orders and Observations
@@ -140,21 +140,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/hl7-work-group in valuesets.xml
 
 
-   .. attribute:: OrdersAndObservations
+   .. py:attribute:: OrdersAndObservations
       
 
       Patient Administration (http://www.hl7.org/Special/committees/pafm/index.cfm).
       From: http://terminology.hl7.org/CodeSystem/hl7-work-group in valuesets.xml
 
 
-   .. attribute:: PatientAdministration
+   .. py:attribute:: PatientAdministration
       
 
       Patient Care (http://www.hl7.org/Special/committees/patientcare/index.cfm).
       From: http://terminology.hl7.org/CodeSystem/hl7-work-group in valuesets.xml
 
 
-   .. attribute:: PatientCare
+   .. py:attribute:: PatientCare
       
 
       Public Health and Emergency Response
@@ -162,14 +162,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/hl7-work-group in valuesets.xml
 
 
-   .. attribute:: PublicHealthAndEmergencyResponse
+   .. py:attribute:: PublicHealthAndEmergencyResponse
       
 
       Pharmacy (http://www.hl7.org/Special/committees/medication/index.cfm).
       From: http://terminology.hl7.org/CodeSystem/hl7-work-group in valuesets.xml
 
 
-   .. attribute:: Pharmacy
+   .. py:attribute:: Pharmacy
       
 
       Biomedical Research and Regulation
@@ -177,7 +177,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/hl7-work-group in valuesets.xml
 
 
-   .. attribute:: BiomedicalResearchAndRegulation
+   .. py:attribute:: BiomedicalResearchAndRegulation
       
 
       Structured Documents
@@ -185,28 +185,28 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/hl7-work-group in valuesets.xml
 
 
-   .. attribute:: StructuredDocuments
+   .. py:attribute:: StructuredDocuments
       
 
       Security (http://www.hl7.org/Special/committees/secure/index.cfm).
       From: http://terminology.hl7.org/CodeSystem/hl7-work-group in valuesets.xml
 
 
-   .. attribute:: Security
+   .. py:attribute:: Security
       
 
       US Realm Taskforce (http://www.hl7.org/Special/committees/usrealm/index.cfm).
       From: http://terminology.hl7.org/CodeSystem/hl7-work-group in valuesets.xml
 
 
-   .. attribute:: USRealmTaskforce
+   .. py:attribute:: USRealmTaskforce
       
 
       Vocabulary (http://www.hl7.org/Special/committees/Vocab/index.cfm).
       From: http://terminology.hl7.org/CodeSystem/hl7-work-group in valuesets.xml
 
 
-   .. attribute:: Vocabulary
+   .. py:attribute:: Vocabulary
       
 
       Application Implementation and Design
@@ -214,7 +214,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/hl7-work-group in valuesets.xml
 
 
-   .. attribute:: ApplicationImplementationAndDesign
+   .. py:attribute:: ApplicationImplementationAndDesign
       
 
       

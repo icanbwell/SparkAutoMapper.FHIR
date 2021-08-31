@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.complex_types.resource_container`
-==============================================================
+:py:mod:`spark_auto_mapper_fhir.complex_types.resource_container`
+=================================================================
 
 .. py:module:: spark_auto_mapper_fhir.complex_types.resource_container
 
@@ -16,12 +16,22 @@ Classes
 
 
 
-.. class:: ResourceContainer(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None)
+
+.. py:class:: ResourceContainer(*, id_ = None, meta = None)
+
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+
+   Base class for all Automapper data types
+
+   Resource Resource in FHIR
+   IMPORTANT: To comply with the Spark mapping mechanism, please make sure you add all existing FHIR
+               properties not just the ones you need
 
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
 
-   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+   :param id_: id of resource
+
+   .. py:method:: get_schema(self, include_extension)
 
 
 

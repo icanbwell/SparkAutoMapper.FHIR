@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.consent_policy_rule_codes`
-==================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.consent_policy_rule_codes`
+=====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.consent_policy_rule_codes
 
@@ -17,30 +17,30 @@ Classes
 
 
 
-.. class:: ConsentPolicyRuleCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ConsentPolicyRuleCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ConsentPolicyRuleCodes
    From: http://terminology.hl7.org/CodeSystem/consentpolicycodes in valuesets.xml
        This value set includes sample Regulatory consent policy types from the US and
    other regions.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/consentpolicycodes
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/consentpolicycodes
 
       
 
 
-.. class:: ConsentPolicyRuleCodesCodeValues
+.. py:class:: ConsentPolicyRuleCodesCodeValues
 
    45 CFR part 46 §46.116 General requirements for informed consent; and §46.117
    Documentation of informed consent.
    https://www.gpo.gov/fdsys/pkg/FR-2017-01-19/pdf/2017-01058.pdf
    From: http://terminology.hl7.org/CodeSystem/consentpolicycodes in valuesets.xml
 
-   .. attribute:: CommonRuleInformedConsent
+   .. py:attribute:: CommonRuleInformedConsent
       
 
       The consent to the performance of a medical or surgical procedure by a
@@ -59,7 +59,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/consentpolicycodes in valuesets.xml
 
 
-   .. attribute:: IllinoisConsentByMinorsToMedicalProcedures
+   .. py:attribute:: IllinoisConsentByMinorsToMedicalProcedures
       
 
       HIPAA 45 CFR Section 164.508 Uses and disclosures for which an authorization
@@ -75,7 +75,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/consentpolicycodes in valuesets.xml
 
 
-   .. attribute:: HIPAAAuthorization
+   .. py:attribute:: HIPAAAuthorization
       
 
       164.520  Notice of privacy practices for protected health information. (1)
@@ -89,7 +89,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/consentpolicycodes in valuesets.xml
 
 
-   .. attribute:: HIPAANoticeOfPrivacyPractices
+   .. py:attribute:: HIPAANoticeOfPrivacyPractices
       
 
       HIPAA 45 CFR 164.510 - Uses and disclosures requiring an opportunity for the
@@ -105,7 +105,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/consentpolicycodes in valuesets.xml
 
 
-   .. attribute:: HIPAARestrictions
+   .. py:attribute:: HIPAARestrictions
       
 
       HIPAA 45 CFR 164.508 - Uses and disclosures for which an authorization is
@@ -132,7 +132,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/consentpolicycodes in valuesets.xml
 
 
-   .. attribute:: HIPAAResearchAuthorization
+   .. py:attribute:: HIPAAResearchAuthorization
       
 
       HIPAA 45 CFR 164.522(a) Right To Request a Restriction of Uses and
@@ -150,7 +150,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/consentpolicycodes in valuesets.xml
 
 
-   .. attribute:: HIPAASelf_PayRestriction
+   .. py:attribute:: HIPAASelf_PayRestriction
       
 
       On January 1, 2015, the Michigan Department of Health and Human Services
@@ -165,7 +165,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/consentpolicycodes in valuesets.xml
 
 
-   .. attribute:: MichiganMDHHS_5515ConsentToShareBehavioralHealthInformationForCareCoordinationPurposes
+   .. py:attribute:: MichiganMDHHS_5515ConsentToShareBehavioralHealthInformationForCareCoordinationPurposes
       
 
       The New York State Surgical and Invasive Procedure Protocol (NYSSIPP) applies
@@ -184,7 +184,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/consentpolicycodes in valuesets.xml
 
 
-   .. attribute:: NewYorkStateSurgicalAndInvasiveProcedureProtocol
+   .. py:attribute:: NewYorkStateSurgicalAndInvasiveProcedureProtocol
       
 
       VA Form 10-0484 Revocation for Release of Individually-Identifiable Health
@@ -197,7 +197,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/consentpolicycodes in valuesets.xml
 
 
-   .. attribute:: VAForm10_0484
+   .. py:attribute:: VAForm10_0484
       
 
       VA Form 10-0485 Request for and Authorization to Release Protected Health
@@ -216,7 +216,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/consentpolicycodes in valuesets.xml
 
 
-   .. attribute:: VAForm10_0485
+   .. py:attribute:: VAForm10_0485
       
 
       VA Form 10-5345 Request for and Authorization to Release Medical Records or
@@ -230,7 +230,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/consentpolicycodes in valuesets.xml
 
 
-   .. attribute:: VAForm10_5345
+   .. py:attribute:: VAForm10_5345
       
 
       VA Form 10-5345a Individuals' Request for a Copy of Their Own Health
@@ -241,7 +241,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/consentpolicycodes in valuesets.xml
 
 
-   .. attribute:: VAForm10_5345a
+   .. py:attribute:: VAForm10_5345a
       
 
       VA Form 10-5345a-MHV Individual's Request for a Copy of their own health
@@ -252,7 +252,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/consentpolicycodes in valuesets.xml
 
 
-   .. attribute:: VAForm10_5345a_MHV
+   .. py:attribute:: VAForm10_5345a_MHV
       
 
       VA Form 10-10116 Revocation of Authorization for Use and Release of
@@ -263,7 +263,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/consentpolicycodes in valuesets.xml
 
 
-   .. attribute:: VAForm10_10_10116
+   .. py:attribute:: VAForm10_10_10116
       
 
       VA Form 21-4142 (Authorization and Consent to Release Information to the
@@ -276,7 +276,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/consentpolicycodes in valuesets.xml
 
 
-   .. attribute:: VAForm21_4142
+   .. py:attribute:: VAForm21_4142
       
 
       SA Form SSA-827 (Authorization to Disclose Information to the Social Security
@@ -285,7 +285,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/consentpolicycodes in valuesets.xml
 
 
-   .. attribute:: SSAAuthorizationToDisclose
+   .. py:attribute:: SSAAuthorizationToDisclose
       
 
       Michigan DCH-3927 Consent to Share Behavioral Health Information for Care
@@ -295,7 +295,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/consentpolicycodes in valuesets.xml
 
 
-   .. attribute:: MichiganBehaviorAndMentalHealthConsent
+   .. py:attribute:: MichiganBehaviorAndMentalHealthConsent
       
 
       Squaxin Indian HIPAA and 42 CFR Part 2 Consent for Release and Exchange of
@@ -308,7 +308,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/consentpolicycodes in valuesets.xml
 
 
-   .. attribute:: SquaxinIndianBehavioralHealthAndHIPAAConsent
+   .. py:attribute:: SquaxinIndianBehavioralHealthAndHIPAAConsent
       
 
       LSP (National Exchange Point) requires that providers, hospitals and pharmacy
@@ -323,7 +323,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/consentpolicycodes in valuesets.xml
 
 
-   .. attribute:: NLLSPPermission
+   .. py:attribute:: NLLSPPermission
       
 
       Pursuant to Sec. 2 no. 9 Health Telematics Act 2012, ELGA Health Data ( “ELGA-
@@ -339,7 +339,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/consentpolicycodes in valuesets.xml
 
 
-   .. attribute:: ATELGAOpt_inConsent
+   .. py:attribute:: ATELGAOpt_inConsent
       
 
       Guidance and template form
@@ -347,7 +347,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/consentpolicycodes in valuesets.xml
 
 
-   .. attribute:: HHSNIHHIPAAResearchAuthorization
+   .. py:attribute:: HHSNIHHIPAAResearchAuthorization
       
 
       see
@@ -355,7 +355,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/consentpolicycodes in valuesets.xml
 
 
-   .. attribute:: NCICancerClinicalTrialConsent
+   .. py:attribute:: NCICancerClinicalTrialConsent
       
 
       Global Rare Disease Patient Registry and Data Repository (GRDR) consent is an
@@ -368,7 +368,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/consentpolicycodes in valuesets.xml
 
 
-   .. attribute:: NIHGlobalRareDiseasePatientRegistryAndDataRepositoryConsent
+   .. py:attribute:: NIHGlobalRareDiseasePatientRegistryAndDataRepositoryConsent
       
 
       NIH Authorization for the Release of Medical Information is a patient’s
@@ -378,7 +378,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/consentpolicycodes in valuesets.xml
 
 
-   .. attribute:: NIHAuthorizationForTheReleaseOfMedicalInformation
+   .. py:attribute:: NIHAuthorizationForTheReleaseOfMedicalInformation
       
 
       Global Alliance for Genomic Health Data Sharing Consent Form is an example of
@@ -391,7 +391,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/consentpolicycodes in valuesets.xml
 
 
-   .. attribute:: PopulationOriginsAndAncestryResearchConsent
+   .. py:attribute:: PopulationOriginsAndAncestryResearchConsent
       
 
       

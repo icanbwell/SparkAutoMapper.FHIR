@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.condition_clinical_status_codes`
-========================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.condition_clinical_status_codes`
+===========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.condition_clinical_status_codes
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: ConditionClinicalStatusCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ConditionClinicalStatusCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ConditionClinicalStatusCodes
    From: http://terminology.hl7.org/CodeSystem/condition-clinical in valuesets.xml
        Preferred value set for Condition Clinical Status.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/condition-clinical
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/condition-clinical
 
       
 
 
-.. class:: ConditionClinicalStatusCodesCodeValues
+.. py:class:: ConditionClinicalStatusCodesCodeValues
 
    The subject is currently experiencing the symptoms of the condition or there
    is evidence of the condition.
    From: http://terminology.hl7.org/CodeSystem/condition-clinical in valuesets.xml
 
-   .. attribute:: Active
+   .. py:attribute:: Active
       
 
       The subject is no longer experiencing the symptoms of the condition or there
@@ -46,7 +46,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/condition-clinical in valuesets.xml
 
 
-   .. attribute:: Inactive
+   .. py:attribute:: Inactive
       
 
       

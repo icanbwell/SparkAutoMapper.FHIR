@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.allergy_intolerance_certainty`
-======================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.allergy_intolerance_certainty`
+=========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.allergy_intolerance_certainty
 
@@ -17,29 +17,29 @@ Classes
 
 
 
-.. class:: AllergyIntoleranceCertaintyCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: AllergyIntoleranceCertaintyCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    AllergyIntoleranceCertainty
    From: http://terminology.hl7.org/CodeSystem/reaction-event-certainty in valuesets.xml
        Statement about the degree of clinical certainty that a specific substance was
    the cause of the manifestation in a reaction event.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/reaction-event-certainty
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/reaction-event-certainty
 
       
 
 
-.. class:: AllergyIntoleranceCertaintyCodeValues
+.. py:class:: AllergyIntoleranceCertaintyCodeValues
 
    There is a low level of clinical certainty that the reaction was caused by the
    identified substance.
    From: http://terminology.hl7.org/CodeSystem/reaction-event-certainty in valuesets.xml
 
-   .. attribute:: Unlikely
+   .. py:attribute:: Unlikely
       
 
       There is a high level of clinical certainty that the reaction was caused by
@@ -47,7 +47,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/reaction-event-certainty in valuesets.xml
 
 
-   .. attribute:: Likely
+   .. py:attribute:: Likely
       
 
       There is a very high level of clinical certainty that the reaction was due to
@@ -56,7 +56,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/reaction-event-certainty in valuesets.xml
 
 
-   .. attribute:: Confirmed
+   .. py:attribute:: Confirmed
       
 
       The clinical certainty that the reaction was caused by the identified
@@ -65,7 +65,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/reaction-event-certainty in valuesets.xml
 
 
-   .. attribute:: Unknown
+   .. py:attribute:: Unknown
       
 
       

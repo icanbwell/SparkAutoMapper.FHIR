@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.operation_outcome_codes`
-================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.operation_outcome_codes`
+===================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.operation_outcome_codes
 
@@ -17,321 +17,321 @@ Classes
 
 
 
-.. class:: OperationOutcomeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: OperationOutcomeCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    OperationOutcomeCodes
    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
        Operation Outcome codes used by FHIR test servers (see Implementation file
    translations.xml)
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/operation-outcome
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/operation-outcome
 
       
 
 
-.. class:: OperationOutcomeCodesCodeValues
+.. py:class:: OperationOutcomeCodesCodeValues
 
    From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
-   .. attribute:: Error_MultipleMatchesExistForTheConditionalDelete
+   .. py:attribute:: Error_MultipleMatchesExistForTheConditionalDelete
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: YouMustAuthenticateBeforeYouCanUseThisService
+   .. py:attribute:: YouMustAuthenticateBeforeYouCanUseThisService
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: BadSyntax_s_MustBeA_s_
+   .. py:attribute:: BadSyntax_s_MustBeA_s_
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: BadSyntaxIn_s
+   .. py:attribute:: BadSyntaxIn_s
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: UnableToParseFeed_entryContentType_s_
+   .. py:attribute:: UnableToParseFeed_entryContentType_s_
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: UnableToParseFeed_rootElementName_s_
+   .. py:attribute:: UnableToParseFeed_rootElementName_s_
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: NewResourceCreated
+   .. py:attribute:: NewResourceCreated
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: TheDateValue_sIsNotInTheCorrectFormat_XmlDateFormatRequired_
+   .. py:attribute:: TheDateValue_sIsNotInTheCorrectFormat_XmlDateFormatRequired_
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: ThisResourceHasBeenDeleted
+   .. py:attribute:: ThisResourceHasBeenDeleted
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: ResourceDeleted
+   .. py:attribute:: ResourceDeleted
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: TheResource_s_HasBeenDeleted
+   .. py:attribute:: TheResource_s_HasBeenDeleted
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: DuplicateId_sForResourceType_s
+   .. py:attribute:: DuplicateId_sForResourceType_s
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: ErrorParsingResourceXml_s_
+   .. py:attribute:: ErrorParsingResourceXml_s_
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: Id_s_HasAnInvalidCharacter_s_
+   .. py:attribute:: Id_s_HasAnInvalidCharacter_s_
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: Id_s_TooLong_lengthLimit36_
+   .. py:attribute:: Id_s_TooLong_lengthLimit36_
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: IdNotAccepted
+   .. py:attribute:: IdNotAccepted
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: JsonSourceForAResourceShouldStartWithAnObject
+   .. py:attribute:: JsonSourceForAResourceShouldStartWithAnObject
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: UnableToResolveLocalReferenceToResource_s
+   .. py:attribute:: UnableToResolveLocalReferenceToResource_s
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: ResourceId_s_DoesNotExist
+   .. py:attribute:: ResourceId_s_DoesNotExist
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: NoResourceFoundMatchingTheQuery_s_
+   .. py:attribute:: NoResourceFoundMatchingTheQuery_s_
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: NoModuleCouldBeFoundToHandleTheRequest_s_
+   .. py:attribute:: NoModuleCouldBeFoundToHandleTheRequest_s_
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: NoSummaryForThisResource
+   .. py:attribute:: NoSummaryForThisResource
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: Operation_sNotAllowedForResource_s_dueToLocalConfiguration_
+   .. py:attribute:: Operation_sNotAllowedForResource_s_dueToLocalConfiguration_
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: UnknownChainedParameterName_s_
+   .. py:attribute:: UnknownChainedParameterName_s_
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: Parameter_s_ContentIsInvalid
+   .. py:attribute:: Parameter_s_ContentIsInvalid
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: Parameter_s_ModifierIsInvalid
+   .. py:attribute:: Parameter_s_ModifierIsInvalid
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: Parameter_s_IsNotAllowedToRepeat
+   .. py:attribute:: Parameter_s_IsNotAllowedToRepeat
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: Parameter_s_NotUnderstood
+   .. py:attribute:: Parameter_s_NotUnderstood
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: ResourcesWithIdentity_example_CannotBeDeleted_forTesting_trainingPurposes_
+   .. py:attribute:: ResourcesWithIdentity_example_CannotBeDeleted_forTesting_trainingPurposes_
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: UnableToAllocateResourceId
+   .. py:attribute:: UnableToAllocateResourceId
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: ResourceIdMismatch
+   .. py:attribute:: ResourceIdMismatch
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: ResourceIdMissing
+   .. py:attribute:: ResourceIdMissing
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: NotAllowedToSubmitAResourceForThisOperation
+   .. py:attribute:: NotAllowedToSubmitAResourceForThisOperation
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: AResourceIsRequired
+   .. py:attribute:: AResourceIsRequired
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: ResourceTypeMismatch
+   .. py:attribute:: ResourceTypeMismatch
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: UnknownSortParameterName_s_
+   .. py:attribute:: UnknownSortParameterName_s_
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: DuplicateIdentifierInTransaction_s
+   .. py:attribute:: DuplicateIdentifierInTransaction_s
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: MissingIdentifierInTransaction_AnEntry_idMustBeProvided
+   .. py:attribute:: MissingIdentifierInTransaction_AnEntry_idMustBeProvided
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: UnhandledXmlNodeType_s_
+   .. py:attribute:: UnhandledXmlNodeType_s_
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: UnknownContent_s_At_s
+   .. py:attribute:: UnknownContent_s_At_s
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: UnknownFHIRHttpOperation
+   .. py:attribute:: UnknownFHIRHttpOperation
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: ResourceType_s_NotRecognised
+   .. py:attribute:: ResourceType_s_NotRecognised
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: ExistingResourceUpdated
+   .. py:attribute:: ExistingResourceUpdated
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: VersionAwareUpdatesAreRequiredForThisResource
+   .. py:attribute:: VersionAwareUpdatesAreRequiredForThisResource
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: UpdateConflict_serverCurrentVersion_s_ClientVersionReferenced_s_
+   .. py:attribute:: UpdateConflict_serverCurrentVersion_s_ClientVersionReferenced_s_
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: VersionSpecificURLNotRecognised
+   .. py:attribute:: VersionSpecificURLNotRecognised
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: ThisDoesNotAppearToBeAFHIRElementOrResource_wrongNamespace_s_
+   .. py:attribute:: ThisDoesNotAppearToBeAFHIRElementOrResource_wrongNamespace_s_
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: Error_MultipleMatchesExistFor_sSearchParameters_s_
+   .. py:attribute:: Error_MultipleMatchesExistFor_sSearchParameters_s_
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: Error_NoProcessableSearchFoundFor_sSearchParameters_s_
+   .. py:attribute:: Error_NoProcessableSearchFoundFor_sSearchParameters_s_
       
 
       From: http://terminology.hl7.org/CodeSystem/operation-outcome in valuesets.xml
 
 
-   .. attribute:: Error_MultipleMatchesExistForTheConditionalUpdate
+   .. py:attribute:: Error_MultipleMatchesExistForTheConditionalUpdate
       
 
       

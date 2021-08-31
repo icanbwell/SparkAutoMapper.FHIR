@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.test_script_request_method_code`
-========================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.test_script_request_method_code`
+===========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.test_script_request_method_code
 
@@ -17,69 +17,69 @@ Classes
 
 
 
-.. class:: TestScriptRequestMethodCodeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: TestScriptRequestMethodCodeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    TestScriptRequestMethodCode
    From: http://hl7.org/fhir/http-operations in valuesets.xml
        The allowable request method or HTTP operation codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/http-operations
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/http-operations
 
       
 
 
-.. class:: TestScriptRequestMethodCodeCodeValues
+.. py:class:: TestScriptRequestMethodCodeCodeValues
 
    HTTP DELETE operation.
    From: http://hl7.org/fhir/http-operations in valuesets.xml
 
-   .. attribute:: DELETE
+   .. py:attribute:: DELETE
       
 
       HTTP GET operation.
       From: http://hl7.org/fhir/http-operations in valuesets.xml
 
 
-   .. attribute:: GET
+   .. py:attribute:: GET
       
 
       HTTP OPTIONS operation.
       From: http://hl7.org/fhir/http-operations in valuesets.xml
 
 
-   .. attribute:: OPTIONS
+   .. py:attribute:: OPTIONS
       
 
       HTTP PATCH operation.
       From: http://hl7.org/fhir/http-operations in valuesets.xml
 
 
-   .. attribute:: PATCH
+   .. py:attribute:: PATCH
       
 
       HTTP POST operation.
       From: http://hl7.org/fhir/http-operations in valuesets.xml
 
 
-   .. attribute:: POST
+   .. py:attribute:: POST
       
 
       HTTP PUT operation.
       From: http://hl7.org/fhir/http-operations in valuesets.xml
 
 
-   .. attribute:: PUT
+   .. py:attribute:: PUT
       
 
       HTTP HEAD operation.
       From: http://hl7.org/fhir/http-operations in valuesets.xml
 
 
-   .. attribute:: HEAD
+   .. py:attribute:: HEAD
       
 
       

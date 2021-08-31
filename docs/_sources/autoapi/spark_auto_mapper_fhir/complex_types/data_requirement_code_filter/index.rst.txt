@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.complex_types.data_requirement_code_filter`
-========================================================================
+:py:mod:`spark_auto_mapper_fhir.complex_types.data_requirement_code_filter`
+===========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.complex_types.data_requirement_code_filter
 
@@ -16,17 +16,49 @@ Classes
 
 
 
-.. class:: DataRequirementCodeFilter(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, path: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, searchParam: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, valueSet: Optional[spark_auto_mapper_fhir.fhir_types.canonical.FhirCanonical] = None, code: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]]] = None)
 
+.. py:class:: DataRequirementCodeFilter(*, id_ = None, extension = None, path = None, searchParam = None, valueSet = None, code = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
 
    DataRequirement.CodeFilter
    fhir-base.xsd
        Describes a required data item for evaluation in terms of the type of data, and optional code or date-based filters of the data.
        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
 
-   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+       Describes a required data item for evaluation in terms of the type of data,
+   and optional code or date-based filters of the data.
+       If the element is present, it must have a value for at least one of the
+   defined elements, an @id referenced from the Narrative, or extensions
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param path: The code-valued attribute of the filter. The specified path SHALL be a
+   FHIRPath resolveable on the specified type of the DataRequirement, and SHALL
+   consist only of identifiers, constant indexers, and .resolve(). The path is
+   allowed to contain qualifiers (.) to traverse sub-elements, as well as
+   indexers ([x]) to traverse multiple-cardinality sub-elements (see the [Simple
+   FHIRPath Profile](fhirpath.html#simple) for full details). Note that the index
+   must be an integer constant. The path must resolve to an element of type code,
+   Coding, or CodeableConcept.
+       :param searchParam: A token parameter that refers to a search parameter defined on the specified
+   type of the DataRequirement, and which searches on elements of type code,
+   Coding, or CodeableConcept.
+       :param valueSet: The valueset for the code filter. The valueSet and code elements are additive.
+   If valueSet is specified, the filter will return only those data items for
+   which the value of the code-valued element specified in the path is a member
+   of the specified valueset.
+       :param code: The codes for the code filter. If values are given, the filter will return
+   only those data items for which the code-valued attribute specified by the
+   path has a value that is one of the specified codes. If codes are specified in
+   addition to a value set, the filter returns items matching a code in the value
+   set or one of the specified codes.
+
+   .. py:method:: get_schema(self, include_extension)
 
 
 

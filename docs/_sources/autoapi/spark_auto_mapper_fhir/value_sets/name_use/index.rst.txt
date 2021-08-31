@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.name_use`
-=================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.name_use`
+====================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.name_use
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: NameUseCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: NameUseCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    NameUse
    From: http://hl7.org/fhir/name-use in valuesets.xml
        The use of a human name.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/name-use
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/name-use
 
       
 
 
-.. class:: NameUseCodeValues
+.. py:class:: NameUseCodeValues
 
    Known as/conventional/the one you normally use.
    From: http://hl7.org/fhir/name-use in valuesets.xml
 
-   .. attribute:: Usual
+   .. py:attribute:: Usual
       
 
       The formal name as registered in an official (government) registry, but which
@@ -45,7 +45,7 @@ Classes
       From: http://hl7.org/fhir/name-use in valuesets.xml
 
 
-   .. attribute:: Official
+   .. py:attribute:: Official
       
 
       A temporary name. Name.period can provide more detailed information. This may
@@ -53,7 +53,7 @@ Classes
       From: http://hl7.org/fhir/name-use in valuesets.xml
 
 
-   .. attribute:: Temp
+   .. py:attribute:: Temp
       
 
       A name that is used to address the person in an informal manner, but is not
@@ -61,7 +61,7 @@ Classes
       From: http://hl7.org/fhir/name-use in valuesets.xml
 
 
-   .. attribute:: Nickname
+   .. py:attribute:: Nickname
       
 
       Anonymous assigned name, alias, or pseudonym (used to protect a person's
@@ -69,7 +69,7 @@ Classes
       From: http://hl7.org/fhir/name-use in valuesets.xml
 
 
-   .. attribute:: Anonymous
+   .. py:attribute:: Anonymous
       
 
       This name is no longer in use (or was never correct, but retained for
@@ -77,7 +77,7 @@ Classes
       From: http://hl7.org/fhir/name-use in valuesets.xml
 
 
-   .. attribute:: Old
+   .. py:attribute:: Old
       
 
       

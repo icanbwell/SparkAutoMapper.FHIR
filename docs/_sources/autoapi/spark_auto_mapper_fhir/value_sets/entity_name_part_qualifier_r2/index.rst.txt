@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.entity_name_part_qualifier_r2`
-======================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.entity_name_part_qualifier_r2`
+=========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.entity_name_part_qualifier_r2
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: EntityNamePartQualifierR2(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: EntityNamePartQualifierR2(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.EntityNamePartQualifierR2
    From: http://terminology.hl7.org/ValueSet/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
@@ -30,13 +30,13 @@ Classes
    name may be flagged as a nickname, a family name may be a pseudonym or a name
    of public records.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2
 
       
 
 
-.. class:: EntityNamePartQualifierR2Values
+.. py:class:: EntityNamePartQualifierR2Values
 
    Description:A name part a person acquired.  The name part may be acquired by
    adoption, or the person may have chosen to use the name part for some other
@@ -48,7 +48,7 @@ Classes
    informal one (e.g. registered as part of the official name).
    From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
 
-   .. attribute:: Acquired
+   .. py:attribute:: Acquired
       
 
       Description:A name that a person was given at birth or established as a
@@ -61,7 +61,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
 
 
-   .. attribute:: Birth
+   .. py:attribute:: Birth
       
 
       Description:Used to indicate which of the various name parts is used when
@@ -69,7 +69,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
 
 
-   .. attribute:: Callme
+   .. py:attribute:: Callme
       
 
       Description:Indicates that a name part is just an initial.  Initials do not
@@ -79,7 +79,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
 
 
-   .. attribute:: Initial
+   .. py:attribute:: Initial
       
 
       Description:For organizations a suffix indicating the legal status, e.g.,
@@ -87,7 +87,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
 
 
-   .. attribute:: LegalStatus
+   .. py:attribute:: LegalStatus
       
 
       Description:Indicates that the name part is a middle name.
@@ -103,7 +103,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
 
 
-   .. attribute:: MiddleName
+   .. py:attribute:: MiddleName
       
 
       Description:A prefix has a strong association to the immediately following
@@ -112,7 +112,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
 
 
-   .. attribute:: Prefix
+   .. py:attribute:: Prefix
       
 
       Description: Medication Name Parts are a means of specifying a range of
@@ -126,7 +126,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
 
 
-   .. attribute:: PharmaceuticalEntityNamePartQualifiers
+   .. py:attribute:: PharmaceuticalEntityNamePartQualifiers
       
 
       Description:A suffix has a strong association to the immediately preceding
@@ -135,14 +135,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
 
 
-   .. attribute:: Suffix
+   .. py:attribute:: Suffix
       
 
       Description:Extra information about the style of a title
       From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
 
 
-   .. attribute:: TitleStyles
+   .. py:attribute:: TitleStyles
       
 
       

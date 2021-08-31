@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.backbone_elements.contract_action`
-===============================================================
+:py:mod:`spark_auto_mapper_fhir.backbone_elements.contract_action`
+==================================================================
 
 .. py:module:: spark_auto_mapper_fhir.backbone_elements.contract_action
 
@@ -16,12 +16,69 @@ Classes
 
 
 
-.. class:: ContractAction(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, doNotPerform: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, type_: spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.contract_action_codes.ContractActionCodesCode], subject: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.contract_subject.ContractSubject]] = None, intent: spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.purpose_of_use.PurposeOfUse], linkId: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.string.FhirString]] = None, status: spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.contract_resource_action_status_codes.ContractResourceActionStatusCodesCode], context: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.encounter.Encounter, spark_auto_mapper_fhir.resources.episode_of_care.EpisodeOfCare)]]] = None, contextLinkId: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.string.FhirString]] = None, occurrenceDateTime: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, occurrencePeriod: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, occurrenceTiming: Optional[spark_auto_mapper_fhir.backbone_elements.timing.Timing] = None, requester: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.related_person.RelatedPerson, spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole, spark_auto_mapper_fhir.resources.device.Device, spark_auto_mapper_fhir.resources.group.Group, spark_auto_mapper_fhir.resources.organization.Organization)]]]] = None, requesterLinkId: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.string.FhirString]] = None, performerType: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.provenance_participant_type.ProvenanceParticipantTypeCode]]] = None, performerRole: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.provenance_participant_role.ProvenanceParticipantRoleCode]] = None, performer: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.related_person.RelatedPerson, spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole, spark_auto_mapper_fhir.resources.care_team.CareTeam, spark_auto_mapper_fhir.resources.device.Device, spark_auto_mapper_fhir.resources.substance.Substance, spark_auto_mapper_fhir.resources.organization.Organization, spark_auto_mapper_fhir.resources.location.Location)]]] = None, performerLinkId: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.string.FhirString]] = None, reasonCode: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.purpose_of_use.PurposeOfUse]]] = None, reasonReference: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.condition.Condition, spark_auto_mapper_fhir.resources.observation.Observation, spark_auto_mapper_fhir.resources.diagnostic_report.DiagnosticReport, spark_auto_mapper_fhir.resources.document_reference.DocumentReference, spark_auto_mapper_fhir.resources.questionnaire.Questionnaire, spark_auto_mapper_fhir.resources.questionnaire_response.QuestionnaireResponse)]]]] = None, reason: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.string.FhirString]] = None, reasonLinkId: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.string.FhirString]] = None, note: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.annotation.Annotation]] = None, securityLabelNumber: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.unsigned_int.FhirUnsignedInt]] = None)
 
+.. py:class:: ContractAction(*, id_ = None, extension = None, modifierExtension = None, doNotPerform = None, type_, subject = None, intent, linkId = None, status, context = None, contextLinkId = None, occurrenceDateTime = None, occurrencePeriod = None, occurrenceTiming = None, requester = None, requesterLinkId = None, performerType = None, performerRole = None, performer = None, performerLinkId = None, reasonCode = None, reasonReference = None, reason = None, reasonLinkId = None, note = None, securityLabelNumber = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
 
    Contract.Action
-   Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
+       Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
+
+       Legally enforceable, formally recorded unilateral or bilateral directive i.e.,
+   a policy or agreement.
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param modifierExtension: May be used to represent additional information that is not part of the basic
+   definition of the element and that modifies the understanding of the element
+   in which it is contained and/or the understanding of the containing element's
+   descendants. Usually modifier elements provide negation or qualification. To
+   make the use of extensions safe and manageable, there is a strict set of
+   governance applied to the definition and use of extensions. Though any
+   implementer can define an extension, there is a set of requirements that SHALL
+   be met as part of the definition of the extension. Applications processing a
+   resource are required to check for modifier extensions.
+
+   Modifier extensions SHALL NOT change the meaning of any elements on Resource
+   or DomainResource (including cannot change the meaning of modifierExtension
+   itself).
+       :param doNotPerform: True if the term prohibits the  action.
+       :param type_: Activity or service obligation to be done or not done, performed or not
+   performed, effectuated or not by this Contract term.
+       :param subject: Entity of the action.
+       :param intent: Reason or purpose for the action stipulated by this Contract Provision.
+       :param linkId: Id [identifier??] of the clause or question text related to this action in the
+   referenced form or QuestionnaireResponse.
+       :param status: Current state of the term action.
+       :param context: Encounter or Episode with primary association to specified term activity.
+       :param contextLinkId: Id [identifier??] of the clause or question text related to the requester of
+   this action in the referenced form or QuestionnaireResponse.
+       :param occurrenceDateTime: None
+       :param occurrencePeriod: None
+       :param occurrenceTiming: None
+       :param requester: Who or what initiated the action and has responsibility for its activation.
+       :param requesterLinkId: Id [identifier??] of the clause or question text related to the requester of
+   this action in the referenced form or QuestionnaireResponse.
+       :param performerType: The type of individual that is desired or required to perform or not perform
+   the action.
+       :param performerRole: The type of role or competency of an individual desired or required to perform
+   or not perform the action.
+       :param performer: Indicates who or what is being asked to perform (or not perform) the ction.
+       :param performerLinkId: Id [identifier??] of the clause or question text related to the reason type or
+   reference of this  action in the referenced form or QuestionnaireResponse.
+       :param reasonCode: Rationale for the action to be performed or not performed. Describes why the
+   action is permitted or prohibited.
+       :param reasonReference: Indicates another resource whose existence justifies permitting or not
+   permitting this action.
+       :param reason: Describes why the action is to be performed or not performed in textual form.
+       :param reasonLinkId: Id [identifier??] of the clause or question text related to the reason type or
+   reference of this  action in the referenced form or QuestionnaireResponse.
+       :param note: Comments made about the term action made by the requester, performer, subject
+   or other participants.
+       :param securityLabelNumber: Security labels that protects the action.
 
 

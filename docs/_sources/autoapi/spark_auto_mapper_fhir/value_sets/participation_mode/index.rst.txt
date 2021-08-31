@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.participation_mode`
-===========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.participation_mode`
+==============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.participation_mode
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: ParticipationMode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ParticipationMode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.ParticipationMode
    From: http://terminology.hl7.org/ValueSet/v3-ParticipationMode in v3-codesystems.xml
@@ -34,18 +34,18 @@ Classes
    muddling between ELECTRONIC and other concepts that involve electronic
    communication that are in other hierarchies.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ParticipationMode
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-ParticipationMode
 
       
 
 
-.. class:: ParticipationModeValues
+.. py:class:: ParticipationModeValues
 
    Participation by non-human-languaged based electronic signal
    From: http://terminology.hl7.org/CodeSystem/v3-ParticipationMode in v3-codesystems.xml
 
-   .. attribute:: ElectronicData
+   .. py:attribute:: ElectronicData
       
 
       Participation by direct action where subject and actor are in the same
@@ -53,7 +53,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ParticipationMode in v3-codesystems.xml
 
 
-   .. attribute:: PhysicalPresence
+   .. py:attribute:: PhysicalPresence
       
 
       Participation by direct action where subject and actor are in separate
@@ -62,21 +62,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ParticipationMode in v3-codesystems.xml
 
 
-   .. attribute:: RemotePresence
+   .. py:attribute:: RemotePresence
       
 
       Participation by voice communication
       From: http://terminology.hl7.org/CodeSystem/v3-ParticipationMode in v3-codesystems.xml
 
 
-   .. attribute:: Verbal
+   .. py:attribute:: Verbal
       
 
       Participation by human language recorded on a physical material
       From: http://terminology.hl7.org/CodeSystem/v3-ParticipationMode in v3-codesystems.xml
 
 
-   .. attribute:: Written
+   .. py:attribute:: Written
       
 
       

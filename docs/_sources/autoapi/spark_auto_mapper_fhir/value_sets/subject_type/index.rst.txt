@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.subject_type`
-=====================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.subject_type`
+========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.subject_type
 
@@ -17,50 +17,50 @@ Classes
 
 
 
-.. class:: SubjectTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SubjectTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SubjectType
    From: http://hl7.org/fhir/ValueSet/subject-type in valuesets.xml
        Possible types of subjects.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/resource-types
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/resource-types
 
       
 
 
-.. class:: SubjectTypeCodeValues
+.. py:class:: SubjectTypeCodeValues
 
    From: http://hl7.org/fhir/ValueSet/subject-type in valuesets.xml
 
-   .. attribute:: Patient
+   .. py:attribute:: Patient
       
 
       From: http://hl7.org/fhir/ValueSet/subject-type in valuesets.xml
 
 
-   .. attribute:: Practitioner
+   .. py:attribute:: Practitioner
       
 
       From: http://hl7.org/fhir/ValueSet/subject-type in valuesets.xml
 
 
-   .. attribute:: Organization
+   .. py:attribute:: Organization
       
 
       From: http://hl7.org/fhir/ValueSet/subject-type in valuesets.xml
 
 
-   .. attribute:: Location
+   .. py:attribute:: Location
       
 
       From: http://hl7.org/fhir/ValueSet/subject-type in valuesets.xml
 
 
-   .. attribute:: Device
+   .. py:attribute:: Device
       
 
       

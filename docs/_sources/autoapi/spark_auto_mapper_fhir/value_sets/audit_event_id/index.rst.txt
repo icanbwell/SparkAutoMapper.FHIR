@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.audit_event_id`
-=======================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.audit_event_id`
+==========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.audit_event_id
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: AuditEventIDCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: AuditEventIDCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    AuditEventID
    From: http://terminology.hl7.org/CodeSystem/audit-event-type in valuesets.xml
        Event Types for Audit Events - defined by DICOM with some FHIR specific
    additions.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/audit-event-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/audit-event-type
 
       
 
 
-.. class:: AuditEventIDCodeValues
+.. py:class:: AuditEventIDCodeValues
 
    Audit Event: Execution of a RESTful operation as defined by FHIR.
    From: http://terminology.hl7.org/CodeSystem/audit-event-type in valuesets.xml
 
-   .. attribute:: RESTfulOperation
+   .. py:attribute:: RESTfulOperation
       
 
       

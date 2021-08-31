@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.effect_estimate_type`
-=============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.effect_estimate_type`
+================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.effect_estimate_type
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: EffectEstimateTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: EffectEstimateTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    EffectEstimateType
    From: http://terminology.hl7.org/CodeSystem/effect-estimate-type in valuesets.xml
@@ -28,60 +28,60 @@ Classes
    difference) or a relative effect estimate (relative difference), and the
    specific type of effect estimate (eg relative risk or median difference).
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/effect-estimate-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/effect-estimate-type
 
       
 
 
-.. class:: EffectEstimateTypeCodeValues
+.. py:class:: EffectEstimateTypeCodeValues
 
    relative risk (a type of relative effect estimate).
    From: http://terminology.hl7.org/CodeSystem/effect-estimate-type in valuesets.xml
 
-   .. attribute:: RelativeRisk
+   .. py:attribute:: RelativeRisk
       
 
       odds ratio (a type of relative effect estimate).
       From: http://terminology.hl7.org/CodeSystem/effect-estimate-type in valuesets.xml
 
 
-   .. attribute:: OddsRatio
+   .. py:attribute:: OddsRatio
       
 
       hazard ratio (a type of relative effect estimate).
       From: http://terminology.hl7.org/CodeSystem/effect-estimate-type in valuesets.xml
 
 
-   .. attribute:: HazardRatio
+   .. py:attribute:: HazardRatio
       
 
       absolute risk difference (a type of absolute effect estimate).
       From: http://terminology.hl7.org/CodeSystem/effect-estimate-type in valuesets.xml
 
 
-   .. attribute:: AbsoluteRiskDifference
+   .. py:attribute:: AbsoluteRiskDifference
       
 
       mean difference (a type of absolute effect estimate).
       From: http://terminology.hl7.org/CodeSystem/effect-estimate-type in valuesets.xml
 
 
-   .. attribute:: MeanDifference
+   .. py:attribute:: MeanDifference
       
 
       standardized mean difference (a type of absolute effect estimate).
       From: http://terminology.hl7.org/CodeSystem/effect-estimate-type in valuesets.xml
 
 
-   .. attribute:: StandardizedMeanDifference
+   .. py:attribute:: StandardizedMeanDifference
       
 
       median difference (a type of absolute effect estimate).
       From: http://terminology.hl7.org/CodeSystem/effect-estimate-type in valuesets.xml
 
 
-   .. attribute:: MedianDifference
+   .. py:attribute:: MedianDifference
       
 
       

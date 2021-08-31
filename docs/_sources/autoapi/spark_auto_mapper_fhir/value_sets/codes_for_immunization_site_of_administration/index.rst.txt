@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.codes_for_immunization_site_of_administration`
-======================================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.codes_for_immunization_site_of_administration`
+=========================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.codes_for_immunization_site_of_administration
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: CodesForImmunizationSiteOfAdministrationCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: CodesForImmunizationSiteOfAdministrationCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    CodesForImmunizationSiteOfAdministration
    From: http://hl7.org/fhir/ValueSet/immunization-site in valuesets.xml
@@ -29,30 +29,30 @@ Classes
    support describing the body site where the vaccination occurred. This value
    set is provided as a suggestive example.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ActSite
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-ActSite
 
       
 
 
-.. class:: CodesForImmunizationSiteOfAdministrationCodeValues
+.. py:class:: CodesForImmunizationSiteOfAdministrationCodeValues
 
    An anatomical location on a human which can be the focus of an act.
    From: http://terminology.hl7.org/CodeSystem/v3-ActSite in v3-codesystems.xml
 
-   .. attribute:: HumanActSite
+   .. py:attribute:: HumanActSite
       
 
       From: http://hl7.org/fhir/ValueSet/immunization-site in valuesets.xml
 
 
-   .. attribute:: LeftArm
+   .. py:attribute:: LeftArm
       
 
       From: http://hl7.org/fhir/ValueSet/immunization-site in valuesets.xml
 
 
-   .. attribute:: RightArm
+   .. py:attribute:: RightArm
       
 
       

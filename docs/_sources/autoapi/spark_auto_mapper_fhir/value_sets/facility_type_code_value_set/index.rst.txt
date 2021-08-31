@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.facility_type_code_value_set`
-=====================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.facility_type_code_value_set`
+========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.facility_type_code_value_set
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: FacilityTypeCodeValueSetCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: FacilityTypeCodeValueSetCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    FacilityTypeCodeValueSet
    From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
@@ -29,485 +29,485 @@ Classes
    used for Healthcare Facility Type has been defined by HITSP to be the value
    set reproduced from HITSP C80 Table 2-147.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://snomed.info/sct
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://snomed.info/sct
 
       
 
 
-.. class:: FacilityTypeCodeValueSetCodeValues
+.. py:class:: FacilityTypeCodeValueSetCodeValues
 
    From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
-   .. attribute:: Hospital_children_s
+   .. py:attribute:: Hospital_children_s
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: Hospital_community
+   .. py:attribute:: Hospital_community
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: Hospital_government
+   .. py:attribute:: Hospital_government
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: Hospital_longTermCare
+   .. py:attribute:: Hospital_longTermCare
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: Hospital_militaryField
+   .. py:attribute:: Hospital_militaryField
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: Hospital_prison
+   .. py:attribute:: Hospital_prison
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: Hospital_psychiatric
+   .. py:attribute:: Hospital_psychiatric
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: Hospital_rehabilitation
+   .. py:attribute:: Hospital_rehabilitation
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: Hospital_traumaCenter
+   .. py:attribute:: Hospital_traumaCenter
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: Hospital_Veterans_Administration
+   .. py:attribute:: Hospital_Veterans_Administration
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: HospiceFacility
+   .. py:attribute:: HospiceFacility
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: NursingHome
+   .. py:attribute:: NursingHome
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: SkilledNursingFacility
+   .. py:attribute:: SkilledNursingFacility
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: DialysisUnit_hospital
+   .. py:attribute:: DialysisUnit_hospital
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: EmergencyDepartment_hospital
+   .. py:attribute:: EmergencyDepartment_hospital
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: HospitalAmbulatorySurgeryFacility
+   .. py:attribute:: HospitalAmbulatorySurgeryFacility
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: HospitalBirthingCenter
+   .. py:attribute:: HospitalBirthingCenter
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: HospitalOutpatientAllergyClinic
+   .. py:attribute:: HospitalOutpatientAllergyClinic
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: HospitalOutpatientDentalClinic
+   .. py:attribute:: HospitalOutpatientDentalClinic
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: HospitalOutpatientDermatologyClinic
+   .. py:attribute:: HospitalOutpatientDermatologyClinic
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: HospitalOutpatientEndocrinologyClinic
+   .. py:attribute:: HospitalOutpatientEndocrinologyClinic
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: HospitalOutpatientFamilyMedicineClinic
+   .. py:attribute:: HospitalOutpatientFamilyMedicineClinic
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: HospitalOutpatientGastroenterologyClinic
+   .. py:attribute:: HospitalOutpatientGastroenterologyClinic
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: HospitalOutpatientGeneralSurgeryClinic
+   .. py:attribute:: HospitalOutpatientGeneralSurgeryClinic
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: HospitalOutpatientGeriatricHealthCenter
+   .. py:attribute:: HospitalOutpatientGeriatricHealthCenter
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: HospitalOutpatientGynecologyClinic
+   .. py:attribute:: HospitalOutpatientGynecologyClinic
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: HospitalOutpatientHematologyClinic
+   .. py:attribute:: HospitalOutpatientHematologyClinic
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: HospitalOutpatientImmunologyClinic
+   .. py:attribute:: HospitalOutpatientImmunologyClinic
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: HospitalOutpatientInfectiousDiseaseClinic
+   .. py:attribute:: HospitalOutpatientInfectiousDiseaseClinic
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: HospitalOutpatientMentalHealthCenter
+   .. py:attribute:: HospitalOutpatientMentalHealthCenter
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: HospitalOutpatientNeurologyClinic
+   .. py:attribute:: HospitalOutpatientNeurologyClinic
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: HospitalOutpatientObstetricalClinic
+   .. py:attribute:: HospitalOutpatientObstetricalClinic
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: HospitalOutpatientOncologyClinic
+   .. py:attribute:: HospitalOutpatientOncologyClinic
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: HospitalOutpatientOphthalmologyClinic
+   .. py:attribute:: HospitalOutpatientOphthalmologyClinic
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: HospitalOutpatientOrthopedicsClinic
+   .. py:attribute:: HospitalOutpatientOrthopedicsClinic
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: HospitalOutpatientOtorhinolaryngologyClinic
+   .. py:attribute:: HospitalOutpatientOtorhinolaryngologyClinic
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: HospitalOutpatientPainClinic
+   .. py:attribute:: HospitalOutpatientPainClinic
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: HospitalOutpatientPediatricClinic
+   .. py:attribute:: HospitalOutpatientPediatricClinic
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: HospitalOutpatientPeripheralVascularClinic
+   .. py:attribute:: HospitalOutpatientPeripheralVascularClinic
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: HospitalOutpatientRehabilitationClinic
+   .. py:attribute:: HospitalOutpatientRehabilitationClinic
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: HospitalOutpatientRespiratoryDiseaseClinic
+   .. py:attribute:: HospitalOutpatientRespiratoryDiseaseClinic
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: HospitalOutpatientRheumatologyClinic
+   .. py:attribute:: HospitalOutpatientRheumatologyClinic
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: HospitalOutpatientUrologyClinic
+   .. py:attribute:: HospitalOutpatientUrologyClinic
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: HospitalRadiologyFacility
+   .. py:attribute:: HospitalRadiologyFacility
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: Hospital_basedOutpatientClinicOrDepartment_OTHER_NOTLISTED
+   .. py:attribute:: Hospital_basedOutpatientClinicOrDepartment_OTHER_NOTLISTED
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: Fee_for_servicePrivatePhysicians_GroupOffice
+   .. py:attribute:: Fee_for_servicePrivatePhysicians_GroupOffice
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: PrivatePhysicians_GroupOffice
+   .. py:attribute:: PrivatePhysicians_GroupOffice
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: SoloPracticePrivateOffice
+   .. py:attribute:: SoloPracticePrivateOffice
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: IndependentAmbulatoryCareProviderSite_OTHER_NOTLISTED
+   .. py:attribute:: IndependentAmbulatoryCareProviderSite_OTHER_NOTLISTED
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: AmbulatorySurgeryCenter
+   .. py:attribute:: AmbulatorySurgeryCenter
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: CareOfTheElderlyDayHospital
+   .. py:attribute:: CareOfTheElderlyDayHospital
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: ElderlyAssessmentClinic
+   .. py:attribute:: ElderlyAssessmentClinic
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: Free_standingAmbulatorySurgeryFacility
+   .. py:attribute:: Free_standingAmbulatorySurgeryFacility
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: Free_standingBirthingCenter
+   .. py:attribute:: Free_standingBirthingCenter
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: Free_standingGeriatricHealthCenter
+   .. py:attribute:: Free_standingGeriatricHealthCenter
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: Free_standingLaboratoryFacility
+   .. py:attribute:: Free_standingLaboratoryFacility
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: Free_standingMentalHealthCenter
+   .. py:attribute:: Free_standingMentalHealthCenter
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: Free_standingRadiologyFacility
+   .. py:attribute:: Free_standingRadiologyFacility
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: HealthMaintenanceOrganization
+   .. py:attribute:: HealthMaintenanceOrganization
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: LocalCommunityHealthCenter
+   .. py:attribute:: LocalCommunityHealthCenter
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: PsychogeriatricDayHospital
+   .. py:attribute:: PsychogeriatricDayHospital
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: ResidentialSchoolInfirmary
+   .. py:attribute:: ResidentialSchoolInfirmary
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: RuralHealthCenter
+   .. py:attribute:: RuralHealthCenter
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: SexuallyTransmittedDiseaseHealthCenter
+   .. py:attribute:: SexuallyTransmittedDiseaseHealthCenter
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: SubstanceAbuseTreatmentCenter
+   .. py:attribute:: SubstanceAbuseTreatmentCenter
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: VaccinationClinic
+   .. py:attribute:: VaccinationClinic
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: Walk_inClinic
+   .. py:attribute:: Walk_inClinic
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: AmbulatoryCareSite_OTHER_NOTLISTED
+   .. py:attribute:: AmbulatoryCareSite_OTHER_NOTLISTED
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: Ambulance_basedCare
+   .. py:attribute:: Ambulance_basedCare
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: ContainedCasualtySetting
+   .. py:attribute:: ContainedCasualtySetting
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: Helicopter_basedCare
+   .. py:attribute:: Helicopter_basedCare
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: HospitalShip
+   .. py:attribute:: HospitalShip
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: Traveler_sAidClinic
+   .. py:attribute:: Traveler_sAidClinic
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: AdultDayCareCenter
+   .. py:attribute:: AdultDayCareCenter
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: ChildDayCareCenter
+   .. py:attribute:: ChildDayCareCenter
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: PrivateResidentialHome
+   .. py:attribute:: PrivateResidentialHome
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: ResidentialInstitution
+   .. py:attribute:: ResidentialInstitution
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: SportsFacility
+   .. py:attribute:: SportsFacility
       
 
       From: http://hl7.org/fhir/ValueSet/c80-facilitycodes in valuesets.xml
 
 
-   .. attribute:: HealthEncounterSite_NOTLISTED
+   .. py:attribute:: HealthEncounterSite_NOTLISTED
       
 
       

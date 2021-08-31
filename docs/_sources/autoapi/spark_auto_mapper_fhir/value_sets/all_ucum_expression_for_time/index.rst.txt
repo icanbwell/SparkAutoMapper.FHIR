@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.all_ucum_expression_for_time`
-=====================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.all_ucum_expression_for_time`
+========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.all_ucum_expression_for_time
 
@@ -16,18 +16,18 @@ Classes
 
 
 
-.. class:: AllUCUMExpressionForTimeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: AllUCUMExpressionForTimeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    AllUCUMExpressionForTime
    From: http://hl7.org/fhir/ValueSet/all-time-units in valuesets.xml
        Unified Code for Units of Measure (UCUM). This value set includes all UCUM
    codes for units of time
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://unitsofmeasure.org
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://unitsofmeasure.org
 
       
 

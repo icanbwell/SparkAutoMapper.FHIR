@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.supplement_type_codes`
-==============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.supplement_type_codes`
+=================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.supplement_type_codes
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: SupplementTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SupplementTypeCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SupplementTypeCodes
    From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
@@ -29,281 +29,281 @@ Classes
    SCTID 470581016 (Enteral+supplement feeds hierarchy (product)) and is provided
    as a suggestive example.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://snomed.info/sct
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://snomed.info/sct
 
       
 
 
-.. class:: SupplementTypeCodesCodeValues
+.. py:class:: SupplementTypeCodesCodeValues
 
    From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
-   .. attribute:: AdultClearLiquidSupplement
+   .. py:attribute:: AdultClearLiquidSupplement
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: AdultCriticalCareFormula
+   .. py:attribute:: AdultCriticalCareFormula
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: AdultDiabetesSpecialtyFormula
+   .. py:attribute:: AdultDiabetesSpecialtyFormula
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: AdultElementalFormula
+   .. py:attribute:: AdultElementalFormula
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: AdultHepaticSpecialtyFormula
+   .. py:attribute:: AdultHepaticSpecialtyFormula
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: AdultHighEnergyFormula
+   .. py:attribute:: AdultHighEnergyFormula
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: AdultHydrolyzedProteinFormula
+   .. py:attribute:: AdultHydrolyzedProteinFormula
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: AdultHighProteinFormula
+   .. py:attribute:: AdultHighProteinFormula
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: AdultHighProteinHighFiberFormula
+   .. py:attribute:: AdultHighProteinHighFiberFormula
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: AdultLowCarbohydrateFormula
+   .. py:attribute:: AdultLowCarbohydrateFormula
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: AdultPulmonarySpecialtyFormula
+   .. py:attribute:: AdultPulmonarySpecialtyFormula
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: AdultRenalSpecialtyFormula
+   .. py:attribute:: AdultRenalSpecialtyFormula
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: AdultStandardFormula
+   .. py:attribute:: AdultStandardFormula
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: AdultSoyProteinIsolateFormula
+   .. py:attribute:: AdultSoyProteinIsolateFormula
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: DiabeticMealReplacementBar
+   .. py:attribute:: DiabeticMealReplacementBar
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: PediatricFormula
+   .. py:attribute:: PediatricFormula
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: PediatricClearLiquidSupplement
+   .. py:attribute:: PediatricClearLiquidSupplement
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: PediatricElementalFormula
+   .. py:attribute:: PediatricElementalFormula
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: PediatricHighEnergyFormula
+   .. py:attribute:: PediatricHighEnergyFormula
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: PediatricHighEnergyFormulaWithIncreasedFiber
+   .. py:attribute:: PediatricHighEnergyFormulaWithIncreasedFiber
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: PediatricHydrolyzedProteinFormula
+   .. py:attribute:: PediatricHydrolyzedProteinFormula
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: PediatricIncreasedFiberFormula
+   .. py:attribute:: PediatricIncreasedFiberFormula
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: PediatricReducedEnergyFormula
+   .. py:attribute:: PediatricReducedEnergyFormula
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: PediatricStandardFormula
+   .. py:attribute:: PediatricStandardFormula
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: StandardPuddingOralSupplement
+   .. py:attribute:: StandardPuddingOralSupplement
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: StandardEnteralFormulaWithFiber
+   .. py:attribute:: StandardEnteralFormulaWithFiber
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: StandardFormula
+   .. py:attribute:: StandardFormula
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: StandardEnteralFormula
+   .. py:attribute:: StandardEnteralFormula
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: SoyBasedFormula
+   .. py:attribute:: SoyBasedFormula
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: RenalFormula
+   .. py:attribute:: RenalFormula
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: HighEnergyEnteralFormulaWithFiber
+   .. py:attribute:: HighEnergyEnteralFormulaWithFiber
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: DiabeticEnteralFormulaWithFiber
+   .. py:attribute:: DiabeticEnteralFormulaWithFiber
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: DiabeticHighCalorieHighProteinEnteralFormulaWithFiber
+   .. py:attribute:: DiabeticHighCalorieHighProteinEnteralFormulaWithFiber
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: IncreasedFiberFormula
+   .. py:attribute:: IncreasedFiberFormula
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: HydrolyzedProteinFormula
+   .. py:attribute:: HydrolyzedProteinFormula
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: HydrolyzedPeptide_basedHighProteinEnteralFormula
+   .. py:attribute:: HydrolyzedPeptide_basedHighProteinEnteralFormula
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: HighProteinFormula
+   .. py:attribute:: HighProteinFormula
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: HighEnergyFormula
+   .. py:attribute:: HighEnergyFormula
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: ElementalFormula
+   .. py:attribute:: ElementalFormula
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: ElectrolyteReplacementSupplement
+   .. py:attribute:: ElectrolyteReplacementSupplement
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: FrozenElectrolyteReplacementSupplement
+   .. py:attribute:: FrozenElectrolyteReplacementSupplement
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: LiquidElectrolyteReplacementSupplement
+   .. py:attribute:: LiquidElectrolyteReplacementSupplement
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: PowderedElectrolyteReplacementSupplement
+   .. py:attribute:: PowderedElectrolyteReplacementSupplement
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: ClearLiquidSupplement
+   .. py:attribute:: ClearLiquidSupplement
       
 
       From: http://hl7.org/fhir/ValueSet/supplement-type in valuesets.xml
 
 
-   .. attribute:: AdultFormula
+   .. py:attribute:: AdultFormula
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.definition_resource_type`
-=================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.definition_resource_type`
+====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.definition_resource_type
 
@@ -17,30 +17,30 @@ Classes
 
 
 
-.. class:: DefinitionResourceTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: DefinitionResourceTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    DefinitionResourceType
    From: http://hl7.org/fhir/definition-resource-types in valuesets.xml
        A list of all the definition resource types defined in this version of the
    FHIR specification.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/definition-resource-types
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/definition-resource-types
 
       
 
 
-.. class:: DefinitionResourceTypeCodeValues
+.. py:class:: DefinitionResourceTypeCodeValues
 
    This resource allows for the definition of some activity to be performed,
    independent of a particular patient, practitioner, or other performance
    context.
    From: http://hl7.org/fhir/definition-resource-types in valuesets.xml
 
-   .. attribute:: ActivityDefinition
+   .. py:attribute:: ActivityDefinition
       
 
       The EventDefinition resource provides a reusable description of when a
@@ -48,14 +48,14 @@ Classes
       From: http://hl7.org/fhir/definition-resource-types in valuesets.xml
 
 
-   .. attribute:: EventDefinition
+   .. py:attribute:: EventDefinition
       
 
       The Measure resource provides the definition of a quality measure.
       From: http://hl7.org/fhir/definition-resource-types in valuesets.xml
 
 
-   .. attribute:: Measure
+   .. py:attribute:: Measure
       
 
       A formal computable definition of an operation (on the RESTful interface) or a
@@ -63,7 +63,7 @@ Classes
       From: http://hl7.org/fhir/definition-resource-types in valuesets.xml
 
 
-   .. attribute:: OperationDefinition
+   .. py:attribute:: OperationDefinition
       
 
       This resource allows for the definition of various types of plans as a
@@ -73,7 +73,7 @@ Classes
       From: http://hl7.org/fhir/definition-resource-types in valuesets.xml
 
 
-   .. attribute:: PlanDefinition
+   .. py:attribute:: PlanDefinition
       
 
       A structured set of questions intended to guide the collection of answers from
@@ -82,7 +82,7 @@ Classes
       From: http://hl7.org/fhir/definition-resource-types in valuesets.xml
 
 
-   .. attribute:: Questionnaire
+   .. py:attribute:: Questionnaire
       
 
       

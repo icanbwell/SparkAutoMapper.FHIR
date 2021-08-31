@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.special_values`
-=======================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.special_values`
+==========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.special_values
 
@@ -17,41 +17,41 @@ Classes
 
 
 
-.. class:: SpecialValuesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SpecialValuesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SpecialValues
    From: http://terminology.hl7.org/CodeSystem/special-values in valuesets.xml
        A set of generally useful codes defined so they can be included in value sets.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/special-values
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/special-values
 
       
 
 
-.. class:: SpecialValuesCodeValues
+.. py:class:: SpecialValuesCodeValues
 
    Boolean true.
    From: http://terminology.hl7.org/CodeSystem/special-values in valuesets.xml
 
-   .. attribute:: True_
+   .. py:attribute:: True_
       
 
       Boolean false.
       From: http://terminology.hl7.org/CodeSystem/special-values in valuesets.xml
 
 
-   .. attribute:: False_
+   .. py:attribute:: False_
       
 
       The content is greater than zero, but too small to be quantified.
       From: http://terminology.hl7.org/CodeSystem/special-values in valuesets.xml
 
 
-   .. attribute:: TraceAmountDetected
+   .. py:attribute:: TraceAmountDetected
       
 
       The specific quantity is not known, but is known to be non-zero and is not
@@ -59,21 +59,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/special-values in valuesets.xml
 
 
-   .. attribute:: SufficientQuantity
+   .. py:attribute:: SufficientQuantity
       
 
       The value is no longer available.
       From: http://terminology.hl7.org/CodeSystem/special-values in valuesets.xml
 
 
-   .. attribute:: ValueWithdrawn
+   .. py:attribute:: ValueWithdrawn
       
 
       The are no known applicable values in this context.
       From: http://terminology.hl7.org/CodeSystem/special-values in valuesets.xml
 
 
-   .. attribute:: NilKnown
+   .. py:attribute:: NilKnown
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.fhir_types.uuid`
-=============================================
+:py:mod:`spark_auto_mapper_fhir.fhir_types.uuid`
+================================================
 
 .. py:module:: spark_auto_mapper_fhir.fhir_types.uuid
 
@@ -7,7 +7,7 @@
 Module Contents
 ---------------
 
-.. data:: FhirUuid
+.. py:data:: FhirUuid
    
 
    

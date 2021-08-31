@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.ldl_codes`
-==================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.ldl_codes`
+=====================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.ldl_codes
 
@@ -17,32 +17,32 @@ Classes
 
 
 
-.. class:: LDLCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: LDLCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    LDLCodes
    From: http://hl7.org/fhir/ValueSet/ldlcholesterol-codes in valuesets.xml
        LDL Cholesterol codes - measured or calculated
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://loinc.org
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://loinc.org
 
       
 
 
-.. class:: LDLCodesCodeValues
+.. py:class:: LDLCodesCodeValues
 
    From: http://hl7.org/fhir/ValueSet/ldlcholesterol-codes in valuesets.xml
 
-   .. attribute:: LDLCholesterol_Assay_
+   .. py:attribute:: LDLCholesterol_Assay_
       
 
       From: http://hl7.org/fhir/ValueSet/ldlcholesterol-codes in valuesets.xml
 
 
-   .. attribute:: CholesterolInLDL_Mass_volume_InSerumOrPlasmaByCalculation
+   .. py:attribute:: CholesterolInLDL_Mass_volume_InSerumOrPlasmaByCalculation
       
 
       

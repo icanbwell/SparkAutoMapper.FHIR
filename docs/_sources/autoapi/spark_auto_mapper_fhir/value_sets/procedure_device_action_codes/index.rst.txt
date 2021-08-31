@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.procedure_device_action_codes`
-======================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.procedure_device_action_codes`
+=========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.procedure_device_action_codes
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: ProcedureDeviceActionCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ProcedureDeviceActionCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ProcedureDeviceActionCodes
    From: http://hl7.org/fhir/device-action in valuesets.xml
@@ -28,25 +28,25 @@ Classes
    procedure.  Note that these are in no way complete and might not even be
    appropriate for some uses.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/device-action
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/device-action
 
       
 
 
-.. class:: ProcedureDeviceActionCodesCodeValues
+.. py:class:: ProcedureDeviceActionCodesCodeValues
 
    The device was implanted in the patient during the procedure.
    From: http://hl7.org/fhir/device-action in valuesets.xml
 
-   .. attribute:: Implanted
+   .. py:attribute:: Implanted
       
 
       The device was explanted from the patient during the procedure.
       From: http://hl7.org/fhir/device-action in valuesets.xml
 
 
-   .. attribute:: Explanted
+   .. py:attribute:: Explanted
       
 
       The device remains in the patient, but its location, settings, or
@@ -54,7 +54,7 @@ Classes
       From: http://hl7.org/fhir/device-action in valuesets.xml
 
 
-   .. attribute:: Manipulated
+   .. py:attribute:: Manipulated
       
 
       

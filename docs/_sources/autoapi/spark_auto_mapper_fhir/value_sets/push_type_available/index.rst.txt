@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.push_type_available`
-============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.push_type_available`
+===============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.push_type_available
 
@@ -17,38 +17,38 @@ Classes
 
 
 
-.. class:: Push_type_availableCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: Push_type_availableCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    push-type-available
    From: http://terminology.hl7.org/CodeSystem/push-type-available in valuesets.xml
        Type of alerts/updates the primary source can send
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/push-type-available
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/push-type-available
 
       
 
 
-.. class:: Push_type_availableCodeValues
+.. py:class:: Push_type_availableCodeValues
 
    From: http://terminology.hl7.org/CodeSystem/push-type-available in valuesets.xml
 
-   .. attribute:: SpecificRequestedChanges
+   .. py:attribute:: SpecificRequestedChanges
       
 
       From: http://terminology.hl7.org/CodeSystem/push-type-available in valuesets.xml
 
 
-   .. attribute:: AnyChanges
+   .. py:attribute:: AnyChanges
       
 
       From: http://terminology.hl7.org/CodeSystem/push-type-available in valuesets.xml
 
 
-   .. attribute:: AsDefinedBySource
+   .. py:attribute:: AsDefinedBySource
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.enable_when_behavior`
-=============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.enable_when_behavior`
+================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.enable_when_behavior
 
@@ -17,35 +17,35 @@ Classes
 
 
 
-.. class:: EnableWhenBehaviorCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: EnableWhenBehaviorCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    EnableWhenBehavior
    From: http://hl7.org/fhir/questionnaire-enable-behavior in valuesets.xml
        Controls how multiple enableWhen values are interpreted -  whether all or any
    must be true.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/questionnaire-enable-behavior
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/questionnaire-enable-behavior
 
       
 
 
-.. class:: EnableWhenBehaviorCodeValues
+.. py:class:: EnableWhenBehaviorCodeValues
 
    Enable the question when all the enableWhen criteria are satisfied.
    From: http://hl7.org/fhir/questionnaire-enable-behavior in valuesets.xml
 
-   .. attribute:: All
+   .. py:attribute:: All
       
 
       Enable the question when any of the enableWhen criteria are satisfied.
       From: http://hl7.org/fhir/questionnaire-enable-behavior in valuesets.xml
 
 
-   .. attribute:: Any
+   .. py:attribute:: Any
       
 
       

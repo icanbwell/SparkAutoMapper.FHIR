@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.care_plan_activity_status`
-==================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.care_plan_activity_status`
+=====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.care_plan_activity_status
 
@@ -17,42 +17,42 @@ Classes
 
 
 
-.. class:: CarePlanActivityStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: CarePlanActivityStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    CarePlanActivityStatus
    From: http://hl7.org/fhir/care-plan-activity-status in valuesets.xml
        Codes that reflect the current state of a care plan activity within its
    overall life cycle.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/care-plan-activity-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/care-plan-activity-status
 
       
 
 
-.. class:: CarePlanActivityStatusCodeValues
+.. py:class:: CarePlanActivityStatusCodeValues
 
    Care plan activity is planned but no action has yet been taken.
    From: http://hl7.org/fhir/care-plan-activity-status in valuesets.xml
 
-   .. attribute:: NotStarted
+   .. py:attribute:: NotStarted
       
 
       Appointment or other booking has occurred but activity has not yet begun.
       From: http://hl7.org/fhir/care-plan-activity-status in valuesets.xml
 
 
-   .. attribute:: Scheduled
+   .. py:attribute:: Scheduled
       
 
       Care plan activity has been started but is not yet complete.
       From: http://hl7.org/fhir/care-plan-activity-status in valuesets.xml
 
 
-   .. attribute:: InProgress
+   .. py:attribute:: InProgress
       
 
       Care plan activity was started but has temporarily ceased with an expectation
@@ -60,21 +60,21 @@ Classes
       From: http://hl7.org/fhir/care-plan-activity-status in valuesets.xml
 
 
-   .. attribute:: OnHold
+   .. py:attribute:: OnHold
       
 
       Care plan activity has been completed (more or less) as planned.
       From: http://hl7.org/fhir/care-plan-activity-status in valuesets.xml
 
 
-   .. attribute:: Completed
+   .. py:attribute:: Completed
       
 
       The planned care plan activity has been withdrawn.
       From: http://hl7.org/fhir/care-plan-activity-status in valuesets.xml
 
 
-   .. attribute:: Cancelled
+   .. py:attribute:: Cancelled
       
 
       The current state of the care plan activity is not known.  Note: This concept
@@ -83,14 +83,14 @@ Classes
       From: http://hl7.org/fhir/care-plan-activity-status in valuesets.xml
 
 
-   .. attribute:: Unknown
+   .. py:attribute:: Unknown
       
 
       Care plan activity was entered in error and voided.
       From: http://hl7.org/fhir/care-plan-activity-status in valuesets.xml
 
 
-   .. attribute:: EnteredInError
+   .. py:attribute:: EnteredInError
       
 
       

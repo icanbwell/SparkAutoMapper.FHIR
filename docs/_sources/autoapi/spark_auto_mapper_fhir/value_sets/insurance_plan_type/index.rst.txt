@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.insurance_plan_type`
-============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.insurance_plan_type`
+===============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.insurance_plan_type
 
@@ -17,81 +17,81 @@ Classes
 
 
 
-.. class:: InsurancePlanTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: InsurancePlanTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    InsurancePlanType
    From: http://terminology.hl7.org/CodeSystem/insurance-plan-type in valuesets.xml
        This example value set defines a set of codes that can be used to indicate a
    type of insurance plan.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/insurance-plan-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/insurance-plan-type
 
       
 
 
-.. class:: InsurancePlanTypeCodeValues
+.. py:class:: InsurancePlanTypeCodeValues
 
    From: http://terminology.hl7.org/CodeSystem/insurance-plan-type in valuesets.xml
 
-   .. attribute:: Medical
+   .. py:attribute:: Medical
       
 
       From: http://terminology.hl7.org/CodeSystem/insurance-plan-type in valuesets.xml
 
 
-   .. attribute:: Dental
+   .. py:attribute:: Dental
       
 
       From: http://terminology.hl7.org/CodeSystem/insurance-plan-type in valuesets.xml
 
 
-   .. attribute:: MentalHealth
+   .. py:attribute:: MentalHealth
       
 
       From: http://terminology.hl7.org/CodeSystem/insurance-plan-type in valuesets.xml
 
 
-   .. attribute:: SubstanceAbuse
+   .. py:attribute:: SubstanceAbuse
       
 
       From: http://terminology.hl7.org/CodeSystem/insurance-plan-type in valuesets.xml
 
 
-   .. attribute:: Vision
+   .. py:attribute:: Vision
       
 
       From: http://terminology.hl7.org/CodeSystem/insurance-plan-type in valuesets.xml
 
 
-   .. attribute:: Drug
+   .. py:attribute:: Drug
       
 
       From: http://terminology.hl7.org/CodeSystem/insurance-plan-type in valuesets.xml
 
 
-   .. attribute:: ShortTerm
+   .. py:attribute:: ShortTerm
       
 
       From: http://terminology.hl7.org/CodeSystem/insurance-plan-type in valuesets.xml
 
 
-   .. attribute:: LongTermCare
+   .. py:attribute:: LongTermCare
       
 
       From: http://terminology.hl7.org/CodeSystem/insurance-plan-type in valuesets.xml
 
 
-   .. attribute:: Hospice
+   .. py:attribute:: Hospice
       
 
       From: http://terminology.hl7.org/CodeSystem/insurance-plan-type in valuesets.xml
 
 
-   .. attribute:: HomeHealth
+   .. py:attribute:: HomeHealth
       
 
       

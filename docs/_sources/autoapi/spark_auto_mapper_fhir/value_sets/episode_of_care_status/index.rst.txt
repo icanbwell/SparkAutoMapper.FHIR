@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.episode_of_care_status`
-===============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.episode_of_care_status`
+==================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.episode_of_care_status
 
@@ -17,22 +17,22 @@ Classes
 
 
 
-.. class:: EpisodeOfCareStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: EpisodeOfCareStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    EpisodeOfCareStatus
    From: http://hl7.org/fhir/episode-of-care-status in valuesets.xml
        The status of the episode of care.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/episode-of-care-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/episode-of-care-status
 
       
 
 
-.. class:: EpisodeOfCareStatusCodeValues
+.. py:class:: EpisodeOfCareStatusCodeValues
 
    This episode of care is planned to start at the date specified in the
    period.start. During this status, an organization may perform assessments to
@@ -40,7 +40,7 @@ Classes
    make resources available to provide care services.
    From: http://hl7.org/fhir/episode-of-care-status in valuesets.xml
 
-   .. attribute:: Planned
+   .. py:attribute:: Planned
       
 
       This episode has been placed on a waitlist, pending the episode being made
@@ -48,14 +48,14 @@ Classes
       From: http://hl7.org/fhir/episode-of-care-status in valuesets.xml
 
 
-   .. attribute:: Waitlist
+   .. py:attribute:: Waitlist
       
 
       This episode of care is current.
       From: http://hl7.org/fhir/episode-of-care-status in valuesets.xml
 
 
-   .. attribute:: Active
+   .. py:attribute:: Active
       
 
       This episode of care is on hold; the organization has limited responsibility
@@ -63,7 +63,7 @@ Classes
       From: http://hl7.org/fhir/episode-of-care-status in valuesets.xml
 
 
-   .. attribute:: OnHold
+   .. py:attribute:: OnHold
       
 
       This episode of care is finished and the organization is not expecting to be
@@ -72,7 +72,7 @@ Classes
       From: http://hl7.org/fhir/episode-of-care-status in valuesets.xml
 
 
-   .. attribute:: Finished
+   .. py:attribute:: Finished
       
 
       The episode of care was cancelled, or withdrawn from service, often selected
@@ -82,14 +82,14 @@ Classes
       From: http://hl7.org/fhir/episode-of-care-status in valuesets.xml
 
 
-   .. attribute:: Cancelled
+   .. py:attribute:: Cancelled
       
 
       This instance should not have been part of this patient's medical record.
       From: http://hl7.org/fhir/episode-of-care-status in valuesets.xml
 
 
-   .. attribute:: EnteredInError
+   .. py:attribute:: EnteredInError
       
 
       

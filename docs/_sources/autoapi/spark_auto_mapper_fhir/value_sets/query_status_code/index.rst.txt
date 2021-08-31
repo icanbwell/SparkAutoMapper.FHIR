@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.query_status_code`
-==========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.query_status_code`
+=============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.query_status_code
 
@@ -17,55 +17,55 @@ Classes
 
 
 
-.. class:: QueryStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: QueryStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.QueryStatusCode
    From: http://terminology.hl7.org/ValueSet/v3-QueryStatusCode in v3-codesystems.xml
         A code specifying the state of the Query.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-QueryStatusCode
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-QueryStatusCode
 
       
 
 
-.. class:: QueryStatusCodeValues
+.. py:class:: QueryStatusCodeValues
 
    Query status aborted
    From: http://terminology.hl7.org/CodeSystem/v3-QueryStatusCode in v3-codesystems.xml
 
-   .. attribute:: Aborted
+   .. py:attribute:: Aborted
       
 
       Query Status delivered response
       From: http://terminology.hl7.org/CodeSystem/v3-QueryStatusCode in v3-codesystems.xml
 
 
-   .. attribute:: DeliveredResponse
+   .. py:attribute:: DeliveredResponse
       
 
       Query Status executing
       From: http://terminology.hl7.org/CodeSystem/v3-QueryStatusCode in v3-codesystems.xml
 
 
-   .. attribute:: Executing
+   .. py:attribute:: Executing
       
 
       Query Status new
       From: http://terminology.hl7.org/CodeSystem/v3-QueryStatusCode in v3-codesystems.xml
 
 
-   .. attribute:: New
+   .. py:attribute:: New
       
 
       Query Status wait continued
       From: http://terminology.hl7.org/CodeSystem/v3-QueryStatusCode in v3-codesystems.xml
 
 
-   .. attribute:: WaitContinuedQueryResponse
+   .. py:attribute:: WaitContinuedQueryResponse
       
 
       

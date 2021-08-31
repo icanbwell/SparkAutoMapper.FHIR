@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.participant_roles`
-==========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.participant_roles`
+=============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.participant_roles
 
@@ -16,10 +16,10 @@ Classes
 
 
 
-.. class:: ParticipantRolesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ParticipantRolesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ParticipantRoles
    From: http://hl7.org/fhir/ValueSet/participant-role in valuesets.xml
@@ -27,8 +27,8 @@ Classes
    Person, Healthcare professional (occupation) or Healthcare related
    organization (qualifier value).
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://snomed.info/sct
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://snomed.info/sct
 
       
 

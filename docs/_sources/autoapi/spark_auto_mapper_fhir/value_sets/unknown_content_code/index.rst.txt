@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.unknown_content_code`
-=============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.unknown_content_code`
+================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.unknown_content_code
 
@@ -17,49 +17,49 @@ Classes
 
 
 
-.. class:: UnknownContentCodeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: UnknownContentCodeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    UnknownContentCode
    From: http://hl7.org/fhir/unknown-content-code in valuesets.xml
        A code that indicates whether an application accepts unknown elements or
    extensions when reading resources.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/unknown-content-code
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/unknown-content-code
 
       
 
 
-.. class:: UnknownContentCodeCodeValues
+.. py:class:: UnknownContentCodeCodeValues
 
    The application does not accept either unknown elements or extensions.
    From: http://hl7.org/fhir/unknown-content-code in valuesets.xml
 
-   .. attribute:: NeitherElementsOrExtensions
+   .. py:attribute:: NeitherElementsOrExtensions
       
 
       The application accepts unknown extensions, but not unknown elements.
       From: http://hl7.org/fhir/unknown-content-code in valuesets.xml
 
 
-   .. attribute:: UnknownExtensions
+   .. py:attribute:: UnknownExtensions
       
 
       The application accepts unknown elements, but not unknown extensions.
       From: http://hl7.org/fhir/unknown-content-code in valuesets.xml
 
 
-   .. attribute:: UnknownElements
+   .. py:attribute:: UnknownElements
       
 
       The application accepts unknown elements and extensions.
       From: http://hl7.org/fhir/unknown-content-code in valuesets.xml
 
 
-   .. attribute:: UnknownElementsAndExtensions
+   .. py:attribute:: UnknownElementsAndExtensions
       
 
       

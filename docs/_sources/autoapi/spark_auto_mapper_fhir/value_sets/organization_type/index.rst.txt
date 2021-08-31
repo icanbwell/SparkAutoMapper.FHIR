@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.organization_type`
-==========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.organization_type`
+=============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.organization_type
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: OrganizationTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: OrganizationTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    OrganizationType
    From: http://terminology.hl7.org/CodeSystem/organization-type in valuesets.xml
        This example value set defines a set of codes that can be used to indicate a
    type of organization.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/organization-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/organization-type
 
       
 
 
-.. class:: OrganizationTypeCodeValues
+.. py:class:: OrganizationTypeCodeValues
 
    An organization that provides healthcare services.
    From: http://terminology.hl7.org/CodeSystem/organization-type in valuesets.xml
 
-   .. attribute:: HealthcareProvider
+   .. py:attribute:: HealthcareProvider
       
 
       A department or ward within a hospital (Generally is not applicable to top
@@ -46,7 +46,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/organization-type in valuesets.xml
 
 
-   .. attribute:: HospitalDepartment
+   .. py:attribute:: HospitalDepartment
       
 
       An organizational team is usually a grouping of practitioners that perform a
@@ -55,7 +55,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/organization-type in valuesets.xml
 
 
-   .. attribute:: OrganizationalTeam
+   .. py:attribute:: OrganizationalTeam
       
 
       A political body, often used when including organization records for
@@ -63,7 +63,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/organization-type in valuesets.xml
 
 
-   .. attribute:: Government
+   .. py:attribute:: Government
       
 
       A company that provides insurance to its subscribers that may include
@@ -71,7 +71,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/organization-type in valuesets.xml
 
 
-   .. attribute:: InsuranceCompany
+   .. py:attribute:: InsuranceCompany
       
 
       A company, charity, or governmental organization, which processes claims
@@ -80,21 +80,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/organization-type in valuesets.xml
 
 
-   .. attribute:: Payer
+   .. py:attribute:: Payer
       
 
       An educational institution that provides education or research facilities.
       From: http://terminology.hl7.org/CodeSystem/organization-type in valuesets.xml
 
 
-   .. attribute:: EducationalInstitute
+   .. py:attribute:: EducationalInstitute
       
 
       An organization that is identified as a part of a religious institution.
       From: http://terminology.hl7.org/CodeSystem/organization-type in valuesets.xml
 
 
-   .. attribute:: ReligiousInstitution
+   .. py:attribute:: ReligiousInstitution
       
 
       An organization that is identified as a Pharmaceutical/Clinical Research
@@ -102,14 +102,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/organization-type in valuesets.xml
 
 
-   .. attribute:: ClinicalResearchSponsor
+   .. py:attribute:: ClinicalResearchSponsor
       
 
       An un-incorporated community group.
       From: http://terminology.hl7.org/CodeSystem/organization-type in valuesets.xml
 
 
-   .. attribute:: CommunityGroup
+   .. py:attribute:: CommunityGroup
       
 
       An organization that is a registered business or corporation but not
@@ -117,14 +117,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/organization-type in valuesets.xml
 
 
-   .. attribute:: Non_HealthcareBusinessOrCorporation
+   .. py:attribute:: Non_HealthcareBusinessOrCorporation
       
 
       Other type of organization not already specified.
       From: http://terminology.hl7.org/CodeSystem/organization-type in valuesets.xml
 
 
-   .. attribute:: Other
+   .. py:attribute:: Other
       
 
       

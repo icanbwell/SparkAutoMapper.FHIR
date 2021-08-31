@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.resources.bundle`
-==============================================
+:py:mod:`spark_auto_mapper_fhir.resources.bundle`
+=================================================
 
 .. py:module:: spark_auto_mapper_fhir.resources.bundle
 
@@ -16,17 +16,44 @@ Classes
 
 
 
-.. class:: Bundle(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, identifier: Optional[spark_auto_mapper_fhir.complex_types.identifier.Identifier] = None, type_: spark_auto_mapper_fhir.value_sets.bundle_type.BundleTypeCode, timestamp: Optional[spark_auto_mapper_fhir.fhir_types.instant.FhirInstant] = None, total: Optional[spark_auto_mapper_fhir.fhir_types.unsigned_int.FhirUnsignedInt] = None, link: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.bundle_link.BundleLink]] = None, entry: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.bundle_entry.BundleEntry]] = None, signature: Optional[spark_auto_mapper_fhir.complex_types.signature.Signature] = None)
 
+.. py:class:: Bundle(*, id_ = None, meta = None, implicitRules = None, language = None, identifier = None, type_, timestamp = None, total = None, link = None, entry = None, signature = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
 
    Bundle
    bundle.xsd
        A container for a collection of resources.
        If the element is present, it must have either a @value, an @id, or extensions
 
-   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+       A container for a collection of resources.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+       :param id_: The logical id of the resource, as used in the URL for the resource. Once
+   assigned, this value never changes.
+       :param meta: The metadata about the resource. This is content that is maintained by the
+   infrastructure. Changes to the content might not always be associated with
+   version changes to the resource.
+       :param implicitRules: A reference to a set of rules that were followed when the resource was
+   constructed, and which must be understood when processing the content. Often,
+   this is a reference to an implementation guide that defines the special rules
+   along with other profiles etc.
+       :param language: The base language in which the resource is written.
+       :param identifier: A persistent identifier for the bundle that won't change as a bundle is copied
+   from server to server.
+       :param type_: Indicates the purpose of this bundle - how it is intended to be used.
+       :param timestamp: The date/time that the bundle was assembled - i.e. when the resources were
+   placed in the bundle.
+       :param total: If a set of search matches, this is the total number of entries of type
+   'match' across all pages in the search.  It does not include search.mode =
+   'include' or 'outcome' entries and it does not provide a count of the number
+   of entries in the Bundle.
+       :param link: A series of links that provide context to this bundle.
+       :param entry: An entry in a bundle resource - will either contain a resource or information
+   about a resource (transactions and history only).
+       :param signature: Digital Signature - base64 encoded. XML-DSig or a JWT.
+
+   .. py:method:: get_schema(self, include_extension)
 
 
 

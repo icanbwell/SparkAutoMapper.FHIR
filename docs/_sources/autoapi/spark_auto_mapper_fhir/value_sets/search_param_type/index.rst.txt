@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.search_param_type`
-==========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.search_param_type`
+=============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.search_param_type
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: SearchParamTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SearchParamTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SearchParamType
    From: http://hl7.org/fhir/search-param-type in valuesets.xml
        Data types allowed to be used for search parameters.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/search-param-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/search-param-type
 
       
 
 
-.. class:: SearchParamTypeCodeValues
+.. py:class:: SearchParamTypeCodeValues
 
    Search parameter SHALL be a number (a whole number, or a decimal).
    From: http://hl7.org/fhir/search-param-type in valuesets.xml
 
-   .. attribute:: Number
+   .. py:attribute:: Number
       
 
       Search parameter is on a date/time. The date format is the standard XML
@@ -45,7 +45,7 @@ Classes
       From: http://hl7.org/fhir/search-param-type in valuesets.xml
 
 
-   .. attribute:: Date_DateTime
+   .. py:attribute:: Date_DateTime
       
 
       Search parameter is a simple string, like a name part. Search is case-
@@ -54,7 +54,7 @@ Classes
       From: http://hl7.org/fhir/search-param-type in valuesets.xml
 
 
-   .. attribute:: String
+   .. py:attribute:: String
       
 
       Search parameter on a coded element or identifier. May be used to search
@@ -64,35 +64,35 @@ Classes
       From: http://hl7.org/fhir/search-param-type in valuesets.xml
 
 
-   .. attribute:: Token
+   .. py:attribute:: Token
       
 
       A reference to another resource (Reference or canonical).
       From: http://hl7.org/fhir/search-param-type in valuesets.xml
 
 
-   .. attribute:: Reference
+   .. py:attribute:: Reference
       
 
       A composite search parameter that combines a search on two values together.
       From: http://hl7.org/fhir/search-param-type in valuesets.xml
 
 
-   .. attribute:: Composite
+   .. py:attribute:: Composite
       
 
       A search parameter that searches on a quantity.
       From: http://hl7.org/fhir/search-param-type in valuesets.xml
 
 
-   .. attribute:: Quantity
+   .. py:attribute:: Quantity
       
 
       A search parameter that searches on a URI (RFC 3986).
       From: http://hl7.org/fhir/search-param-type in valuesets.xml
 
 
-   .. attribute:: URI
+   .. py:attribute:: URI
       
 
       Special logic applies to this parameter per the description of the search
@@ -100,7 +100,7 @@ Classes
       From: http://hl7.org/fhir/search-param-type in valuesets.xml
 
 
-   .. attribute:: Special
+   .. py:attribute:: Special
       
 
       

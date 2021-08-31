@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.allergy_intolerance_verification_status_codes`
-======================================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.allergy_intolerance_verification_status_codes`
+=========================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.allergy_intolerance_verification_status_codes
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: AllergyIntoleranceVerificationStatusCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: AllergyIntoleranceVerificationStatusCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    AllergyIntoleranceVerificationStatusCodes
    From: http://terminology.hl7.org/CodeSystem/allergyintolerance-verification in valuesets.xml
        Preferred value set for AllergyIntolerance Verification Status.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification
 
       
 
 
-.. class:: AllergyIntoleranceVerificationStatusCodesCodeValues
+.. py:class:: AllergyIntoleranceVerificationStatusCodesCodeValues
 
    A low level of certainty about the propensity for a reaction to the identified
    substance.
    From: http://terminology.hl7.org/CodeSystem/allergyintolerance-verification in valuesets.xml
 
-   .. attribute:: Unconfirmed
+   .. py:attribute:: Unconfirmed
       
 
       A high level of certainty about the propensity for a reaction to the
@@ -47,7 +47,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/allergyintolerance-verification in valuesets.xml
 
 
-   .. attribute:: Confirmed
+   .. py:attribute:: Confirmed
       
 
       A propensity for a reaction to the identified substance has been disputed or
@@ -57,14 +57,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/allergyintolerance-verification in valuesets.xml
 
 
-   .. attribute:: Refuted
+   .. py:attribute:: Refuted
       
 
       The statement was entered in error and is not valid.
       From: http://terminology.hl7.org/CodeSystem/allergyintolerance-verification in valuesets.xml
 
 
-   .. attribute:: EnteredInError
+   .. py:attribute:: EnteredInError
       
 
       

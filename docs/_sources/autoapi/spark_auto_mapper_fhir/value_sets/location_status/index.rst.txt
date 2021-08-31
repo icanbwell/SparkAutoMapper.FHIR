@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.location_status`
-========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.location_status`
+===========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.location_status
 
@@ -17,41 +17,41 @@ Classes
 
 
 
-.. class:: LocationStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: LocationStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    LocationStatus
    From: http://hl7.org/fhir/location-status in valuesets.xml
        Indicates whether the location is still in use.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/location-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/location-status
 
       
 
 
-.. class:: LocationStatusCodeValues
+.. py:class:: LocationStatusCodeValues
 
    The location is operational.
    From: http://hl7.org/fhir/location-status in valuesets.xml
 
-   .. attribute:: Active
+   .. py:attribute:: Active
       
 
       The location is temporarily closed.
       From: http://hl7.org/fhir/location-status in valuesets.xml
 
 
-   .. attribute:: Suspended
+   .. py:attribute:: Suspended
       
 
       The location is no longer used.
       From: http://hl7.org/fhir/location-status in valuesets.xml
 
 
-   .. attribute:: Inactive
+   .. py:attribute:: Inactive
       
 
       

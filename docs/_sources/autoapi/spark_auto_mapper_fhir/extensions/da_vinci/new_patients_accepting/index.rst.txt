@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.extensions.da_vinci.new_patients_accepting`
-========================================================================
+:py:mod:`spark_auto_mapper_fhir.extensions.da_vinci.new_patients_accepting`
+===========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.extensions.da_vinci.new_patients_accepting
 
@@ -16,14 +16,20 @@ Classes
 
 
 
-.. class:: AcceptingPatientsExtension(valueCodeableConcept: spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.da_vinci.accepting_patients.AcceptingPatientsCode])
 
+.. py:class:: AcceptingPatientsExtension(valueCodeableConcept)
 
-   Bases: :class:`spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase`
 
    DO NOT USE DIRECTLY!  ALWAYS USE A SUB_CLASS.
 
-   .. method:: codeset(cls) -> spark_auto_mapper_fhir.fhir_types.uri.FhirUri
+
+   Accepting Patients
+   http://hl7.org/fhir/us/davinci-pdex-plan-net/StructureDefinition/newpatients
+
+   :param valueCodeableConcept:
+
+   .. py:method:: codeset(cls)
 
       acceptingPatients
       :return:

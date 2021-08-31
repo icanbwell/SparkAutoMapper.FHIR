@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.snomedct_clinical_findings`
-===================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.snomedct_clinical_findings`
+======================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.snomedct_clinical_findings
 
@@ -16,17 +16,17 @@ Classes
 
 
 
-.. class:: SNOMEDCTClinicalFindingsCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SNOMEDCTClinicalFindingsCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SNOMEDCTClinicalFindings
    From: http://hl7.org/fhir/ValueSet/adverse-event-type in valuesets.xml
        This value set includes all SNOMED CT Clinical Findings.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://snomed.info/sct
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://snomed.info/sct
 
       
 

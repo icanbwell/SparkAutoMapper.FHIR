@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.endpoint_status`
-========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.endpoint_status`
+===========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.endpoint_status
 
@@ -17,34 +17,34 @@ Classes
 
 
 
-.. class:: EndpointStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: EndpointStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    EndpointStatus
    From: http://hl7.org/fhir/endpoint-status in valuesets.xml
        The status of the endpoint.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/endpoint-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/endpoint-status
 
       
 
 
-.. class:: EndpointStatusCodeValues
+.. py:class:: EndpointStatusCodeValues
 
    This endpoint is expected to be active and can be used.
    From: http://hl7.org/fhir/endpoint-status in valuesets.xml
 
-   .. attribute:: Active
+   .. py:attribute:: Active
       
 
       This endpoint is temporarily unavailable.
       From: http://hl7.org/fhir/endpoint-status in valuesets.xml
 
 
-   .. attribute:: Suspended
+   .. py:attribute:: Suspended
       
 
       This endpoint has exceeded connectivity thresholds and is considered in an
@@ -53,28 +53,28 @@ Classes
       From: http://hl7.org/fhir/endpoint-status in valuesets.xml
 
 
-   .. attribute:: Error
+   .. py:attribute:: Error
       
 
       This endpoint is no longer to be used.
       From: http://hl7.org/fhir/endpoint-status in valuesets.xml
 
 
-   .. attribute:: Off
+   .. py:attribute:: Off
       
 
       This instance should not have been part of this patient's medical record.
       From: http://hl7.org/fhir/endpoint-status in valuesets.xml
 
 
-   .. attribute:: EnteredInError
+   .. py:attribute:: EnteredInError
       
 
       This endpoint is not intended for production usage.
       From: http://hl7.org/fhir/endpoint-status in valuesets.xml
 
 
-   .. attribute:: Test
+   .. py:attribute:: Test
       
 
       

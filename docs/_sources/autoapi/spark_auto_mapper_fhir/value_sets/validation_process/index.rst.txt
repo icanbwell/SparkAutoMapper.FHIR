@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.validation_process`
-===========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.validation_process`
+==============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.validation_process
 
@@ -17,56 +17,56 @@ Classes
 
 
 
-.. class:: Validation_processCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: Validation_processCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    validation-process
    From: http://terminology.hl7.org/CodeSystem/validation-process in valuesets.xml
        The primary process by which the target is validated
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/validation-process
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/validation-process
 
       
 
 
-.. class:: Validation_processCodeValues
+.. py:class:: Validation_processCodeValues
 
    From: http://terminology.hl7.org/CodeSystem/validation-process in valuesets.xml
 
-   .. attribute:: EditCheck
+   .. py:attribute:: EditCheck
       
 
       From: http://terminology.hl7.org/CodeSystem/validation-process in valuesets.xml
 
 
-   .. attribute:: ValueSet
+   .. py:attribute:: ValueSet
       
 
       From: http://terminology.hl7.org/CodeSystem/validation-process in valuesets.xml
 
 
-   .. attribute:: PrimarySource
+   .. py:attribute:: PrimarySource
       
 
       From: http://terminology.hl7.org/CodeSystem/validation-process in valuesets.xml
 
 
-   .. attribute:: MultipleSources
+   .. py:attribute:: MultipleSources
       
 
       From: http://terminology.hl7.org/CodeSystem/validation-process in valuesets.xml
 
 
-   .. attribute:: Standalone
+   .. py:attribute:: Standalone
       
 
       From: http://terminology.hl7.org/CodeSystem/validation-process in valuesets.xml
 
 
-   .. attribute:: InContext
+   .. py:attribute:: InContext
       
 
       

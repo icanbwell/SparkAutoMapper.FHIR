@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.example_message_reason_codes`
-=====================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.example_message_reason_codes`
+========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.example_message_reason_codes
 
@@ -17,63 +17,63 @@ Classes
 
 
 
-.. class:: ExampleMessageReasonCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ExampleMessageReasonCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ExampleMessageReasonCodes
    From: http://terminology.hl7.org/CodeSystem/message-reasons-encounter in valuesets.xml
        Example Message Reasons. These are the set of codes that might be used an
    updating an encounter using admin-update.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/message-reasons-encounter
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/message-reasons-encounter
 
       
 
 
-.. class:: ExampleMessageReasonCodesCodeValues
+.. py:class:: ExampleMessageReasonCodesCodeValues
 
    The patient has been admitted.
    From: http://terminology.hl7.org/CodeSystem/message-reasons-encounter in valuesets.xml
 
-   .. attribute:: Admit
+   .. py:attribute:: Admit
       
 
       The patient has been discharged.
       From: http://terminology.hl7.org/CodeSystem/message-reasons-encounter in valuesets.xml
 
 
-   .. attribute:: Discharge
+   .. py:attribute:: Discharge
       
 
       The patient has temporarily left the institution.
       From: http://terminology.hl7.org/CodeSystem/message-reasons-encounter in valuesets.xml
 
 
-   .. attribute:: Absent
+   .. py:attribute:: Absent
       
 
       The patient has returned from a temporary absence.
       From: http://terminology.hl7.org/CodeSystem/message-reasons-encounter in valuesets.xml
 
 
-   .. attribute:: Returned
+   .. py:attribute:: Returned
       
 
       The patient has been moved to a new location.
       From: http://terminology.hl7.org/CodeSystem/message-reasons-encounter in valuesets.xml
 
 
-   .. attribute:: Moved
+   .. py:attribute:: Moved
       
 
       Encounter details have been updated (e.g. to correct a coding error).
       From: http://terminology.hl7.org/CodeSystem/message-reasons-encounter in valuesets.xml
 
 
-   .. attribute:: Edit
+   .. py:attribute:: Edit
       
 
       

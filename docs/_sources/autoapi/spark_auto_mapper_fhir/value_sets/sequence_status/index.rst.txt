@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.sequence_status`
-========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.sequence_status`
+===========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.sequence_status
 
@@ -17,41 +17,41 @@ Classes
 
 
 
-.. class:: SequenceStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SequenceStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    sequenceStatus
    From: http://terminology.hl7.org/CodeSystem/variant-state in valuesets.xml
        Codes providing the status of the variant test result.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/variant-state
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/variant-state
 
       
 
 
-.. class:: SequenceStatusCodeValues
+.. py:class:: SequenceStatusCodeValues
 
    the variant is detected.
    From: http://terminology.hl7.org/CodeSystem/variant-state in valuesets.xml
 
-   .. attribute:: Positive
+   .. py:attribute:: Positive
       
 
       no variant is detected.
       From: http://terminology.hl7.org/CodeSystem/variant-state in valuesets.xml
 
 
-   .. attribute:: Negative
+   .. py:attribute:: Negative
       
 
       result of the variant is missing.
       From: http://terminology.hl7.org/CodeSystem/variant-state in valuesets.xml
 
 
-   .. attribute:: Absent
+   .. py:attribute:: Absent
       
 
       

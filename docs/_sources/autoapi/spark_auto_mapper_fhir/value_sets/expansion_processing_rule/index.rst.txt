@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.expansion_processing_rule`
-==================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.expansion_processing_rule`
+=====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.expansion_processing_rule
 
@@ -17,29 +17,29 @@ Classes
 
 
 
-.. class:: ExpansionProcessingRuleCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ExpansionProcessingRuleCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ExpansionProcessingRule
    From: http://terminology.hl7.org/CodeSystem/expansion-processing-rule in valuesets.xml
        Defines how concepts are processed into the expansion when it's for UI
    presentation.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/expansion-processing-rule
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/expansion-processing-rule
 
       
 
 
-.. class:: ExpansionProcessingRuleCodeValues
+.. py:class:: ExpansionProcessingRuleCodeValues
 
    The expansion (when in UI mode) includes all codes *and* any defined groups
    (in extensions).
    From: http://terminology.hl7.org/CodeSystem/expansion-processing-rule in valuesets.xml
 
-   .. attribute:: AllCodes
+   .. py:attribute:: AllCodes
       
 
       The expanion (when in UI mode) lists the groups, and then any codes that have
@@ -47,14 +47,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/expansion-processing-rule in valuesets.xml
 
 
-   .. attribute:: Groups_UngroupedCodes
+   .. py:attribute:: Groups_UngroupedCodes
       
 
       The expansion (when in UI mode) only includes the defined groups.
       From: http://terminology.hl7.org/CodeSystem/expansion-processing-rule in valuesets.xml
 
 
-   .. attribute:: GroupsOnly
+   .. py:attribute:: GroupsOnly
       
 
       

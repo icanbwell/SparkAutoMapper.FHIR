@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.composition_status`
-===========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.composition_status`
+==============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.composition_status
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: CompositionStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: CompositionStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    CompositionStatus
    From: http://hl7.org/fhir/composition-status in valuesets.xml
        The workflow/clinical status of the composition.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/composition-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/composition-status
 
       
 
 
-.. class:: CompositionStatusCodeValues
+.. py:class:: CompositionStatusCodeValues
 
    This is a preliminary composition or document (also known as initial or
    interim). The content may be incomplete or unverified.
    From: http://hl7.org/fhir/composition-status in valuesets.xml
 
-   .. attribute:: Preliminary
+   .. py:attribute:: Preliminary
       
 
       This version of the composition is complete and verified by an appropriate
@@ -47,7 +47,7 @@ Classes
       From: http://hl7.org/fhir/composition-status in valuesets.xml
 
 
-   .. attribute:: Final
+   .. py:attribute:: Final
       
 
       The composition content or the referenced resources have been modified (edited
@@ -56,7 +56,7 @@ Classes
       From: http://hl7.org/fhir/composition-status in valuesets.xml
 
 
-   .. attribute:: Amended
+   .. py:attribute:: Amended
       
 
       The composition or document was originally created/issued in error, and this
@@ -65,7 +65,7 @@ Classes
       From: http://hl7.org/fhir/composition-status in valuesets.xml
 
 
-   .. attribute:: EnteredInError
+   .. py:attribute:: EnteredInError
       
 
       

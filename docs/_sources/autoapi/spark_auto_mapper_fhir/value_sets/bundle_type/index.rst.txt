@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.bundle_type`
-====================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.bundle_type`
+=======================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.bundle_type
 
@@ -17,34 +17,34 @@ Classes
 
 
 
-.. class:: BundleTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: BundleTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    BundleType
    From: http://hl7.org/fhir/bundle-type in valuesets.xml
        Indicates the purpose of a bundle - how it is intended to be used.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/bundle-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/bundle-type
 
       
 
 
-.. class:: BundleTypeCodeValues
+.. py:class:: BundleTypeCodeValues
 
    The bundle is a document. The first resource is a Composition.
    From: http://hl7.org/fhir/bundle-type in valuesets.xml
 
-   .. attribute:: Document
+   .. py:attribute:: Document
       
 
       The bundle is a message. The first resource is a MessageHeader.
       From: http://hl7.org/fhir/bundle-type in valuesets.xml
 
 
-   .. attribute:: Message
+   .. py:attribute:: Message
       
 
       The bundle is a transaction - intended to be processed by a server as an
@@ -52,7 +52,7 @@ Classes
       From: http://hl7.org/fhir/bundle-type in valuesets.xml
 
 
-   .. attribute:: Transaction
+   .. py:attribute:: Transaction
       
 
       The bundle is a transaction response. Because the response is a transaction
@@ -60,7 +60,7 @@ Classes
       From: http://hl7.org/fhir/bundle-type in valuesets.xml
 
 
-   .. attribute:: TransactionResponse
+   .. py:attribute:: TransactionResponse
       
 
       The bundle is a set of actions - intended to be processed by a server as a
@@ -68,7 +68,7 @@ Classes
       From: http://hl7.org/fhir/bundle-type in valuesets.xml
 
 
-   .. attribute:: Batch
+   .. py:attribute:: Batch
       
 
       The bundle is a batch response. Note that as a batch, some responses may
@@ -76,14 +76,14 @@ Classes
       From: http://hl7.org/fhir/bundle-type in valuesets.xml
 
 
-   .. attribute:: BatchResponse
+   .. py:attribute:: BatchResponse
       
 
       The bundle is a list of resources from a history interaction on a server.
       From: http://hl7.org/fhir/bundle-type in valuesets.xml
 
 
-   .. attribute:: HistoryList
+   .. py:attribute:: HistoryList
       
 
       The bundle is a list of resources returned as a result of a search/query
@@ -91,7 +91,7 @@ Classes
       From: http://hl7.org/fhir/bundle-type in valuesets.xml
 
 
-   .. attribute:: SearchResults
+   .. py:attribute:: SearchResults
       
 
       The bundle is a set of resources collected into a single package for ease of
@@ -100,7 +100,7 @@ Classes
       From: http://hl7.org/fhir/bundle-type in valuesets.xml
 
 
-   .. attribute:: Collection
+   .. py:attribute:: Collection
       
 
       

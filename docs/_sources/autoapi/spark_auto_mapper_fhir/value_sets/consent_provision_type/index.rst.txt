@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.consent_provision_type`
-===============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.consent_provision_type`
+==================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.consent_provision_type
 
@@ -17,35 +17,35 @@ Classes
 
 
 
-.. class:: ConsentProvisionTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ConsentProvisionTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ConsentProvisionType
    From: http://hl7.org/fhir/consent-provision-type in valuesets.xml
        How a rule statement is applied, such as adding additional consent or removing
    consent.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/consent-provision-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/consent-provision-type
 
       
 
 
-.. class:: ConsentProvisionTypeCodeValues
+.. py:class:: ConsentProvisionTypeCodeValues
 
    Consent is denied for actions meeting these rules.
    From: http://hl7.org/fhir/consent-provision-type in valuesets.xml
 
-   .. attribute:: OptOut
+   .. py:attribute:: OptOut
       
 
       Consent is provided for actions meeting these rules.
       From: http://hl7.org/fhir/consent-provision-type in valuesets.xml
 
 
-   .. attribute:: OptIn
+   .. py:attribute:: OptIn
       
 
       

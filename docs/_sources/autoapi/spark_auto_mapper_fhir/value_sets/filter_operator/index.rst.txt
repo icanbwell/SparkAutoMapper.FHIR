@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.filter_operator`
-========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.filter_operator`
+===========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.filter_operator
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: FilterOperatorCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: FilterOperatorCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    FilterOperator
    From: http://hl7.org/fhir/filter-operator in valuesets.xml
        The kind of operation to perform as a part of a property based filter.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/filter-operator
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/filter-operator
 
       
 
 
-.. class:: FilterOperatorCodeValues
+.. py:class:: FilterOperatorCodeValues
 
    The specified property of the code equals the provided value.
    From: http://hl7.org/fhir/filter-operator in valuesets.xml
 
-   .. attribute:: Equals
+   .. py:attribute:: Equals
       
 
       Includes all concept ids that have a transitive is-a relationship with the
@@ -46,7 +46,7 @@ Classes
       From: http://hl7.org/fhir/filter-operator in valuesets.xml
 
 
-   .. attribute:: IsA_bySubsumption_
+   .. py:attribute:: IsA_bySubsumption_
       
 
       Includes all concept ids that have a transitive is-a relationship with the
@@ -55,7 +55,7 @@ Classes
       From: http://hl7.org/fhir/filter-operator in valuesets.xml
 
 
-   .. attribute:: DescendentOf_bySubsumption_
+   .. py:attribute:: DescendentOf_bySubsumption_
       
 
       The specified property of the code does not have an is-a relationship with the
@@ -63,7 +63,7 @@ Classes
       From: http://hl7.org/fhir/filter-operator in valuesets.xml
 
 
-   .. attribute:: Not_IsA_bySubsumption_
+   .. py:attribute:: Not_IsA_bySubsumption_
       
 
       The specified property of the code  matches the regex specified in the
@@ -71,7 +71,7 @@ Classes
       From: http://hl7.org/fhir/filter-operator in valuesets.xml
 
 
-   .. attribute:: RegularExpression
+   .. py:attribute:: RegularExpression
       
 
       The specified property of the code is in the set of codes or concepts
@@ -79,7 +79,7 @@ Classes
       From: http://hl7.org/fhir/filter-operator in valuesets.xml
 
 
-   .. attribute:: InSet
+   .. py:attribute:: InSet
       
 
       The specified property of the code is not in the set of codes or concepts
@@ -87,7 +87,7 @@ Classes
       From: http://hl7.org/fhir/filter-operator in valuesets.xml
 
 
-   .. attribute:: NotInSet
+   .. py:attribute:: NotInSet
       
 
       Includes all concept ids that have a transitive is-a relationship from the
@@ -96,7 +96,7 @@ Classes
       From: http://hl7.org/fhir/filter-operator in valuesets.xml
 
 
-   .. attribute:: Generalizes_bySubsumption_
+   .. py:attribute:: Generalizes_bySubsumption_
       
 
       The specified property of the code has at least one value (if the specified
@@ -105,7 +105,7 @@ Classes
       From: http://hl7.org/fhir/filter-operator in valuesets.xml
 
 
-   .. attribute:: Exists
+   .. py:attribute:: Exists
       
 
       

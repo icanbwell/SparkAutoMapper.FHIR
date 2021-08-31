@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.human_name_assembly_order`
-==================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.human_name_assembly_order`
+=====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.human_name_assembly_order
 
@@ -17,45 +17,45 @@ Classes
 
 
 
-.. class:: HumanNameAssemblyOrderCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: HumanNameAssemblyOrderCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    HumanNameAssemblyOrder
    From: http://terminology.hl7.org/CodeSystem/name-assembly-order in valuesets.xml
        A code that represents the preferred display order of the components of a
    human name.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/name-assembly-order
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/name-assembly-order
 
       
 
 
-.. class:: HumanNameAssemblyOrderCodeValues
+.. py:class:: HumanNameAssemblyOrderCodeValues
 
    From: http://terminology.hl7.org/CodeSystem/name-assembly-order in valuesets.xml
 
-   .. attribute:: OwnName
+   .. py:attribute:: OwnName
       
 
       From: http://terminology.hl7.org/CodeSystem/name-assembly-order in valuesets.xml
 
 
-   .. attribute:: PartnerName
+   .. py:attribute:: PartnerName
       
 
       From: http://terminology.hl7.org/CodeSystem/name-assembly-order in valuesets.xml
 
 
-   .. attribute:: PartnerNameFollowedByMaidenName
+   .. py:attribute:: PartnerNameFollowedByMaidenName
       
 
       From: http://terminology.hl7.org/CodeSystem/name-assembly-order in valuesets.xml
 
 
-   .. attribute:: OwnNameFollowedByPartnerName
+   .. py:attribute:: OwnNameFollowedByPartnerName
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.device_metric_operational_status`
-=========================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.device_metric_operational_status`
+============================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.device_metric_operational_status
 
@@ -17,48 +17,48 @@ Classes
 
 
 
-.. class:: DeviceMetricOperationalStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: DeviceMetricOperationalStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    DeviceMetricOperationalStatus
    From: http://hl7.org/fhir/metric-operational-status in valuesets.xml
        Describes the operational status of the DeviceMetric.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/metric-operational-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/metric-operational-status
 
       
 
 
-.. class:: DeviceMetricOperationalStatusCodeValues
+.. py:class:: DeviceMetricOperationalStatusCodeValues
 
    The DeviceMetric is operating and will generate DeviceObservations.
    From: http://hl7.org/fhir/metric-operational-status in valuesets.xml
 
-   .. attribute:: On
+   .. py:attribute:: On
       
 
       The DeviceMetric is not operating.
       From: http://hl7.org/fhir/metric-operational-status in valuesets.xml
 
 
-   .. attribute:: Off
+   .. py:attribute:: Off
       
 
       The DeviceMetric is operating, but will not generate any DeviceObservations.
       From: http://hl7.org/fhir/metric-operational-status in valuesets.xml
 
 
-   .. attribute:: Standby
+   .. py:attribute:: Standby
       
 
       The DeviceMetric was entered in error.
       From: http://hl7.org/fhir/metric-operational-status in valuesets.xml
 
 
-   .. attribute:: EnteredInError
+   .. py:attribute:: EnteredInError
       
 
       

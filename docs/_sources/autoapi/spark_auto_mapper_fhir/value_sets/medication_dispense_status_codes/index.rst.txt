@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.medication_dispense_status_codes`
-=========================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.medication_dispense_status_codes`
+============================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.medication_dispense_status_codes
 
@@ -17,43 +17,43 @@ Classes
 
 
 
-.. class:: MedicationDispenseStatusCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: MedicationDispenseStatusCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    MedicationDispense Status Codes
    From: http://terminology.hl7.org/CodeSystem/medicationdispense-status in valuesets.xml
        MedicationDispense Status Codes
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/medicationdispense-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/medicationdispense-status
 
       
 
 
-.. class:: MedicationDispenseStatusCodesCodeValues
+.. py:class:: MedicationDispenseStatusCodesCodeValues
 
    The core event has not started yet, but some staging activities have begun
    (e.g. initial compounding or packaging of medication). Preparation stages may
    be tracked for billing purposes.
    From: http://terminology.hl7.org/CodeSystem/medicationdispense-status in valuesets.xml
 
-   .. attribute:: Preparation
+   .. py:attribute:: Preparation
       
 
       The dispensed product is ready for pickup.
       From: http://terminology.hl7.org/CodeSystem/medicationdispense-status in valuesets.xml
 
 
-   .. attribute:: InProgress
+   .. py:attribute:: InProgress
       
 
       The dispensed product was not and will never be picked up by the patient.
       From: http://terminology.hl7.org/CodeSystem/medicationdispense-status in valuesets.xml
 
 
-   .. attribute:: Cancelled
+   .. py:attribute:: Cancelled
       
 
       The dispense process is paused while waiting for an external event to
@@ -62,21 +62,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/medicationdispense-status in valuesets.xml
 
 
-   .. attribute:: OnHold
+   .. py:attribute:: OnHold
       
 
       The dispensed product has been picked up.
       From: http://terminology.hl7.org/CodeSystem/medicationdispense-status in valuesets.xml
 
 
-   .. attribute:: Completed
+   .. py:attribute:: Completed
       
 
       The dispense was entered in error and therefore nullified.
       From: http://terminology.hl7.org/CodeSystem/medicationdispense-status in valuesets.xml
 
 
-   .. attribute:: EnteredInError
+   .. py:attribute:: EnteredInError
       
 
       Actions implied by the dispense have been permanently halted, before all of
@@ -84,14 +84,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/medicationdispense-status in valuesets.xml
 
 
-   .. attribute:: Stopped
+   .. py:attribute:: Stopped
       
 
       The dispense was declined and not performed.
       From: http://terminology.hl7.org/CodeSystem/medicationdispense-status in valuesets.xml
 
 
-   .. attribute:: Declined
+   .. py:attribute:: Declined
       
 
       The authoring system does not know which of the status values applies for this
@@ -100,7 +100,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/medicationdispense-status in valuesets.xml
 
 
-   .. attribute:: Unknown
+   .. py:attribute:: Unknown
       
 
       

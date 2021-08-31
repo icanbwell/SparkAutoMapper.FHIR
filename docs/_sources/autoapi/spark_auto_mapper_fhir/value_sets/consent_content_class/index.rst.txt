@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.consent_content_class`
-==============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.consent_content_class`
+=================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.consent_content_class
 
@@ -17,45 +17,45 @@ Classes
 
 
 
-.. class:: ConsentContentClassCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ConsentContentClassCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ConsentContentClass
    From: http://hl7.org/fhir/ValueSet/consent-content-class in valuesets.xml
        This value set includes the FHIR resource types, along with some other
    important content class codes
 
-   .. attribute:: codeset_urn_ietf_bcp_13
-      :annotation: :FhirUri = urn:ietf:bcp:13
+   .. py:attribute:: codeset_urn_ietf_bcp_13
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = urn:ietf:bcp:13
 
       http://hl7.org/fhir/resource-types
 
 
-   .. attribute:: codeset_resource_types
-      :annotation: :FhirUri = http://hl7.org/fhir/resource-types
+   .. py:attribute:: codeset_resource_types
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/resource-types
 
       urn:ietf:rfc:3986
 
 
-   .. attribute:: codeset_urn_ietf_rfc_3986
-      :annotation: :FhirUri = urn:ietf:rfc:3986
+   .. py:attribute:: codeset_urn_ietf_rfc_3986
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = urn:ietf:rfc:3986
 
       
 
 
-.. class:: ConsentContentClassCodeValues
+.. py:class:: ConsentContentClassCodeValues
 
    From: http://hl7.org/fhir/ValueSet/consent-content-class in valuesets.xml
 
-   .. attribute:: LipidLabReport
+   .. py:attribute:: LipidLabReport
       
 
       From: http://hl7.org/fhir/ValueSet/consent-content-class in valuesets.xml
 
 
-   .. attribute:: CDADocuments
+   .. py:attribute:: CDADocuments
       
 
       

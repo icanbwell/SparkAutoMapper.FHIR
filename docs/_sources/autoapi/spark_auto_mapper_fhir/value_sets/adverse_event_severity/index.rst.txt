@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.adverse_event_severity`
-===============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.adverse_event_severity`
+==================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.adverse_event_severity
 
@@ -17,38 +17,38 @@ Classes
 
 
 
-.. class:: AdverseEventSeverityCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: AdverseEventSeverityCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    AdverseEventSeverity
    From: http://terminology.hl7.org/CodeSystem/adverse-event-severity in valuesets.xml
        The severity of the adverse event itself, in direct relation to the subject.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/adverse-event-severity
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/adverse-event-severity
 
       
 
 
-.. class:: AdverseEventSeverityCodeValues
+.. py:class:: AdverseEventSeverityCodeValues
 
    From: http://terminology.hl7.org/CodeSystem/adverse-event-severity in valuesets.xml
 
-   .. attribute:: Mild
+   .. py:attribute:: Mild
       
 
       From: http://terminology.hl7.org/CodeSystem/adverse-event-severity in valuesets.xml
 
 
-   .. attribute:: Moderate
+   .. py:attribute:: Moderate
       
 
       From: http://terminology.hl7.org/CodeSystem/adverse-event-severity in valuesets.xml
 
 
-   .. attribute:: Severe
+   .. py:attribute:: Severe
       
 
       

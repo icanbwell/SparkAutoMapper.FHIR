@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.coverage_eligibility_response_auth_support_codes`
-=========================================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.coverage_eligibility_response_auth_support_codes`
+============================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.coverage_eligibility_response_auth_support_codes
 
@@ -17,48 +17,48 @@ Classes
 
 
 
-.. class:: CoverageEligibilityResponseAuthSupportCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: CoverageEligibilityResponseAuthSupportCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    CoverageEligibilityResponseAuthSupportCodes
    From: http://terminology.hl7.org/CodeSystem/coverageeligibilityresponse-ex-auth-support in valuesets.xml
        This value set includes CoverageEligibilityResponse Auth Support codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/coverageeligibilityresponse-ex-auth-support
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/coverageeligibilityresponse-ex-auth-support
 
       
 
 
-.. class:: CoverageEligibilityResponseAuthSupportCodesCodeValues
+.. py:class:: CoverageEligibilityResponseAuthSupportCodesCodeValues
 
    A request or authorization for laboratory diagnostic tests.
    From: http://terminology.hl7.org/CodeSystem/coverageeligibilityresponse-ex-auth-support in valuesets.xml
 
-   .. attribute:: LabOrder
+   .. py:attribute:: LabOrder
       
 
       A report on laboratory diagnostic test(s).
       From: http://terminology.hl7.org/CodeSystem/coverageeligibilityresponse-ex-auth-support in valuesets.xml
 
 
-   .. attribute:: LabReport
+   .. py:attribute:: LabReport
       
 
       A request or authorization for diagnostic imaging.
       From: http://terminology.hl7.org/CodeSystem/coverageeligibilityresponse-ex-auth-support in valuesets.xml
 
 
-   .. attribute:: DiagnosticImageOrder
+   .. py:attribute:: DiagnosticImageOrder
       
 
       A report on diagnostic image(s).
       From: http://terminology.hl7.org/CodeSystem/coverageeligibilityresponse-ex-auth-support in valuesets.xml
 
 
-   .. attribute:: DiagnosticImageReport
+   .. py:attribute:: DiagnosticImageReport
       
 
       A report from a licensed professional regarding the siutation, condition or
@@ -66,7 +66,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/coverageeligibilityresponse-ex-auth-support in valuesets.xml
 
 
-   .. attribute:: ProfessionalReport
+   .. py:attribute:: ProfessionalReport
       
 
       A formal accident report as would be filed with police or a simlar official
@@ -74,21 +74,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/coverageeligibilityresponse-ex-auth-support in valuesets.xml
 
 
-   .. attribute:: AccidentReport
+   .. py:attribute:: AccidentReport
       
 
       A physical model of the affected area.
       From: http://terminology.hl7.org/CodeSystem/coverageeligibilityresponse-ex-auth-support in valuesets.xml
 
 
-   .. attribute:: Model
+   .. py:attribute:: Model
       
 
       A photograph of the affected area.
       From: http://terminology.hl7.org/CodeSystem/coverageeligibilityresponse-ex-auth-support in valuesets.xml
 
 
-   .. attribute:: Picture
+   .. py:attribute:: Picture
       
 
       

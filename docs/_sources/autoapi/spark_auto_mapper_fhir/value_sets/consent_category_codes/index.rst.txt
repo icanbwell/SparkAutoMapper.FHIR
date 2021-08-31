@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.consent_category_codes`
-===============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.consent_category_codes`
+==================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.consent_category_codes
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: ConsentCategoryCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ConsentCategoryCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ConsentCategoryCodes
    From: http://terminology.hl7.org/CodeSystem/consentcategorycodes in valuesets.xml
@@ -34,20 +34,20 @@ Classes
    procedures; health care directive (Living Will); advance directive, do not
    resuscitate (DNR); Physician Orders for Life-Sustaining Treatment (POLST)
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/consentcategorycodes
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/consentcategorycodes
 
       
 
 
-.. class:: ConsentCategoryCodesCodeValues
+.. py:class:: ConsentCategoryCodesCodeValues
 
    Any instructions, written or given verbally by a patient to a health care
    provider in anticipation of potential need for medical treatment. [2005 Honor
    My Wishes]
    From: http://terminology.hl7.org/CodeSystem/consentcategorycodes in valuesets.xml
 
-   .. attribute:: AdvanceDirective
+   .. py:attribute:: AdvanceDirective
       
 
       A legal document, signed by both the patient and their provider, stating a
@@ -57,7 +57,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/consentcategorycodes in valuesets.xml
 
 
-   .. attribute:: DoNotResuscitate
+   .. py:attribute:: DoNotResuscitate
       
 
       Opt-in to disclosure of health information for emergency only consent
@@ -69,7 +69,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/consentcategorycodes in valuesets.xml
 
 
-   .. attribute:: EmergencyOnly
+   .. py:attribute:: EmergencyOnly
       
 
       Patient's document telling patient's health care provider what the patient
@@ -79,7 +79,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/consentcategorycodes in valuesets.xml
 
 
-   .. attribute:: HealthCareDirective
+   .. py:attribute:: HealthCareDirective
       
 
       Acknowledgement of custodian notice of privacy practices. Usage Notes: This
@@ -90,7 +90,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/consentcategorycodes in valuesets.xml
 
 
-   .. attribute:: NoticeOfPrivacyPractices
+   .. py:attribute:: NoticeOfPrivacyPractices
       
 
       The Physician Order for Life-Sustaining Treatment form records a person's
@@ -102,7 +102,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/consentcategorycodes in valuesets.xml
 
 
-   .. attribute:: POLST
+   .. py:attribute:: POLST
       
 
       Consent to have healthcare information in an electronic health record accessed
@@ -111,7 +111,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/consentcategorycodes in valuesets.xml
 
 
-   .. attribute:: ResearchInformationAccess
+   .. py:attribute:: ResearchInformationAccess
       
 
       Consent to have de-identified healthcare information in an electronic health
@@ -121,7 +121,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/consentcategorycodes in valuesets.xml
 
 
-   .. attribute:: De_identifiedInformationAccess
+   .. py:attribute:: De_identifiedInformationAccess
       
 
       Consent to have de-identified healthcare information in an electronic health
@@ -131,7 +131,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/consentcategorycodes in valuesets.xml
 
 
-   .. attribute:: Re_identifiableInformationAccess
+   .. py:attribute:: Re_identifiableInformationAccess
       
 
       

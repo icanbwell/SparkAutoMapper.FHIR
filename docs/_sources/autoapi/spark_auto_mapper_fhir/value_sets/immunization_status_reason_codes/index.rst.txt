@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.immunization_status_reason_codes`
-=========================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.immunization_status_reason_codes`
+============================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.immunization_status_reason_codes
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: ImmunizationStatusReasonCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ImmunizationStatusReasonCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ImmunizationStatusReasonCodes
    From: http://hl7.org/fhir/ValueSet/immunization-status-reason in valuesets.xml
@@ -29,24 +29,24 @@ Classes
    support describing the reason why a dose of vaccine was not administered. This
    value set is provided as a suggestive example.
 
-   .. attribute:: codeset_sct
-      :annotation: :FhirUri = http://snomed.info/sct
+   .. py:attribute:: codeset_sct
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://snomed.info/sct
 
       http://terminology.hl7.org/CodeSystem/v3-ActReason
 
 
-   .. attribute:: codeset_v3_ActReason
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ActReason
+   .. py:attribute:: codeset_v3_ActReason
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-ActReason
 
       
 
 
-.. class:: ImmunizationStatusReasonCodesCodeValues
+.. py:class:: ImmunizationStatusReasonCodesCodeValues
 
    Identifies the reason the patient is assigned to this accommodation type
    From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
-   .. attribute:: ActAccommodationReason
+   .. py:attribute:: ActAccommodationReason
       
 
       Description:Codes used to specify reasons or criteria relating to coverage
@@ -57,7 +57,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: ActCoverageReason
+   .. py:attribute:: ActCoverageReason
       
 
       Description:The rationale or purpose for an act relating to information
@@ -66,14 +66,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: ActInformationManagementReason
+   .. py:attribute:: ActInformationManagementReason
       
 
       Description: Types of reasons why a substance is invalid for use.
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: ActInvalidReason
+   .. py:attribute:: ActInvalidReason
       
 
       Domain specifies the codes used to describe reasons why a Provider is
@@ -81,7 +81,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: ActInvoiceCancelReason
+   .. py:attribute:: ActInvoiceCancelReason
       
 
       A coded description of the reason for why a patient did not receive a
@@ -91,7 +91,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: ActNoImmunizationReason
+   .. py:attribute:: ActNoImmunizationReason
       
 
       Indicates why a fulfiller refused to fulfill a supply order, and considered it
@@ -102,7 +102,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: ActSupplyFulfillmentRefusalReason
+   .. py:attribute:: ActSupplyFulfillmentRefusalReason
       
 
       Definition:Specifies the reason that an event occurred in a clinical research
@@ -110,7 +110,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: ClinicalResearchEventReason
+   .. py:attribute:: ClinicalResearchEventReason
       
 
       Definition:SSpecifies the reason that a test was performed or observation
@@ -125,14 +125,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: ClinicalResearchObservationReason
+   .. py:attribute:: ClinicalResearchObservationReason
       
 
       Description:Indicates why the prescription should be suspended.
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: CombinedPharmacyOrderSuspendReasonCode
+   .. py:attribute:: CombinedPharmacyOrderSuspendReasonCode
       
 
       Description:Identifies reasons for nullifying (retracting) a particular
@@ -140,28 +140,28 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: ControlActNullificationReasonCode
+   .. py:attribute:: ControlActNullificationReasonCode
       
 
       Description: Reasons to refuse a transaction to be undone.
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: ControlActNullificationRefusalReasonType
+   .. py:attribute:: ControlActNullificationRefusalReasonType
       
 
       Identifies why a specific query, request, or other trigger event occurred.
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: ControlActReason
+   .. py:attribute:: ControlActReason
       
 
       Description:Identifies why a change is being made to a  record.
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: GenericUpdateReasonCode
+   .. py:attribute:: GenericUpdateReasonCode
       
 
       Definition:A collection of concepts identifying why the patient's profile is
@@ -169,7 +169,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: PatientProfileQueryReason
+   .. py:attribute:: PatientProfileQueryReason
       
 
       Definition:Indicates why the request to transfer a prescription from one
@@ -177,7 +177,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: PharmacySupplyRequestFulfillerRevisionRefusalReasonCode
+   .. py:attribute:: PharmacySupplyRequestFulfillerRevisionRefusalReasonCode
       
 
       Description: Identifies why a request to add (or activate) a record is being
@@ -187,21 +187,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: RefusalReasonCode
+   .. py:attribute:: RefusalReasonCode
       
 
       Reasons for cancelling or rescheduling an Appointment
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: SchedulingActReason
+   .. py:attribute:: SchedulingActReason
       
 
       Indicates why the act revision (status update) is being refused.
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: StatusRevisionRefusalReasonCode
+   .. py:attribute:: StatusRevisionRefusalReasonCode
       
 
       Definition:Indicates why the requested authorization to prescribe or dispense
@@ -209,7 +209,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: SubstanceAdministrationPermissionRefusalReasonCode
+   .. py:attribute:: SubstanceAdministrationPermissionRefusalReasonCode
       
 
       Reasons why substitution of a substance administration request is not
@@ -217,14 +217,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: SubstanceAdminSubstitutionNotAllowedReason
+   .. py:attribute:: SubstanceAdminSubstitutionNotAllowedReason
       
 
       SubstanceAdminSubstitutionReason
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: SubstanceAdminSubstitutionReason
+   .. py:attribute:: SubstanceAdminSubstitutionReason
       
 
       The explanation for why a patient is moved from one location to another within
@@ -232,7 +232,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: TransferActReason
+   .. py:attribute:: TransferActReason
       
 
       Definition: This domain is used to document reasons for providing a billable
@@ -241,13 +241,13 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: ActBillableServiceReason
+   .. py:attribute:: ActBillableServiceReason
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: BONUS
+   .. py:attribute:: BONUS
       
 
       Description:The level of coverage under the policy or program is available
@@ -255,7 +255,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: ChildrenOnly
+   .. py:attribute:: ChildrenOnly
       
 
       Description:The level of coverage under the policy or program is available
@@ -263,7 +263,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: DependentsOnly
+   .. py:attribute:: DependentsOnly
       
 
       Description:The level of coverage under the policy or program is available to
@@ -271,13 +271,13 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: EmployeeAndChildren
+   .. py:attribute:: EmployeeAndChildren
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: EDU
+   .. py:attribute:: EDU
       
 
       Description:The level of coverage under the policy or program is available
@@ -285,7 +285,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: EmployeeOnly
+   .. py:attribute:: EmployeeOnly
       
 
       Description:The level of coverage under the policy or program is available to
@@ -293,7 +293,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: EmployeeAndSpouse
+   .. py:attribute:: EmployeeAndSpouse
       
 
       Description:The level of coverage under the policy or program is available to
@@ -301,7 +301,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: Family
+   .. py:attribute:: Family
       
 
       Description:The level of coverage under the policy or program is available to
@@ -309,31 +309,31 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: Individual
+   .. py:attribute:: Individual
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: INVOICE
+   .. py:attribute:: INVOICE
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: PROA
+   .. py:attribute:: PROA
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: RECOV
+   .. py:attribute:: RECOV
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: RETRO
+   .. py:attribute:: RETRO
       
 
       Description:The level of coverage under the policy or program is available to
@@ -341,7 +341,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: SpouseAndChildren
+   .. py:attribute:: SpouseAndChildren
       
 
       Description:The level of coverage under the policy or program is available
@@ -349,37 +349,37 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: SpouseOnly
+   .. py:attribute:: SpouseOnly
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActReason in v3-codesystems.xml
 
 
-   .. attribute:: TRAN
+   .. py:attribute:: TRAN
       
 
       From: http://hl7.org/fhir/ValueSet/immunization-status-reason in valuesets.xml
 
 
-   .. attribute:: IMMUNE
+   .. py:attribute:: IMMUNE
       
 
       From: http://hl7.org/fhir/ValueSet/immunization-status-reason in valuesets.xml
 
 
-   .. attribute:: MEDPREC
+   .. py:attribute:: MEDPREC
       
 
       From: http://hl7.org/fhir/ValueSet/immunization-status-reason in valuesets.xml
 
 
-   .. attribute:: OSTOCK
+   .. py:attribute:: OSTOCK
       
 
       From: http://hl7.org/fhir/ValueSet/immunization-status-reason in valuesets.xml
 
 
-   .. attribute:: PATOBJ
+   .. py:attribute:: PATOBJ
       
 
       

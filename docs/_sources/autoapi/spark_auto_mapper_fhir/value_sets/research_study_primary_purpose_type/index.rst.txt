@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.research_study_primary_purpose_type`
-============================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.research_study_primary_purpose_type`
+===============================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.research_study_primary_purpose_type
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: ResearchStudyPrimaryPurposeTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ResearchStudyPrimaryPurposeTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ResearchStudyPrimaryPurposeType
    From: http://terminology.hl7.org/CodeSystem/research-study-prim-purp-type in valuesets.xml
        Codes for the main intent of the study.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/research-study-prim-purp-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/research-study-prim-purp-type
 
       
 
 
-.. class:: ResearchStudyPrimaryPurposeTypeCodeValues
+.. py:class:: ResearchStudyPrimaryPurposeTypeCodeValues
 
    One or more interventions are being evaluated for treating a disease,
    syndrome, or condition.
    From: http://terminology.hl7.org/CodeSystem/research-study-prim-purp-type in valuesets.xml
 
-   .. attribute:: Treatment
+   .. py:attribute:: Treatment
       
 
       One or more interventions are being assessed for preventing the development of
@@ -46,7 +46,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/research-study-prim-purp-type in valuesets.xml
 
 
-   .. attribute:: Prevention
+   .. py:attribute:: Prevention
       
 
       One or more interventions are being evaluated for identifying a disease or
@@ -54,7 +54,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/research-study-prim-purp-type in valuesets.xml
 
 
-   .. attribute:: Diagnostic
+   .. py:attribute:: Diagnostic
       
 
       One or more interventions are evaluated for maximizing comfort, minimizing
@@ -63,7 +63,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/research-study-prim-purp-type in valuesets.xml
 
 
-   .. attribute:: SupportiveCare
+   .. py:attribute:: SupportiveCare
       
 
       One or more interventions are assessed or examined for identifying a
@@ -72,7 +72,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/research-study-prim-purp-type in valuesets.xml
 
 
-   .. attribute:: Screening
+   .. py:attribute:: Screening
       
 
       One or more interventions for evaluating the delivery, processes, management,
@@ -80,7 +80,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/research-study-prim-purp-type in valuesets.xml
 
 
-   .. attribute:: HealthServicesResearch
+   .. py:attribute:: HealthServicesResearch
       
 
       One or more interventions for examining the basic mechanism of action (for
@@ -88,7 +88,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/research-study-prim-purp-type in valuesets.xml
 
 
-   .. attribute:: BasicScience
+   .. py:attribute:: BasicScience
       
 
       An intervention of a device product is being evaluated to determine the
@@ -98,7 +98,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/research-study-prim-purp-type in valuesets.xml
 
 
-   .. attribute:: DeviceFeasibility
+   .. py:attribute:: DeviceFeasibility
       
 
       

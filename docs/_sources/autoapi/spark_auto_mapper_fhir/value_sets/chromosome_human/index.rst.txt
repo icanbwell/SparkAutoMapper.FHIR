@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.chromosome_human`
-=========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.chromosome_human`
+============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.chromosome_human
 
@@ -17,188 +17,188 @@ Classes
 
 
 
-.. class:: Chromosome_humanCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: Chromosome_humanCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    chromosome-human
    From: http://terminology.hl7.org/CodeSystem/chromosome-human in valuesets.xml
        Chromosome number for human.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/chromosome-human
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/chromosome-human
 
       
 
 
-.. class:: Chromosome_humanCodeValues
+.. py:class:: Chromosome_humanCodeValues
 
    chromosome 1.
    From: http://terminology.hl7.org/CodeSystem/chromosome-human in valuesets.xml
 
-   .. attribute:: Chromosome1
+   .. py:attribute:: Chromosome1
       
 
       chromosome 2.
       From: http://terminology.hl7.org/CodeSystem/chromosome-human in valuesets.xml
 
 
-   .. attribute:: Chromosome2
+   .. py:attribute:: Chromosome2
       
 
       chromosome 3.
       From: http://terminology.hl7.org/CodeSystem/chromosome-human in valuesets.xml
 
 
-   .. attribute:: Chromosome3
+   .. py:attribute:: Chromosome3
       
 
       chromosome 4.
       From: http://terminology.hl7.org/CodeSystem/chromosome-human in valuesets.xml
 
 
-   .. attribute:: Chromosome4
+   .. py:attribute:: Chromosome4
       
 
       chromosome 5.
       From: http://terminology.hl7.org/CodeSystem/chromosome-human in valuesets.xml
 
 
-   .. attribute:: Chromosome5
+   .. py:attribute:: Chromosome5
       
 
       chromosome 6.
       From: http://terminology.hl7.org/CodeSystem/chromosome-human in valuesets.xml
 
 
-   .. attribute:: Chromosome6
+   .. py:attribute:: Chromosome6
       
 
       chromosome 7.
       From: http://terminology.hl7.org/CodeSystem/chromosome-human in valuesets.xml
 
 
-   .. attribute:: Chromosome7
+   .. py:attribute:: Chromosome7
       
 
       chromosome 8.
       From: http://terminology.hl7.org/CodeSystem/chromosome-human in valuesets.xml
 
 
-   .. attribute:: Chromosome8
+   .. py:attribute:: Chromosome8
       
 
       chromosome 9.
       From: http://terminology.hl7.org/CodeSystem/chromosome-human in valuesets.xml
 
 
-   .. attribute:: Chromosome9
+   .. py:attribute:: Chromosome9
       
 
       chromosome 10.
       From: http://terminology.hl7.org/CodeSystem/chromosome-human in valuesets.xml
 
 
-   .. attribute:: Chromosome10
+   .. py:attribute:: Chromosome10
       
 
       chromosome 11.
       From: http://terminology.hl7.org/CodeSystem/chromosome-human in valuesets.xml
 
 
-   .. attribute:: Chromosome11
+   .. py:attribute:: Chromosome11
       
 
       chromosome 12.
       From: http://terminology.hl7.org/CodeSystem/chromosome-human in valuesets.xml
 
 
-   .. attribute:: Chromosome12
+   .. py:attribute:: Chromosome12
       
 
       chromosome 13.
       From: http://terminology.hl7.org/CodeSystem/chromosome-human in valuesets.xml
 
 
-   .. attribute:: Chromosome13
+   .. py:attribute:: Chromosome13
       
 
       chromosome 14.
       From: http://terminology.hl7.org/CodeSystem/chromosome-human in valuesets.xml
 
 
-   .. attribute:: Chromosome14
+   .. py:attribute:: Chromosome14
       
 
       chromosome 15.
       From: http://terminology.hl7.org/CodeSystem/chromosome-human in valuesets.xml
 
 
-   .. attribute:: Chromosome15
+   .. py:attribute:: Chromosome15
       
 
       chromosome 16.
       From: http://terminology.hl7.org/CodeSystem/chromosome-human in valuesets.xml
 
 
-   .. attribute:: Chromosome16
+   .. py:attribute:: Chromosome16
       
 
       chromosome 17.
       From: http://terminology.hl7.org/CodeSystem/chromosome-human in valuesets.xml
 
 
-   .. attribute:: Chromosome17
+   .. py:attribute:: Chromosome17
       
 
       chromosome 18.
       From: http://terminology.hl7.org/CodeSystem/chromosome-human in valuesets.xml
 
 
-   .. attribute:: Chromosome18
+   .. py:attribute:: Chromosome18
       
 
       chromosome 19.
       From: http://terminology.hl7.org/CodeSystem/chromosome-human in valuesets.xml
 
 
-   .. attribute:: Chromosome19
+   .. py:attribute:: Chromosome19
       
 
       chromosome 20.
       From: http://terminology.hl7.org/CodeSystem/chromosome-human in valuesets.xml
 
 
-   .. attribute:: Chromosome20
+   .. py:attribute:: Chromosome20
       
 
       chromosome 21.
       From: http://terminology.hl7.org/CodeSystem/chromosome-human in valuesets.xml
 
 
-   .. attribute:: Chromosome21
+   .. py:attribute:: Chromosome21
       
 
       chromosome 22.
       From: http://terminology.hl7.org/CodeSystem/chromosome-human in valuesets.xml
 
 
-   .. attribute:: Chromosome22
+   .. py:attribute:: Chromosome22
       
 
       chromosome X.
       From: http://terminology.hl7.org/CodeSystem/chromosome-human in valuesets.xml
 
 
-   .. attribute:: ChromosomeX
+   .. py:attribute:: ChromosomeX
       
 
       chromosome Y.
       From: http://terminology.hl7.org/CodeSystem/chromosome-human in valuesets.xml
 
 
-   .. attribute:: ChromosomeY
+   .. py:attribute:: ChromosomeY
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.employment_status_odh`
-==============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.employment_status_odh`
+=================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.employment_status_odh
 
@@ -17,23 +17,23 @@ Classes
 
 
 
-.. class:: EmploymentStatusODH(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: EmploymentStatusODH(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.employmentStatusODH
    From: http://terminology.hl7.org/ValueSet/v3-employmentStatusODH in v3-codesystems.xml
         Concepts representing whether a person does or does not currently have a job
    or is not currently in the labor pool seeking employment.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ObservationValue
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-ObservationValue
 
       
 
 
-.. class:: EmploymentStatusODHValues
+.. py:class:: EmploymentStatusODHValues
 
    Codes specify the category of observation, evidence, or document used to
    assess for services, e.g., discharge planning, or to establish eligibility for
@@ -41,7 +41,7 @@ Classes
    observation values.
    From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
 
-   .. attribute:: ActCoverageAssessmentObservationValue
+   .. py:attribute:: ActCoverageAssessmentObservationValue
       
 
       Indicates the result of a particular allergy test.  E.g. Negative, Mild,
@@ -49,7 +49,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
 
 
-   .. attribute:: AllergyTestValue
+   .. py:attribute:: AllergyTestValue
       
 
       Observation values that communicate the method used in a quality measure to
@@ -57,7 +57,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
 
 
-   .. attribute:: CompositeMeasureScoring
+   .. py:attribute:: CompositeMeasureScoring
       
 
       Description:Coded observation values for coverage limitations, for e.g., types
@@ -65,7 +65,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
 
 
-   .. attribute:: CoverageLimitObservationValue
+   .. py:attribute:: CoverageLimitObservationValue
       
 
       A clinical judgment as to the worst case result of a future exposure
@@ -75,7 +75,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
 
 
-   .. attribute:: CriticalityObservationValue
+   .. py:attribute:: CriticalityObservationValue
       
 
       Concepts representing whether a person does or does not currently have a job
@@ -83,15 +83,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
 
 
-   .. attribute:: _EmploymentStatus
-      
-
-      Description: The domain contains genetic analysis specific observation values,
-      e.g. Homozygote, Heterozygote, etc.
-      From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
-
-
-   .. attribute:: GeneticObservationValue
+   .. py:attribute:: GeneticObservationValue
       
 
       Observation values used to indicate the type of scoring (e.g. proportion,
@@ -99,7 +91,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
 
 
-   .. attribute:: ObservationMeasureScoring
+   .. py:attribute:: ObservationMeasureScoring
       
 
       Observation values used to indicate what kind of health quality measure is
@@ -107,7 +99,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
 
 
-   .. attribute:: ObservationMeasureType
+   .. py:attribute:: ObservationMeasureType
       
 
       Observation values used to assert various populations that a subject falls
@@ -115,28 +107,28 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
 
 
-   .. attribute:: ObservationPopulationInclusion
+   .. py:attribute:: ObservationPopulationInclusion
       
 
       PartialCompletionScale
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
 
 
-   .. attribute:: PartialCompletionScale
+   .. py:attribute:: PartialCompletionScale
       
 
       Observation values used to indicate security observation metadata.
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
 
 
-   .. attribute:: SecurityObservationValue
+   .. py:attribute:: SecurityObservationValue
       
 
       Potential values for observations of severity.
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
 
 
-   .. attribute:: SeverityObservation
+   .. py:attribute:: SeverityObservation
       
 
       Contains codes for defining the observed, physical position of a subject, such
@@ -146,18 +138,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
 
 
-   .. attribute:: _SubjectBodyPosition
-      
-
-      Values for observations of verification act results
-
-
-                                 Examples: Verified, not verified, verified with
-      warning.
-      From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
-
-
-   .. attribute:: VerificationOutcome
+   .. py:attribute:: VerificationOutcome
       
 
       Concepts that describe an individual's typical arrangement of working hours
@@ -165,14 +146,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
 
 
-   .. attribute:: _WorkSchedule
-      
-
-      AnnotationValue
-      From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
-
-
-   .. attribute:: AnnotationValue
+   .. py:attribute:: AnnotationValue
       
 
       Description:Used in a patient care message to value simple clinical (non-lab)
@@ -180,7 +154,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
 
 
-   .. attribute:: CommonClinicalObservation
+   .. py:attribute:: CommonClinicalObservation
       
 
       This domain is established as a parent to a variety of value domains being
@@ -190,7 +164,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
 
 
-   .. attribute:: IndividualCaseSafetyReportValueDomains
+   .. py:attribute:: IndividualCaseSafetyReportValueDomains
       
 
       Indicates the specific observation result which is the reason for the action
@@ -199,7 +173,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
 
 
-   .. attribute:: IndicationValue
+   .. py:attribute:: IndicationValue
       
 
       

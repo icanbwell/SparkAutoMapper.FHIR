@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.iso21089_2017_health_record_lifecycle_events`
-=====================================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.iso21089_2017_health_record_lifecycle_events`
+========================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.iso21089_2017_health_record_lifecycle_events
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: ISO21089_2017HealthRecordLifecycleEventsCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ISO21089_2017HealthRecordLifecycleEventsCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ISO 21089-2017 Health Record Lifecycle Events
    From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
@@ -31,19 +31,19 @@ Classes
    Lifecycle Event Implementation Guide, balloted and (to be) published with FHIR
    STU-3.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle
 
       
 
 
-.. class:: ISO21089_2017HealthRecordLifecycleEventsCodeValues
+.. py:class:: ISO21089_2017HealthRecordLifecycleEventsCodeValues
 
    Occurs when an agent causes the system to obtain and open a record entry for
    inspection or review.
    From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
 
-   .. attribute:: Access_ViewRecordLifecycleEvent
+   .. py:attribute:: Access_ViewRecordLifecycleEvent
       
 
       Occurs when an agent causes the system to tag or otherwise indicate special
@@ -54,7 +54,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
 
 
-   .. attribute:: AddLegalHoldRecordLifecycleEvent
+   .. py:attribute:: AddLegalHoldRecordLifecycleEvent
       
 
       Occurs when an agent makes any change to record entry content currently
@@ -62,7 +62,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
 
 
-   .. attribute:: Amend_Update_RecordLifecycleEvent
+   .. py:attribute:: Amend_Update_RecordLifecycleEvent
       
 
       Occurs when an agent causes the system to create and move archive artifacts
@@ -70,7 +70,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
 
 
-   .. attribute:: ArchiveRecordLifecycleEvent
+   .. py:attribute:: ArchiveRecordLifecycleEvent
       
 
       Occurs when an agent causes the system to capture the agent’s digital
@@ -79,7 +79,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
 
 
-   .. attribute:: AttestRecordLifecycleEvent
+   .. py:attribute:: AttestRecordLifecycleEvent
       
 
       Occurs when an agent causes the system to decode record entry content from a
@@ -87,7 +87,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
 
 
-   .. attribute:: DecryptRecordLifecycleEvent
+   .. py:attribute:: DecryptRecordLifecycleEvent
       
 
       Occurs when an agent causes the system to scrub record entry content to reduce
@@ -96,7 +96,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
 
 
-   .. attribute:: De_Identify_Anononymize_RecordLifecycleEvent
+   .. py:attribute:: De_Identify_Anononymize_RecordLifecycleEvent
       
 
       Occurs when an agent causes the system to tag record entry(ies) as obsolete,
@@ -104,7 +104,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
 
 
-   .. attribute:: DeprecateRecordLifecycleEvent
+   .. py:attribute:: DeprecateRecordLifecycleEvent
       
 
       Occurs when an agent causes the system to permanently erase record entry
@@ -112,7 +112,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
 
 
-   .. attribute:: Destroy_DeleteRecordLifecycleEvent
+   .. py:attribute:: Destroy_DeleteRecordLifecycleEvent
       
 
       Occurs when an agent causes the system to release, transfer, provision access
@@ -120,7 +120,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
 
 
-   .. attribute:: DiscloseRecordLifecycleEvent
+   .. py:attribute:: DiscloseRecordLifecycleEvent
       
 
       Occurs when an agent causes the system to encode record entry content in a
@@ -128,7 +128,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
 
 
-   .. attribute:: EncryptRecordLifecycleEvent
+   .. py:attribute:: EncryptRecordLifecycleEvent
       
 
       Occurs when an agent causes the system to selectively pull out a subset of
@@ -136,14 +136,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
 
 
-   .. attribute:: ExtractRecordLifecycleEvent
+   .. py:attribute:: ExtractRecordLifecycleEvent
       
 
       Occurs when an agent causes the system to connect related record entries.
       From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
 
 
-   .. attribute:: LinkRecordLifecycleEvent
+   .. py:attribute:: LinkRecordLifecycleEvent
       
 
       Occurs when an agent causes the system to combine or join content from two or
@@ -151,7 +151,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
 
 
-   .. attribute:: MergeRecordLifecycleEvent
+   .. py:attribute:: MergeRecordLifecycleEvent
       
 
       Occurs when an agent causes the system to: a) initiate capture of potential
@@ -160,7 +160,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
 
 
-   .. attribute:: Originate_RetainRecordLifecycleEvent
+   .. py:attribute:: Originate_RetainRecordLifecycleEvent
       
 
       Occurs when an agent causes the system to remove record entry content to
@@ -169,7 +169,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
 
 
-   .. attribute:: PseudonymizeRecordLifecycleEvent
+   .. py:attribute:: PseudonymizeRecordLifecycleEvent
       
 
       Occurs when an agent causes the system to recreate or restore full status to
@@ -177,7 +177,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
 
 
-   .. attribute:: Re_activateRecordLifecycleEvent
+   .. py:attribute:: Re_activateRecordLifecycleEvent
       
 
       Occurs when an agent causes the system to a) initiate capture of data content
@@ -186,7 +186,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
 
 
-   .. attribute:: Receive_RetainRecordLifecycleEvent
+   .. py:attribute:: Receive_RetainRecordLifecycleEvent
       
 
       Occurs when an agent causes the system to restore information to data that
@@ -194,7 +194,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
 
 
-   .. attribute:: Re_identifyRecordLifecycleEvent
+   .. py:attribute:: Re_identifyRecordLifecycleEvent
       
 
       Occurs when an agent causes the system to remove a tag or other cues for
@@ -203,7 +203,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
 
 
-   .. attribute:: RemoveLegalHoldRecordLifecycleEvent
+   .. py:attribute:: RemoveLegalHoldRecordLifecycleEvent
       
 
       Occurs when an agent causes the system to produce and deliver record entry
@@ -211,7 +211,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
 
 
-   .. attribute:: Report_Output_RecordLifecycleEvent
+   .. py:attribute:: Report_Output_RecordLifecycleEvent
       
 
       Occurs when an agent causes the system to recreate record entries and their
@@ -219,7 +219,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
 
 
-   .. attribute:: RestoreRecordLifecycleEvent
+   .. py:attribute:: RestoreRecordLifecycleEvent
       
 
       Occurs when an agent causes the system to change the form, language or code
@@ -227,7 +227,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
 
 
-   .. attribute:: Transform_TranslateRecordLifecycleEvent
+   .. py:attribute:: Transform_TranslateRecordLifecycleEvent
       
 
       Occurs when an agent causes the system to send record entry content from one
@@ -235,7 +235,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
 
 
-   .. attribute:: TransmitRecordLifecycleEvent
+   .. py:attribute:: TransmitRecordLifecycleEvent
       
 
       Occurs when an agent causes the system to disconnect two or more record
@@ -243,7 +243,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
 
 
-   .. attribute:: UnlinkRecordLifecycleEvent
+   .. py:attribute:: UnlinkRecordLifecycleEvent
       
 
       Occurs when an agent causes the system to reverse a previous record entry
@@ -251,7 +251,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
 
 
-   .. attribute:: UnmergeRecordLifecycleEvent
+   .. py:attribute:: UnmergeRecordLifecycleEvent
       
 
       Occurs when an agent causes the system to confirm compliance of data or data
@@ -260,7 +260,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle in valuesets.xml
 
 
-   .. attribute:: VerifyRecordLifecycleEvent
+   .. py:attribute:: VerifyRecordLifecycleEvent
       
 
       

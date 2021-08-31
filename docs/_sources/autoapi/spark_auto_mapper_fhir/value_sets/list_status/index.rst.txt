@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.list_status`
-====================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.list_status`
+=======================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.list_status
 
@@ -17,41 +17,41 @@ Classes
 
 
 
-.. class:: ListStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ListStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ListStatus
    From: http://hl7.org/fhir/list-status in valuesets.xml
        The current state of the list.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/list-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/list-status
 
       
 
 
-.. class:: ListStatusCodeValues
+.. py:class:: ListStatusCodeValues
 
    The list is considered to be an active part of the patient's record.
    From: http://hl7.org/fhir/list-status in valuesets.xml
 
-   .. attribute:: Current
+   .. py:attribute:: Current
       
 
       The list is "old" and should no longer be considered accurate or relevant.
       From: http://hl7.org/fhir/list-status in valuesets.xml
 
 
-   .. attribute:: Retired
+   .. py:attribute:: Retired
       
 
       The list was never accurate.  It is retained for medico-legal purposes only.
       From: http://hl7.org/fhir/list-status in valuesets.xml
 
 
-   .. attribute:: EnteredInError
+   .. py:attribute:: EnteredInError
       
 
       

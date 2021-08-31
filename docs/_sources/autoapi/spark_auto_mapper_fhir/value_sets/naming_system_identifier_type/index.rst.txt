@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.naming_system_identifier_type`
-======================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.naming_system_identifier_type`
+=========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.naming_system_identifier_type
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: NamingSystemIdentifierTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: NamingSystemIdentifierTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    NamingSystemIdentifierType
    From: http://hl7.org/fhir/namingsystem-identifier-type in valuesets.xml
        Identifies the style of unique identifier used to identify a namespace.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/namingsystem-identifier-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/namingsystem-identifier-type
 
       
 
 
-.. class:: NamingSystemIdentifierTypeCodeValues
+.. py:class:: NamingSystemIdentifierTypeCodeValues
 
    An ISO object identifier; e.g. 1.2.3.4.5.
    From: http://hl7.org/fhir/namingsystem-identifier-type in valuesets.xml
 
-   .. attribute:: OID
+   .. py:attribute:: OID
       
 
       A universally unique identifier of the form
@@ -45,7 +45,7 @@ Classes
       From: http://hl7.org/fhir/namingsystem-identifier-type in valuesets.xml
 
 
-   .. attribute:: UUID
+   .. py:attribute:: UUID
       
 
       A uniform resource identifier (ideally a URL - uniform resource locator); e.g.
@@ -53,7 +53,7 @@ Classes
       From: http://hl7.org/fhir/namingsystem-identifier-type in valuesets.xml
 
 
-   .. attribute:: URI
+   .. py:attribute:: URI
       
 
       Some other type of unique identifier; e.g. HL7-assigned reserved string such
@@ -61,7 +61,7 @@ Classes
       From: http://hl7.org/fhir/namingsystem-identifier-type in valuesets.xml
 
 
-   .. attribute:: Other
+   .. py:attribute:: Other
       
 
       

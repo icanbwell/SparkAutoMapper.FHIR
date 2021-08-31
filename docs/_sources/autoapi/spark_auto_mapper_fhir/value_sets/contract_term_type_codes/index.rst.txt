@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.contract_term_type_codes`
-=================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.contract_term_type_codes`
+====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.contract_term_type_codes
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: ContractTermTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ContractTermTypeCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ContractTermTypeCodes
    From: http://terminology.hl7.org/CodeSystem/contracttermtypecodes in valuesets.xml
        This value set includes sample Contract Term Type codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/contracttermtypecodes
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/contracttermtypecodes
 
       
 
 
-.. class:: ContractTermTypeCodesCodeValues
+.. py:class:: ContractTermTypeCodesCodeValues
 
    Based on specialized statutes that deal with particular subjects.
    From: http://terminology.hl7.org/CodeSystem/contracttermtypecodes in valuesets.xml
 
-   .. attribute:: Statutory
+   .. py:attribute:: Statutory
       
 
       Execution of the term in the contract is conditional on the execution of other
@@ -45,7 +45,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contracttermtypecodes in valuesets.xml
 
 
-   .. attribute:: SubjectTo
+   .. py:attribute:: SubjectTo
       
 
       

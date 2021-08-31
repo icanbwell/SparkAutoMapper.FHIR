@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.audit_event_agent_network_type`
-=======================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.audit_event_agent_network_type`
+==========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.audit_event_agent_network_type
 
@@ -17,55 +17,55 @@ Classes
 
 
 
-.. class:: AuditEventAgentNetworkTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: AuditEventAgentNetworkTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    AuditEventAgentNetworkType
    From: http://hl7.org/fhir/network-type in valuesets.xml
        The type of network access point of this agent in the audit event.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/network-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/network-type
 
       
 
 
-.. class:: AuditEventAgentNetworkTypeCodeValues
+.. py:class:: AuditEventAgentNetworkTypeCodeValues
 
    The machine name, including DNS name.
    From: http://hl7.org/fhir/network-type in valuesets.xml
 
-   .. attribute:: MachineName
+   .. py:attribute:: MachineName
       
 
       The assigned Internet Protocol (IP) address.
       From: http://hl7.org/fhir/network-type in valuesets.xml
 
 
-   .. attribute:: IPAddress
+   .. py:attribute:: IPAddress
       
 
       The assigned telephone number.
       From: http://hl7.org/fhir/network-type in valuesets.xml
 
 
-   .. attribute:: TelephoneNumber
+   .. py:attribute:: TelephoneNumber
       
 
       The assigned email address.
       From: http://hl7.org/fhir/network-type in valuesets.xml
 
 
-   .. attribute:: EmailAddress
+   .. py:attribute:: EmailAddress
       
 
       URI (User directory, HTTP-PUT, ftp, etc.).
       From: http://hl7.org/fhir/network-type in valuesets.xml
 
 
-   .. attribute:: URI
+   .. py:attribute:: URI
       
 
       

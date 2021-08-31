@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.texture_modified_food_type_codes`
-=========================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.texture_modified_food_type_codes`
+============================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.texture_modified_food_type_codes
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: TextureModifiedFoodTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: TextureModifiedFoodTypeCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    TextureModifiedFoodTypeCodes
    From: http://hl7.org/fhir/ValueSet/modified-foodtype in valuesets.xml
@@ -28,95 +28,95 @@ Classes
    This value set is composed SNOMED CT Concepts from SCTID 255620007 Foods
    (substance) and is provided as a suggestive example.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://snomed.info/sct
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://snomed.info/sct
 
       
 
 
-.. class:: TextureModifiedFoodTypeCodesCodeValues
+.. py:class:: TextureModifiedFoodTypeCodesCodeValues
 
    From: http://hl7.org/fhir/ValueSet/modified-foodtype in valuesets.xml
 
-   .. attribute:: Foods
+   .. py:attribute:: Foods
       
 
       From: http://hl7.org/fhir/ValueSet/modified-foodtype in valuesets.xml
 
 
-   .. attribute:: Meat
+   .. py:attribute:: Meat
       
 
       From: http://hl7.org/fhir/ValueSet/modified-foodtype in valuesets.xml
 
 
-   .. attribute:: Vegetables
+   .. py:attribute:: Vegetables
       
 
       From: http://hl7.org/fhir/ValueSet/modified-foodtype in valuesets.xml
 
 
-   .. attribute:: Fruit
+   .. py:attribute:: Fruit
       
 
       From: http://hl7.org/fhir/ValueSet/modified-foodtype in valuesets.xml
 
 
-   .. attribute:: DairyFoods
+   .. py:attribute:: DairyFoods
       
 
       From: http://hl7.org/fhir/ValueSet/modified-foodtype in valuesets.xml
 
 
-   .. attribute:: DietaryFatsAndOils
+   .. py:attribute:: DietaryFatsAndOils
       
 
       From: http://hl7.org/fhir/ValueSet/modified-foodtype in valuesets.xml
 
 
-   .. attribute:: Eggs
+   .. py:attribute:: Eggs
       
 
       From: http://hl7.org/fhir/ValueSet/modified-foodtype in valuesets.xml
 
 
-   .. attribute:: FoodStarch
+   .. py:attribute:: FoodStarch
       
 
       From: http://hl7.org/fhir/ValueSet/modified-foodtype in valuesets.xml
 
 
-   .. attribute:: FruitNutsAndSeeds
+   .. py:attribute:: FruitNutsAndSeeds
       
 
       From: http://hl7.org/fhir/ValueSet/modified-foodtype in valuesets.xml
 
 
-   .. attribute:: Grain
+   .. py:attribute:: Grain
       
 
       From: http://hl7.org/fhir/ValueSet/modified-foodtype in valuesets.xml
 
 
-   .. attribute:: SauceSeasoningsAndSoups
+   .. py:attribute:: SauceSeasoningsAndSoups
       
 
       From: http://hl7.org/fhir/ValueSet/modified-foodtype in valuesets.xml
 
 
-   .. attribute:: Seafood
+   .. py:attribute:: Seafood
       
 
       From: http://hl7.org/fhir/ValueSet/modified-foodtype in valuesets.xml
 
 
-   .. attribute:: StarchyFood
+   .. py:attribute:: StarchyFood
       
 
       From: http://hl7.org/fhir/ValueSet/modified-foodtype in valuesets.xml
 
 
-   .. attribute:: VegetablesPlusHerbsAndSpices
+   .. py:attribute:: VegetablesPlusHerbsAndSpices
       
 
       

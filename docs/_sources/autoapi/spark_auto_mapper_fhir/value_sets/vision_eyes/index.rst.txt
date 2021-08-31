@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.vision_eyes`
-====================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.vision_eyes`
+=======================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.vision_eyes
 
@@ -17,34 +17,34 @@ Classes
 
 
 
-.. class:: VisionEyesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: VisionEyesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    VisionEyes
    From: http://hl7.org/fhir/vision-eye-codes in valuesets.xml
        A coded concept listing the eye codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/vision-eye-codes
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/vision-eye-codes
 
       
 
 
-.. class:: VisionEyesCodeValues
+.. py:class:: VisionEyesCodeValues
 
    Right Eye.
    From: http://hl7.org/fhir/vision-eye-codes in valuesets.xml
 
-   .. attribute:: RightEye
+   .. py:attribute:: RightEye
       
 
       Left Eye.
       From: http://hl7.org/fhir/vision-eye-codes in valuesets.xml
 
 
-   .. attribute:: LeftEye
+   .. py:attribute:: LeftEye
       
 
       

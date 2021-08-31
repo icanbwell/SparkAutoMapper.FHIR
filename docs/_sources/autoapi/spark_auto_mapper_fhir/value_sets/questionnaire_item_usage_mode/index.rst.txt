@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.questionnaire_item_usage_mode`
-======================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.questionnaire_item_usage_mode`
+=========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.questionnaire_item_usage_mode
 
@@ -17,42 +17,42 @@ Classes
 
 
 
-.. class:: QuestionnaireItemUsageModeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: QuestionnaireItemUsageModeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    QuestionnaireItemUsageMode
    From: http://terminology.hl7.org/CodeSystem/questionnaire-usage-mode in valuesets.xml
        Identifies the modes of usage of a questionnaire that should enable a
    particular questionnaire item.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/questionnaire-usage-mode
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/questionnaire-usage-mode
 
       
 
 
-.. class:: QuestionnaireItemUsageModeCodeValues
+.. py:class:: QuestionnaireItemUsageModeCodeValues
 
    Render the item regardless of usage mode.
    From: http://terminology.hl7.org/CodeSystem/questionnaire-usage-mode in valuesets.xml
 
-   .. attribute:: Capture_Display
+   .. py:attribute:: Capture_Display
       
 
       Render the item only when capturing data.
       From: http://terminology.hl7.org/CodeSystem/questionnaire-usage-mode in valuesets.xml
 
 
-   .. attribute:: CaptureOnly
+   .. py:attribute:: CaptureOnly
       
 
       Render the item only when displaying a completed form.
       From: http://terminology.hl7.org/CodeSystem/questionnaire-usage-mode in valuesets.xml
 
 
-   .. attribute:: DisplayOnly
+   .. py:attribute:: DisplayOnly
       
 
       Render the item only when displaying a completed form and the item has been
@@ -60,7 +60,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/questionnaire-usage-mode in valuesets.xml
 
 
-   .. attribute:: DisplayWhenAnswered
+   .. py:attribute:: DisplayWhenAnswered
       
 
       Render the item when capturing data or when displaying a completed form and
@@ -68,7 +68,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/questionnaire-usage-mode in valuesets.xml
 
 
-   .. attribute:: CaptureOr_IfAnswered_Display
+   .. py:attribute:: CaptureOr_IfAnswered_Display
       
 
       

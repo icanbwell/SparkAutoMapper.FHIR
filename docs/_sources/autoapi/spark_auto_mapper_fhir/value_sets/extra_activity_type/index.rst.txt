@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.extra_activity_type`
-============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.extra_activity_type`
+===============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.extra_activity_type
 
@@ -17,23 +17,23 @@ Classes
 
 
 
-.. class:: ExtraActivityTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ExtraActivityTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ExtraActivityType
    From: http://hl7.org/fhir/extra-activity-type in valuesets.xml
        This value set includes coded concepts not well covered in any of the included
    valuesets.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/extra-activity-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/extra-activity-type
 
       
 
 
-.. class:: ExtraActivityTypeCodeValues
+.. py:class:: ExtraActivityTypeCodeValues
 
    Activity resulting in a structured collection of preexisting content that does
    not necessarily result in an integral object with semantic context making it
@@ -42,7 +42,7 @@ Classes
    stand-alone documents.
    From: http://hl7.org/fhir/extra-activity-type in valuesets.xml
 
-   .. attribute:: Aggregate
+   .. py:attribute:: Aggregate
       
 
       Activity resulting in the structured compilation of new and preexisting
@@ -54,7 +54,7 @@ Classes
       From: http://hl7.org/fhir/extra-activity-type in valuesets.xml
 
 
-   .. attribute:: Compose
+   .. py:attribute:: Compose
       
 
       The means used to associate a set of security attributes with a specific
@@ -63,7 +63,7 @@ Classes
       From: http://hl7.org/fhir/extra-activity-type in valuesets.xml
 
 
-   .. attribute:: Label
+   .. py:attribute:: Label
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.loinc_codes_for_cholesterol_in_serum_or__plasma`
-========================================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.loinc_codes_for_cholesterol_in_serum_or__plasma`
+===========================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.loinc_codes_for_cholesterol_in_serum_or__plasma
 
@@ -17,45 +17,45 @@ Classes
 
 
 
-.. class:: LOINCCodesForCholesterolInSerum_or_PlasmaCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: LOINCCodesForCholesterolInSerum_or_PlasmaCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    LOINC Codes for Cholesterol in Serum/Plasma
    From: http://hl7.org/fhir/ValueSet/example-extensional in valuesets.xml
        This is an example value set that includes all the LOINC codes for
    serum/plasma cholesterol from v2.36.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://loinc.org
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://loinc.org
 
       
 
 
-.. class:: LOINCCodesForCholesterolInSerum_or_PlasmaCodeValues
+.. py:class:: LOINCCodesForCholesterolInSerum_or_PlasmaCodeValues
 
    From: http://hl7.org/fhir/ValueSet/example-extensional in valuesets.xml
 
-   .. attribute:: Cholesterol_Moles_Volume_
+   .. py:attribute:: Cholesterol_Moles_Volume_
       
 
       From: http://hl7.org/fhir/ValueSet/example-extensional in valuesets.xml
 
 
-   .. attribute:: Cholesterol_Mass_Volume_
+   .. py:attribute:: Cholesterol_Mass_Volume_
       
 
       From: http://hl7.org/fhir/ValueSet/example-extensional in valuesets.xml
 
 
-   .. attribute:: Cholesterol_MassOrMoles_Volume_
+   .. py:attribute:: Cholesterol_MassOrMoles_Volume_
       
 
       From: http://hl7.org/fhir/ValueSet/example-extensional in valuesets.xml
 
 
-   .. attribute:: Cholesterol_Percentile_
+   .. py:attribute:: Cholesterol_Percentile_
       
 
       

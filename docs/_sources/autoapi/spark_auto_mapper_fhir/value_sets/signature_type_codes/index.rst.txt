@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.signature_type_codes`
-=============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.signature_type_codes`
+================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.signature_type_codes
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: SignatureTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SignatureTypeCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SignatureTypeCodes
    From: urn:iso-astm:E1762-95:2013 in valuesets.xml
@@ -29,19 +29,19 @@ Classes
    determining accountability for various actions concerning the document.
    Examples include: author, transcriptionist/recorder, and witness.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = urn:iso-astm:E1762-95:2013
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = urn:iso-astm:E1762-95:2013
 
       
 
 
-.. class:: SignatureTypeCodesCodeValues
+.. py:class:: SignatureTypeCodesCodeValues
 
    the signature of the primary or sole author of a health information document.
    There can be only one primary author of a health information document.
    From: urn:iso-astm:E1762-95:2013 in valuesets.xml
 
-   .. attribute:: Author_sSignature
+   .. py:attribute:: Author_sSignature
       
 
       the signature of a health information document coauthor. There can be multiple
@@ -49,7 +49,7 @@ Classes
       From: urn:iso-astm:E1762-95:2013 in valuesets.xml
 
 
-   .. attribute:: Coauthor_sSignature
+   .. py:attribute:: Coauthor_sSignature
       
 
       the signature of an individual who is a participant in the health information
@@ -59,7 +59,7 @@ Classes
       From: urn:iso-astm:E1762-95:2013 in valuesets.xml
 
 
-   .. attribute:: Co_participant_sSignature
+   .. py:attribute:: Co_participant_sSignature
       
 
       the signature of an individual who has transcribed a dictated document or
@@ -67,7 +67,7 @@ Classes
       From: urn:iso-astm:E1762-95:2013 in valuesets.xml
 
 
-   .. attribute:: Transcriptionist_RecorderSignature
+   .. py:attribute:: Transcriptionist_RecorderSignature
       
 
       a signature verifying the information contained in a document. (Example a
@@ -77,7 +77,7 @@ Classes
       From: urn:iso-astm:E1762-95:2013 in valuesets.xml
 
 
-   .. attribute:: VerificationSignature
+   .. py:attribute:: VerificationSignature
       
 
       a signature validating a health information document for inclusion in the
@@ -88,7 +88,7 @@ Classes
       From: urn:iso-astm:E1762-95:2013 in valuesets.xml
 
 
-   .. attribute:: ValidationSignature
+   .. py:attribute:: ValidationSignature
       
 
       the signature of an individual consenting to what is described in a health
@@ -96,14 +96,14 @@ Classes
       From: urn:iso-astm:E1762-95:2013 in valuesets.xml
 
 
-   .. attribute:: ConsentSignature
+   .. py:attribute:: ConsentSignature
       
 
       the signature of a witness to any other signature.
       From: urn:iso-astm:E1762-95:2013 in valuesets.xml
 
 
-   .. attribute:: SignatureWitnessSignature
+   .. py:attribute:: SignatureWitnessSignature
       
 
       the signature of a witness to an event. (Example the witness has observed a
@@ -111,7 +111,7 @@ Classes
       From: urn:iso-astm:E1762-95:2013 in valuesets.xml
 
 
-   .. attribute:: EventWitnessSignature
+   .. py:attribute:: EventWitnessSignature
       
 
       the signature of an individual who has witnessed another individual who is
@@ -120,7 +120,7 @@ Classes
       From: urn:iso-astm:E1762-95:2013 in valuesets.xml
 
 
-   .. attribute:: IdentityWitnessSignature
+   .. py:attribute:: IdentityWitnessSignature
       
 
       the signature of an individual who has witnessed the health care provider
@@ -128,7 +128,7 @@ Classes
       From: urn:iso-astm:E1762-95:2013 in valuesets.xml
 
 
-   .. attribute:: ConsentWitnessSignature
+   .. py:attribute:: ConsentWitnessSignature
       
 
       the signature of an individual who has translated health care information
@@ -136,7 +136,7 @@ Classes
       From: urn:iso-astm:E1762-95:2013 in valuesets.xml
 
 
-   .. attribute:: InterpreterSignature
+   .. py:attribute:: InterpreterSignature
       
 
       the signature of a person, device, or algorithm that has reviewed or filtered
@@ -149,7 +149,7 @@ Classes
       From: urn:iso-astm:E1762-95:2013 in valuesets.xml
 
 
-   .. attribute:: ReviewSignature
+   .. py:attribute:: ReviewSignature
       
 
       the signature of an automated data source. (Examples: (1) the signature for an
@@ -160,7 +160,7 @@ Classes
       From: urn:iso-astm:E1762-95:2013 in valuesets.xml
 
 
-   .. attribute:: SourceSignature
+   .. py:attribute:: SourceSignature
       
 
       the signature on a new amended document of an individual who has corrected,
@@ -176,7 +176,7 @@ Classes
       From: urn:iso-astm:E1762-95:2013 in valuesets.xml
 
 
-   .. attribute:: AddendumSignature
+   .. py:attribute:: AddendumSignature
       
 
       the signature on an original document of an individual who has generated a new
@@ -186,7 +186,7 @@ Classes
       From: urn:iso-astm:E1762-95:2013 in valuesets.xml
 
 
-   .. attribute:: ModificationSignature
+   .. py:attribute:: ModificationSignature
       
 
       the signature of an individual who is certifying that the document is
@@ -201,7 +201,7 @@ Classes
       From: urn:iso-astm:E1762-95:2013 in valuesets.xml
 
 
-   .. attribute:: Administrative_Error_Edit_Signature
+   .. py:attribute:: Administrative_Error_Edit_Signature
       
 
       the signature by an entity or device trusted to provide accurate timestamps.
@@ -210,7 +210,7 @@ Classes
       From: urn:iso-astm:E1762-95:2013 in valuesets.xml
 
 
-   .. attribute:: TimestampSignature
+   .. py:attribute:: TimestampSignature
       
 
       

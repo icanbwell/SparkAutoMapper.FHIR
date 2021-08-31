@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.questionnaire_item_operator`
-====================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.questionnaire_item_operator`
+=======================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.questionnaire_item_operator
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: QuestionnaireItemOperatorCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: QuestionnaireItemOperatorCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    QuestionnaireItemOperator
    From: http://hl7.org/fhir/questionnaire-enable-operator in valuesets.xml
        The criteria by which a question is enabled.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/questionnaire-enable-operator
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/questionnaire-enable-operator
 
       
 
 
-.. class:: QuestionnaireItemOperatorCodeValues
+.. py:class:: QuestionnaireItemOperatorCodeValues
 
    True if whether an answer exists is equal to the enableWhen answer (which must
    be a boolean).
    From: http://hl7.org/fhir/questionnaire-enable-operator in valuesets.xml
 
-   .. attribute:: Exists
+   .. py:attribute:: Exists
       
 
       True if whether at least one answer has a value that is equal to the
@@ -46,7 +46,7 @@ Classes
       From: http://hl7.org/fhir/questionnaire-enable-operator in valuesets.xml
 
 
-   .. attribute:: Equals
+   .. py:attribute:: Equals
       
 
       True if whether at least no answer has a value that is equal to the enableWhen
@@ -54,7 +54,7 @@ Classes
       From: http://hl7.org/fhir/questionnaire-enable-operator in valuesets.xml
 
 
-   .. attribute:: NotEquals
+   .. py:attribute:: NotEquals
       
 
       True if whether at least no answer has a value that is greater than the
@@ -62,7 +62,7 @@ Classes
       From: http://hl7.org/fhir/questionnaire-enable-operator in valuesets.xml
 
 
-   .. attribute:: GreaterThan
+   .. py:attribute:: GreaterThan
       
 
       True if whether at least no answer has a value that is less than the
@@ -70,7 +70,7 @@ Classes
       From: http://hl7.org/fhir/questionnaire-enable-operator in valuesets.xml
 
 
-   .. attribute:: LessThan
+   .. py:attribute:: LessThan
       
 
       True if whether at least no answer has a value that is greater or equal to the
@@ -78,7 +78,7 @@ Classes
       From: http://hl7.org/fhir/questionnaire-enable-operator in valuesets.xml
 
 
-   .. attribute:: GreaterOrEquals
+   .. py:attribute:: GreaterOrEquals
       
 
       True if whether at least no answer has a value that is less or equal to the
@@ -86,7 +86,7 @@ Classes
       From: http://hl7.org/fhir/questionnaire-enable-operator in valuesets.xml
 
 
-   .. attribute:: LessOrEquals
+   .. py:attribute:: LessOrEquals
       
 
       

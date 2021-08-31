@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.implant_status`
-=======================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.implant_status`
+==========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.implant_status
 
@@ -17,48 +17,48 @@ Classes
 
 
 
-.. class:: ImplantStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ImplantStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    Implant Status
    From: http://terminology.hl7.org/CodeSystem/implantStatus in valuesets.xml
        A set codes that define the functional status of an implanted device.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/implantStatus
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/implantStatus
 
       
 
 
-.. class:: ImplantStatusCodeValues
+.. py:class:: ImplantStatusCodeValues
 
    The implanted device is working normally.
    From: http://terminology.hl7.org/CodeSystem/implantStatus in valuesets.xml
 
-   .. attribute:: Functional
+   .. py:attribute:: Functional
       
 
       The implanted device is not working.
       From: http://terminology.hl7.org/CodeSystem/implantStatus in valuesets.xml
 
 
-   .. attribute:: Non_Functional
+   .. py:attribute:: Non_Functional
       
 
       The implanted device has been turned off.
       From: http://terminology.hl7.org/CodeSystem/implantStatus in valuesets.xml
 
 
-   .. attribute:: Disabled
+   .. py:attribute:: Disabled
       
 
       the functional status of the implant has not been determined.
       From: http://terminology.hl7.org/CodeSystem/implantStatus in valuesets.xml
 
 
-   .. attribute:: Unknown
+   .. py:attribute:: Unknown
       
 
       

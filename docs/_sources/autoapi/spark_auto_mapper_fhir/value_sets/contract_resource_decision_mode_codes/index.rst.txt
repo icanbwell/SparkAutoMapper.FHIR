@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.contract_resource_decision_mode_codes`
-==============================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.contract_resource_decision_mode_codes`
+=================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.contract_resource_decision_mode_codes
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: ContractResourceDecisionModeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ContractResourceDecisionModeCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ContractResourceDecisionModeCodes
    From: http://hl7.org/fhir/contract-decision-mode in valuesets.xml
        This value set contract specific codes for decision modes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/contract-decision-mode
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/contract-decision-mode
 
       
 
 
-.. class:: ContractResourceDecisionModeCodesCodeValues
+.. py:class:: ContractResourceDecisionModeCodesCodeValues
 
    To be completed
    From: http://hl7.org/fhir/contract-decision-mode in valuesets.xml
 
-   .. attribute:: Policy
+   .. py:attribute:: Policy
       
 
       

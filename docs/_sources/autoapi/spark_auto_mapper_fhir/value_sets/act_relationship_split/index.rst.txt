@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.act_relationship_split`
-===============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.act_relationship_split`
+==================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.act_relationship_split
 
@@ -17,22 +17,22 @@ Classes
 
 
 
-.. class:: ActRelationshipSplit(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ActRelationshipSplit(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.ActRelationshipSplit
    From: http://terminology.hl7.org/ValueSet/v3-ActRelationshipSplit in v3-codesystems.xml
        **** MISSING DEFINITIONS ****
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ActRelationshipSplit
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-ActRelationshipSplit
 
       
 
 
-.. class:: ActRelationshipSplitValues
+.. py:class:: ActRelationshipSplitValues
 
    The pre-condition associated with the branch is evaluated once and if true the
    branch may be entered. All other exclusive branches compete with each other
@@ -41,7 +41,7 @@ Classes
    may be specified in the priorityNumber attribute.
    From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipSplit in v3-codesystems.xml
 
-   .. attribute:: ExclusiveTryOnce
+   .. py:attribute:: ExclusiveTryOnce
       
 
       A branch is selected as soon as the pre-condition associated with the branch
@@ -54,7 +54,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipSplit in v3-codesystems.xml
 
 
-   .. attribute:: ExclusiveWait
+   .. py:attribute:: ExclusiveWait
       
 
       A branch is executed if its associated preconditions permit. If associated
@@ -63,7 +63,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipSplit in v3-codesystems.xml
 
 
-   .. attribute:: InclusiveTryOnce
+   .. py:attribute:: InclusiveTryOnce
       
 
       A branch is executed as soon as its associated conditions permit.  If the
@@ -74,7 +74,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipSplit in v3-codesystems.xml
 
 
-   .. attribute:: InclusiveWait
+   .. py:attribute:: InclusiveWait
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.provenance_participant_role`
-====================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.provenance_participant_role`
+=======================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.provenance_participant_role
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: ProvenanceParticipantRoleCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ProvenanceParticipantRoleCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ProvenanceParticipantRole
    From: http://hl7.org/fhir/provenance-participant-role in valuesets.xml
        The role that a provenance participant played
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/provenance-participant-role
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/provenance-participant-role
 
       
 
 
-.. class:: ProvenanceParticipantRoleCodeValues
+.. py:class:: ProvenanceParticipantRoleCodeValues
 
    A person entering the data into the originating system
    From: http://hl7.org/fhir/provenance-participant-role in valuesets.xml
 
-   .. attribute:: Enterer
+   .. py:attribute:: Enterer
       
 
       A person, animal, organization or device that who actually and principally
@@ -45,7 +45,7 @@ Classes
       From: http://hl7.org/fhir/provenance-participant-role in valuesets.xml
 
 
-   .. attribute:: Performer
+   .. py:attribute:: Performer
       
 
       A party that originates the resource and therefore has responsibility for the
@@ -53,28 +53,28 @@ Classes
       From: http://hl7.org/fhir/provenance-participant-role in valuesets.xml
 
 
-   .. attribute:: Author
+   .. py:attribute:: Author
       
 
       A person who verifies the correctness and appropriateness of activity
       From: http://hl7.org/fhir/provenance-participant-role in valuesets.xml
 
 
-   .. attribute:: Verifier
+   .. py:attribute:: Verifier
       
 
       A verifier who attests to the accuracy of the resource
       From: http://hl7.org/fhir/provenance-participant-role in valuesets.xml
 
 
-   .. attribute:: Attester
+   .. py:attribute:: Attester
       
 
       A person who reported information that contributed to the resource
       From: http://hl7.org/fhir/provenance-participant-role in valuesets.xml
 
 
-   .. attribute:: Informant
+   .. py:attribute:: Informant
       
 
       The entity that is accountable for maintaining a true an accurate copy of the
@@ -82,7 +82,7 @@ Classes
       From: http://hl7.org/fhir/provenance-participant-role in valuesets.xml
 
 
-   .. attribute:: Custodian
+   .. py:attribute:: Custodian
       
 
       A device that operates independently of an author on custodian's algorithms
@@ -91,7 +91,7 @@ Classes
       From: http://hl7.org/fhir/provenance-participant-role in valuesets.xml
 
 
-   .. attribute:: Assembler
+   .. py:attribute:: Assembler
       
 
       A device used by an author to record new information, which may also be used
@@ -100,7 +100,7 @@ Classes
       From: http://hl7.org/fhir/provenance-participant-role in valuesets.xml
 
 
-   .. attribute:: Composer
+   .. py:attribute:: Composer
       
 
       

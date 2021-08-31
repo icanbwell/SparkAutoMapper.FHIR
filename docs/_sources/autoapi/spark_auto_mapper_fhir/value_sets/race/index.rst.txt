@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.race`
-=============================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.race`
+================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.race
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: Race(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: Race(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.Race
    From: http://terminology.hl7.org/ValueSet/v3-Race in v3-codesystems.xml
@@ -40,46 +40,46 @@ Classes
    be limited to the five minimum categories, but any expansion must be
    collapsible to those categories.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-Race
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-Race
 
       
 
 
-.. class:: RaceValues
+.. py:class:: RaceValues
 
    American Indian or Alaska Native
    From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
 
-   .. attribute:: AmericanIndianOrAlaskaNative
+   .. py:attribute:: AmericanIndianOrAlaskaNative
       
 
       Asian
       From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
 
 
-   .. attribute:: Asian
+   .. py:attribute:: Asian
       
 
       Black or African American
       From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
 
 
-   .. attribute:: BlackOrAfricanAmerican
+   .. py:attribute:: BlackOrAfricanAmerican
       
 
       Native Hawaiian or Other Pacific Islander
       From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
 
 
-   .. attribute:: NativeHawaiianOrOtherPacificIslander
+   .. py:attribute:: NativeHawaiianOrOtherPacificIslander
       
 
       White
       From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
 
 
-   .. attribute:: White
+   .. py:attribute:: White
       
 
       Note that this term remains in the table for completeness, even though within
@@ -87,7 +87,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-Race in v3-codesystems.xml
 
 
-   .. attribute:: OtherRace
+   .. py:attribute:: OtherRace
       
 
       

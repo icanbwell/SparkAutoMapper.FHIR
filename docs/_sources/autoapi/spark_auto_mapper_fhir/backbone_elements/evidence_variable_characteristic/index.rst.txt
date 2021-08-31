@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.backbone_elements.evidence_variable_characteristic`
-================================================================================
+:py:mod:`spark_auto_mapper_fhir.backbone_elements.evidence_variable_characteristic`
+===================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.backbone_elements.evidence_variable_characteristic
 
@@ -16,12 +16,52 @@ Classes
 
 
 
-.. class:: EvidenceVariableCharacteristic(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, description: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, definitionReference: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.group.Group]] = None, definitionCanonical: Optional[spark_auto_mapper_fhir.fhir_types.canonical.FhirCanonical] = None, definitionCodeableConcept: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, definitionExpression: Optional[spark_auto_mapper_fhir.complex_types.expression.Expression] = None, definitionDataRequirement: Optional[spark_auto_mapper_fhir.complex_types.data_requirement.DataRequirement] = None, definitionTriggerDefinition: Optional[spark_auto_mapper_fhir.complex_types.trigger_definition.TriggerDefinition] = None, usageContext: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.usage_context.UsageContext]] = None, exclude: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, participantEffectiveDateTime: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, participantEffectivePeriod: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, participantEffectiveDuration: Optional[spark_auto_mapper_fhir.complex_types.duration.Duration] = None, participantEffectiveTiming: Optional[spark_auto_mapper_fhir.backbone_elements.timing.Timing] = None, timeFromStart: Optional[spark_auto_mapper_fhir.complex_types.duration.Duration] = None, groupMeasure: Optional[spark_auto_mapper_fhir.value_sets.group_measure.GroupMeasureCode] = None)
 
+.. py:class:: EvidenceVariableCharacteristic(*, id_ = None, extension = None, modifierExtension = None, description = None, definitionReference = None, definitionCanonical = None, definitionCodeableConcept = None, definitionExpression = None, definitionDataRequirement = None, definitionTriggerDefinition = None, usageContext = None, exclude = None, participantEffectiveDateTime = None, participantEffectivePeriod = None, participantEffectiveDuration = None, participantEffectiveTiming = None, timeFromStart = None, groupMeasure = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
 
    EvidenceVariable.Characteristic
-   The EvidenceVariable resource describes a "PICO" element that knowledge (evidence, assertion, recommendation) is about.
+       The EvidenceVariable resource describes a "PICO" element that knowledge (evidence, assertion, recommendation) is about.
+
+       The EvidenceVariable resource describes a "PICO" element that knowledge
+   (evidence, assertion, recommendation) is about.
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param modifierExtension: May be used to represent additional information that is not part of the basic
+   definition of the element and that modifies the understanding of the element
+   in which it is contained and/or the understanding of the containing element's
+   descendants. Usually modifier elements provide negation or qualification. To
+   make the use of extensions safe and manageable, there is a strict set of
+   governance applied to the definition and use of extensions. Though any
+   implementer can define an extension, there is a set of requirements that SHALL
+   be met as part of the definition of the extension. Applications processing a
+   resource are required to check for modifier extensions.
+
+   Modifier extensions SHALL NOT change the meaning of any elements on Resource
+   or DomainResource (including cannot change the meaning of modifierExtension
+   itself).
+       :param description: A short, natural language description of the characteristic that could be used
+   to communicate the criteria to an end-user.
+       :param definitionReference: None
+       :param definitionCanonical: None
+       :param definitionCodeableConcept: None
+       :param definitionExpression: None
+       :param definitionDataRequirement: None
+       :param definitionTriggerDefinition: None
+       :param usageContext: Use UsageContext to define the members of the population, such as Age Ranges,
+   Genders, Settings.
+       :param exclude: When true, members with this characteristic are excluded from the element.
+       :param participantEffectiveDateTime: None
+       :param participantEffectivePeriod: None
+       :param participantEffectiveDuration: None
+       :param participantEffectiveTiming: None
+       :param timeFromStart: Indicates duration from the participant's study entry.
+       :param groupMeasure: Indicates how elements are aggregated within the study effective period.
 
 

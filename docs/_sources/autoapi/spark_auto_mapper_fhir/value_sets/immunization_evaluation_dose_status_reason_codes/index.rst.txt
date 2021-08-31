@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.immunization_evaluation_dose_status_reason_codes`
-=========================================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.immunization_evaluation_dose_status_reason_codes`
+============================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.immunization_evaluation_dose_status_reason_codes
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: ImmunizationEvaluationDoseStatusReasonCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ImmunizationEvaluationDoseStatusReasonCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ImmunizationEvaluationDoseStatusReasonCodes
    From: http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status-reason in valuesets.xml
@@ -30,19 +30,19 @@ Classes
    particular status. Often, this reason describes why a dose is considered
    invalid. This value set is provided as a suggestive example.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status-reason
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status-reason
 
       
 
 
-.. class:: ImmunizationEvaluationDoseStatusReasonCodesCodeValues
+.. py:class:: ImmunizationEvaluationDoseStatusReasonCodesCodeValues
 
    The product was stored in a manner inconsistent with manufacturer guidelines
    potentially reducing the effectiveness of the product.
    From: http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status-reason in valuesets.xml
 
-   .. attribute:: AdverseStorageCondition
+   .. py:attribute:: AdverseStorageCondition
       
 
       The product was stored at a temperature inconsistent with manufacturer
@@ -50,7 +50,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status-reason in valuesets.xml
 
 
-   .. attribute:: ColdChainBreak
+   .. py:attribute:: ColdChainBreak
       
 
       The product was administered after the expiration date associated with lot of
@@ -58,7 +58,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status-reason in valuesets.xml
 
 
-   .. attribute:: ExpiredLot
+   .. py:attribute:: ExpiredLot
       
 
       The product was administered at a time inconsistent with the documented
@@ -66,14 +66,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status-reason in valuesets.xml
 
 
-   .. attribute:: AdministeredOutsideRecommendedSchedule
+   .. py:attribute:: AdministeredOutsideRecommendedSchedule
       
 
       The product administered has been recalled by the manufacturer.
       From: http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status-reason in valuesets.xml
 
 
-   .. attribute:: ProductRecall
+   .. py:attribute:: ProductRecall
       
 
       

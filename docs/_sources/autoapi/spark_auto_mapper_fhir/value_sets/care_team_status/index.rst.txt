@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.care_team_status`
-=========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.care_team_status`
+============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.care_team_status
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: CareTeamStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: CareTeamStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    CareTeamStatus
    From: http://hl7.org/fhir/care-team-status in valuesets.xml
        Indicates the status of the care team.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/care-team-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/care-team-status
 
       
 
 
-.. class:: CareTeamStatusCodeValues
+.. py:class:: CareTeamStatusCodeValues
 
    The care team has been drafted and proposed, but not yet participating in the
    coordination and delivery of patient care.
    From: http://hl7.org/fhir/care-team-status in valuesets.xml
 
-   .. attribute:: Proposed
+   .. py:attribute:: Proposed
       
 
       The care team is currently participating in the coordination and delivery of
@@ -46,7 +46,7 @@ Classes
       From: http://hl7.org/fhir/care-team-status in valuesets.xml
 
 
-   .. attribute:: Active
+   .. py:attribute:: Active
       
 
       The care team is temporarily on hold or suspended and not participating in the
@@ -54,7 +54,7 @@ Classes
       From: http://hl7.org/fhir/care-team-status in valuesets.xml
 
 
-   .. attribute:: Suspended
+   .. py:attribute:: Suspended
       
 
       The care team was, but is no longer, participating in the coordination and
@@ -62,14 +62,14 @@ Classes
       From: http://hl7.org/fhir/care-team-status in valuesets.xml
 
 
-   .. attribute:: Inactive
+   .. py:attribute:: Inactive
       
 
       The care team should have never existed.
       From: http://hl7.org/fhir/care-team-status in valuesets.xml
 
 
-   .. attribute:: EnteredInError
+   .. py:attribute:: EnteredInError
       
 
       

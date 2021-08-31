@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.practitioner_role`
-==========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.practitioner_role`
+=============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.practitioner_role
 
@@ -17,63 +17,63 @@ Classes
 
 
 
-.. class:: PractitionerRoleCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: PractitionerRoleCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    PractitionerRole
    From: http://terminology.hl7.org/CodeSystem/practitioner-role in valuesets.xml
        This example value set defines a set of codes that can be used to indicate the
    role of a Practitioner.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/practitioner-role
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/practitioner-role
 
       
 
 
-.. class:: PractitionerRoleCodeValues
+.. py:class:: PractitionerRoleCodeValues
 
    A qualified/registered medical practitioner
    From: http://terminology.hl7.org/CodeSystem/practitioner-role in valuesets.xml
 
-   .. attribute:: Doctor
+   .. py:attribute:: Doctor
       
 
       A practitioner with nursing experience that may be qualified/registered
       From: http://terminology.hl7.org/CodeSystem/practitioner-role in valuesets.xml
 
 
-   .. attribute:: Nurse
+   .. py:attribute:: Nurse
       
 
       A qualified/registered/licensed pharmacist
       From: http://terminology.hl7.org/CodeSystem/practitioner-role in valuesets.xml
 
 
-   .. attribute:: Pharmacist
+   .. py:attribute:: Pharmacist
       
 
       A practitioner that may perform research
       From: http://terminology.hl7.org/CodeSystem/practitioner-role in valuesets.xml
 
 
-   .. attribute:: Researcher
+   .. py:attribute:: Researcher
       
 
       Someone who is able to provide educational services
       From: http://terminology.hl7.org/CodeSystem/practitioner-role in valuesets.xml
 
 
-   .. attribute:: Teacher_educator
+   .. py:attribute:: Teacher_educator
       
 
       Someone who is qualified in Information and Communication Technologies
       From: http://terminology.hl7.org/CodeSystem/practitioner-role in valuesets.xml
 
 
-   .. attribute:: ICTProfessional
+   .. py:attribute:: ICTProfessional
       
 
       

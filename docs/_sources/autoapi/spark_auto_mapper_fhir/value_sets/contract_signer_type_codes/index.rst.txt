@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.contract_signer_type_codes`
-===================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.contract_signer_type_codes`
+======================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.contract_signer_type_codes
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: ContractSignerTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ContractSignerTypeCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ContractSignerTypeCodes
    From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
        This value set includes sample Contract Signer Type codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/contractsignertypecodes
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/contractsignertypecodes
 
       
 
 
-.. class:: ContractSignerTypeCodesCodeValues
+.. py:class:: ContractSignerTypeCodesCodeValues
 
    A person who has corrected, edited, or amended pre-existing information.
    From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
-   .. attribute:: Amender
+   .. py:attribute:: Amender
       
 
       A person in the role of verifier who attests to the accuracy of an act, but
@@ -47,7 +47,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: Authenticator
+   .. py:attribute:: Authenticator
       
 
       An entity that authored specific content. There can be multiple authors of
@@ -56,7 +56,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: Author
+   .. py:attribute:: Author
       
 
       An entity that has a business or professional relationship with another entity
@@ -64,7 +64,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: Affiliate
+   .. py:attribute:: Affiliate
       
 
       An entity that acts or is authorized to act on behalf of another entity in
@@ -72,7 +72,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: Agent
+   .. py:attribute:: Agent
       
 
       An agent role in which the agent is an Entity acting in the employ of an
@@ -82,7 +82,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: AssignedEntity
+   .. py:attribute:: AssignedEntity
       
 
       The member of a jurisdiction afforded certain rights and encumbered with
@@ -90,14 +90,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: Citizen
+   .. py:attribute:: Citizen
       
 
       A party that makes a claim for coverage under a policy.
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: Claimant
+   .. py:attribute:: Claimant
       
 
       The entity that co-authored content. There can be multiple co-authors of
@@ -106,7 +106,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: Co_Author
+   .. py:attribute:: Co_Author
       
 
       A patient or patient representative who is the grantee in a healthcare related
@@ -116,7 +116,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: Consenter
+   .. py:attribute:: Consenter
       
 
       A person who has witnessed and attests to observing a patient being counseled
@@ -125,7 +125,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: ConsentWitness
+   .. py:attribute:: ConsentWitness
       
 
       A person or an organization that provides or receives information regarding
@@ -134,7 +134,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: Contact
+   .. py:attribute:: Contact
       
 
       A person who participates in the generation of and attest to veracity of
@@ -144,7 +144,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: Co_Participant
+   .. py:attribute:: Co_Participant
       
 
       An entity, which is the insured, that receives benefits such as healthcare
@@ -158,21 +158,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: CoveredParty
+   .. py:attribute:: CoveredParty
       
 
       A party to whom some right or authority is delegated by a delegator.
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: Delegatee
+   .. py:attribute:: Delegatee
       
 
       A party that delegates a right or authority to another party.
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: Delegator
+   .. py:attribute:: Delegator
       
 
       A person covered under an insurance policy or program based on an association
@@ -191,7 +191,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: Dependent
+   .. py:attribute:: Dependent
       
 
       A person who has been granted the authority to represent or act on another's
@@ -203,14 +203,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: DurablePowerOfAttorney
+   .. py:attribute:: DurablePowerOfAttorney
       
 
       An entity to be contacted in the event of an emergency
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: EmergencyContact
+   .. py:attribute:: EmergencyContact
       
 
       A person who attests to observing an occurrence.  For example, the witness has
@@ -218,7 +218,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: EventWitness
+   .. py:attribute:: EventWitness
       
 
       A person who has been granted the authority to act as an estate executor for a
@@ -226,7 +226,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: ExecutorOfEstate
+   .. py:attribute:: ExecutorOfEstate
       
 
       A person who grants to another person the authority to represent or act on
@@ -236,7 +236,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: Grantee
+   .. py:attribute:: Grantee
       
 
       A person who has been granted the authority to represent or act on another's
@@ -246,7 +246,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: Grantor
+   .. py:attribute:: Grantor
       
 
       A person or organization contractually recognized by the issuer as an entity
@@ -258,7 +258,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: Guarantor
+   .. py:attribute:: Guarantor
       
 
       A person or organization legally empowered with responsibility for the care of
@@ -266,7 +266,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: Guardian
+   .. py:attribute:: Guardian
       
 
       A person appointed by the court to look out for the best interests of a minor
@@ -274,7 +274,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: GuardianAdLidem
+   .. py:attribute:: GuardianAdLidem
       
 
       An entity that is the source of reported information (e.g., a next of kin who
@@ -284,7 +284,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: Informant
+   .. py:attribute:: Informant
       
 
       A person who converts spoken or written language into the language of key
@@ -293,7 +293,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: Interpreter
+   .. py:attribute:: Interpreter
       
 
       An entity that is the subject of an investigation. This role is scoped by the
@@ -301,7 +301,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: InvestigationSubject
+   .. py:attribute:: InvestigationSubject
       
 
       A person who has been granted the authority to represent or act on another's
@@ -315,7 +315,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: HealthcarePowerOfAttorney
+   .. py:attribute:: HealthcarePowerOfAttorney
       
 
       An entity that is authorized to provide health care services by an authorizing
@@ -323,7 +323,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: HealthcareProvider
+   .. py:attribute:: HealthcareProvider
       
 
       A person in the role of verifier who attests to the accuracy of information
@@ -334,7 +334,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: LegalAuthenticator
+   .. py:attribute:: LegalAuthenticator
       
 
       A party to an insurance policy under which the insurer agrees to indemnify for
@@ -346,7 +346,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: NamedInsured
+   .. py:attribute:: NamedInsured
       
 
       A person, who is a type of contact, designated to receive notifications on
@@ -354,7 +354,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: NextOfKin
+   .. py:attribute:: NextOfKin
       
 
       The party credentialed to legally attest to the contract binding by verifying
@@ -364,7 +364,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: Notary
+   .. py:attribute:: Notary
       
 
       A person, animal, or other living subject that is the actual or potential
@@ -372,7 +372,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: Patient
+   .. py:attribute:: Patient
       
 
       A person who has been granted the authority to represent or act on another's
@@ -385,7 +385,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: PowerOfAttorney
+   .. py:attribute:: PowerOfAttorney
       
 
       An entity that is the primary or sole author of information content.  In the
@@ -394,7 +394,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: PrimaryAuthor
+   .. py:attribute:: PrimaryAuthor
       
 
       An entity that may, should receive, or has received information or an object
@@ -402,7 +402,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: PrimaryResponsibleParty
+   .. py:attribute:: PrimaryResponsibleParty
       
 
       An entity that may, should receive, or has received information or an object,
@@ -411,14 +411,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: Recipient
+   .. py:attribute:: Recipient
       
 
       An entity that has legal responsibility for another party.
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: ResponsibleParty
+   .. py:attribute:: ResponsibleParty
       
 
       A person, device, or algorithm that has used approved criteria for filtered
@@ -431,7 +431,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: Reviewer
+   .. py:attribute:: Reviewer
       
 
       An entity entering the data into the originating system. This includes the
@@ -439,7 +439,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: Transcriber
+   .. py:attribute:: Transcriber
       
 
       An automated data source that generates a signature along with content.
@@ -450,7 +450,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: Source
+   .. py:attribute:: Source
       
 
       A person who has been granted the authority to represent or act on another's
@@ -464,7 +464,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: SpecialPowerOfAttorney
+   .. py:attribute:: SpecialPowerOfAttorney
       
 
       A person who validates a health information document for inclusion in the
@@ -475,7 +475,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: Validator
+   .. py:attribute:: Validator
       
 
       A person who asserts the correctness and appropriateness of an act or the
@@ -487,7 +487,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: Verifier
+   .. py:attribute:: Verifier
       
 
       A person witnessing the signature of another party. A witness is not
@@ -498,7 +498,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contractsignertypecodes in valuesets.xml
 
 
-   .. attribute:: Witness
+   .. py:attribute:: Witness
       
 
       

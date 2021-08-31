@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.backbone_elements.element_definition`
-==================================================================
+:py:mod:`spark_auto_mapper_fhir.backbone_elements.element_definition`
+=====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.backbone_elements.element_definition
 
@@ -16,13 +16,293 @@ Classes
 
 
 
-.. class:: ElementDefinition(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, path: spark_auto_mapper_fhir.fhir_types.string.FhirString, representation: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.value_sets.property_representation.PropertyRepresentationCode]] = None, sliceName: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, sliceIsConstraining: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, label: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, code: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.loinc_codes.LOINCCodesCode]]] = None, slicing: Optional[spark_auto_mapper_fhir.backbone_elements.element_definition_slicing.ElementDefinitionSlicing] = None, short: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, definition: Optional[spark_auto_mapper_fhir.fhir_types.markdown.FhirMarkdown] = None, comment: Optional[spark_auto_mapper_fhir.fhir_types.markdown.FhirMarkdown] = None, requirements: Optional[spark_auto_mapper_fhir.fhir_types.markdown.FhirMarkdown] = None, alias: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.string.FhirString]] = None, min: Optional[spark_auto_mapper_fhir.fhir_types.unsigned_int.FhirUnsignedInt] = None, max: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, base: Optional[spark_auto_mapper_fhir.backbone_elements.element_definition_base.ElementDefinitionBase] = None, contentReference: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, type_: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.element_definition_type.ElementDefinitionType]] = None, defaultValueBase64Binary: Optional[spark_auto_mapper_fhir.fhir_types.base64_binary.FhirBase64Binary] = None, defaultValueBoolean: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, defaultValueCanonical: Optional[spark_auto_mapper_fhir.fhir_types.canonical.FhirCanonical] = None, defaultValueCode: Optional[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode] = None, defaultValueDate: Optional[spark_auto_mapper_fhir.fhir_types.date.FhirDate] = None, defaultValueDateTime: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, defaultValueDecimal: Optional[spark_auto_mapper_fhir.fhir_types.decimal.FhirDecimal] = None, defaultValueId: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, defaultValueInstant: Optional[spark_auto_mapper_fhir.fhir_types.instant.FhirInstant] = None, defaultValueInteger: Optional[spark_auto_mapper_fhir.fhir_types.integer.FhirInteger] = None, defaultValueMarkdown: Optional[spark_auto_mapper_fhir.fhir_types.markdown.FhirMarkdown] = None, defaultValueOid: Optional[spark_auto_mapper_fhir.fhir_types.oid.FhirOid] = None, defaultValuePositiveInt: Optional[spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt] = None, defaultValueString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, defaultValueTime: Optional[spark_auto_mapper_fhir.fhir_types.time.FhirTime] = None, defaultValueUnsignedInt: Optional[spark_auto_mapper_fhir.fhir_types.unsigned_int.FhirUnsignedInt] = None, defaultValueUri: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, defaultValueUrl: Optional[spark_auto_mapper_fhir.fhir_types.url.FhirUrl] = None, defaultValueUuid: Optional[spark_auto_mapper_fhir.fhir_types.uuid.FhirUuid] = None, defaultValueAddress: Optional[spark_auto_mapper_fhir.complex_types.address.Address] = None, defaultValueAge: Optional[spark_auto_mapper_fhir.complex_types.age.Age] = None, defaultValueAnnotation: Optional[spark_auto_mapper_fhir.complex_types.annotation.Annotation] = None, defaultValueAttachment: Optional[spark_auto_mapper_fhir.complex_types.attachment.Attachment] = None, defaultValueCodeableConcept: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, defaultValueCoding: Optional[spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, defaultValueContactPoint: Optional[spark_auto_mapper_fhir.complex_types.contact_point.ContactPoint] = None, defaultValueCount: Optional[spark_auto_mapper_fhir.complex_types.count.Count] = None, defaultValueDistance: Optional[spark_auto_mapper_fhir.complex_types.distance.Distance] = None, defaultValueDuration: Optional[spark_auto_mapper_fhir.complex_types.duration.Duration] = None, defaultValueHumanName: Optional[spark_auto_mapper_fhir.complex_types.human_name.HumanName] = None, defaultValueIdentifier: Optional[spark_auto_mapper_fhir.complex_types.identifier.Identifier] = None, defaultValueMoney: Optional[spark_auto_mapper_fhir.complex_types.money.Money] = None, defaultValuePeriod: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, defaultValueQuantity: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, defaultValueRange: Optional[spark_auto_mapper_fhir.complex_types.range.Range] = None, defaultValueRatio: Optional[spark_auto_mapper_fhir.complex_types.ratio.Ratio] = None, defaultValueReference: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.resource.Resource]] = None, defaultValueSampledData: Optional[spark_auto_mapper_fhir.complex_types.sampled_data.SampledData] = None, defaultValueSignature: Optional[spark_auto_mapper_fhir.complex_types.signature.Signature] = None, defaultValueTiming: Optional[spark_auto_mapper_fhir.backbone_elements.timing.Timing] = None, defaultValueContactDetail: Optional[spark_auto_mapper_fhir.complex_types.contact_detail.ContactDetail] = None, defaultValueContributor: Optional[spark_auto_mapper_fhir.complex_types.contributor.Contributor] = None, defaultValueDataRequirement: Optional[spark_auto_mapper_fhir.complex_types.data_requirement.DataRequirement] = None, defaultValueExpression: Optional[spark_auto_mapper_fhir.complex_types.expression.Expression] = None, defaultValueParameterDefinition: Optional[spark_auto_mapper_fhir.complex_types.parameter_definition.ParameterDefinition] = None, defaultValueRelatedArtifact: Optional[spark_auto_mapper_fhir.complex_types.related_artifact.RelatedArtifact] = None, defaultValueTriggerDefinition: Optional[spark_auto_mapper_fhir.complex_types.trigger_definition.TriggerDefinition] = None, defaultValueUsageContext: Optional[spark_auto_mapper_fhir.complex_types.usage_context.UsageContext] = None, defaultValueDosage: Optional[spark_auto_mapper_fhir.backbone_elements.dosage.Dosage] = None, defaultValueMeta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, meaningWhenMissing: Optional[spark_auto_mapper_fhir.fhir_types.markdown.FhirMarkdown] = None, orderMeaning: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, fixedBase64Binary: Optional[spark_auto_mapper_fhir.fhir_types.base64_binary.FhirBase64Binary] = None, fixedBoolean: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, fixedCanonical: Optional[spark_auto_mapper_fhir.fhir_types.canonical.FhirCanonical] = None, fixedCode: Optional[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode] = None, fixedDate: Optional[spark_auto_mapper_fhir.fhir_types.date.FhirDate] = None, fixedDateTime: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, fixedDecimal: Optional[spark_auto_mapper_fhir.fhir_types.decimal.FhirDecimal] = None, fixedId: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, fixedInstant: Optional[spark_auto_mapper_fhir.fhir_types.instant.FhirInstant] = None, fixedInteger: Optional[spark_auto_mapper_fhir.fhir_types.integer.FhirInteger] = None, fixedMarkdown: Optional[spark_auto_mapper_fhir.fhir_types.markdown.FhirMarkdown] = None, fixedOid: Optional[spark_auto_mapper_fhir.fhir_types.oid.FhirOid] = None, fixedPositiveInt: Optional[spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt] = None, fixedString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, fixedTime: Optional[spark_auto_mapper_fhir.fhir_types.time.FhirTime] = None, fixedUnsignedInt: Optional[spark_auto_mapper_fhir.fhir_types.unsigned_int.FhirUnsignedInt] = None, fixedUri: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, fixedUrl: Optional[spark_auto_mapper_fhir.fhir_types.url.FhirUrl] = None, fixedUuid: Optional[spark_auto_mapper_fhir.fhir_types.uuid.FhirUuid] = None, fixedAddress: Optional[spark_auto_mapper_fhir.complex_types.address.Address] = None, fixedAge: Optional[spark_auto_mapper_fhir.complex_types.age.Age] = None, fixedAnnotation: Optional[spark_auto_mapper_fhir.complex_types.annotation.Annotation] = None, fixedAttachment: Optional[spark_auto_mapper_fhir.complex_types.attachment.Attachment] = None, fixedCodeableConcept: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, fixedCoding: Optional[spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, fixedContactPoint: Optional[spark_auto_mapper_fhir.complex_types.contact_point.ContactPoint] = None, fixedCount: Optional[spark_auto_mapper_fhir.complex_types.count.Count] = None, fixedDistance: Optional[spark_auto_mapper_fhir.complex_types.distance.Distance] = None, fixedDuration: Optional[spark_auto_mapper_fhir.complex_types.duration.Duration] = None, fixedHumanName: Optional[spark_auto_mapper_fhir.complex_types.human_name.HumanName] = None, fixedIdentifier: Optional[spark_auto_mapper_fhir.complex_types.identifier.Identifier] = None, fixedMoney: Optional[spark_auto_mapper_fhir.complex_types.money.Money] = None, fixedPeriod: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, fixedQuantity: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, fixedRange: Optional[spark_auto_mapper_fhir.complex_types.range.Range] = None, fixedRatio: Optional[spark_auto_mapper_fhir.complex_types.ratio.Ratio] = None, fixedReference: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.resource.Resource]] = None, fixedSampledData: Optional[spark_auto_mapper_fhir.complex_types.sampled_data.SampledData] = None, fixedSignature: Optional[spark_auto_mapper_fhir.complex_types.signature.Signature] = None, fixedTiming: Optional[spark_auto_mapper_fhir.backbone_elements.timing.Timing] = None, fixedContactDetail: Optional[spark_auto_mapper_fhir.complex_types.contact_detail.ContactDetail] = None, fixedContributor: Optional[spark_auto_mapper_fhir.complex_types.contributor.Contributor] = None, fixedDataRequirement: Optional[spark_auto_mapper_fhir.complex_types.data_requirement.DataRequirement] = None, fixedExpression: Optional[spark_auto_mapper_fhir.complex_types.expression.Expression] = None, fixedParameterDefinition: Optional[spark_auto_mapper_fhir.complex_types.parameter_definition.ParameterDefinition] = None, fixedRelatedArtifact: Optional[spark_auto_mapper_fhir.complex_types.related_artifact.RelatedArtifact] = None, fixedTriggerDefinition: Optional[spark_auto_mapper_fhir.complex_types.trigger_definition.TriggerDefinition] = None, fixedUsageContext: Optional[spark_auto_mapper_fhir.complex_types.usage_context.UsageContext] = None, fixedDosage: Optional[spark_auto_mapper_fhir.backbone_elements.dosage.Dosage] = None, fixedMeta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, patternBase64Binary: Optional[spark_auto_mapper_fhir.fhir_types.base64_binary.FhirBase64Binary] = None, patternBoolean: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, patternCanonical: Optional[spark_auto_mapper_fhir.fhir_types.canonical.FhirCanonical] = None, patternCode: Optional[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode] = None, patternDate: Optional[spark_auto_mapper_fhir.fhir_types.date.FhirDate] = None, patternDateTime: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, patternDecimal: Optional[spark_auto_mapper_fhir.fhir_types.decimal.FhirDecimal] = None, patternId: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, patternInstant: Optional[spark_auto_mapper_fhir.fhir_types.instant.FhirInstant] = None, patternInteger: Optional[spark_auto_mapper_fhir.fhir_types.integer.FhirInteger] = None, patternMarkdown: Optional[spark_auto_mapper_fhir.fhir_types.markdown.FhirMarkdown] = None, patternOid: Optional[spark_auto_mapper_fhir.fhir_types.oid.FhirOid] = None, patternPositiveInt: Optional[spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt] = None, patternString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, patternTime: Optional[spark_auto_mapper_fhir.fhir_types.time.FhirTime] = None, patternUnsignedInt: Optional[spark_auto_mapper_fhir.fhir_types.unsigned_int.FhirUnsignedInt] = None, patternUri: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, patternUrl: Optional[spark_auto_mapper_fhir.fhir_types.url.FhirUrl] = None, patternUuid: Optional[spark_auto_mapper_fhir.fhir_types.uuid.FhirUuid] = None, patternAddress: Optional[spark_auto_mapper_fhir.complex_types.address.Address] = None, patternAge: Optional[spark_auto_mapper_fhir.complex_types.age.Age] = None, patternAnnotation: Optional[spark_auto_mapper_fhir.complex_types.annotation.Annotation] = None, patternAttachment: Optional[spark_auto_mapper_fhir.complex_types.attachment.Attachment] = None, patternCodeableConcept: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, patternCoding: Optional[spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, patternContactPoint: Optional[spark_auto_mapper_fhir.complex_types.contact_point.ContactPoint] = None, patternCount: Optional[spark_auto_mapper_fhir.complex_types.count.Count] = None, patternDistance: Optional[spark_auto_mapper_fhir.complex_types.distance.Distance] = None, patternDuration: Optional[spark_auto_mapper_fhir.complex_types.duration.Duration] = None, patternHumanName: Optional[spark_auto_mapper_fhir.complex_types.human_name.HumanName] = None, patternIdentifier: Optional[spark_auto_mapper_fhir.complex_types.identifier.Identifier] = None, patternMoney: Optional[spark_auto_mapper_fhir.complex_types.money.Money] = None, patternPeriod: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, patternQuantity: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, patternRange: Optional[spark_auto_mapper_fhir.complex_types.range.Range] = None, patternRatio: Optional[spark_auto_mapper_fhir.complex_types.ratio.Ratio] = None, patternReference: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.resource.Resource]] = None, patternSampledData: Optional[spark_auto_mapper_fhir.complex_types.sampled_data.SampledData] = None, patternSignature: Optional[spark_auto_mapper_fhir.complex_types.signature.Signature] = None, patternTiming: Optional[spark_auto_mapper_fhir.backbone_elements.timing.Timing] = None, patternContactDetail: Optional[spark_auto_mapper_fhir.complex_types.contact_detail.ContactDetail] = None, patternContributor: Optional[spark_auto_mapper_fhir.complex_types.contributor.Contributor] = None, patternDataRequirement: Optional[spark_auto_mapper_fhir.complex_types.data_requirement.DataRequirement] = None, patternExpression: Optional[spark_auto_mapper_fhir.complex_types.expression.Expression] = None, patternParameterDefinition: Optional[spark_auto_mapper_fhir.complex_types.parameter_definition.ParameterDefinition] = None, patternRelatedArtifact: Optional[spark_auto_mapper_fhir.complex_types.related_artifact.RelatedArtifact] = None, patternTriggerDefinition: Optional[spark_auto_mapper_fhir.complex_types.trigger_definition.TriggerDefinition] = None, patternUsageContext: Optional[spark_auto_mapper_fhir.complex_types.usage_context.UsageContext] = None, patternDosage: Optional[spark_auto_mapper_fhir.backbone_elements.dosage.Dosage] = None, patternMeta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, example: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.element_definition_example.ElementDefinitionExample]] = None, minValueDate: Optional[spark_auto_mapper_fhir.fhir_types.date.FhirDate] = None, minValueDateTime: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, minValueInstant: Optional[spark_auto_mapper_fhir.fhir_types.instant.FhirInstant] = None, minValueTime: Optional[spark_auto_mapper_fhir.fhir_types.time.FhirTime] = None, minValueDecimal: Optional[spark_auto_mapper_fhir.fhir_types.decimal.FhirDecimal] = None, minValueInteger: Optional[spark_auto_mapper_fhir.fhir_types.integer.FhirInteger] = None, minValuePositiveInt: Optional[spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt] = None, minValueUnsignedInt: Optional[spark_auto_mapper_fhir.fhir_types.unsigned_int.FhirUnsignedInt] = None, minValueQuantity: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, maxValueDate: Optional[spark_auto_mapper_fhir.fhir_types.date.FhirDate] = None, maxValueDateTime: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, maxValueInstant: Optional[spark_auto_mapper_fhir.fhir_types.instant.FhirInstant] = None, maxValueTime: Optional[spark_auto_mapper_fhir.fhir_types.time.FhirTime] = None, maxValueDecimal: Optional[spark_auto_mapper_fhir.fhir_types.decimal.FhirDecimal] = None, maxValueInteger: Optional[spark_auto_mapper_fhir.fhir_types.integer.FhirInteger] = None, maxValuePositiveInt: Optional[spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt] = None, maxValueUnsignedInt: Optional[spark_auto_mapper_fhir.fhir_types.unsigned_int.FhirUnsignedInt] = None, maxValueQuantity: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, maxLength: Optional[spark_auto_mapper_fhir.fhir_types.integer.FhirInteger] = None, condition: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.fhir_types.id.FhirId]] = None, constraint: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.element_definition_constraint.ElementDefinitionConstraint]] = None, mustSupport: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, isModifier: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, isModifierReason: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, isSummary: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, binding: Optional[spark_auto_mapper_fhir.backbone_elements.element_definition_binding.ElementDefinitionBinding] = None, mapping: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.element_definition_mapping.ElementDefinitionMapping]] = None)
 
+.. py:class:: ElementDefinition(*, id_ = None, extension = None, modifierExtension = None, path, representation = None, sliceName = None, sliceIsConstraining = None, label = None, code = None, slicing = None, short = None, definition = None, comment = None, requirements = None, alias = None, min = None, max = None, base = None, contentReference = None, type_ = None, defaultValueBase64Binary = None, defaultValueBoolean = None, defaultValueCanonical = None, defaultValueCode = None, defaultValueDate = None, defaultValueDateTime = None, defaultValueDecimal = None, defaultValueId = None, defaultValueInstant = None, defaultValueInteger = None, defaultValueMarkdown = None, defaultValueOid = None, defaultValuePositiveInt = None, defaultValueString = None, defaultValueTime = None, defaultValueUnsignedInt = None, defaultValueUri = None, defaultValueUrl = None, defaultValueUuid = None, defaultValueAddress = None, defaultValueAge = None, defaultValueAnnotation = None, defaultValueAttachment = None, defaultValueCodeableConcept = None, defaultValueCoding = None, defaultValueContactPoint = None, defaultValueCount = None, defaultValueDistance = None, defaultValueDuration = None, defaultValueHumanName = None, defaultValueIdentifier = None, defaultValueMoney = None, defaultValuePeriod = None, defaultValueQuantity = None, defaultValueRange = None, defaultValueRatio = None, defaultValueReference = None, defaultValueSampledData = None, defaultValueSignature = None, defaultValueTiming = None, defaultValueContactDetail = None, defaultValueContributor = None, defaultValueDataRequirement = None, defaultValueExpression = None, defaultValueParameterDefinition = None, defaultValueRelatedArtifact = None, defaultValueTriggerDefinition = None, defaultValueUsageContext = None, defaultValueDosage = None, defaultValueMeta = None, meaningWhenMissing = None, orderMeaning = None, fixedBase64Binary = None, fixedBoolean = None, fixedCanonical = None, fixedCode = None, fixedDate = None, fixedDateTime = None, fixedDecimal = None, fixedId = None, fixedInstant = None, fixedInteger = None, fixedMarkdown = None, fixedOid = None, fixedPositiveInt = None, fixedString = None, fixedTime = None, fixedUnsignedInt = None, fixedUri = None, fixedUrl = None, fixedUuid = None, fixedAddress = None, fixedAge = None, fixedAnnotation = None, fixedAttachment = None, fixedCodeableConcept = None, fixedCoding = None, fixedContactPoint = None, fixedCount = None, fixedDistance = None, fixedDuration = None, fixedHumanName = None, fixedIdentifier = None, fixedMoney = None, fixedPeriod = None, fixedQuantity = None, fixedRange = None, fixedRatio = None, fixedReference = None, fixedSampledData = None, fixedSignature = None, fixedTiming = None, fixedContactDetail = None, fixedContributor = None, fixedDataRequirement = None, fixedExpression = None, fixedParameterDefinition = None, fixedRelatedArtifact = None, fixedTriggerDefinition = None, fixedUsageContext = None, fixedDosage = None, fixedMeta = None, patternBase64Binary = None, patternBoolean = None, patternCanonical = None, patternCode = None, patternDate = None, patternDateTime = None, patternDecimal = None, patternId = None, patternInstant = None, patternInteger = None, patternMarkdown = None, patternOid = None, patternPositiveInt = None, patternString = None, patternTime = None, patternUnsignedInt = None, patternUri = None, patternUrl = None, patternUuid = None, patternAddress = None, patternAge = None, patternAnnotation = None, patternAttachment = None, patternCodeableConcept = None, patternCoding = None, patternContactPoint = None, patternCount = None, patternDistance = None, patternDuration = None, patternHumanName = None, patternIdentifier = None, patternMoney = None, patternPeriod = None, patternQuantity = None, patternRange = None, patternRatio = None, patternReference = None, patternSampledData = None, patternSignature = None, patternTiming = None, patternContactDetail = None, patternContributor = None, patternDataRequirement = None, patternExpression = None, patternParameterDefinition = None, patternRelatedArtifact = None, patternTriggerDefinition = None, patternUsageContext = None, patternDosage = None, patternMeta = None, example = None, minValueDate = None, minValueDateTime = None, minValueInstant = None, minValueTime = None, minValueDecimal = None, minValueInteger = None, minValuePositiveInt = None, minValueUnsignedInt = None, minValueQuantity = None, maxValueDate = None, maxValueDateTime = None, maxValueInstant = None, maxValueTime = None, maxValueDecimal = None, maxValueInteger = None, maxValuePositiveInt = None, maxValueUnsignedInt = None, maxValueQuantity = None, maxLength = None, condition = None, constraint = None, mustSupport = None, isModifier = None, isModifierReason = None, isSummary = None, binding = None, mapping = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
 
    ElementDefinition
-   Captures constraints on each element within the resource, profile, or extension.
-   If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
+       Captures constraints on each element within the resource, profile, or extension.
+       If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
+
+       Captures constraints on each element within the resource, profile, or
+   extension.
+       If the element is present, it must have a value for at least one of the
+   defined elements, an @id referenced from the Narrative, or extensions
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param modifierExtension: May be used to represent additional information that is not part of the basic
+   definition of the element and that modifies the understanding of the element
+   in which it is contained and/or the understanding of the containing element's
+   descendants. Usually modifier elements provide negation or qualification. To
+   make the use of extensions safe and manageable, there is a strict set of
+   governance applied to the definition and use of extensions. Though any
+   implementer can define an extension, there is a set of requirements that SHALL
+   be met as part of the definition of the extension. Applications processing a
+   resource are required to check for modifier extensions.
+
+   Modifier extensions SHALL NOT change the meaning of any elements on Resource
+   or DomainResource (including cannot change the meaning of modifierExtension
+   itself).
+       :param path: The path identifies the element and is expressed as a "."-separated list of
+   ancestor elements, beginning with the name of the resource or extension.
+       :param representation: Codes that define how this element is represented in instances, when the
+   deviation varies from the normal case.
+       :param sliceName: The name of this element definition slice, when slicing is working. The name
+   must be a token with no dots or spaces. This is a unique name referring to a
+   specific set of constraints applied to this element, used to provide a name to
+   different slices of the same element.
+       :param sliceIsConstraining: If true, indicates that this slice definition is constraining a slice
+   definition with the same name in an inherited profile. If false, the slice is
+   not overriding any slice in an inherited profile. If missing, the slice might
+   or might not be overriding a slice in an inherited profile, depending on the
+   sliceName.
+       :param label: A single preferred label which is the text to display beside the element
+   indicating its meaning or to use to prompt for the element in a user display
+   or form.
+       :param code: A code that has the same meaning as the element in a particular terminology.
+       :param slicing: Indicates that the element is sliced into a set of alternative definitions
+   (i.e. in a structure definition, there are multiple different constraints on a
+   single element in the base resource). Slicing can be used in any resource that
+   has cardinality ..* on the base resource, or any resource with a choice of
+   types. The set of slices is any elements that come after this in the element
+   sequence that have the same path, until a shorter path occurs (the shorter
+   path terminates the set).
+       :param short: A concise description of what this element means (e.g. for use in
+   autogenerated summaries).
+       :param definition: Provides a complete explanation of the meaning of the data element for human
+   readability.  For the case of elements derived from existing elements (e.g.
+   constraints), the definition SHALL be consistent with the base definition, but
+   convey the meaning of the element in the particular context of use of the
+   resource. (Note: The text you are reading is specified in
+   ElementDefinition.definition).
+       :param comment: Explanatory notes and implementation guidance about the data element,
+   including notes about how to use the data properly, exceptions to proper use,
+   etc. (Note: The text you are reading is specified in
+   ElementDefinition.comment).
+       :param requirements: This element is for traceability of why the element was created and why the
+   constraints exist as they do. This may be used to point to source materials or
+   specifications that drove the structure of this element.
+       :param alias: Identifies additional names by which this element might also be known.
+       :param min: The minimum number of times this element SHALL appear in the instance.
+       :param max: The maximum number of times this element is permitted to appear in the
+   instance.
+       :param base: Information about the base definition of the element, provided to make it
+   unnecessary for tools to trace the deviation of the element through the
+   derived and related profiles. When the element definition is not the original
+   definition of an element - i.g. either in a constraint on another type, or for
+   elements from a super type in a snap shot - then the information in provided
+   in the element definition may be different to the base definition. On the
+   original definition of the element, it will be same.
+       :param contentReference: Identifies an element defined elsewhere in the definition whose content rules
+   should be applied to the current element. ContentReferences bring across all
+   the rules that are in the ElementDefinition for the element, including
+   definitions, cardinality constraints, bindings, invariants etc.
+       :param type_: The data type or resource that the value of this element is permitted to be.
+       :param defaultValueBase64Binary: None
+       :param defaultValueBoolean: None
+       :param defaultValueCanonical: None
+       :param defaultValueCode: None
+       :param defaultValueDate: None
+       :param defaultValueDateTime: None
+       :param defaultValueDecimal: None
+       :param defaultValueId: None
+       :param defaultValueInstant: None
+       :param defaultValueInteger: None
+       :param defaultValueMarkdown: None
+       :param defaultValueOid: None
+       :param defaultValuePositiveInt: None
+       :param defaultValueString: None
+       :param defaultValueTime: None
+       :param defaultValueUnsignedInt: None
+       :param defaultValueUri: None
+       :param defaultValueUrl: None
+       :param defaultValueUuid: None
+       :param defaultValueAddress: None
+       :param defaultValueAge: None
+       :param defaultValueAnnotation: None
+       :param defaultValueAttachment: None
+       :param defaultValueCodeableConcept: None
+       :param defaultValueCoding: None
+       :param defaultValueContactPoint: None
+       :param defaultValueCount: None
+       :param defaultValueDistance: None
+       :param defaultValueDuration: None
+       :param defaultValueHumanName: None
+       :param defaultValueIdentifier: None
+       :param defaultValueMoney: None
+       :param defaultValuePeriod: None
+       :param defaultValueQuantity: None
+       :param defaultValueRange: None
+       :param defaultValueRatio: None
+       :param defaultValueReference: None
+       :param defaultValueSampledData: None
+       :param defaultValueSignature: None
+       :param defaultValueTiming: None
+       :param defaultValueContactDetail: None
+       :param defaultValueContributor: None
+       :param defaultValueDataRequirement: None
+       :param defaultValueExpression: None
+       :param defaultValueParameterDefinition: None
+       :param defaultValueRelatedArtifact: None
+       :param defaultValueTriggerDefinition: None
+       :param defaultValueUsageContext: None
+       :param defaultValueDosage: None
+       :param defaultValueMeta: None
+       :param meaningWhenMissing: The Implicit meaning that is to be understood when this element is missing
+   (e.g. 'when this element is missing, the period is ongoing').
+       :param orderMeaning: If present, indicates that the order of the repeating element has meaning and
+   describes what that meaning is.  If absent, it means that the order of the
+   element has no meaning.
+       :param fixedBase64Binary: None
+       :param fixedBoolean: None
+       :param fixedCanonical: None
+       :param fixedCode: None
+       :param fixedDate: None
+       :param fixedDateTime: None
+       :param fixedDecimal: None
+       :param fixedId: None
+       :param fixedInstant: None
+       :param fixedInteger: None
+       :param fixedMarkdown: None
+       :param fixedOid: None
+       :param fixedPositiveInt: None
+       :param fixedString: None
+       :param fixedTime: None
+       :param fixedUnsignedInt: None
+       :param fixedUri: None
+       :param fixedUrl: None
+       :param fixedUuid: None
+       :param fixedAddress: None
+       :param fixedAge: None
+       :param fixedAnnotation: None
+       :param fixedAttachment: None
+       :param fixedCodeableConcept: None
+       :param fixedCoding: None
+       :param fixedContactPoint: None
+       :param fixedCount: None
+       :param fixedDistance: None
+       :param fixedDuration: None
+       :param fixedHumanName: None
+       :param fixedIdentifier: None
+       :param fixedMoney: None
+       :param fixedPeriod: None
+       :param fixedQuantity: None
+       :param fixedRange: None
+       :param fixedRatio: None
+       :param fixedReference: None
+       :param fixedSampledData: None
+       :param fixedSignature: None
+       :param fixedTiming: None
+       :param fixedContactDetail: None
+       :param fixedContributor: None
+       :param fixedDataRequirement: None
+       :param fixedExpression: None
+       :param fixedParameterDefinition: None
+       :param fixedRelatedArtifact: None
+       :param fixedTriggerDefinition: None
+       :param fixedUsageContext: None
+       :param fixedDosage: None
+       :param fixedMeta: None
+       :param patternBase64Binary: None
+       :param patternBoolean: None
+       :param patternCanonical: None
+       :param patternCode: None
+       :param patternDate: None
+       :param patternDateTime: None
+       :param patternDecimal: None
+       :param patternId: None
+       :param patternInstant: None
+       :param patternInteger: None
+       :param patternMarkdown: None
+       :param patternOid: None
+       :param patternPositiveInt: None
+       :param patternString: None
+       :param patternTime: None
+       :param patternUnsignedInt: None
+       :param patternUri: None
+       :param patternUrl: None
+       :param patternUuid: None
+       :param patternAddress: None
+       :param patternAge: None
+       :param patternAnnotation: None
+       :param patternAttachment: None
+       :param patternCodeableConcept: None
+       :param patternCoding: None
+       :param patternContactPoint: None
+       :param patternCount: None
+       :param patternDistance: None
+       :param patternDuration: None
+       :param patternHumanName: None
+       :param patternIdentifier: None
+       :param patternMoney: None
+       :param patternPeriod: None
+       :param patternQuantity: None
+       :param patternRange: None
+       :param patternRatio: None
+       :param patternReference: None
+       :param patternSampledData: None
+       :param patternSignature: None
+       :param patternTiming: None
+       :param patternContactDetail: None
+       :param patternContributor: None
+       :param patternDataRequirement: None
+       :param patternExpression: None
+       :param patternParameterDefinition: None
+       :param patternRelatedArtifact: None
+       :param patternTriggerDefinition: None
+       :param patternUsageContext: None
+       :param patternDosage: None
+       :param patternMeta: None
+       :param example: A sample value for this element demonstrating the type of information that
+   would typically be found in the element.
+       :param minValueDate: None
+       :param minValueDateTime: None
+       :param minValueInstant: None
+       :param minValueTime: None
+       :param minValueDecimal: None
+       :param minValueInteger: None
+       :param minValuePositiveInt: None
+       :param minValueUnsignedInt: None
+       :param minValueQuantity: None
+       :param maxValueDate: None
+       :param maxValueDateTime: None
+       :param maxValueInstant: None
+       :param maxValueTime: None
+       :param maxValueDecimal: None
+       :param maxValueInteger: None
+       :param maxValuePositiveInt: None
+       :param maxValueUnsignedInt: None
+       :param maxValueQuantity: None
+       :param maxLength: Indicates the maximum length in characters that is permitted to be present in
+   conformant instances and which is expected to be supported by conformant
+   consumers that support the element.
+       :param condition: A reference to an invariant that may make additional statements about the
+   cardinality or value in the instance.
+       :param constraint: Formal constraints such as co-occurrence and other constraints that can be
+   computationally evaluated within the context of the instance.
+       :param mustSupport: If true, implementations that produce or consume resources SHALL provide
+   "support" for the element in some meaningful way.  If false, the element may
+   be ignored and not supported. If false, whether to populate or use the data
+   element in any way is at the discretion of the implementation.
+       :param isModifier: If true, the value of this element affects the interpretation of the element
+   or resource that contains it, and the value of the element cannot be ignored.
+   Typically, this is used for status, negation and qualification codes. The
+   effect of this is that the element cannot be ignored by systems: they SHALL
+   either recognize the element and process it, and/or a pre-determination has
+   been made that it is not relevant to their particular system.
+       :param isModifierReason: Explains how that element affects the interpretation of the resource or
+   element that contains it.
+       :param isSummary: Whether the element should be included if a client requests a search with the
+   parameter _summary=true.
+       :param binding: Binds to a value set if this element is coded (code, Coding, CodeableConcept,
+   Quantity), or the data types (string, uri).
+       :param mapping: Identifies a concept from an external specification that roughly corresponds
+   to this element.
 
 

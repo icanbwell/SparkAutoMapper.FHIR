@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.observation_methods`
-============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.observation_methods`
+===============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.observation_methods
 
@@ -16,10 +16,10 @@ Classes
 
 
 
-.. class:: ObservationMethodsCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ObservationMethodsCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ObservationMethods
    From: http://hl7.org/fhir/ValueSet/observation-methods in valuesets.xml
@@ -27,8 +27,8 @@ Classes
    concept is-a 272394005 (Technique (qualifier value)) or is-a 129264002 (Action
    (qualifier value)) or is-a 386053000 (Evaluation procedure(procedure))
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://snomed.info/sct
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://snomed.info/sct
 
       
 

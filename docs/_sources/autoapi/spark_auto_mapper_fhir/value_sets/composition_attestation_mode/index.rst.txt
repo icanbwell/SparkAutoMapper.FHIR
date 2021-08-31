@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.composition_attestation_mode`
-=====================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.composition_attestation_mode`
+========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.composition_attestation_mode
 
@@ -17,34 +17,34 @@ Classes
 
 
 
-.. class:: CompositionAttestationModeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: CompositionAttestationModeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    CompositionAttestationMode
    From: http://hl7.org/fhir/composition-attestation-mode in valuesets.xml
        The way in which a person authenticated a composition.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/composition-attestation-mode
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/composition-attestation-mode
 
       
 
 
-.. class:: CompositionAttestationModeCodeValues
+.. py:class:: CompositionAttestationModeCodeValues
 
    The person authenticated the content in their personal capacity.
    From: http://hl7.org/fhir/composition-attestation-mode in valuesets.xml
 
-   .. attribute:: Personal
+   .. py:attribute:: Personal
       
 
       The person authenticated the content in their professional capacity.
       From: http://hl7.org/fhir/composition-attestation-mode in valuesets.xml
 
 
-   .. attribute:: Professional
+   .. py:attribute:: Professional
       
 
       The person authenticated the content and accepted legal responsibility for its
@@ -52,7 +52,7 @@ Classes
       From: http://hl7.org/fhir/composition-attestation-mode in valuesets.xml
 
 
-   .. attribute:: Legal
+   .. py:attribute:: Legal
       
 
       The organization authenticated the content as consistent with their policies
@@ -60,7 +60,7 @@ Classes
       From: http://hl7.org/fhir/composition-attestation-mode in valuesets.xml
 
 
-   .. attribute:: Official
+   .. py:attribute:: Official
       
 
       

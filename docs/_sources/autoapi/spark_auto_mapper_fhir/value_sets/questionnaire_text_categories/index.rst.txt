@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.questionnaire_text_categories`
-======================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.questionnaire_text_categories`
+=========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.questionnaire_text_categories
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: QuestionnaireTextCategoriesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: QuestionnaireTextCategoriesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    QuestionnaireTextCategories
    From: http://hl7.org/fhir/questionnaire-display-category in valuesets.xml
        Codes defining the purpose of a Questionnaire item of type 'text'.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/questionnaire-display-category
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/questionnaire-display-category
 
       
 
 
-.. class:: QuestionnaireTextCategoriesCodeValues
+.. py:class:: QuestionnaireTextCategoriesCodeValues
 
    The text provides guidance on how to populate or use a portion of the
    questionnaire (or the questionnaire as a whole).
    From: http://hl7.org/fhir/questionnaire-display-category in valuesets.xml
 
-   .. attribute:: Instructions
+   .. py:attribute:: Instructions
       
 
       The text provides guidance on how the information should be or will be handled
@@ -46,7 +46,7 @@ Classes
       From: http://hl7.org/fhir/questionnaire-display-category in valuesets.xml
 
 
-   .. attribute:: Security
+   .. py:attribute:: Security
       
 
       The text provides additional guidance on populating the containing item.  Help
@@ -56,7 +56,7 @@ Classes
       From: http://hl7.org/fhir/questionnaire-display-category in valuesets.xml
 
 
-   .. attribute:: Help
+   .. py:attribute:: Help
       
 
       

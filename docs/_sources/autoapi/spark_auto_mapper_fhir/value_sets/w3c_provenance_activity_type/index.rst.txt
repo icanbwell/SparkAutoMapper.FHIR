@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.w3c_provenance_activity_type`
-=====================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.w3c_provenance_activity_type`
+========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.w3c_provenance_activity_type
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: W3cProvenanceActivityTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: W3cProvenanceActivityTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    W3cProvenanceActivityType
    From: http://hl7.org/fhir/w3c-provenance-activity-type in valuesets.xml
@@ -32,13 +32,13 @@ Classes
    http://www.w3.org/TR/2013/REC-prov-dm-20130430/ and
    http://www.w3.org/TR/2013/REC-prov-n-20130430/]
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/w3c-provenance-activity-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/w3c-provenance-activity-type
 
       
 
 
-.. class:: W3cProvenanceActivityTypeCodeValues
+.. py:class:: W3cProvenanceActivityTypeCodeValues
 
    The completion of production of a new entity by an activity. This entity did
    not exist before generation and becomes available for usage after this
@@ -46,7 +46,7 @@ Classes
    entity, it is instantaneous.
    From: http://hl7.org/fhir/w3c-provenance-activity-type in valuesets.xml
 
-   .. attribute:: WasGeneratedBy
+   .. py:attribute:: WasGeneratedBy
       
 
       the beginning of utilizing an entity by an activity. Before usage, the
@@ -57,7 +57,7 @@ Classes
       From: http://hl7.org/fhir/w3c-provenance-activity-type in valuesets.xml
 
 
-   .. attribute:: Used
+   .. py:attribute:: Used
       
 
       The exchange of some unspecified entity by two activities, one activity using
@@ -67,7 +67,7 @@ Classes
       From: http://hl7.org/fhir/w3c-provenance-activity-type in valuesets.xml
 
 
-   .. attribute:: WasInformedBy
+   .. py:attribute:: WasInformedBy
       
 
       When an activity is deemed to have been started by an entity, known as
@@ -79,7 +79,7 @@ Classes
       From: http://hl7.org/fhir/w3c-provenance-activity-type in valuesets.xml
 
 
-   .. attribute:: WasStartedBy
+   .. py:attribute:: WasStartedBy
       
 
       When an activity is deemed to have been ended by an entity, known as trigger.
@@ -90,7 +90,7 @@ Classes
       From: http://hl7.org/fhir/w3c-provenance-activity-type in valuesets.xml
 
 
-   .. attribute:: WasEndedBy
+   .. py:attribute:: WasEndedBy
       
 
       The start of the destruction, cessation, or expiry of an existing entity by an
@@ -101,7 +101,7 @@ Classes
       From: http://hl7.org/fhir/w3c-provenance-activity-type in valuesets.xml
 
 
-   .. attribute:: WasInvalidatedBy
+   .. py:attribute:: WasInvalidatedBy
       
 
       A transformation of an entity into another, an update of an entity resulting
@@ -122,7 +122,7 @@ Classes
       From: http://hl7.org/fhir/w3c-provenance-activity-type in valuesets.xml
 
 
-   .. attribute:: WasDerivedFrom
+   .. py:attribute:: WasDerivedFrom
       
 
       A derivation for which the resulting entity is a revised version of some
@@ -132,7 +132,7 @@ Classes
       From: http://hl7.org/fhir/w3c-provenance-activity-type in valuesets.xml
 
 
-   .. attribute:: WasRevisionOf
+   .. py:attribute:: WasRevisionOf
       
 
       The repeat of (some or all of) an entity, such as text or image, by someone
@@ -142,7 +142,7 @@ Classes
       From: http://hl7.org/fhir/w3c-provenance-activity-type in valuesets.xml
 
 
-   .. attribute:: WasQuotedFrom
+   .. py:attribute:: WasQuotedFrom
       
 
       Refers to something produced by some agent with direct experience and
@@ -157,23 +157,23 @@ Classes
       From: http://hl7.org/fhir/w3c-provenance-activity-type in valuesets.xml
 
 
-   .. attribute:: WasPrimarySourceOf
+   .. py:attribute:: WasPrimarySourceOf
       
 
       Ascribing of an entity (object/document) to an agent.
       From: http://hl7.org/fhir/w3c-provenance-activity-type in valuesets.xml
 
 
-   .. attribute:: WasAttributedTo
+   .. py:attribute:: WasAttributedTo
       
 
-      An aggregating activity that results in composition of an entity, which
+       An aggregating activity that results in composition of an entity, which
       provides a structure to some constituents that must themselves be entities.
       These constituents are said to be member of the collections.
       From: http://hl7.org/fhir/w3c-provenance-activity-type in valuesets.xml
 
 
-   .. attribute:: IsCollectionOf
+   .. py:attribute:: IsCollectionOf
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.document_class_value_set`
-=================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.document_class_value_set`
+====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.document_class_value_set
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: DocumentClassValueSetCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: DocumentClassValueSetCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    DocumentClassValueSet
    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
@@ -33,281 +33,281 @@ Classes
    document is placed. It was determined from the SETs created for Claims
    Attachment requests.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://loinc.org
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://loinc.org
 
       
 
 
-.. class:: DocumentClassValueSetCodeValues
+.. py:class:: DocumentClassValueSetCodeValues
 
    From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
-   .. attribute:: HistoryOfImmunization
+   .. py:attribute:: HistoryOfImmunization
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: AnesthesiaRecords
+   .. py:attribute:: AnesthesiaRecords
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: ChemotherapyRecords
+   .. py:attribute:: ChemotherapyRecords
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: ConsultNote
+   .. py:attribute:: ConsultNote
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: Provider_unspecifiedProgressNote
+   .. py:attribute:: Provider_unspecifiedProgressNote
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: NurseryRecords
+   .. py:attribute:: NurseryRecords
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: LaborAndDeliveryRecords
+   .. py:attribute:: LaborAndDeliveryRecords
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: RadiologyStudies_set_
+   .. py:attribute:: RadiologyStudies_set_
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: Provider_unspecifiedTransferSummary
+   .. py:attribute:: Provider_unspecifiedTransferSummary
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: DischargeSummary
+   .. py:attribute:: DischargeSummary
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: LaboratoryStudies_set_
+   .. py:attribute:: LaboratoryStudies_set_
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: CardiologyStudies_set_
+   .. py:attribute:: CardiologyStudies_set_
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: ObstetricalStudies_set_
+   .. py:attribute:: ObstetricalStudies_set_
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: GastroenterologyEndoscopyStudies_set_
+   .. py:attribute:: GastroenterologyEndoscopyStudies_set_
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: PulmonaryStudies_set_
+   .. py:attribute:: PulmonaryStudies_set_
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: NeuromuscularElectrophysiologyStudies_set_
+   .. py:attribute:: NeuromuscularElectrophysiologyStudies_set_
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: PathologyStudies_set_
+   .. py:attribute:: PathologyStudies_set_
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: Provider_unspecifiedProcedureNote
+   .. py:attribute:: Provider_unspecifiedProcedureNote
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: Ophthalmology_optometryStudies_set_
+   .. py:attribute:: Ophthalmology_optometryStudies_set_
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: MiscellaneousStudies_set_
+   .. py:attribute:: MiscellaneousStudies_set_
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: DialysisRecords
+   .. py:attribute:: DialysisRecords
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: NeonatalIntensiveCareRecords
+   .. py:attribute:: NeonatalIntensiveCareRecords
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: CriticalCareRecords
+   .. py:attribute:: CriticalCareRecords
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: PerioperativeRecords
+   .. py:attribute:: PerioperativeRecords
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: EvaluationAndManagementNote
+   .. py:attribute:: EvaluationAndManagementNote
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: Provider_unspecified_HistoryAndPhysicalNote
+   .. py:attribute:: Provider_unspecified_HistoryAndPhysicalNote
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: InterventionalProcedureNote
+   .. py:attribute:: InterventionalProcedureNote
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: PathologyProcedureNote
+   .. py:attribute:: PathologyProcedureNote
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: SummarizationOfEpisodeNote
+   .. py:attribute:: SummarizationOfEpisodeNote
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: TransferOfCareReferralNote
+   .. py:attribute:: TransferOfCareReferralNote
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: TelephoneEncounterNote
+   .. py:attribute:: TelephoneEncounterNote
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: GeneralSurgeryPre_operativeEvaluationAndManagementNote
+   .. py:attribute:: GeneralSurgeryPre_operativeEvaluationAndManagementNote
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: InpatientAdmissionHistoryAndPhysicalNote
+   .. py:attribute:: InpatientAdmissionHistoryAndPhysicalNote
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: CounselingNote
+   .. py:attribute:: CounselingNote
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: StudyReportDocument
+   .. py:attribute:: StudyReportDocument
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: SummaryOfDeath
+   .. py:attribute:: SummaryOfDeath
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: Non_patientCommunication
+   .. py:attribute:: Non_patientCommunication
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: PrivacyPolicyOrganizationDocument
+   .. py:attribute:: PrivacyPolicyOrganizationDocument
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: PrivacyPolicyAcknowledgmentDocument
+   .. py:attribute:: PrivacyPolicyAcknowledgmentDocument
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: MedicationSummaryDocument
+   .. py:attribute:: MedicationSummaryDocument
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: PersonalHealthMonitoringReportDocument
+   .. py:attribute:: PersonalHealthMonitoringReportDocument
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: PlanOfCareNote
+   .. py:attribute:: PlanOfCareNote
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: DiagnosticImagingStudy
+   .. py:attribute:: DiagnosticImagingStudy
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: SurgicalOperationNote
+   .. py:attribute:: SurgicalOperationNote
       
 
       From: http://hl7.org/fhir/ValueSet/document-classcodes in valuesets.xml
 
 
-   .. attribute:: ReferralNote
+   .. py:attribute:: ReferralNote
       
 
       

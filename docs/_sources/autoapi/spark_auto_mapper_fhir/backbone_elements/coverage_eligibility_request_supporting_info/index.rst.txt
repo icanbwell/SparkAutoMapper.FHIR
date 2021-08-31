@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.backbone_elements.coverage_eligibility_request_supporting_info`
-============================================================================================
+:py:mod:`spark_auto_mapper_fhir.backbone_elements.coverage_eligibility_request_supporting_info`
+===============================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.backbone_elements.coverage_eligibility_request_supporting_info
 
@@ -16,12 +16,43 @@ Classes
 
 
 
-.. class:: CoverageEligibilityRequestSupportingInfo(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, sequence: spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt, information: spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.resource.Resource], appliesToAll: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None)
 
+.. py:class:: CoverageEligibilityRequestSupportingInfo(*, id_ = None, extension = None, modifierExtension = None, sequence, information, appliesToAll = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
 
    CoverageEligibilityRequest.SupportingInfo
-   The CoverageEligibilityRequest provides patient and insurance coverage information to an insurer for them to respond, in the form of an CoverageEligibilityResponse, with information regarding whether the stated coverage is valid and in-force and optionally to provide the insurance details of the policy.
+       The CoverageEligibilityRequest provides patient and insurance coverage information to an insurer for them to respond, in the form of an CoverageEligibilityResponse, with information regarding whether the stated coverage is valid and in-force and optionally to provide the insurance details of the policy.
+
+       The CoverageEligibilityRequest provides patient and insurance coverage
+   information to an insurer for them to respond, in the form of an
+   CoverageEligibilityResponse, with information regarding whether the stated
+   coverage is valid and in-force and optionally to provide the insurance details
+   of the policy.
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param modifierExtension: May be used to represent additional information that is not part of the basic
+   definition of the element and that modifies the understanding of the element
+   in which it is contained and/or the understanding of the containing element's
+   descendants. Usually modifier elements provide negation or qualification. To
+   make the use of extensions safe and manageable, there is a strict set of
+   governance applied to the definition and use of extensions. Though any
+   implementer can define an extension, there is a set of requirements that SHALL
+   be met as part of the definition of the extension. Applications processing a
+   resource are required to check for modifier extensions.
+
+   Modifier extensions SHALL NOT change the meaning of any elements on Resource
+   or DomainResource (including cannot change the meaning of modifierExtension
+   itself).
+       :param sequence: A number to uniquely identify supporting information entries.
+       :param information: Additional data or information such as resources, documents, images etc.
+   including references to the data or the actual inclusion of the data.
+       :param appliesToAll: The supporting materials are applicable for all detail items, product/servce
+   categories and specific billing codes.
 
 

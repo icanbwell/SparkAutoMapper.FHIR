@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.structure_map_source_list_mode`
-=======================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.structure_map_source_list_mode`
+==========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.structure_map_source_list_mode
 
@@ -17,55 +17,55 @@ Classes
 
 
 
-.. class:: StructureMapSourceListModeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: StructureMapSourceListModeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    StructureMapSourceListMode
    From: http://hl7.org/fhir/map-source-list-mode in valuesets.xml
        If field is a list, how to manage the source.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/map-source-list-mode
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/map-source-list-mode
 
       
 
 
-.. class:: StructureMapSourceListModeCodeValues
+.. py:class:: StructureMapSourceListModeCodeValues
 
    Only process this rule for the first in the list.
    From: http://hl7.org/fhir/map-source-list-mode in valuesets.xml
 
-   .. attribute:: First
+   .. py:attribute:: First
       
 
       Process this rule for all but the first.
       From: http://hl7.org/fhir/map-source-list-mode in valuesets.xml
 
 
-   .. attribute:: AllButTheFirst
+   .. py:attribute:: AllButTheFirst
       
 
       Only process this rule for the last in the list.
       From: http://hl7.org/fhir/map-source-list-mode in valuesets.xml
 
 
-   .. attribute:: Last
+   .. py:attribute:: Last
       
 
       Process this rule for all but the last.
       From: http://hl7.org/fhir/map-source-list-mode in valuesets.xml
 
 
-   .. attribute:: AllButTheLast
+   .. py:attribute:: AllButTheLast
       
 
       Only process this rule is there is only item.
       From: http://hl7.org/fhir/map-source-list-mode in valuesets.xml
 
 
-   .. attribute:: EnforceOnlyOne
+   .. py:attribute:: EnforceOnlyOne
       
 
       

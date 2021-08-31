@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.list_empty_reasons`
-===========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.list_empty_reasons`
+==============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.list_empty_reasons
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: ListEmptyReasonsCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ListEmptyReasonsCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ListEmptyReasons
    From: http://terminology.hl7.org/CodeSystem/list-empty-reason in valuesets.xml
@@ -28,13 +28,13 @@ Classes
    summary list (i.e. problem or medication list) or to a workflow related list
    (i.e. consultation list).
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/list-empty-reason
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/list-empty-reason
 
       
 
 
-.. class:: ListEmptyReasonsCodeValues
+.. py:class:: ListEmptyReasonsCodeValues
 
    Clinical judgment that there are no known items for this list after reasonable
    investigation. Note that this a positive statement by a clinical user, and not
@@ -47,7 +47,7 @@ Classes
    patient's agent/guardian has asserted that there is no known event to record.
    From: http://terminology.hl7.org/CodeSystem/list-empty-reason in valuesets.xml
 
-   .. attribute:: NilKnown
+   .. py:attribute:: NilKnown
       
 
       The investigation to find out whether there are items for this list has not
@@ -55,7 +55,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/list-empty-reason in valuesets.xml
 
 
-   .. attribute:: NotAsked
+   .. py:attribute:: NotAsked
       
 
       The content of the list was not provided due to privacy or confidentiality
@@ -65,7 +65,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/list-empty-reason in valuesets.xml
 
 
-   .. attribute:: InformationWithheld
+   .. py:attribute:: InformationWithheld
       
 
       Information to populate this list cannot be obtained; e.g. unconscious
@@ -73,21 +73,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/list-empty-reason in valuesets.xml
 
 
-   .. attribute:: Unavailable
+   .. py:attribute:: Unavailable
       
 
       The work to populate this list has not yet begun.
       From: http://terminology.hl7.org/CodeSystem/list-empty-reason in valuesets.xml
 
 
-   .. attribute:: NotStarted
+   .. py:attribute:: NotStarted
       
 
       This list has now closed or has ceased to be relevant or useful.
       From: http://terminology.hl7.org/CodeSystem/list-empty-reason in valuesets.xml
 
 
-   .. attribute:: Closed
+   .. py:attribute:: Closed
       
 
       

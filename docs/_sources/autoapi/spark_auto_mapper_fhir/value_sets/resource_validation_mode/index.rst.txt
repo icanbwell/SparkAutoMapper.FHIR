@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.resource_validation_mode`
-=================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.resource_validation_mode`
+====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.resource_validation_mode
 
@@ -17,29 +17,29 @@ Classes
 
 
 
-.. class:: ResourceValidationModeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ResourceValidationModeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ResourceValidationMode
    From: http://hl7.org/fhir/resource-validation-mode in valuesets.xml
        Codes indicating the type of validation to perform.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/resource-validation-mode
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/resource-validation-mode
 
       
 
 
-.. class:: ResourceValidationModeCodeValues
+.. py:class:: ResourceValidationModeCodeValues
 
    The server checks the content, and then checks that the content would be
    acceptable as a create (e.g. that the content would not violate any uniqueness
    constraints).
    From: http://hl7.org/fhir/resource-validation-mode in valuesets.xml
 
-   .. attribute:: ValidateForCreate
+   .. py:attribute:: ValidateForCreate
       
 
       The server checks the content, and then checks that it would accept it as an
@@ -49,7 +49,7 @@ Classes
       From: http://hl7.org/fhir/resource-validation-mode in valuesets.xml
 
 
-   .. attribute:: ValidateForUpdate
+   .. py:attribute:: ValidateForUpdate
       
 
       The server ignores the content and checks that the nominated resource is
@@ -57,7 +57,7 @@ Classes
       From: http://hl7.org/fhir/resource-validation-mode in valuesets.xml
 
 
-   .. attribute:: ValidateForDelete
+   .. py:attribute:: ValidateForDelete
       
 
       The server checks an existing resource (must be nominated by id, not provided
@@ -65,7 +65,7 @@ Classes
       From: http://hl7.org/fhir/resource-validation-mode in valuesets.xml
 
 
-   .. attribute:: ValidateAgainstAProfile
+   .. py:attribute:: ValidateAgainstAProfile
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.hl7_approval_status`
-============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.hl7_approval_status`
+===============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.hl7_approval_status
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: Hl7ApprovalStatus(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: Hl7ApprovalStatus(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.hl7ApprovalStatus
    From: http://terminology.hl7.org/ValueSet/v3-hl7ApprovalStatus in v3-codesystems.xml
@@ -29,19 +29,19 @@ Classes
    system reflects the concepts expressed in HL7's Governance & Operations Manual
    (GOM) past and present.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus
 
       
 
 
-.. class:: Hl7ApprovalStatusValues
+.. py:class:: Hl7ApprovalStatusValues
 
    Description: Content that is being presented to an international affiliate for
    consideration as a realm-specific draft standard for trial use.
    From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
 
-   .. attribute:: AffiliateBallot_DSTU
+   .. py:attribute:: AffiliateBallot_DSTU
       
 
       Description: Content that is being presented to an international affiliate for
@@ -49,7 +49,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
 
 
-   .. attribute:: AffiliateBallot_Informative
+   .. py:attribute:: AffiliateBallot_Informative
       
 
       Description: Content that is being presented to an international affiliate for
@@ -57,7 +57,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
 
 
-   .. attribute:: AffiliateBallot_Normative
+   .. py:attribute:: AffiliateBallot_Normative
       
 
       Description: Content that has passed ballot as a realm-specific draft standard
@@ -65,7 +65,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
 
 
-   .. attribute:: ApprovedAffiliateDSTU
+   .. py:attribute:: ApprovedAffiliateDSTU
       
 
       Description: Content that has passed ballot as a realm-specific informative
@@ -73,7 +73,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
 
 
-   .. attribute:: ApprovedAffiliateInformative
+   .. py:attribute:: ApprovedAffiliateInformative
       
 
       Description: Content that has passed ballot as a realm-specific normative
@@ -81,28 +81,28 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
 
 
-   .. attribute:: ApprovedAffiliateNormative
+   .. py:attribute:: ApprovedAffiliateNormative
       
 
       Description: Content that has passed ballot as a draft standard for trial use.
       From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
 
 
-   .. attribute:: ApprovedDSTU
+   .. py:attribute:: ApprovedDSTU
       
 
       Description: Content that has passed ballot as a normative standard.
       From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
 
 
-   .. attribute:: ApprovedInformative
+   .. py:attribute:: ApprovedInformative
       
 
       Description: Content that has passed ballot as a normative standard.
       From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
 
 
-   .. attribute:: ApprovedNormative
+   .. py:attribute:: ApprovedNormative
       
 
       Description: Content prepared by a committee and submitted for internal
@@ -117,7 +117,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
 
 
-   .. attribute:: CommitteeBallot_Informative
+   .. py:attribute:: CommitteeBallot_Informative
       
 
       Description: Content prepared by a committee and submitted for internal
@@ -132,14 +132,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
 
 
-   .. attribute:: CommitteeBallot_Normative
+   .. py:attribute:: CommitteeBallot_Normative
       
 
       Description: Content that is under development and is not intended to be used.
       From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
 
 
-   .. attribute:: Draft
+   .. py:attribute:: Draft
       
 
       Description: Content that represents an adaption of a implementable balloted
@@ -147,7 +147,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
 
 
-   .. attribute:: LocalizedAdaptation
+   .. py:attribute:: LocalizedAdaptation
       
 
       Description: Content prepared by a committee and submitted for membership
@@ -155,7 +155,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
 
 
-   .. attribute:: MembershipBallot_DSTU
+   .. py:attribute:: MembershipBallot_DSTU
       
 
       Description: Content prepared by a committee and submitted for membership
@@ -163,7 +163,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
 
 
-   .. attribute:: MembershipBallot_Informative
+   .. py:attribute:: MembershipBallot_Informative
       
 
       Description: Content prepared by a committee and submitted for membership
@@ -171,7 +171,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
 
 
-   .. attribute:: MembershipBallot_Normative
+   .. py:attribute:: MembershipBallot_Normative
       
 
       Description: Content developed independently by an organization or individual
@@ -180,7 +180,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
 
 
-   .. attribute:: Non_standard_AvailableForUse
+   .. py:attribute:: Non_standard_AvailableForUse
       
 
       Description: Content submitted to a committee for consideration for future
@@ -188,7 +188,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
 
 
-   .. attribute:: Proposal
+   .. py:attribute:: Proposal
       
 
       Description: Content intended to support other content that is subject to
@@ -196,7 +196,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
 
 
-   .. attribute:: Reference
+   .. py:attribute:: Reference
       
 
       Description: Content that represents an item that was at one point a normative
@@ -204,7 +204,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus in v3-codesystems.xml
 
 
-   .. attribute:: Withdrawn
+   .. py:attribute:: Withdrawn
       
 
       

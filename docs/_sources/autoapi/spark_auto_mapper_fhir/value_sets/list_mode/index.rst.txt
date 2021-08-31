@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.list_mode`
-==================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.list_mode`
+=====================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.list_mode
 
@@ -17,35 +17,35 @@ Classes
 
 
 
-.. class:: ListModeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ListModeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ListMode
    From: http://hl7.org/fhir/list-mode in valuesets.xml
        The processing mode that applies to this list.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/list-mode
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/list-mode
 
       
 
 
-.. class:: ListModeCodeValues
+.. py:class:: ListModeCodeValues
 
    This list is the master list, maintained in an ongoing fashion with regular
    updates as the real world list it is tracking changes.
    From: http://hl7.org/fhir/list-mode in valuesets.xml
 
-   .. attribute:: WorkingList
+   .. py:attribute:: WorkingList
       
 
       This list was prepared as a snapshot. It should not be assumed to be current.
       From: http://hl7.org/fhir/list-mode in valuesets.xml
 
 
-   .. attribute:: SnapshotList
+   .. py:attribute:: SnapshotList
       
 
       A point-in-time list that shows what changes have been made or recommended.
@@ -54,7 +54,7 @@ Classes
       From: http://hl7.org/fhir/list-mode in valuesets.xml
 
 
-   .. attribute:: ChangeList
+   .. py:attribute:: ChangeList
       
 
       

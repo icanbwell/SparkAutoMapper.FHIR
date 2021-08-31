@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.hl7_context_conduction_style`
-=====================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.hl7_context_conduction_style`
+========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.hl7_context_conduction_style
 
@@ -17,23 +17,23 @@ Classes
 
 
 
-.. class:: HL7ContextConductionStyle(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: HL7ContextConductionStyle(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.HL7ContextConductionStyle
    From: http://terminology.hl7.org/ValueSet/v3-HL7ContextConductionStyle in v3-codesystems.xml
        The styles of context conduction usable by relationships within a static model
    derived from tyhe HL7 Reference Information Model.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-HL7ContextConductionStyle
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-HL7ContextConductionStyle
 
       
 
 
-.. class:: HL7ContextConductionStyleValues
+.. py:class:: HL7ContextConductionStyleValues
 
    Definition: Context conduction is defined using the contextConductionCode and
    contextConductionInd attributes on ActRelationship and Participation.
@@ -43,7 +43,7 @@ Classes
    March, 2010.
    From: http://terminology.hl7.org/CodeSystem/v3-HL7ContextConductionStyle in v3-codesystems.xml
 
-   .. attribute:: Conduction_indicator_based
+   .. py:attribute:: Conduction_indicator_based
       
 
       Definition: Context conduction is not explicitly defined.  The recipient of an
@@ -56,7 +56,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-HL7ContextConductionStyle in v3-codesystems.xml
 
 
-   .. attribute:: Inferred
+   .. py:attribute:: Inferred
       
 
       Definition: Context conduction is defined using the
@@ -66,7 +66,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-HL7ContextConductionStyle in v3-codesystems.xml
 
 
-   .. attribute:: Vocabulary_based
+   .. py:attribute:: Vocabulary_based
       
 
       

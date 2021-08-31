@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.gender_identity`
-========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.gender_identity`
+===========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.gender_identity
 
@@ -17,70 +17,70 @@ Classes
 
 
 
-.. class:: GenderIdentityCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: GenderIdentityCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    GenderIdentity
    From: http://hl7.org/fhir/gender-identity in valuesets.xml
        This example value set defines a set of codes that can be used to indicate a
    patient's gender identity.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/gender-identity
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/gender-identity
 
       
 
 
-.. class:: GenderIdentityCodeValues
+.. py:class:: GenderIdentityCodeValues
 
    the patient identifies as transgender male-to-female
    From: http://hl7.org/fhir/gender-identity in valuesets.xml
 
-   .. attribute:: TransgenderFemale
+   .. py:attribute:: TransgenderFemale
       
 
       the patient identifies as transgender female-to-male
       From: http://hl7.org/fhir/gender-identity in valuesets.xml
 
 
-   .. attribute:: TransgenderMale
+   .. py:attribute:: TransgenderMale
       
 
       the patient identifies with neither/both female and male
       From: http://hl7.org/fhir/gender-identity in valuesets.xml
 
 
-   .. attribute:: Non_binary
+   .. py:attribute:: Non_binary
       
 
       the patient identifies as male
       From: http://hl7.org/fhir/gender-identity in valuesets.xml
 
 
-   .. attribute:: Male
+   .. py:attribute:: Male
       
 
       the patient identifies as female
       From: http://hl7.org/fhir/gender-identity in valuesets.xml
 
 
-   .. attribute:: Female
+   .. py:attribute:: Female
       
 
       other gender identity
       From: http://hl7.org/fhir/gender-identity in valuesets.xml
 
 
-   .. attribute:: Other
+   .. py:attribute:: Other
       
 
       the patient does not wish to disclose his gender identity
       From: http://hl7.org/fhir/gender-identity in valuesets.xml
 
 
-   .. attribute:: DoesNotWishToDisclose
+   .. py:attribute:: DoesNotWishToDisclose
       
 
       

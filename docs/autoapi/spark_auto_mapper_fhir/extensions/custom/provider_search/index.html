@@ -4,8 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>spark_auto_mapper_fhir.extensions.custom.provider_search &mdash; Spark Auto Mapper FHIR  documentation</title>
@@ -14,6 +13,8 @@
   
   <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
 
   
@@ -31,6 +32,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
         <script src="../../../../../_static/jquery.js"></script>
         <script src="../../../../../_static/underscore.js"></script>
         <script src="../../../../../_static/doctools.js"></script>
@@ -84,8 +86,7 @@
               
             
             
-              <p><span class="caption-text">Contents:</span></p>
-<ul>
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../index.html">API Reference</a></li>
 </ul>
 
@@ -154,11 +155,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="module-spark_auto_mapper_fhir.extensions.custom.provider_search">
+  <div class="section" id="module-spark_auto_mapper_fhir.extensions.custom.provider_search">
 <span id="spark-auto-mapper-fhir-extensions-custom-provider-search"></span><h1><a class="reference internal" href="#module-spark_auto_mapper_fhir.extensions.custom.provider_search" title="spark_auto_mapper_fhir.extensions.custom.provider_search"><code class="xref py py-mod docutils literal notranslate"><span class="pre">spark_auto_mapper_fhir.extensions.custom.provider_search</span></code></a><a class="headerlink" href="#module-spark_auto_mapper_fhir.extensions.custom.provider_search" title="Permalink to this headline">¶</a></h1>
-<section id="module-contents">
+<div class="section" id="module-contents">
 <h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
-<section id="classes">
+<div class="section" id="classes">
 <h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
 <table class="longtable docutils align-default">
 <colgroup>
@@ -172,23 +173,38 @@
 </tbody>
 </table>
 <dl class="py class">
-<dt id="spark_auto_mapper_fhir.extensions.custom.provider_search.ProviderSearchExtension">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">spark_auto_mapper_fhir.extensions.custom.provider_search.</span></code><code class="sig-name descname"><span class="pre">ProviderSearchExtension</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">forSystem</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="../provider_search_system/index.html#spark_auto_mapper_fhir.extensions.custom.provider_search_system.ProviderSearchSystemExtensionItem" title="spark_auto_mapper_fhir.extensions.custom.provider_search_system.ProviderSearchSystemExtensionItem"><span class="pre">spark_auto_mapper_fhir.extensions.custom.provider_search_system.ProviderSearchSystemExtensionItem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">searchCharacteristic</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../../fhir_types/list/index.html#spark_auto_mapper_fhir.fhir_types.list.FhirList" title="spark_auto_mapper_fhir.fhir_types.list.FhirList"><span class="pre">spark_auto_mapper_fhir.fhir_types.list.FhirList</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../provider_search_characteristic/index.html#spark_auto_mapper_fhir.extensions.custom.provider_search_characteristic.SearchCharacteristicExtensionItem" title="spark_auto_mapper_fhir.extensions.custom.provider_search_characteristic.SearchCharacteristicExtensionItem"><span class="pre">spark_auto_mapper_fhir.extensions.custom.provider_search_characteristic.SearchCharacteristicExtensionItem</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">availabilityScore</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../provider_search_availability_score/index.html#spark_auto_mapper_fhir.extensions.custom.provider_search_availability_score.AvailabilityScoreExtensionItem" title="spark_auto_mapper_fhir.extensions.custom.provider_search_availability_score.AvailabilityScoreExtensionItem"><span class="pre">spark_auto_mapper_fhir.extensions.custom.provider_search_availability_score.AvailabilityScoreExtensionItem</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id_</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../../fhir_types/id/index.html#spark_auto_mapper_fhir.fhir_types.id.FhirId" title="spark_auto_mapper_fhir.fhir_types.id.FhirId"><span class="pre">spark_auto_mapper_fhir.fhir_types.id.FhirId</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#spark_auto_mapper_fhir.extensions.custom.provider_search.ProviderSearchExtension" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="../../extension_base/index.html#spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase" title="spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase</span></code></a></p>
+<dt class="sig sig-object py" id="spark_auto_mapper_fhir.extensions.custom.provider_search.ProviderSearchExtension">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">spark_auto_mapper_fhir.extensions.custom.provider_search.</span></span><span class="sig-name descname"><span class="pre">ProviderSearchExtension</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">forSystem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">searchCharacteristic</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">availabilityScore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id_</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#spark_auto_mapper_fhir.extensions.custom.provider_search.ProviderSearchExtension" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../../extension_base/index.html#spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase" title="spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase</span></code></a></p>
 <p>DO NOT USE DIRECTLY!  ALWAYS USE A SUB_CLASS.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>forSystem</strong> (<a class="reference internal" href="../provider_search_system/index.html#spark_auto_mapper_fhir.extensions.custom.provider_search_system.ProviderSearchSystemExtensionItem" title="spark_auto_mapper_fhir.extensions.custom.provider_search_system.ProviderSearchSystemExtensionItem"><em>spark_auto_mapper_fhir.extensions.custom.provider_search_system.ProviderSearchSystemExtensionItem</em></a>) – system for which the flags apply</p></li>
+<li><p><strong>searchCharacteristic</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../../../fhir_types/list/index.html#spark_auto_mapper_fhir.fhir_types.list.FhirList" title="spark_auto_mapper_fhir.fhir_types.list.FhirList"><em>spark_auto_mapper_fhir.fhir_types.list.FhirList</em></a><em>[</em><a class="reference internal" href="../provider_search_characteristic/index.html#spark_auto_mapper_fhir.extensions.custom.provider_search_characteristic.SearchCharacteristicExtensionItem" title="spark_auto_mapper_fhir.extensions.custom.provider_search_characteristic.SearchCharacteristicExtensionItem"><em>spark_auto_mapper_fhir.extensions.custom.provider_search_characteristic.SearchCharacteristicExtensionItem</em></a><em>]</em><em>]</em>) – codeable concept</p></li>
+<li><p><strong>availabilityScore</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../provider_search_availability_score/index.html#spark_auto_mapper_fhir.extensions.custom.provider_search_availability_score.AvailabilityScoreExtensionItem" title="spark_auto_mapper_fhir.extensions.custom.provider_search_availability_score.AvailabilityScoreExtensionItem"><em>spark_auto_mapper_fhir.extensions.custom.provider_search_availability_score.AvailabilityScoreExtensionItem</em></a><em>]</em>) – Asymmetrik-provided score</p></li>
+<li><p><strong>id_</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../../../fhir_types/id/index.html#spark_auto_mapper_fhir.fhir_types.id.FhirId" title="spark_auto_mapper_fhir.fhir_types.id.FhirId"><em>spark_auto_mapper_fhir.fhir_types.id.FhirId</em></a><em>]</em>) – </p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
-<dt id="spark_auto_mapper_fhir.extensions.custom.provider_search.ProviderSearchExtension.codeset">
-<code class="sig-name descname"><span class="pre">codeset</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="../../../fhir_types/uri/index.html#spark_auto_mapper_fhir.fhir_types.uri.FhirUri" title="spark_auto_mapper_fhir.fhir_types.uri.FhirUri"><span class="pre">spark_auto_mapper_fhir.fhir_types.uri.FhirUri</span></a><a class="headerlink" href="#spark_auto_mapper_fhir.extensions.custom.provider_search.ProviderSearchExtension.codeset" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="spark_auto_mapper_fhir.extensions.custom.provider_search.ProviderSearchExtension.codeset">
+<span class="sig-name descname"><span class="pre">codeset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#spark_auto_mapper_fhir.extensions.custom.provider_search.ProviderSearchExtension.codeset" title="Permalink to this definition">¶</a></dt>
 <dd><p><a class="reference external" href="https://raw.githubusercontent.com/imranq2/SparkAutoMapper.FHIR/main/StructureDefinition/provider_search">https://raw.githubusercontent.com/imranq2/SparkAutoMapper.FHIR/main/StructureDefinition/provider_search</a>
 :return:
 :rtype:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>spark_auto_mapper_fhir.fhir_types.uri.FhirUri</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
 
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
            </div>

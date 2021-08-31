@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.immunization_route_codes`
-=================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.immunization_route_codes`
+====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.immunization_route_codes
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: ImmunizationRouteCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ImmunizationRouteCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ImmunizationRouteCodes
    From: http://hl7.org/fhir/ValueSet/immunization-route in valuesets.xml
@@ -29,67 +29,67 @@ Classes
    support describing the administrative routes used during vaccination. This
    value set is provided as a suggestive example.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration
 
       
 
 
-.. class:: ImmunizationRouteCodesCodeValues
+.. py:class:: ImmunizationRouteCodesCodeValues
 
    Route of substance administration classified by administration method.
    From: http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration in v3-codesystems.xml
 
-   .. attribute:: RouteByMethod
+   .. py:attribute:: RouteByMethod
       
 
       Route of substance administration classified by site.
       From: http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration in v3-codesystems.xml
 
 
-   .. attribute:: RouteBySite
+   .. py:attribute:: RouteBySite
       
 
       From: http://hl7.org/fhir/ValueSet/immunization-route in valuesets.xml
 
 
-   .. attribute:: Injection_Intradermal
+   .. py:attribute:: Injection_Intradermal
       
 
       From: http://hl7.org/fhir/ValueSet/immunization-route in valuesets.xml
 
 
-   .. attribute:: Injection_Intramuscular
+   .. py:attribute:: Injection_Intramuscular
       
 
       From: http://hl7.org/fhir/ValueSet/immunization-route in valuesets.xml
 
 
-   .. attribute:: Inhalation_Nasal
+   .. py:attribute:: Inhalation_Nasal
       
 
       From: http://hl7.org/fhir/ValueSet/immunization-route in valuesets.xml
 
 
-   .. attribute:: Injection_Intravenous
+   .. py:attribute:: Injection_Intravenous
       
 
       From: http://hl7.org/fhir/ValueSet/immunization-route in valuesets.xml
 
 
-   .. attribute:: Swallow_Oral
+   .. py:attribute:: Swallow_Oral
       
 
       From: http://hl7.org/fhir/ValueSet/immunization-route in valuesets.xml
 
 
-   .. attribute:: Injection_Subcutaneous
+   .. py:attribute:: Injection_Subcutaneous
       
 
       From: http://hl7.org/fhir/ValueSet/immunization-route in valuesets.xml
 
 
-   .. attribute:: Transdermal
+   .. py:attribute:: Transdermal
       
 
       

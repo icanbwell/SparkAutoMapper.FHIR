@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.snomedct_reason_medication_not_given_codes`
-===================================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.snomedct_reason_medication_not_given_codes`
+======================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.snomedct_reason_medication_not_given_codes
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: SNOMEDCTReasonMedicationNotGivenCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SNOMEDCTReasonMedicationNotGivenCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SNOMEDCTReasonMedicationNotGivenCodes
    From: http://hl7.org/fhir/reason-medication-not-given in valuesets.xml
@@ -28,39 +28,39 @@ Classes
    and non-administration of necessary drug or medicine codes from SNOMED CT -
    provided as an exemplar value set.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/reason-medication-not-given
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/reason-medication-not-given
 
       
 
 
-.. class:: SNOMEDCTReasonMedicationNotGivenCodesCodeValues
+.. py:class:: SNOMEDCTReasonMedicationNotGivenCodesCodeValues
 
    No reason known.
    From: http://hl7.org/fhir/reason-medication-not-given in valuesets.xml
 
-   .. attribute:: None_
+   .. py:attribute:: None_
       
 
       The patient was not available when the dose was scheduled.
       From: http://hl7.org/fhir/reason-medication-not-given in valuesets.xml
 
 
-   .. attribute:: Away
+   .. py:attribute:: Away
       
 
       The patient was asleep when the dose was scheduled.
       From: http://hl7.org/fhir/reason-medication-not-given in valuesets.xml
 
 
-   .. attribute:: Asleep
+   .. py:attribute:: Asleep
       
 
       The patient was given the medication and immediately vomited it back.
       From: http://hl7.org/fhir/reason-medication-not-given in valuesets.xml
 
 
-   .. attribute:: Vomit
+   .. py:attribute:: Vomit
       
 
       

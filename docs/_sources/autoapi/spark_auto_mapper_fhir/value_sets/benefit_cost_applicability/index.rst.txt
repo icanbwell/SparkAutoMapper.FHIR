@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.benefit_cost_applicability`
-===================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.benefit_cost_applicability`
+======================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.benefit_cost_applicability
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: BenefitCostApplicabilityCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: BenefitCostApplicabilityCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    BenefitCostApplicability
    From: http://terminology.hl7.org/CodeSystem/applicability in valuesets.xml
        Whether the cost applies to in-network or out-of-network providers.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/applicability
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/applicability
 
       
 
 
-.. class:: BenefitCostApplicabilityCodeValues
+.. py:class:: BenefitCostApplicabilityCodeValues
 
    Provider is contracted with the health insurance company to provide services
    to plan members for specific pre-negotiated rates
    From: http://terminology.hl7.org/CodeSystem/applicability in valuesets.xml
 
-   .. attribute:: InNetwork
+   .. py:attribute:: InNetwork
       
 
       Provider is  not contracted with the health insurance company to provide
@@ -46,14 +46,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/applicability in valuesets.xml
 
 
-   .. attribute:: OutOfNetwork
+   .. py:attribute:: OutOfNetwork
       
 
       Other applicability
       From: http://terminology.hl7.org/CodeSystem/applicability in valuesets.xml
 
 
-   .. attribute:: Other
+   .. py:attribute:: Other
       
 
       

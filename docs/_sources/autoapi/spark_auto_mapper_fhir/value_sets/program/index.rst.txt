@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.program`
-================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.program`
+===================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.program
 
@@ -17,291 +17,291 @@ Classes
 
 
 
-.. class:: ProgramCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ProgramCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    Program
    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
        This value set defines an example set of codes that could be can be used to
    classify groupings of service-types/specialties.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/program
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/program
 
       
 
 
-.. class:: ProgramCodeValues
+.. py:class:: ProgramCodeValues
 
    From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
-   .. attribute:: AcquiredBrainInjury_ABI_Program_
+   .. py:attribute:: AcquiredBrainInjury_ABI_Program_
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: ABISlowToRecover_ABISTR_Program
+   .. py:attribute:: ABISlowToRecover_ABISTR_Program
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: AccessPrograms
+   .. py:attribute:: AccessPrograms
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: AdultAndFurtherEducation_ACFE_Program
+   .. py:attribute:: AdultAndFurtherEducation_ACFE_Program
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: AdultDayActivityAndSupportServices_ADASS_Program
+   .. py:attribute:: AdultDayActivityAndSupportServices_ADASS_Program
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: AdultDayCareProgram
+   .. py:attribute:: AdultDayCareProgram
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: ATSS_AdultTrainingSupportService_
+   .. py:attribute:: ATSS_AdultTrainingSupportService_
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: CommunityAgedCarePackages_CACP_
+   .. py:attribute:: CommunityAgedCarePackages_CACP_
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: CareCoordination_SupplementaryServices_CCSS_
+   .. py:attribute:: CareCoordination_SupplementaryServices_CCSS_
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: CognitiveDementiaMemoryService_CDAMS_
+   .. py:attribute:: CognitiveDementiaMemoryService_CDAMS_
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: ChildFIRST
+   .. py:attribute:: ChildFIRST
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: Children_sContactServices
+   .. py:attribute:: Children_sContactServices
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: CommunityVisitorsScheme
+   .. py:attribute:: CommunityVisitorsScheme
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: CPP_CommunityPartnersProgram_
+   .. py:attribute:: CPP_CommunityPartnersProgram_
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: ClosingTheGap_CTG_
+   .. py:attribute:: ClosingTheGap_CTG_
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: CoordinatedVeterans_Care_CVC_Program
+   .. py:attribute:: CoordinatedVeterans_Care_CVC_Program
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: DayProgram
+   .. py:attribute:: DayProgram
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: DropInProgram
+   .. py:attribute:: DropInProgram
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: EarlyYearsProgram
+   .. py:attribute:: EarlyYearsProgram
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: EmployeeAssistanceProgram
+   .. py:attribute:: EmployeeAssistanceProgram
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: HomeAndCommunityCare_HACC_
+   .. py:attribute:: HomeAndCommunityCare_HACC_
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: HospitalAdmissionRiskProgram_HARP_
+   .. py:attribute:: HospitalAdmissionRiskProgram_HARP_
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: HospitalInTheHome_HITH_Program
+   .. py:attribute:: HospitalInTheHome_HITH_Program
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: ICTP_IntensiveCommunityTreatmentProgram_
+   .. py:attribute:: ICTP_IntensiveCommunityTreatmentProgram_
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: IFSS_IntensiveFamilySupportProgram_
+   .. py:attribute:: IFSS_IntensiveFamilySupportProgram_
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: JPET_JobPlacement_EducationAndTraining_
+   .. py:attribute:: JPET_JobPlacement_EducationAndTraining_
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: KooriJuvenileJusticeProgram
+   .. py:attribute:: KooriJuvenileJusticeProgram
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: LanguageLiteracyAndNumeracyProgram
+   .. py:attribute:: LanguageLiteracyAndNumeracyProgram
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: LifeSkillsProgram
+   .. py:attribute:: LifeSkillsProgram
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: LMP_LifestyleModificationProgram_
+   .. py:attribute:: LMP_LifestyleModificationProgram_
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: MedsCheckProgram
+   .. py:attribute:: MedsCheckProgram
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: Methadone_BuprenorphineProgram
+   .. py:attribute:: Methadone_BuprenorphineProgram
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: NationalDisabilitiesInsuranceScheme_NDIS_
+   .. py:attribute:: NationalDisabilitiesInsuranceScheme_NDIS_
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: NationalDiabetesServicesScheme_NDSS_
+   .. py:attribute:: NationalDiabetesServicesScheme_NDSS_
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: Needle_SyringeProgram
+   .. py:attribute:: Needle_SyringeProgram
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: NPEPProgram
+   .. py:attribute:: NPEPProgram
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: PersonalSupportProgram
+   .. py:attribute:: PersonalSupportProgram
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: PartnersInRecovery_PIR_Program
+   .. py:attribute:: PartnersInRecovery_PIR_Program
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: Pre_employmentProgram
+   .. py:attribute:: Pre_employmentProgram
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: ReconnectProgram
+   .. py:attribute:: ReconnectProgram
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: SexualAbuseCounsellingAndPreventionProgram_SACPP_
+   .. py:attribute:: SexualAbuseCounsellingAndPreventionProgram_SACPP_
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: SocialSupportPrograms
+   .. py:attribute:: SocialSupportPrograms
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: SupportedResidentialService_SRS_
+   .. py:attribute:: SupportedResidentialService_SRS_
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: TasmanianAboriginalCentre_TAC_
+   .. py:attribute:: TasmanianAboriginalCentre_TAC_
       
 
       From: http://terminology.hl7.org/CodeSystem/program in valuesets.xml
 
 
-   .. attribute:: Victim_sAssistanceProgram
+   .. py:attribute:: Victim_sAssistanceProgram
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.group_type`
-===================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.group_type`
+======================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.group_type
 
@@ -17,34 +17,34 @@ Classes
 
 
 
-.. class:: GroupTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: GroupTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    GroupType
    From: http://hl7.org/fhir/group-type in valuesets.xml
        Types of resources that are part of group.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/group-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/group-type
 
       
 
 
-.. class:: GroupTypeCodeValues
+.. py:class:: GroupTypeCodeValues
 
    Group contains "person" Patient resources.
    From: http://hl7.org/fhir/group-type in valuesets.xml
 
-   .. attribute:: Person
+   .. py:attribute:: Person
       
 
       Group contains "animal" Patient resources.
       From: http://hl7.org/fhir/group-type in valuesets.xml
 
 
-   .. attribute:: Animal
+   .. py:attribute:: Animal
       
 
       Group contains healthcare practitioner resources (Practitioner or
@@ -52,28 +52,28 @@ Classes
       From: http://hl7.org/fhir/group-type in valuesets.xml
 
 
-   .. attribute:: Practitioner
+   .. py:attribute:: Practitioner
       
 
       Group contains Device resources.
       From: http://hl7.org/fhir/group-type in valuesets.xml
 
 
-   .. attribute:: Device
+   .. py:attribute:: Device
       
 
       Group contains Medication resources.
       From: http://hl7.org/fhir/group-type in valuesets.xml
 
 
-   .. attribute:: Medication
+   .. py:attribute:: Medication
       
 
       Group contains Substance resources.
       From: http://hl7.org/fhir/group-type in valuesets.xml
 
 
-   .. attribute:: Substance
+   .. py:attribute:: Substance
       
 
       

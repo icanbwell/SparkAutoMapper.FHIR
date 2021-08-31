@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.all_ucum_expression_for_distance`
-=========================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.all_ucum_expression_for_distance`
+============================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.all_ucum_expression_for_distance
 
@@ -16,18 +16,18 @@ Classes
 
 
 
-.. class:: AllUCUMExpressionForDistanceCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: AllUCUMExpressionForDistanceCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    AllUCUMExpressionForDistance
    From: http://hl7.org/fhir/ValueSet/all-distance-units in valuesets.xml
        Unified Code for Units of Measure (UCUM). This value set includes all UCUM
    codes for units of length
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://unitsofmeasure.org
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://unitsofmeasure.org
 
       
 

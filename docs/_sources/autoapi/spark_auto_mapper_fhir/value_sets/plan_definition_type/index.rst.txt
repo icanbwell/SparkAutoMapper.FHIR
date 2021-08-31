@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.plan_definition_type`
-=============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.plan_definition_type`
+================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.plan_definition_type
 
@@ -17,22 +17,22 @@ Classes
 
 
 
-.. class:: PlanDefinitionTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: PlanDefinitionTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    PlanDefinitionType
    From: http://terminology.hl7.org/CodeSystem/plan-definition-type in valuesets.xml
        The type of PlanDefinition.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/plan-definition-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/plan-definition-type
 
       
 
 
-.. class:: PlanDefinitionTypeCodeValues
+.. py:class:: PlanDefinitionTypeCodeValues
 
    A pre-defined and approved group of orders related to a particular clinical
    condition (e.g. hypertension treatment and monitoring) or stage of care (e.g.
@@ -42,7 +42,7 @@ Classes
    the clinician in a computerized provider order entry (CPOE) system.
    From: http://terminology.hl7.org/CodeSystem/plan-definition-type in valuesets.xml
 
-   .. attribute:: OrderSet
+   .. py:attribute:: OrderSet
       
 
       Defines a desired/typical sequence of clinical activities including
@@ -50,7 +50,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/plan-definition-type in valuesets.xml
 
 
-   .. attribute:: ClinicalProtocol
+   .. py:attribute:: ClinicalProtocol
       
 
       A decision support rule of the form [on Event] if Condition then Action. It is
@@ -60,7 +60,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/plan-definition-type in valuesets.xml
 
 
-   .. attribute:: ECARule
+   .. py:attribute:: ECARule
       
 
       Defines the steps for a group of one or more systems in an event flow process
@@ -69,7 +69,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/plan-definition-type in valuesets.xml
 
 
-   .. attribute:: WorkflowDefinition
+   .. py:attribute:: WorkflowDefinition
       
 
       

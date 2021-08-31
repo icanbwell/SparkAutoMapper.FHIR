@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.device_name_type`
-=========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.device_name_type`
+============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.device_name_type
 
@@ -17,62 +17,62 @@ Classes
 
 
 
-.. class:: DeviceNameTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: DeviceNameTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    DeviceNameType
    From: http://hl7.org/fhir/device-nametype in valuesets.xml
        The type of name the device is referred by.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/device-nametype
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/device-nametype
 
       
 
 
-.. class:: DeviceNameTypeCodeValues
+.. py:class:: DeviceNameTypeCodeValues
 
    UDI Label name.
    From: http://hl7.org/fhir/device-nametype in valuesets.xml
 
-   .. attribute:: UDILabelName
+   .. py:attribute:: UDILabelName
       
 
       User Friendly name.
       From: http://hl7.org/fhir/device-nametype in valuesets.xml
 
 
-   .. attribute:: UserFriendlyName
+   .. py:attribute:: UserFriendlyName
       
 
       Patient Reported name.
       From: http://hl7.org/fhir/device-nametype in valuesets.xml
 
 
-   .. attribute:: PatientReportedName
+   .. py:attribute:: PatientReportedName
       
 
       Manufacturer name.
       From: http://hl7.org/fhir/device-nametype in valuesets.xml
 
 
-   .. attribute:: ManufacturerName
+   .. py:attribute:: ManufacturerName
       
 
       Model name.
       From: http://hl7.org/fhir/device-nametype in valuesets.xml
 
 
-   .. attribute:: ModelName
+   .. py:attribute:: ModelName
       
 
       other.
       From: http://hl7.org/fhir/device-nametype in valuesets.xml
 
 
-   .. attribute:: Other
+   .. py:attribute:: Other
       
 
       

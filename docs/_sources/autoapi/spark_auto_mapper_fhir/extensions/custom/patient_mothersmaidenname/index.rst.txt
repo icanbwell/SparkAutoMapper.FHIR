@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.extensions.custom.patient_mothersmaidenname`
-=========================================================================
+:py:mod:`spark_auto_mapper_fhir.extensions.custom.patient_mothersmaidenname`
+============================================================================
 
 .. py:module:: spark_auto_mapper_fhir.extensions.custom.patient_mothersmaidenname
 
@@ -16,14 +16,17 @@ Classes
 
 
 
-.. class:: PatientMothersMaidenName(url: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, valueString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None)
 
+.. py:class:: PatientMothersMaidenName(url = None, valueString = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase`
 
    DO NOT USE DIRECTLY!  ALWAYS USE A SUB_CLASS.
 
-   .. method:: codeset(cls) -> spark_auto_mapper_fhir.fhir_types.uri.FhirUri
+
+   Extension type in FHIR
+
+   .. py:method:: codeset(cls)
 
 
 

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.diet_codes`
-===================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.diet_codes`
+======================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.diet_codes
 
@@ -16,10 +16,10 @@ Classes
 
 
 
-.. class:: DietCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: DietCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    DietCodes
    From: http://hl7.org/fhir/ValueSet/diet-type in valuesets.xml
@@ -28,8 +28,8 @@ Classes
    from [SNOMED CT](http://snomed.info/sct) where concept is-a 182922004 (Dietary
    regime (regime/therapy))
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://snomed.info/sct
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://snomed.info/sct
 
       
 

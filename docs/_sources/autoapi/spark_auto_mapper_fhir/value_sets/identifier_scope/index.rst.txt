@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.identifier_scope`
-=========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.identifier_scope`
+============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.identifier_scope
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: IdentifierScope(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: IdentifierScope(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.IdentifierScope
    From: http://terminology.hl7.org/ValueSet/v3-IdentifierScope in v3-codesystems.xml
@@ -28,13 +28,13 @@ Classes
    Codes to specify the scope in which the identifier applies to the object with
    which it is associated, and used in the datatype property II.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-IdentifierScope
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-IdentifierScope
 
       
 
 
-.. class:: IdentifierScopeValues
+.. py:class:: IdentifierScopeValues
 
    Description: An identifier whose scope is defined by the business practices
    associated with the object. In contrast to the other scope identifiers, the
@@ -43,7 +43,7 @@ Classes
    business practice.
    From: http://terminology.hl7.org/CodeSystem/v3-IdentifierScope in v3-codesystems.xml
 
-   .. attribute:: BusinessIdentifier
+   .. py:attribute:: BusinessIdentifier
       
 
       Description: The identifier associated with a particular object. It remains
@@ -51,7 +51,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-IdentifierScope in v3-codesystems.xml
 
 
-   .. attribute:: ObjectIdentifier
+   .. py:attribute:: ObjectIdentifier
       
 
       Description: An identifier that references a particular object as it existed
@@ -69,7 +69,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-IdentifierScope in v3-codesystems.xml
 
 
-   .. attribute:: VersionIdentifier
+   .. py:attribute:: VersionIdentifier
       
 
       Description: An identifier that references a particular object as it existed
@@ -89,7 +89,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-IdentifierScope in v3-codesystems.xml
 
 
-   .. attribute:: ViewSpecificIdentifier
+   .. py:attribute:: ViewSpecificIdentifier
       
 
       

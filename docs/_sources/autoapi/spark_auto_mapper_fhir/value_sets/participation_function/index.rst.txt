@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.participation_function`
-===============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.participation_function`
+==================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.participation_function
 
@@ -17,29 +17,29 @@ Classes
 
 
 
-.. class:: ParticipationFunction(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ParticipationFunction(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.ParticipationFunction
    From: http://terminology.hl7.org/ValueSet/v3-ParticipationFunction in v3-codesystems.xml
         This code is used to specify the exact function an actor had in a service in
    all necessary detail. This domain may include local extensions (CWE).
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction
 
       
 
 
-.. class:: ParticipationFunctionValues
+.. py:class:: ParticipationFunctionValues
 
    This code is used to specify the exact function an actor is authorized to have
    in a service in all necessary detail.
    From: http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction in v3-codesystems.xml
 
-   .. attribute:: AuthorizedParticipationFunction
+   .. py:attribute:: AuthorizedParticipationFunction
       
 
       Definition: Set of codes indicating the manner in which sponsors,
@@ -47,7 +47,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction in v3-codesystems.xml
 
 
-   .. attribute:: CoverageParticipationFunction
+   .. py:attribute:: CoverageParticipationFunction
       
 
       A physician who admitted a patient to a hospital or other care unit that is
@@ -55,7 +55,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction in v3-codesystems.xml
 
 
-   .. attribute:: AdmittingPhysician
+   .. py:attribute:: AdmittingPhysician
       
 
       In a typical anesthesia setting an anesthesiologist or anesthesia resident in
@@ -65,7 +65,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction in v3-codesystems.xml
 
 
-   .. attribute:: Anesthesist
+   .. py:attribute:: Anesthesist
       
 
       In a typical anesthesia setting the nurse principally assisting the
@@ -73,7 +73,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction in v3-codesystems.xml
 
 
-   .. attribute:: AnesthesiaNurse
+   .. py:attribute:: AnesthesiaNurse
       
 
       A device that operates independently of an author on custodian's algorithms
@@ -84,7 +84,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction in v3-codesystems.xml
 
 
-   .. attribute:: AssemblySoftware
+   .. py:attribute:: AssemblySoftware
       
 
       A physician who is primarily responsible for a patient during the
@@ -92,7 +92,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction in v3-codesystems.xml
 
 
-   .. attribute:: AttendingPhysician
+   .. py:attribute:: AttendingPhysician
       
 
       A device used by an author to record new information, which may also be used
@@ -111,7 +111,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction in v3-codesystems.xml
 
 
-   .. attribute:: ComposerSoftware
+   .. py:attribute:: ComposerSoftware
       
 
       A physician who discharged a patient from a hospital or other care unit that
@@ -119,7 +119,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction in v3-codesystems.xml
 
 
-   .. attribute:: DischargingPhysician
+   .. py:attribute:: DischargingPhysician
       
 
       In a typical surgery setting the assistant facing the primary surgeon.  The
@@ -128,7 +128,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction in v3-codesystems.xml
 
 
-   .. attribute:: FirstAssistantSurgeon
+   .. py:attribute:: FirstAssistantSurgeon
       
 
       A person (usually female) helping a woman deliver a baby. Responsibilities
@@ -138,7 +138,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction in v3-codesystems.xml
 
 
-   .. attribute:: Midwife
+   .. py:attribute:: Midwife
       
 
       In a typical surgery setting the non-sterile nurse handles material supply
@@ -147,7 +147,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction in v3-codesystems.xml
 
 
-   .. attribute:: NurseAssistant
+   .. py:attribute:: NurseAssistant
       
 
       The healthcare provider that holds primary responsibility for the overall care
@@ -155,14 +155,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction in v3-codesystems.xml
 
 
-   .. attribute:: PrimaryCarePhysician
+   .. py:attribute:: PrimaryCarePhysician
       
 
       In a typical surgery setting the primary performing surgeon.
       From: http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction in v3-codesystems.xml
 
 
-   .. attribute:: PrimarySurgeon
+   .. py:attribute:: PrimarySurgeon
       
 
       A verifier who is accountable for reviewing and asserting that the
@@ -180,28 +180,28 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction in v3-codesystems.xml
 
 
-   .. attribute:: Reviewer
+   .. py:attribute:: Reviewer
       
 
       A physician who made rounds on a patient in a hospital or other care center.
       From: http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction in v3-codesystems.xml
 
 
-   .. attribute:: RoundingPhysician
+   .. py:attribute:: RoundingPhysician
       
 
       In a typical surgery setting the assistant who primarily holds the hooks.
       From: http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction in v3-codesystems.xml
 
 
-   .. attribute:: SecondAssistantSurgeon
+   .. py:attribute:: SecondAssistantSurgeon
       
 
       In a typical surgery setting the nurse in charge of the instrumentation.
       From: http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction in v3-codesystems.xml
 
 
-   .. attribute:: ScrubNurse
+   .. py:attribute:: ScrubNurse
       
 
       In a typical surgery setting there is rarely a third assistant (e.g., in some
@@ -209,7 +209,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction in v3-codesystems.xml
 
 
-   .. attribute:: ThirdAssistant
+   .. py:attribute:: ThirdAssistant
       
 
       

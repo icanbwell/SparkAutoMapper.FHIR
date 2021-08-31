@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.biologically_derived_product_category`
-==============================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.biologically_derived_product_category`
+=================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.biologically_derived_product_category
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: BiologicallyDerivedProductCategoryCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: BiologicallyDerivedProductCategoryCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    BiologicallyDerivedProductCategory
    From: http://hl7.org/fhir/product-category in valuesets.xml
        Biologically Derived Product Category.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/product-category
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/product-category
 
       
 
 
-.. class:: BiologicallyDerivedProductCategoryCodeValues
+.. py:class:: BiologicallyDerivedProductCategoryCodeValues
 
    A collection of tissues joined in a structural unit to serve a common
    function.
    From: http://hl7.org/fhir/product-category in valuesets.xml
 
-   .. attribute:: Organ
+   .. py:attribute:: Organ
       
 
       An ensemble of similar cells and their extracellular matrix from the same
@@ -46,28 +46,28 @@ Classes
       From: http://hl7.org/fhir/product-category in valuesets.xml
 
 
-   .. attribute:: Tissue
+   .. py:attribute:: Tissue
       
 
       Body fluid.
       From: http://hl7.org/fhir/product-category in valuesets.xml
 
 
-   .. attribute:: Fluid
+   .. py:attribute:: Fluid
       
 
       Collection of cells.
       From: http://hl7.org/fhir/product-category in valuesets.xml
 
 
-   .. attribute:: Cells
+   .. py:attribute:: Cells
       
 
       Biological agent of unspecified type.
       From: http://hl7.org/fhir/product-category in valuesets.xml
 
 
-   .. attribute:: BiologicalAgent
+   .. py:attribute:: BiologicalAgent
       
 
       

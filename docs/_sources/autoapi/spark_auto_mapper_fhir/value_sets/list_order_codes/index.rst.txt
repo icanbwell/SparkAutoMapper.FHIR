@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.list_order_codes`
-=========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.list_order_codes`
+============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.list_order_codes
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: ListOrderCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ListOrderCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ListOrderCodes
    From: http://terminology.hl7.org/CodeSystem/list-order in valuesets.xml
        Base values for the order of the items in a list resource.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/list-order
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/list-order
 
       
 
 
-.. class:: ListOrderCodesCodeValues
+.. py:class:: ListOrderCodesCodeValues
 
    The list was sorted by a user. The criteria the user used are not specified.
    From: http://terminology.hl7.org/CodeSystem/list-order in valuesets.xml
 
-   .. attribute:: SortedByUser
+   .. py:attribute:: SortedByUser
       
 
       The list was sorted by the system. The criteria the user used are not
@@ -46,7 +46,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/list-order in valuesets.xml
 
 
-   .. attribute:: SortedBySystem
+   .. py:attribute:: SortedBySystem
       
 
       The list is sorted by the data of the event. This can be used when the list
@@ -54,7 +54,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/list-order in valuesets.xml
 
 
-   .. attribute:: SortedByEventDate
+   .. py:attribute:: SortedByEventDate
       
 
       The list is sorted by the date the item was added to the list. Note that the
@@ -62,7 +62,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/list-order in valuesets.xml
 
 
-   .. attribute:: SortedByItemDate
+   .. py:attribute:: SortedByItemDate
       
 
       The list is sorted by priority. The exact method in which priority has been
@@ -70,7 +70,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/list-order in valuesets.xml
 
 
-   .. attribute:: SortedByPriority
+   .. py:attribute:: SortedByPriority
       
 
       The list is sorted alphabetically by an unspecified property of the items in
@@ -78,7 +78,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/list-order in valuesets.xml
 
 
-   .. attribute:: SortedAlphabetically
+   .. py:attribute:: SortedAlphabetically
       
 
       The list is sorted categorically by an unspecified property of the items in
@@ -86,14 +86,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/list-order in valuesets.xml
 
 
-   .. attribute:: SortedByCategory
+   .. py:attribute:: SortedByCategory
       
 
       The list is sorted by patient, with items for each patient grouped together.
       From: http://terminology.hl7.org/CodeSystem/list-order in valuesets.xml
 
 
-   .. attribute:: SortedByPatient
+   .. py:attribute:: SortedByPatient
       
 
       

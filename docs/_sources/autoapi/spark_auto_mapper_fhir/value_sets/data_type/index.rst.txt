@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.data_type`
-==================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.data_type`
+=====================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.data_type
 
@@ -17,23 +17,23 @@ Classes
 
 
 
-.. class:: FhirDataType(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: FhirDataType(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    DataType
    From: http://hl7.org/fhir/data-types in valuesets.xml
        A version specific list of the data types defined by the FHIR specification
    for use as an element  type (any of the FHIR defined data types).
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/data-types
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/data-types
 
       
 
 
-.. class:: FhirDataTypeValues
+.. py:class:: FhirDataTypeValues
 
    An address expressed using postal conventions (as opposed to GPS or other
    location definition formats).  This data type may be used to convey addresses
@@ -42,14 +42,14 @@ Classes
    defined around the world.
    From: http://hl7.org/fhir/data-types in valuesets.xml
 
-   .. attribute:: Address
+   .. py:attribute:: Address
       
 
       A duration of time during which an organism (or a process) has existed.
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Age
+   .. py:attribute:: Age
       
 
       A  text note which also  contains information about who made the statement and
@@ -57,14 +57,14 @@ Classes
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Annotation
+   .. py:attribute:: Annotation
       
 
       For referring to data content defined in other formats.
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Attachment
+   .. py:attribute:: Attachment
       
 
       Base definition for all elements that are defined inside a resource - but not
@@ -72,7 +72,7 @@ Classes
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: BackboneElement
+   .. py:attribute:: BackboneElement
       
 
       A concept that may be defined by a formal reference to a terminology or
@@ -80,21 +80,21 @@ Classes
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: CodeableConcept
+   .. py:attribute:: CodeableConcept
       
 
       A reference to a code defined by a terminology system.
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Coding
+   .. py:attribute:: Coding
       
 
       Specifies contact information for a person or organization.
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: ContactDetail
+   .. py:attribute:: ContactDetail
       
 
       Details for all kinds of technology mediated contact points for a person or
@@ -102,7 +102,7 @@ Classes
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: ContactPoint
+   .. py:attribute:: ContactPoint
       
 
       A contributor to the content of a knowledge asset, including authors, editors,
@@ -110,7 +110,7 @@ Classes
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Contributor
+   .. py:attribute:: Contributor
       
 
       A measured amount (or an amount that can potentially be measured). Note that
@@ -119,7 +119,7 @@ Classes
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Count
+   .. py:attribute:: Count
       
 
       Describes a required data item for evaluation in terms of the type of data,
@@ -127,35 +127,35 @@ Classes
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: DataRequirement
+   .. py:attribute:: DataRequirement
       
 
       A length - a value with a unit that is a physical distance.
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Distance
+   .. py:attribute:: Distance
       
 
       Indicates how the medication is/was taken or should be taken by the patient.
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Dosage
+   .. py:attribute:: Dosage
       
 
       A length of time.
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Duration
+   .. py:attribute:: Duration
       
 
       Base definition for all elements in a resource.
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Element
+   .. py:attribute:: Element
       
 
       Captures constraints on each element within the resource, profile, or
@@ -163,7 +163,7 @@ Classes
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: ElementDefinition
+   .. py:attribute:: ElementDefinition
       
 
       A expression that is evaluated in a specified context and returns a value. The
@@ -172,21 +172,21 @@ Classes
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Expression
+   .. py:attribute:: Expression
       
 
       Optional Extension Element - found in all resources.
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Extension
+   .. py:attribute:: Extension
       
 
       A human's name with the ability to identify parts and usage.
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: HumanName
+   .. py:attribute:: HumanName
       
 
       An identifier - identifies some entity uniquely and unambiguously. Typically
@@ -194,7 +194,7 @@ Classes
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Identifier
+   .. py:attribute:: Identifier
       
 
       The marketing status describes the date when a medicinal product is actually
@@ -202,7 +202,7 @@ Classes
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: MarketingStatus
+   .. py:attribute:: MarketingStatus
       
 
       The metadata about a resource. This is content in the resource that is
@@ -211,20 +211,20 @@ Classes
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Meta
+   .. py:attribute:: Meta
       
 
       An amount of economic utility in some recognized currency.
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Money
+   .. py:attribute:: Money
       
 
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: MoneyQuantity
+   .. py:attribute:: MoneyQuantity
       
 
       A human-readable summary of the resource conveying the essential clinical and
@@ -232,7 +232,7 @@ Classes
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Narrative
+   .. py:attribute:: Narrative
       
 
       The parameters to the module. This collection specifies both the input and
@@ -241,21 +241,21 @@ Classes
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: ParameterDefinition
+   .. py:attribute:: ParameterDefinition
       
 
       A time period defined by a start and end date and optionally time.
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Period
+   .. py:attribute:: Period
       
 
       A populatioof people with some set of grouping criteria.
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Population
+   .. py:attribute:: Population
       
 
       The marketing status describes the date when a medicinal product is actually
@@ -263,7 +263,7 @@ Classes
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: ProdCharacteristic
+   .. py:attribute:: ProdCharacteristic
       
 
       The shelf-life and storage information for a medicinal product item or
@@ -271,7 +271,7 @@ Classes
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: ProductShelfLife
+   .. py:attribute:: ProductShelfLife
       
 
       A measured amount (or an amount that can potentially be measured). Note that
@@ -280,14 +280,14 @@ Classes
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Quantity
+   .. py:attribute:: Quantity
       
 
       A set of ordered Quantities defined by a low and high limit.
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Range
+   .. py:attribute:: Range
       
 
       A relationship of two Quantity values - expressed as a numerator and a
@@ -295,14 +295,14 @@ Classes
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Ratio
+   .. py:attribute:: Ratio
       
 
       A reference from one resource to another.
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Reference
+   .. py:attribute:: Reference
       
 
       Related artifacts such as additional documentation, justification, or
@@ -310,7 +310,7 @@ Classes
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: RelatedArtifact
+   .. py:attribute:: RelatedArtifact
       
 
       A series of measurements taken by a device, with upper and lower limits. There
@@ -318,7 +318,7 @@ Classes
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: SampledData
+   .. py:attribute:: SampledData
       
 
       A signature along with supporting context. The signature may be a digital
@@ -329,13 +329,13 @@ Classes
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Signature
+   .. py:attribute:: Signature
       
 
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: SimpleQuantity
+   .. py:attribute:: SimpleQuantity
       
 
       Chemical substances are a single substance type whose primary defining element
@@ -347,7 +347,7 @@ Classes
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: SubstanceAmount
+   .. py:attribute:: SubstanceAmount
       
 
       Specifies an event that may occur multiple times. Timing schedules are used to
@@ -358,7 +358,7 @@ Classes
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Timing
+   .. py:attribute:: Timing
       
 
       A description of a triggering event. Triggering events can be named events,
@@ -366,7 +366,7 @@ Classes
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: TriggerDefinition
+   .. py:attribute:: TriggerDefinition
       
 
       Specifies clinical/business/etc. metadata that can be used to retrieve, index
@@ -376,28 +376,28 @@ Classes
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: UsageContext
+   .. py:attribute:: UsageContext
       
 
       A stream of bytes
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Base64Binary
+   .. py:attribute:: Base64Binary
       
 
       Value of "true" or "false"
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Boolean
+   .. py:attribute:: Boolean
       
 
       A URI that is a reference to a canonical URL on a FHIR resource
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Canonical
+   .. py:attribute:: Canonical
       
 
       A string which has at least one character and no leading or trailing
@@ -406,7 +406,7 @@ Classes
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Code
+   .. py:attribute:: Code
       
 
       A date or partial date (e.g. just year or year + month). There is no time
@@ -415,7 +415,7 @@ Classes
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Date
+   .. py:attribute:: Date
       
 
       A date, date-time or partial date (e.g. just year or year + month).  If hours
@@ -426,14 +426,14 @@ Classes
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: DateTime
+   .. py:attribute:: DateTime
       
 
       A rational number with implicit precision
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Decimal
+   .. py:attribute:: Decimal
       
 
       Any combination of letters, numerals, "-" and ".", with a length limit of 64
@@ -442,21 +442,21 @@ Classes
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Id
+   .. py:attribute:: Id
       
 
       An instant in time - known at least to the second
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Instant
+   .. py:attribute:: Instant
       
 
       A whole number
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Integer
+   .. py:attribute:: Integer
       
 
       A string that may contain Github Flavored Markdown syntax for optional
@@ -464,63 +464,63 @@ Classes
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Markdown
+   .. py:attribute:: Markdown
       
 
       An OID represented as a URI
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Oid
+   .. py:attribute:: Oid
       
 
       An integer with a value that is positive (e.g. >0)
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: PositiveInt
+   .. py:attribute:: PositiveInt
       
 
       A sequence of Unicode characters
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: String
+   .. py:attribute:: String
       
 
       A time during the day, with no date specified
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Time
+   .. py:attribute:: Time
       
 
       An integer with a value that is not negative (e.g. >= 0)
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: UnsignedInt
+   .. py:attribute:: UnsignedInt
       
 
       String of characters used to identify a name or a resource
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Uri
+   .. py:attribute:: Uri
       
 
       A URI that is a literal reference
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Url
+   .. py:attribute:: Url
       
 
       A UUID, represented as a URI
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: Uuid
+   .. py:attribute:: Uuid
       
 
       XHTML format, as defined by W3C, but restricted usage (mainly, no active
@@ -528,7 +528,7 @@ Classes
       From: http://hl7.org/fhir/data-types in valuesets.xml
 
 
-   .. attribute:: XHTML
+   .. py:attribute:: XHTML
       
 
       

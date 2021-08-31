@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.backbone_elements.audit_event_entity`
-==================================================================
+:py:mod:`spark_auto_mapper_fhir.backbone_elements.audit_event_entity`
+=====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.backbone_elements.audit_event_entity
 
@@ -16,12 +16,46 @@ Classes
 
 
 
-.. class:: AuditEventEntity(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, what: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.resource.Resource]] = None, type_: Optional[spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.audit_event_entity_type.AuditEventEntityTypeCode]] = None, role: Optional[spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.audit_event_entity_role.AuditEventEntityRoleCode]] = None, lifecycle: Optional[spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.object_lifecycle_events.ObjectLifecycleEventsCode]] = None, securityLabel: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.all_security_labels.AllSecurityLabelsCode]]] = None, name: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, description: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, query: Optional[spark_auto_mapper_fhir.fhir_types.base64_binary.FhirBase64Binary] = None, detail: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.audit_event_detail.AuditEventDetail]] = None)
 
+.. py:class:: AuditEventEntity(*, id_ = None, extension = None, modifierExtension = None, what = None, type_ = None, role = None, lifecycle = None, securityLabel = None, name = None, description = None, query = None, detail = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
 
    AuditEvent.Entity
-   A record of an event made for purposes of maintaining a security log. Typical uses include detection of intrusion attempts and monitoring for inappropriate usage.
+       A record of an event made for purposes of maintaining a security log. Typical uses include detection of intrusion attempts and monitoring for inappropriate usage.
+
+       A record of an event made for purposes of maintaining a security log. Typical
+   uses include detection of intrusion attempts and monitoring for inappropriate
+   usage.
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param modifierExtension: May be used to represent additional information that is not part of the basic
+   definition of the element and that modifies the understanding of the element
+   in which it is contained and/or the understanding of the containing element's
+   descendants. Usually modifier elements provide negation or qualification. To
+   make the use of extensions safe and manageable, there is a strict set of
+   governance applied to the definition and use of extensions. Though any
+   implementer can define an extension, there is a set of requirements that SHALL
+   be met as part of the definition of the extension. Applications processing a
+   resource are required to check for modifier extensions.
+
+   Modifier extensions SHALL NOT change the meaning of any elements on Resource
+   or DomainResource (including cannot change the meaning of modifierExtension
+   itself).
+       :param what: Identifies a specific instance of the entity. The reference should be version
+   specific.
+       :param type_: The type of the object that was involved in this audit event.
+       :param role: Code representing the role the entity played in the event being audited.
+       :param lifecycle: Identifier for the data life-cycle stage for the entity.
+       :param securityLabel: Security labels for the identified entity.
+       :param name: A name of the entity in the audit event.
+       :param description: Text that describes the entity in more detail.
+       :param query: The query parameters for a query-type entities.
+       :param detail: Tagged value pairs for conveying additional information about the entity.
 
 

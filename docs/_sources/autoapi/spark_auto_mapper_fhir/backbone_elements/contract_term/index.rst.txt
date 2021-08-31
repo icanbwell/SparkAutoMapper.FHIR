@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.backbone_elements.contract_term`
-=============================================================
+:py:mod:`spark_auto_mapper_fhir.backbone_elements.contract_term`
+================================================================
 
 .. py:module:: spark_auto_mapper_fhir.backbone_elements.contract_term
 
@@ -16,12 +16,53 @@ Classes
 
 
 
-.. class:: ContractTerm(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.complex_types.identifier.Identifier] = None, issued: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, applies: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, topicCodeableConcept: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode]] = None, topicReference: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.resource.Resource]] = None, type_: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.contract_term_type_codes.ContractTermTypeCodesCode]] = None, subType: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.contract_term_subtype_codes.ContractTermSubtypeCodesCode]] = None, text: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, securityLabel: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.contract_security_label.ContractSecurityLabel]] = None, offer: spark_auto_mapper_fhir.backbone_elements.contract_offer.ContractOffer, asset: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.contract_asset.ContractAsset]] = None, action: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.contract_action.ContractAction]] = None, group: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.contract_term.ContractTerm]] = None)
 
+.. py:class:: ContractTerm(*, id_ = None, extension = None, modifierExtension = None, identifier = None, issued = None, applies = None, topicCodeableConcept = None, topicReference = None, type_ = None, subType = None, text = None, securityLabel = None, offer, asset = None, action = None, group = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
 
    Contract.Term
-   Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
+       Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
+
+       Legally enforceable, formally recorded unilateral or bilateral directive i.e.,
+   a policy or agreement.
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param modifierExtension: May be used to represent additional information that is not part of the basic
+   definition of the element and that modifies the understanding of the element
+   in which it is contained and/or the understanding of the containing element's
+   descendants. Usually modifier elements provide negation or qualification. To
+   make the use of extensions safe and manageable, there is a strict set of
+   governance applied to the definition and use of extensions. Though any
+   implementer can define an extension, there is a set of requirements that SHALL
+   be met as part of the definition of the extension. Applications processing a
+   resource are required to check for modifier extensions.
+
+   Modifier extensions SHALL NOT change the meaning of any elements on Resource
+   or DomainResource (including cannot change the meaning of modifierExtension
+   itself).
+       :param identifier: Unique identifier for this particular Contract Provision.
+       :param issued: When this Contract Provision was issued.
+       :param applies: Relevant time or time-period when this Contract Provision is applicable.
+       :param topicCodeableConcept: None
+       :param topicReference: None
+       :param type_: A legal clause or condition contained within a contract that requires one or
+   both parties to perform a particular requirement by some specified time or
+   prevents one or both parties from performing a particular requirement by some
+   specified time.
+       :param subType: A specialized legal clause or condition based on overarching contract type.
+       :param text: Statement of a provision in a policy or a contract.
+       :param securityLabel: Security labels that protect the handling of information about the term and
+   its elements, which may be specifically identified..
+       :param offer: The matter of concern in the context of this provision of the agrement.
+       :param asset: Contract Term Asset List.
+       :param action: An actor taking a role in an activity for which it can be assigned some degree
+   of responsibility for the activity taking place.
+       :param group: Nested group of Contract Provisions.
 
 

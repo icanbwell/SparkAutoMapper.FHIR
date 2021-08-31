@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.message_transport`
-==========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.message_transport`
+=============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.message_transport
 
@@ -17,35 +17,35 @@ Classes
 
 
 
-.. class:: MessageTransportCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: MessageTransportCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    MessageTransport
    From: http://terminology.hl7.org/CodeSystem/message-transport in valuesets.xml
        The protocol used for message transport.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/message-transport
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/message-transport
 
       
 
 
-.. class:: MessageTransportCodeValues
+.. py:class:: MessageTransportCodeValues
 
    The application sends or receives messages using HTTP POST (may be over http:
    or https:).
    From: http://terminology.hl7.org/CodeSystem/message-transport in valuesets.xml
 
-   .. attribute:: HTTP
+   .. py:attribute:: HTTP
       
 
       The application sends or receives messages using File Transfer Protocol.
       From: http://terminology.hl7.org/CodeSystem/message-transport in valuesets.xml
 
 
-   .. attribute:: FTP
+   .. py:attribute:: FTP
       
 
       The application sends or receives messages using HL7's Minimal Lower Level
@@ -53,7 +53,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/message-transport in valuesets.xml
 
 
-   .. attribute:: MLLP
+   .. py:attribute:: MLLP
       
 
       

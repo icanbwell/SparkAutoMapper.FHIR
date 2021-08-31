@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.resources.list`
-============================================
+:py:mod:`spark_auto_mapper_fhir.resources.list`
+===============================================
 
 .. py:module:: spark_auto_mapper_fhir.resources.list
 
@@ -16,17 +16,77 @@ Classes
 
 
 
-.. class:: List_(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None, meta: Optional[spark_auto_mapper_fhir.complex_types.meta.Meta] = None, implicitRules: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, text: Optional[spark_auto_mapper_fhir.complex_types.narrative.Narrative] = None, contained: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.resource_container.ResourceContainer]] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, identifier: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.identifier.Identifier]] = None, status: spark_auto_mapper_fhir.value_sets.list_status.ListStatusCode, mode: spark_auto_mapper_fhir.value_sets.list_mode.ListModeCode, title: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, code: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.example_use_codes_for_list.ExampleUseCodesForListCode]] = None, subject: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.group.Group, spark_auto_mapper_fhir.resources.device.Device, spark_auto_mapper_fhir.resources.location.Location)]]] = None, encounter: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.encounter.Encounter]] = None, date: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None, source: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole, spark_auto_mapper_fhir.resources.patient.Patient, spark_auto_mapper_fhir.resources.device.Device)]]] = None, orderedBy: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.list_order_codes.ListOrderCodesCode]] = None, note: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.annotation.Annotation]] = None, entry: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.list_entry.ListEntry]] = None, emptyReason: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.list_empty_reasons.ListEmptyReasonsCode]] = None)
 
+.. py:class:: List_(*, id_ = None, meta = None, implicitRules = None, language = None, text = None, contained = None, extension = None, modifierExtension = None, identifier = None, status, mode, title = None, code = None, subject = None, encounter = None, date = None, source = None, orderedBy = None, note = None, entry = None, emptyReason = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_resource_base.FhirResourceBase`
 
    List
    list.xsd
        A list is a curated collection of resources.
        If the element is present, it must have either a @value, an @id, or extensions
 
-   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+       A list is a curated collection of resources.
+       If the element is present, it must have either a @value, an @id, or extensions
+
+       :param id_: The logical id of the resource, as used in the URL for the resource. Once
+   assigned, this value never changes.
+       :param meta: The metadata about the resource. This is content that is maintained by the
+   infrastructure. Changes to the content might not always be associated with
+   version changes to the resource.
+       :param implicitRules: A reference to a set of rules that were followed when the resource was
+   constructed, and which must be understood when processing the content. Often,
+   this is a reference to an implementation guide that defines the special rules
+   along with other profiles etc.
+       :param language: The base language in which the resource is written.
+       :param text: A human-readable narrative that contains a summary of the resource and can be
+   used to represent the content of the resource to a human. The narrative need
+   not encode all the structured data, but is required to contain sufficient
+   detail to make it "clinically safe" for a human to just read the narrative.
+   Resource definitions may define what content should be represented in the
+   narrative to ensure clinical safety.
+       :param contained: These resources do not have an independent existence apart from the resource
+   that contains them - they cannot be identified independently, and nor can they
+   have their own independent transaction scope.
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the resource. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param modifierExtension: May be used to represent additional information that is not part of the basic
+   definition of the resource and that modifies the understanding of the element
+   that contains it and/or the understanding of the containing element's
+   descendants. Usually modifier elements provide negation or qualification. To
+   make the use of extensions safe and manageable, there is a strict set of
+   governance applied to the definition and use of extensions. Though any
+   implementer is allowed to define an extension, there is a set of requirements
+   that SHALL be met as part of the definition of the extension. Applications
+   processing a resource are required to check for modifier extensions.
+
+   Modifier extensions SHALL NOT change the meaning of any elements on Resource
+   or DomainResource (including cannot change the meaning of modifierExtension
+   itself).
+       :param identifier: Identifier for the List assigned for business purposes outside the context of
+   FHIR.
+       :param status: Indicates the current state of this list.
+       :param mode: How this list was prepared - whether it is a working list that is suitable for
+   being maintained on an ongoing basis, or if it represents a snapshot of a list
+   of items from another source, or whether it is a prepared list where items may
+   be marked as added, modified or deleted.
+       :param title: A label for the list assigned by the author.
+       :param code: This code defines the purpose of the list - why it was created.
+       :param subject: The common subject (or patient) of the resources that are in the list if there
+   is one.
+       :param encounter: The encounter that is the context in which this list was created.
+       :param date: The date that the list was prepared.
+       :param source: The entity responsible for deciding what the contents of the list were. Where
+   the list was created by a human, this is the same as the author of the list.
+       :param orderedBy: What order applies to the items in the list.
+       :param note: Comments that apply to the overall list.
+       :param entry: Entries in this list.
+       :param emptyReason: If the list is empty, why the list is empty.
+
+   .. py:method:: get_schema(self, include_extension)
 
 
 

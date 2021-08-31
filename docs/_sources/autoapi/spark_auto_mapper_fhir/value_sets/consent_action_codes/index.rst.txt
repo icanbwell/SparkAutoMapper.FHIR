@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.consent_action_codes`
-=============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.consent_action_codes`
+================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.consent_action_codes
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: ConsentActionCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ConsentActionCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ConsentActionCodes
    From: http://terminology.hl7.org/CodeSystem/consentaction in valuesets.xml
        This value set includes sample Consent Action codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/consentaction
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/consentaction
 
       
 
 
-.. class:: ConsentActionCodesCodeValues
+.. py:class:: ConsentActionCodesCodeValues
 
    Gather retrieved information for storage
    From: http://terminology.hl7.org/CodeSystem/consentaction in valuesets.xml
 
-   .. attribute:: Collect
+   .. py:attribute:: Collect
       
 
       Retrieval without permitting collection, use or disclosure. e.g., no screen-
@@ -45,21 +45,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/consentaction in valuesets.xml
 
 
-   .. attribute:: Access
+   .. py:attribute:: Access
       
 
       Utilize the retrieved information
       From: http://terminology.hl7.org/CodeSystem/consentaction in valuesets.xml
 
 
-   .. attribute:: Use
+   .. py:attribute:: Use
       
 
       Transfer retrieved information
       From: http://terminology.hl7.org/CodeSystem/consentaction in valuesets.xml
 
 
-   .. attribute:: Disclose
+   .. py:attribute:: Disclose
       
 
       Allow retrieval of a patient's information for the purpose of update or
@@ -67,7 +67,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/consentaction in valuesets.xml
 
 
-   .. attribute:: AccessAndCorrect
+   .. py:attribute:: AccessAndCorrect
       
 
       

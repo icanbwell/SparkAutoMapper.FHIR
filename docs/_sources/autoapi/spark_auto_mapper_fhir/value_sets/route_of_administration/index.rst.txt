@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.route_of_administration`
-================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.route_of_administration`
+===================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.route_of_administration
 
@@ -17,35 +17,35 @@ Classes
 
 
 
-.. class:: RouteOfAdministration(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: RouteOfAdministration(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.RouteOfAdministration
    From: http://terminology.hl7.org/ValueSet/v3-RouteOfAdministration in v3-codesystems.xml
         The path the administered medication takes to get into the body or into
    contact with the body.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration
 
       
 
 
-.. class:: RouteOfAdministrationValues
+.. py:class:: RouteOfAdministrationValues
 
    Route of substance administration classified by administration method.
    From: http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration in v3-codesystems.xml
 
-   .. attribute:: RouteByMethod
+   .. py:attribute:: RouteByMethod
       
 
       Route of substance administration classified by site.
       From: http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration in v3-codesystems.xml
 
 
-   .. attribute:: RouteBySite
+   .. py:attribute:: RouteBySite
       
 
       

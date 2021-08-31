@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.complex_types.identifier`
-======================================================
+:py:mod:`spark_auto_mapper_fhir.complex_types.identifier`
+=========================================================
 
 .. py:module:: spark_auto_mapper_fhir.complex_types.identifier
 
@@ -16,17 +16,38 @@ Classes
 
 
 
-.. class:: Identifier(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, use: Optional[spark_auto_mapper_fhir.value_sets.identifier_use.IdentifierUseCode] = None, type_: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.identifier_type_codes.IdentifierTypeCodesCode]] = None, system: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, value: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, period: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, assigner: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.organization.Organization]] = None)
 
+.. py:class:: Identifier(*, id_ = None, extension = None, use = None, type_ = None, system = None, value = None, period = None, assigner = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
 
    Identifier
    fhir-base.xsd
        An identifier - identifies some entity uniquely and unambiguously. Typically this is used for business identifiers.
        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
 
-   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+       An identifier - identifies some entity uniquely and unambiguously. Typically
+   this is used for business identifiers.
+       If the element is present, it must have a value for at least one of the
+   defined elements, an @id referenced from the Narrative, or extensions
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param use: The purpose of this identifier.
+       :param type_: A coded type for the identifier that can be used to determine which identifier
+   to use for a specific purpose.
+       :param system: Establishes the namespace for the value - that is, a URL that describes a set
+   values that are unique.
+       :param value: The portion of the identifier typically relevant to the user and which is
+   unique within the context of the system.
+       :param period: Time period during which identifier is/was valid for use.
+       :param assigner: Organization that issued/manages the identifier.
+
+   .. py:method:: get_schema(self, include_extension)
 
 
 

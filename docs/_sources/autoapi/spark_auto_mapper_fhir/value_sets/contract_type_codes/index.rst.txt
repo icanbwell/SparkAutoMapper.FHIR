@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.contract_type_codes`
-============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.contract_type_codes`
+===============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.contract_type_codes
 
@@ -17,55 +17,55 @@ Classes
 
 
 
-.. class:: ContractTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ContractTypeCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ContractTypeCodes
    From: http://terminology.hl7.org/CodeSystem/contract-type in valuesets.xml
        This value set includes sample Contract Type codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/contract-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/contract-type
 
       
 
 
-.. class:: ContractTypeCodesCodeValues
+.. py:class:: ContractTypeCodesCodeValues
 
    Privacy policy.
    From: http://terminology.hl7.org/CodeSystem/contract-type in valuesets.xml
 
-   .. attribute:: Privacy
+   .. py:attribute:: Privacy
       
 
       Information disclosure policy.
       From: http://terminology.hl7.org/CodeSystem/contract-type in valuesets.xml
 
 
-   .. attribute:: Disclosure
+   .. py:attribute:: Disclosure
       
 
       Health Insurance policy.
       From: http://terminology.hl7.org/CodeSystem/contract-type in valuesets.xml
 
 
-   .. attribute:: HealthInsurance
+   .. py:attribute:: HealthInsurance
       
 
       Contract to supply goods or services.
       From: http://terminology.hl7.org/CodeSystem/contract-type in valuesets.xml
 
 
-   .. attribute:: SupplyContract
+   .. py:attribute:: SupplyContract
       
 
       Consent Directive.
       From: http://terminology.hl7.org/CodeSystem/contract-type in valuesets.xml
 
 
-   .. attribute:: Consent
+   .. py:attribute:: Consent
       
 
       

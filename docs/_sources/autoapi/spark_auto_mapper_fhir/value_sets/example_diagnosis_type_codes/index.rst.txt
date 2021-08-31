@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.example_diagnosis_type_codes`
-=====================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.example_diagnosis_type_codes`
+========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.example_diagnosis_type_codes
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: ExampleDiagnosisTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ExampleDiagnosisTypeCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ExampleDiagnosisTypeCodes
    From: http://terminology.hl7.org/CodeSystem/ex-diagnosistype in valuesets.xml
        This value set includes example Diagnosis Type codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/ex-diagnosistype
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/ex-diagnosistype
 
       
 
 
-.. class:: ExampleDiagnosisTypeCodesCodeValues
+.. py:class:: ExampleDiagnosisTypeCodesCodeValues
 
    The diagnosis given as the reason why the patient was admitted to the
    hospital.
    From: http://terminology.hl7.org/CodeSystem/ex-diagnosistype in valuesets.xml
 
-   .. attribute:: AdmittingDiagnosis
+   .. py:attribute:: AdmittingDiagnosis
       
 
       A diagnosis made on the basis of medical signs and patient-reported symptoms,
@@ -46,7 +46,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/ex-diagnosistype in valuesets.xml
 
 
-   .. attribute:: ClinicalDiagnosis
+   .. py:attribute:: ClinicalDiagnosis
       
 
       One of a set of the possible diagnoses that could be connected to the signs,
@@ -54,14 +54,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/ex-diagnosistype in valuesets.xml
 
 
-   .. attribute:: DifferentialDiagnosis
+   .. py:attribute:: DifferentialDiagnosis
       
 
       The diagnosis given when the patient is discharged from the hospital.
       From: http://terminology.hl7.org/CodeSystem/ex-diagnosistype in valuesets.xml
 
 
-   .. attribute:: DischargeDiagnosis
+   .. py:attribute:: DischargeDiagnosis
       
 
       A diagnosis based significantly on laboratory reports or test results, rather
@@ -69,7 +69,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/ex-diagnosistype in valuesets.xml
 
 
-   .. attribute:: LaboratoryDiagnosis
+   .. py:attribute:: LaboratoryDiagnosis
       
 
       A diagnosis which identifies people's responses to situations in their lives,
@@ -77,14 +77,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/ex-diagnosistype in valuesets.xml
 
 
-   .. attribute:: NursingDiagnosis
+   .. py:attribute:: NursingDiagnosis
       
 
       A diagnosis determined prior to birth.
       From: http://terminology.hl7.org/CodeSystem/ex-diagnosistype in valuesets.xml
 
 
-   .. attribute:: PrenatalDiagnosis
+   .. py:attribute:: PrenatalDiagnosis
       
 
       The single medical diagnosis that is most relevant to the patient's chief
@@ -92,21 +92,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/ex-diagnosistype in valuesets.xml
 
 
-   .. attribute:: PrincipalDiagnosis
+   .. py:attribute:: PrincipalDiagnosis
       
 
       A diagnosis based primarily on the results from medical imaging studies.
       From: http://terminology.hl7.org/CodeSystem/ex-diagnosistype in valuesets.xml
 
 
-   .. attribute:: RadiologyDiagnosis
+   .. py:attribute:: RadiologyDiagnosis
       
 
       A diagnosis determined using telemedicine techniques.
       From: http://terminology.hl7.org/CodeSystem/ex-diagnosistype in valuesets.xml
 
 
-   .. attribute:: RemoteDiagnosis
+   .. py:attribute:: RemoteDiagnosis
       
 
       The labeling of an illness in a specific historical event using modern
@@ -114,14 +114,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/ex-diagnosistype in valuesets.xml
 
 
-   .. attribute:: RetrospectiveDiagnosis
+   .. py:attribute:: RetrospectiveDiagnosis
       
 
       A diagnosis determined by the patient.
       From: http://terminology.hl7.org/CodeSystem/ex-diagnosistype in valuesets.xml
 
 
-   .. attribute:: SelfDiagnosis
+   .. py:attribute:: SelfDiagnosis
       
 
       

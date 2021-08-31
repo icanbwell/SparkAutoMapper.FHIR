@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.snomedct_codes_for_species`
-===================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.snomedct_codes_for_species`
+======================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.snomedct_codes_for_species
 
@@ -16,10 +16,10 @@ Classes
 
 
 
-.. class:: SNOMEDCTCodesForSpeciesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SNOMEDCTCodesForSpeciesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SNOMEDCTCodesForSpecies
    From: http://hl7.org/fhir/ValueSet/sequence-species in valuesets.xml
@@ -30,8 +30,8 @@ Classes
    (substance), and 123037004 Body structure (body structure).  It is provided as
    a suggestive example
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://snomed.info/sct
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://snomed.info/sct
 
       
 

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.laterality`
-===================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.laterality`
+======================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.laterality
 
@@ -17,38 +17,38 @@ Classes
 
 
 
-.. class:: LateralityCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: LateralityCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    Laterality
    From: http://hl7.org/fhir/ValueSet/bodysite-laterality in valuesets.xml
        Laterality: SNOMED-CT concepts for 'left', 'right', and 'bilateral'
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://snomed.info/sct
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://snomed.info/sct
 
       
 
 
-.. class:: LateralityCodeValues
+.. py:class:: LateralityCodeValues
 
    From: http://hl7.org/fhir/ValueSet/bodysite-laterality in valuesets.xml
 
-   .. attribute:: UnilateralLeft
+   .. py:attribute:: UnilateralLeft
       
 
       From: http://hl7.org/fhir/ValueSet/bodysite-laterality in valuesets.xml
 
 
-   .. attribute:: UnilateralRight
+   .. py:attribute:: UnilateralRight
       
 
       From: http://hl7.org/fhir/ValueSet/bodysite-laterality in valuesets.xml
 
 
-   .. attribute:: Bilateral
+   .. py:attribute:: Bilateral
       
 
       

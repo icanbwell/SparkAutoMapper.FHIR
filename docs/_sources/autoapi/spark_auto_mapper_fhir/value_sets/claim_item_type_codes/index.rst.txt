@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.claim_item_type_codes`
-==============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.claim_item_type_codes`
+=================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.claim_item_type_codes
 
@@ -17,42 +17,42 @@ Classes
 
 
 
-.. class:: ClaimItemTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ClaimItemTypeCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ClaimItemTypeCodes
    From: http://hl7.org/fhir/ex-claimitemtype in valuesets.xml
        This value set includes sample Item Type codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/ex-claimitemtype
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/ex-claimitemtype
 
       
 
 
-.. class:: ClaimItemTypeCodesCodeValues
+.. py:class:: ClaimItemTypeCodesCodeValues
 
    A group of products and/or Services, amount ar the summary or detail level
    products and services.
    From: http://hl7.org/fhir/ex-claimitemtype in valuesets.xml
 
-   .. attribute:: Group
+   .. py:attribute:: Group
       
 
       A billed product line item.
       From: http://hl7.org/fhir/ex-claimitemtype in valuesets.xml
 
 
-   .. attribute:: Product
+   .. py:attribute:: Product
       
 
       A billed service line item.
       From: http://hl7.org/fhir/ex-claimitemtype in valuesets.xml
 
 
-   .. attribute:: Service
+   .. py:attribute:: Service
       
 
       

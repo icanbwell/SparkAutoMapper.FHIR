@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.research_subject_status`
-================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.research_subject_status`
+===================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.research_subject_status
 
@@ -17,34 +17,34 @@ Classes
 
 
 
-.. class:: ResearchSubjectStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ResearchSubjectStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ResearchSubjectStatus
    From: http://hl7.org/fhir/research-subject-status in valuesets.xml
        Indicates the progression of a study subject through a study.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/research-subject-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/research-subject-status
 
       
 
 
-.. class:: ResearchSubjectStatusCodeValues
+.. py:class:: ResearchSubjectStatusCodeValues
 
    An identified person that can be considered for inclusion in a study.
    From: http://hl7.org/fhir/research-subject-status in valuesets.xml
 
-   .. attribute:: Candidate
+   .. py:attribute:: Candidate
       
 
       A person that has met the eligibility criteria for inclusion in a study.
       From: http://hl7.org/fhir/research-subject-status in valuesets.xml
 
 
-   .. attribute:: Eligible
+   .. py:attribute:: Eligible
       
 
       A person is no longer receiving study intervention and/or being evaluated with
@@ -53,7 +53,7 @@ Classes
       From: http://hl7.org/fhir/research-subject-status in valuesets.xml
 
 
-   .. attribute:: Follow_up
+   .. py:attribute:: Follow_up
       
 
       A person who did not meet one or more criteria required for participation in a
@@ -62,14 +62,14 @@ Classes
       From: http://hl7.org/fhir/research-subject-status in valuesets.xml
 
 
-   .. attribute:: Ineligible
+   .. py:attribute:: Ineligible
       
 
       A person for whom registration was not completed.
       From: http://hl7.org/fhir/research-subject-status in valuesets.xml
 
 
-   .. attribute:: NotRegistered
+   .. py:attribute:: NotRegistered
       
 
       A person that has ended their participation on a study either because their
@@ -78,14 +78,14 @@ Classes
       From: http://hl7.org/fhir/research-subject-status in valuesets.xml
 
 
-   .. attribute:: Off_study
+   .. py:attribute:: Off_study
       
 
       A person that is enrolled or registered on a study.
       From: http://hl7.org/fhir/research-subject-status in valuesets.xml
 
 
-   .. attribute:: On_study
+   .. py:attribute:: On_study
       
 
       The person is receiving the treatment or participating in an activity (e.g.
@@ -93,7 +93,7 @@ Classes
       From: http://hl7.org/fhir/research-subject-status in valuesets.xml
 
 
-   .. attribute:: On_study_intervention
+   .. py:attribute:: On_study_intervention
       
 
       The subject is being evaluated via tests and assessments according to the
@@ -103,35 +103,35 @@ Classes
       From: http://hl7.org/fhir/research-subject-status in valuesets.xml
 
 
-   .. attribute:: On_study_observation
+   .. py:attribute:: On_study_observation
       
 
       A person is pre-registered for a study.
       From: http://hl7.org/fhir/research-subject-status in valuesets.xml
 
 
-   .. attribute:: PendingOn_study
+   .. py:attribute:: PendingOn_study
       
 
       A person that is potentially eligible for participation in the study.
       From: http://hl7.org/fhir/research-subject-status in valuesets.xml
 
 
-   .. attribute:: PotentialCandidate
+   .. py:attribute:: PotentialCandidate
       
 
       A person who is being evaluated for eligibility for a study.
       From: http://hl7.org/fhir/research-subject-status in valuesets.xml
 
 
-   .. attribute:: Screening
+   .. py:attribute:: Screening
       
 
       The person has withdrawn their participation in the study before registration.
       From: http://hl7.org/fhir/research-subject-status in valuesets.xml
 
 
-   .. attribute:: Withdrawn
+   .. py:attribute:: Withdrawn
       
 
       

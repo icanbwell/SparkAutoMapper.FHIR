@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.policy_holder_role`
-===========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.policy_holder_role`
+==============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.policy_holder_role
 
@@ -16,10 +16,10 @@ Classes
 
 
 
-.. class:: PolicyHolderRole(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: PolicyHolderRole(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.policyHolderRole
    From: http://terminology.hl7.org/ValueSet/v3-policyHolderRole in v3-codesystems.xml
@@ -34,8 +34,8 @@ Classes
    CDA documentation and brought forward through Harmonization for instantiation
    in this repository.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-policyHolderRole
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-policyHolderRole
 
       
 

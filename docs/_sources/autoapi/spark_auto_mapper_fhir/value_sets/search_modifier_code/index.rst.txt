@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.search_modifier_code`
-=============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.search_modifier_code`
+================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.search_modifier_code
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: SearchModifierCodeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SearchModifierCodeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SearchModifierCode
    From: http://hl7.org/fhir/search-modifier-code in valuesets.xml
        A supported modifier for a search parameter.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/search-modifier-code
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/search-modifier-code
 
       
 
 
-.. class:: SearchModifierCodeCodeValues
+.. py:class:: SearchModifierCodeCodeValues
 
    The search parameter returns resources that have a value or not.
    From: http://hl7.org/fhir/search-modifier-code in valuesets.xml
 
-   .. attribute:: Missing
+   .. py:attribute:: Missing
       
 
       The search parameter returns resources that have a value that exactly matches
@@ -45,7 +45,7 @@ Classes
       From: http://hl7.org/fhir/search-modifier-code in valuesets.xml
 
 
-   .. attribute:: Exact
+   .. py:attribute:: Exact
       
 
       The search parameter returns resources that include the supplied parameter
@@ -53,14 +53,14 @@ Classes
       From: http://hl7.org/fhir/search-modifier-code in valuesets.xml
 
 
-   .. attribute:: Contains
+   .. py:attribute:: Contains
       
 
       The search parameter returns resources that do not contain a match.
       From: http://hl7.org/fhir/search-modifier-code in valuesets.xml
 
 
-   .. attribute:: Not
+   .. py:attribute:: Not
       
 
       The search parameter is processed as a string that searches text associated
@@ -69,7 +69,7 @@ Classes
       From: http://hl7.org/fhir/search-modifier-code in valuesets.xml
 
 
-   .. attribute:: Text
+   .. py:attribute:: Text
       
 
       The search parameter is a URI (relative or absolute) that identifies a value
@@ -78,7 +78,7 @@ Classes
       From: http://hl7.org/fhir/search-modifier-code in valuesets.xml
 
 
-   .. attribute:: In
+   .. py:attribute:: In
       
 
       The search parameter is a URI (relative or absolute) that identifies a value
@@ -87,7 +87,7 @@ Classes
       From: http://hl7.org/fhir/search-modifier-code in valuesets.xml
 
 
-   .. attribute:: NotIn
+   .. py:attribute:: NotIn
       
 
       The search parameter tests whether the value in a resource is subsumed by the
@@ -95,7 +95,7 @@ Classes
       From: http://hl7.org/fhir/search-modifier-code in valuesets.xml
 
 
-   .. attribute:: Below
+   .. py:attribute:: Below
       
 
       The search parameter tests whether the value in a resource subsumes the
@@ -103,7 +103,7 @@ Classes
       From: http://hl7.org/fhir/search-modifier-code in valuesets.xml
 
 
-   .. attribute:: Above
+   .. py:attribute:: Above
       
 
       The search parameter only applies to the Resource Type specified as a modifier
@@ -111,7 +111,7 @@ Classes
       From: http://hl7.org/fhir/search-modifier-code in valuesets.xml
 
 
-   .. attribute:: Type
+   .. py:attribute:: Type
       
 
       The search parameter applies to the identifier on the resource, not the
@@ -119,7 +119,7 @@ Classes
       From: http://hl7.org/fhir/search-modifier-code in valuesets.xml
 
 
-   .. attribute:: Identifier
+   .. py:attribute:: Identifier
       
 
       The search parameter has the format system|code|value, where the system and
@@ -128,7 +128,7 @@ Classes
       From: http://hl7.org/fhir/search-modifier-code in valuesets.xml
 
 
-   .. attribute:: OfType
+   .. py:attribute:: OfType
       
 
       

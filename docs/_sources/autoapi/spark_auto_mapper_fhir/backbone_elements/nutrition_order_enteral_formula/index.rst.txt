@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.backbone_elements.nutrition_order_enteral_formula`
-===============================================================================
+:py:mod:`spark_auto_mapper_fhir.backbone_elements.nutrition_order_enteral_formula`
+==================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.backbone_elements.nutrition_order_enteral_formula
 
@@ -16,12 +16,58 @@ Classes
 
 
 
-.. class:: NutritionOrderEnteralFormula(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, baseFormulaType: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.enteral_formula_type_codes.EnteralFormulaTypeCodesCode]] = None, baseFormulaProductName: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, additiveType: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.enteral_formula_additive_type_code.EnteralFormulaAdditiveTypeCodeCode]] = None, additiveProductName: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, caloricDensity: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, routeofAdministration: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.enteral_route_codes.EnteralRouteCodesCode]] = None, administration: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.nutrition_order_administration.NutritionOrderAdministration]] = None, maxVolumeToDeliver: Optional[spark_auto_mapper_fhir.complex_types.quantity.Quantity] = None, administrationInstruction: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None)
 
+.. py:class:: NutritionOrderEnteralFormula(*, id_ = None, extension = None, modifierExtension = None, baseFormulaType = None, baseFormulaProductName = None, additiveType = None, additiveProductName = None, caloricDensity = None, routeofAdministration = None, administration = None, maxVolumeToDeliver = None, administrationInstruction = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
 
    NutritionOrder.EnteralFormula
-   A request to supply a diet, formula feeding (enteral) or oral nutritional supplement to a patient/resident.
+       A request to supply a diet, formula feeding (enteral) or oral nutritional supplement to a patient/resident.
+
+       A request to supply a diet, formula feeding (enteral) or oral nutritional
+   supplement to a patient/resident.
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param modifierExtension: May be used to represent additional information that is not part of the basic
+   definition of the element and that modifies the understanding of the element
+   in which it is contained and/or the understanding of the containing element's
+   descendants. Usually modifier elements provide negation or qualification. To
+   make the use of extensions safe and manageable, there is a strict set of
+   governance applied to the definition and use of extensions. Though any
+   implementer can define an extension, there is a set of requirements that SHALL
+   be met as part of the definition of the extension. Applications processing a
+   resource are required to check for modifier extensions.
+
+   Modifier extensions SHALL NOT change the meaning of any elements on Resource
+   or DomainResource (including cannot change the meaning of modifierExtension
+   itself).
+       :param baseFormulaType: The type of enteral or infant formula such as an adult standard formula with
+   fiber or a soy-based infant formula.
+       :param baseFormulaProductName: The product or brand name of the enteral or infant formula product such as
+   "ACME Adult Standard Formula".
+       :param additiveType: Indicates the type of modular component such as protein, carbohydrate, fat or
+   fiber to be provided in addition to or mixed with the base formula.
+       :param additiveProductName: The product or brand name of the type of modular component to be added to the
+   formula.
+       :param caloricDensity: The amount of energy (calories) that the formula should provide per specified
+   volume, typically per mL or fluid oz.  For example, an infant may require a
+   formula that provides 24 calories per fluid ounce or an adult may require an
+   enteral formula that provides 1.5 calorie/mL.
+       :param routeofAdministration: The route or physiological path of administration into the patient's
+   gastrointestinal  tract for purposes of providing the formula feeding, e.g.
+   nasogastric tube.
+       :param administration: Formula administration instructions as structured data.  This repeating
+   structure allows for changing the administration rate or volume over time for
+   both bolus and continuous feeding.  An example of this would be an instruction
+   to increase the rate of continuous feeding every 2 hours.
+       :param maxVolumeToDeliver: The maximum total quantity of formula that may be administered to a subject
+   over the period of time, e.g. 1440 mL over 24 hours.
+       :param administrationInstruction: Free text formula administration, feeding instructions or additional
+   instructions or information.
 
 

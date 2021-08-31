@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.invoice_status`
-=======================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.invoice_status`
+==========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.invoice_status
 
@@ -17,55 +17,55 @@ Classes
 
 
 
-.. class:: InvoiceStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: InvoiceStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    InvoiceStatus
    From: http://hl7.org/fhir/invoice-status in valuesets.xml
        Codes identifying the lifecycle stage of an Invoice.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/invoice-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/invoice-status
 
       
 
 
-.. class:: InvoiceStatusCodeValues
+.. py:class:: InvoiceStatusCodeValues
 
    the invoice has been prepared but not yet finalized.
    From: http://hl7.org/fhir/invoice-status in valuesets.xml
 
-   .. attribute:: Draft
+   .. py:attribute:: Draft
       
 
       the invoice has been finalized and sent to the recipient.
       From: http://hl7.org/fhir/invoice-status in valuesets.xml
 
 
-   .. attribute:: Issued
+   .. py:attribute:: Issued
       
 
       the invoice has been balaced / completely paid.
       From: http://hl7.org/fhir/invoice-status in valuesets.xml
 
 
-   .. attribute:: Balanced
+   .. py:attribute:: Balanced
       
 
       the invoice was cancelled.
       From: http://hl7.org/fhir/invoice-status in valuesets.xml
 
 
-   .. attribute:: Cancelled
+   .. py:attribute:: Cancelled
       
 
       the invoice was determined as entered in error before it was issued.
       From: http://hl7.org/fhir/invoice-status in valuesets.xml
 
 
-   .. attribute:: EnteredInError
+   .. py:attribute:: EnteredInError
       
 
       

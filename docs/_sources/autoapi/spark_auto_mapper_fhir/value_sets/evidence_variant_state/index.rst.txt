@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.evidence_variant_state`
-===============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.evidence_variant_state`
+==================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.evidence_variant_state
 
@@ -17,42 +17,42 @@ Classes
 
 
 
-.. class:: EvidenceVariantStateCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: EvidenceVariantStateCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    EvidenceVariantState
    From: http://terminology.hl7.org/CodeSystem/evidence-variant-state in valuesets.xml
        Used for results by exposure in variant states such as low-risk, medium-risk
    and high-risk states.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/evidence-variant-state
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/evidence-variant-state
 
       
 
 
-.. class:: EvidenceVariantStateCodeValues
+.. py:class:: EvidenceVariantStateCodeValues
 
    low risk estimate.
    From: http://terminology.hl7.org/CodeSystem/evidence-variant-state in valuesets.xml
 
-   .. attribute:: LowRisk
+   .. py:attribute:: LowRisk
       
 
       medium risk estimate.
       From: http://terminology.hl7.org/CodeSystem/evidence-variant-state in valuesets.xml
 
 
-   .. attribute:: MediumRisk
+   .. py:attribute:: MediumRisk
       
 
       high risk estimate.
       From: http://terminology.hl7.org/CodeSystem/evidence-variant-state in valuesets.xml
 
 
-   .. attribute:: HighRisk
+   .. py:attribute:: HighRisk
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.measure_population_type`
-================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.measure_population_type`
+===================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.measure_population_type
 
@@ -17,22 +17,22 @@ Classes
 
 
 
-.. class:: MeasurePopulationTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: MeasurePopulationTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    MeasurePopulationType
    From: http://terminology.hl7.org/CodeSystem/measure-population in valuesets.xml
        The type of population.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/measure-population
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/measure-population
 
       
 
 
-.. class:: MeasurePopulationTypeCodeValues
+.. py:class:: MeasurePopulationTypeCodeValues
 
    The initial population refers to all patients or events to be evaluated by a
    quality measure involving patients who share a common set of specified
@@ -40,7 +40,7 @@ Classes
    denominator) are drawn from the initial population.
    From: http://terminology.hl7.org/CodeSystem/measure-population in valuesets.xml
 
-   .. attribute:: InitialPopulation
+   .. py:attribute:: InitialPopulation
       
 
       The upper portion of a fraction used to calculate a rate, proportion, or
@@ -51,7 +51,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/measure-population in valuesets.xml
 
 
-   .. attribute:: Numerator
+   .. py:attribute:: Numerator
       
 
       Numerator exclusion criteria define patients or events to be removed from the
@@ -60,7 +60,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/measure-population in valuesets.xml
 
 
-   .. attribute:: NumeratorExclusion
+   .. py:attribute:: NumeratorExclusion
       
 
       The lower portion of a fraction used to calculate a rate, proportion, or
@@ -70,7 +70,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/measure-population in valuesets.xml
 
 
-   .. attribute:: Denominator
+   .. py:attribute:: Denominator
       
 
       Denominator exclusion criteria define patients or events that should be
@@ -82,7 +82,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/measure-population in valuesets.xml
 
 
-   .. attribute:: DenominatorExclusion
+   .. py:attribute:: DenominatorExclusion
       
 
       Denominator exceptions are conditions that should remove a patient or event
@@ -93,7 +93,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/measure-population in valuesets.xml
 
 
-   .. attribute:: DenominatorException
+   .. py:attribute:: DenominatorException
       
 
       Measure population criteria define the patients or events for which the
@@ -103,7 +103,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/measure-population in valuesets.xml
 
 
-   .. attribute:: MeasurePopulation
+   .. py:attribute:: MeasurePopulation
       
 
       Measure population criteria define the patients or events that should be
@@ -114,7 +114,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/measure-population in valuesets.xml
 
 
-   .. attribute:: MeasurePopulationExclusion
+   .. py:attribute:: MeasurePopulationExclusion
       
 
       Defines the individual observation to be performed for each patient or event
@@ -124,7 +124,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/measure-population in valuesets.xml
 
 
-   .. attribute:: MeasureObservation
+   .. py:attribute:: MeasureObservation
       
 
       

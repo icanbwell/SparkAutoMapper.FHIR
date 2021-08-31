@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.charge_item_code`
-=========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.charge_item_code`
+============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.charge_item_code
 
@@ -17,22 +17,22 @@ Classes
 
 
 
-.. class:: ChargeItemCodeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ChargeItemCodeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ChargeItemCode
    From: http://terminology.hl7.org/CodeSystem/chargeitem-billingcodes in valuesets.xml
        Example set of codes that can be used for billing purposes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/chargeitem-billingcodes
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/chargeitem-billingcodes
 
       
 
 
-.. class:: ChargeItemCodeCodeValues
+.. py:class:: ChargeItemCodeCodeValues
 
    From German EBM billing system:
    Unvorhergesehene Inanspruchnahme des Vertragsarztes durch einen
@@ -40,7 +40,7 @@ Classes
    gesetzlichen Feiertagen, am 24.12. und 31.12. zwischen 07:00 und 19:00 Uhr.
    From: http://terminology.hl7.org/CodeSystem/chargeitem-billingcodes in valuesets.xml
 
-   .. attribute:: UnvorhergeseheneInanspruchnahme
+   .. py:attribute:: UnvorhergeseheneInanspruchnahme
       
 
       From German EBM billing system:
@@ -50,7 +50,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/chargeitem-billingcodes in valuesets.xml
 
 
-   .. attribute:: Notfallpauschale
+   .. py:attribute:: Notfallpauschale
       
 
       From German EBM billing system:
@@ -61,7 +61,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/chargeitem-billingcodes in valuesets.xml
 
 
-   .. attribute:: Grundpauschale
+   .. py:attribute:: Grundpauschale
       
 
       

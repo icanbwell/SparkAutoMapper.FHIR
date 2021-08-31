@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.modifier_type_codes`
-============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.modifier_type_codes`
+===============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.modifier_type_codes
 
@@ -17,62 +17,62 @@ Classes
 
 
 
-.. class:: ModifierTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ModifierTypeCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ModifierTypeCodes
    From: http://terminology.hl7.org/CodeSystem/modifiers in valuesets.xml
        This value set includes sample Modifier type codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/modifiers
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/modifiers
 
       
 
 
-.. class:: ModifierTypeCodesCodeValues
+.. py:class:: ModifierTypeCodesCodeValues
 
    Repair of prior service or installation.
    From: http://terminology.hl7.org/CodeSystem/modifiers in valuesets.xml
 
-   .. attribute:: RepairOfPriorServiceOrInstallation
+   .. py:attribute:: RepairOfPriorServiceOrInstallation
       
 
       Temporary service or installation.
       From: http://terminology.hl7.org/CodeSystem/modifiers in valuesets.xml
 
 
-   .. attribute:: TemporaryServiceOrInstallation
+   .. py:attribute:: TemporaryServiceOrInstallation
       
 
       Treatment associated with TMJ.
       From: http://terminology.hl7.org/CodeSystem/modifiers in valuesets.xml
 
 
-   .. attribute:: TMJTreatment
+   .. py:attribute:: TMJTreatment
       
 
       Implant or associated with an implant.
       From: http://terminology.hl7.org/CodeSystem/modifiers in valuesets.xml
 
 
-   .. attribute:: ImplantOrAssociatedWithAnImplant
+   .. py:attribute:: ImplantOrAssociatedWithAnImplant
       
 
       A Rush service or service performed outside of normal office hours.
       From: http://terminology.hl7.org/CodeSystem/modifiers in valuesets.xml
 
 
-   .. attribute:: RushOrOutsideOfOfficeHours
+   .. py:attribute:: RushOrOutsideOfOfficeHours
       
 
       None.
       From: http://terminology.hl7.org/CodeSystem/modifiers in valuesets.xml
 
 
-   .. attribute:: None_
+   .. py:attribute:: None_
       
 
       

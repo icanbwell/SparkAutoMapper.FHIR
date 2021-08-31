@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.hl7_publishing_domain`
-==============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.hl7_publishing_domain`
+=================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.hl7_publishing_domain
 
@@ -17,23 +17,23 @@ Classes
 
 
 
-.. class:: Hl7PublishingDomain(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: Hl7PublishingDomain(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.hl7PublishingDomain
    From: http://terminology.hl7.org/ValueSet/v3-hl7PublishingDomain in v3-codesystems.xml
          Description:
    Codes for HL7 publishing domains (specific content area)
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain
 
       
 
 
-.. class:: Hl7PublishingDomainValues
+.. py:class:: Hl7PublishingDomainValues
 
    Description: Represents the HL7 content "domain" that supports accounting and
    billing functions - and "provides support for the creation and management of
@@ -48,7 +48,7 @@ Classes
    set of interoperability specifications.
    From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
-   .. attribute:: Accounting_Billing
+   .. py:attribute:: Accounting_Billing
       
 
       Description: Represents the HL7 content "domain" that supports trigger event
@@ -63,7 +63,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: TriggerEventControlActInfrastructure
+   .. py:attribute:: TriggerEventControlActInfrastructure
       
 
       Description: Represents the HL7 content "domain" that was defined as an
@@ -71,7 +71,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: ArtificialListingForTestPurposes_FauxDomainForTesting
+   .. py:attribute:: ArtificialListingForTestPurposes_FauxDomainForTesting
       
 
       Description: Represents the HL7 content "domain" that supports blood tissue
@@ -88,7 +88,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: BloodTissueAndOrgan
+   .. py:attribute:: BloodTissueAndOrgan
       
 
       Description: Represents the HL7 content "domain" that supports the clinical
@@ -102,7 +102,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: ClinicalDocumentArchitecture
+   .. py:attribute:: ClinicalDocumentArchitecture
       
 
       Description: Represents the HL7 content "domain" that supports clinical
@@ -117,7 +117,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: ClinicalGenomics
+   .. py:attribute:: ClinicalGenomics
       
 
       Description: Represents the HL7 content "domain" that supports transmission
@@ -134,7 +134,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: TransmissionInfrastructure
+   .. py:attribute:: TransmissionInfrastructure
       
 
       Description: Represents the HL7 content "domain" that supports Coverage - and
@@ -149,7 +149,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: Coverage
+   .. py:attribute:: Coverage
       
 
       Description: Represents the HL7 content "domain" that supports the common
@@ -164,7 +164,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: CommonProductModel
+   .. py:attribute:: CommonProductModel
       
 
       Description: Represents the HL7 content "domain" that supports Claims and
@@ -183,7 +183,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: ClaimsAndReimbursement
+   .. py:attribute:: ClaimsAndReimbursement
       
 
       Description: Represents the HL7 content "domain" that supports a common
@@ -200,7 +200,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: ClinicalStatement
+   .. py:attribute:: ClinicalStatement
       
 
       Description: Represents the HL7 content "domain" that supports common model
@@ -215,7 +215,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: CommonTypes
+   .. py:attribute:: CommonTypes
       
 
       Description: Represents the HL7 content "domain" that was created to support
@@ -223,7 +223,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: DummyDomain
+   .. py:attribute:: DummyDomain
       
 
       Description: This domain has been retired in favor of "imaging integration"
@@ -231,7 +231,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: DiagnosticImaging
+   .. py:attribute:: DiagnosticImaging
       
 
       Description: Represents the HL7 content "domain" that provides decision
@@ -245,7 +245,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: DecisionSupport
+   .. py:attribute:: DecisionSupport
       
 
       Description: Represents the HL7 content "domain" that supports Emergency
@@ -259,7 +259,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: EmergencyMedicalServices
+   .. py:attribute:: EmergencyMedicalServices
       
 
       Description: Represents the HL7 content "domain" that supports imaging
@@ -276,7 +276,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: ImagingIntegration
+   .. py:attribute:: ImagingIntegration
       
 
       Description: Represents the HL7 content "domain" that supports immunization -
@@ -292,7 +292,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: Immunization
+   .. py:attribute:: Immunization
       
 
       Description: Represents the HL7 content "domain" that supports clinical
@@ -308,7 +308,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: Laboratory
+   .. py:attribute:: Laboratory
       
 
       Description: Represents the HL7 content "domain" that supports medication -
@@ -323,7 +323,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: Medication
+   .. py:attribute:: Medication
       
 
       Description: Represents the HL7 content "domain" that supports master file
@@ -338,7 +338,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: MasterfileInfrastructure
+   .. py:attribute:: MasterfileInfrastructure
       
 
       Description: Represents the HL7 content "domain" that supports Materials
@@ -356,7 +356,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: MaterialsManagement
+   .. py:attribute:: MaterialsManagement
       
 
       Description: Represents the HL7 content "domain" that supports medical records
@@ -370,7 +370,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: MedicalRecords
+   .. py:attribute:: MedicalRecords
       
 
       Description: Represents the HL7 content "domain" that supports shared messages
@@ -385,7 +385,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: SharedMessages
+   .. py:attribute:: SharedMessages
       
 
       Description: Represents the HL7 content "domain" that supports observations -
@@ -400,7 +400,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: Observations
+   .. py:attribute:: Observations
       
 
       Description: Represents the HL7 content "domain" that supports orders and
@@ -415,7 +415,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: Orders_Observations
+   .. py:attribute:: Orders_Observations
       
 
       Description: Represents the HL7 content "domain" that supports orders - and
@@ -430,7 +430,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: Orders
+   .. py:attribute:: Orders
       
 
       Description: Represents the HL7 content "domain" that supports Patient
@@ -445,7 +445,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: PatientAdministration
+   .. py:attribute:: PatientAdministration
       
 
       Description: Represents the HL7 content "domain" that supports Care Provision
@@ -460,7 +460,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: CareProvision
+   .. py:attribute:: CareProvision
       
 
       Description: Represents the HL7 content "domain" that supports public health -
@@ -475,7 +475,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: PublicHealth
+   .. py:attribute:: PublicHealth
       
 
       Description: Represents the HL7 content "domain" that supports Personnel
@@ -491,7 +491,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: PersonnelManagement
+   .. py:attribute:: PersonnelManagement
       
 
       Description: Represents the HL7 content "domain" that supports query
@@ -507,7 +507,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: QueryInfrastructure
+   .. py:attribute:: QueryInfrastructure
       
 
       Description: Represents the HL7 content "domain" that supports Quality
@@ -522,7 +522,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: QualityMeasures
+   .. py:attribute:: QualityMeasures
       
 
       Description: Represents the HL7 content "domain" that supports Registries -
@@ -536,7 +536,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: Registries
+   .. py:attribute:: Registries
       
 
       Description: Represents the HL7 content "domain" that supports Informative
@@ -550,7 +550,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: InformativePublicHealth
+   .. py:attribute:: InformativePublicHealth
       
 
       Description: Represents the HL7 content "domain" that supports Regulated
@@ -566,7 +566,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: RegulatedProducts
+   .. py:attribute:: RegulatedProducts
       
 
       Description: Represents the HL7 content "domain" that supports Public Health
@@ -582,7 +582,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: PublicHealthReporting
+   .. py:attribute:: PublicHealthReporting
       
 
       Description: Represents the HL7 content "domain" that supports Regulated
@@ -599,7 +599,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: RegulatedStudies
+   .. py:attribute:: RegulatedStudies
       
 
       Description: Represents the HL7 content "domain" that supports pharmacy - and
@@ -614,7 +614,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: Pharmacy
+   .. py:attribute:: Pharmacy
       
 
       Description: Represents the HL7 content "domain" that supports Scheduling -
@@ -629,7 +629,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: Scheduling
+   .. py:attribute:: Scheduling
       
 
       Description: Represents the HL7 content "domain" that supports Specimen - and
@@ -644,7 +644,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: Specimen
+   .. py:attribute:: Specimen
       
 
       Description: Represents the HL7 content "domain" that supports Therapeutic
@@ -660,7 +660,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7PublishingDomain in v3-codesystems.xml
 
 
-   .. attribute:: TherapeuticDevices
+   .. py:attribute:: TherapeuticDevices
       
 
       

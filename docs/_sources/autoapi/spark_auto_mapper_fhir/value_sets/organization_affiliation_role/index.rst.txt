@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.organization_affiliation_role`
-======================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.organization_affiliation_role`
+=========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.organization_affiliation_role
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: OrganizationAffiliationRoleCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: OrganizationAffiliationRoleCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    OrganizationAffiliationRole
    From: http://hl7.org/fhir/organization-role in valuesets.xml
        This example value set defines a set of codes that can be used to indicate the
    role of one Organization in relation to another.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/organization-role
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/organization-role
 
       
 
 
-.. class:: OrganizationAffiliationRoleCodeValues
+.. py:class:: OrganizationAffiliationRoleCodeValues
 
    From: http://hl7.org/fhir/organization-role in valuesets.xml
 
-   .. attribute:: Provider
+   .. py:attribute:: Provider
       
 
       An organization such as a public health agency, community/social services
@@ -45,7 +45,7 @@ Classes
       From: http://hl7.org/fhir/organization-role in valuesets.xml
 
 
-   .. attribute:: Agency
+   .. py:attribute:: Agency
       
 
       An organization providing research-related services such as conducting
@@ -53,21 +53,21 @@ Classes
       From: http://hl7.org/fhir/organization-role in valuesets.xml
 
 
-   .. attribute:: Research
+   .. py:attribute:: Research
       
 
       An organization providing reimbursement, payment, or related services
       From: http://hl7.org/fhir/organization-role in valuesets.xml
 
 
-   .. attribute:: Payer
+   .. py:attribute:: Payer
       
 
       An organization providing diagnostic testing/laboratory services
       From: http://hl7.org/fhir/organization-role in valuesets.xml
 
 
-   .. attribute:: Diagnostics
+   .. py:attribute:: Diagnostics
       
 
       An organization that provides medical supplies (e.g. medical devices,
@@ -75,7 +75,7 @@ Classes
       From: http://hl7.org/fhir/organization-role in valuesets.xml
 
 
-   .. attribute:: Supplier
+   .. py:attribute:: Supplier
       
 
       An organization that facilitates electronic clinical data exchange between
@@ -83,7 +83,7 @@ Classes
       From: http://hl7.org/fhir/organization-role in valuesets.xml
 
 
-   .. attribute:: HIE_HIO
+   .. py:attribute:: HIE_HIO
       
 
       A type of non-ownership relationship between entities (encompasses
@@ -91,7 +91,7 @@ Classes
       From: http://hl7.org/fhir/organization-role in valuesets.xml
 
 
-   .. attribute:: Member
+   .. py:attribute:: Member
       
 
       

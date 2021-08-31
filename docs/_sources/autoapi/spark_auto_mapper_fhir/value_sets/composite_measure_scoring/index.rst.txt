@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.composite_measure_scoring`
-==================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.composite_measure_scoring`
+=====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.composite_measure_scoring
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: CompositeMeasureScoringCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: CompositeMeasureScoringCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    CompositeMeasureScoring
    From: http://terminology.hl7.org/CodeSystem/composite-measure-scoring in valuesets.xml
        The composite scoring method of the measure.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/composite-measure-scoring
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/composite-measure-scoring
 
       
 
 
-.. class:: CompositeMeasureScoringCodeValues
+.. py:class:: CompositeMeasureScoringCodeValues
 
    Opportunity scoring combines the scores from component measures by combining
    the numerators and denominators for each component.
    From: http://terminology.hl7.org/CodeSystem/composite-measure-scoring in valuesets.xml
 
-   .. attribute:: Opportunity
+   .. py:attribute:: Opportunity
       
 
       All-or-nothing scoring includes an individual in the numerator of the
@@ -47,7 +47,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/composite-measure-scoring in valuesets.xml
 
 
-   .. attribute:: All_or_nothing
+   .. py:attribute:: All_or_nothing
       
 
       Linear scoring gives an individual a score based on the number of numerators
@@ -55,7 +55,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/composite-measure-scoring in valuesets.xml
 
 
-   .. attribute:: Linear
+   .. py:attribute:: Linear
       
 
       Weighted scoring gives an individual a score based on a weighted factor for
@@ -63,7 +63,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/composite-measure-scoring in valuesets.xml
 
 
-   .. attribute:: Weighted
+   .. py:attribute:: Weighted
       
 
       

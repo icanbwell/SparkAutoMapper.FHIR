@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.response_type`
-======================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.response_type`
+=========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.response_type
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: ResponseTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ResponseTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ResponseType
    From: http://hl7.org/fhir/response-code in valuesets.xml
        The kind of response to a message.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/response-code
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/response-code
 
       
 
 
-.. class:: ResponseTypeCodeValues
+.. py:class:: ResponseTypeCodeValues
 
    The message was accepted and processed without error.
    From: http://hl7.org/fhir/response-code in valuesets.xml
 
-   .. attribute:: OK
+   .. py:attribute:: OK
       
 
       Some internal unexpected error occurred - wait and try again. Note - this is
@@ -46,7 +46,7 @@ Classes
       From: http://hl7.org/fhir/response-code in valuesets.xml
 
 
-   .. attribute:: TransientError
+   .. py:attribute:: TransientError
       
 
       The message was rejected because of a problem with the content. There is no
@@ -55,7 +55,7 @@ Classes
       From: http://hl7.org/fhir/response-code in valuesets.xml
 
 
-   .. attribute:: FatalError
+   .. py:attribute:: FatalError
       
 
       

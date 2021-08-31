@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.event_or_request_resource_types`
-========================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.event_or_request_resource_types`
+===========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.event_or_request_resource_types
 
@@ -16,18 +16,18 @@ Classes
 
 
 
-.. class:: EventOrRequestResourceTypesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: EventOrRequestResourceTypesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    Event Or Request Resource Types
    From: http://hl7.org/fhir/ValueSet/event-or-request-resource-types in valuesets.xml
        This value set lists all the event or request resource types defined in this
    version of the specification.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/ValueSet/event-or-request-resource-types
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/ValueSet/event-or-request-resource-types
 
       
 

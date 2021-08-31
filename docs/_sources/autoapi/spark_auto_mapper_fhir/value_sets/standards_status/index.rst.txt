@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.standards_status`
-=========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.standards_status`
+============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.standards_status
 
@@ -17,22 +17,22 @@ Classes
 
 
 
-.. class:: StandardsStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: StandardsStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    StandardsStatus
    From: http://terminology.hl7.org/CodeSystem/standards-status in valuesets.xml
        HL7 Ballot/Standards status of artifact.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/standards-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/standards-status
 
       
 
 
-.. class:: StandardsStatusCodeValues
+.. py:class:: StandardsStatusCodeValues
 
    This portion of the specification is not considered to be complete enough or
    sufficiently reviewed to be safe for implementation. It may have known issues
@@ -46,7 +46,7 @@ Classes
    ballot.
    From: http://terminology.hl7.org/CodeSystem/standards-status in valuesets.xml
 
-   .. attribute:: Draft
+   .. py:attribute:: Draft
       
 
       This content has been subject to review and production implementation in a
@@ -57,7 +57,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/standards-status in valuesets.xml
 
 
-   .. attribute:: Normative
+   .. py:attribute:: Normative
       
 
       This content has been well reviewed and is considered by the authors to be
@@ -72,7 +72,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/standards-status in valuesets.xml
 
 
-   .. attribute:: Trial_Use
+   .. py:attribute:: Trial_Use
       
 
       This portion of the specification is provided for implementer assistance, and
@@ -82,7 +82,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/standards-status in valuesets.xml
 
 
-   .. attribute:: Informative
+   .. py:attribute:: Informative
       
 
       This portion of the specification is provided for implementer assistance, and
@@ -92,7 +92,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/standards-status in valuesets.xml
 
 
-   .. attribute:: Deprecated
+   .. py:attribute:: Deprecated
       
 
       This is content that is managed outside the FHIR Specification, but included
@@ -100,7 +100,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/standards-status in valuesets.xml
 
 
-   .. attribute:: External
+   .. py:attribute:: External
       
 
       

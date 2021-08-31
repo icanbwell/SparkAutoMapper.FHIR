@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.fhir_types.date_time`
-==================================================
+:py:mod:`spark_auto_mapper_fhir.fhir_types.date_time`
+=====================================================
 
 .. py:module:: spark_auto_mapper_fhir.fhir_types.date_time
 
@@ -7,7 +7,7 @@
 Module Contents
 ---------------
 
-.. data:: FhirDateTime
+.. py:data:: FhirDateTime
    
 
    

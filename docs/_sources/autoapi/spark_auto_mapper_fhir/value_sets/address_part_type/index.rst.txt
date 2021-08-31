@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.address_part_type`
-==========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.address_part_type`
+=============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.address_part_type
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: AddressPartType(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: AddressPartType(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.AddressPartType
    From: http://terminology.hl7.org/ValueSet/v3-AddressPartType in v3-codesystems.xml
@@ -30,13 +30,13 @@ Classes
    concepts shows composition.  E.g. "Street Name" is part of "Street Address
    Line"
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-AddressPartType
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-AddressPartType
 
       
 
 
-.. class:: AddressPartTypeValues
+.. py:class:: AddressPartTypeValues
 
    This can be a unit designator, such as apartment number, suite number, or
    floor. There may be several unit designators in an address (e.g., "3rd floor,
@@ -46,7 +46,7 @@ Classes
    houses).
    From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
 
-   .. attribute:: AdditionalLocator
+   .. py:attribute:: AdditionalLocator
       
 
       Description: An address line is for either an additional locator, a delivery
@@ -54,14 +54,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
 
 
-   .. attribute:: AddressLine
+   .. py:attribute:: AddressLine
       
 
       The numeric portion of a building number
       From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
 
 
-   .. attribute:: BuildingNumberNumeric
+   .. py:attribute:: BuildingNumberNumeric
       
 
       The number of a building, house or lot alongside the street.  Also known as
@@ -70,7 +70,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
 
 
-   .. attribute:: BuildingNumber
+   .. py:attribute:: BuildingNumber
       
 
       Any alphabetic character, fraction or other text that may appear after the
@@ -78,7 +78,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
 
 
-   .. attribute:: BuildingNumberSuffix
+   .. py:attribute:: BuildingNumberSuffix
       
 
       The name of the party who will take receipt at the specified address, and will
@@ -86,21 +86,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
 
 
-   .. attribute:: CareOf
+   .. py:attribute:: CareOf
       
 
       A geographic sub-unit delineated for demographic purposes.
       From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
 
 
-   .. attribute:: CensusTract
+   .. py:attribute:: CensusTract
       
 
       Country
       From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
 
 
-   .. attribute:: Country
+   .. py:attribute:: Country
       
 
       A sub-unit of a state or province. (49 of the United States of America use the
@@ -108,14 +108,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
 
 
-   .. attribute:: CountyOrParish
+   .. py:attribute:: CountyOrParish
       
 
       The name of the city, town, village, or other community or delivery center
       From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
 
 
-   .. attribute:: Municipality
+   .. py:attribute:: Municipality
       
 
       Delimiters are printed without framing white space.  If no value component is
@@ -123,7 +123,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
 
 
-   .. attribute:: Delimiter
+   .. py:attribute:: Delimiter
       
 
       Indicates the type of delivery installation (the facility to which the mail
@@ -132,7 +132,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
 
 
-   .. attribute:: DeliveryInstallationType
+   .. py:attribute:: DeliveryInstallationType
       
 
       The location of the delivery installation, usually a town or city, and is only
@@ -142,7 +142,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
 
 
-   .. attribute:: DeliveryInstallationArea
+   .. py:attribute:: DeliveryInstallationArea
       
 
       A number, letter or name identifying a delivery installation.  E.g., for
@@ -150,14 +150,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
 
 
-   .. attribute:: DeliveryInstallationQualifier
+   .. py:attribute:: DeliveryInstallationQualifier
       
 
       Direction (e.g., N, S, W, E)
       From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
 
 
-   .. attribute:: Direction
+   .. py:attribute:: Direction
       
 
       Indicates the type of service offered, method of delivery.  For example: post
@@ -165,7 +165,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
 
 
-   .. attribute:: DeliveryMode
+   .. py:attribute:: DeliveryMode
       
 
       Represents the routing information such as a letter carrier route number.  It
@@ -174,14 +174,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
 
 
-   .. attribute:: DeliveryModeIdentifier
+   .. py:attribute:: DeliveryModeIdentifier
       
 
       A value that uniquely identifies the postal address.
       From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
 
 
-   .. attribute:: DeliveryPointIdentifier
+   .. py:attribute:: DeliveryPointIdentifier
       
 
       Description:An intersection denotes that the actual address is located AT or
@@ -189,21 +189,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
 
 
-   .. attribute:: Intersection
+   .. py:attribute:: Intersection
       
 
       A numbered box located in a post station.
       From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
 
 
-   .. attribute:: PostBox
+   .. py:attribute:: PostBox
       
 
       A subsection of a municipality
       From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
 
 
-   .. attribute:: Precinct
+   .. py:attribute:: Precinct
       
 
       A sub-unit of a country with limited sovereignty in a federally organized
@@ -211,7 +211,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
 
 
-   .. attribute:: StateOrProvince
+   .. py:attribute:: StateOrProvince
       
 
       The base name of a roadway or artery recognized by a municipality (excluding
@@ -219,21 +219,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
 
 
-   .. attribute:: StreetNameBase
+   .. py:attribute:: StreetNameBase
       
 
       street name
       From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
 
 
-   .. attribute:: StreetName
+   .. py:attribute:: StreetName
       
 
       The designation given to the street.  (e.g. Street, Avenue, Crescent, etc.)
       From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
 
 
-   .. attribute:: StreetType
+   .. py:attribute:: StreetType
       
 
       The number or name of a specific unit contained within a building or complex,
@@ -241,7 +241,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
 
 
-   .. attribute:: UnitIdentifier
+   .. py:attribute:: UnitIdentifier
       
 
       Indicates the type of specific unit contained within a building or complex.
@@ -249,14 +249,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
 
 
-   .. attribute:: UnitDesignator
+   .. py:attribute:: UnitDesignator
       
 
       A postal code designating a region defined by the postal service.
       From: http://terminology.hl7.org/CodeSystem/v3-AddressPartType in v3-codesystems.xml
 
 
-   .. attribute:: PostalCode
+   .. py:attribute:: PostalCode
       
 
       

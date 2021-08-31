@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.quantity_comparator`
-============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.quantity_comparator`
+===============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.quantity_comparator
 
@@ -17,48 +17,48 @@ Classes
 
 
 
-.. class:: QuantityComparatorCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: QuantityComparatorCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    QuantityComparator
    From: http://hl7.org/fhir/quantity-comparator in valuesets.xml
        How the Quantity should be understood and represented.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/quantity-comparator
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/quantity-comparator
 
       
 
 
-.. class:: QuantityComparatorCodeValues
+.. py:class:: QuantityComparatorCodeValues
 
    The actual value is less than the given value.
    From: http://hl7.org/fhir/quantity-comparator in valuesets.xml
 
-   .. attribute:: LessThan
+   .. py:attribute:: LessThan
       
 
       The actual value is less than or equal to the given value.
       From: http://hl7.org/fhir/quantity-comparator in valuesets.xml
 
 
-   .. attribute:: LessOrEqualTo
+   .. py:attribute:: LessOrEqualTo
       
 
       The actual value is greater than or equal to the given value.
       From: http://hl7.org/fhir/quantity-comparator in valuesets.xml
 
 
-   .. attribute:: GreaterOrEqualTo
+   .. py:attribute:: GreaterOrEqualTo
       
 
       The actual value is greater than the given value.
       From: http://hl7.org/fhir/quantity-comparator in valuesets.xml
 
 
-   .. attribute:: GreaterThan
+   .. py:attribute:: GreaterThan
       
 
       

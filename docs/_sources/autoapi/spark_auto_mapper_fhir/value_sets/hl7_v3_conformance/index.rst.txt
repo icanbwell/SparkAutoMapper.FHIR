@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.hl7_v3_conformance`
-===========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.hl7_v3_conformance`
+==============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.hl7_v3_conformance
 
@@ -17,23 +17,23 @@ Classes
 
 
 
-.. class:: Hl7V3Conformance(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: Hl7V3Conformance(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.hl7V3Conformance
    From: http://terminology.hl7.org/ValueSet/v3-hl7V3Conformance in v3-codesystems.xml
          Description:
    Identifies allowed codes for HL7aTMs v3 conformance property.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-hl7V3Conformance
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-hl7V3Conformance
 
       
 
 
-.. class:: Hl7V3ConformanceValues
+.. py:class:: Hl7V3ConformanceValues
 
    Description: Implementers receiving this property must not raise an error if
    the data is received, but will not perform any useful function with the data.
@@ -41,7 +41,7 @@ Classes
    specific to the "sender" or "initiator" of a communication.
    From: http://terminology.hl7.org/CodeSystem/v3-hl7V3Conformance in v3-codesystems.xml
 
-   .. attribute:: Ignored
+   .. py:attribute:: Ignored
       
 
       Description: All implementers are prohibited from transmitting this content,
@@ -49,7 +49,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7V3Conformance in v3-codesystems.xml
 
 
-   .. attribute:: NotPermitted
+   .. py:attribute:: NotPermitted
       
 
       Description: All implementers must support this property.  I.e. they must be
@@ -57,7 +57,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7V3Conformance in v3-codesystems.xml
 
 
-   .. attribute:: Required
+   .. py:attribute:: Required
       
 
       Description: The element is considered "required" (i.e. must be supported)
@@ -67,7 +67,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7V3Conformance in v3-codesystems.xml
 
 
-   .. attribute:: RequiredForConsumer
+   .. py:attribute:: RequiredForConsumer
       
 
       Description: The element is considered "required" (i.e. must be supported)
@@ -77,7 +77,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7V3Conformance in v3-codesystems.xml
 
 
-   .. attribute:: RequiredForInitiator
+   .. py:attribute:: RequiredForInitiator
       
 
       Description: The conformance expectations for this element have not yet been
@@ -85,7 +85,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7V3Conformance in v3-codesystems.xml
 
 
-   .. attribute:: Undetermined
+   .. py:attribute:: Undetermined
       
 
       

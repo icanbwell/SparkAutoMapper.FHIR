@@ -1,5 +1,5 @@
-:mod:`us_core`
-==============
+:py:mod:`us_core`
+=================
 
 .. py:module:: us_core
 

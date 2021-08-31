@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.patient_medicine_change_types`
-======================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.patient_medicine_change_types`
+=========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.patient_medicine_change_types
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: PatientMedicineChangeTypesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: PatientMedicineChangeTypesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    PatientMedicineChangeTypes
    From: urn:oid:1.2.36.1.2001.1001.101.104.16592 in valuesets.xml
        Example Item Flags for the List Resource. In this case, these are the kind of
    flags that would be used on a medication list at the end of a consultation.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = urn:oid:1.2.36.1.2001.1001.101.104.16592
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = urn:oid:1.2.36.1.2001.1001.101.104.16592
 
       
 
 
-.. class:: PatientMedicineChangeTypesCodeValues
+.. py:class:: PatientMedicineChangeTypesCodeValues
 
    No change has been made to the status of this medicine item.
    From: urn:oid:1.2.36.1.2001.1001.101.104.16592 in valuesets.xml
 
-   .. attribute:: Unchanged
+   .. py:attribute:: Unchanged
       
 
       The medicine item has changed. The change may be described in an extension
@@ -46,7 +46,7 @@ Classes
       From: urn:oid:1.2.36.1.2001.1001.101.104.16592 in valuesets.xml
 
 
-   .. attribute:: Changed
+   .. py:attribute:: Changed
       
 
       The prescription for this medicine item was cancelled by an authorized health
@@ -56,14 +56,14 @@ Classes
       From: urn:oid:1.2.36.1.2001.1001.101.104.16592 in valuesets.xml
 
 
-   .. attribute:: Cancelled
+   .. py:attribute:: Cancelled
       
 
       A new medicine item has been prescribed
       From: urn:oid:1.2.36.1.2001.1001.101.104.16592 in valuesets.xml
 
 
-   .. attribute:: Prescribed
+   .. py:attribute:: Prescribed
       
 
       Administration of this medication item that the patient is currently taking is
@@ -77,7 +77,7 @@ Classes
       From: urn:oid:1.2.36.1.2001.1001.101.104.16592 in valuesets.xml
 
 
-   .. attribute:: Ceased
+   .. py:attribute:: Ceased
       
 
       Administration of this medication item that the patient is currently taking is
@@ -89,7 +89,7 @@ Classes
       From: urn:oid:1.2.36.1.2001.1001.101.104.16592 in valuesets.xml
 
 
-   .. attribute:: Suspended
+   .. py:attribute:: Suspended
       
 
       

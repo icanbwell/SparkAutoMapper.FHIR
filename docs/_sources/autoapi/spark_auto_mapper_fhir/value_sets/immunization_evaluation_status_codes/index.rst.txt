@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.immunization_evaluation_status_codes`
-=============================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.immunization_evaluation_status_codes`
+================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.immunization_evaluation_status_codes
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: ImmunizationEvaluationStatusCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ImmunizationEvaluationStatusCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ImmunizationEvaluationStatusCodes
    From: http://hl7.org/fhir/ValueSet/immunization-evaluation-status in valuesets.xml
@@ -29,23 +29,23 @@ Classes
    support describing the current status of the evaluation for vaccine
    administration event.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/medication-admin-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/medication-admin-status
 
       
 
 
-.. class:: ImmunizationEvaluationStatusCodesCodeValues
+.. py:class:: ImmunizationEvaluationStatusCodesCodeValues
 
    From: http://hl7.org/fhir/ValueSet/immunization-evaluation-status in valuesets.xml
 
-   .. attribute:: Completed
+   .. py:attribute:: Completed
       
 
       From: http://hl7.org/fhir/ValueSet/immunization-evaluation-status in valuesets.xml
 
 
-   .. attribute:: Entered_in_error
+   .. py:attribute:: Entered_in_error
       
 
       

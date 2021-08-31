@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.hl7_update_mode`
-========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.hl7_update_mode`
+===========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.hl7_update_mode
 
@@ -17,37 +17,37 @@ Classes
 
 
 
-.. class:: HL7UpdateMode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: HL7UpdateMode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.HL7UpdateMode
    From: http://terminology.hl7.org/ValueSet/v3-HL7UpdateMode in v3-codesystems.xml
         The possible modes of updating that occur when an attribute is received by a
    system that already contains values for that attribute.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-HL7UpdateMode
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-HL7UpdateMode
 
       
 
 
-.. class:: HL7UpdateModeValues
+.. py:class:: HL7UpdateModeValues
 
    Description:The item was (or is to be) added, having not been present
    immediately before. (If it is already present, this may be treated as an error
    condition.)
    From: http://terminology.hl7.org/CodeSystem/v3-HL7UpdateMode in v3-codesystems.xml
 
-   .. attribute:: Add
+   .. py:attribute:: Add
       
 
       Description:The item was (or is to be) either added or replaced.
       From: http://terminology.hl7.org/CodeSystem/v3-HL7UpdateMode in v3-codesystems.xml
 
 
-   .. attribute:: AddOrReplace
+   .. py:attribute:: AddOrReplace
       
 
       Description:The item was (or is to be) removed (sometimes referred to as
@@ -55,14 +55,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-HL7UpdateMode in v3-codesystems.xml
 
 
-   .. attribute:: Remove
+   .. py:attribute:: Remove
       
 
       Description:This item is part of the identifying information for this object.
       From: http://terminology.hl7.org/CodeSystem/v3-HL7UpdateMode in v3-codesystems.xml
 
 
-   .. attribute:: Key
+   .. py:attribute:: Key
       
 
       Description:There was (or is to be) no change to the item. This is primarily
@@ -71,7 +71,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-HL7UpdateMode in v3-codesystems.xml
 
 
-   .. attribute:: NoChange
+   .. py:attribute:: NoChange
       
 
       Description:The item existed previously and has (or is to be) revised. (If an
@@ -79,7 +79,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-HL7UpdateMode in v3-codesystems.xml
 
 
-   .. attribute:: Replace
+   .. py:attribute:: Replace
       
 
       Description:This item provides enough information to allow a processing system
@@ -87,7 +87,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-HL7UpdateMode in v3-codesystems.xml
 
 
-   .. attribute:: Reference
+   .. py:attribute:: Reference
       
 
       Description:Description:</b>It is not specified whether or what kind of change
@@ -96,7 +96,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-HL7UpdateMode in v3-codesystems.xml
 
 
-   .. attribute:: Unknown
+   .. py:attribute:: Unknown
       
 
       These concepts apply when the element and/or message is updating a set of
@@ -104,7 +104,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-HL7UpdateMode in v3-codesystems.xml
 
 
-   .. attribute:: SetUpdateMode
+   .. py:attribute:: SetUpdateMode
       
 
       Description: AU: If this item exists, update it with these values. If it does
@@ -114,14 +114,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-HL7UpdateMode in v3-codesystems.xml
 
 
-   .. attribute:: AddOrUpdate
+   .. py:attribute:: AddOrUpdate
       
 
       Ignore this role, it is not relevant to the update.
       From: http://terminology.hl7.org/CodeSystem/v3-HL7UpdateMode in v3-codesystems.xml
 
 
-   .. attribute:: Ignore
+   .. py:attribute:: Ignore
       
 
       Verify - this message element must match a value already in the receiving
@@ -129,7 +129,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-HL7UpdateMode in v3-codesystems.xml
 
 
-   .. attribute:: Verify
+   .. py:attribute:: Verify
       
 
       

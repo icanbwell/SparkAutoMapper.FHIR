@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.search_entry_mode`
-==========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.search_entry_mode`
+=============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.search_entry_mode
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: SearchEntryModeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SearchEntryModeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SearchEntryMode
    From: http://hl7.org/fhir/search-entry-mode in valuesets.xml
@@ -28,18 +28,18 @@ Classes
    because of an _include requirement, or to convey information or warning
    information about the search process.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/search-entry-mode
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/search-entry-mode
 
       
 
 
-.. class:: SearchEntryModeCodeValues
+.. py:class:: SearchEntryModeCodeValues
 
    This resource matched the search specification.
    From: http://hl7.org/fhir/search-entry-mode in valuesets.xml
 
-   .. attribute:: Match
+   .. py:attribute:: Match
       
 
       This resource is returned because it is referred to from another resource in
@@ -47,7 +47,7 @@ Classes
       From: http://hl7.org/fhir/search-entry-mode in valuesets.xml
 
 
-   .. attribute:: Include
+   .. py:attribute:: Include
       
 
       An OperationOutcome that provides additional information about the processing
@@ -55,7 +55,7 @@ Classes
       From: http://hl7.org/fhir/search-entry-mode in valuesets.xml
 
 
-   .. attribute:: Outcome
+   .. py:attribute:: Outcome
       
 
       

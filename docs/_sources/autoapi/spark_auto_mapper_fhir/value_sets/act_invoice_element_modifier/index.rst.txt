@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.act_invoice_element_modifier`
-=====================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.act_invoice_element_modifier`
+========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.act_invoice_element_modifier
 
@@ -17,41 +17,41 @@ Classes
 
 
 
-.. class:: ActInvoiceElementModifier(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ActInvoiceElementModifier(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.ActInvoiceElementModifier
    From: http://terminology.hl7.org/ValueSet/v3-ActInvoiceElementModifier in v3-codesystems.xml
         Processing consideration and clarification codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ActInvoiceElementModifier
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-ActInvoiceElementModifier
 
       
 
 
-.. class:: ActInvoiceElementModifierValues
+.. py:class:: ActInvoiceElementModifierValues
 
    Electronic form with supporting information to follow.
    From: http://terminology.hl7.org/CodeSystem/v3-ActInvoiceElementModifier in v3-codesystems.xml
 
-   .. attribute:: ElectronicFormToFollow
+   .. py:attribute:: ElectronicFormToFollow
       
 
       Fax with supporting information to follow.
       From: http://terminology.hl7.org/CodeSystem/v3-ActInvoiceElementModifier in v3-codesystems.xml
 
 
-   .. attribute:: FaxToFollow
+   .. py:attribute:: FaxToFollow
       
 
       Represents the last invoice from the perspective of the provider.
       From: http://terminology.hl7.org/CodeSystem/v3-ActInvoiceElementModifier in v3-codesystems.xml
 
 
-   .. attribute:: LastInvoice
+   .. py:attribute:: LastInvoice
       
 
       Paper documentation (or other physical format) with supporting information to
@@ -59,7 +59,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActInvoiceElementModifier in v3-codesystems.xml
 
 
-   .. attribute:: PaperDocumentationToFollow
+   .. py:attribute:: PaperDocumentationToFollow
       
 
       

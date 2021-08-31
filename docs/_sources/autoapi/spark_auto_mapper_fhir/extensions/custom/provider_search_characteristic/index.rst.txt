@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.extensions.custom.provider_search_characteristic`
-==============================================================================
+:py:mod:`spark_auto_mapper_fhir.extensions.custom.provider_search_characteristic`
+=================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.extensions.custom.provider_search_characteristic
 
@@ -16,14 +16,17 @@ Classes
 
 
 
-.. class:: SearchCharacteristicExtensionItem(valueCodeableConcept: spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.custom.search_characteristic.SearchCharacteristicCode])
 
+.. py:class:: SearchCharacteristicExtensionItem(valueCodeableConcept)
 
-   Bases: :class:`spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase`
 
    DO NOT USE DIRECTLY!  ALWAYS USE A SUB_CLASS.
 
-   .. method:: codeset(cls) -> spark_auto_mapper_fhir.fhir_types.uri.FhirUri
+
+   :param valueCodeableConcept:
+
+   .. py:method:: codeset(cls)
 
       searchCharacteristic
       :return:

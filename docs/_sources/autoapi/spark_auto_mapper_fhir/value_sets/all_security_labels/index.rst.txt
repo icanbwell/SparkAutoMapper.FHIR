@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.all_security_labels`
-============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.all_security_labels`
+===============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.all_security_labels
 
@@ -17,47 +17,47 @@ Classes
 
 
 
-.. class:: AllSecurityLabelsCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: AllSecurityLabelsCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    All Security Labels
    From: http://hl7.org/fhir/ValueSet/security-labels in valuesets.xml
        A single value set for all security labels defined by FHIR.
 
-   .. attribute:: codeset_v3_ActUSPrivacyLaw
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ActUSPrivacyLaw
+   .. py:attribute:: codeset_v3_ActUSPrivacyLaw
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-ActUSPrivacyLaw
 
       http://terminology.hl7.org/CodeSystem/v3-Confidentiality
 
 
-   .. attribute:: codeset_v3_Confidentiality
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-Confidentiality
+   .. py:attribute:: codeset_v3_Confidentiality
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-Confidentiality
 
       http://terminology.hl7.org/CodeSystem/v3-ActCode
 
 
-   .. attribute:: codeset_v3_ActCode
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ActCode
+   .. py:attribute:: codeset_v3_ActCode
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-ActCode
 
       http://terminology.hl7.org/CodeSystem/v3-ObservationValue
 
 
-   .. attribute:: codeset_v3_ObservationValue
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ObservationValue
+   .. py:attribute:: codeset_v3_ObservationValue
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-ObservationValue
 
       
 
 
-.. class:: AllSecurityLabelsCodeValues
+.. py:class:: AllSecurityLabelsCodeValues
 
    A specializable code and its leaf codes used in Confidentiality value sets to
    value the Act.Confidentiality and Role.Confidentiality attribute in accordance
    with the definition for concept domain "Confidentiality".
    From: http://terminology.hl7.org/CodeSystem/v3-Confidentiality in v3-codesystems.xml
 
-   .. attribute:: Confidentiality
+   .. py:attribute:: Confidentiality
       
 
       Description: By accessing subject / role and relationship based  rights
@@ -70,7 +70,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-Confidentiality in v3-codesystems.xml
 
 
-   .. attribute:: ConfidentialityByAccessKind
+   .. py:attribute:: ConfidentialityByAccessKind
       
 
       Description: By information type, only for service catalog entries (multiples
@@ -82,7 +82,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-Confidentiality in v3-codesystems.xml
 
 
-   .. attribute:: ConfidentialityByInfoType
+   .. py:attribute:: ConfidentialityByInfoType
       
 
       Description: Modifiers of role based access rights  (multiple allowed)
@@ -93,7 +93,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-Confidentiality in v3-codesystems.xml
 
 
-   .. attribute:: ConfidentialityModifiers
+   .. py:attribute:: ConfidentialityModifiers
       
 
       An account represents a grouping of financial transactions that are tracked
@@ -103,7 +103,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActAccountCode
+   .. py:attribute:: ActAccountCode
       
 
       Includes coded responses that will occur as a result of the adjudication of an
@@ -112,7 +112,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActAdjudicationCode
+   .. py:attribute:: ActAdjudicationCode
       
 
       Actions to be carried out by the recipient of the Adjudication Result
@@ -120,7 +120,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActAdjudicationResultActionCode
+   .. py:attribute:: ActAdjudicationResultActionCode
       
 
       Definition:An identifying modifier code for healthcare interventions or
@@ -128,7 +128,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActBillableModifierCode
+   .. py:attribute:: ActBillableModifierCode
       
 
       The type of provision(s)  made for reimbursing for the deliver of healthcare
@@ -136,14 +136,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActBillingArrangementCode
+   .. py:attribute:: ActBillingArrangementCode
       
 
       Type of bounded ROI.
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActBoundedROICode
+   .. py:attribute:: ActBoundedROICode
       
 
       Description:The type and scope of responsibility taken-on by the performer of
@@ -151,7 +151,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActCareProvision
+   .. py:attribute:: ActCareProvision
       
 
       Description: Coded types of attachments included to support a healthcare
@@ -159,7 +159,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActClaimAttachmentCategoryCode
+   .. py:attribute:: ActClaimAttachmentCategoryCode
       
 
       Definition: The type of consent directive, e.g., to consent or dissent to
@@ -169,14 +169,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActConsentType
+   .. py:attribute:: ActConsentType
       
 
       Constrains the ActCode to the domain of Container Registration
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActContainerRegistrationCode
+   .. py:attribute:: ActContainerRegistrationCode
       
 
       An observation form that determines parameters or attributes of an Act.
@@ -198,21 +198,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActControlVariable
+   .. py:attribute:: ActControlVariable
       
 
       Response to an insurance coverage eligibility query or authorization request.
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActCoverageConfirmationCode
+   .. py:attribute:: ActCoverageConfirmationCode
       
 
       Criteria that are applicable to the authorized coverage.
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActCoverageLimitCode
+   .. py:attribute:: ActCoverageLimitCode
       
 
       Definition: Set of codes indicating the type of insurance policy or program
@@ -220,14 +220,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActCoverageTypeCode
+   .. py:attribute:: ActCoverageTypeCode
       
 
       Codes dealing with the management of Detected Issue observations
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActDetectedIssueManagementCode
+   .. py:attribute:: ActDetectedIssueManagementCode
       
 
       Concepts that identify the type or nature of exposure interaction.  Examples
@@ -236,21 +236,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActExposureCode
+   .. py:attribute:: ActExposureCode
       
 
       ActFinancialTransactionCode
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActFinancialTransactionCode
+   .. py:attribute:: ActFinancialTransactionCode
       
 
       Set of codes indicating the type of incident or accident.
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActIncidentCode
+   .. py:attribute:: ActIncidentCode
       
 
       Description: The type of health information to which the subject of the
@@ -258,7 +258,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActInformationAccessCode
+   .. py:attribute:: ActInformationAccessCode
       
 
       Concepts conveying the context in which authorization given under
@@ -268,7 +268,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActInformationAccessContextCode
+   .. py:attribute:: ActInformationAccessContextCode
       
 
       Definition:Indicates the set of information types which may be manipulated or
@@ -276,7 +276,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActInformationCategoryCode
+   .. py:attribute:: ActInformationCategoryCode
       
 
       Type of invoice element that is used to assist in describing an Invoice that
@@ -285,7 +285,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActInvoiceElementCode
+   .. py:attribute:: ActInvoiceElementCode
       
 
       Identifies the different types of summary information that can be reported by
@@ -295,7 +295,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActInvoiceElementSummaryCode
+   .. py:attribute:: ActInvoiceElementSummaryCode
       
 
       Includes coded responses that will occur as a result of the adjudication of an
@@ -304,21 +304,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActInvoiceOverrideCode
+   .. py:attribute:: ActInvoiceOverrideCode
       
 
       Provides codes associated with ActClass value of LIST (working list)
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActListCode
+   .. py:attribute:: ActListCode
       
 
       Identifies types of monitoring programs
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActMonitoringProtocolCode
+   .. py:attribute:: ActMonitoringProtocolCode
       
 
       Description:Concepts representing indications (reasons for clinical action)
@@ -326,7 +326,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActNonObservationIndicationCode
+   .. py:attribute:: ActNonObservationIndicationCode
       
 
       Identifies the type of verification investigation being undertaken with
@@ -376,7 +376,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActObservationVerification
+   .. py:attribute:: ActObservationVerification
       
 
       Code identifying the method or the movement of payment instructions.
@@ -386,14 +386,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActPaymentCode
+   .. py:attribute:: ActPaymentCode
       
 
       Identifies types of dispensing events
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActPharmacySupplyType
+   .. py:attribute:: ActPharmacySupplyType
       
 
       Description:Types of policies that further specify the ActClassPolicy value
@@ -401,7 +401,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActPolicyType
+   .. py:attribute:: ActPolicyType
       
 
       The method that a product is obtained for use by the subject of the supply act
@@ -409,21 +409,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActProductAcquisitionCode
+   .. py:attribute:: ActProductAcquisitionCode
       
 
       Transportation of a specimen.
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActSpecimenTransportCode
+   .. py:attribute:: ActSpecimenTransportCode
       
 
       Set of codes related to specimen treatments
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActSpecimenTreatmentCode
+   .. py:attribute:: ActSpecimenTreatmentCode
       
 
       Description: Describes the type of substance administration being performed.
@@ -432,7 +432,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActSubstanceAdministrationCode
+   .. py:attribute:: ActSubstanceAdministrationCode
       
 
       Description: A task or action that a user may perform in a clinical
@@ -441,7 +441,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActTaskCode
+   .. py:attribute:: ActTaskCode
       
 
       Characterizes how a transportation act was or will be carried out.
@@ -452,35 +452,35 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActTransportationModeCode
+   .. py:attribute:: ActTransportationModeCode
       
 
       Identifies the kinds of observations that can be performed
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ObservationType
+   .. py:attribute:: ObservationType
       
 
       Shape of the region on the object being referenced
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ROIOverlayShape
+   .. py:attribute:: ROIOverlayShape
       
 
       Description:Indicates that result data has been corrected.
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: Corrected
+   .. py:attribute:: Corrected
       
 
       Code set to define specialized/allowed diets
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: Diet
+   .. py:attribute:: Diet
       
 
       Definition: A public or government health program that administers and funds
@@ -489,7 +489,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: DrugProgram
+   .. py:attribute:: DrugProgram
       
 
       Description:Indicates that a result is complete.  No further results are to
@@ -498,7 +498,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: Final
+   .. py:attribute:: Final
       
 
       Description:Indicates that a result is incomplete.  There are further results
@@ -507,7 +507,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: Preliminary
+   .. py:attribute:: Preliminary
       
 
       An observation identifying security metadata about an IT resource (data,
@@ -551,7 +551,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: SecurityObservationType
+   .. py:attribute:: SecurityObservationType
       
 
       Definition: A government health program that provides coverage on a fee for
@@ -566,7 +566,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: SubsidizedFeeForServiceProgram
+   .. py:attribute:: SubsidizedFeeForServiceProgram
       
 
       Definition: Government mandated program providing coverage, disability income,
@@ -578,14 +578,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: _workersCompensationProgram
-      
-
-      An identifying code for healthcare interventions/procedures.
-      From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
-
-
-   .. attribute:: ActProcedureCode
+   .. py:attribute:: ActProcedureCode
       
 
       Domain provides the root for HL7-defined detailed or rich codes for the Act
@@ -593,31 +586,31 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: HL7DefinedActCodes
+   .. py:attribute:: HL7DefinedActCodes
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: COPAY
+   .. py:attribute:: COPAY
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: DEDUCT
+   .. py:attribute:: DEDUCT
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: DOSEIND
+   .. py:attribute:: DOSEIND
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: PRA
+   .. py:attribute:: PRA
       
 
       The act of putting something away for safe keeping. The "something" may be
@@ -626,7 +619,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: Storage
+   .. py:attribute:: Storage
       
 
       An account represents a grouping of financial transactions that are tracked
@@ -636,7 +629,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActAccountCode
+   .. py:attribute:: ActAccountCode
       
 
       Includes coded responses that will occur as a result of the adjudication of an
@@ -645,7 +638,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActAdjudicationCode
+   .. py:attribute:: ActAdjudicationCode
       
 
       Actions to be carried out by the recipient of the Adjudication Result
@@ -653,7 +646,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActAdjudicationResultActionCode
+   .. py:attribute:: ActAdjudicationResultActionCode
       
 
       Definition:An identifying modifier code for healthcare interventions or
@@ -661,7 +654,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActBillableModifierCode
+   .. py:attribute:: ActBillableModifierCode
       
 
       The type of provision(s)  made for reimbursing for the deliver of healthcare
@@ -669,14 +662,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActBillingArrangementCode
+   .. py:attribute:: ActBillingArrangementCode
       
 
       Type of bounded ROI.
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActBoundedROICode
+   .. py:attribute:: ActBoundedROICode
       
 
       Description:The type and scope of responsibility taken-on by the performer of
@@ -684,7 +677,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActCareProvision
+   .. py:attribute:: ActCareProvision
       
 
       Description: Coded types of attachments included to support a healthcare
@@ -692,7 +685,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActClaimAttachmentCategoryCode
+   .. py:attribute:: ActClaimAttachmentCategoryCode
       
 
       Definition: The type of consent directive, e.g., to consent or dissent to
@@ -702,14 +695,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActConsentType
+   .. py:attribute:: ActConsentType
       
 
       Constrains the ActCode to the domain of Container Registration
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActContainerRegistrationCode
+   .. py:attribute:: ActContainerRegistrationCode
       
 
       An observation form that determines parameters or attributes of an Act.
@@ -731,21 +724,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActControlVariable
+   .. py:attribute:: ActControlVariable
       
 
       Response to an insurance coverage eligibility query or authorization request.
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActCoverageConfirmationCode
+   .. py:attribute:: ActCoverageConfirmationCode
       
 
       Criteria that are applicable to the authorized coverage.
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActCoverageLimitCode
+   .. py:attribute:: ActCoverageLimitCode
       
 
       Definition: Set of codes indicating the type of insurance policy or program
@@ -753,14 +746,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActCoverageTypeCode
+   .. py:attribute:: ActCoverageTypeCode
       
 
       Codes dealing with the management of Detected Issue observations
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActDetectedIssueManagementCode
+   .. py:attribute:: ActDetectedIssueManagementCode
       
 
       Concepts that identify the type or nature of exposure interaction.  Examples
@@ -769,21 +762,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActExposureCode
+   .. py:attribute:: ActExposureCode
       
 
       ActFinancialTransactionCode
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActFinancialTransactionCode
+   .. py:attribute:: ActFinancialTransactionCode
       
 
       Set of codes indicating the type of incident or accident.
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActIncidentCode
+   .. py:attribute:: ActIncidentCode
       
 
       Description: The type of health information to which the subject of the
@@ -791,7 +784,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActInformationAccessCode
+   .. py:attribute:: ActInformationAccessCode
       
 
       Concepts conveying the context in which authorization given under
@@ -801,7 +794,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActInformationAccessContextCode
+   .. py:attribute:: ActInformationAccessContextCode
       
 
       Definition:Indicates the set of information types which may be manipulated or
@@ -809,7 +802,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActInformationCategoryCode
+   .. py:attribute:: ActInformationCategoryCode
       
 
       Type of invoice element that is used to assist in describing an Invoice that
@@ -818,7 +811,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActInvoiceElementCode
+   .. py:attribute:: ActInvoiceElementCode
       
 
       Identifies the different types of summary information that can be reported by
@@ -828,7 +821,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActInvoiceElementSummaryCode
+   .. py:attribute:: ActInvoiceElementSummaryCode
       
 
       Includes coded responses that will occur as a result of the adjudication of an
@@ -837,21 +830,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActInvoiceOverrideCode
+   .. py:attribute:: ActInvoiceOverrideCode
       
 
       Provides codes associated with ActClass value of LIST (working list)
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActListCode
+   .. py:attribute:: ActListCode
       
 
       Identifies types of monitoring programs
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActMonitoringProtocolCode
+   .. py:attribute:: ActMonitoringProtocolCode
       
 
       Description:Concepts representing indications (reasons for clinical action)
@@ -859,7 +852,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActNonObservationIndicationCode
+   .. py:attribute:: ActNonObservationIndicationCode
       
 
       Identifies the type of verification investigation being undertaken with
@@ -909,7 +902,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActObservationVerification
+   .. py:attribute:: ActObservationVerification
       
 
       Code identifying the method or the movement of payment instructions.
@@ -919,14 +912,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActPaymentCode
+   .. py:attribute:: ActPaymentCode
       
 
       Identifies types of dispensing events
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActPharmacySupplyType
+   .. py:attribute:: ActPharmacySupplyType
       
 
       Description:Types of policies that further specify the ActClassPolicy value
@@ -934,7 +927,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActPolicyType
+   .. py:attribute:: ActPolicyType
       
 
       The method that a product is obtained for use by the subject of the supply act
@@ -942,21 +935,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActProductAcquisitionCode
+   .. py:attribute:: ActProductAcquisitionCode
       
 
       Transportation of a specimen.
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActSpecimenTransportCode
+   .. py:attribute:: ActSpecimenTransportCode
       
 
       Set of codes related to specimen treatments
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActSpecimenTreatmentCode
+   .. py:attribute:: ActSpecimenTreatmentCode
       
 
       Description: Describes the type of substance administration being performed.
@@ -965,7 +958,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActSubstanceAdministrationCode
+   .. py:attribute:: ActSubstanceAdministrationCode
       
 
       Description: A task or action that a user may perform in a clinical
@@ -974,7 +967,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActTaskCode
+   .. py:attribute:: ActTaskCode
       
 
       Characterizes how a transportation act was or will be carried out.
@@ -985,35 +978,35 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActTransportationModeCode
+   .. py:attribute:: ActTransportationModeCode
       
 
       Identifies the kinds of observations that can be performed
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ObservationType
+   .. py:attribute:: ObservationType
       
 
       Shape of the region on the object being referenced
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ROIOverlayShape
+   .. py:attribute:: ROIOverlayShape
       
 
       Description:Indicates that result data has been corrected.
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: Corrected
+   .. py:attribute:: Corrected
       
 
       Code set to define specialized/allowed diets
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: Diet
+   .. py:attribute:: Diet
       
 
       Definition: A public or government health program that administers and funds
@@ -1022,7 +1015,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: DrugProgram
+   .. py:attribute:: DrugProgram
       
 
       Description:Indicates that a result is complete.  No further results are to
@@ -1031,7 +1024,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: Final
+   .. py:attribute:: Final
       
 
       Description:Indicates that a result is incomplete.  There are further results
@@ -1040,7 +1033,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: Preliminary
+   .. py:attribute:: Preliminary
       
 
       An observation identifying security metadata about an IT resource (data,
@@ -1084,7 +1077,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: SecurityObservationType
+   .. py:attribute:: SecurityObservationType
       
 
       Definition: A government health program that provides coverage on a fee for
@@ -1099,7 +1092,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: SubsidizedFeeForServiceProgram
+   .. py:attribute:: SubsidizedFeeForServiceProgram
       
 
       Definition: Government mandated program providing coverage, disability income,
@@ -1111,14 +1104,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: _workersCompensationProgram
-      
-
-      An identifying code for healthcare interventions/procedures.
-      From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
-
-
-   .. attribute:: ActProcedureCode
+   .. py:attribute:: ActProcedureCode
       
 
       Domain provides the root for HL7-defined detailed or rich codes for the Act
@@ -1126,31 +1112,31 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: HL7DefinedActCodes
+   .. py:attribute:: HL7DefinedActCodes
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: COPAY
+   .. py:attribute:: COPAY
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: DEDUCT
+   .. py:attribute:: DEDUCT
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: DOSEIND
+   .. py:attribute:: DOSEIND
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: PRA
+   .. py:attribute:: PRA
       
 
       The act of putting something away for safe keeping. The "something" may be
@@ -1159,7 +1145,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: Storage
+   .. py:attribute:: Storage
       
 
       Codes specify the category of observation, evidence, or document used to
@@ -1169,7 +1155,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
 
 
-   .. attribute:: ActCoverageAssessmentObservationValue
+   .. py:attribute:: ActCoverageAssessmentObservationValue
       
 
       Indicates the result of a particular allergy test.  E.g. Negative, Mild,
@@ -1177,7 +1163,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
 
 
-   .. attribute:: AllergyTestValue
+   .. py:attribute:: AllergyTestValue
       
 
       Observation values that communicate the method used in a quality measure to
@@ -1185,7 +1171,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
 
 
-   .. attribute:: CompositeMeasureScoring
+   .. py:attribute:: CompositeMeasureScoring
       
 
       Description:Coded observation values for coverage limitations, for e.g., types
@@ -1193,7 +1179,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
 
 
-   .. attribute:: CoverageLimitObservationValue
+   .. py:attribute:: CoverageLimitObservationValue
       
 
       A clinical judgment as to the worst case result of a future exposure
@@ -1203,7 +1189,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
 
 
-   .. attribute:: CriticalityObservationValue
+   .. py:attribute:: CriticalityObservationValue
       
 
       Concepts representing whether a person does or does not currently have a job
@@ -1211,15 +1197,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
 
 
-   .. attribute:: _EmploymentStatus
-      
-
-      Description: The domain contains genetic analysis specific observation values,
-      e.g. Homozygote, Heterozygote, etc.
-      From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
-
-
-   .. attribute:: GeneticObservationValue
+   .. py:attribute:: GeneticObservationValue
       
 
       Observation values used to indicate the type of scoring (e.g. proportion,
@@ -1227,7 +1205,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
 
 
-   .. attribute:: ObservationMeasureScoring
+   .. py:attribute:: ObservationMeasureScoring
       
 
       Observation values used to indicate what kind of health quality measure is
@@ -1235,7 +1213,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
 
 
-   .. attribute:: ObservationMeasureType
+   .. py:attribute:: ObservationMeasureType
       
 
       Observation values used to assert various populations that a subject falls
@@ -1243,28 +1221,28 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
 
 
-   .. attribute:: ObservationPopulationInclusion
+   .. py:attribute:: ObservationPopulationInclusion
       
 
       PartialCompletionScale
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
 
 
-   .. attribute:: PartialCompletionScale
+   .. py:attribute:: PartialCompletionScale
       
 
       Observation values used to indicate security observation metadata.
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
 
 
-   .. attribute:: SecurityObservationValue
+   .. py:attribute:: SecurityObservationValue
       
 
       Potential values for observations of severity.
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
 
 
-   .. attribute:: SeverityObservation
+   .. py:attribute:: SeverityObservation
       
 
       Contains codes for defining the observed, physical position of a subject, such
@@ -1274,18 +1252,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
 
 
-   .. attribute:: _SubjectBodyPosition
-      
-
-      Values for observations of verification act results
-
-
-                                 Examples: Verified, not verified, verified with
-      warning.
-      From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
-
-
-   .. attribute:: VerificationOutcome
+   .. py:attribute:: VerificationOutcome
       
 
       Concepts that describe an individual's typical arrangement of working hours
@@ -1293,14 +1260,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
 
 
-   .. attribute:: _WorkSchedule
-      
-
-      AnnotationValue
-      From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
-
-
-   .. attribute:: AnnotationValue
+   .. py:attribute:: AnnotationValue
       
 
       Description:Used in a patient care message to value simple clinical (non-lab)
@@ -1308,7 +1268,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
 
 
-   .. attribute:: CommonClinicalObservation
+   .. py:attribute:: CommonClinicalObservation
       
 
       This domain is established as a parent to a variety of value domains being
@@ -1318,7 +1278,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
 
 
-   .. attribute:: IndividualCaseSafetyReportValueDomains
+   .. py:attribute:: IndividualCaseSafetyReportValueDomains
       
 
       Indicates the specific observation result which is the reason for the action
@@ -1327,7 +1287,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationValue in v3-codesystems.xml
 
 
-   .. attribute:: IndicationValue
+   .. py:attribute:: IndicationValue
       
 
       An account represents a grouping of financial transactions that are tracked
@@ -1337,7 +1297,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActAccountCode
+   .. py:attribute:: ActAccountCode
       
 
       Includes coded responses that will occur as a result of the adjudication of an
@@ -1346,7 +1306,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActAdjudicationCode
+   .. py:attribute:: ActAdjudicationCode
       
 
       Actions to be carried out by the recipient of the Adjudication Result
@@ -1354,7 +1314,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActAdjudicationResultActionCode
+   .. py:attribute:: ActAdjudicationResultActionCode
       
 
       Definition:An identifying modifier code for healthcare interventions or
@@ -1362,7 +1322,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActBillableModifierCode
+   .. py:attribute:: ActBillableModifierCode
       
 
       The type of provision(s)  made for reimbursing for the deliver of healthcare
@@ -1370,14 +1330,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActBillingArrangementCode
+   .. py:attribute:: ActBillingArrangementCode
       
 
       Type of bounded ROI.
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActBoundedROICode
+   .. py:attribute:: ActBoundedROICode
       
 
       Description:The type and scope of responsibility taken-on by the performer of
@@ -1385,7 +1345,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActCareProvision
+   .. py:attribute:: ActCareProvision
       
 
       Description: Coded types of attachments included to support a healthcare
@@ -1393,7 +1353,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActClaimAttachmentCategoryCode
+   .. py:attribute:: ActClaimAttachmentCategoryCode
       
 
       Definition: The type of consent directive, e.g., to consent or dissent to
@@ -1403,14 +1363,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActConsentType
+   .. py:attribute:: ActConsentType
       
 
       Constrains the ActCode to the domain of Container Registration
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActContainerRegistrationCode
+   .. py:attribute:: ActContainerRegistrationCode
       
 
       An observation form that determines parameters or attributes of an Act.
@@ -1432,21 +1392,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActControlVariable
+   .. py:attribute:: ActControlVariable
       
 
       Response to an insurance coverage eligibility query or authorization request.
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActCoverageConfirmationCode
+   .. py:attribute:: ActCoverageConfirmationCode
       
 
       Criteria that are applicable to the authorized coverage.
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActCoverageLimitCode
+   .. py:attribute:: ActCoverageLimitCode
       
 
       Definition: Set of codes indicating the type of insurance policy or program
@@ -1454,14 +1414,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActCoverageTypeCode
+   .. py:attribute:: ActCoverageTypeCode
       
 
       Codes dealing with the management of Detected Issue observations
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActDetectedIssueManagementCode
+   .. py:attribute:: ActDetectedIssueManagementCode
       
 
       Concepts that identify the type or nature of exposure interaction.  Examples
@@ -1470,21 +1430,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActExposureCode
+   .. py:attribute:: ActExposureCode
       
 
       ActFinancialTransactionCode
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActFinancialTransactionCode
+   .. py:attribute:: ActFinancialTransactionCode
       
 
       Set of codes indicating the type of incident or accident.
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActIncidentCode
+   .. py:attribute:: ActIncidentCode
       
 
       Description: The type of health information to which the subject of the
@@ -1492,7 +1452,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActInformationAccessCode
+   .. py:attribute:: ActInformationAccessCode
       
 
       Concepts conveying the context in which authorization given under
@@ -1502,7 +1462,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActInformationAccessContextCode
+   .. py:attribute:: ActInformationAccessContextCode
       
 
       Definition:Indicates the set of information types which may be manipulated or
@@ -1510,7 +1470,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActInformationCategoryCode
+   .. py:attribute:: ActInformationCategoryCode
       
 
       Type of invoice element that is used to assist in describing an Invoice that
@@ -1519,7 +1479,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActInvoiceElementCode
+   .. py:attribute:: ActInvoiceElementCode
       
 
       Identifies the different types of summary information that can be reported by
@@ -1529,7 +1489,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActInvoiceElementSummaryCode
+   .. py:attribute:: ActInvoiceElementSummaryCode
       
 
       Includes coded responses that will occur as a result of the adjudication of an
@@ -1538,21 +1498,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActInvoiceOverrideCode
+   .. py:attribute:: ActInvoiceOverrideCode
       
 
       Provides codes associated with ActClass value of LIST (working list)
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActListCode
+   .. py:attribute:: ActListCode
       
 
       Identifies types of monitoring programs
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActMonitoringProtocolCode
+   .. py:attribute:: ActMonitoringProtocolCode
       
 
       Description:Concepts representing indications (reasons for clinical action)
@@ -1560,7 +1520,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActNonObservationIndicationCode
+   .. py:attribute:: ActNonObservationIndicationCode
       
 
       Identifies the type of verification investigation being undertaken with
@@ -1610,7 +1570,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActObservationVerification
+   .. py:attribute:: ActObservationVerification
       
 
       Code identifying the method or the movement of payment instructions.
@@ -1620,14 +1580,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActPaymentCode
+   .. py:attribute:: ActPaymentCode
       
 
       Identifies types of dispensing events
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActPharmacySupplyType
+   .. py:attribute:: ActPharmacySupplyType
       
 
       Description:Types of policies that further specify the ActClassPolicy value
@@ -1635,7 +1595,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActPolicyType
+   .. py:attribute:: ActPolicyType
       
 
       The method that a product is obtained for use by the subject of the supply act
@@ -1643,21 +1603,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActProductAcquisitionCode
+   .. py:attribute:: ActProductAcquisitionCode
       
 
       Transportation of a specimen.
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActSpecimenTransportCode
+   .. py:attribute:: ActSpecimenTransportCode
       
 
       Set of codes related to specimen treatments
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActSpecimenTreatmentCode
+   .. py:attribute:: ActSpecimenTreatmentCode
       
 
       Description: Describes the type of substance administration being performed.
@@ -1666,7 +1626,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActSubstanceAdministrationCode
+   .. py:attribute:: ActSubstanceAdministrationCode
       
 
       Description: A task or action that a user may perform in a clinical
@@ -1675,7 +1635,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActTaskCode
+   .. py:attribute:: ActTaskCode
       
 
       Characterizes how a transportation act was or will be carried out.
@@ -1686,35 +1646,35 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActTransportationModeCode
+   .. py:attribute:: ActTransportationModeCode
       
 
       Identifies the kinds of observations that can be performed
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ObservationType
+   .. py:attribute:: ObservationType
       
 
       Shape of the region on the object being referenced
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ROIOverlayShape
+   .. py:attribute:: ROIOverlayShape
       
 
       Description:Indicates that result data has been corrected.
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: Corrected
+   .. py:attribute:: Corrected
       
 
       Code set to define specialized/allowed diets
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: Diet
+   .. py:attribute:: Diet
       
 
       Definition: A public or government health program that administers and funds
@@ -1723,7 +1683,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: DrugProgram
+   .. py:attribute:: DrugProgram
       
 
       Description:Indicates that a result is complete.  No further results are to
@@ -1732,7 +1692,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: Final
+   .. py:attribute:: Final
       
 
       Description:Indicates that a result is incomplete.  There are further results
@@ -1741,7 +1701,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: Preliminary
+   .. py:attribute:: Preliminary
       
 
       An observation identifying security metadata about an IT resource (data,
@@ -1785,7 +1745,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: SecurityObservationType
+   .. py:attribute:: SecurityObservationType
       
 
       Definition: A government health program that provides coverage on a fee for
@@ -1800,7 +1760,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: SubsidizedFeeForServiceProgram
+   .. py:attribute:: SubsidizedFeeForServiceProgram
       
 
       Definition: Government mandated program providing coverage, disability income,
@@ -1812,14 +1772,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: _workersCompensationProgram
-      
-
-      An identifying code for healthcare interventions/procedures.
-      From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
-
-
-   .. attribute:: ActProcedureCode
+   .. py:attribute:: ActProcedureCode
       
 
       Domain provides the root for HL7-defined detailed or rich codes for the Act
@@ -1827,31 +1780,31 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: HL7DefinedActCodes
+   .. py:attribute:: HL7DefinedActCodes
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: COPAY
+   .. py:attribute:: COPAY
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: DEDUCT
+   .. py:attribute:: DEDUCT
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: DOSEIND
+   .. py:attribute:: DOSEIND
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: PRA
+   .. py:attribute:: PRA
       
 
       The act of putting something away for safe keeping. The "something" may be
@@ -1860,7 +1813,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: Storage
+   .. py:attribute:: Storage
       
 
       An account represents a grouping of financial transactions that are tracked
@@ -1870,7 +1823,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActAccountCode
+   .. py:attribute:: ActAccountCode
       
 
       Includes coded responses that will occur as a result of the adjudication of an
@@ -1879,7 +1832,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActAdjudicationCode
+   .. py:attribute:: ActAdjudicationCode
       
 
       Actions to be carried out by the recipient of the Adjudication Result
@@ -1887,7 +1840,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActAdjudicationResultActionCode
+   .. py:attribute:: ActAdjudicationResultActionCode
       
 
       Definition:An identifying modifier code for healthcare interventions or
@@ -1895,7 +1848,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActBillableModifierCode
+   .. py:attribute:: ActBillableModifierCode
       
 
       The type of provision(s)  made for reimbursing for the deliver of healthcare
@@ -1903,14 +1856,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActBillingArrangementCode
+   .. py:attribute:: ActBillingArrangementCode
       
 
       Type of bounded ROI.
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActBoundedROICode
+   .. py:attribute:: ActBoundedROICode
       
 
       Description:The type and scope of responsibility taken-on by the performer of
@@ -1918,7 +1871,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActCareProvision
+   .. py:attribute:: ActCareProvision
       
 
       Description: Coded types of attachments included to support a healthcare
@@ -1926,7 +1879,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActClaimAttachmentCategoryCode
+   .. py:attribute:: ActClaimAttachmentCategoryCode
       
 
       Definition: The type of consent directive, e.g., to consent or dissent to
@@ -1936,14 +1889,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActConsentType
+   .. py:attribute:: ActConsentType
       
 
       Constrains the ActCode to the domain of Container Registration
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActContainerRegistrationCode
+   .. py:attribute:: ActContainerRegistrationCode
       
 
       An observation form that determines parameters or attributes of an Act.
@@ -1965,21 +1918,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActControlVariable
+   .. py:attribute:: ActControlVariable
       
 
       Response to an insurance coverage eligibility query or authorization request.
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActCoverageConfirmationCode
+   .. py:attribute:: ActCoverageConfirmationCode
       
 
       Criteria that are applicable to the authorized coverage.
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActCoverageLimitCode
+   .. py:attribute:: ActCoverageLimitCode
       
 
       Definition: Set of codes indicating the type of insurance policy or program
@@ -1987,14 +1940,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActCoverageTypeCode
+   .. py:attribute:: ActCoverageTypeCode
       
 
       Codes dealing with the management of Detected Issue observations
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActDetectedIssueManagementCode
+   .. py:attribute:: ActDetectedIssueManagementCode
       
 
       Concepts that identify the type or nature of exposure interaction.  Examples
@@ -2003,21 +1956,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActExposureCode
+   .. py:attribute:: ActExposureCode
       
 
       ActFinancialTransactionCode
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActFinancialTransactionCode
+   .. py:attribute:: ActFinancialTransactionCode
       
 
       Set of codes indicating the type of incident or accident.
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActIncidentCode
+   .. py:attribute:: ActIncidentCode
       
 
       Description: The type of health information to which the subject of the
@@ -2025,7 +1978,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActInformationAccessCode
+   .. py:attribute:: ActInformationAccessCode
       
 
       Concepts conveying the context in which authorization given under
@@ -2035,7 +1988,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActInformationAccessContextCode
+   .. py:attribute:: ActInformationAccessContextCode
       
 
       Definition:Indicates the set of information types which may be manipulated or
@@ -2043,7 +1996,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActInformationCategoryCode
+   .. py:attribute:: ActInformationCategoryCode
       
 
       Type of invoice element that is used to assist in describing an Invoice that
@@ -2052,7 +2005,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActInvoiceElementCode
+   .. py:attribute:: ActInvoiceElementCode
       
 
       Identifies the different types of summary information that can be reported by
@@ -2062,7 +2015,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActInvoiceElementSummaryCode
+   .. py:attribute:: ActInvoiceElementSummaryCode
       
 
       Includes coded responses that will occur as a result of the adjudication of an
@@ -2071,21 +2024,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActInvoiceOverrideCode
+   .. py:attribute:: ActInvoiceOverrideCode
       
 
       Provides codes associated with ActClass value of LIST (working list)
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActListCode
+   .. py:attribute:: ActListCode
       
 
       Identifies types of monitoring programs
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActMonitoringProtocolCode
+   .. py:attribute:: ActMonitoringProtocolCode
       
 
       Description:Concepts representing indications (reasons for clinical action)
@@ -2093,7 +2046,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActNonObservationIndicationCode
+   .. py:attribute:: ActNonObservationIndicationCode
       
 
       Identifies the type of verification investigation being undertaken with
@@ -2143,7 +2096,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActObservationVerification
+   .. py:attribute:: ActObservationVerification
       
 
       Code identifying the method or the movement of payment instructions.
@@ -2153,14 +2106,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActPaymentCode
+   .. py:attribute:: ActPaymentCode
       
 
       Identifies types of dispensing events
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActPharmacySupplyType
+   .. py:attribute:: ActPharmacySupplyType
       
 
       Description:Types of policies that further specify the ActClassPolicy value
@@ -2168,7 +2121,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActPolicyType
+   .. py:attribute:: ActPolicyType
       
 
       The method that a product is obtained for use by the subject of the supply act
@@ -2176,21 +2129,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActProductAcquisitionCode
+   .. py:attribute:: ActProductAcquisitionCode
       
 
       Transportation of a specimen.
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActSpecimenTransportCode
+   .. py:attribute:: ActSpecimenTransportCode
       
 
       Set of codes related to specimen treatments
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActSpecimenTreatmentCode
+   .. py:attribute:: ActSpecimenTreatmentCode
       
 
       Description: Describes the type of substance administration being performed.
@@ -2199,7 +2152,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActSubstanceAdministrationCode
+   .. py:attribute:: ActSubstanceAdministrationCode
       
 
       Description: A task or action that a user may perform in a clinical
@@ -2208,7 +2161,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActTaskCode
+   .. py:attribute:: ActTaskCode
       
 
       Characterizes how a transportation act was or will be carried out.
@@ -2219,35 +2172,35 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ActTransportationModeCode
+   .. py:attribute:: ActTransportationModeCode
       
 
       Identifies the kinds of observations that can be performed
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ObservationType
+   .. py:attribute:: ObservationType
       
 
       Shape of the region on the object being referenced
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: ROIOverlayShape
+   .. py:attribute:: ROIOverlayShape
       
 
       Description:Indicates that result data has been corrected.
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: Corrected
+   .. py:attribute:: Corrected
       
 
       Code set to define specialized/allowed diets
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: Diet
+   .. py:attribute:: Diet
       
 
       Definition: A public or government health program that administers and funds
@@ -2256,7 +2209,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: DrugProgram
+   .. py:attribute:: DrugProgram
       
 
       Description:Indicates that a result is complete.  No further results are to
@@ -2265,7 +2218,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: Final
+   .. py:attribute:: Final
       
 
       Description:Indicates that a result is incomplete.  There are further results
@@ -2274,7 +2227,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: Preliminary
+   .. py:attribute:: Preliminary
       
 
       An observation identifying security metadata about an IT resource (data,
@@ -2318,7 +2271,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: SecurityObservationType
+   .. py:attribute:: SecurityObservationType
       
 
       Definition: A government health program that provides coverage on a fee for
@@ -2333,7 +2286,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: SubsidizedFeeForServiceProgram
+   .. py:attribute:: SubsidizedFeeForServiceProgram
       
 
       Definition: Government mandated program providing coverage, disability income,
@@ -2345,14 +2298,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: _workersCompensationProgram
-      
-
-      An identifying code for healthcare interventions/procedures.
-      From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
-
-
-   .. attribute:: ActProcedureCode
+   .. py:attribute:: ActProcedureCode
       
 
       Domain provides the root for HL7-defined detailed or rich codes for the Act
@@ -2360,31 +2306,31 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: HL7DefinedActCodes
+   .. py:attribute:: HL7DefinedActCodes
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: COPAY
+   .. py:attribute:: COPAY
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: DEDUCT
+   .. py:attribute:: DEDUCT
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: DOSEIND
+   .. py:attribute:: DOSEIND
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: PRA
+   .. py:attribute:: PRA
       
 
       The act of putting something away for safe keeping. The "something" may be
@@ -2393,7 +2339,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActCode in v3-codesystems.xml
 
 
-   .. attribute:: Storage
+   .. py:attribute:: Storage
       
 
       Definition: A jurisdictional mandate in the U.S. relating to privacy.
@@ -2408,7 +2354,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ActUSPrivacyLaw in v3-codesystems.xml
 
 
-   .. attribute:: ActUSPrivacyLaw
+   .. py:attribute:: ActUSPrivacyLaw
       
 
       

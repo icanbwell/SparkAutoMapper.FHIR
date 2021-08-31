@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.performer_role_codes`
-=============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.performer_role_codes`
+================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.performer_role_codes
 
@@ -17,50 +17,50 @@ Classes
 
 
 
-.. class:: PerformerRoleCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: PerformerRoleCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    PerformerRoleCodes
    From: http://hl7.org/fhir/consentperformer in valuesets.xml
        This value set includes sample Performer Role codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/consentperformer
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/consentperformer
 
       
 
 
-.. class:: PerformerRoleCodesCodeValues
+.. py:class:: PerformerRoleCodesCodeValues
 
    An entity or an entity's delegatee who is the grantee in an agreement such as
    a consent for services, advanced directive, or a privacy consent directive in
    accordance with jurisdictional, organizational, or patient policy.
    From: http://hl7.org/fhir/consentperformer in valuesets.xml
 
-   .. attribute:: Consenter
+   .. py:attribute:: Consenter
       
 
       An entity which accepts certain rights or authority from a grantor.
       From: http://hl7.org/fhir/consentperformer in valuesets.xml
 
 
-   .. attribute:: Grantee
+   .. py:attribute:: Grantee
       
 
       An entity which agrees to confer certain rights or authority to a grantee.
       From: http://hl7.org/fhir/consentperformer in valuesets.xml
 
 
-   .. attribute:: Grantor
+   .. py:attribute:: Grantor
       
 
       A party to whom some right or authority is granted by a delegator.
       From: http://hl7.org/fhir/consentperformer in valuesets.xml
 
 
-   .. attribute:: Delegatee
+   .. py:attribute:: Delegatee
       
 
       A party that grants all or some portion its right or authority to another
@@ -68,7 +68,7 @@ Classes
       From: http://hl7.org/fhir/consentperformer in valuesets.xml
 
 
-   .. attribute:: Delegator
+   .. py:attribute:: Delegator
       
 
       

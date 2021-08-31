@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.special_courtesy`
-=========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.special_courtesy`
+============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.special_courtesy
 
@@ -17,92 +17,92 @@ Classes
 
 
 
-.. class:: SpecialCourtesyCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SpecialCourtesyCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SpecialCourtesy
    From: http://hl7.org/fhir/ValueSet/encounter-special-courtesy in valuesets.xml
        This value set defines a set of codes that can be used to indicate special
    courtesies provided to the patient.
 
-   .. attribute:: codeset_v3_NullFlavor
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
+   .. py:attribute:: codeset_v3_NullFlavor
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
 
       http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy
 
 
-   .. attribute:: codeset_v3_EncounterSpecialCourtesy
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy
+   .. py:attribute:: codeset_v3_EncounterSpecialCourtesy
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy
 
       
 
 
-.. class:: SpecialCourtesyCodeValues
+.. py:class:: SpecialCourtesyCodeValues
 
    extended courtesy
    From: http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy in v3-codesystems.xml
 
-   .. attribute:: ExtendedCourtesy
+   .. py:attribute:: ExtendedCourtesy
       
 
       normal courtesy
       From: http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy in v3-codesystems.xml
 
 
-   .. attribute:: NormalCourtesy
+   .. py:attribute:: NormalCourtesy
       
 
       professional courtesy
       From: http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy in v3-codesystems.xml
 
 
-   .. attribute:: ProfessionalCourtesy
+   .. py:attribute:: ProfessionalCourtesy
       
 
       Courtesies extended to the staff of the entity providing service.
       From: http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy in v3-codesystems.xml
 
 
-   .. attribute:: Staff
+   .. py:attribute:: Staff
       
 
       very important person
       From: http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy in v3-codesystems.xml
 
 
-   .. attribute:: VeryImportantPerson
+   .. py:attribute:: VeryImportantPerson
       
 
       From: http://hl7.org/fhir/ValueSet/encounter-special-courtesy in valuesets.xml
 
 
-   .. attribute:: EXT
+   .. py:attribute:: EXT
       
 
       From: http://hl7.org/fhir/ValueSet/encounter-special-courtesy in valuesets.xml
 
 
-   .. attribute:: NRM
+   .. py:attribute:: NRM
       
 
       From: http://hl7.org/fhir/ValueSet/encounter-special-courtesy in valuesets.xml
 
 
-   .. attribute:: PRF
+   .. py:attribute:: PRF
       
 
       From: http://hl7.org/fhir/ValueSet/encounter-special-courtesy in valuesets.xml
 
 
-   .. attribute:: STF
+   .. py:attribute:: STF
       
 
       From: http://hl7.org/fhir/ValueSet/encounter-special-courtesy in valuesets.xml
 
 
-   .. attribute:: VIP
+   .. py:attribute:: VIP
       
 
       Description:The value is exceptional (missing, omitted, incomplete, improper).
@@ -112,7 +112,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-NullFlavor in v3-codesystems.xml
 
 
-   .. attribute:: NoInformation
+   .. py:attribute:: NoInformation
       
 
       Value is not present in a message.  This is only defined in messages, never in
@@ -121,13 +121,13 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-NullFlavor in v3-codesystems.xml
 
 
-   .. attribute:: NotPresent
+   .. py:attribute:: NotPresent
       
 
       From: http://hl7.org/fhir/ValueSet/encounter-special-courtesy in valuesets.xml
 
 
-   .. attribute:: UNK
+   .. py:attribute:: UNK
       
 
       

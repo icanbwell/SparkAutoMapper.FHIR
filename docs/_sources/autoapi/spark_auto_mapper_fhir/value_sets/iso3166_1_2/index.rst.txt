@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.iso3166_1_2`
-====================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.iso3166_1_2`
+=======================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.iso3166_1_2
 
@@ -17,1514 +17,1508 @@ Classes
 
 
 
-.. class:: Iso3166_1_2Code(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: Iso3166_1_2Code(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    Iso3166-1-2
    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
        This value set defines the ISO 3166 Part 1 2-letter codes
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = urn:iso:std:iso:3166
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = urn:iso:std:iso:3166
 
       
 
 
-.. class:: Iso3166_1_2CodeValues
+.. py:class:: Iso3166_1_2CodeValues
 
    From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
-   .. attribute:: Andorra
+   .. py:attribute:: Andorra
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: UnitedArabEmirates
+   .. py:attribute:: UnitedArabEmirates
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Afghanistan
+   .. py:attribute:: Afghanistan
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: AntiguaAndBarbuda
+   .. py:attribute:: AntiguaAndBarbuda
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Anguilla
+   .. py:attribute:: Anguilla
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Albania
+   .. py:attribute:: Albania
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Armenia
+   .. py:attribute:: Armenia
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Angola
+   .. py:attribute:: Angola
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Antarctica
+   .. py:attribute:: Antarctica
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Argentina
+   .. py:attribute:: Argentina
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: AmericanSamoa
+   .. py:attribute:: AmericanSamoa
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Austria
+   .. py:attribute:: Austria
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Australia
+   .. py:attribute:: Australia
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Aruba
+   .. py:attribute:: Aruba
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: _landIslands
+   .. py:attribute:: Azerbaijan
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Azerbaijan
+   .. py:attribute:: BosniaAndHerzegovina
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: BosniaAndHerzegovina
+   .. py:attribute:: Barbados
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Barbados
+   .. py:attribute:: Bangladesh
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Bangladesh
+   .. py:attribute:: Belgium
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Belgium
+   .. py:attribute:: BurkinaFaso
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: BurkinaFaso
+   .. py:attribute:: Bulgaria
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Bulgaria
+   .. py:attribute:: Bahrain
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Bahrain
+   .. py:attribute:: Burundi
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Burundi
+   .. py:attribute:: Benin
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Benin
+   .. py:attribute:: SaintBarth_lemy
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: SaintBarth_lemy
+   .. py:attribute:: Bermuda
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Bermuda
+   .. py:attribute:: BruneiDarussalam
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: BruneiDarussalam
+   .. py:attribute:: Bolivia_PlurinationalStateOf
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Bolivia_PlurinationalStateOf
+   .. py:attribute:: Bonaire_SintEustatiusAndSaba
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Bonaire_SintEustatiusAndSaba
+   .. py:attribute:: Brazil
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Brazil
+   .. py:attribute:: Bahamas
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Bahamas
+   .. py:attribute:: Bhutan
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Bhutan
+   .. py:attribute:: BouvetIsland
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: BouvetIsland
+   .. py:attribute:: Botswana
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Botswana
+   .. py:attribute:: Belarus
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Belarus
+   .. py:attribute:: Belize
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Belize
+   .. py:attribute:: Canada
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Canada
+   .. py:attribute:: Cocos_Keeling_Islands
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Cocos_Keeling_Islands
+   .. py:attribute:: Congo_TheDemocraticRepublicOfThe
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Congo_TheDemocraticRepublicOfThe
+   .. py:attribute:: CentralAfricanRepublic
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: CentralAfricanRepublic
+   .. py:attribute:: Congo
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Congo
+   .. py:attribute:: Switzerland
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Switzerland
+   .. py:attribute:: C_teD_Ivoire
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: C_teD_Ivoire
+   .. py:attribute:: CookIslands
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: CookIslands
+   .. py:attribute:: Chile
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Chile
+   .. py:attribute:: Cameroon
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Cameroon
+   .. py:attribute:: China
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: China
+   .. py:attribute:: Colombia
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Colombia
+   .. py:attribute:: CostaRica
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: CostaRica
+   .. py:attribute:: Cuba
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Cuba
+   .. py:attribute:: CaboVerde
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: CaboVerde
+   .. py:attribute:: Cura_ao
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Cura_ao
+   .. py:attribute:: ChristmasIsland
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: ChristmasIsland
+   .. py:attribute:: Cyprus
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Cyprus
+   .. py:attribute:: Czechia
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Czechia
+   .. py:attribute:: Germany
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Germany
+   .. py:attribute:: Djibouti
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Djibouti
+   .. py:attribute:: Denmark
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Denmark
+   .. py:attribute:: Dominica
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Dominica
+   .. py:attribute:: DominicanRepublic
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: DominicanRepublic
+   .. py:attribute:: Algeria
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Algeria
+   .. py:attribute:: Ecuador
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Ecuador
+   .. py:attribute:: Estonia
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Estonia
+   .. py:attribute:: Egypt
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Egypt
+   .. py:attribute:: WesternSahara
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: WesternSahara
+   .. py:attribute:: Eritrea
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Eritrea
+   .. py:attribute:: Spain
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Spain
+   .. py:attribute:: Ethiopia
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Ethiopia
+   .. py:attribute:: Finland
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Finland
+   .. py:attribute:: Fiji
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Fiji
+   .. py:attribute:: FalklandIslands_Malvinas_
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: FalklandIslands_Malvinas_
+   .. py:attribute:: Micronesia_FederatedStatesOf
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Micronesia_FederatedStatesOf
+   .. py:attribute:: FaroeIslands
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: FaroeIslands
+   .. py:attribute:: France
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: France
+   .. py:attribute:: Gabon
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Gabon
+   .. py:attribute:: UnitedKingdomOfGreatBritainAndNorthernIreland
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: UnitedKingdomOfGreatBritainAndNorthernIreland
+   .. py:attribute:: Grenada
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Grenada
+   .. py:attribute:: Georgia
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Georgia
+   .. py:attribute:: FrenchGuiana
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: FrenchGuiana
+   .. py:attribute:: Guernsey
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Guernsey
+   .. py:attribute:: Ghana
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Ghana
+   .. py:attribute:: Gibraltar
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Gibraltar
+   .. py:attribute:: Greenland
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Greenland
+   .. py:attribute:: Gambia
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Gambia
+   .. py:attribute:: Guinea
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Guinea
+   .. py:attribute:: Guadeloupe
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Guadeloupe
+   .. py:attribute:: EquatorialGuinea
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: EquatorialGuinea
+   .. py:attribute:: Greece
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Greece
+   .. py:attribute:: SouthGeorgiaAndTheSouthSandwichIslands
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: SouthGeorgiaAndTheSouthSandwichIslands
+   .. py:attribute:: Guatemala
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Guatemala
+   .. py:attribute:: Guam
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Guam
+   .. py:attribute:: Guinea_Bissau
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Guinea_Bissau
+   .. py:attribute:: Guyana
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Guyana
+   .. py:attribute:: HongKong
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: HongKong
+   .. py:attribute:: HeardIslandAndMcDonaldIslands
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: HeardIslandAndMcDonaldIslands
+   .. py:attribute:: Honduras
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Honduras
+   .. py:attribute:: Croatia
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Croatia
+   .. py:attribute:: Haiti
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Haiti
+   .. py:attribute:: Hungary
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Hungary
+   .. py:attribute:: Indonesia
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Indonesia
+   .. py:attribute:: Ireland
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Ireland
+   .. py:attribute:: Israel
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Israel
+   .. py:attribute:: IsleOfMan
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: IsleOfMan
+   .. py:attribute:: India
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: India
+   .. py:attribute:: BritishIndianOceanTerritory
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: BritishIndianOceanTerritory
+   .. py:attribute:: Iraq
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Iraq
+   .. py:attribute:: Iran_IslamicRepublicOf
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Iran_IslamicRepublicOf
+   .. py:attribute:: Iceland
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Iceland
+   .. py:attribute:: Italy
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Italy
+   .. py:attribute:: Jersey
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Jersey
+   .. py:attribute:: Jamaica
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Jamaica
+   .. py:attribute:: Jordan
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Jordan
+   .. py:attribute:: Japan
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Japan
+   .. py:attribute:: Kenya
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Kenya
+   .. py:attribute:: Kyrgyzstan
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Kyrgyzstan
+   .. py:attribute:: Cambodia
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Cambodia
+   .. py:attribute:: Kiribati
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Kiribati
+   .. py:attribute:: Comoros
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Comoros
+   .. py:attribute:: SaintKittsAndNevis
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: SaintKittsAndNevis
+   .. py:attribute:: Korea_DemocraticPeople_sRepublicOf
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Korea_DemocraticPeople_sRepublicOf
+   .. py:attribute:: Korea_RepublicOf
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Korea_RepublicOf
+   .. py:attribute:: Kuwait
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Kuwait
+   .. py:attribute:: CaymanIslands
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: CaymanIslands
+   .. py:attribute:: Kazakhstan
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Kazakhstan
+   .. py:attribute:: LaoPeople_sDemocraticRepublic
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: LaoPeople_sDemocraticRepublic
+   .. py:attribute:: Lebanon
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Lebanon
+   .. py:attribute:: SaintLucia
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: SaintLucia
+   .. py:attribute:: Liechtenstein
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Liechtenstein
+   .. py:attribute:: SriLanka
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: SriLanka
+   .. py:attribute:: Liberia
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Liberia
+   .. py:attribute:: Lesotho
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Lesotho
+   .. py:attribute:: Lithuania
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Lithuania
+   .. py:attribute:: Luxembourg
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Luxembourg
+   .. py:attribute:: Latvia
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Latvia
+   .. py:attribute:: Libya
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Libya
+   .. py:attribute:: Morocco
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Morocco
+   .. py:attribute:: Monaco
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Monaco
+   .. py:attribute:: Moldova_RepublicOf
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Moldova_RepublicOf
+   .. py:attribute:: Montenegro
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Montenegro
+   .. py:attribute:: SaintMartin_FrenchPart_
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: SaintMartin_FrenchPart_
+   .. py:attribute:: Madagascar
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Madagascar
+   .. py:attribute:: MarshallIslands
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: MarshallIslands
+   .. py:attribute:: Macedonia_TheFormerYugoslavRepublicOf
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Macedonia_TheFormerYugoslavRepublicOf
+   .. py:attribute:: Mali
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Mali
+   .. py:attribute:: Myanmar
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Myanmar
+   .. py:attribute:: Mongolia
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Mongolia
+   .. py:attribute:: Macao
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Macao
+   .. py:attribute:: NorthernMarianaIslands
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: NorthernMarianaIslands
+   .. py:attribute:: Martinique
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Martinique
+   .. py:attribute:: Mauritania
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Mauritania
+   .. py:attribute:: Montserrat
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Montserrat
+   .. py:attribute:: Malta
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Malta
+   .. py:attribute:: Mauritius
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Mauritius
+   .. py:attribute:: Maldives
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Maldives
+   .. py:attribute:: Malawi
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Malawi
+   .. py:attribute:: Mexico
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Mexico
+   .. py:attribute:: Malaysia
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Malaysia
+   .. py:attribute:: Mozambique
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Mozambique
+   .. py:attribute:: Namibia
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Namibia
+   .. py:attribute:: NewCaledonia
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: NewCaledonia
+   .. py:attribute:: Niger
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Niger
+   .. py:attribute:: NorfolkIsland
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: NorfolkIsland
+   .. py:attribute:: Nigeria
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Nigeria
+   .. py:attribute:: Nicaragua
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Nicaragua
+   .. py:attribute:: Netherlands
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Netherlands
+   .. py:attribute:: Norway
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Norway
+   .. py:attribute:: Nepal
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Nepal
+   .. py:attribute:: Nauru
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Nauru
+   .. py:attribute:: Niue
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Niue
+   .. py:attribute:: NewZealand
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: NewZealand
+   .. py:attribute:: Oman
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Oman
+   .. py:attribute:: Panama
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Panama
+   .. py:attribute:: Peru
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Peru
+   .. py:attribute:: FrenchPolynesia
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: FrenchPolynesia
+   .. py:attribute:: PapuaNewGuinea
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: PapuaNewGuinea
+   .. py:attribute:: Philippines
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Philippines
+   .. py:attribute:: Pakistan
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Pakistan
+   .. py:attribute:: Poland
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Poland
+   .. py:attribute:: SaintPierreAndMiquelon
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: SaintPierreAndMiquelon
+   .. py:attribute:: Pitcairn
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Pitcairn
+   .. py:attribute:: PuertoRico
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: PuertoRico
+   .. py:attribute:: Palestine_StateOf
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Palestine_StateOf
+   .. py:attribute:: Portugal
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Portugal
+   .. py:attribute:: Palau
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Palau
+   .. py:attribute:: Paraguay
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Paraguay
+   .. py:attribute:: Qatar
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Qatar
+   .. py:attribute:: R_union
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: R_union
+   .. py:attribute:: Romania
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Romania
+   .. py:attribute:: Serbia
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Serbia
+   .. py:attribute:: RussianFederation
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: RussianFederation
+   .. py:attribute:: Rwanda
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Rwanda
+   .. py:attribute:: SaudiArabia
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: SaudiArabia
+   .. py:attribute:: SolomonIslands
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: SolomonIslands
+   .. py:attribute:: Seychelles
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Seychelles
+   .. py:attribute:: Sudan
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Sudan
+   .. py:attribute:: Sweden
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Sweden
+   .. py:attribute:: Singapore
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Singapore
+   .. py:attribute:: SaintHelena_AscensionAndTristanDaCunha
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: SaintHelena_AscensionAndTristanDaCunha
+   .. py:attribute:: Slovenia
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Slovenia
+   .. py:attribute:: SvalbardAndJanMayen
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: SvalbardAndJanMayen
+   .. py:attribute:: Slovakia
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Slovakia
+   .. py:attribute:: SierraLeone
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: SierraLeone
+   .. py:attribute:: SanMarino
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: SanMarino
+   .. py:attribute:: Senegal
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Senegal
+   .. py:attribute:: Somalia
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Somalia
+   .. py:attribute:: Suriname
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Suriname
+   .. py:attribute:: SouthSudan
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: SouthSudan
+   .. py:attribute:: SaoTomeAndPrincipe
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: SaoTomeAndPrincipe
+   .. py:attribute:: ElSalvador
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: ElSalvador
+   .. py:attribute:: SintMaarten_DutchPart_
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: SintMaarten_DutchPart_
+   .. py:attribute:: SyrianArabRepublic
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: SyrianArabRepublic
+   .. py:attribute:: Swaziland
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Swaziland
+   .. py:attribute:: TurksAndCaicosIslands
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: TurksAndCaicosIslands
+   .. py:attribute:: Chad
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Chad
+   .. py:attribute:: FrenchSouthernTerritories
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: FrenchSouthernTerritories
+   .. py:attribute:: Togo
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Togo
+   .. py:attribute:: Thailand
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Thailand
+   .. py:attribute:: Tajikistan
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Tajikistan
+   .. py:attribute:: Tokelau
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Tokelau
+   .. py:attribute:: Timor_Leste
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Timor_Leste
+   .. py:attribute:: Turkmenistan
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Turkmenistan
+   .. py:attribute:: Tunisia
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Tunisia
+   .. py:attribute:: Tonga
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Tonga
+   .. py:attribute:: Turkey
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Turkey
+   .. py:attribute:: TrinidadAndTobago
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: TrinidadAndTobago
+   .. py:attribute:: Tuvalu
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Tuvalu
+   .. py:attribute:: Taiwan_ProvinceOfChina
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Taiwan_ProvinceOfChina
+   .. py:attribute:: Tanzania_UnitedRepublicOf
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Tanzania_UnitedRepublicOf
+   .. py:attribute:: Ukraine
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Ukraine
+   .. py:attribute:: Uganda
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Uganda
+   .. py:attribute:: UnitedStatesMinorOutlyingIslands
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: UnitedStatesMinorOutlyingIslands
+   .. py:attribute:: UnitedStatesOfAmerica
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: UnitedStatesOfAmerica
+   .. py:attribute:: Uruguay
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Uruguay
+   .. py:attribute:: Uzbekistan
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Uzbekistan
+   .. py:attribute:: HolySee
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: HolySee
+   .. py:attribute:: SaintVincentAndTheGrenadines
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: SaintVincentAndTheGrenadines
+   .. py:attribute:: Venezuela_BolivarianRepublicOf
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Venezuela_BolivarianRepublicOf
+   .. py:attribute:: VirginIslands_British
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: VirginIslands_British
+   .. py:attribute:: VirginIslands_
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: VirginIslands_
+   .. py:attribute:: VietNam
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: VietNam
+   .. py:attribute:: Vanuatu
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Vanuatu
+   .. py:attribute:: WallisAndFutuna
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: WallisAndFutuna
+   .. py:attribute:: Samoa
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Samoa
+   .. py:attribute:: Yemen
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Yemen
+   .. py:attribute:: Mayotte
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Mayotte
+   .. py:attribute:: SouthAfrica
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: SouthAfrica
+   .. py:attribute:: Zambia
       
 
       From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
 
 
-   .. attribute:: Zambia
-      
-
-      From: http://hl7.org/fhir/ValueSet/iso3166-1-2 in valuesets.xml
-
-
-   .. attribute:: Zimbabwe
+   .. py:attribute:: Zimbabwe
       
 
       

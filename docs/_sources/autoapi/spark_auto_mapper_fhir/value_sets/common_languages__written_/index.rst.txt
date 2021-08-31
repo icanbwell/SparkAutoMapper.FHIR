@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.common_languages__written_`
-===================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.common_languages__written_`
+======================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.common_languages__written_
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: CommonLanguages_Written_Code(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: CommonLanguages_Written_Code(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    Common Languages (Written)
    From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
@@ -29,167 +29,167 @@ Classes
    (unlike the common languages value set) doesn't include dialects except where
    they are relevant for written languages
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = urn:ietf:bcp:47
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = urn:ietf:bcp:47
 
       
 
 
-.. class:: CommonLanguages_Written_CodeValues
+.. py:class:: CommonLanguages_Written_CodeValues
 
    From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
 
-   .. attribute:: Arabic
+   .. py:attribute:: Arabic
       
 
       From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
 
 
-   .. attribute:: Bengali
+   .. py:attribute:: Bengali
       
 
       From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
 
 
-   .. attribute:: Czech
+   .. py:attribute:: Czech
       
 
       From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
 
 
-   .. attribute:: Danish
+   .. py:attribute:: Danish
       
 
       From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
 
 
-   .. attribute:: German
+   .. py:attribute:: German
       
 
       From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
 
 
-   .. attribute:: Greek
+   .. py:attribute:: Greek
       
 
       From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
 
 
-   .. attribute:: English
+   .. py:attribute:: English
       
 
       From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
 
 
-   .. attribute:: Spanish
+   .. py:attribute:: Spanish
       
 
       From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
 
 
-   .. attribute:: Finnish
+   .. py:attribute:: Finnish
       
 
       From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
 
 
-   .. attribute:: French
+   .. py:attribute:: French
       
 
       From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
 
 
-   .. attribute:: Frysian
+   .. py:attribute:: Frysian
       
 
       From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
 
 
-   .. attribute:: Hindi
+   .. py:attribute:: Hindi
       
 
       From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
 
 
-   .. attribute:: Croatian
+   .. py:attribute:: Croatian
       
 
       From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
 
 
-   .. attribute:: Italian
+   .. py:attribute:: Italian
       
 
       From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
 
 
-   .. attribute:: Japanese
+   .. py:attribute:: Japanese
       
 
       From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
 
 
-   .. attribute:: Korean
+   .. py:attribute:: Korean
       
 
       From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
 
 
-   .. attribute:: Dutch
+   .. py:attribute:: Dutch
       
 
       From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
 
 
-   .. attribute:: Norwegian
+   .. py:attribute:: Norwegian
       
 
       From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
 
 
-   .. attribute:: Punjabi
+   .. py:attribute:: Punjabi
       
 
       From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
 
 
-   .. attribute:: Polish
+   .. py:attribute:: Polish
       
 
       From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
 
 
-   .. attribute:: Portuguese
+   .. py:attribute:: Portuguese
       
 
       From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
 
 
-   .. attribute:: Russian
+   .. py:attribute:: Russian
       
 
       From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
 
 
-   .. attribute:: Serbian
+   .. py:attribute:: Serbian
       
 
       From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
 
 
-   .. attribute:: Swedish
+   .. py:attribute:: Swedish
       
 
       From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
 
 
-   .. attribute:: Telegu
+   .. py:attribute:: Telegu
       
 
       From: http://hl7.org/fhir/ValueSet/written-language in valuesets.xml
 
 
-   .. attribute:: Chinese
+   .. py:attribute:: Chinese
       
 
       

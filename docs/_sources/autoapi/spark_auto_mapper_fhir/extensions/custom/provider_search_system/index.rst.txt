@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.extensions.custom.provider_search_system`
-======================================================================
+:py:mod:`spark_auto_mapper_fhir.extensions.custom.provider_search_system`
+=========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.extensions.custom.provider_search_system
 
@@ -16,14 +16,17 @@ Classes
 
 
 
-.. class:: ProviderSearchSystemExtensionItem(valueUri: spark_auto_mapper_fhir.fhir_types.uri.FhirUri)
 
+.. py:class:: ProviderSearchSystemExtensionItem(valueUri)
 
-   Bases: :class:`spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase`
 
    DO NOT USE DIRECTLY!  ALWAYS USE A SUB_CLASS.
 
-   .. method:: codeset(cls) -> spark_auto_mapper_fhir.fhir_types.uri.FhirUri
+
+   :param valueUri:
+
+   .. py:method:: codeset(cls)
 
       forSystem
       :return:

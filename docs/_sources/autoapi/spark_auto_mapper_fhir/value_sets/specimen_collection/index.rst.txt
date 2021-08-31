@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.specimen_collection`
-============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.specimen_collection`
+===============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.specimen_collection
 
@@ -17,80 +17,80 @@ Classes
 
 
 
-.. class:: SpecimenCollectionCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SpecimenCollectionCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SpecimenCollection
    From: http://hl7.org/fhir/ValueSet/specimen-collection in valuesets.xml
        Actions that can be taken for the collection of specimen from a subject.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://snomed.info/sct
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://snomed.info/sct
 
       
 
 
-.. class:: SpecimenCollectionCodeValues
+.. py:class:: SpecimenCollectionCodeValues
 
    From: http://hl7.org/fhir/ValueSet/specimen-collection in valuesets.xml
 
-   .. attribute:: Aspiration_Action
+   .. py:attribute:: Aspiration_Action
       
 
       From: http://hl7.org/fhir/ValueSet/specimen-collection in valuesets.xml
 
 
-   .. attribute:: Biopsy_Action
+   .. py:attribute:: Biopsy_Action
       
 
       From: http://hl7.org/fhir/ValueSet/specimen-collection in valuesets.xml
 
 
-   .. attribute:: Puncture_Action
+   .. py:attribute:: Puncture_Action
       
 
       From: http://hl7.org/fhir/ValueSet/specimen-collection in valuesets.xml
 
 
-   .. attribute:: Excision_Action
+   .. py:attribute:: Excision_Action
       
 
       From: http://hl7.org/fhir/ValueSet/specimen-collection in valuesets.xml
 
 
-   .. attribute:: Scraping_Action
+   .. py:attribute:: Scraping_Action
       
 
       From: http://hl7.org/fhir/ValueSet/specimen-collection in valuesets.xml
 
 
-   .. attribute:: UrineSpecimenCollection_CleanCatch
+   .. py:attribute:: UrineSpecimenCollection_CleanCatch
       
 
       From: http://hl7.org/fhir/ValueSet/specimen-collection in valuesets.xml
 
 
-   .. attribute:: TimedUrineCollection
+   .. py:attribute:: TimedUrineCollection
       
 
       From: http://hl7.org/fhir/ValueSet/specimen-collection in valuesets.xml
 
 
-   .. attribute:: UrineSpecimenCollection_Catheterized
+   .. py:attribute:: UrineSpecimenCollection_Catheterized
       
 
       From: http://hl7.org/fhir/ValueSet/specimen-collection in valuesets.xml
 
 
-   .. attribute:: CollectionOfCoughedSputum
+   .. py:attribute:: CollectionOfCoughedSputum
       
 
       From: http://hl7.org/fhir/ValueSet/specimen-collection in valuesets.xml
 
 
-   .. attribute:: Finger_prickSampling
+   .. py:attribute:: Finger_prickSampling
       
 
       

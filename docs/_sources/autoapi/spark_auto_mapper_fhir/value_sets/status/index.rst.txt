@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.status`
-===============================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.status`
+==================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.status
 
@@ -17,62 +17,62 @@ Classes
 
 
 
-.. class:: StatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: StatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    status
    From: http://hl7.org/fhir/CodeSystem/status in valuesets.xml
        The validation status of the target
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/CodeSystem/status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/CodeSystem/status
 
       
 
 
-.. class:: StatusCodeValues
+.. py:class:: StatusCodeValues
 
    ***TODO***
    From: http://hl7.org/fhir/CodeSystem/status in valuesets.xml
 
-   .. attribute:: Attested
+   .. py:attribute:: Attested
       
 
       ***TODO***
       From: http://hl7.org/fhir/CodeSystem/status in valuesets.xml
 
 
-   .. attribute:: Validated
+   .. py:attribute:: Validated
       
 
       ***TODO***
       From: http://hl7.org/fhir/CodeSystem/status in valuesets.xml
 
 
-   .. attribute:: InProcess
+   .. py:attribute:: InProcess
       
 
       ***TODO***
       From: http://hl7.org/fhir/CodeSystem/status in valuesets.xml
 
 
-   .. attribute:: RequiresRevalidation
+   .. py:attribute:: RequiresRevalidation
       
 
       ***TODO***
       From: http://hl7.org/fhir/CodeSystem/status in valuesets.xml
 
 
-   .. attribute:: ValidationFailed
+   .. py:attribute:: ValidationFailed
       
 
       ***TODO***
       From: http://hl7.org/fhir/CodeSystem/status in valuesets.xml
 
 
-   .. attribute:: Re_ValidationFailed
+   .. py:attribute:: Re_ValidationFailed
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.common_ucum_codes_for_duration`
-=======================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.common_ucum_codes_for_duration`
+==========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.common_ucum_codes_for_duration
 
@@ -17,69 +17,69 @@ Classes
 
 
 
-.. class:: CommonUCUMCodesForDurationCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: CommonUCUMCodesForDurationCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    CommonUCUMCodesForDuration
    From: http://hl7.org/fhir/ValueSet/duration-units in valuesets.xml
        Unified Code for Units of Measure (UCUM). This value set includes all UCUM
    codes
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://unitsofmeasure.org
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://unitsofmeasure.org
 
       
 
 
-.. class:: CommonUCUMCodesForDurationCodeValues
+.. py:class:: CommonUCUMCodesForDurationCodeValues
 
    From: http://hl7.org/fhir/ValueSet/duration-units in valuesets.xml
 
-   .. attribute:: Milliseconds
+   .. py:attribute:: Milliseconds
       
 
       From: http://hl7.org/fhir/ValueSet/duration-units in valuesets.xml
 
 
-   .. attribute:: Seconds
+   .. py:attribute:: Seconds
       
 
       From: http://hl7.org/fhir/ValueSet/duration-units in valuesets.xml
 
 
-   .. attribute:: Minutes
+   .. py:attribute:: Minutes
       
 
       From: http://hl7.org/fhir/ValueSet/duration-units in valuesets.xml
 
 
-   .. attribute:: Hours
+   .. py:attribute:: Hours
       
 
       From: http://hl7.org/fhir/ValueSet/duration-units in valuesets.xml
 
 
-   .. attribute:: Days
+   .. py:attribute:: Days
       
 
       From: http://hl7.org/fhir/ValueSet/duration-units in valuesets.xml
 
 
-   .. attribute:: Weeks
+   .. py:attribute:: Weeks
       
 
       From: http://hl7.org/fhir/ValueSet/duration-units in valuesets.xml
 
 
-   .. attribute:: Months
+   .. py:attribute:: Months
       
 
       From: http://hl7.org/fhir/ValueSet/duration-units in valuesets.xml
 
 
-   .. attribute:: Years
+   .. py:attribute:: Years
       
 
       

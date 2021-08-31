@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.example_hierarchical_value_set`
-=======================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.example_hierarchical_value_set`
+==========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.example_hierarchical_value_set
 
@@ -17,98 +17,98 @@ Classes
 
 
 
-.. class:: ExampleHierarchicalValueSetCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ExampleHierarchicalValueSetCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    Example Hierarchical ValueSet
    From: http://hl7.org/fhir/ValueSet/example-hierarchical in valuesets.xml
        Demonstration of extensions that build a hierarchical contains
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = #hacked
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = #hacked
 
       
 
 
-.. class:: ExampleHierarchicalValueSetCodeValues
+.. py:class:: ExampleHierarchicalValueSetCodeValues
 
    From: http://hl7.org/fhir/ValueSet/example-hierarchical in valuesets.xml
 
-   .. attribute:: Invalid
+   .. py:attribute:: Invalid
       
 
       From: http://hl7.org/fhir/ValueSet/example-hierarchical in valuesets.xml
 
 
-   .. attribute:: Structure
+   .. py:attribute:: Structure
       
 
       From: http://hl7.org/fhir/ValueSet/example-hierarchical in valuesets.xml
 
 
-   .. attribute:: Required
+   .. py:attribute:: Required
       
 
       From: http://hl7.org/fhir/ValueSet/example-hierarchical in valuesets.xml
 
 
-   .. attribute:: Value
+   .. py:attribute:: Value
       
 
       From: http://hl7.org/fhir/ValueSet/example-hierarchical in valuesets.xml
 
 
-   .. attribute:: Processing
+   .. py:attribute:: Processing
       
 
       From: http://hl7.org/fhir/ValueSet/example-hierarchical in valuesets.xml
 
 
-   .. attribute:: Duplicate
+   .. py:attribute:: Duplicate
       
 
       From: http://hl7.org/fhir/ValueSet/example-hierarchical in valuesets.xml
 
 
-   .. attribute:: Not_found
+   .. py:attribute:: Not_found
       
 
       From: http://hl7.org/fhir/ValueSet/example-hierarchical in valuesets.xml
 
 
-   .. attribute:: Conflict
+   .. py:attribute:: Conflict
       
 
       From: http://hl7.org/fhir/ValueSet/example-hierarchical in valuesets.xml
 
 
-   .. attribute:: Lock
+   .. py:attribute:: Lock
       
 
       From: http://hl7.org/fhir/ValueSet/example-hierarchical in valuesets.xml
 
 
-   .. attribute:: Exception
+   .. py:attribute:: Exception
       
 
       From: http://hl7.org/fhir/ValueSet/example-hierarchical in valuesets.xml
 
 
-   .. attribute:: Tbrottled
+   .. py:attribute:: Tbrottled
       
 
       From: http://hl7.org/fhir/ValueSet/example-hierarchical in valuesets.xml
 
 
-   .. attribute:: Login
+   .. py:attribute:: Login
       
 
       From: http://hl7.org/fhir/ValueSet/example-hierarchical in valuesets.xml
 
 
-   .. attribute:: Unknown
+   .. py:attribute:: Unknown
       
 
       

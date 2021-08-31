@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.encounter_status`
-=========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.encounter_status`
+============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.encounter_status
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: EncounterStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: EncounterStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    EncounterStatus
    From: http://hl7.org/fhir/encounter-status in valuesets.xml
        Current state of the encounter.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/encounter-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/encounter-status
 
       
 
 
-.. class:: EncounterStatusCodeValues
+.. py:class:: EncounterStatusCodeValues
 
    The Encounter has not yet started.
    From: http://hl7.org/fhir/encounter-status in valuesets.xml
 
-   .. attribute:: Planned
+   .. py:attribute:: Planned
       
 
       The Patient is present for the encounter, however is not currently meeting
@@ -45,7 +45,7 @@ Classes
       From: http://hl7.org/fhir/encounter-status in valuesets.xml
 
 
-   .. attribute:: Arrived
+   .. py:attribute:: Arrived
       
 
       The patient has been assessed for the priority of their treatment based on the
@@ -53,7 +53,7 @@ Classes
       From: http://hl7.org/fhir/encounter-status in valuesets.xml
 
 
-   .. attribute:: Triaged
+   .. py:attribute:: Triaged
       
 
       The Encounter has begun and the patient is present / the practitioner and the
@@ -61,35 +61,35 @@ Classes
       From: http://hl7.org/fhir/encounter-status in valuesets.xml
 
 
-   .. attribute:: InProgress
+   .. py:attribute:: InProgress
       
 
       The Encounter has begun, but the patient is temporarily on leave.
       From: http://hl7.org/fhir/encounter-status in valuesets.xml
 
 
-   .. attribute:: OnLeave
+   .. py:attribute:: OnLeave
       
 
       The Encounter has ended.
       From: http://hl7.org/fhir/encounter-status in valuesets.xml
 
 
-   .. attribute:: Finished
+   .. py:attribute:: Finished
       
 
       The Encounter has ended before it has begun.
       From: http://hl7.org/fhir/encounter-status in valuesets.xml
 
 
-   .. attribute:: Cancelled
+   .. py:attribute:: Cancelled
       
 
       This instance should not have been part of this patient's medical record.
       From: http://hl7.org/fhir/encounter-status in valuesets.xml
 
 
-   .. attribute:: EnteredInError
+   .. py:attribute:: EnteredInError
       
 
       The encounter status is unknown. Note that "unknown" is a value of last resort
@@ -98,7 +98,7 @@ Classes
       From: http://hl7.org/fhir/encounter-status in valuesets.xml
 
 
-   .. attribute:: Unknown
+   .. py:attribute:: Unknown
       
 
       

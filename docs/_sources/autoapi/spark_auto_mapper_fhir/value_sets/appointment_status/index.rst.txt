@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.appointment_status`
-===========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.appointment_status`
+==============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.appointment_status
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: AppointmentStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: AppointmentStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    AppointmentStatus
    From: http://hl7.org/fhir/appointmentstatus in valuesets.xml
        The free/busy status of an appointment.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/appointmentstatus
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/appointmentstatus
 
       
 
 
-.. class:: AppointmentStatusCodeValues
+.. py:class:: AppointmentStatusCodeValues
 
    None of the participant(s) have finalized their acceptance of the appointment
    request, and the start/end time might not be set yet.
    From: http://hl7.org/fhir/appointmentstatus in valuesets.xml
 
-   .. attribute:: Proposed
+   .. py:attribute:: Proposed
       
 
       Some or all of the participant(s) have not finalized their acceptance of the
@@ -46,7 +46,7 @@ Classes
       From: http://hl7.org/fhir/appointmentstatus in valuesets.xml
 
 
-   .. attribute:: Pending
+   .. py:attribute:: Pending
       
 
       All participant(s) have been considered and the appointment is confirmed to go
@@ -54,14 +54,14 @@ Classes
       From: http://hl7.org/fhir/appointmentstatus in valuesets.xml
 
 
-   .. attribute:: Booked
+   .. py:attribute:: Booked
       
 
       The patient/patients has/have arrived and is/are waiting to be seen.
       From: http://hl7.org/fhir/appointmentstatus in valuesets.xml
 
 
-   .. attribute:: Arrived
+   .. py:attribute:: Arrived
       
 
       The planning stages of the appointment are now complete, the encounter
@@ -71,14 +71,14 @@ Classes
       From: http://hl7.org/fhir/appointmentstatus in valuesets.xml
 
 
-   .. attribute:: Fulfilled
+   .. py:attribute:: Fulfilled
       
 
       The appointment has been cancelled.
       From: http://hl7.org/fhir/appointmentstatus in valuesets.xml
 
 
-   .. attribute:: Cancelled
+   .. py:attribute:: Cancelled
       
 
       Some or all of the participant(s) have not/did not appear for the appointment
@@ -86,14 +86,14 @@ Classes
       From: http://hl7.org/fhir/appointmentstatus in valuesets.xml
 
 
-   .. attribute:: NoShow
+   .. py:attribute:: NoShow
       
 
       This instance should not have been part of this patient's medical record.
       From: http://hl7.org/fhir/appointmentstatus in valuesets.xml
 
 
-   .. attribute:: EnteredInError
+   .. py:attribute:: EnteredInError
       
 
       When checked in, all pre-encounter administrative work is complete, and the
@@ -102,7 +102,7 @@ Classes
       From: http://hl7.org/fhir/appointmentstatus in valuesets.xml
 
 
-   .. attribute:: CheckedIn
+   .. py:attribute:: CheckedIn
       
 
       The appointment has been placed on a waitlist, to be scheduled/confirmed in
@@ -111,7 +111,7 @@ Classes
       From: http://hl7.org/fhir/appointmentstatus in valuesets.xml
 
 
-   .. attribute:: Waitlisted
+   .. py:attribute:: Waitlisted
       
 
       

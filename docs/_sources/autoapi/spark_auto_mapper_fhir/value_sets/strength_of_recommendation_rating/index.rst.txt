@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.strength_of_recommendation_rating`
-==========================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.strength_of_recommendation_rating`
+=============================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.strength_of_recommendation_rating
 
@@ -17,35 +17,35 @@ Classes
 
 
 
-.. class:: StrengthOfRecommendationRatingCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: StrengthOfRecommendationRatingCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    StrengthOfRecommendationRating
    From: http://terminology.hl7.org/CodeSystem/recommendation-strength in valuesets.xml
        A rating system that describes the strength of the recommendation, such as the
    GRADE, DynaMed, or HGPS systems.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/recommendation-strength
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/recommendation-strength
 
       
 
 
-.. class:: StrengthOfRecommendationRatingCodeValues
+.. py:class:: StrengthOfRecommendationRatingCodeValues
 
    Strong recommendation.
    From: http://terminology.hl7.org/CodeSystem/recommendation-strength in valuesets.xml
 
-   .. attribute:: Strong
+   .. py:attribute:: Strong
       
 
       Weak recommendation.
       From: http://terminology.hl7.org/CodeSystem/recommendation-strength in valuesets.xml
 
 
-   .. attribute:: Weak
+   .. py:attribute:: Weak
       
 
       

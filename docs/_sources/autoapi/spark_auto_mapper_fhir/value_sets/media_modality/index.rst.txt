@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.media_modality`
-=======================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.media_modality`
+==========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.media_modality
 
@@ -17,35 +17,35 @@ Classes
 
 
 
-.. class:: MediaModalityCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: MediaModalityCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    MediaModality
    From: http://terminology.hl7.org/CodeSystem/media-modality in valuesets.xml
        Detailed information about the type of the image - its kind, purpose, or the
    kind of equipment used to generate it.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/media-modality
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/media-modality
 
       
 
 
-.. class:: MediaModalityCodeValues
+.. py:class:: MediaModalityCodeValues
 
    A diagram. Often used in diagnostic reports
    From: http://terminology.hl7.org/CodeSystem/media-modality in valuesets.xml
 
-   .. attribute:: Diagram
+   .. py:attribute:: Diagram
       
 
       A digital record of a fax document
       From: http://terminology.hl7.org/CodeSystem/media-modality in valuesets.xml
 
 
-   .. attribute:: Fax
+   .. py:attribute:: Fax
       
 
       A digital scan of a document. This is reserved for when there is not enough
@@ -53,42 +53,42 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/media-modality in valuesets.xml
 
 
-   .. attribute:: ScannedDocument
+   .. py:attribute:: ScannedDocument
       
 
       A retinal image used for identification purposes
       From: http://terminology.hl7.org/CodeSystem/media-modality in valuesets.xml
 
 
-   .. attribute:: RetinaScan
+   .. py:attribute:: RetinaScan
       
 
       A finger print scan used for identification purposes
       From: http://terminology.hl7.org/CodeSystem/media-modality in valuesets.xml
 
 
-   .. attribute:: Fingerprint
+   .. py:attribute:: Fingerprint
       
 
       An iris scan used for identification purposes
       From: http://terminology.hl7.org/CodeSystem/media-modality in valuesets.xml
 
 
-   .. attribute:: IrisScan
+   .. py:attribute:: IrisScan
       
 
       A palm scan used for identification purposes
       From: http://terminology.hl7.org/CodeSystem/media-modality in valuesets.xml
 
 
-   .. attribute:: PalmScan
+   .. py:attribute:: PalmScan
       
 
       A face scan used for identification purposes
       From: http://terminology.hl7.org/CodeSystem/media-modality in valuesets.xml
 
 
-   .. attribute:: FaceScan
+   .. py:attribute:: FaceScan
       
 
       

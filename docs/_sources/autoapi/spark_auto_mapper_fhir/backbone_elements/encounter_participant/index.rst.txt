@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.backbone_elements.encounter_participant`
-=====================================================================
+:py:mod:`spark_auto_mapper_fhir.backbone_elements.encounter_participant`
+========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.backbone_elements.encounter_participant
 
@@ -16,12 +16,39 @@ Classes
 
 
 
-.. class:: EncounterParticipant(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, type_: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.participant_type.ParticipantTypeCode]]] = None, period: Optional[spark_auto_mapper_fhir.complex_types.period.Period] = None, individual: Optional[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.practitioner.Practitioner, spark_auto_mapper_fhir.resources.practitioner_role.PractitionerRole, spark_auto_mapper_fhir.resources.related_person.RelatedPerson)]]] = None)
 
+.. py:class:: EncounterParticipant(*, id_ = None, extension = None, modifierExtension = None, type_ = None, period = None, individual = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
 
    Encounter.Participant
-   An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.
+       An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.
+
+       An interaction between a patient and healthcare provider(s) for the purpose of
+   providing healthcare service(s) or assessing the health status of a patient.
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param modifierExtension: May be used to represent additional information that is not part of the basic
+   definition of the element and that modifies the understanding of the element
+   in which it is contained and/or the understanding of the containing element's
+   descendants. Usually modifier elements provide negation or qualification. To
+   make the use of extensions safe and manageable, there is a strict set of
+   governance applied to the definition and use of extensions. Though any
+   implementer can define an extension, there is a set of requirements that SHALL
+   be met as part of the definition of the extension. Applications processing a
+   resource are required to check for modifier extensions.
+
+   Modifier extensions SHALL NOT change the meaning of any elements on Resource
+   or DomainResource (including cannot change the meaning of modifierExtension
+   itself).
+       :param type_: Role of participant in encounter.
+       :param period: The period of time that the specified participant participated in the
+   encounter. These can overlap or be sub-sets of the overall encounter's period.
+       :param individual: Persons involved in the encounter other than the patient.
 
 

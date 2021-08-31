@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.example_service_modifier_codes`
-=======================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.example_service_modifier_codes`
+==========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.example_service_modifier_codes
 
@@ -17,36 +17,36 @@ Classes
 
 
 
-.. class:: ExampleServiceModifierCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ExampleServiceModifierCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ExampleServiceModifierCodes
    From: http://hl7.org/fhir/ex-servicemodifier in valuesets.xml
        This value set includes sample Service Modifier codes which may support
    differential payment.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/ex-servicemodifier
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/ex-servicemodifier
 
       
 
 
-.. class:: ExampleServiceModifierCodesCodeValues
+.. py:class:: ExampleServiceModifierCodesCodeValues
 
    Services provided on the side of the road or such other non-conventional
    setting.
    From: http://hl7.org/fhir/ex-servicemodifier in valuesets.xml
 
-   .. attribute:: SideOfTheRoad
+   .. py:attribute:: SideOfTheRoad
       
 
       Services provided outside or normal business hours.
       From: http://hl7.org/fhir/ex-servicemodifier in valuesets.xml
 
 
-   .. attribute:: AfterHours
+   .. py:attribute:: AfterHours
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.synthesis_type`
-=======================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.synthesis_type`
+==========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.synthesis_type
 
@@ -17,29 +17,29 @@ Classes
 
 
 
-.. class:: SynthesisTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SynthesisTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SynthesisType
    From: http://terminology.hl7.org/CodeSystem/synthesis-type in valuesets.xml
        Types of combining results from a body of evidence (eg. summary data meta-
    analysis).
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/synthesis-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/synthesis-type
 
       
 
 
-.. class:: SynthesisTypeCodeValues
+.. py:class:: SynthesisTypeCodeValues
 
    A meta-analysis of the summary data of estimates from individual studies or
    data sets.
    From: http://terminology.hl7.org/CodeSystem/synthesis-type in valuesets.xml
 
-   .. attribute:: SummaryDataMeta_analysis
+   .. py:attribute:: SummaryDataMeta_analysis
       
 
       A meta-analysis of the individual participant data from individual studies or
@@ -47,7 +47,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/synthesis-type in valuesets.xml
 
 
-   .. attribute:: IndividualPatientDataMeta_analysis
+   .. py:attribute:: IndividualPatientDataMeta_analysis
       
 
       An indirect meta-analysis derived from 2 or more direct comparisons in a
@@ -55,7 +55,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/synthesis-type in valuesets.xml
 
 
-   .. attribute:: IndirectNetworkMeta_analysis
+   .. py:attribute:: IndirectNetworkMeta_analysis
       
 
       An composite meta-analysis derived from direct comparisons and indirect
@@ -63,14 +63,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/synthesis-type in valuesets.xml
 
 
-   .. attribute:: CombinedDirectPlusIndirectNetworkMeta_analysis
+   .. py:attribute:: CombinedDirectPlusIndirectNetworkMeta_analysis
       
 
       A range of results across a body of evidence.
       From: http://terminology.hl7.org/CodeSystem/synthesis-type in valuesets.xml
 
 
-   .. attribute:: RangeOfResults
+   .. py:attribute:: RangeOfResults
       
 
       An approach describing a body of evidence by categorically classifying
@@ -78,7 +78,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/synthesis-type in valuesets.xml
 
 
-   .. attribute:: ClassifcationOfResults
+   .. py:attribute:: ClassifcationOfResults
       
 
       

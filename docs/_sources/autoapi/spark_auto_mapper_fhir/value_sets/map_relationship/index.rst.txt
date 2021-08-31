@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.map_relationship`
-=========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.map_relationship`
+============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.map_relationship
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: MapRelationship(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: MapRelationship(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.MapRelationship
    From: http://terminology.hl7.org/ValueSet/v3-MapRelationship in v3-codesystems.xml
@@ -29,13 +29,13 @@ Classes
    values are patterned after the similar relationships used in the UMLS
    Metathesaurus. Because the HL7 coding sy
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-MapRelationship
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-MapRelationship
 
       
 
 
-.. class:: MapRelationshipValues
+.. py:class:: MapRelationshipValues
 
    The first concept is at a more abstract level than the second concept.  For
    example, Hepatitis is broader than Hepatitis A, and endocrine disease is
@@ -43,14 +43,14 @@ Classes
    than relationship.
    From: http://terminology.hl7.org/CodeSystem/v3-MapRelationship in v3-codesystems.xml
 
-   .. attribute:: BroaderThan
+   .. py:attribute:: BroaderThan
       
 
       The two concepts have identical meaning.
       From: http://terminology.hl7.org/CodeSystem/v3-MapRelationship in v3-codesystems.xml
 
 
-   .. attribute:: Exact
+   .. py:attribute:: Exact
       
 
       The first concept is at a more detailed level than the second concept.  For
@@ -59,7 +59,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-MapRelationship in v3-codesystems.xml
 
 
-   .. attribute:: NarrowerThan
+   .. py:attribute:: NarrowerThan
       
 
       

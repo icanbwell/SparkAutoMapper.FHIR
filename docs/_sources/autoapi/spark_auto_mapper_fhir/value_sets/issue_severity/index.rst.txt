@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.issue_severity`
-=======================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.issue_severity`
+==========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.issue_severity
 
@@ -17,35 +17,35 @@ Classes
 
 
 
-.. class:: IssueSeverityCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: IssueSeverityCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    IssueSeverity
    From: http://hl7.org/fhir/issue-severity in valuesets.xml
        How the issue affects the success of the action.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/issue-severity
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/issue-severity
 
       
 
 
-.. class:: IssueSeverityCodeValues
+.. py:class:: IssueSeverityCodeValues
 
    The issue caused the action to fail and no further checking could be
    performed.
    From: http://hl7.org/fhir/issue-severity in valuesets.xml
 
-   .. attribute:: Fatal
+   .. py:attribute:: Fatal
       
 
       The issue is sufficiently important to cause the action to fail.
       From: http://hl7.org/fhir/issue-severity in valuesets.xml
 
 
-   .. attribute:: Error
+   .. py:attribute:: Error
       
 
       The issue is not important enough to cause the action to fail but may cause it
@@ -53,14 +53,14 @@ Classes
       From: http://hl7.org/fhir/issue-severity in valuesets.xml
 
 
-   .. attribute:: Warning
+   .. py:attribute:: Warning
       
 
       The issue has no relation to the degree of success of the action.
       From: http://hl7.org/fhir/issue-severity in valuesets.xml
 
 
-   .. attribute:: Information
+   .. py:attribute:: Information
       
 
       

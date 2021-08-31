@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.medication_knowledge_characteristic_codes`
-==================================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.medication_knowledge_characteristic_codes`
+=====================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.medication_knowledge_characteristic_codes
 
@@ -17,69 +17,69 @@ Classes
 
 
 
-.. class:: MedicationKnowledgeCharacteristicCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: MedicationKnowledgeCharacteristicCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    medicationKnowledge Characteristic Codes
    From: http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic in valuesets.xml
        MedicationKnowledge Characteristic Codes
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic
 
       
 
 
-.. class:: MedicationKnowledgeCharacteristicCodesCodeValues
+.. py:class:: MedicationKnowledgeCharacteristicCodesCodeValues
 
    Identyifying marks on product
    From: http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic in valuesets.xml
 
-   .. attribute:: ImprintCode
+   .. py:attribute:: ImprintCode
       
 
       Description of size of the product
       From: http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic in valuesets.xml
 
 
-   .. attribute:: Size
+   .. py:attribute:: Size
       
 
       Description of the shape of the product
       From: http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic in valuesets.xml
 
 
-   .. attribute:: Shape
+   .. py:attribute:: Shape
       
 
       Description of the color of the product
       From: http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic in valuesets.xml
 
 
-   .. attribute:: Color
+   .. py:attribute:: Color
       
 
       Description of the coating of the product
       From: http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic in valuesets.xml
 
 
-   .. attribute:: Coating
+   .. py:attribute:: Coating
       
 
       Description of the scoring of the product
       From: http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic in valuesets.xml
 
 
-   .. attribute:: Scoring
+   .. py:attribute:: Scoring
       
 
       Description of the Logo of the product
       From: http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic in valuesets.xml
 
 
-   .. attribute:: Logo
+   .. py:attribute:: Logo
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.complex_types.attachment`
-======================================================
+:py:mod:`spark_auto_mapper_fhir.complex_types.attachment`
+=========================================================
 
 .. py:module:: spark_auto_mapper_fhir.complex_types.attachment
 
@@ -16,17 +16,40 @@ Classes
 
 
 
-.. class:: Attachment(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, contentType: Optional[spark_auto_mapper_fhir.value_sets.mime_types.MimeTypesCode] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, data: Optional[spark_auto_mapper_fhir.fhir_types.base64_binary.FhirBase64Binary] = None, url: Optional[spark_auto_mapper_fhir.fhir_types.url.FhirUrl] = None, size: Optional[spark_auto_mapper_fhir.fhir_types.unsigned_int.FhirUnsignedInt] = None, hash: Optional[spark_auto_mapper_fhir.fhir_types.base64_binary.FhirBase64Binary] = None, title: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, creation: Optional[spark_auto_mapper_fhir.fhir_types.date_time.FhirDateTime] = None)
 
+.. py:class:: Attachment(*, id_ = None, extension = None, contentType = None, language = None, data = None, url = None, size = None, hash = None, title = None, creation = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`
 
    Attachment
    fhir-base.xsd
        For referring to data content defined in other formats.
        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
 
-   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+       For referring to data content defined in other formats.
+       If the element is present, it must have a value for at least one of the
+   defined elements, an @id referenced from the Narrative, or extensions
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param contentType: Identifies the type of the data in the attachment and allows a method to be
+   chosen to interpret or render the data. Includes mime type parameters such as
+   charset where appropriate.
+       :param language: The human language of the content. The value can be any valid value according
+   to BCP 47.
+       :param data: The actual data of the attachment - a sequence of bytes, base64 encoded.
+       :param url: A location where the data can be accessed.
+       :param size: The number of bytes of data that make up this attachment (before base64
+   encoding, if that is done).
+       :param hash: The calculated hash of the data using SHA-1. Represented using base64.
+       :param title: A label or set of text to display in place of the data.
+       :param creation: The date that the attachment was first created.
+
+   .. py:method:: get_schema(self, include_extension)
 
 
 

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.complex_types.codeable_concept`
-============================================================
+:py:mod:`spark_auto_mapper_fhir.complex_types.codeable_concept`
+===============================================================
 
 .. py:module:: spark_auto_mapper_fhir.complex_types.codeable_concept
 
@@ -16,22 +16,33 @@ Classes
 
 
 
-.. data:: _T
-   
 
-   
+.. py:class:: CodeableConcept(*, id_ = None, extension = None, coding = None, text = None)
 
-.. class:: CodeableConcept(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, coding: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.coding.Coding[_T]]] = None, text: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None)
-
-
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`, :class:`Generic[_T]`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_complex_type_base.FhirComplexTypeBase`, :py:obj:`Generic`\ [\ :py:obj:`_T`\ ]
 
    CodeableConcept
    fhir-base.xsd
        A concept that may be defined by a formal reference to a terminology or ontology or may be provided by text.
        If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions
 
-   .. method:: get_schema(self, include_extension: bool) -> Optional[Union[(pyspark.sql.types.StructType, pyspark.sql.types.DataType)]]
+       A concept that may be defined by a formal reference to a terminology or
+   ontology or may be provided by text.
+       If the element is present, it must have a value for at least one of the
+   defined elements, an @id referenced from the Narrative, or extensions
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param coding: A reference to a code defined by a terminology system.
+       :param text: A human language representation of the concept as seen/selected/uttered by the
+   user who entered the data and/or which represents the intended meaning of the
+   user.
+
+   .. py:method:: get_schema(self, include_extension)
 
 
 

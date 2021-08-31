@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.discharge_disposition`
-==============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.discharge_disposition`
+=================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.discharge_disposition
 
@@ -17,29 +17,29 @@ Classes
 
 
 
-.. class:: DischargeDispositionCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: DischargeDispositionCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    DischargeDisposition
    From: http://terminology.hl7.org/CodeSystem/discharge-disposition in valuesets.xml
        This value set defines a set of codes that can be used to where the patient
    left the hospital.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/discharge-disposition
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/discharge-disposition
 
       
 
 
-.. class:: DischargeDispositionCodeValues
+.. py:class:: DischargeDispositionCodeValues
 
    The patient was dicharged and has indicated that they are going to return home
    afterwards.
    From: http://terminology.hl7.org/CodeSystem/discharge-disposition in valuesets.xml
 
-   .. attribute:: Home
+   .. py:attribute:: Home
       
 
       The patient was discharged and has indicated that they are going to return
@@ -47,21 +47,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/discharge-disposition in valuesets.xml
 
 
-   .. attribute:: AlternativeHome
+   .. py:attribute:: AlternativeHome
       
 
       The patient was transferred to another healthcare facility.
       From: http://terminology.hl7.org/CodeSystem/discharge-disposition in valuesets.xml
 
 
-   .. attribute:: OtherHealthcareFacility
+   .. py:attribute:: OtherHealthcareFacility
       
 
       The patient has been discharged into palliative care.
       From: http://terminology.hl7.org/CodeSystem/discharge-disposition in valuesets.xml
 
 
-   .. attribute:: Hospice
+   .. py:attribute:: Hospice
       
 
       The patient has been discharged into long-term care where is likely to be
@@ -69,28 +69,28 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/discharge-disposition in valuesets.xml
 
 
-   .. attribute:: Long_termCare
+   .. py:attribute:: Long_termCare
       
 
       The patient self discharged against medical advice.
       From: http://terminology.hl7.org/CodeSystem/discharge-disposition in valuesets.xml
 
 
-   .. attribute:: LeftAgainstAdvice
+   .. py:attribute:: LeftAgainstAdvice
       
 
       The patient has deceased during this encounter.
       From: http://terminology.hl7.org/CodeSystem/discharge-disposition in valuesets.xml
 
 
-   .. attribute:: Expired
+   .. py:attribute:: Expired
       
 
       The patient has been transferred to a psychiatric facility.
       From: http://terminology.hl7.org/CodeSystem/discharge-disposition in valuesets.xml
 
 
-   .. attribute:: PsychiatricHospital
+   .. py:attribute:: PsychiatricHospital
       
 
       The patient was discharged and is to receive post acute care rehabilitation
@@ -98,7 +98,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/discharge-disposition in valuesets.xml
 
 
-   .. attribute:: Rehabilitation
+   .. py:attribute:: Rehabilitation
       
 
       The patient has been discharged to a skilled nursing facility for the patient
@@ -106,14 +106,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/discharge-disposition in valuesets.xml
 
 
-   .. attribute:: SkilledNursingFacility
+   .. py:attribute:: SkilledNursingFacility
       
 
       The discharge disposition has not otherwise defined.
       From: http://terminology.hl7.org/CodeSystem/discharge-disposition in valuesets.xml
 
 
-   .. attribute:: Other
+   .. py:attribute:: Other
       
 
       

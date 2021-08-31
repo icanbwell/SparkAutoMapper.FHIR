@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.note_type`
-==================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.note_type`
+=====================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.note_type
 
@@ -17,41 +17,41 @@ Classes
 
 
 
-.. class:: NoteTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: NoteTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    NoteType
    From: http://hl7.org/fhir/note-type in valuesets.xml
        The presentation types of notes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/note-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/note-type
 
       
 
 
-.. class:: NoteTypeCodeValues
+.. py:class:: NoteTypeCodeValues
 
    Display the note.
    From: http://hl7.org/fhir/note-type in valuesets.xml
 
-   .. attribute:: Display
+   .. py:attribute:: Display
       
 
       Print the note on the form.
       From: http://hl7.org/fhir/note-type in valuesets.xml
 
 
-   .. attribute:: Print_Form_
+   .. py:attribute:: Print_Form_
       
 
       Print the note for the operator.
       From: http://hl7.org/fhir/note-type in valuesets.xml
 
 
-   .. attribute:: Print_Operator_
+   .. py:attribute:: Print_Operator_
       
 
       

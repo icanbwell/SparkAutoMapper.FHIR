@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.medication_dispense_status_reason_codes`
-================================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.medication_dispense_status_reason_codes`
+===================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.medication_dispense_status_reason_codes
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: MedicationDispenseStatusReasonCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: MedicationDispenseStatusReasonCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    MedicationDispense Status Reason Codes
    From: http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason in valuesets.xml
        MedicationDispense Status Codes
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason
 
       
 
 
-.. class:: MedicationDispenseStatusReasonCodesCodeValues
+.. py:class:: MedicationDispenseStatusReasonCodesCodeValues
 
    The order has been stopped by the prescriber but this fact has not necessarily
    captured electronically. Example: A verbal stop, a fax, etc.
    From: http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason in valuesets.xml
 
-   .. attribute:: OrderStopped
+   .. py:attribute:: OrderStopped
       
 
       Order has not been fulfilled within a reasonable amount of time, and might not
@@ -46,7 +46,7 @@ Classes
       From: http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason in valuesets.xml
 
 
-   .. attribute:: Stale_datedOrder
+   .. py:attribute:: Stale_datedOrder
       
 
       Data needed to safely act on the order which was expected to become available
@@ -55,14 +55,14 @@ Classes
       From: http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason in valuesets.xml
 
 
-   .. attribute:: IncompleteData
+   .. py:attribute:: IncompleteData
       
 
       Product not available or manufactured. Cannot supply.
       From: http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason in valuesets.xml
 
 
-   .. attribute:: ProductUnavailable
+   .. py:attribute:: ProductUnavailable
       
 
       The dispenser has ethical, religious or moral objections to fulfilling the
@@ -70,7 +70,7 @@ Classes
       From: http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason in valuesets.xml
 
 
-   .. attribute:: Ethical_religious
+   .. py:attribute:: Ethical_religious
       
 
       Fulfiller not able to provide appropriate care associated with fulfilling the
@@ -79,7 +79,7 @@ Classes
       From: http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason in valuesets.xml
 
 
-   .. attribute:: UnableToProvideCare
+   .. py:attribute:: UnableToProvideCare
       
 
       This therapy has been ordered as a backup to a preferred therapy. This order
@@ -87,14 +87,14 @@ Classes
       From: http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason in valuesets.xml
 
 
-   .. attribute:: TryAnotherTreatmentFirst
+   .. py:attribute:: TryAnotherTreatmentFirst
       
 
       Clarification is required before the order can be acted upon.
       From: http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason in valuesets.xml
 
 
-   .. attribute:: Prescription_RequestRequiresClarification
+   .. py:attribute:: Prescription_RequestRequiresClarification
       
 
       The current level of the medication in the patient's system is too high. The
@@ -102,7 +102,7 @@ Classes
       From: http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason in valuesets.xml
 
 
-   .. attribute:: DrugLevelTooHigh
+   .. py:attribute:: DrugLevelTooHigh
       
 
       The patient has been admitted to a care facility and their community
@@ -110,7 +110,7 @@ Classes
       From: http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason in valuesets.xml
 
 
-   .. attribute:: AdmissionToHospital
+   .. py:attribute:: AdmissionToHospital
       
 
       The therapy would interfere with a planned lab test and the therapy is being
@@ -118,7 +118,7 @@ Classes
       From: http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason in valuesets.xml
 
 
-   .. attribute:: LabInterferenceIssues
+   .. py:attribute:: LabInterferenceIssues
       
 
       Patient not available for a period of time due to a scheduled therapy, leave
@@ -126,7 +126,7 @@ Classes
       From: http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason in valuesets.xml
 
 
-   .. attribute:: PatientNotAvailable
+   .. py:attribute:: PatientNotAvailable
       
 
       The patient is pregnant or breast feeding. The therapy will be resumed when
@@ -134,7 +134,7 @@ Classes
       From: http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason in valuesets.xml
 
 
-   .. attribute:: PatientIsPregnantOrBreastfeeding
+   .. py:attribute:: PatientIsPregnantOrBreastfeeding
       
 
       The patient is believed to be allergic to a substance that is part of the
@@ -142,7 +142,7 @@ Classes
       From: http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason in valuesets.xml
 
 
-   .. attribute:: Allergy
+   .. py:attribute:: Allergy
       
 
       The drug interacts with a short-term treatment that is more urgently required.
@@ -150,7 +150,7 @@ Classes
       From: http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason in valuesets.xml
 
 
-   .. attribute:: DrugInteractsWithAnotherDrug
+   .. py:attribute:: DrugInteractsWithAnotherDrug
       
 
       Another short-term co-occurring therapy fulfills the same purpose as this
@@ -159,7 +159,7 @@ Classes
       From: http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason in valuesets.xml
 
 
-   .. attribute:: DuplicateTherapy
+   .. py:attribute:: DuplicateTherapy
       
 
       The patient is believed to have an intolerance to a substance that is part of
@@ -167,7 +167,7 @@ Classes
       From: http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason in valuesets.xml
 
 
-   .. attribute:: SuspectedIntolerance
+   .. py:attribute:: SuspectedIntolerance
       
 
       The drug is contraindicated for patients receiving surgery and the patient is
@@ -176,7 +176,7 @@ Classes
       From: http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason in valuesets.xml
 
 
-   .. attribute:: PatientScheduledForSurgery
+   .. py:attribute:: PatientScheduledForSurgery
       
 
       The patient was previously receiving a medication contraindicated with the
@@ -185,21 +185,21 @@ Classes
       From: http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason in valuesets.xml
 
 
-   .. attribute:: Washout
+   .. py:attribute:: Washout
       
 
       Drug out of stock. Cannot supply.
       From: http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason in valuesets.xml
 
 
-   .. attribute:: DrugNotAvailable_OutOfStock
+   .. py:attribute:: DrugNotAvailable_OutOfStock
       
 
       Drug no longer marketed Cannot supply.
       From: http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason in valuesets.xml
 
 
-   .. attribute:: DrugNotAvailable_OffMarket
+   .. py:attribute:: DrugNotAvailable_OffMarket
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.special_arrangements`
-=============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.special_arrangements`
+================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.special_arrangements
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: SpecialArrangementsCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SpecialArrangementsCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SpecialArrangements
    From: http://terminology.hl7.org/CodeSystem/encounter-special-arrangements in valuesets.xml
        This value set defines a set of codes that can be used to indicate the kinds
    of special arrangements in place for a patients visit.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/encounter-special-arrangements
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/encounter-special-arrangements
 
       
 
 
-.. class:: SpecialArrangementsCodeValues
+.. py:class:: SpecialArrangementsCodeValues
 
    The patient requires a wheelchair to be made available for the encounter.
    From: http://terminology.hl7.org/CodeSystem/encounter-special-arrangements in valuesets.xml
 
-   .. attribute:: Wheelchair
+   .. py:attribute:: Wheelchair
       
 
       An additional bed made available for a person accompanying the patient, for
@@ -46,7 +46,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/encounter-special-arrangements in valuesets.xml
 
 
-   .. attribute:: AdditionalBedding
+   .. py:attribute:: AdditionalBedding
       
 
       The patient is not fluent in the local language and requires an interpreter to
@@ -55,7 +55,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/encounter-special-arrangements in valuesets.xml
 
 
-   .. attribute:: Interpreter
+   .. py:attribute:: Interpreter
       
 
       A person who accompanies a patient to provide assistive services necessary for
@@ -63,7 +63,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/encounter-special-arrangements in valuesets.xml
 
 
-   .. attribute:: Attendant
+   .. py:attribute:: Attendant
       
 
       The patient has a guide dog and the location used for the encounter should be
@@ -71,7 +71,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/encounter-special-arrangements in valuesets.xml
 
 
-   .. attribute:: GuideDog
+   .. py:attribute:: GuideDog
       
 
       

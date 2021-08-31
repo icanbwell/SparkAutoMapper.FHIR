@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.entity_name_part_qualifier`
-===================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.entity_name_part_qualifier`
+======================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.entity_name_part_qualifier
 
@@ -17,29 +17,29 @@ Classes
 
 
 
-.. class:: EntityNamePartQualifierCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: EntityNamePartQualifierCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    EntityNamePartQualifier
    From: http://hl7.org/fhir/ValueSet/name-part-qualifier in valuesets.xml
        A set of codes each of which specifies a certain subcategory of the name part
    in addition to the main name part type.
 
-   .. attribute:: codeset_v3_EntityNamePartQualifier
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifier
+   .. py:attribute:: codeset_v3_EntityNamePartQualifier
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifier
 
       http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2
 
 
-   .. attribute:: codeset_v3_EntityNamePartQualifierR2
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2
+   .. py:attribute:: codeset_v3_EntityNamePartQualifierR2
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2
 
       
 
 
-.. class:: EntityNamePartQualifierCodeValues
+.. py:class:: EntityNamePartQualifierCodeValues
 
    Description:A name part a person acquired.  The name part may be acquired by
    adoption, or the person may have chosen to use the name part for some other
@@ -51,7 +51,7 @@ Classes
    informal one (e.g. registered as part of the official name).
    From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
 
-   .. attribute:: Acquired
+   .. py:attribute:: Acquired
       
 
       Description:A name that a person was given at birth or established as a
@@ -64,7 +64,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
 
 
-   .. attribute:: Birth
+   .. py:attribute:: Birth
       
 
       Description:Used to indicate which of the various name parts is used when
@@ -72,7 +72,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
 
 
-   .. attribute:: Callme
+   .. py:attribute:: Callme
       
 
       Description:Indicates that a name part is just an initial.  Initials do not
@@ -82,7 +82,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
 
 
-   .. attribute:: Initial
+   .. py:attribute:: Initial
       
 
       Description:For organizations a suffix indicating the legal status, e.g.,
@@ -90,7 +90,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
 
 
-   .. attribute:: LegalStatus
+   .. py:attribute:: LegalStatus
       
 
       Description:Indicates that the name part is a middle name.
@@ -106,7 +106,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
 
 
-   .. attribute:: MiddleName
+   .. py:attribute:: MiddleName
       
 
       Description:A prefix has a strong association to the immediately following
@@ -115,7 +115,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
 
 
-   .. attribute:: Prefix
+   .. py:attribute:: Prefix
       
 
       Description: Medication Name Parts are a means of specifying a range of
@@ -129,7 +129,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
 
 
-   .. attribute:: PharmaceuticalEntityNamePartQualifiers
+   .. py:attribute:: PharmaceuticalEntityNamePartQualifiers
       
 
       Description:A suffix has a strong association to the immediately preceding
@@ -138,87 +138,87 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
 
 
-   .. attribute:: Suffix
+   .. py:attribute:: Suffix
       
 
       Description:Extra information about the style of a title
       From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2 in v3-codesystems.xml
 
 
-   .. attribute:: TitleStyles
+   .. py:attribute:: TitleStyles
       
 
       From: http://hl7.org/fhir/ValueSet/name-part-qualifier in valuesets.xml
 
 
-   .. attribute:: LegalStatus
+   .. py:attribute:: LegalStatus
       
 
       From: http://hl7.org/fhir/ValueSet/name-part-qualifier in valuesets.xml
 
 
-   .. attribute:: Academic
+   .. py:attribute:: Academic
       
 
       From: http://hl7.org/fhir/ValueSet/name-part-qualifier in valuesets.xml
 
 
-   .. attribute:: Nobility
+   .. py:attribute:: Nobility
       
 
       From: http://hl7.org/fhir/ValueSet/name-part-qualifier in valuesets.xml
 
 
-   .. attribute:: Professional
+   .. py:attribute:: Professional
       
 
       From: http://hl7.org/fhir/ValueSet/name-part-qualifier in valuesets.xml
 
 
-   .. attribute:: Honorific
+   .. py:attribute:: Honorific
       
 
       From: http://hl7.org/fhir/ValueSet/name-part-qualifier in valuesets.xml
 
 
-   .. attribute:: Birth
+   .. py:attribute:: Birth
       
 
       From: http://hl7.org/fhir/ValueSet/name-part-qualifier in valuesets.xml
 
 
-   .. attribute:: Acquired
+   .. py:attribute:: Acquired
       
 
       From: http://hl7.org/fhir/ValueSet/name-part-qualifier in valuesets.xml
 
 
-   .. attribute:: Spouse
+   .. py:attribute:: Spouse
       
 
       From: http://hl7.org/fhir/ValueSet/name-part-qualifier in valuesets.xml
 
 
-   .. attribute:: MiddleName
+   .. py:attribute:: MiddleName
       
 
       From: http://hl7.org/fhir/ValueSet/name-part-qualifier in valuesets.xml
 
 
-   .. attribute:: CallMe
+   .. py:attribute:: CallMe
       
 
       From: http://hl7.org/fhir/ValueSet/name-part-qualifier in valuesets.xml
 
 
-   .. attribute:: Initial
+   .. py:attribute:: Initial
       
 
       OrganizationNamePartQualifier
       From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifier in v3-codesystems.xml
 
 
-   .. attribute:: OrganizationNamePartQualifier
+   .. py:attribute:: OrganizationNamePartQualifier
       
 
       Description: Medication Name Parts are a means of specifying a range of
@@ -232,20 +232,20 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifier in v3-codesystems.xml
 
 
-   .. attribute:: PharmaceuticalEntityNamePartQualifiers
+   .. py:attribute:: PharmaceuticalEntityNamePartQualifiers
       
 
       PersonNamePartQualifier
       From: http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifier in v3-codesystems.xml
 
 
-   .. attribute:: PersonNamePartQualifier
+   .. py:attribute:: PersonNamePartQualifier
       
 
       From: http://hl7.org/fhir/ValueSet/name-part-qualifier in valuesets.xml
 
 
-   .. attribute:: Voorvoegsel
+   .. py:attribute:: Voorvoegsel
       
 
       

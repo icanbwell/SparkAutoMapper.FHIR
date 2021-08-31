@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.copy_number_event`
-==========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.copy_number_event`
+=============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.copy_number_event
 
@@ -17,41 +17,41 @@ Classes
 
 
 
-.. class:: CopyNumberEventCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: CopyNumberEventCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    CopyNumberEvent
    From: http://terminology.hl7.org/CodeSystem/copy-number-event in valuesets.xml
        Copy Number Event.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/copy-number-event
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/copy-number-event
 
       
 
 
-.. class:: CopyNumberEventCodeValues
+.. py:class:: CopyNumberEventCodeValues
 
    amplification.
    From: http://terminology.hl7.org/CodeSystem/copy-number-event in valuesets.xml
 
-   .. attribute:: Amplification
+   .. py:attribute:: Amplification
       
 
       deletion.
       From: http://terminology.hl7.org/CodeSystem/copy-number-event in valuesets.xml
 
 
-   .. attribute:: Deletion
+   .. py:attribute:: Deletion
       
 
       loss of function.
       From: http://terminology.hl7.org/CodeSystem/copy-number-event in valuesets.xml
 
 
-   .. attribute:: LossOfFunction
+   .. py:attribute:: LossOfFunction
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.adjudication_error_codes`
-=================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.adjudication_error_codes`
+====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.adjudication_error_codes
 
@@ -17,34 +17,34 @@ Classes
 
 
 
-.. class:: AdjudicationErrorCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: AdjudicationErrorCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    Adjudication Error Codes
    From: http://terminology.hl7.org/CodeSystem/adjudication-error in valuesets.xml
        This value set includes a smattering of adjudication codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/adjudication-error
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/adjudication-error
 
       
 
 
-.. class:: AdjudicationErrorCodesCodeValues
+.. py:class:: AdjudicationErrorCodesCodeValues
 
    Missing Identifier
    From: http://terminology.hl7.org/CodeSystem/adjudication-error in valuesets.xml
 
-   .. attribute:: MissingIdentifier
+   .. py:attribute:: MissingIdentifier
       
 
       Missing Creation Date
       From: http://terminology.hl7.org/CodeSystem/adjudication-error in valuesets.xml
 
 
-   .. attribute:: MissingCreationDate
+   .. py:attribute:: MissingCreationDate
       
 
       

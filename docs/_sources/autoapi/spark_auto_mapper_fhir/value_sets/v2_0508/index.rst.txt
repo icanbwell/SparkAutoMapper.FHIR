@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.v2_0508`
-================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.v2_0508`
+===================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.v2_0508
 
@@ -16,18 +16,18 @@ Classes
 
 
 
-.. class:: V2_0508(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: V2_0508(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v2.0508
    From: http://terminology.hl7.org/ValueSet/v2-0508 in v2-tables.xml
        FHIR Value set/code system definition for HL7 v2 table 0508 ( Blood Product
    Processing Requirements)
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/ValueSet/v2-0508
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/ValueSet/v2-0508
 
       
 

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.goal_relationship_type`
-===============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.goal_relationship_type`
+==================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.goal_relationship_type
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: GoalRelationshipTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: GoalRelationshipTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    GoalRelationshipType
    From: http://terminology.hl7.org/CodeSystem/goal-relationship-type in valuesets.xml
        Types of relationships between two goals.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/goal-relationship-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/goal-relationship-type
 
       
 
 
-.. class:: GoalRelationshipTypeCodeValues
+.. py:class:: GoalRelationshipTypeCodeValues
 
    Indicates that the target goal is one which must be met before striving for
    the current goal.
    From: http://terminology.hl7.org/CodeSystem/goal-relationship-type in valuesets.xml
 
-   .. attribute:: Predecessor
+   .. py:attribute:: Predecessor
       
 
       Indicates that the target goal is a desired objective once the current goal is
@@ -46,14 +46,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/goal-relationship-type in valuesets.xml
 
 
-   .. attribute:: Successor
+   .. py:attribute:: Successor
       
 
       Indicates that this goal has been replaced by the target goal.
       From: http://terminology.hl7.org/CodeSystem/goal-relationship-type in valuesets.xml
 
 
-   .. attribute:: Replacement
+   .. py:attribute:: Replacement
       
 
       Indicates that the target goal is considered to be a "piece" of attaining this
@@ -61,7 +61,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/goal-relationship-type in valuesets.xml
 
 
-   .. attribute:: Milestone
+   .. py:attribute:: Milestone
       
 
       Indicates that the relationship is not covered by one of the pre-defined
@@ -70,7 +70,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/goal-relationship-type in valuesets.xml
 
 
-   .. attribute:: Other
+   .. py:attribute:: Other
       
 
       

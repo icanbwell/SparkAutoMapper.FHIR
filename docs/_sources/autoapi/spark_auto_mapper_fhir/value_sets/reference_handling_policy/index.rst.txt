@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.reference_handling_policy`
-==================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.reference_handling_policy`
+=====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.reference_handling_policy
 
@@ -17,36 +17,36 @@ Classes
 
 
 
-.. class:: ReferenceHandlingPolicyCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ReferenceHandlingPolicyCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ReferenceHandlingPolicy
    From: http://hl7.org/fhir/reference-handling-policy in valuesets.xml
        A set of flags that defines how references are supported.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/reference-handling-policy
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/reference-handling-policy
 
       
 
 
-.. class:: ReferenceHandlingPolicyCodeValues
+.. py:class:: ReferenceHandlingPolicyCodeValues
 
    The server supports and populates Literal references (i.e. using
    Reference.reference) where they are known (this code does not guarantee that
    all references are literal; see 'enforced').
    From: http://hl7.org/fhir/reference-handling-policy in valuesets.xml
 
-   .. attribute:: LiteralReferences
+   .. py:attribute:: LiteralReferences
       
 
       The server allows logical references (i.e. using Reference.identifier).
       From: http://hl7.org/fhir/reference-handling-policy in valuesets.xml
 
 
-   .. attribute:: LogicalReferences
+   .. py:attribute:: LogicalReferences
       
 
       The server will attempt to resolve logical references to literal references -
@@ -55,7 +55,7 @@ Classes
       From: http://hl7.org/fhir/reference-handling-policy in valuesets.xml
 
 
-   .. attribute:: ResolvesReferences
+   .. py:attribute:: ResolvesReferences
       
 
       The server enforces that references have integrity - e.g. it ensures that
@@ -64,14 +64,14 @@ Classes
       From: http://hl7.org/fhir/reference-handling-policy in valuesets.xml
 
 
-   .. attribute:: ReferenceIntegrityEnforced
+   .. py:attribute:: ReferenceIntegrityEnforced
       
 
       The server does not support references that point to other servers.
       From: http://hl7.org/fhir/reference-handling-policy in valuesets.xml
 
 
-   .. attribute:: LocalReferencesOnly
+   .. py:attribute:: LocalReferencesOnly
       
 
       

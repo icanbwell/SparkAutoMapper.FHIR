@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.eligibility_request_purpose`
-====================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.eligibility_request_purpose`
+=======================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.eligibility_request_purpose
 
@@ -17,29 +17,29 @@ Classes
 
 
 
-.. class:: EligibilityRequestPurposeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: EligibilityRequestPurposeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    EligibilityRequestPurpose
    From: http://hl7.org/fhir/eligibilityrequest-purpose in valuesets.xml
        A code specifying the types of information being requested.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/eligibilityrequest-purpose
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/eligibilityrequest-purpose
 
       
 
 
-.. class:: EligibilityRequestPurposeCodeValues
+.. py:class:: EligibilityRequestPurposeCodeValues
 
    The prior authorization requirements for the listed, or discovered if
    specified, converages for the categories of service and/or specifed biling
    codes are requested.
    From: http://hl7.org/fhir/eligibilityrequest-purpose in valuesets.xml
 
-   .. attribute:: CoverageAuth_requirements
+   .. py:attribute:: CoverageAuth_requirements
       
 
       The plan benefits and optionally benefits consumed  for the listed, or
@@ -47,7 +47,7 @@ Classes
       From: http://hl7.org/fhir/eligibilityrequest-purpose in valuesets.xml
 
 
-   .. attribute:: CoverageBenefits
+   .. py:attribute:: CoverageBenefits
       
 
       The insurer is requested to report on any coverages which they are aware of in
@@ -55,14 +55,14 @@ Classes
       From: http://hl7.org/fhir/eligibilityrequest-purpose in valuesets.xml
 
 
-   .. attribute:: CoverageDiscovery
+   .. py:attribute:: CoverageDiscovery
       
 
       A check that the specified coverages are in-force is requested.
       From: http://hl7.org/fhir/eligibilityrequest-purpose in valuesets.xml
 
 
-   .. attribute:: CoverageValidation
+   .. py:attribute:: CoverageValidation
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.immunization_recommendation_status_codes`
-=================================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.immunization_recommendation_status_codes`
+====================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.immunization_recommendation_status_codes
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: ImmunizationRecommendationStatusCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ImmunizationRecommendationStatusCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ImmunizationRecommendationStatusCodes
    From: http://terminology.hl7.org/CodeSystem/immunization-recommendation-status in valuesets.xml
@@ -30,25 +30,25 @@ Classes
    against a vaccine preventable disease. This value set is provided as a
    suggestive example.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/immunization-recommendation-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/immunization-recommendation-status
 
       
 
 
-.. class:: ImmunizationRecommendationStatusCodesCodeValues
+.. py:class:: ImmunizationRecommendationStatusCodesCodeValues
 
    The patient is due for their next vaccination.
    From: http://terminology.hl7.org/CodeSystem/immunization-recommendation-status in valuesets.xml
 
-   .. attribute:: Due
+   .. py:attribute:: Due
       
 
       The patient is considered overdue for their next vaccination.
       From: http://terminology.hl7.org/CodeSystem/immunization-recommendation-status in valuesets.xml
 
 
-   .. attribute:: Overdue
+   .. py:attribute:: Overdue
       
 
       The patient is immune to the target disease and further immunization against
@@ -56,21 +56,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/immunization-recommendation-status in valuesets.xml
 
 
-   .. attribute:: Immune
+   .. py:attribute:: Immune
       
 
       The patient is contraindicated for futher doses.
       From: http://terminology.hl7.org/CodeSystem/immunization-recommendation-status in valuesets.xml
 
 
-   .. attribute:: Contraindicated
+   .. py:attribute:: Contraindicated
       
 
       The patient is fully protected and no further doses are recommended.
       From: http://terminology.hl7.org/CodeSystem/immunization-recommendation-status in valuesets.xml
 
 
-   .. attribute:: Complete
+   .. py:attribute:: Complete
       
 
       

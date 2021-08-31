@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.query_request_limit`
-============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.query_request_limit`
+===============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.query_request_limit
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: QueryRequestLimit(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: QueryRequestLimit(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.QueryRequestLimit
    From: http://terminology.hl7.org/ValueSet/v3-QueryRequestLimit in v3-codesystems.xml
@@ -28,20 +28,20 @@ Classes
    Defines the units associated with the magnitude of the maximum size limit of a
    query response that can be accepted by the requesting application.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-QueryRequestLimit
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-QueryRequestLimit
 
       
 
 
-.. class:: QueryRequestLimitValues
+.. py:class:: QueryRequestLimitValues
 
    Definition: The number of matching instances (number of focal classes). The
    document header class is the focal class of a document, a record would
    therefore be equal to a document.
    From: http://terminology.hl7.org/CodeSystem/v3-QueryRequestLimit in v3-codesystems.xml
 
-   .. attribute:: QueryRequestLimit_
+   .. py:attribute:: QueryRequestLimit_
       
 
       

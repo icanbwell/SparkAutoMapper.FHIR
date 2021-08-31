@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.identifier_type_codes`
-==============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.identifier_type_codes`
+=================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.identifier_type_codes
 
@@ -17,891 +17,891 @@ Classes
 
 
 
-.. class:: IdentifierTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: IdentifierTypeCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    Identifier Type Codes
    From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
        A coded type for an identifier that can be used to determine which identifier
    to use for a specific purpose.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v2-0203
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v2-0203
 
       
 
 
-.. class:: IdentifierTypeCodesCodeValues
+.. py:class:: IdentifierTypeCodesCodeValues
 
    From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
-   .. attribute:: Accreditation_CertificationIdentifier
+   .. py:attribute:: Accreditation_CertificationIdentifier
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: AccessionID
+   .. py:attribute:: AccessionID
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: AmericanExpress
+   .. py:attribute:: AmericanExpress
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: AmericanMedicalAssociationNumber
+   .. py:attribute:: AmericanMedicalAssociationNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: AccountNumber
+   .. py:attribute:: AccountNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: AccountNumberCreditor
+   .. py:attribute:: AccountNumberCreditor
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: AccountNumberDebitor
+   .. py:attribute:: AccountNumberDebitor
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: AnonymousIdentifier
+   .. py:attribute:: AnonymousIdentifier
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: TemporaryAccountNumber
+   .. py:attribute:: TemporaryAccountNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: AdvancedPracticeRegisteredNurseNumber
+   .. py:attribute:: AdvancedPracticeRegisteredNurseNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: AncestorSpecimenID
+   .. py:attribute:: AncestorSpecimenID
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: BankAccountNumber
+   .. py:attribute:: BankAccountNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: BankCardNumber
+   .. py:attribute:: BankCardNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: BirthCertificateFileNumber
+   .. py:attribute:: BirthCertificateFileNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: BirthCertificate
+   .. py:attribute:: BirthCertificate
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: BirthRegistryNumber
+   .. py:attribute:: BirthRegistryNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: BreedRegistryNumber
+   .. py:attribute:: BreedRegistryNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: PrimaryPhysicianOfficeNumber
+   .. py:attribute:: PrimaryPhysicianOfficeNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: CostCenterNumber
+   .. py:attribute:: CostCenterNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: ChangeOfNameDocument
+   .. py:attribute:: ChangeOfNameDocument
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: CountyNumber
+   .. py:attribute:: CountyNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: CitizenshipCard
+   .. py:attribute:: CitizenshipCard
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: DeathCertificateID
+   .. py:attribute:: DeathCertificateID
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: DeathCertificateFileNumber
+   .. py:attribute:: DeathCertificateFileNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: DentistLicenseNumber
+   .. py:attribute:: DentistLicenseNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: DrugEnforcementAdministrationRegistrationNumber
+   .. py:attribute:: DrugEnforcementAdministrationRegistrationNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: DrugFurnishingOrPrescriptiveAuthorityNumber
+   .. py:attribute:: DrugFurnishingOrPrescriptiveAuthorityNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: Diner_sClubCard
+   .. py:attribute:: Diner_sClubCard
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: Driver_sLicenseNumber
+   .. py:attribute:: Driver_sLicenseNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: DoctorNumber
+   .. py:attribute:: DoctorNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: OsteopathicLicenseNumber
+   .. py:attribute:: OsteopathicLicenseNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: DiplomaticPassport
+   .. py:attribute:: DiplomaticPassport
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: PodiatristLicenseNumber
+   .. py:attribute:: PodiatristLicenseNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: DonorRegistrationNumber
+   .. py:attribute:: DonorRegistrationNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: DiscoverCard
+   .. py:attribute:: DiscoverCard
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: EmployeeNumber
+   .. py:attribute:: EmployeeNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: EmployerNumber
+   .. py:attribute:: EmployerNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: StaffEnterpriseNumber
+   .. py:attribute:: StaffEnterpriseNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: FetalDeathReportID
+   .. py:attribute:: FetalDeathReportID
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: FetalDeathReportFileNumber
+   .. py:attribute:: FetalDeathReportFileNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: FacilityID
+   .. py:attribute:: FacilityID
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: FillerIdentifier
+   .. py:attribute:: FillerIdentifier
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: GuarantorInternalIdentifier
+   .. py:attribute:: GuarantorInternalIdentifier
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: GeneralLedgerNumber
+   .. py:attribute:: GeneralLedgerNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: GuarantorExternalIdentifier
+   .. py:attribute:: GuarantorExternalIdentifier
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: HealthCardNumber
+   .. py:attribute:: HealthCardNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: Indigenous_Aboriginal
+   .. py:attribute:: Indigenous_Aboriginal
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: JurisdictionalHealthNumber_Canada_
+   .. py:attribute:: JurisdictionalHealthNumber_Canada_
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: LaboratoryAccessionID
+   .. py:attribute:: LaboratoryAccessionID
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: LifelongPhysicianNumber
+   .. py:attribute:: LifelongPhysicianNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: LaborAndIndustriesNumber
+   .. py:attribute:: LaborAndIndustriesNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: LicenseNumber
+   .. py:attribute:: LicenseNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: LocalRegistryID
+   .. py:attribute:: LocalRegistryID
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: PatientMedicaidNumber
+   .. py:attribute:: PatientMedicaidNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: MemberNumber
+   .. py:attribute:: MemberNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: Patient_sMedicareNumber
+   .. py:attribute:: Patient_sMedicareNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: PractitionerMedicaidNumber
+   .. py:attribute:: PractitionerMedicaidNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: MicrochipNumber
+   .. py:attribute:: MicrochipNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: PractitionerMedicareNumber
+   .. py:attribute:: PractitionerMedicareNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: MarriageCertificate
+   .. py:attribute:: MarriageCertificate
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: MedicalLicenseNumber
+   .. py:attribute:: MedicalLicenseNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: MilitaryIDNumber
+   .. py:attribute:: MilitaryIDNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: MedicalRecordNumber
+   .. py:attribute:: MedicalRecordNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: TemporaryMedicalRecordNumber
+   .. py:attribute:: TemporaryMedicalRecordNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: MasterCard
+   .. py:attribute:: MasterCard
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: SecondaryPhysicianOfficeNumber
+   .. py:attribute:: SecondaryPhysicianOfficeNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: NaturalizationCertificate
+   .. py:attribute:: NaturalizationCertificate
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: NationalEmployerIdentifier
+   .. py:attribute:: NationalEmployerIdentifier
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: NationalHealthPlanIdentifier
+   .. py:attribute:: NationalHealthPlanIdentifier
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: NationalUniqueIndividualIdentifier
+   .. py:attribute:: NationalUniqueIndividualIdentifier
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: NationalInsuranceOrganizationIdentifier
+   .. py:attribute:: NationalInsuranceOrganizationIdentifier
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: NationalInsurancePayorIdentifier_Payor_
+   .. py:attribute:: NationalInsurancePayorIdentifier_Payor_
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: NationalPersonIdentifierWhereTheXxxIsTheISOTable31663_character_alphabetic_CountryCode
+   .. py:attribute:: NationalPersonIdentifierWhereTheXxxIsTheISOTable31663_character_alphabetic_CountryCode
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: NursePractitionerNumber
+   .. py:attribute:: NursePractitionerNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: NationalProviderIdentifier
+   .. py:attribute:: NationalProviderIdentifier
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: ObservationInstanceIdentifier
+   .. py:attribute:: ObservationInstanceIdentifier
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: OptometristLicenseNumber
+   .. py:attribute:: OptometristLicenseNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: PhysicianAssistantNumber
+   .. py:attribute:: PhysicianAssistantNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: ParoleCard
+   .. py:attribute:: ParoleCard
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: Penitentiary_correctionalInstitutionNumber
+   .. py:attribute:: Penitentiary_correctionalInstitutionNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: LivingSubjectEnterpriseNumber
+   .. py:attribute:: LivingSubjectEnterpriseNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: PensionNumber
+   .. py:attribute:: PensionNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: PublicHealthCaseIdentifier
+   .. py:attribute:: PublicHealthCaseIdentifier
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: PublicHealthEventIdentifier
+   .. py:attribute:: PublicHealthEventIdentifier
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: PublicHealthOfficialID
+   .. py:attribute:: PublicHealthOfficialID
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: PatientInternalIdentifier
+   .. py:attribute:: PatientInternalIdentifier
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: PlacerIdentifier
+   .. py:attribute:: PlacerIdentifier
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: PersonNumber
+   .. py:attribute:: PersonNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: TemporaryLivingSubjectNumber
+   .. py:attribute:: TemporaryLivingSubjectNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: Medicare_CMSPerformingProviderIdentificationNumber
+   .. py:attribute:: Medicare_CMSPerformingProviderIdentificationNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: PassportNumber
+   .. py:attribute:: PassportNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: PermanentResidentCardNumber
+   .. py:attribute:: PermanentResidentCardNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: ProviderNumber
+   .. py:attribute:: ProviderNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: PatientExternalIdentifier
+   .. py:attribute:: PatientExternalIdentifier
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: QANumber
+   .. py:attribute:: QANumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: ResourceIdentifier
+   .. py:attribute:: ResourceIdentifier
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: RegisteredNurseNumber
+   .. py:attribute:: RegisteredNurseNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: PharmacistLicenseNumber
+   .. py:attribute:: PharmacistLicenseNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: RailroadRetirementNumber
+   .. py:attribute:: RailroadRetirementNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: RegionalRegistryID
+   .. py:attribute:: RegionalRegistryID
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: RailroadRetirementProvider
+   .. py:attribute:: RailroadRetirementProvider
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: SocialBeneficiaryIdentifier
+   .. py:attribute:: SocialBeneficiaryIdentifier
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: SpecimenID
+   .. py:attribute:: SpecimenID
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: StateLicense
+   .. py:attribute:: StateLicense
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: SubscriberNumber
+   .. py:attribute:: SubscriberNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: StateAssignedNDBSCardIdentifier
+   .. py:attribute:: StateAssignedNDBSCardIdentifier
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: SerialNumber
+   .. py:attribute:: SerialNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: StudyPermit
+   .. py:attribute:: StudyPermit
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: StateRegistryID
+   .. py:attribute:: StateRegistryID
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: SocialSecurityNumber
+   .. py:attribute:: SocialSecurityNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: ShipmentTrackingNumber
+   .. py:attribute:: ShipmentTrackingNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: TaxIDNumber
+   .. py:attribute:: TaxIDNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: TreatyNumber_Canada_
+   .. py:attribute:: TreatyNumber_Canada_
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: TemporaryPermanentResident_Canada_
+   .. py:attribute:: TemporaryPermanentResident_Canada_
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: TrainingLicenseNumber
+   .. py:attribute:: TrainingLicenseNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: UnspecifiedIdentifier
+   .. py:attribute:: UnspecifiedIdentifier
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: UniversalDeviceIdentifier
+   .. py:attribute:: UniversalDeviceIdentifier
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: Medicare_CMS_formerlyHCFA_sUniversalPhysicianIdentificationNumbers
+   .. py:attribute:: Medicare_CMS_formerlyHCFA_sUniversalPhysicianIdentificationNumbers
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: UniqueSpecimenID
+   .. py:attribute:: UniqueSpecimenID
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: VisitNumber
+   .. py:attribute:: VisitNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: VisitorPermit
+   .. py:attribute:: VisitorPermit
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: VISA
+   .. py:attribute:: VISA
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: WICIdentifier
+   .. py:attribute:: WICIdentifier
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: Workers_CompNumber
+   .. py:attribute:: Workers_CompNumber
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: WorkPermit
+   .. py:attribute:: WorkPermit
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: HealthPlanIdentifier
+   .. py:attribute:: HealthPlanIdentifier
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0203 in v2-tables.xml
 
 
-   .. attribute:: OrganizationIdentifier
+   .. py:attribute:: OrganizationIdentifier
       
 
       From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
 
 
-   .. attribute:: DL
+   .. py:attribute:: DL
       
 
       From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
 
 
-   .. attribute:: PPN
+   .. py:attribute:: PPN
       
 
       From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
 
 
-   .. attribute:: BRN
+   .. py:attribute:: BRN
       
 
       From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
 
 
-   .. attribute:: MR
+   .. py:attribute:: MR
       
 
       From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
 
 
-   .. attribute:: MCN
+   .. py:attribute:: MCN
       
 
       From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
 
 
-   .. attribute:: EN
+   .. py:attribute:: EN
       
 
       From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
 
 
-   .. attribute:: TAX
+   .. py:attribute:: TAX
       
 
       From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
 
 
-   .. attribute:: NIIP
+   .. py:attribute:: NIIP
       
 
       From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
 
 
-   .. attribute:: PRN
+   .. py:attribute:: PRN
       
 
       From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
 
 
-   .. attribute:: MD
+   .. py:attribute:: MD
       
 
       From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
 
 
-   .. attribute:: DR
+   .. py:attribute:: DR
       
 
       From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
 
 
-   .. attribute:: ACSN
+   .. py:attribute:: ACSN
       
 
       From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
 
 
-   .. attribute:: UDI
+   .. py:attribute:: UDI
       
 
       From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
 
 
-   .. attribute:: SNO
+   .. py:attribute:: SNO
       
 
       From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
 
 
-   .. attribute:: SB
+   .. py:attribute:: SB
       
 
       From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
 
 
-   .. attribute:: PLAC
+   .. py:attribute:: PLAC
       
 
       From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
 
 
-   .. attribute:: FILL
+   .. py:attribute:: FILL
       
 
       From: http://hl7.org/fhir/ValueSet/identifier-type in valuesets.xml
 
 
-   .. attribute:: JHN
+   .. py:attribute:: JHN
       
 
       

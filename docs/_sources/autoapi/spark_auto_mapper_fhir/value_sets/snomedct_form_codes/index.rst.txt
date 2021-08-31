@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.snomedct_form_codes`
-============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.snomedct_form_codes`
+===============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.snomedct_form_codes
 
@@ -16,18 +16,18 @@ Classes
 
 
 
-.. class:: SNOMEDCTFormCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SNOMEDCTFormCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SNOMEDCTFormCodes
    From: http://hl7.org/fhir/ValueSet/medication-form-codes in valuesets.xml
        This value set includes all dose form codes from SNOMED CT - provided as an
    exemplar.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://snomed.info/sct
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://snomed.info/sct
 
       
 

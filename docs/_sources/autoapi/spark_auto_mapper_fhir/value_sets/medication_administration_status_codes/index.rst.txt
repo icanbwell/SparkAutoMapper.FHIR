@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.medication_administration_status_codes`
-===============================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.medication_administration_status_codes`
+==================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.medication_administration_status_codes
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: MedicationAdministrationStatusCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: MedicationAdministrationStatusCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    MedicationAdministration Status Codes
    From: http://terminology.hl7.org/CodeSystem/medication-admin-status in valuesets.xml
        MedicationAdministration Status Codes
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/medication-admin-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/medication-admin-status
 
       
 
 
-.. class:: MedicationAdministrationStatusCodesCodeValues
+.. py:class:: MedicationAdministrationStatusCodesCodeValues
 
    The administration has started but has not yet completed.
    From: http://terminology.hl7.org/CodeSystem/medication-admin-status in valuesets.xml
 
-   .. attribute:: InProgress
+   .. py:attribute:: InProgress
       
 
       The administration was terminated prior to any impact on the subject (though
@@ -45,7 +45,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/medication-admin-status in valuesets.xml
 
 
-   .. attribute:: NotDone
+   .. py:attribute:: NotDone
       
 
       Actions implied by the administration have been temporarily halted, but are
@@ -53,21 +53,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/medication-admin-status in valuesets.xml
 
 
-   .. attribute:: OnHold
+   .. py:attribute:: OnHold
       
 
       All actions that are implied by the administration have occurred.
       From: http://terminology.hl7.org/CodeSystem/medication-admin-status in valuesets.xml
 
 
-   .. attribute:: Completed
+   .. py:attribute:: Completed
       
 
       The administration was entered in error and therefore nullified.
       From: http://terminology.hl7.org/CodeSystem/medication-admin-status in valuesets.xml
 
 
-   .. attribute:: EnteredInError
+   .. py:attribute:: EnteredInError
       
 
       Actions implied by the administration have been permanently halted, before all
@@ -75,7 +75,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/medication-admin-status in valuesets.xml
 
 
-   .. attribute:: Stopped
+   .. py:attribute:: Stopped
       
 
       The authoring system does not know which of the status values currently
@@ -85,7 +85,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/medication-admin-status in valuesets.xml
 
 
-   .. attribute:: Unknown
+   .. py:attribute:: Unknown
       
 
       

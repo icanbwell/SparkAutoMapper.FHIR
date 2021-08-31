@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.diagnostic_service_section_codes`
-=========================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.diagnostic_service_section_codes`
+============================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.diagnostic_service_section_codes
 
@@ -17,290 +17,290 @@ Classes
 
 
 
-.. class:: DiagnosticServiceSectionCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: DiagnosticServiceSectionCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    DiagnosticServiceSectionCodes
    From: http://hl7.org/fhir/ValueSet/diagnostic-service-sections in valuesets.xml
        This value set includes all the codes in HL7 V2 table 0074.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v2-0074
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v2-0074
 
       
 
 
-.. class:: DiagnosticServiceSectionCodesCodeValues
+.. py:class:: DiagnosticServiceSectionCodesCodeValues
 
    From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
-   .. attribute:: Audiology
+   .. py:attribute:: Audiology
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: BloodGases
+   .. py:attribute:: BloodGases
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: BloodBank
+   .. py:attribute:: BloodBank
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: Cytogenetics
+   .. py:attribute:: Cytogenetics
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: Chemistry
+   .. py:attribute:: Chemistry
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: Cytopathology
+   .. py:attribute:: Cytopathology
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: CATScan
+   .. py:attribute:: CATScan
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: CardiacCatheterization
+   .. py:attribute:: CardiacCatheterization
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: CardiacUltrasound
+   .. py:attribute:: CardiacUltrasound
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: Electrocardiac_e_g_EKG_EEC_Holter_
+   .. py:attribute:: Electrocardiac_e_g_EKG_EEC_Holter_
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: Electroneuro_EEG_EMG_EP_PSG_
+   .. py:attribute:: Electroneuro_EEG_EMG_EP_PSG_
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: Genetics
+   .. py:attribute:: Genetics
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: Hematology
+   .. py:attribute:: Hematology
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: BedsideICUMonitoring
+   .. py:attribute:: BedsideICUMonitoring
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: DiagnosticImaging
+   .. py:attribute:: DiagnosticImaging
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: Immunology
+   .. py:attribute:: Immunology
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: Laboratory
+   .. py:attribute:: Laboratory
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: Microbiology
+   .. py:attribute:: Microbiology
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: Mycobacteriology
+   .. py:attribute:: Mycobacteriology
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: Mycology
+   .. py:attribute:: Mycology
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: NuclearMagneticResonance
+   .. py:attribute:: NuclearMagneticResonance
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: NuclearMedicineScan
+   .. py:attribute:: NuclearMedicineScan
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: NursingServiceMeasures
+   .. py:attribute:: NursingServiceMeasures
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: OutsideLab
+   .. py:attribute:: OutsideLab
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: OccupationalTherapy
+   .. py:attribute:: OccupationalTherapy
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: Other
+   .. py:attribute:: Other
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: OBUltrasound
+   .. py:attribute:: OBUltrasound
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: Parasitology
+   .. py:attribute:: Parasitology
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: Pathology_gross_Histopath_NotSurgical_
+   .. py:attribute:: Pathology_gross_Histopath_NotSurgical_
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: PulmonaryFunction
+   .. py:attribute:: PulmonaryFunction
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: Pharmacy
+   .. py:attribute:: Pharmacy
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: Physician_Hx_Dx_AdmissionNote_Etc_
+   .. py:attribute:: Physician_Hx_Dx_AdmissionNote_Etc_
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: PhysicalTherapy
+   .. py:attribute:: PhysicalTherapy
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: Radiology
+   .. py:attribute:: Radiology
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: RespiratoryCare_therapy_
+   .. py:attribute:: RespiratoryCare_therapy_
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: RadiationTherapy
+   .. py:attribute:: RadiationTherapy
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: RadiologyUltrasound
+   .. py:attribute:: RadiologyUltrasound
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: Radiograph
+   .. py:attribute:: Radiograph
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: SurgicalPathology
+   .. py:attribute:: SurgicalPathology
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: Serology
+   .. py:attribute:: Serology
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: Toxicology
+   .. py:attribute:: Toxicology
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: Urinalysis
+   .. py:attribute:: Urinalysis
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: Virology
+   .. py:attribute:: Virology
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: VascularUltrasound
+   .. py:attribute:: VascularUltrasound
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0074 in v2-tables.xml
 
 
-   .. attribute:: Cineradiograph
+   .. py:attribute:: Cineradiograph
       
 
       

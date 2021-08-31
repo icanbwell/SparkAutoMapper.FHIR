@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.intervention_codes`
-===========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.intervention_codes`
+==============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.intervention_codes
 
@@ -17,34 +17,34 @@ Classes
 
 
 
-.. class:: InterventionCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: InterventionCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    InterventionCodes
    From: http://hl7.org/fhir/intervention in valuesets.xml
        This value set includes sample Intervention codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/intervention
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/intervention
 
       
 
 
-.. class:: InterventionCodesCodeValues
+.. py:class:: InterventionCodesCodeValues
 
    Unknown
    From: http://hl7.org/fhir/intervention in valuesets.xml
 
-   .. attribute:: Unknown
+   .. py:attribute:: Unknown
       
 
       Other
       From: http://hl7.org/fhir/intervention in valuesets.xml
 
 
-   .. attribute:: Other
+   .. py:attribute:: Other
       
 
       

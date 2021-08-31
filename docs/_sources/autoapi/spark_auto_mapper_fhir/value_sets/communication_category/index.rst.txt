@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.communication_category`
-===============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.communication_category`
+==================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.communication_category
 
@@ -17,49 +17,49 @@ Classes
 
 
 
-.. class:: CommunicationCategoryCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: CommunicationCategoryCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    CommunicationCategory
    From: http://terminology.hl7.org/CodeSystem/communication-category in valuesets.xml
        Codes for general categories of communications such as alerts, instructions,
    etc.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/communication-category
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/communication-category
 
       
 
 
-.. class:: CommunicationCategoryCodeValues
+.. py:class:: CommunicationCategoryCodeValues
 
    The communication conveys an alert.
    From: http://terminology.hl7.org/CodeSystem/communication-category in valuesets.xml
 
-   .. attribute:: Alert
+   .. py:attribute:: Alert
       
 
       The communication conveys a notification.
       From: http://terminology.hl7.org/CodeSystem/communication-category in valuesets.xml
 
 
-   .. attribute:: Notification
+   .. py:attribute:: Notification
       
 
       The communication conveys a reminder.
       From: http://terminology.hl7.org/CodeSystem/communication-category in valuesets.xml
 
 
-   .. attribute:: Reminder
+   .. py:attribute:: Reminder
       
 
       The communication conveys an instruction.
       From: http://terminology.hl7.org/CodeSystem/communication-category in valuesets.xml
 
 
-   .. attribute:: Instruction
+   .. py:attribute:: Instruction
       
 
       

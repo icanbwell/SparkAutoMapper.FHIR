@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.fhir_defined_concept_properties`
-========================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.fhir_defined_concept_properties`
+===========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.fhir_defined_concept_properties
 
@@ -17,29 +17,29 @@ Classes
 
 
 
-.. class:: FHIRDefinedConceptPropertiesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: FHIRDefinedConceptPropertiesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    FHIR Defined Concept Properties
    From: http://hl7.org/fhir/concept-properties in valuesets.xml
        A set of common concept properties for use on coded systems throughout the
    FHIR eco-system.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/concept-properties
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/concept-properties
 
       
 
 
-.. class:: FHIRDefinedConceptPropertiesCodeValues
+.. py:class:: FHIRDefinedConceptPropertiesCodeValues
 
    True if the concept is not considered active - e.g. not a valid concept any
    more. Property type is boolean, default value is false
    From: http://hl7.org/fhir/concept-properties in valuesets.xml
 
-   .. attribute:: Inactive
+   .. py:attribute:: Inactive
       
 
       The date at which a concept was deprecated. Concepts that are deprecated but
@@ -48,7 +48,7 @@ Classes
       From: http://hl7.org/fhir/concept-properties in valuesets.xml
 
 
-   .. attribute:: Deprecated
+   .. py:attribute:: Deprecated
       
 
       The concept is not intended to be chosen by the user - only intended to be
@@ -58,7 +58,7 @@ Classes
       From: http://hl7.org/fhir/concept-properties in valuesets.xml
 
 
-   .. attribute:: NotSelectable
+   .. py:attribute:: NotSelectable
       
 
       The concept identified in this property is a parent of the concept on which it
@@ -67,7 +67,7 @@ Classes
       From: http://hl7.org/fhir/concept-properties in valuesets.xml
 
 
-   .. attribute:: Parent
+   .. py:attribute:: Parent
       
 
       The concept identified in this property is a child of the concept on which it
@@ -76,7 +76,7 @@ Classes
       From: http://hl7.org/fhir/concept-properties in valuesets.xml
 
 
-   .. attribute:: Child
+   .. py:attribute:: Child
       
 
       

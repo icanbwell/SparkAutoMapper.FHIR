@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.confidentiality`
-========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.confidentiality`
+===========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.confidentiality
 
@@ -17,30 +17,30 @@ Classes
 
 
 
-.. class:: Confidentiality(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: Confidentiality(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.Confidentiality
    From: http://terminology.hl7.org/ValueSet/v3-Confidentiality in v3-codesystems.xml
         A set of codes specifying the security classification of acts and roles in
    accordance with the definition for concept domain "Confidentiality".
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-Confidentiality
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-Confidentiality
 
       
 
 
-.. class:: ConfidentialityValues
+.. py:class:: ConfidentialityValues
 
    A specializable code and its leaf codes used in Confidentiality value sets to
    value the Act.Confidentiality and Role.Confidentiality attribute in accordance
    with the definition for concept domain "Confidentiality".
    From: http://terminology.hl7.org/CodeSystem/v3-Confidentiality in v3-codesystems.xml
 
-   .. attribute:: Confidentiality_
+   .. py:attribute:: Confidentiality_
       
 
       Description: By accessing subject / role and relationship based  rights
@@ -53,7 +53,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-Confidentiality in v3-codesystems.xml
 
 
-   .. attribute:: ConfidentialityByAccessKind
+   .. py:attribute:: ConfidentialityByAccessKind
       
 
       Description: By information type, only for service catalog entries (multiples
@@ -65,7 +65,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-Confidentiality in v3-codesystems.xml
 
 
-   .. attribute:: ConfidentialityByInfoType
+   .. py:attribute:: ConfidentialityByInfoType
       
 
       Description: Modifiers of role based access rights  (multiple allowed)
@@ -76,7 +76,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-Confidentiality in v3-codesystems.xml
 
 
-   .. attribute:: ConfidentialityModifiers
+   .. py:attribute:: ConfidentialityModifiers
       
 
       

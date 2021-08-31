@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.immunization_function_codes`
-====================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.immunization_function_codes`
+=======================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.immunization_function_codes
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: ImmunizationFunctionCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ImmunizationFunctionCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ImmunizationFunctionCodes
    From: http://hl7.org/fhir/ValueSet/immunization-function in valuesets.xml
@@ -29,161 +29,161 @@ Classes
    support describing the function a practitioner or organization may play in the
    immunization event. This value set is provided as a suggestive example.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v2-0443
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v2-0443
 
       
 
 
-.. class:: ImmunizationFunctionCodesCodeValues
+.. py:class:: ImmunizationFunctionCodesCodeValues
 
    From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
 
-   .. attribute:: Admitting
+   .. py:attribute:: Admitting
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
 
 
-   .. attribute:: Assistant_AlternateInterpreter
+   .. py:attribute:: Assistant_AlternateInterpreter
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
 
 
-   .. attribute:: AdministeringProvider
+   .. py:attribute:: AdministeringProvider
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
 
 
-   .. attribute:: Attending
+   .. py:attribute:: Attending
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
 
 
-   .. attribute:: CollectingProvider
+   .. py:attribute:: CollectingProvider
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
 
 
-   .. attribute:: ConsultingProvider
+   .. py:attribute:: ConsultingProvider
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
 
 
-   .. attribute:: DispensingProvider
+   .. py:attribute:: DispensingProvider
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
 
 
-   .. attribute:: EnteringProvider_probablyNotTheSameAsTranscriptionist_
+   .. py:attribute:: EnteringProvider_probablyNotTheSameAsTranscriptionist_
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
 
 
-   .. attribute:: FamilyHealthCareProfessional
+   .. py:attribute:: FamilyHealthCareProfessional
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
 
 
-   .. attribute:: InitiatingProvider_asInActionBy_
+   .. py:attribute:: InitiatingProvider_asInActionBy_
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
 
 
-   .. attribute:: MedicalDirector
+   .. py:attribute:: MedicalDirector
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
 
 
-   .. attribute:: OrderingProvider
+   .. py:attribute:: OrderingProvider
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
 
 
-   .. attribute:: Pharmacist_notSureHowToDissectPharmacist_TreatmentSupplier_sVerifierID_
+   .. py:attribute:: Pharmacist_notSureHowToDissectPharmacist_TreatmentSupplier_sVerifierID_
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
 
 
-   .. attribute:: PrimaryInterpreter
+   .. py:attribute:: PrimaryInterpreter
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
 
 
-   .. attribute:: PrimaryCareProvider
+   .. py:attribute:: PrimaryCareProvider
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
 
 
-   .. attribute:: ResponsibleObserver
+   .. py:attribute:: ResponsibleObserver
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
 
 
-   .. attribute:: ReferringProvider
+   .. py:attribute:: ReferringProvider
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
 
 
-   .. attribute:: ReferredToProvider
+   .. py:attribute:: ReferredToProvider
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
 
 
-   .. attribute:: Technician
+   .. py:attribute:: Technician
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
 
 
-   .. attribute:: Transcriptionist
+   .. py:attribute:: Transcriptionist
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
 
 
-   .. attribute:: VerifyingProvider
+   .. py:attribute:: VerifyingProvider
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
 
 
-   .. attribute:: VerifyingPharmaceuticalSupplier_notSureHowToDissectPharmacist_TreatmentSupplier_sVerifierID_
+   .. py:attribute:: VerifyingPharmaceuticalSupplier_notSureHowToDissectPharmacist_TreatmentSupplier_sVerifierID_
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0443 in v2-tables.xml
 
 
-   .. attribute:: VerifyingTreatmentSupplier_notSureHowToDissectPharmacist_TreatmentSupplier_sVerifierID_
+   .. py:attribute:: VerifyingTreatmentSupplier_notSureHowToDissectPharmacist_TreatmentSupplier_sVerifierID_
       
 
       From: http://hl7.org/fhir/ValueSet/immunization-function in valuesets.xml
 
 
-   .. attribute:: OP
+   .. py:attribute:: OP
       
 
       From: http://hl7.org/fhir/ValueSet/immunization-function in valuesets.xml
 
 
-   .. attribute:: AP
+   .. py:attribute:: AP
       
 
       

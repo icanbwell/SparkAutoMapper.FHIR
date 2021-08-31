@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.request_priority`
-=========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.request_priority`
+============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.request_priority
 
@@ -17,34 +17,34 @@ Classes
 
 
 
-.. class:: RequestPriorityCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: RequestPriorityCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    RequestPriority
    From: http://hl7.org/fhir/request-priority in valuesets.xml
        Identifies the level of importance to be assigned to actioning the request.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/request-priority
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/request-priority
 
       
 
 
-.. class:: RequestPriorityCodeValues
+.. py:class:: RequestPriorityCodeValues
 
    The request has normal priority.
    From: http://hl7.org/fhir/request-priority in valuesets.xml
 
-   .. attribute:: Routine
+   .. py:attribute:: Routine
       
 
       The request should be actioned promptly - higher priority than routine.
       From: http://hl7.org/fhir/request-priority in valuesets.xml
 
 
-   .. attribute:: Urgent
+   .. py:attribute:: Urgent
       
 
       The request should be actioned as soon as possible - higher priority than
@@ -52,7 +52,7 @@ Classes
       From: http://hl7.org/fhir/request-priority in valuesets.xml
 
 
-   .. attribute:: ASAP
+   .. py:attribute:: ASAP
       
 
       The request should be actioned immediately - highest possible priority.  E.g.
@@ -60,7 +60,7 @@ Classes
       From: http://hl7.org/fhir/request-priority in valuesets.xml
 
 
-   .. attribute:: STAT
+   .. py:attribute:: STAT
       
 
       

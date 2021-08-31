@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.measure_scoring`
-========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.measure_scoring`
+===========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.measure_scoring
 
@@ -17,48 +17,48 @@ Classes
 
 
 
-.. class:: MeasureScoringCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: MeasureScoringCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    MeasureScoring
    From: http://terminology.hl7.org/CodeSystem/measure-scoring in valuesets.xml
        The scoring type of the measure.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/measure-scoring
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/measure-scoring
 
       
 
 
-.. class:: MeasureScoringCodeValues
+.. py:class:: MeasureScoringCodeValues
 
    The measure score is defined using a proportion.
    From: http://terminology.hl7.org/CodeSystem/measure-scoring in valuesets.xml
 
-   .. attribute:: Proportion
+   .. py:attribute:: Proportion
       
 
       The measure score is defined using a ratio.
       From: http://terminology.hl7.org/CodeSystem/measure-scoring in valuesets.xml
 
 
-   .. attribute:: Ratio
+   .. py:attribute:: Ratio
       
 
       The score is defined by a calculation of some quantity.
       From: http://terminology.hl7.org/CodeSystem/measure-scoring in valuesets.xml
 
 
-   .. attribute:: ContinuousVariable
+   .. py:attribute:: ContinuousVariable
       
 
       The measure is a cohort definition.
       From: http://terminology.hl7.org/CodeSystem/measure-scoring in valuesets.xml
 
 
-   .. attribute:: Cohort
+   .. py:attribute:: Cohort
       
 
       

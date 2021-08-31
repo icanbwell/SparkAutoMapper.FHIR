@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.smart_capabilities`
-===========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.smart_capabilities`
+==============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.smart_capabilities
 
@@ -17,41 +17,41 @@ Classes
 
 
 
-.. class:: SmartCapabilitiesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SmartCapabilitiesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SmartCapabilities
    From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
        Codes that define what the server is capable of.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/smart-capabilities
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/smart-capabilities
 
       
 
 
-.. class:: SmartCapabilitiesCodeValues
+.. py:class:: SmartCapabilitiesCodeValues
 
    support for SMART’s EHR Launch mode.
    From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
 
-   .. attribute:: EHRLaunchMode
+   .. py:attribute:: EHRLaunchMode
       
 
       support for SMART’s Standalone Launch mode.
       From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
 
 
-   .. attribute:: StandaloneLaunchMode
+   .. py:attribute:: StandaloneLaunchMode
       
 
       support for SMART’s public client profile (no client authentication).
       From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
 
 
-   .. attribute:: PublicClientProfile
+   .. py:attribute:: PublicClientProfile
       
 
       support for SMART’s confidential client profile (symmetric client secret
@@ -59,14 +59,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
 
 
-   .. attribute:: ConfidentialClientProfile
+   .. py:attribute:: ConfidentialClientProfile
       
 
       support for SMART’s OpenID Connect profile.
       From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
 
 
-   .. attribute:: SupportsOpenIDConnect
+   .. py:attribute:: SupportsOpenIDConnect
       
 
       support for “need patient banner” launch context (conveyed via
@@ -74,7 +74,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
 
 
-   .. attribute:: Allows_NeedPatientBanner_
+   .. py:attribute:: Allows_NeedPatientBanner_
       
 
       support for “SMART style URL” launch context (conveyed via smart_style_url
@@ -82,7 +82,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
 
 
-   .. attribute:: Allows_SmartStyleStyle_
+   .. py:attribute:: Allows_SmartStyleStyle_
       
 
       support for patient-level launch context (requested by launch/patient scope,
@@ -90,7 +90,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
 
 
-   .. attribute:: Allows_PatientLevelLaunchContext_EHR_
+   .. py:attribute:: Allows_PatientLevelLaunchContext_EHR_
       
 
       support for encounter-level launch context (requested by launch/encounter
@@ -98,7 +98,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
 
 
-   .. attribute:: Allows_EncounterLevelLaunchContext_EHR_
+   .. py:attribute:: Allows_EncounterLevelLaunchContext_EHR_
       
 
       support for patient-level launch context (requested by launch/patient scope,
@@ -106,7 +106,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
 
 
-   .. attribute:: Allows_PatientLevelLaunchContext_STANDALONE_
+   .. py:attribute:: Allows_PatientLevelLaunchContext_STANDALONE_
       
 
       support for encounter-level launch context (requested by launch/encounter
@@ -114,28 +114,28 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
 
 
-   .. attribute:: Allows_EncounterLevelLaunchContext_STANDALONE_
+   .. py:attribute:: Allows_EncounterLevelLaunchContext_STANDALONE_
       
 
       support for refresh tokens (requested by offline_access scope).
       From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
 
 
-   .. attribute:: SupportsRefreshToken
+   .. py:attribute:: SupportsRefreshToken
       
 
       support for patient-level scopes (e.g. patient/Observation.read).
       From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
 
 
-   .. attribute:: SupportsPatientLevelScopes
+   .. py:attribute:: SupportsPatientLevelScopes
       
 
       support for user-level scopes (e.g. user/Appointment.read).
       From: http://terminology.hl7.org/CodeSystem/smart-capabilities in valuesets.xml
 
 
-   .. attribute:: SupportsUserLevelScopes
+   .. py:attribute:: SupportsUserLevelScopes
       
 
       

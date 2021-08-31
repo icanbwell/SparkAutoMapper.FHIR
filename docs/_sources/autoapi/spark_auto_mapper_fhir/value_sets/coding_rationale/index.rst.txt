@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.coding_rationale`
-=========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.coding_rationale`
+============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.coding_rationale
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: CodingRationale(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: CodingRationale(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.CodingRationale
    From: http://terminology.hl7.org/ValueSet/v3-CodingRationale in v3-codesystems.xml
@@ -36,18 +36,18 @@ Classes
    value set as we work through the use of codes in messages and determine other
    Use Cases requiring special interpretation of the translations.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-CodingRationale
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-CodingRationale
 
       
 
 
-.. class:: CodingRationaleValues
+.. py:class:: CodingRationaleValues
 
    Description: Originally produced code.
    From: http://terminology.hl7.org/CodeSystem/v3-CodingRationale in v3-codesystems.xml
 
-   .. attribute:: OriginallyProducedCode
+   .. py:attribute:: OriginallyProducedCode
       
 
       Originally produced code, required by the specification describing the use of
@@ -55,14 +55,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-CodingRationale in v3-codesystems.xml
 
 
-   .. attribute:: OriginalAndRequired
+   .. py:attribute:: OriginalAndRequired
       
 
       Description: Post-coded from free text source</description>
       From: http://terminology.hl7.org/CodeSystem/v3-CodingRationale in v3-codesystems.xml
 
 
-   .. attribute:: Post_coded
+   .. py:attribute:: Post_coded
       
 
       Post-coded from free text source, required by the specification describing the
@@ -70,35 +70,35 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-CodingRationale in v3-codesystems.xml
 
 
-   .. attribute:: Post_codedAndRequired
+   .. py:attribute:: Post_codedAndRequired
       
 
       Description: Required standard code for HL7.
       From: http://terminology.hl7.org/CodeSystem/v3-CodingRationale in v3-codesystems.xml
 
 
-   .. attribute:: Required
+   .. py:attribute:: Required
       
 
       HL7 Specified or Mandated
       From: http://terminology.hl7.org/CodeSystem/v3-CodingRationale in v3-codesystems.xml
 
 
-   .. attribute:: HL7SpecifiedOrMandated
+   .. py:attribute:: HL7SpecifiedOrMandated
       
 
       Both HL7 mandated and the original code (precoordination)
       From: http://terminology.hl7.org/CodeSystem/v3-CodingRationale in v3-codesystems.xml
 
 
-   .. attribute:: BothHL7MandatedAndTheOriginalCode
+   .. py:attribute:: BothHL7MandatedAndTheOriginalCode
       
 
       Source (or original) code
       From: http://terminology.hl7.org/CodeSystem/v3-CodingRationale in v3-codesystems.xml
 
 
-   .. attribute:: Source_orOriginal_Code
+   .. py:attribute:: Source_orOriginal_Code
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.communication_function_type`
-====================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.communication_function_type`
+=======================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.communication_function_type
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: CommunicationFunctionType(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: CommunicationFunctionType(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.CommunicationFunctionType
    From: http://terminology.hl7.org/ValueSet/v3-CommunicationFunctionType in v3-codesystems.xml
         Describes the type of communication function that the associated entity plays
    in the associated transmission.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-CommunicationFunctionType
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-CommunicationFunctionType
 
       
 
 
-.. class:: CommunicationFunctionTypeValues
+.. py:class:: CommunicationFunctionTypeValues
 
    The entity is the receiver of the transmission.
    From: http://terminology.hl7.org/CodeSystem/v3-CommunicationFunctionType in v3-codesystems.xml
 
-   .. attribute:: Receiver
+   .. py:attribute:: Receiver
       
 
       The entity is the one to which the response or reply to the transmission
@@ -46,14 +46,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-CommunicationFunctionType in v3-codesystems.xml
 
 
-   .. attribute:: RespondTo
+   .. py:attribute:: RespondTo
       
 
       The entity is the sender of the transmission.
       From: http://terminology.hl7.org/CodeSystem/v3-CommunicationFunctionType in v3-codesystems.xml
 
 
-   .. attribute:: Sender
+   .. py:attribute:: Sender
       
 
       

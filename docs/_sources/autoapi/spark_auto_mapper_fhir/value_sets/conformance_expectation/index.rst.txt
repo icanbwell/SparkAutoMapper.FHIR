@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.conformance_expectation`
-================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.conformance_expectation`
+===================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.conformance_expectation
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: ConformanceExpectationCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ConformanceExpectationCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ConformanceExpectation
    From: http://terminology.hl7.org/CodeSystem/conformance-expectation in valuesets.xml
        Indicates the degree of adherence to a specified behavior or capability
    expected for a system to be deemed conformant with a specification.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/conformance-expectation
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/conformance-expectation
 
       
 
 
-.. class:: ConformanceExpectationCodeValues
+.. py:class:: ConformanceExpectationCodeValues
 
    Support for the specified capability is required to be considered conformant.
    From: http://terminology.hl7.org/CodeSystem/conformance-expectation in valuesets.xml
 
-   .. attribute:: SHALL
+   .. py:attribute:: SHALL
       
 
       Support for the specified capability is strongly encouraged, and failure to
@@ -46,7 +46,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/conformance-expectation in valuesets.xml
 
 
-   .. attribute:: SHOULD
+   .. py:attribute:: SHOULD
       
 
       Support for the specified capability is not necessary to be considered
@@ -54,7 +54,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/conformance-expectation in valuesets.xml
 
 
-   .. attribute:: MAY
+   .. py:attribute:: MAY
       
 
       Support for the specified capability is strongly discouraged and should occur
@@ -62,7 +62,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/conformance-expectation in valuesets.xml
 
 
-   .. attribute:: SHOULD_NOT
+   .. py:attribute:: SHOULD_NOT
       
 
       

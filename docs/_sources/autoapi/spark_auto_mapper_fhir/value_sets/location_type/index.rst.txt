@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.location_type`
-======================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.location_type`
+=========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.location_type
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: LocationTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: LocationTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    LocationType
    From: http://terminology.hl7.org/CodeSystem/location-physical-type in valuesets.xml
        This example value set defines a set of codes that can be used to indicate the
    physical form of the Location.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/location-physical-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/location-physical-type
 
       
 
 
-.. class:: LocationTypeCodeValues
+.. py:class:: LocationTypeCodeValues
 
    A collection of buildings or other locations such as a site or a campus.
    From: http://terminology.hl7.org/CodeSystem/location-physical-type in valuesets.xml
 
-   .. attribute:: Site
+   .. py:attribute:: Site
       
 
       Any Building or structure. This may contain rooms, corridors, wings, etc. It
@@ -46,14 +46,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/location-physical-type in valuesets.xml
 
 
-   .. attribute:: Building
+   .. py:attribute:: Building
       
 
       A Wing within a Building, this often contains levels, rooms and corridors.
       From: http://terminology.hl7.org/CodeSystem/location-physical-type in valuesets.xml
 
 
-   .. attribute:: Wing
+   .. py:attribute:: Wing
       
 
       A Ward is a section of a medical facility that may contain rooms and other
@@ -61,21 +61,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/location-physical-type in valuesets.xml
 
 
-   .. attribute:: Ward
+   .. py:attribute:: Ward
       
 
       A Level in a multi-level Building/Structure.
       From: http://terminology.hl7.org/CodeSystem/location-physical-type in valuesets.xml
 
 
-   .. attribute:: Level
+   .. py:attribute:: Level
       
 
       Any corridor within a Building, that may connect rooms.
       From: http://terminology.hl7.org/CodeSystem/location-physical-type in valuesets.xml
 
 
-   .. attribute:: Corridor
+   .. py:attribute:: Corridor
       
 
       A space that is allocated as a room, it may have walls/roof etc., but does not
@@ -83,7 +83,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/location-physical-type in valuesets.xml
 
 
-   .. attribute:: Room
+   .. py:attribute:: Room
       
 
       A space that is allocated for sleeping/laying on. This is not the physical
@@ -91,14 +91,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/location-physical-type in valuesets.xml
 
 
-   .. attribute:: Bed
+   .. py:attribute:: Bed
       
 
       A means of transportation.
       From: http://terminology.hl7.org/CodeSystem/location-physical-type in valuesets.xml
 
 
-   .. attribute:: Vehicle
+   .. py:attribute:: Vehicle
       
 
       A residential dwelling. Usually used to reference a location that a
@@ -106,21 +106,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/location-physical-type in valuesets.xml
 
 
-   .. attribute:: House
+   .. py:attribute:: House
       
 
       A container that can store goods, equipment, medications or other items.
       From: http://terminology.hl7.org/CodeSystem/location-physical-type in valuesets.xml
 
 
-   .. attribute:: Cabinet
+   .. py:attribute:: Cabinet
       
 
       A defined path to travel between 2 points that has a known name.
       From: http://terminology.hl7.org/CodeSystem/location-physical-type in valuesets.xml
 
 
-   .. attribute:: Road
+   .. py:attribute:: Road
       
 
       A defined physical boundary of something, such as a flood risk zone, region,
@@ -128,7 +128,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/location-physical-type in valuesets.xml
 
 
-   .. attribute:: Area
+   .. py:attribute:: Area
       
 
       A wide scope that covers a conceptual domain, such as a Nation (Country wide
@@ -139,7 +139,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/location-physical-type in valuesets.xml
 
 
-   .. attribute:: Jurisdiction
+   .. py:attribute:: Jurisdiction
       
 
       

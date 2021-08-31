@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.contact_entity_type`
-============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.contact_entity_type`
+===============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.contact_entity_type
 
@@ -17,36 +17,36 @@ Classes
 
 
 
-.. class:: ContactEntityTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ContactEntityTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ContactEntityType
    From: http://terminology.hl7.org/CodeSystem/contactentity-type in valuesets.xml
        This example value set defines a set of codes that can be used to indicate the
    purpose for which you would contact a contact party.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/contactentity-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/contactentity-type
 
       
 
 
-.. class:: ContactEntityTypeCodeValues
+.. py:class:: ContactEntityTypeCodeValues
 
    Contact details for information regarding to billing/general finance
    enquiries.
    From: http://terminology.hl7.org/CodeSystem/contactentity-type in valuesets.xml
 
-   .. attribute:: Billing
+   .. py:attribute:: Billing
       
 
       Contact details for administrative enquiries.
       From: http://terminology.hl7.org/CodeSystem/contactentity-type in valuesets.xml
 
 
-   .. attribute:: Administrative
+   .. py:attribute:: Administrative
       
 
       Contact details for issues related to Human Resources, such as staff matters,
@@ -54,7 +54,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contactentity-type in valuesets.xml
 
 
-   .. attribute:: HumanResource
+   .. py:attribute:: HumanResource
       
 
       Contact details for dealing with issues related to insurance
@@ -62,21 +62,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/contactentity-type in valuesets.xml
 
 
-   .. attribute:: Payor
+   .. py:attribute:: Payor
       
 
       Generic information contact for patients.
       From: http://terminology.hl7.org/CodeSystem/contactentity-type in valuesets.xml
 
 
-   .. attribute:: Patient
+   .. py:attribute:: Patient
       
 
       Dedicated contact point for matters relating to press enquiries.
       From: http://terminology.hl7.org/CodeSystem/contactentity-type in valuesets.xml
 
 
-   .. attribute:: Press
+   .. py:attribute:: Press
       
 
       

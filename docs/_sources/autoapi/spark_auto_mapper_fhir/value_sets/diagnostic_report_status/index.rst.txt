@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.diagnostic_report_status`
-=================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.diagnostic_report_status`
+====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.diagnostic_report_status
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: DiagnosticReportStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: DiagnosticReportStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    DiagnosticReportStatus
    From: http://hl7.org/fhir/diagnostic-report-status in valuesets.xml
        The status of the diagnostic report.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/diagnostic-report-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/diagnostic-report-status
 
       
 
 
-.. class:: DiagnosticReportStatusCodeValues
+.. py:class:: DiagnosticReportStatusCodeValues
 
    The existence of the report is registered, but there is nothing yet available.
    From: http://hl7.org/fhir/diagnostic-report-status in valuesets.xml
 
-   .. attribute:: Registered
+   .. py:attribute:: Registered
       
 
       This is a partial (e.g. initial, interim or preliminary) report: data in the
@@ -45,14 +45,14 @@ Classes
       From: http://hl7.org/fhir/diagnostic-report-status in valuesets.xml
 
 
-   .. attribute:: Partial
+   .. py:attribute:: Partial
       
 
       The report is complete and verified by an authorized person.
       From: http://hl7.org/fhir/diagnostic-report-status in valuesets.xml
 
 
-   .. attribute:: Final
+   .. py:attribute:: Final
       
 
       Subsequent to being final, the report has been modified.  This includes any
@@ -61,7 +61,7 @@ Classes
       From: http://hl7.org/fhir/diagnostic-report-status in valuesets.xml
 
 
-   .. attribute:: Amended
+   .. py:attribute:: Amended
       
 
       The report is unavailable because the measurement was not started or not
@@ -69,7 +69,7 @@ Classes
       From: http://hl7.org/fhir/diagnostic-report-status in valuesets.xml
 
 
-   .. attribute:: Cancelled
+   .. py:attribute:: Cancelled
       
 
       The report has been withdrawn following a previous final release.  This
@@ -79,7 +79,7 @@ Classes
       From: http://hl7.org/fhir/diagnostic-report-status in valuesets.xml
 
 
-   .. attribute:: EnteredInError
+   .. py:attribute:: EnteredInError
       
 
       The authoring/source system does not know which of the status values currently
@@ -89,7 +89,7 @@ Classes
       From: http://hl7.org/fhir/diagnostic-report-status in valuesets.xml
 
 
-   .. attribute:: Unknown
+   .. py:attribute:: Unknown
       
 
       

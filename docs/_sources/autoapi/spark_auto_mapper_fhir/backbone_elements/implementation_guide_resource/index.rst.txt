@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.backbone_elements.implementation_guide_resource`
-=============================================================================
+:py:mod:`spark_auto_mapper_fhir.backbone_elements.implementation_guide_resource`
+================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.backbone_elements.implementation_guide_resource
 
@@ -16,12 +16,48 @@ Classes
 
 
 
-.. class:: ImplementationGuideResource(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, reference: spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.resource.Resource], fhirVersion: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.value_sets.fhir_version.FHIRVersionCode]] = None, name: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, description: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, exampleBoolean: Optional[spark_auto_mapper_fhir.fhir_types.boolean.FhirBoolean] = None, exampleCanonical: Optional[spark_auto_mapper_fhir.fhir_types.canonical.FhirCanonical] = None, groupingId: Optional[spark_auto_mapper_fhir.fhir_types.id.FhirId] = None)
 
+.. py:class:: ImplementationGuideResource(*, id_ = None, extension = None, modifierExtension = None, reference, fhirVersion = None, name = None, description = None, exampleBoolean = None, exampleCanonical = None, groupingId = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
 
    ImplementationGuide.Resource
-   A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
+       A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
+
+       A set of rules of how a particular interoperability or standards problem is
+   solved - typically through the use of FHIR resources. This resource is used to
+   gather all the parts of an implementation guide into a logical whole and to
+   publish a computable definition of all the parts.
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param modifierExtension: May be used to represent additional information that is not part of the basic
+   definition of the element and that modifies the understanding of the element
+   in which it is contained and/or the understanding of the containing element's
+   descendants. Usually modifier elements provide negation or qualification. To
+   make the use of extensions safe and manageable, there is a strict set of
+   governance applied to the definition and use of extensions. Though any
+   implementer can define an extension, there is a set of requirements that SHALL
+   be met as part of the definition of the extension. Applications processing a
+   resource are required to check for modifier extensions.
+
+   Modifier extensions SHALL NOT change the meaning of any elements on Resource
+   or DomainResource (including cannot change the meaning of modifierExtension
+   itself).
+       :param reference: Where this resource is found.
+       :param fhirVersion: Indicates the FHIR Version(s) this artifact is intended to apply to. If no
+   versions are specified, the resource is assumed to apply to all the versions
+   stated in ImplementationGuide.fhirVersion.
+       :param name: A human assigned name for the resource. All resources SHOULD have a name, but
+   the name may be extracted from the resource (e.g. ValueSet.name).
+       :param description: A description of the reason that a resource has been included in the
+   implementation guide.
+       :param exampleBoolean: None
+       :param exampleCanonical: None
+       :param groupingId: Reference to the id of the grouping this resource appears in.
 
 

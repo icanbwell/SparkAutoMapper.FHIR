@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.structure_map_model_mode`
-=================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.structure_map_model_mode`
+====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.structure_map_model_mode
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: StructureMapModelModeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: StructureMapModelModeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    StructureMapModelMode
    From: http://hl7.org/fhir/map-model-mode in valuesets.xml
        How the referenced structure is used in this mapping.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/map-model-mode
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/map-model-mode
 
       
 
 
-.. class:: StructureMapModelModeCodeValues
+.. py:class:: StructureMapModelModeCodeValues
 
    This structure describes an instance passed to the mapping engine that is used
    a source of data.
    From: http://hl7.org/fhir/map-model-mode in valuesets.xml
 
-   .. attribute:: SourceStructureDefinition
+   .. py:attribute:: SourceStructureDefinition
       
 
       This structure describes an instance that the mapping engine may ask for that
@@ -46,7 +46,7 @@ Classes
       From: http://hl7.org/fhir/map-model-mode in valuesets.xml
 
 
-   .. attribute:: QueriedStructureDefinition
+   .. py:attribute:: QueriedStructureDefinition
       
 
       This structure describes an instance passed to the mapping engine that is used
@@ -54,7 +54,7 @@ Classes
       From: http://hl7.org/fhir/map-model-mode in valuesets.xml
 
 
-   .. attribute:: TargetStructureDefinition
+   .. py:attribute:: TargetStructureDefinition
       
 
       This structure describes an instance that the mapping engine may ask to create
@@ -62,7 +62,7 @@ Classes
       From: http://hl7.org/fhir/map-model-mode in valuesets.xml
 
 
-   .. attribute:: ProducedStructureDefinition
+   .. py:attribute:: ProducedStructureDefinition
       
 
       

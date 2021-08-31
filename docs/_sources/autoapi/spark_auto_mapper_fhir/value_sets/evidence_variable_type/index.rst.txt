@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.evidence_variable_type`
-===============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.evidence_variable_type`
+==================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.evidence_variable_type
 
@@ -17,42 +17,42 @@ Classes
 
 
 
-.. class:: EvidenceVariableTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: EvidenceVariableTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    EvidenceVariableType
    From: http://hl7.org/fhir/variable-type in valuesets.xml
        The possible types of variables for exposures or outcomes (E.g. Dichotomous,
    Continuous, Descriptive).
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/variable-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/variable-type
 
       
 
 
-.. class:: EvidenceVariableTypeCodeValues
+.. py:class:: EvidenceVariableTypeCodeValues
 
    The variable is dichotomous, such as present or absent.
    From: http://hl7.org/fhir/variable-type in valuesets.xml
 
-   .. attribute:: Dichotomous
+   .. py:attribute:: Dichotomous
       
 
       The variable is a continuous result such as a quantity.
       From: http://hl7.org/fhir/variable-type in valuesets.xml
 
 
-   .. attribute:: Continuous
+   .. py:attribute:: Continuous
       
 
       The variable is described narratively rather than quantitatively.
       From: http://hl7.org/fhir/variable-type in valuesets.xml
 
 
-   .. attribute:: Descriptive
+   .. py:attribute:: Descriptive
       
 
       

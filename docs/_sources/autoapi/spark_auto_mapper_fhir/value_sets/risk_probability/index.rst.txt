@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.risk_probability`
-=========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.risk_probability`
+============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.risk_probability
 
@@ -17,56 +17,56 @@ Classes
 
 
 
-.. class:: RiskProbabilityCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: RiskProbabilityCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    RiskProbability
    From: http://terminology.hl7.org/CodeSystem/risk-probability in valuesets.xml
        Codes representing the likelihood of a particular outcome in a risk
    assessment.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/risk-probability
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/risk-probability
 
       
 
 
-.. class:: RiskProbabilityCodeValues
+.. py:class:: RiskProbabilityCodeValues
 
    The specified outcome is exceptionally unlikely.
    From: http://terminology.hl7.org/CodeSystem/risk-probability in valuesets.xml
 
-   .. attribute:: NegligibleLikelihood
+   .. py:attribute:: NegligibleLikelihood
       
 
       The specified outcome is possible but unlikely.
       From: http://terminology.hl7.org/CodeSystem/risk-probability in valuesets.xml
 
 
-   .. attribute:: LowLikelihood
+   .. py:attribute:: LowLikelihood
       
 
       The specified outcome has a reasonable likelihood of occurrence.
       From: http://terminology.hl7.org/CodeSystem/risk-probability in valuesets.xml
 
 
-   .. attribute:: ModerateLikelihood
+   .. py:attribute:: ModerateLikelihood
       
 
       The specified outcome is more likely to occur than not.
       From: http://terminology.hl7.org/CodeSystem/risk-probability in valuesets.xml
 
 
-   .. attribute:: HighLikelihood
+   .. py:attribute:: HighLikelihood
       
 
       The specified outcome is effectively guaranteed.
       From: http://terminology.hl7.org/CodeSystem/risk-probability in valuesets.xml
 
 
-   .. attribute:: Certain
+   .. py:attribute:: Certain
       
 
       

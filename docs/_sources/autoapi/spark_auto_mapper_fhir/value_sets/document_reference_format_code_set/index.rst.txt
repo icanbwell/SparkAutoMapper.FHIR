@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.document_reference_format_code_set`
-===========================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.document_reference_format_code_set`
+==============================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.document_reference_format_code_set
 
@@ -16,10 +16,10 @@ Classes
 
 
 
-.. class:: DocumentReferenceFormatCodeSetCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: DocumentReferenceFormatCodeSetCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    DocumentReferenceFormatCodeSet
    From: http://hl7.org/fhir/ValueSet/formatcodes in valuesets.xml
@@ -37,8 +37,8 @@ Classes
    document encoding, structure and template. The actual list of codes here is
    incomplete
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem
 
       
 

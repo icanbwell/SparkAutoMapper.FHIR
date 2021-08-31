@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.common_tags`
-====================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.common_tags`
+=======================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.common_tags
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: CommonTagsCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: CommonTagsCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    CommonTags
    From: http://terminology.hl7.org/CodeSystem/common-tags in valuesets.xml
        Common Tag Codes defined by FHIR project
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/common-tags
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/common-tags
 
       
 
 
-.. class:: CommonTagsCodeValues
+.. py:class:: CommonTagsCodeValues
 
    This request is intended to be acted upon, not merely stored
    From: http://terminology.hl7.org/CodeSystem/common-tags in valuesets.xml
 
-   .. attribute:: Actionable
+   .. py:attribute:: Actionable
       
 
       

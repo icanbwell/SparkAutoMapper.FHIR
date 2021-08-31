@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.supply_delivery_status`
-===============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.supply_delivery_status`
+==================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.supply_delivery_status
 
@@ -17,41 +17,41 @@ Classes
 
 
 
-.. class:: SupplyDeliveryStatusCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SupplyDeliveryStatusCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SupplyDeliveryStatus
    From: http://hl7.org/fhir/supplydelivery-status in valuesets.xml
        Status of the supply delivery.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/supplydelivery-status
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/supplydelivery-status
 
       
 
 
-.. class:: SupplyDeliveryStatusCodeValues
+.. py:class:: SupplyDeliveryStatusCodeValues
 
    Supply has been requested, but not delivered.
    From: http://hl7.org/fhir/supplydelivery-status in valuesets.xml
 
-   .. attribute:: InProgress
+   .. py:attribute:: InProgress
       
 
       Supply has been delivered ("completed").
       From: http://hl7.org/fhir/supplydelivery-status in valuesets.xml
 
 
-   .. attribute:: Delivered
+   .. py:attribute:: Delivered
       
 
       Delivery was not completed.
       From: http://hl7.org/fhir/supplydelivery-status in valuesets.xml
 
 
-   .. attribute:: Abandoned
+   .. py:attribute:: Abandoned
       
 
       This electronic record should never have existed, though it is possible that
@@ -60,7 +60,7 @@ Classes
       From: http://hl7.org/fhir/supplydelivery-status in valuesets.xml
 
 
-   .. attribute:: EnteredInError
+   .. py:attribute:: EnteredInError
       
 
       

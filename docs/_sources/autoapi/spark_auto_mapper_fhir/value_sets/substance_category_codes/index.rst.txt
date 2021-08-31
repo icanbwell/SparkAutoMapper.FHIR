@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.substance_category_codes`
-=================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.substance_category_codes`
+====================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.substance_category_codes
 
@@ -17,34 +17,34 @@ Classes
 
 
 
-.. class:: SubstanceCategoryCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SubstanceCategoryCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SubstanceCategoryCodes
    From: http://terminology.hl7.org/CodeSystem/substance-category in valuesets.xml
        Substance category codes
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/substance-category
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/substance-category
 
       
 
 
-.. class:: SubstanceCategoryCodesCodeValues
+.. py:class:: SubstanceCategoryCodesCodeValues
 
    A substance that causes an allergic reaction.
    From: http://terminology.hl7.org/CodeSystem/substance-category in valuesets.xml
 
-   .. attribute:: Allergen
+   .. py:attribute:: Allergen
       
 
       A substance that is produced by or extracted from a biological source.
       From: http://terminology.hl7.org/CodeSystem/substance-category in valuesets.xml
 
 
-   .. attribute:: BiologicalSubstance
+   .. py:attribute:: BiologicalSubstance
       
 
       A substance that comes directly from a human or an animal (e.g. blood, urine,
@@ -52,7 +52,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/substance-category in valuesets.xml
 
 
-   .. attribute:: BodySubstance
+   .. py:attribute:: BodySubstance
       
 
       Any organic or inorganic substance of a particular molecular identity,
@@ -63,14 +63,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/substance-category in valuesets.xml
 
 
-   .. attribute:: Chemical
+   .. py:attribute:: Chemical
       
 
       A food, dietary ingredient, or dietary supplement for human or animal.
       From: http://terminology.hl7.org/CodeSystem/substance-category in valuesets.xml
 
 
-   .. attribute:: DietarySubstance
+   .. py:attribute:: DietarySubstance
       
 
       A substance intended for use in the diagnosis, cure, mitigation, treatment, or
@@ -79,7 +79,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/substance-category in valuesets.xml
 
 
-   .. attribute:: DrugOrMedicament
+   .. py:attribute:: DrugOrMedicament
       
 
       A finished product which is not normally ingested, absorbed or injected (e.g.
@@ -87,7 +87,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/substance-category in valuesets.xml
 
 
-   .. attribute:: Material
+   .. py:attribute:: Material
       
 
       

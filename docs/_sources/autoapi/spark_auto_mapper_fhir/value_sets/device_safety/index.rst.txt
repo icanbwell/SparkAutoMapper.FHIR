@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.device_safety`
-======================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.device_safety`
+=========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.device_safety
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: DeviceSafetyCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: DeviceSafetyCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    DeviceSafety
    From: http://hl7.org/fhir/ValueSet/device-safety in valuesets.xml
@@ -29,47 +29,47 @@ Classes
    Thesaurus](https://ncit.nci.nih.gov/ncitbrowser/pages/home.jsf) and are
    provided here as a suggestive example.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = urn:oid:2.16.840.1.113883.3.26.1.1
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = urn:oid:2.16.840.1.113883.3.26.1.1
 
       
 
 
-.. class:: DeviceSafetyCodeValues
+.. py:class:: DeviceSafetyCodeValues
 
    From: http://hl7.org/fhir/ValueSet/device-safety in valuesets.xml
 
-   .. attribute:: MagneticResonanceConditional
+   .. py:attribute:: MagneticResonanceConditional
       
 
       From: http://hl7.org/fhir/ValueSet/device-safety in valuesets.xml
 
 
-   .. attribute:: MagneticResonanceSafe
+   .. py:attribute:: MagneticResonanceSafe
       
 
       From: http://hl7.org/fhir/ValueSet/device-safety in valuesets.xml
 
 
-   .. attribute:: MagneticResonanceUnsafe
+   .. py:attribute:: MagneticResonanceUnsafe
       
 
       From: http://hl7.org/fhir/ValueSet/device-safety in valuesets.xml
 
 
-   .. attribute:: LabelingDoesNotContainMRISafetyInformation
+   .. py:attribute:: LabelingDoesNotContainMRISafetyInformation
       
 
       From: http://hl7.org/fhir/ValueSet/device-safety in valuesets.xml
 
 
-   .. attribute:: LabeledAsContainingNaturalRubberLatex
+   .. py:attribute:: LabeledAsContainingNaturalRubberLatex
       
 
       From: http://hl7.org/fhir/ValueSet/device-safety in valuesets.xml
 
 
-   .. attribute:: NotMadeWithNaturalRubberLatex
+   .. py:attribute:: NotMadeWithNaturalRubberLatex
       
 
       

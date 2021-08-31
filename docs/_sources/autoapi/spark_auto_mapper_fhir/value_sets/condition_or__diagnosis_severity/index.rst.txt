@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.condition_or__diagnosis_severity`
-=========================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.condition_or__diagnosis_severity`
+============================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.condition_or__diagnosis_severity
 
@@ -17,40 +17,23 @@ Classes
 
 
 
-.. class:: Condition_or_DiagnosisSeverityCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: Condition_or_DiagnosisSeverityCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    Condition/DiagnosisSeverity
    From: http://hl7.org/fhir/ValueSet/condition-severity in valuesets.xml
        Preferred value set for Condition/Diagnosis severity grading.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://snomed.info/sct
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://snomed.info/sct
 
       
 
 
-.. class:: Condition_or_DiagnosisSeverityCodeValues
+.. py:class:: Condition_or_DiagnosisSeverityCodeValues
 
    From: http://hl7.org/fhir/ValueSet/condition-severity in valuesets.xml
-
-   .. attribute:: _24484000
-      
-
-      From: http://hl7.org/fhir/ValueSet/condition-severity in valuesets.xml
-
-
-   .. attribute:: _6736007
-      
-
-      From: http://hl7.org/fhir/ValueSet/condition-severity in valuesets.xml
-
-
-   .. attribute:: _255604002
-      
-
-      
 
 

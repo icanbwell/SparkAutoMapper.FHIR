@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.act_us_privacy_law`
-===========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.act_us_privacy_law`
+==============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.act_us_privacy_law
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: ActUSPrivacyLaw(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ActUSPrivacyLaw(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.ActUSPrivacyLaw
    From: http://terminology.hl7.org/ValueSet/v3-ActUSPrivacyLaw in v3-codesystems.xml
@@ -28,13 +28,13 @@ Classes
    Comment:
    Content moved to ActCode under _ActPrivacyLaw; use that instead.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ActUSPrivacyLaw
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-ActUSPrivacyLaw
 
       
 
 
-.. class:: ActUSPrivacyLawValues
+.. py:class:: ActUSPrivacyLawValues
 
    Definition: A jurisdictional mandate in the U.S. relating to privacy.
 
@@ -47,7 +47,7 @@ Classes
    and Title38Part1.
    From: http://terminology.hl7.org/CodeSystem/v3-ActUSPrivacyLaw in v3-codesystems.xml
 
-   .. attribute:: ActUSPrivacyLaw_
+   .. py:attribute:: ActUSPrivacyLaw_
       
 
       

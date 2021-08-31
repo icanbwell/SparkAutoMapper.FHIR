@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.extensions.us_core.race`
-=====================================================
+:py:mod:`spark_auto_mapper_fhir.extensions.us_core.race`
+========================================================
 
 .. py:module:: spark_auto_mapper_fhir.extensions.us_core.race
 
@@ -16,14 +16,17 @@ Classes
 
 
 
-.. class:: Race(url: Optional[spark_auto_mapper_fhir.fhir_types.uri.FhirUri] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.us_core.race_item.RaceItem]] = None)
 
+.. py:class:: Race(url = None, extension = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase`
 
    DO NOT USE DIRECTLY!  ALWAYS USE A SUB_CLASS.
 
-   .. method:: codeset(cls) -> spark_auto_mapper_fhir.fhir_types.uri.FhirUri
+
+   Extension type in FHIR
+
+   .. py:method:: codeset(cls)
 
 
 

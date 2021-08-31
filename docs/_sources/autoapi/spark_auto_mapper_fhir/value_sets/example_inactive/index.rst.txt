@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.example_inactive`
-=========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.example_inactive`
+============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.example_inactive
 
@@ -17,35 +17,35 @@ Classes
 
 
 
-.. class:: Example_inactiveCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: Example_inactiveCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    Example-inactive
    From: http://hl7.org/fhir/ValueSet/inactive in valuesets.xml
        HL7 v3 ActMood Predicate codes, including inactive codes
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ActMood
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-ActMood
 
       
 
 
-.. class:: Example_inactiveCodeValues
+.. py:class:: Example_inactiveCodeValues
 
    These are moods describing activities as they progress in the business cycle,
    from defined, through planned and ordered to completed.
    From: http://terminology.hl7.org/CodeSystem/v3-ActMood in v3-codesystems.xml
 
-   .. attribute:: ActMoodCompletionTrack
+   .. py:attribute:: ActMoodCompletionTrack
       
 
       Definition: An act that expresses condition statements for other acts.
       From: http://terminology.hl7.org/CodeSystem/v3-ActMood in v3-codesystems.xml
 
 
-   .. attribute:: ActMoodPredicate
+   .. py:attribute:: ActMoodPredicate
       
 
       

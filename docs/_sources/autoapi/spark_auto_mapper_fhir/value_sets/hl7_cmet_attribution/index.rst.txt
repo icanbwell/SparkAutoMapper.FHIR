@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.hl7_cmet_attribution`
-=============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.hl7_cmet_attribution`
+================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.hl7_cmet_attribution
 
@@ -17,29 +17,29 @@ Classes
 
 
 
-.. class:: Hl7CMETAttribution(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: Hl7CMETAttribution(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.hl7CMETAttribution
    From: http://terminology.hl7.org/ValueSet/v3-hl7CMETAttribution in v3-codesystems.xml
        **** MISSING DEFINITIONS ****
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-hl7CMETAttribution
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-hl7CMETAttribution
 
       
 
 
-.. class:: Hl7CMETAttributionValues
+.. py:class:: Hl7CMETAttributionValues
 
    Description: Provides sufficient information to allow the object identified to
    be contacted. This is likely to have the content of identified and confirmable
    plus telephone number.
    From: http://terminology.hl7.org/CodeSystem/v3-hl7CMETAttribution in v3-codesystems.xml
 
-   .. attribute:: Contact
+   .. py:attribute:: Contact
       
 
       Description: This variant is a proper subset of universal and is intended to
@@ -50,7 +50,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7CMETAttribution in v3-codesystems.xml
 
 
-   .. attribute:: Identified
+   .. py:attribute:: Identified
       
 
       Description: This extends the identified variant by adding just sufficient
@@ -61,7 +61,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7CMETAttribution in v3-codesystems.xml
 
 
-   .. attribute:: Identified_confirmable
+   .. py:attribute:: Identified_confirmable
       
 
       Description: Generally the same information content as "contactable" but using
@@ -70,7 +70,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7CMETAttribution in v3-codesystems.xml
 
 
-   .. attribute:: Identified_informational
+   .. py:attribute:: Identified_informational
       
 
       Description: Generally the same information content as "contactable", but with
@@ -79,7 +79,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7CMETAttribution in v3-codesystems.xml
 
 
-   .. attribute:: Informational
+   .. py:attribute:: Informational
       
 
       Description: Provides more than identified, but not as much as universal.
@@ -87,7 +87,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7CMETAttribution in v3-codesystems.xml
 
 
-   .. attribute:: Minimal
+   .. py:attribute:: Minimal
       
 
       Description: This variant includes all attributes and associations present in
@@ -97,7 +97,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-hl7CMETAttribution in v3-codesystems.xml
 
 
-   .. attribute:: Universal
+   .. py:attribute:: Universal
       
 
       

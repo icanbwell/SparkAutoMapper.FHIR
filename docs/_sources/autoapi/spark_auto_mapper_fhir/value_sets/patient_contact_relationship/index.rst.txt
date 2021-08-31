@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.patient_contact_relationship`
-=====================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.patient_contact_relationship`
+========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.patient_contact_relationship
 
@@ -17,92 +17,92 @@ Classes
 
 
 
-.. class:: PatientContactRelationshipCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: PatientContactRelationshipCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    PatientContactRelationship
    From: http://hl7.org/fhir/ValueSet/patient-contactrelationship in valuesets.xml
        The nature of the relationship between the patient and the contact person.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v2-0131
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v2-0131
 
       
 
 
-.. class:: PatientContactRelationshipCodeValues
+.. py:class:: PatientContactRelationshipCodeValues
 
    From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
 
-   .. attribute:: BillingContactPerson
+   .. py:attribute:: BillingContactPerson
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
 
 
-   .. attribute:: EmergencyContact
+   .. py:attribute:: EmergencyContact
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
 
 
-   .. attribute:: ContactPerson
+   .. py:attribute:: ContactPerson
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
 
 
-   .. attribute:: Employer
+   .. py:attribute:: Employer
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
 
 
-   .. attribute:: EmergencyContactPerson
+   .. py:attribute:: EmergencyContactPerson
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
 
 
-   .. attribute:: FederalAgency
+   .. py:attribute:: FederalAgency
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
 
 
-   .. attribute:: InsuranceCompany
+   .. py:attribute:: InsuranceCompany
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
 
 
-   .. attribute:: Next_of_Kin
+   .. py:attribute:: Next_of_Kin
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
 
 
-   .. attribute:: Other
+   .. py:attribute:: Other
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
 
 
-   .. attribute:: PersonPreparingReferral
+   .. py:attribute:: PersonPreparingReferral
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
 
 
-   .. attribute:: StateAgency
+   .. py:attribute:: StateAgency
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0131 in v2-tables.xml
 
 
-   .. attribute:: Unknown
+   .. py:attribute:: Unknown
       
 
       

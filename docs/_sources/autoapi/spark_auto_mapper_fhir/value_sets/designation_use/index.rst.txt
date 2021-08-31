@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.designation_use`
-========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.designation_use`
+===========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.designation_use
 
@@ -17,34 +17,23 @@ Classes
 
 
 
-.. class:: DesignationUseCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: DesignationUseCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    DesignationUse
    From: http://hl7.org/fhir/ValueSet/designation-use in valuesets.xml
        Details of how a designation would be used
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://snomed.info/sct
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://snomed.info/sct
 
       
 
 
-.. class:: DesignationUseCodeValues
+.. py:class:: DesignationUseCodeValues
 
    From: http://hl7.org/fhir/ValueSet/designation-use in valuesets.xml
-
-   .. attribute:: _900000000000003001
-      
-
-      From: http://hl7.org/fhir/ValueSet/designation-use in valuesets.xml
-
-
-   .. attribute:: _900000000000013009
-      
-
-      
 
 

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.backbone_elements.immunization_recommendation_recommendation`
-==========================================================================================
+:py:mod:`spark_auto_mapper_fhir.backbone_elements.immunization_recommendation_recommendation`
+=============================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.backbone_elements.immunization_recommendation_recommendation
 
@@ -16,12 +16,56 @@ Classes
 
 
 
-.. class:: ImmunizationRecommendationRecommendation(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, vaccineCode: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.vaccine_administered_value_set.VaccineAdministeredValueSetCode]]] = None, targetDisease: Optional[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.immunization_recommendation_target_disease_codes.ImmunizationRecommendationTargetDiseaseCodesCode]] = None, contraindicatedVaccineCode: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.vaccine_administered_value_set.VaccineAdministeredValueSetCode]]] = None, forecastStatus: spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.immunization_recommendation_status_codes.ImmunizationRecommendationStatusCodesCode], forecastReason: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.codeable_concept.CodeableConcept[spark_auto_mapper_fhir.value_sets.immunization_recommendation_reason_codes.ImmunizationRecommendationReasonCodesCode]]] = None, dateCriterion: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.backbone_elements.immunization_recommendation_date_criterion.ImmunizationRecommendationDateCriterion]] = None, description: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, series: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, doseNumberPositiveInt: Optional[spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt] = None, doseNumberString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, seriesDosesPositiveInt: Optional[spark_auto_mapper_fhir.fhir_types.positive_int.FhirPositiveInt] = None, seriesDosesString: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, supportingImmunization: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[Union[(spark_auto_mapper_fhir.resources.immunization.Immunization, spark_auto_mapper_fhir.resources.immunization_evaluation.ImmunizationEvaluation)]]]] = None, supportingPatientInformation: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.reference.Reference[spark_auto_mapper_fhir.resources.resource.Resource]]] = None)
 
+.. py:class:: ImmunizationRecommendationRecommendation(*, id_ = None, extension = None, modifierExtension = None, vaccineCode = None, targetDisease = None, contraindicatedVaccineCode = None, forecastStatus, forecastReason = None, dateCriterion = None, description = None, series = None, doseNumberPositiveInt = None, doseNumberString = None, seriesDosesPositiveInt = None, seriesDosesString = None, supportingImmunization = None, supportingPatientInformation = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
 
    ImmunizationRecommendation.Recommendation
-   A patient's point-in-time set of recommendations (i.e. forecasting) according to a published schedule with optional supporting justification.
+       A patient's point-in-time set of recommendations (i.e. forecasting) according to a published schedule with optional supporting justification.
+
+       A patient's point-in-time set of recommendations (i.e. forecasting) according
+   to a published schedule with optional supporting justification.
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param modifierExtension: May be used to represent additional information that is not part of the basic
+   definition of the element and that modifies the understanding of the element
+   in which it is contained and/or the understanding of the containing element's
+   descendants. Usually modifier elements provide negation or qualification. To
+   make the use of extensions safe and manageable, there is a strict set of
+   governance applied to the definition and use of extensions. Though any
+   implementer can define an extension, there is a set of requirements that SHALL
+   be met as part of the definition of the extension. Applications processing a
+   resource are required to check for modifier extensions.
+
+   Modifier extensions SHALL NOT change the meaning of any elements on Resource
+   or DomainResource (including cannot change the meaning of modifierExtension
+   itself).
+       :param vaccineCode: Vaccine(s) or vaccine group that pertain to the recommendation.
+       :param targetDisease: The targeted disease for the recommendation.
+       :param contraindicatedVaccineCode: Vaccine(s) which should not be used to fulfill the recommendation.
+       :param forecastStatus: Indicates the patient status with respect to the path to immunity for the
+   target disease.
+       :param forecastReason: The reason for the assigned forecast status.
+       :param dateCriterion: Vaccine date recommendations.  For example, earliest date to administer,
+   latest date to administer, etc.
+       :param description: Contains the description about the protocol under which the vaccine was
+   administered.
+       :param series: One possible path to achieve presumed immunity against a disease - within the
+   context of an authority.
+       :param doseNumberPositiveInt: None
+       :param doseNumberString: None
+       :param seriesDosesPositiveInt: None
+       :param seriesDosesString: None
+       :param supportingImmunization: Immunization event history and/or evaluation that supports the status and
+   recommendation.
+       :param supportingPatientInformation: Patient Information that supports the status and recommendation.  This
+   includes patient observations, adverse reactions and allergy/intolerance
+   information.
 
 

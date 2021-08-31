@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.discriminator_type`
-===========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.discriminator_type`
+==============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.discriminator_type
 
@@ -17,27 +17,27 @@ Classes
 
 
 
-.. class:: DiscriminatorTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: DiscriminatorTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    DiscriminatorType
    From: http://hl7.org/fhir/discriminator-type in valuesets.xml
        How an element value is interpreted when discrimination is evaluated.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/discriminator-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/discriminator-type
 
       
 
 
-.. class:: DiscriminatorTypeCodeValues
+.. py:class:: DiscriminatorTypeCodeValues
 
    The slices have different values in the nominated element.
    From: http://hl7.org/fhir/discriminator-type in valuesets.xml
 
-   .. attribute:: Value
+   .. py:attribute:: Value
       
 
       The slices are differentiated by the presence or absence of the nominated
@@ -45,7 +45,7 @@ Classes
       From: http://hl7.org/fhir/discriminator-type in valuesets.xml
 
 
-   .. attribute:: Exists
+   .. py:attribute:: Exists
       
 
       The slices have different values in the nominated element, as determined by
@@ -53,14 +53,14 @@ Classes
       From: http://hl7.org/fhir/discriminator-type in valuesets.xml
 
 
-   .. attribute:: Pattern
+   .. py:attribute:: Pattern
       
 
       The slices are differentiated by type of the nominated element.
       From: http://hl7.org/fhir/discriminator-type in valuesets.xml
 
 
-   .. attribute:: Type
+   .. py:attribute:: Type
       
 
       The slices are differentiated by conformance of the nominated element to a
@@ -70,7 +70,7 @@ Classes
       From: http://hl7.org/fhir/discriminator-type in valuesets.xml
 
 
-   .. attribute:: Profile
+   .. py:attribute:: Profile
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.observation_interpretation_codes`
-=========================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.observation_interpretation_codes`
+============================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.observation_interpretation_codes
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: ObservationInterpretationCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ObservationInterpretationCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ObservationInterpretationCodes
    From: http://hl7.org/fhir/ValueSet/observation-interpretation in valuesets.xml
@@ -41,19 +41,19 @@ Classes
    the value set can be used, and these new codes may also be added to    the
    value set and published in a future version.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
 
       
 
 
-.. class:: ObservationInterpretationCodesCodeValues
+.. py:class:: ObservationInterpretationCodesCodeValues
 
    Codes that specify interpretation of genetic analysis, such as "positive",
    "negative", "carrier", "responsive", etc.
    From: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation in v3-codesystems.xml
 
-   .. attribute:: GeneticObservationInterpretation
+   .. py:attribute:: GeneticObservationInterpretation
       
 
       Interpretations of change of quantity and/or severity. At most one of B or W
@@ -61,7 +61,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation in v3-codesystems.xml
 
 
-   .. attribute:: ObservationInterpretationChange
+   .. py:attribute:: ObservationInterpretationChange
       
 
       Technical exceptions resulting in the inability to provide an interpretation.
@@ -69,7 +69,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation in v3-codesystems.xml
 
 
-   .. attribute:: ObservationInterpretationExceptions
+   .. py:attribute:: ObservationInterpretationExceptions
       
 
       Interpretation of normality or degree of abnormality (including critical or
@@ -78,7 +78,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation in v3-codesystems.xml
 
 
-   .. attribute:: ObservationInterpretationNormality
+   .. py:attribute:: ObservationInterpretationNormality
       
 
       Interpretations of anti-microbial susceptibility testing results
@@ -86,7 +86,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation in v3-codesystems.xml
 
 
-   .. attribute:: ObservationInterpretationSusceptibility
+   .. py:attribute:: ObservationInterpretationSusceptibility
       
 
       The observation/test result is interpreted as being outside the inclusion
@@ -117,7 +117,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation in v3-codesystems.xml
 
 
-   .. attribute:: OutsideThreshold
+   .. py:attribute:: OutsideThreshold
       
 
       Hold for Medical Review
@@ -129,7 +129,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation in v3-codesystems.xml
 
 
-   .. attribute:: HoldForMedicalReview
+   .. py:attribute:: HoldForMedicalReview
       
 
       Interpretations of the presence or absence of a component / analyte or
@@ -140,7 +140,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation in v3-codesystems.xml
 
 
-   .. attribute:: ObservationInterpretationDetection
+   .. py:attribute:: ObservationInterpretationDetection
       
 
       Interpretation of the observed result taking into account additional
@@ -149,7 +149,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation in v3-codesystems.xml
 
 
-   .. attribute:: ObservationInterpretationExpectation
+   .. py:attribute:: ObservationInterpretationExpectation
       
 
       Interpretation qualifiers in separate OBX segments
@@ -161,7 +161,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation in v3-codesystems.xml
 
 
-   .. attribute:: InterpretationQualifiersInSeparateOBXSegments
+   .. py:attribute:: InterpretationQualifiersInSeparateOBXSegments
       
 
       Interpretations of the presence and level of reactivity of the specified
@@ -169,7 +169,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation in v3-codesystems.xml
 
 
-   .. attribute:: ReactivityObservationInterpretation
+   .. py:attribute:: ReactivityObservationInterpretation
       
 
       

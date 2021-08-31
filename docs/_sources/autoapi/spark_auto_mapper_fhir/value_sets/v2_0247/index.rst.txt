@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.v2_0247`
-================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.v2_0247`
+===================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.v2_0247
 
@@ -16,18 +16,18 @@ Classes
 
 
 
-.. class:: V2_0247(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: V2_0247(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v2.0247
    From: http://terminology.hl7.org/ValueSet/v2-0247 in v2-tables.xml
        FHIR Value set/code system definition for HL7 v2 table 0247 ( Start of
    Evaluation)
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/ValueSet/v2-0247
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/ValueSet/v2-0247
 
       
 

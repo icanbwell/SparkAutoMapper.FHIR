@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.backbone_elements.code_system_designation`
-=======================================================================
+:py:mod:`spark_auto_mapper_fhir.backbone_elements.code_system_designation`
+==========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.backbone_elements.code_system_designation
 
@@ -16,12 +16,39 @@ Classes
 
 
 
-.. class:: CodeSystemDesignation(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, language: Optional[spark_auto_mapper_fhir.value_sets.common_languages.CommonLanguagesCode] = None, use: Optional[spark_auto_mapper_fhir.complex_types.coding.Coding[spark_auto_mapper_fhir.value_sets.designation_use.DesignationUseCode]] = None, value: spark_auto_mapper_fhir.fhir_types.string.FhirString)
 
+.. py:class:: CodeSystemDesignation(*, id_ = None, extension = None, modifierExtension = None, language = None, use = None, value)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
 
    CodeSystem.Designation
-   The CodeSystem resource is used to declare the existence of and describe a code system or code system supplement and its key properties, and optionally define a part or all of its content.
+       The CodeSystem resource is used to declare the existence of and describe a code system or code system supplement and its key properties, and optionally define a part or all of its content.
+
+       The CodeSystem resource is used to declare the existence of and describe a
+   code system or code system supplement and its key properties, and optionally
+   define a part or all of its content.
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param modifierExtension: May be used to represent additional information that is not part of the basic
+   definition of the element and that modifies the understanding of the element
+   in which it is contained and/or the understanding of the containing element's
+   descendants. Usually modifier elements provide negation or qualification. To
+   make the use of extensions safe and manageable, there is a strict set of
+   governance applied to the definition and use of extensions. Though any
+   implementer can define an extension, there is a set of requirements that SHALL
+   be met as part of the definition of the extension. Applications processing a
+   resource are required to check for modifier extensions.
+
+   Modifier extensions SHALL NOT change the meaning of any elements on Resource
+   or DomainResource (including cannot change the meaning of modifierExtension
+   itself).
+       :param language: The language this designation is defined for.
+       :param use: A code that details how this designation would be used.
+       :param value: The text value for this designation.
 
 

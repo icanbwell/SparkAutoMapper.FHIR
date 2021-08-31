@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.x_path_usage_type`
-==========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.x_path_usage_type`
+=============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.x_path_usage_type
 
@@ -17,29 +17,29 @@ Classes
 
 
 
-.. class:: XPathUsageTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: XPathUsageTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    XPathUsageType
    From: http://hl7.org/fhir/search-xpath-usage in valuesets.xml
        How a search parameter relates to the set of elements returned by evaluating
    its xpath query.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/search-xpath-usage
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/search-xpath-usage
 
       
 
 
-.. class:: XPathUsageTypeCodeValues
+.. py:class:: XPathUsageTypeCodeValues
 
    The search parameter is derived directly from the selected nodes based on the
    type definitions.
    From: http://hl7.org/fhir/search-xpath-usage in valuesets.xml
 
-   .. attribute:: Normal
+   .. py:attribute:: Normal
       
 
       The search parameter is derived by a phonetic transform from the selected
@@ -47,14 +47,14 @@ Classes
       From: http://hl7.org/fhir/search-xpath-usage in valuesets.xml
 
 
-   .. attribute:: Phonetic
+   .. py:attribute:: Phonetic
       
 
       The search parameter is based on a spatial transform of the selected nodes.
       From: http://hl7.org/fhir/search-xpath-usage in valuesets.xml
 
 
-   .. attribute:: Nearby
+   .. py:attribute:: Nearby
       
 
       The search parameter is based on a spatial transform of the selected nodes,
@@ -62,14 +62,14 @@ Classes
       From: http://hl7.org/fhir/search-xpath-usage in valuesets.xml
 
 
-   .. attribute:: Distance
+   .. py:attribute:: Distance
       
 
       The interpretation of the xpath statement is unknown (and can't be automated).
       From: http://hl7.org/fhir/search-xpath-usage in valuesets.xml
 
 
-   .. attribute:: Other
+   .. py:attribute:: Other
       
 
       

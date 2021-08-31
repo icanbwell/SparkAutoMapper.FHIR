@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.allergy_intolerance_substance_exposure_risk`
-====================================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.allergy_intolerance_substance_exposure_risk`
+=======================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.allergy_intolerance_substance_exposure_risk
 
@@ -17,29 +17,29 @@ Classes
 
 
 
-.. class:: AllergyIntoleranceSubstanceExposureRiskCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: AllergyIntoleranceSubstanceExposureRiskCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    AllergyIntoleranceSubstanceExposureRisk
    From: http://terminology.hl7.org/CodeSystem/allerg-intol-substance-exp-risk in valuesets.xml
        The risk of an adverse reaction (allergy or intolerance) for this patient upon
    exposure to the substance (including pharmaceutical products).
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/allerg-intol-substance-exp-risk
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/allerg-intol-substance-exp-risk
 
       
 
 
-.. class:: AllergyIntoleranceSubstanceExposureRiskCodeValues
+.. py:class:: AllergyIntoleranceSubstanceExposureRiskCodeValues
 
    Known risk of allergy or intolerance reaction upon exposure to the specified
    substance.
    From: http://terminology.hl7.org/CodeSystem/allerg-intol-substance-exp-risk in valuesets.xml
 
-   .. attribute:: KnownReactionRisk
+   .. py:attribute:: KnownReactionRisk
       
 
       No known risk of allergy or intolerance reaction upon exposure to the
@@ -47,7 +47,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/allerg-intol-substance-exp-risk in valuesets.xml
 
 
-   .. attribute:: NoKnownReactionRisk
+   .. py:attribute:: NoKnownReactionRisk
       
 
       

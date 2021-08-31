@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.claim_type_codes`
-=========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.claim_type_codes`
+============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.claim_type_codes
 
@@ -17,41 +17,41 @@ Classes
 
 
 
-.. class:: ClaimTypeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ClaimTypeCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ClaimTypeCodes
    From: http://terminology.hl7.org/CodeSystem/claim-type in valuesets.xml
        This value set includes Claim Type codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/claim-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/claim-type
 
       
 
 
-.. class:: ClaimTypeCodesCodeValues
+.. py:class:: ClaimTypeCodesCodeValues
 
    Hospital, clinic and typically inpatient claims.
    From: http://terminology.hl7.org/CodeSystem/claim-type in valuesets.xml
 
-   .. attribute:: Institutional
+   .. py:attribute:: Institutional
       
 
       Dental, Denture and Hygiene claims.
       From: http://terminology.hl7.org/CodeSystem/claim-type in valuesets.xml
 
 
-   .. attribute:: Oral
+   .. py:attribute:: Oral
       
 
       Pharmacy claims for goods and services.
       From: http://terminology.hl7.org/CodeSystem/claim-type in valuesets.xml
 
 
-   .. attribute:: Pharmacy
+   .. py:attribute:: Pharmacy
       
 
       Typically, outpatient claims from Physician, Psychological, Chiropractor,
@@ -59,7 +59,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/claim-type in valuesets.xml
 
 
-   .. attribute:: Professional
+   .. py:attribute:: Professional
       
 
       Vision claims for professional services and products such as glasses and
@@ -67,7 +67,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/claim-type in valuesets.xml
 
 
-   .. attribute:: Vision
+   .. py:attribute:: Vision
       
 
       

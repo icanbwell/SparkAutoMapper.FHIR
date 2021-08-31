@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.definition_topic`
-=========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.definition_topic`
+============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.definition_topic
 
@@ -17,42 +17,42 @@ Classes
 
 
 
-.. class:: DefinitionTopicCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: DefinitionTopicCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    DefinitionTopic
    From: http://terminology.hl7.org/CodeSystem/definition-topic in valuesets.xml
        High-level categorization of the definition, used for searching, sorting, and
    filtering.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/definition-topic
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/definition-topic
 
       
 
 
-.. class:: DefinitionTopicCodeValues
+.. py:class:: DefinitionTopicCodeValues
 
    The definition is related to treatment of the patient.
    From: http://terminology.hl7.org/CodeSystem/definition-topic in valuesets.xml
 
-   .. attribute:: Treatment
+   .. py:attribute:: Treatment
       
 
       The definition is related to education of the patient.
       From: http://terminology.hl7.org/CodeSystem/definition-topic in valuesets.xml
 
 
-   .. attribute:: Education
+   .. py:attribute:: Education
       
 
       The definition is related to assessment of the patient.
       From: http://terminology.hl7.org/CodeSystem/definition-topic in valuesets.xml
 
 
-   .. attribute:: Assessment
+   .. py:attribute:: Assessment
       
 
       

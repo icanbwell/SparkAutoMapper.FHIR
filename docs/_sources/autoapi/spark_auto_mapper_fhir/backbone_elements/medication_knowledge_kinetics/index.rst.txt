@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.backbone_elements.medication_knowledge_kinetics`
-=============================================================================
+:py:mod:`spark_auto_mapper_fhir.backbone_elements.medication_knowledge_kinetics`
+================================================================================
 
 .. py:module:: spark_auto_mapper_fhir.backbone_elements.medication_knowledge_kinetics
 
@@ -16,12 +16,38 @@ Classes
 
 
 
-.. class:: MedicationKnowledgeKinetics(*, id_: Optional[spark_auto_mapper_fhir.fhir_types.string.FhirString] = None, extension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, modifierExtension: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.extensions.extension_base.ExtensionBase]] = None, areaUnderCurve: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.quantity.Quantity]] = None, lethalDose50: Optional[spark_auto_mapper_fhir.fhir_types.list.FhirList[spark_auto_mapper_fhir.complex_types.quantity.Quantity]] = None, halfLifePeriod: Optional[spark_auto_mapper_fhir.complex_types.duration.Duration] = None)
 
+.. py:class:: MedicationKnowledgeKinetics(*, id_ = None, extension = None, modifierExtension = None, areaUnderCurve = None, lethalDose50 = None, halfLifePeriod = None)
 
-   Bases: :class:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
+   Bases: :py:obj:`spark_auto_mapper_fhir.base_types.fhir_backbone_element_base.FhirBackboneElementBase`
 
    MedicationKnowledge.Kinetics
-   Information about a medication that is used to support knowledge.
+       Information about a medication that is used to support knowledge.
+
+       Information about a medication that is used to support knowledge.
+
+       :param id_: None
+       :param extension: May be used to represent additional information that is not part of the basic
+   definition of the element. To make the use of extensions safe and manageable,
+   there is a strict set of governance  applied to the definition and use of
+   extensions. Though any implementer can define an extension, there is a set of
+   requirements that SHALL be met as part of the definition of the extension.
+       :param modifierExtension: May be used to represent additional information that is not part of the basic
+   definition of the element and that modifies the understanding of the element
+   in which it is contained and/or the understanding of the containing element's
+   descendants. Usually modifier elements provide negation or qualification. To
+   make the use of extensions safe and manageable, there is a strict set of
+   governance applied to the definition and use of extensions. Though any
+   implementer can define an extension, there is a set of requirements that SHALL
+   be met as part of the definition of the extension. Applications processing a
+   resource are required to check for modifier extensions.
+
+   Modifier extensions SHALL NOT change the meaning of any elements on Resource
+   or DomainResource (including cannot change the meaning of modifierExtension
+   itself).
+       :param areaUnderCurve: The drug concentration measured at certain discrete points in time.
+       :param lethalDose50: The median lethal dose of a drug.
+       :param halfLifePeriod: The time required for any specified property (e.g., the concentration of a
+   substance in the body) to decrease by half.
 
 

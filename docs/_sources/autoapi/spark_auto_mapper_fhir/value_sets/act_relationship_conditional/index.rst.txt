@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.act_relationship_conditional`
-=====================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.act_relationship_conditional`
+========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.act_relationship_conditional
 
@@ -17,23 +17,23 @@ Classes
 
 
 
-.. class:: ActRelationshipConditional(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ActRelationshipConditional(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.ActRelationshipConditional
    From: http://terminology.hl7.org/ValueSet/v3-ActRelationshipConditional in v3-codesystems.xml
         Specifies under what circumstances (target Act) the source-Act may, must,
    must not or has occurred
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType
 
       
 
 
-.. class:: ActRelationshipConditionalValues
+.. py:class:: ActRelationshipConditionalValues
 
    Description: A directed association between a source Act and a target Act.
 
@@ -42,40 +42,40 @@ Classes
    in an instance as the value of ActRelationship.typeCode (attribute)
    From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType in v3-codesystems.xml
 
-   .. attribute:: ActRelationshipType
+   .. py:attribute:: ActRelationshipType
       
 
       curative indication
       From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType in v3-codesystems.xml
 
 
-   .. attribute:: CurativeIndication
+   .. py:attribute:: CurativeIndication
       
 
       adjunct curative indication
       From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType in v3-codesystems.xml
 
 
-   .. attribute:: AdjunctCurativeIndication
+   .. py:attribute:: AdjunctCurativeIndication
       
 
       adjunct mitigation
       From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType in v3-codesystems.xml
 
 
-   .. attribute:: AdjunctMitigation
+   .. py:attribute:: AdjunctMitigation
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType in v3-codesystems.xml
 
 
-   .. attribute:: RACT
+   .. py:attribute:: RACT
       
 
       From: http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType in v3-codesystems.xml
 
 
-   .. attribute:: SUGG
+   .. py:attribute:: SUGG
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.data_absent_reason`
-===========================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.data_absent_reason`
+==============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.data_absent_reason
 
@@ -17,35 +17,35 @@ Classes
 
 
 
-.. class:: DataAbsentReasonCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: DataAbsentReasonCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    DataAbsentReason
    From: http://terminology.hl7.org/CodeSystem/data-absent-reason in valuesets.xml
        Used to specify why the normally expected content of the data element is
    missing.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/data-absent-reason
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/data-absent-reason
 
       
 
 
-.. class:: DataAbsentReasonCodeValues
+.. py:class:: DataAbsentReasonCodeValues
 
    The value is expected to exist but is not known.
    From: http://terminology.hl7.org/CodeSystem/data-absent-reason in valuesets.xml
 
-   .. attribute:: Unknown
+   .. py:attribute:: Unknown
       
 
       The information is not available due to security, privacy or related reasons.
       From: http://terminology.hl7.org/CodeSystem/data-absent-reason in valuesets.xml
 
 
-   .. attribute:: Masked
+   .. py:attribute:: Masked
       
 
       There is no proper value for this element (e.g. last menstrual period for a
@@ -53,21 +53,21 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/data-absent-reason in valuesets.xml
 
 
-   .. attribute:: NotApplicable
+   .. py:attribute:: NotApplicable
       
 
       The source system wasn't capable of supporting this element.
       From: http://terminology.hl7.org/CodeSystem/data-absent-reason in valuesets.xml
 
 
-   .. attribute:: Unsupported
+   .. py:attribute:: Unsupported
       
 
       The content of the data is represented in the resource narrative.
       From: http://terminology.hl7.org/CodeSystem/data-absent-reason in valuesets.xml
 
 
-   .. attribute:: AsText
+   .. py:attribute:: AsText
       
 
       Some system or workflow process error means that the information is not
@@ -75,7 +75,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/data-absent-reason in valuesets.xml
 
 
-   .. attribute:: Error
+   .. py:attribute:: Error
       
 
       The value is not available because the observation procedure (test, etc.) was
@@ -83,7 +83,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/data-absent-reason in valuesets.xml
 
 
-   .. attribute:: NotPerformed
+   .. py:attribute:: NotPerformed
       
 
       The value is not permitted in this context (e.g. due to profiles, or the base
@@ -91,7 +91,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/data-absent-reason in valuesets.xml
 
 
-   .. attribute:: NotPermitted
+   .. py:attribute:: NotPermitted
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.reference_version_rules`
-================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.reference_version_rules`
+===================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.reference_version_rules
 
@@ -17,42 +17,42 @@ Classes
 
 
 
-.. class:: ReferenceVersionRulesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ReferenceVersionRulesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ReferenceVersionRules
    From: http://hl7.org/fhir/reference-version-rules in valuesets.xml
        Whether a reference needs to be version specific or version independent, or
    whether either can be used.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/reference-version-rules
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/reference-version-rules
 
       
 
 
-.. class:: ReferenceVersionRulesCodeValues
+.. py:class:: ReferenceVersionRulesCodeValues
 
    The reference may be either version independent or version specific.
    From: http://hl7.org/fhir/reference-version-rules in valuesets.xml
 
-   .. attribute:: EitherSpecificOrIndependent
+   .. py:attribute:: EitherSpecificOrIndependent
       
 
       The reference must be version independent.
       From: http://hl7.org/fhir/reference-version-rules in valuesets.xml
 
 
-   .. attribute:: VersionIndependent
+   .. py:attribute:: VersionIndependent
       
 
       The reference must be version specific.
       From: http://hl7.org/fhir/reference-version-rules in valuesets.xml
 
 
-   .. attribute:: VersionSpecific
+   .. py:attribute:: VersionSpecific
       
 
       

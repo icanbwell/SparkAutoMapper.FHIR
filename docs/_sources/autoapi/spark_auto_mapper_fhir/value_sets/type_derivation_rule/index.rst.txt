@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.type_derivation_rule`
-=============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.type_derivation_rule`
+================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.type_derivation_rule
 
@@ -17,35 +17,35 @@ Classes
 
 
 
-.. class:: TypeDerivationRuleCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: TypeDerivationRuleCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    TypeDerivationRule
    From: http://hl7.org/fhir/type-derivation-rule in valuesets.xml
        How a type relates to its baseDefinition.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/type-derivation-rule
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/type-derivation-rule
 
       
 
 
-.. class:: TypeDerivationRuleCodeValues
+.. py:class:: TypeDerivationRuleCodeValues
 
    This definition defines a new type that adds additional elements to the base
    type.
    From: http://hl7.org/fhir/type-derivation-rule in valuesets.xml
 
-   .. attribute:: Specialization
+   .. py:attribute:: Specialization
       
 
       This definition adds additional rules to an existing concrete type.
       From: http://hl7.org/fhir/type-derivation-rule in valuesets.xml
 
 
-   .. attribute:: Constraint
+   .. py:attribute:: Constraint
       
 
       

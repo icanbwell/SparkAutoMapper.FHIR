@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.participation_signature`
-================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.participation_signature`
+===================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.participation_signature
 
@@ -17,10 +17,10 @@ Classes
 
 
 
-.. class:: ParticipationSignature(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ParticipationSignature(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.ParticipationSignature
    From: http://terminology.hl7.org/ValueSet/v3-ParticipationSignature in v3-codesystems.xml
@@ -31,18 +31,18 @@ Classes
    signature of the performing and responsible surgeon, and possibly other
    participants. (See also: Participation.signatureText.)
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-ParticipationSignature
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-ParticipationSignature
 
       
 
 
-.. class:: ParticipationSignatureValues
+.. py:class:: ParticipationSignatureValues
 
    The particpant intends to provide a signature.
    From: http://terminology.hl7.org/CodeSystem/v3-ParticipationSignature in v3-codesystems.xml
 
-   .. attribute:: Intended
+   .. py:attribute:: Intended
       
 
       Signature has been affixed, either written on file, or electronic (incl.
@@ -50,14 +50,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-ParticipationSignature in v3-codesystems.xml
 
 
-   .. attribute:: Signed
+   .. py:attribute:: Signed
       
 
       A signature for the service is required of this actor.
       From: http://terminology.hl7.org/CodeSystem/v3-ParticipationSignature in v3-codesystems.xml
 
 
-   .. attribute:: Required
+   .. py:attribute:: Required
       
 
       

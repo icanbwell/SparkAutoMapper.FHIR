@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.consent_scope_codes`
-============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.consent_scope_codes`
+===============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.consent_scope_codes
 
@@ -17,49 +17,49 @@ Classes
 
 
 
-.. class:: ConsentScopeCodesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ConsentScopeCodesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ConsentScopeCodes
    From: http://terminology.hl7.org/CodeSystem/consentscope in valuesets.xml
        This value set includes the four Consent scope codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/consentscope
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/consentscope
 
       
 
 
-.. class:: ConsentScopeCodesCodeValues
+.. py:class:: ConsentScopeCodesCodeValues
 
    Actions to be taken if they are no longer able to make decisions for
    themselves
    From: http://terminology.hl7.org/CodeSystem/consentscope in valuesets.xml
 
-   .. attribute:: AdvancedCareDirective
+   .. py:attribute:: AdvancedCareDirective
       
 
       Consent to participate in research protocol and information sharing required
       From: http://terminology.hl7.org/CodeSystem/consentscope in valuesets.xml
 
 
-   .. attribute:: Research
+   .. py:attribute:: Research
       
 
       Agreement to collect, access, use or disclose (share) information
       From: http://terminology.hl7.org/CodeSystem/consentscope in valuesets.xml
 
 
-   .. attribute:: PrivacyConsent
+   .. py:attribute:: PrivacyConsent
       
 
       Consent to undergo a specific treatment
       From: http://terminology.hl7.org/CodeSystem/consentscope in valuesets.xml
 
 
-   .. attribute:: Treatment
+   .. py:attribute:: Treatment
       
 
       

@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.vision_base`
-====================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.vision_base`
+=======================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.vision_base
 
@@ -17,48 +17,48 @@ Classes
 
 
 
-.. class:: VisionBaseCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: VisionBaseCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    VisionBase
    From: http://hl7.org/fhir/vision-base-codes in valuesets.xml
        A coded concept listing the base codes.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/vision-base-codes
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/vision-base-codes
 
       
 
 
-.. class:: VisionBaseCodeValues
+.. py:class:: VisionBaseCodeValues
 
    top.
    From: http://hl7.org/fhir/vision-base-codes in valuesets.xml
 
-   .. attribute:: Up
+   .. py:attribute:: Up
       
 
       bottom.
       From: http://hl7.org/fhir/vision-base-codes in valuesets.xml
 
 
-   .. attribute:: Down
+   .. py:attribute:: Down
       
 
       inner edge.
       From: http://hl7.org/fhir/vision-base-codes in valuesets.xml
 
 
-   .. attribute:: In
+   .. py:attribute:: In
       
 
       outer edge.
       From: http://hl7.org/fhir/vision-base-codes in valuesets.xml
 
 
-   .. attribute:: Out
+   .. py:attribute:: Out
       
 
       

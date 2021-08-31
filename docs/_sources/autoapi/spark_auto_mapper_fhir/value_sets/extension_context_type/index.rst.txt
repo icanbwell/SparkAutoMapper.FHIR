@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.extension_context_type`
-===============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.extension_context_type`
+==================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.extension_context_type
 
@@ -17,28 +17,28 @@ Classes
 
 
 
-.. class:: ExtensionContextTypeCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ExtensionContextTypeCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ExtensionContextType
    From: http://hl7.org/fhir/extension-context-type in valuesets.xml
        How an extension context is interpreted.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/extension-context-type
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/extension-context-type
 
       
 
 
-.. class:: ExtensionContextTypeCodeValues
+.. py:class:: ExtensionContextTypeCodeValues
 
    The context is all elements that match the FHIRPath query found in the
    expression.
    From: http://hl7.org/fhir/extension-context-type in valuesets.xml
 
-   .. attribute:: FHIRPath
+   .. py:attribute:: FHIRPath
       
 
       The context is any element that has an ElementDefinition.id that matches that
@@ -48,7 +48,7 @@ Classes
       From: http://hl7.org/fhir/extension-context-type in valuesets.xml
 
 
-   .. attribute:: ElementID
+   .. py:attribute:: ElementID
       
 
       The context is a particular extension from a particular StructureDefinition,
@@ -56,7 +56,7 @@ Classes
       From: http://hl7.org/fhir/extension-context-type in valuesets.xml
 
 
-   .. attribute:: ExtensionURL
+   .. py:attribute:: ExtensionURL
       
 
       

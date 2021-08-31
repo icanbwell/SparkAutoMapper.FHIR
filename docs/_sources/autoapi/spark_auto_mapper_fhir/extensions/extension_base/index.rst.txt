@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.extensions.extension_base`
-=======================================================
+:py:mod:`spark_auto_mapper_fhir.extensions.extension_base`
+==========================================================
 
 .. py:module:: spark_auto_mapper_fhir.extensions.extension_base
 
@@ -16,11 +16,15 @@ Classes
 
 
 
-.. class:: ExtensionBase(**kwargs: Any)
 
+.. py:class:: ExtensionBase(**kwargs)
 
-   Bases: :class:`spark_auto_mapper.data_types.complex.complex_base.AutoMapperDataTypeComplexBase`
+   Bases: :py:obj:`spark_auto_mapper.data_types.complex.complex_base.AutoMapperDataTypeComplexBase`
 
    DO NOT USE DIRECTLY!  ALWAYS USE A SUB_CLASS.
+
+
+   base class for complex types
+   :param kwargs:
 
 

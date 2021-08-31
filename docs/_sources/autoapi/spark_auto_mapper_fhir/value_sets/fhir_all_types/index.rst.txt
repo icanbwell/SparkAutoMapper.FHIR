@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.fhir_all_types`
-=======================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.fhir_all_types`
+==========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.fhir_all_types
 
@@ -17,552 +17,552 @@ Classes
 
 
 
-.. class:: FHIRAllTypesCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: FHIRAllTypesCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    FHIRAllTypes
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://hl7.org/fhir/ValueSet/all-types
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://hl7.org/fhir/ValueSet/all-types
 
       
 
 
-.. class:: FHIRAllTypesCodeValues
+.. py:class:: FHIRAllTypesCodeValues
 
-   .. attribute:: Address
+   .. py:attribute:: Address
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: Annotation
+   .. py:attribute:: Annotation
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: BackboneElement
+   .. py:attribute:: BackboneElement
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: Coding
+   .. py:attribute:: Coding
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: ContactPoint
+   .. py:attribute:: ContactPoint
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: Count
+   .. py:attribute:: Count
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: Distance
+   .. py:attribute:: Distance
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: Duration
+   .. py:attribute:: Duration
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: ElementDefinition
+   .. py:attribute:: ElementDefinition
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: Extension
+   .. py:attribute:: Extension
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: Identifier
+   .. py:attribute:: Identifier
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: Meta
+   .. py:attribute:: Meta
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: MoneyQuantity
+   .. py:attribute:: MoneyQuantity
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: ParameterDefinition
+   .. py:attribute:: ParameterDefinition
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: Population
+   .. py:attribute:: Population
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: ProductShelfLife
+   .. py:attribute:: ProductShelfLife
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: Range
+   .. py:attribute:: Range
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: Reference
+   .. py:attribute:: Reference
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: SampledData
+   .. py:attribute:: SampledData
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: SimpleQuantity
+   .. py:attribute:: SimpleQuantity
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: Timing
+   .. py:attribute:: Timing
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: UsageContext
+   .. py:attribute:: UsageContext
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: boolean
+   .. py:attribute:: boolean
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: code
+   .. py:attribute:: code
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: dateTime
+   .. py:attribute:: dateTime
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: id
+   .. py:attribute:: id
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: integer
+   .. py:attribute:: integer
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: oid_
+   .. py:attribute:: oid_
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: string
+   .. py:attribute:: string
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: unsignedInt
+   .. py:attribute:: unsignedInt
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: url
+   .. py:attribute:: url
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: xhtml
+   .. py:attribute:: xhtml
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: ActivityDefinition
+   .. py:attribute:: ActivityDefinition
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: AllergyIntolerance
+   .. py:attribute:: AllergyIntolerance
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: AppointmentResponse
+   .. py:attribute:: AppointmentResponse
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: Basic
+   .. py:attribute:: Basic
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: BiologicallyDerivedProduct
+   .. py:attribute:: BiologicallyDerivedProduct
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: Bundle
+   .. py:attribute:: Bundle
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: CarePlan
+   .. py:attribute:: CarePlan
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: CatalogEntry
+   .. py:attribute:: CatalogEntry
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: ChargeItemDefinition
+   .. py:attribute:: ChargeItemDefinition
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: ClaimResponse
+   .. py:attribute:: ClaimResponse
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: CodeSystem
+   .. py:attribute:: CodeSystem
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: CommunicationRequest
+   .. py:attribute:: CommunicationRequest
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: Composition
+   .. py:attribute:: Composition
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: Condition
+   .. py:attribute:: Condition
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: Contract
+   .. py:attribute:: Contract
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: CoverageEligibilityRequest
+   .. py:attribute:: CoverageEligibilityRequest
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: DetectedIssue
+   .. py:attribute:: DetectedIssue
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: DeviceDefinition
+   .. py:attribute:: DeviceDefinition
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: DeviceRequest
+   .. py:attribute:: DeviceRequest
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: DiagnosticReport
+   .. py:attribute:: DiagnosticReport
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: DocumentReference
+   .. py:attribute:: DocumentReference
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: EffectEvidenceSynthesis
+   .. py:attribute:: EffectEvidenceSynthesis
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: Endpoint
+   .. py:attribute:: Endpoint
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: EnrollmentResponse
+   .. py:attribute:: EnrollmentResponse
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: EventDefinition
+   .. py:attribute:: EventDefinition
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: EvidenceVariable
+   .. py:attribute:: EvidenceVariable
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: ExplanationOfBenefit
+   .. py:attribute:: ExplanationOfBenefit
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: Flag
+   .. py:attribute:: Flag
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: GraphDefinition
+   .. py:attribute:: GraphDefinition
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: GuidanceResponse
+   .. py:attribute:: GuidanceResponse
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: ImagingStudy
+   .. py:attribute:: ImagingStudy
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: ImmunizationEvaluation
+   .. py:attribute:: ImmunizationEvaluation
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: ImplementationGuide
+   .. py:attribute:: ImplementationGuide
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: Invoice
+   .. py:attribute:: Invoice
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: Linkage
+   .. py:attribute:: Linkage
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: Location
+   .. py:attribute:: Location
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: MeasureReport
+   .. py:attribute:: MeasureReport
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: Medication
+   .. py:attribute:: Medication
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: MedicationDispense
+   .. py:attribute:: MedicationDispense
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: MedicationRequest
+   .. py:attribute:: MedicationRequest
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: MedicinalProduct
+   .. py:attribute:: MedicinalProduct
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: MedicinalProductContraindication
+   .. py:attribute:: MedicinalProductContraindication
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: MedicinalProductIngredient
+   .. py:attribute:: MedicinalProductIngredient
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: MedicinalProductManufactured
+   .. py:attribute:: MedicinalProductManufactured
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: MedicinalProductPharmaceutical
+   .. py:attribute:: MedicinalProductPharmaceutical
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: MessageDefinition
+   .. py:attribute:: MessageDefinition
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: MolecularSequence
+   .. py:attribute:: MolecularSequence
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: NutritionOrder
+   .. py:attribute:: NutritionOrder
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: ObservationDefinition
+   .. py:attribute:: ObservationDefinition
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: OperationOutcome
+   .. py:attribute:: OperationOutcome
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: OrganizationAffiliation
+   .. py:attribute:: OrganizationAffiliation
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: Patient
+   .. py:attribute:: Patient
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: PaymentReconciliation
+   .. py:attribute:: PaymentReconciliation
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: PlanDefinition
+   .. py:attribute:: PlanDefinition
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: PractitionerRole
+   .. py:attribute:: PractitionerRole
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: Provenance
+   .. py:attribute:: Provenance
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: QuestionnaireResponse
+   .. py:attribute:: QuestionnaireResponse
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: RequestGroup
+   .. py:attribute:: RequestGroup
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: ResearchElementDefinition
+   .. py:attribute:: ResearchElementDefinition
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: ResearchSubject
+   .. py:attribute:: ResearchSubject
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: RiskAssessment
+   .. py:attribute:: RiskAssessment
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: Schedule
+   .. py:attribute:: Schedule
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: ServiceRequest
+   .. py:attribute:: ServiceRequest
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: Specimen
+   .. py:attribute:: Specimen
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: StructureDefinition
+   .. py:attribute:: StructureDefinition
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: Subscription
+   .. py:attribute:: Subscription
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: SubstanceNucleicAcid
+   .. py:attribute:: SubstanceNucleicAcid
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: SubstanceProtein
+   .. py:attribute:: SubstanceProtein
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: SubstanceSourceMaterial
+   .. py:attribute:: SubstanceSourceMaterial
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: SupplyDelivery
+   .. py:attribute:: SupplyDelivery
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: Task
+   .. py:attribute:: Task
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: TestReport
+   .. py:attribute:: TestReport
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: ValueSet
+   .. py:attribute:: ValueSet
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: VisionPrescription
+   .. py:attribute:: VisionPrescription
       :annotation: :FHIRAllTypesCode
 
       
 
-   .. attribute:: Any
+   .. py:attribute:: Any
       :annotation: :FHIRAllTypesCode
 
       

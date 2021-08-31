@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.activity_definition_category`
-=====================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.activity_definition_category`
+========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.activity_definition_category
 
@@ -17,34 +17,34 @@ Classes
 
 
 
-.. class:: ActivityDefinitionCategoryCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: ActivityDefinitionCategoryCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    ActivityDefinitionCategory
    From: http://terminology.hl7.org/CodeSystem/activity-definition-category in valuesets.xml
        High-level categorization of the type of activity.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/activity-definition-category
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/activity-definition-category
 
       
 
 
-.. class:: ActivityDefinitionCategoryCodeValues
+.. py:class:: ActivityDefinitionCategoryCodeValues
 
    The activity is intended to provide or is related to treatment of the patient.
    From: http://terminology.hl7.org/CodeSystem/activity-definition-category in valuesets.xml
 
-   .. attribute:: Treatment
+   .. py:attribute:: Treatment
       
 
       The activity is intended to provide or is related to education of the patient.
       From: http://terminology.hl7.org/CodeSystem/activity-definition-category in valuesets.xml
 
 
-   .. attribute:: Education
+   .. py:attribute:: Education
       
 
       The activity is intended to perform or is related to assessment of the
@@ -52,7 +52,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/activity-definition-category in valuesets.xml
 
 
-   .. attribute:: Assessment
+   .. py:attribute:: Assessment
       
 
       

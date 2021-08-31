@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.document_section_type`
-==============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.document_section_type`
+=================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.document_section_type
 
@@ -16,10 +16,10 @@ Classes
 
 
 
-.. class:: DocumentSectionType(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: DocumentSectionType(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.DocumentSectionType
    From: http://terminology.hl7.org/ValueSet/v3-DocumentSectionType in v3-codesystems.xml

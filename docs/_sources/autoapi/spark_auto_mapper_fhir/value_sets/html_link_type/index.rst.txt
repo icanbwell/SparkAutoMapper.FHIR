@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.html_link_type`
-=======================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.html_link_type`
+==========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.html_link_type
 
@@ -17,23 +17,23 @@ Classes
 
 
 
-.. class:: HtmlLinkType(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: HtmlLinkType(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    v3.HtmlLinkType
    From: http://terminology.hl7.org/ValueSet/v3-HtmlLinkType in v3-codesystems.xml
         HtmlLinkType values are drawn from HTML 4.0 and describe the relationship
    between the current document and the anchor that is the target of the link
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType
 
       
 
 
-.. class:: HtmlLinkTypeValues
+.. py:class:: HtmlLinkTypeValues
 
    Designates substitute versions for the document in which the link occurs. When
    used together with the lang attribute, it implies a translated version of the
@@ -41,14 +41,14 @@ Classes
    designed for a different medium (or media).
    From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
 
-   .. attribute:: Alternate
+   .. py:attribute:: Alternate
       
 
       Refers to a document serving as an appendix in a collection of documents.
       From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
 
 
-   .. attribute:: Appendix
+   .. py:attribute:: Appendix
       
 
       Refers to a bookmark. A bookmark is a link to a key entry point within an
@@ -57,14 +57,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
 
 
-   .. attribute:: Bookmark
+   .. py:attribute:: Bookmark
       
 
       Refers to a document serving as a chapter in a collection of documents.
       From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
 
 
-   .. attribute:: Chapter
+   .. py:attribute:: Chapter
       
 
       Refers to a document serving as a table of contents. Some user agents also
@@ -72,14 +72,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
 
 
-   .. attribute:: Contents
+   .. py:attribute:: Contents
       
 
       Refers to a copyright statement for the current document.
       From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
 
 
-   .. attribute:: Copyright
+   .. py:attribute:: Copyright
       
 
       Refers to a document providing a glossary of terms that pertain to the current
@@ -87,7 +87,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
 
 
-   .. attribute:: Glossary
+   .. py:attribute:: Glossary
       
 
       Refers to a document offering help (more information, links to other sources
@@ -95,14 +95,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
 
 
-   .. attribute:: Help
+   .. py:attribute:: Help
       
 
       Refers to a document providing an index for the current document.
       From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
 
 
-   .. attribute:: Index
+   .. py:attribute:: Index
       
 
       Refers to the next document in a linear sequence of documents. User agents may
@@ -110,7 +110,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
 
 
-   .. attribute:: Next
+   .. py:attribute:: Next
       
 
       Refers to the previous document in an ordered series of documents. Some user
@@ -118,14 +118,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
 
 
-   .. attribute:: Prev
+   .. py:attribute:: Prev
       
 
       Refers to a document serving as a section in a collection of documents.
       From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
 
 
-   .. attribute:: Section
+   .. py:attribute:: Section
       
 
       Refers to the first document in a collection of documents. This link type
@@ -134,7 +134,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
 
 
-   .. attribute:: Start
+   .. py:attribute:: Start
       
 
       Refers to an external style sheet. See the section on external style sheets
@@ -143,14 +143,14 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
 
 
-   .. attribute:: Stylesheet
+   .. py:attribute:: Stylesheet
       
 
       Refers to a document serving as a subsection in a collection of documents.
       From: http://terminology.hl7.org/CodeSystem/v3-HtmlLinkType in v3-codesystems.xml
 
 
-   .. attribute:: Subsection
+   .. py:attribute:: Subsection
       
 
       

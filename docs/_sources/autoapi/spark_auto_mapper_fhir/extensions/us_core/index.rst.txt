@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.extensions.us_core`
-================================================
+:py:mod:`spark_auto_mapper_fhir.extensions.us_core`
+===================================================
 
 .. py:module:: spark_auto_mapper_fhir.extensions.us_core
 

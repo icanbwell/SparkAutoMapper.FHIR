@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.rejection_criterion`
-============================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.rejection_criterion`
+===============================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.rejection_criterion
 
@@ -17,55 +17,55 @@ Classes
 
 
 
-.. class:: RejectionCriterionCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: RejectionCriterionCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    RejectionCriterion
    From: http://terminology.hl7.org/CodeSystem/rejection-criteria in valuesets.xml
        Criterion for rejection of the specimen by laboratory.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/rejection-criteria
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/rejection-criteria
 
       
 
 
-.. class:: RejectionCriterionCodeValues
+.. py:class:: RejectionCriterionCodeValues
 
    blood specimen hemolized.
    From: http://terminology.hl7.org/CodeSystem/rejection-criteria in valuesets.xml
 
-   .. attribute:: HemolizedSpecimen
+   .. py:attribute:: HemolizedSpecimen
       
 
       insufficient quantity of specimen.
       From: http://terminology.hl7.org/CodeSystem/rejection-criteria in valuesets.xml
 
 
-   .. attribute:: InsufficientSpecimenVolume
+   .. py:attribute:: InsufficientSpecimenVolume
       
 
       specimen container broken.
       From: http://terminology.hl7.org/CodeSystem/rejection-criteria in valuesets.xml
 
 
-   .. attribute:: BrokenSpecimenContainer
+   .. py:attribute:: BrokenSpecimenContainer
       
 
       specimen clotted.
       From: http://terminology.hl7.org/CodeSystem/rejection-criteria in valuesets.xml
 
 
-   .. attribute:: SpecimenClotted
+   .. py:attribute:: SpecimenClotted
       
 
       specimen temperature inappropriate.
       From: http://terminology.hl7.org/CodeSystem/rejection-criteria in valuesets.xml
 
 
-   .. attribute:: SpecimenTemperatureInappropriate
+   .. py:attribute:: SpecimenTemperatureInappropriate
       
 
       

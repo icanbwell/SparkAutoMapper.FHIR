@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.specimen_processing_procedure`
-======================================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.specimen_processing_procedure`
+=========================================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.specimen_processing_procedure
 
@@ -17,68 +17,68 @@ Classes
 
 
 
-.. class:: SpecimenProcessingProcedureCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: SpecimenProcessingProcedureCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    SpecimenProcessingProcedure
    From: http://hl7.org/fhir/ValueSet/specimen-processing-procedure in valuesets.xml
        The technique that is used to perform the process or preserve the specimen.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/v2-0373
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/v2-0373
 
       
 
 
-.. class:: SpecimenProcessingProcedureCodeValues
+.. py:class:: SpecimenProcessingProcedureCodeValues
 
    From: http://terminology.hl7.org/CodeSystem/v2-0373 in v2-tables.xml
 
-   .. attribute:: Acidification
+   .. py:attribute:: Acidification
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0373 in v2-tables.xml
 
 
-   .. attribute:: Alkalization
+   .. py:attribute:: Alkalization
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0373 in v2-tables.xml
 
 
-   .. attribute:: Defibrination
+   .. py:attribute:: Defibrination
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0373 in v2-tables.xml
 
 
-   .. attribute:: Filtration
+   .. py:attribute:: Filtration
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0373 in v2-tables.xml
 
 
-   .. attribute:: LDLPrecipitation
+   .. py:attribute:: LDLPrecipitation
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0373 in v2-tables.xml
 
 
-   .. attribute:: Neutralization
+   .. py:attribute:: Neutralization
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0373 in v2-tables.xml
 
 
-   .. attribute:: Recalification
+   .. py:attribute:: Recalification
       
 
       From: http://terminology.hl7.org/CodeSystem/v2-0373 in v2-tables.xml
 
 
-   .. attribute:: Ultrafiltration
+   .. py:attribute:: Ultrafiltration
       
 
       

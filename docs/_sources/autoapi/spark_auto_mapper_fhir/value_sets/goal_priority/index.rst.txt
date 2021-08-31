@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.goal_priority`
-======================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.goal_priority`
+=========================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.goal_priority
 
@@ -17,29 +17,29 @@ Classes
 
 
 
-.. class:: GoalPriorityCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: GoalPriorityCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    GoalPriority
    From: http://terminology.hl7.org/CodeSystem/goal-priority in valuesets.xml
        Indicates the level of importance associated with reaching or sustaining a
    goal.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://terminology.hl7.org/CodeSystem/goal-priority
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://terminology.hl7.org/CodeSystem/goal-priority
 
       
 
 
-.. class:: GoalPriorityCodeValues
+.. py:class:: GoalPriorityCodeValues
 
    Indicates that the goal is of considerable importance and should be a primary
    focus of care delivery.
    From: http://terminology.hl7.org/CodeSystem/goal-priority in valuesets.xml
 
-   .. attribute:: HighPriority
+   .. py:attribute:: HighPriority
       
 
       Indicates that the goal has a reasonable degree of importance and that
@@ -48,7 +48,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/goal-priority in valuesets.xml
 
 
-   .. attribute:: MediumPriority
+   .. py:attribute:: MediumPriority
       
 
       The goal is desirable but is not sufficiently important to devote significant
@@ -57,7 +57,7 @@ Classes
       From: http://terminology.hl7.org/CodeSystem/goal-priority in valuesets.xml
 
 
-   .. attribute:: LowPriority
+   .. py:attribute:: LowPriority
       
 
       

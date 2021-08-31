@@ -1,5 +1,5 @@
-:mod:`spark_auto_mapper_fhir.value_sets.indicator`
-==================================================
+:py:mod:`spark_auto_mapper_fhir.value_sets.indicator`
+=====================================================
 
 .. py:module:: spark_auto_mapper_fhir.value_sets.indicator
 
@@ -17,39 +17,39 @@ Classes
 
 
 
-.. class:: IndicatorCode(value: spark_auto_mapper.type_definitions.defined_types.AutoMapperTextInputType)
 
+.. py:class:: IndicatorCode(value)
 
-   Bases: :class:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
+   Bases: :py:obj:`spark_auto_mapper_fhir.value_sets.generic_type.GenericTypeCode`
 
    Indicator
    From: http://cds-hooks.hl7.org/CodeSystem/indicator in valuesets.xml
        This value set captures the set of indicator codes defined by the CDS Hooks
    specification.
 
-   .. attribute:: codeset
-      :annotation: :FhirUri = http://cds-hooks.hl7.org/CodeSystem/indicator
+   .. py:attribute:: codeset
+      :annotation: :spark_auto_mapper_fhir.fhir_types.uri.FhirUri = http://cds-hooks.hl7.org/CodeSystem/indicator
 
       
 
 
-.. class:: IndicatorCodeValues
+.. py:class:: IndicatorCodeValues
 
    From: http://cds-hooks.hl7.org/CodeSystem/indicator in valuesets.xml
 
-   .. attribute:: TheResponseIsInformational
+   .. py:attribute:: TheResponseIsInformational
       
 
       From: http://cds-hooks.hl7.org/CodeSystem/indicator in valuesets.xml
 
 
-   .. attribute:: TheResponseIsAWarning
+   .. py:attribute:: TheResponseIsAWarning
       
 
       From: http://cds-hooks.hl7.org/CodeSystem/indicator in valuesets.xml
 
 
-   .. attribute:: TheResponseIsCriticalAndIndicatesTheWorkflowShouldNotBeAllowedToProceed
+   .. py:attribute:: TheResponseIsCriticalAndIndicatesTheWorkflowShouldNotBeAllowedToProceed
       
 
       
