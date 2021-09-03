@@ -20,16 +20,16 @@ class MaritalStatusCodesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/CodeSystem/v3-NullFlavor
-    """
-    codeset_v3_NullFlavor: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-MaritalStatus
     """
     codeset_v3_MaritalStatus: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+    )
+    """
+    http://terminology.hl7.org/CodeSystem/v3-NullFlavor
+    """
+    codeset_v3_NullFlavor: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
     )
 
 

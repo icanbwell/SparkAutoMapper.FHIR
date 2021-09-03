@@ -190,7 +190,7 @@ class List_(FhirResourceBase):
             :param emptyReason: If the list is empty, why the list is empty.
         """
         super().__init__(
-            resourceType="List_",
+            resourceType="List",
             id_=id_,
             meta=meta,
             implicitRules=implicitRules,
