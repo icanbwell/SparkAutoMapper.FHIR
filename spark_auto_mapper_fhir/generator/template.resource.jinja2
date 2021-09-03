@@ -118,7 +118,7 @@ class {{fhir_entity.cleaned_name}}(FhirResourceBase):
     {% endfor %}
         """
         super().__init__(
-            resourceType="{{fhir_entity.cleaned_name}}",
+            resourceType="{{fhir_entity.fhir_name}}",
         {% for property in fhir_entity.properties %}
             {{ property.name }}={{ property.name }},
         {% endfor %}

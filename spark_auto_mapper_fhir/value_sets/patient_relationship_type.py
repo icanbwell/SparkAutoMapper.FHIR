@@ -20,13 +20,13 @@ class PatientRelationshipTypeCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/CodeSystem/v2-0131
-    """
-    codeset_v2_0131: FhirUri = "http://terminology.hl7.org/CodeSystem/v2-0131"
-    """
     http://terminology.hl7.org/CodeSystem/v3-RoleCode
     """
     codeset_v3_RoleCode: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
+    """
+    http://terminology.hl7.org/CodeSystem/v2-0131
+    """
+    codeset_v2_0131: FhirUri = "http://terminology.hl7.org/CodeSystem/v2-0131"
 
 
 class PatientRelationshipTypeCodeValues:

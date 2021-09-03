@@ -21,13 +21,13 @@ class DataElementSDCObjectClassCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://snomed.info/sct
-    """
-    codeset_sct: FhirUri = "http://snomed.info/sct"
-    """
     http://loinc.org
     """
     codeset_loinc_org: FhirUri = "http://loinc.org"
+    """
+    http://snomed.info/sct
+    """
+    codeset_sct: FhirUri = "http://snomed.info/sct"
     """
     http://www.nlm.nih.gov/research/umls/rxnorm
     """
