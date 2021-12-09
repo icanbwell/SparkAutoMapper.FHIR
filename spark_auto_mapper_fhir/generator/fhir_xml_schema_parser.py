@@ -129,6 +129,7 @@ class FhirXmlSchemaParser:
         "unsignedInt": "FhirUnsignedInt",
         "uuid": "FhirUuid",
         "oid": "FhirOid",
+        "xhtml": "FhirXHtml",
     }
 
     @staticmethod
@@ -694,7 +695,7 @@ class FhirXmlSchemaParser:
         fhir_properties: List[FhirProperty] = []
         property_: ObjectifiedElement
         for property_ in properties:
-            if hasattr(property_, "ref"):
+            if "ref" in property_.attrib:
                 ref_: str = str(property_.get("ref"))
                 property_name: str = ref_.split(":")[-1]
                 property_type: str = ref_.split(":")[0]
