@@ -68,7 +68,7 @@ if TYPE_CHECKING:
     # Imports for References for encounter
     from spark_auto_mapper_fhir.resources.encounter import Encounter
 
-    # date_ (dateTime)
+    # date (dateTime)
     # detected (dateTime)
     # recordedDate (dateTime)
     # resultingCondition (Reference)
@@ -163,7 +163,7 @@ class AdverseEvent(FhirResourceBase):
         event: Optional[CodeableConcept[SNOMEDCTClinicalFindingsCode]] = None,
         subject: Reference[Union[Patient, Group, Practitioner, RelatedPerson]],
         encounter: Optional[Reference[Encounter]] = None,
-        date_: Optional[FhirDateTime] = None,
+        date: Optional[FhirDateTime] = None,
         detected: Optional[FhirDateTime] = None,
         recordedDate: Optional[FhirDateTime] = None,
         resultingCondition: Optional[FhirList[Reference[Condition]]] = None,
@@ -252,7 +252,7 @@ class AdverseEvent(FhirResourceBase):
             :param subject: This subject or group impacted by the event.
             :param encounter: The Encounter during which AdverseEvent was created or to which the creation
         of this record is tightly associated.
-            :param date_: The date (and perhaps time) when the adverse event occurred.
+            :param date: The date (and perhaps time) when the adverse event occurred.
             :param detected: Estimated or actual date the AdverseEvent began, in the opinion of the
         reporter.
             :param recordedDate: The date on which the existence of the AdverseEvent was first recorded.
@@ -293,7 +293,7 @@ class AdverseEvent(FhirResourceBase):
             event=event,
             subject=subject,
             encounter=encounter,
-            date_=date_,
+            date=date,
             detected=detected,
             recordedDate=recordedDate,
             resultingCondition=resultingCondition,

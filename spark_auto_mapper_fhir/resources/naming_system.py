@@ -43,7 +43,7 @@ if TYPE_CHECKING:
         NamingSystemTypeCode,
     )
 
-    # date_ (dateTime)
+    # date (dateTime)
     # publisher (string)
     # contact (ContactDetail)
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
@@ -105,7 +105,7 @@ class NamingSystem(FhirResourceBase):
         name: FhirString,
         status: PublicationStatusCode,
         kind: NamingSystemTypeCode,
-        date_: FhirDateTime,
+        date: FhirDateTime,
         publisher: Optional[FhirString] = None,
         contact: Optional[FhirList[ContactDetail]] = None,
         responsible: Optional[FhirString] = None,
@@ -168,7 +168,7 @@ class NamingSystem(FhirResourceBase):
         content.
             :param kind: Indicates the purpose for the naming system - what kinds of things does it
         make unique?
-            :param date_: The date  (and optionally time) when the naming system was published. The date
+            :param date: The date  (and optionally time) when the naming system was published. The date
         must change when the business version changes and it must change if the status
         code changes. In addition, it should change when the substantive content of
         the naming system changes.
@@ -207,7 +207,7 @@ class NamingSystem(FhirResourceBase):
             name=name,
             status=status,
             kind=kind,
-            date_=date_,
+            date=date,
             publisher=publisher,
             contact=contact,
             responsible=responsible,

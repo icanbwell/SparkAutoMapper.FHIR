@@ -68,7 +68,7 @@ if TYPE_CHECKING:
     # Imports for References for subjectReference
     from spark_auto_mapper_fhir.resources.group import Group
 
-    # date_ (dateTime)
+    # date (dateTime)
     # publisher (string)
     # contact (ContactDetail)
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
@@ -156,7 +156,7 @@ class PlanDefinition(FhirResourceBase):
         experimental: Optional[FhirBoolean] = None,
         subjectCodeableConcept: Optional[CodeableConcept[SubjectTypeCode]] = None,
         subjectReference: Optional[Reference[Group]] = None,
-        date_: Optional[FhirDateTime] = None,
+        date: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,
         contact: Optional[FhirList[ContactDetail]] = None,
         description: Optional[FhirMarkdown] = None,
@@ -259,7 +259,7 @@ class PlanDefinition(FhirResourceBase):
         for genuine usage.
             :param subjectCodeableConcept: None
             :param subjectReference: None
-            :param date_: The date  (and optionally time) when the plan definition was published. The
+            :param date: The date  (and optionally time) when the plan definition was published. The
         date must change when the business version changes and it must change if the
         status code changes. In addition, it should change when the substantive
         content of the plan definition changes.
@@ -330,7 +330,7 @@ class PlanDefinition(FhirResourceBase):
             experimental=experimental,
             subjectCodeableConcept=subjectCodeableConcept,
             subjectReference=subjectReference,
-            date_=date_,
+            date=date,
             publisher=publisher,
             contact=contact,
             description=description,

@@ -35,7 +35,7 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for communicationMethod
-    # date_ (date)
+    # date (date)
     # sourceIdentityCertificate (string)
     # proxyIdentityCertificate (string)
     # proxySignature (Signature)
@@ -68,7 +68,7 @@ class VerificationResultAttestation(FhirBackboneElementBase):
         communicationMethod: Optional[
             CodeableConcept[Verificationresult_communication_methodCode]
         ] = None,
-        date_: Optional[FhirDate] = None,
+        date: Optional[FhirDate] = None,
         sourceIdentityCertificate: Optional[FhirString] = None,
         proxyIdentityCertificate: Optional[FhirString] = None,
         proxySignature: Optional[Signature] = None,
@@ -101,7 +101,7 @@ class VerificationResultAttestation(FhirBackboneElementBase):
             :param onBehalfOf: When the who is asserting on behalf of another (organization or individual).
             :param communicationMethod: The method by which attested information was submitted/retrieved (manual; API;
         Push).
-            :param date_: The date the information was attested to.
+            :param date: The date the information was attested to.
             :param sourceIdentityCertificate: A digital identity certificate associated with the attestation source.
             :param proxyIdentityCertificate: A digital identity certificate associated with the proxy entity submitting
         attested information on behalf of the attestation source.
@@ -117,7 +117,7 @@ class VerificationResultAttestation(FhirBackboneElementBase):
             who=who,
             onBehalfOf=onBehalfOf,
             communicationMethod=communicationMethod,
-            date_=date_,
+            date=date,
             sourceIdentityCertificate=sourceIdentityCertificate,
             proxyIdentityCertificate=proxyIdentityCertificate,
             proxySignature=proxySignature,

@@ -66,7 +66,7 @@ if TYPE_CHECKING:
     # effectivePeriod (Period)
     from spark_auto_mapper_fhir.complex_types.period import Period
 
-    # date_ (dateTime)
+    # date (dateTime)
     # assessor (Reference)
     # Imports for References for assessor
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
@@ -147,7 +147,7 @@ class ClinicalImpression(FhirResourceBase):
         encounter: Optional[Reference[Encounter]] = None,
         effectiveDateTime: Optional[FhirDateTime] = None,
         effectivePeriod: Optional[Period] = None,
-        date_: Optional[FhirDateTime] = None,
+        date: Optional[FhirDateTime] = None,
         assessor: Optional[Reference[Union[Practitioner, PractitionerRole]]] = None,
         previous: Optional[Reference[ClinicalImpression]] = None,
         problem: Optional[
@@ -224,7 +224,7 @@ class ClinicalImpression(FhirResourceBase):
         creation of this record is tightly associated.
             :param effectiveDateTime: None
             :param effectivePeriod: None
-            :param date_: Indicates when the documentation of the assessment was complete.
+            :param date: Indicates when the documentation of the assessment was complete.
             :param assessor: The clinician performing the assessment.
             :param previous: A reference to the last assessment that was conducted on this patient.
         Assessments are often/usually ongoing in nature; a care provider (practitioner
@@ -267,7 +267,7 @@ class ClinicalImpression(FhirResourceBase):
             encounter=encounter,
             effectiveDateTime=effectiveDateTime,
             effectivePeriod=effectivePeriod,
-            date_=date_,
+            date=date,
             assessor=assessor,
             previous=previous,
             problem=problem,

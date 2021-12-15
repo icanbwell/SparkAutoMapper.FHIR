@@ -36,7 +36,7 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for adjustmentReason
-    # date_ (date)
+    # date (date)
     # amount (Money)
     # identifier (Identifier)
     from spark_auto_mapper_fhir.complex_types.identifier import Identifier
@@ -62,7 +62,7 @@ class ExplanationOfBenefitPayment(FhirBackboneElementBase):
         adjustmentReason: Optional[
             CodeableConcept[PaymentAdjustmentReasonCodesCode]
         ] = None,
-        date_: Optional[FhirDate] = None,
+        date: Optional[FhirDate] = None,
         amount: Optional[Money] = None,
         identifier: Optional[Identifier] = None,
     ) -> None:
@@ -94,7 +94,7 @@ class ExplanationOfBenefitPayment(FhirBackboneElementBase):
             :param adjustment: Total amount of all adjustments to this payment included in this transaction
         which are not related to this claim's adjudication.
             :param adjustmentReason: Reason for the payment adjustment.
-            :param date_: Estimated date the payment will be issued or the actual issue date of payment.
+            :param date: Estimated date the payment will be issued or the actual issue date of payment.
             :param amount: Benefits payable less any payment adjustment.
             :param identifier: Issuer's unique identifier for the payment instrument.
         """
@@ -105,7 +105,7 @@ class ExplanationOfBenefitPayment(FhirBackboneElementBase):
             type_=type_,
             adjustment=adjustment,
             adjustmentReason=adjustmentReason,
-            date_=date_,
+            date=date,
             amount=amount,
             identifier=identifier,
         )

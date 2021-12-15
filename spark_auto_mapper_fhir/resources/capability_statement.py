@@ -45,7 +45,7 @@ if TYPE_CHECKING:
     )
 
     # experimental (boolean)
-    # date_ (dateTime)
+    # date (dateTime)
     # publisher (string)
     # contact (ContactDetail)
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
@@ -141,7 +141,7 @@ class CapabilityStatement(FhirResourceBase):
         title: Optional[FhirString] = None,
         status: PublicationStatusCode,
         experimental: Optional[FhirBoolean] = None,
-        date_: FhirDateTime,
+        date: FhirDateTime,
         publisher: Optional[FhirString] = None,
         contact: Optional[FhirList[ContactDetail]] = None,
         description: Optional[FhirMarkdown] = None,
@@ -230,7 +230,7 @@ class CapabilityStatement(FhirResourceBase):
             :param experimental: A Boolean value to indicate that this capability statement is authored for
         testing purposes (or education/evaluation/marketing) and is not intended to be
         used for genuine usage.
-            :param date_: The date  (and optionally time) when the capability statement was published.
+            :param date: The date  (and optionally time) when the capability statement was published.
         The date must change when the business version changes and it must change if
         the status code changes. In addition, it should change when the substantive
         content of the capability statement changes.
@@ -301,7 +301,7 @@ class CapabilityStatement(FhirResourceBase):
             title=title,
             status=status,
             experimental=experimental,
-            date_=date_,
+            date=date,
             publisher=publisher,
             contact=contact,
             description=description,
