@@ -46,7 +46,7 @@ if TYPE_CHECKING:
     )
 
     # experimental (boolean)
-    # date (dateTime)
+    # date_ (dateTime)
     # publisher (string)
     # contact (ContactDetail)
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
@@ -135,7 +135,7 @@ class CodeSystem(FhirResourceBase):
         title: Optional[FhirString] = None,
         status: PublicationStatusCode,
         experimental: Optional[FhirBoolean] = None,
-        date: Optional[FhirDateTime] = None,
+        date_: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,
         contact: Optional[FhirList[ContactDetail]] = None,
         description: Optional[FhirMarkdown] = None,
@@ -226,7 +226,7 @@ class CodeSystem(FhirResourceBase):
             :param experimental: A Boolean value to indicate that this code system is authored for testing
         purposes (or education/evaluation/marketing) and is not intended to be used
         for genuine usage.
-            :param date: The date  (and optionally time) when the code system was published. The date
+            :param date_: The date  (and optionally time) when the code system was published. The date
         must change when the business version changes and it must change if the status
         code changes. In addition, it should change when the substantive content of
         the code system changes.
@@ -286,7 +286,7 @@ class CodeSystem(FhirResourceBase):
             title=title,
             status=status,
             experimental=experimental,
-            date=date,
+            date_=date_,
             publisher=publisher,
             contact=contact,
             description=description,

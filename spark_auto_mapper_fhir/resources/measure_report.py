@@ -59,7 +59,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
     from spark_auto_mapper_fhir.resources.group import Group
 
-    # date (dateTime)
+    # date_ (dateTime)
     # reporter (Reference)
     # Imports for References for reporter
     from spark_auto_mapper_fhir.resources.organization import Organization
@@ -127,7 +127,7 @@ class MeasureReport(FhirResourceBase):
                 ]
             ]
         ] = None,
-        date: Optional[FhirDateTime] = None,
+        date_: Optional[FhirDateTime] = None,
         reporter: Optional[
             Reference[Union[Practitioner, PractitionerRole, Location, Organization]]
         ] = None,
@@ -195,7 +195,7 @@ class MeasureReport(FhirResourceBase):
         measure.
             :param measure: A reference to the Measure that was calculated to produce this report.
             :param subject: Optional subject identifying the individual or individuals the report is for.
-            :param date: The date this measure report was generated.
+            :param date_: The date this measure report was generated.
             :param reporter: The individual, location, or organization that is reporting the data.
             :param period: The reporting period for which the report was calculated.
             :param improvementNotation: Whether improvement in the measure is noted by an increase or decrease in the
@@ -219,7 +219,7 @@ class MeasureReport(FhirResourceBase):
             type_=type_,
             measure=measure,
             subject=subject,
-            date=date,
+            date_=date_,
             reporter=reporter,
             period=period,
             improvementNotation=improvementNotation,

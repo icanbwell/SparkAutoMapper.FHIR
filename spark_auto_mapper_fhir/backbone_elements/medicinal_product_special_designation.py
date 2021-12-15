@@ -46,7 +46,7 @@ if TYPE_CHECKING:
     # End Import for References for status
     # Import for CodeableConcept for status
     # End Import for CodeableConcept for status
-    # date (dateTime)
+    # date_ (dateTime)
     # species (CodeableConcept)
     # End Import for References for species
     # Import for CodeableConcept for species
@@ -74,7 +74,7 @@ class MedicinalProductSpecialDesignation(FhirBackboneElementBase):
         indicationCodeableConcept: Optional[CodeableConcept[GenericTypeCode]] = None,
         indicationReference: Optional[Reference[MedicinalProductIndication]] = None,
         status: Optional[CodeableConcept[GenericTypeCode]] = None,
-        date: Optional[FhirDateTime] = None,
+        date_: Optional[FhirDateTime] = None,
         species: Optional[CodeableConcept[GenericTypeCode]] = None,
     ) -> None:
         """
@@ -106,7 +106,7 @@ class MedicinalProductSpecialDesignation(FhirBackboneElementBase):
             :param indicationCodeableConcept: None
             :param indicationReference: None
             :param status: For example granted, pending, expired or withdrawn.
-            :param date: Date when the designation was granted.
+            :param date_: Date when the designation was granted.
             :param species: Animal species for which this applies.
         """
         super().__init__(
@@ -119,6 +119,6 @@ class MedicinalProductSpecialDesignation(FhirBackboneElementBase):
             indicationCodeableConcept=indicationCodeableConcept,
             indicationReference=indicationReference,
             status=status,
-            date=date,
+            date_=date_,
             species=species,
         )

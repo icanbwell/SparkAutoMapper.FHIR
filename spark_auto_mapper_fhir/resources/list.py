@@ -64,7 +64,7 @@ if TYPE_CHECKING:
     # Imports for References for encounter
     from spark_auto_mapper_fhir.resources.encounter import Encounter
 
-    # date (dateTime)
+    # date_ (dateTime)
     # source (Reference)
     # Imports for References for source
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
@@ -119,7 +119,7 @@ class List_(FhirResourceBase):
         code: Optional[CodeableConcept[ExampleUseCodesForListCode]] = None,
         subject: Optional[Reference[Union[Patient, Group, Device, Location]]] = None,
         encounter: Optional[Reference[Encounter]] = None,
-        date: Optional[FhirDateTime] = None,
+        date_: Optional[FhirDateTime] = None,
         source: Optional[
             Reference[Union[Practitioner, PractitionerRole, Patient, Device]]
         ] = None,
@@ -181,7 +181,7 @@ class List_(FhirResourceBase):
             :param subject: The common subject (or patient) of the resources that are in the list if there
         is one.
             :param encounter: The encounter that is the context in which this list was created.
-            :param date: The date that the list was prepared.
+            :param date_: The date that the list was prepared.
             :param source: The entity responsible for deciding what the contents of the list were. Where
         the list was created by a human, this is the same as the author of the list.
             :param orderedBy: What order applies to the items in the list.
@@ -206,7 +206,7 @@ class List_(FhirResourceBase):
             code=code,
             subject=subject,
             encounter=encounter,
-            date=date,
+            date_=date_,
             source=source,
             orderedBy=orderedBy,
             note=note,

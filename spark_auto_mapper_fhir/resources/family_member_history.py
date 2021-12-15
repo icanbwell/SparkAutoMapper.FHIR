@@ -63,7 +63,7 @@ if TYPE_CHECKING:
     # Imports for References for patient
     from spark_auto_mapper_fhir.resources.patient import Patient
 
-    # date (dateTime)
+    # date_ (dateTime)
     # name (string)
     # relationship (CodeableConcept)
     # Import for CodeableConcept for relationship
@@ -153,7 +153,7 @@ class FamilyMemberHistory(FhirResourceBase):
             CodeableConcept[FamilyHistoryAbsentReasonCode]
         ] = None,
         patient: Reference[Patient],
-        date: Optional[FhirDateTime] = None,
+        date_: Optional[FhirDateTime] = None,
         name: Optional[FhirString] = None,
         relationship: CodeableConcept[FamilyMember],
         sex: Optional[CodeableConcept[AdministrativeGenderCode]] = None,
@@ -243,7 +243,7 @@ class FamilyMemberHistory(FhirResourceBase):
         family member.
             :param dataAbsentReason: Describes why the family member's history is not available.
             :param patient: The person who this history concerns.
-            :param date: The date (and possibly time) when the family member history was recorded or
+            :param date_: The date (and possibly time) when the family member history was recorded or
         last updated.
             :param name: This will either be a name or a description; e.g. "Aunt Susan", "my cousin
         with the red hair".
@@ -289,7 +289,7 @@ class FamilyMemberHistory(FhirResourceBase):
             status=status,
             dataAbsentReason=dataAbsentReason,
             patient=patient,
-            date=date,
+            date_=date_,
             name=name,
             relationship=relationship,
             sex=sex,

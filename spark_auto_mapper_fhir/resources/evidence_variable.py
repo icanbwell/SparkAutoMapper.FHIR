@@ -47,7 +47,7 @@ if TYPE_CHECKING:
         PublicationStatusCode,
     )
 
-    # date (dateTime)
+    # date_ (dateTime)
     # publisher (string)
     # contact (ContactDetail)
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
@@ -130,7 +130,7 @@ class EvidenceVariable(FhirResourceBase):
         shortTitle: Optional[FhirString] = None,
         subtitle: Optional[FhirString] = None,
         status: PublicationStatusCode,
-        date: Optional[FhirDateTime] = None,
+        date_: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,
         contact: Optional[FhirList[ContactDetail]] = None,
         description: Optional[FhirMarkdown] = None,
@@ -224,7 +224,7 @@ class EvidenceVariable(FhirResourceBase):
         information about its content.
             :param status: The status of this evidence variable. Enables tracking the life-cycle of the
         content.
-            :param date: The date  (and optionally time) when the evidence variable was published. The
+            :param date_: The date  (and optionally time) when the evidence variable was published. The
         date must change when the business version changes and it must change if the
         status code changes. In addition, it should change when the substantive
         content of the evidence variable changes.
@@ -286,7 +286,7 @@ class EvidenceVariable(FhirResourceBase):
             shortTitle=shortTitle,
             subtitle=subtitle,
             status=status,
-            date=date,
+            date_=date_,
             publisher=publisher,
             contact=contact,
             description=description,

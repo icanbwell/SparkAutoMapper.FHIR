@@ -66,7 +66,7 @@ if TYPE_CHECKING:
     # Imports for References for encounter
     from spark_auto_mapper_fhir.resources.encounter import Encounter
 
-    # date (dateTime)
+    # date_ (dateTime)
     # author (Reference)
     # Imports for References for author
     from spark_auto_mapper_fhir.resources.practitioner import Practitioner
@@ -141,7 +141,7 @@ class Composition(FhirResourceBase):
         category: Optional[FhirList[CodeableConcept[DocumentClassValueSetCode]]] = None,
         subject: Optional[Reference[Resource]] = None,
         encounter: Optional[Reference[Encounter]] = None,
-        date: FhirDateTime,
+        date_: FhirDateTime,
         author: FhirList[
             Reference[
                 Union[
@@ -227,7 +227,7 @@ class Composition(FhirResourceBase):
         patients that share a common exposure).
             :param encounter: Describes the clinical encounter or type of care this documentation is
         associated with.
-            :param date: The composition editing time, when the composition was last logically changed
+            :param date_: The composition editing time, when the composition was last logically changed
         by the author.
             :param author: Identifies who is responsible for the information in the composition, not
         necessarily who typed it in.
@@ -258,7 +258,7 @@ class Composition(FhirResourceBase):
             category=category,
             subject=subject,
             encounter=encounter,
-            date=date,
+            date_=date_,
             author=author,
             title=title,
             confidentiality=confidentiality,

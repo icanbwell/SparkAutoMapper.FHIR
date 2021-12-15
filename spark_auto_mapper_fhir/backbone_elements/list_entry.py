@@ -28,7 +28,7 @@ if TYPE_CHECKING:
 
     # End Import for CodeableConcept for flag
     # deleted (boolean)
-    # date (dateTime)
+    # date_ (dateTime)
     # item (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -52,7 +52,7 @@ class ListEntry(FhirBackboneElementBase):
         modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         flag: Optional[CodeableConcept[PatientMedicineChangeTypesCode]] = None,
         deleted: Optional[FhirBoolean] = None,
-        date: Optional[FhirDateTime] = None,
+        date_: Optional[FhirDateTime] = None,
         item: Reference[Resource],
     ) -> None:
         """
@@ -80,7 +80,7 @@ class ListEntry(FhirBackboneElementBase):
             :param flag: The flag allows the system constructing the list to indicate the role and
         significance of the item in the list.
             :param deleted: True if this item is marked as deleted in the list.
-            :param date: When this item was added to the list.
+            :param date_: When this item was added to the list.
             :param item: A reference to the actual resource from which data was derived.
         """
         super().__init__(
@@ -89,6 +89,6 @@ class ListEntry(FhirBackboneElementBase):
             modifierExtension=modifierExtension,
             flag=flag,
             deleted=deleted,
-            date=date,
+            date_=date_,
             item=item,
         )

@@ -16,7 +16,7 @@ if TYPE_CHECKING:
     # id_ (string)
     # extension (Extension)
     # modifierExtension (Extension)
-    # date (dateTime)
+    # date_ (dateTime)
     # detail (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -41,7 +41,7 @@ class ImmunizationReaction(FhirBackboneElementBase):
         id_: Optional[FhirString] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         modifierExtension: Optional[FhirList[ExtensionBase]] = None,
-        date: Optional[FhirDateTime] = None,
+        date_: Optional[FhirDateTime] = None,
         detail: Optional[Reference[Observation]] = None,
         reported: Optional[FhirBoolean] = None,
     ) -> None:
@@ -68,7 +68,7 @@ class ImmunizationReaction(FhirBackboneElementBase):
         Modifier extensions SHALL NOT change the meaning of any elements on Resource
         or DomainResource (including cannot change the meaning of modifierExtension
         itself).
-            :param date: Date of reaction to the immunization.
+            :param date_: Date of reaction to the immunization.
             :param detail: Details of the reaction.
             :param reported: Self-reported indicator.
         """
@@ -76,7 +76,7 @@ class ImmunizationReaction(FhirBackboneElementBase):
             id_=id_,
             extension=extension,
             modifierExtension=modifierExtension,
-            date=date,
+            date_=date_,
             detail=detail,
             reported=reported,
         )
