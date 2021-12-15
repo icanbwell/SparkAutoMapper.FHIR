@@ -47,7 +47,7 @@ if TYPE_CHECKING:
         PublicationStatusCode,
     )
 
-    # date_ (dateTime)
+    # date (dateTime)
     # publisher (string)
     # contact (ContactDetail)
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
@@ -154,7 +154,7 @@ class RiskEvidenceSynthesis(FhirResourceBase):
         name: Optional[FhirString] = None,
         title: Optional[FhirString] = None,
         status: PublicationStatusCode,
-        date_: Optional[FhirDateTime] = None,
+        date: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,
         contact: Optional[FhirList[ContactDetail]] = None,
         description: Optional[FhirMarkdown] = None,
@@ -247,7 +247,7 @@ class RiskEvidenceSynthesis(FhirResourceBase):
             :param title: A short, descriptive, user-friendly title for the risk evidence synthesis.
             :param status: The status of this risk evidence synthesis. Enables tracking the life-cycle of
         the content.
-            :param date_: The date  (and optionally time) when the risk evidence synthesis was
+            :param date: The date  (and optionally time) when the risk evidence synthesis was
         published. The date must change when the business version changes and it must
         change if the status code changes. In addition, it should change when the
         substantive content of the risk evidence synthesis changes.
@@ -315,7 +315,7 @@ class RiskEvidenceSynthesis(FhirResourceBase):
             name=name,
             title=title,
             status=status,
-            date_=date_,
+            date=date,
             publisher=publisher,
             contact=contact,
             description=description,

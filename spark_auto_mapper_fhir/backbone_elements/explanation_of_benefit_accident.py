@@ -15,7 +15,7 @@ if TYPE_CHECKING:
     # id_ (string)
     # extension (Extension)
     # modifierExtension (Extension)
-    # date_ (date)
+    # date (date)
     # type_ (CodeableConcept)
     from spark_auto_mapper_fhir.complex_types.codeable_concept import CodeableConcept
 
@@ -49,7 +49,7 @@ class ExplanationOfBenefitAccident(FhirBackboneElementBase):
         id_: Optional[FhirString] = None,
         extension: Optional[FhirList[ExtensionBase]] = None,
         modifierExtension: Optional[FhirList[ExtensionBase]] = None,
-        date_: Optional[FhirDate] = None,
+        date: Optional[FhirDate] = None,
         type_: Optional[CodeableConcept[ActIncidentCode]] = None,
         locationAddress: Optional[Address] = None,
         locationReference: Optional[Reference[Location]] = None,
@@ -78,7 +78,7 @@ class ExplanationOfBenefitAccident(FhirBackboneElementBase):
         Modifier extensions SHALL NOT change the meaning of any elements on Resource
         or DomainResource (including cannot change the meaning of modifierExtension
         itself).
-            :param date_: Date of an accident event  related to the products and services contained in
+            :param date: Date of an accident event  related to the products and services contained in
         the claim.
             :param type_: The type or context of the accident event for the purposes of selection of
         potential insurance coverages and determination of coordination between
@@ -90,7 +90,7 @@ class ExplanationOfBenefitAccident(FhirBackboneElementBase):
             id_=id_,
             extension=extension,
             modifierExtension=modifierExtension,
-            date_=date_,
+            date=date,
             type_=type_,
             locationAddress=locationAddress,
             locationReference=locationReference,

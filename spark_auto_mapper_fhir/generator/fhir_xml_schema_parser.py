@@ -804,7 +804,6 @@ class FhirXmlSchemaParser:
                 "id",
                 "type",
                 "List",
-                "date",
             ]
             else f"{name}_"
         )

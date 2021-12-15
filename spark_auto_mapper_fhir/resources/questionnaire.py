@@ -53,7 +53,7 @@ if TYPE_CHECKING:
     # subjectType (ResourceType)
     from spark_auto_mapper_fhir.value_sets.resource_type import ResourceTypeCode
 
-    # date_ (dateTime)
+    # date (dateTime)
     # publisher (string)
     # contact (ContactDetail)
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
@@ -128,7 +128,7 @@ class Questionnaire(FhirResourceBase):
         status: PublicationStatusCode,
         experimental: Optional[FhirBoolean] = None,
         subjectType: Optional[FhirList[ResourceTypeCode]] = None,
-        date_: Optional[FhirDateTime] = None,
+        date: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,
         contact: Optional[FhirList[ContactDetail]] = None,
         description: Optional[FhirMarkdown] = None,
@@ -215,7 +215,7 @@ class Questionnaire(FhirResourceBase):
         for genuine usage.
             :param subjectType: The types of subjects that can be the subject of responses created for the
         questionnaire.
-            :param date_: The date  (and optionally time) when the questionnaire was published. The date
+            :param date: The date  (and optionally time) when the questionnaire was published. The date
         must change when the business version changes and it must change if the status
         code changes. In addition, it should change when the substantive content of
         the questionnaire changes.
@@ -266,7 +266,7 @@ class Questionnaire(FhirResourceBase):
             status=status,
             experimental=experimental,
             subjectType=subjectType,
-            date_=date_,
+            date=date,
             publisher=publisher,
             contact=contact,
             description=description,

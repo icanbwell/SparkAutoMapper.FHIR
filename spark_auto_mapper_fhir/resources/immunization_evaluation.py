@@ -48,7 +48,7 @@ if TYPE_CHECKING:
     # Imports for References for patient
     from spark_auto_mapper_fhir.resources.patient import Patient
 
-    # date_ (dateTime)
+    # date (dateTime)
     # authority (Reference)
     # Imports for References for authority
     from spark_auto_mapper_fhir.resources.organization import Organization
@@ -117,7 +117,7 @@ class ImmunizationEvaluation(FhirResourceBase):
         identifier: Optional[FhirList[Identifier]] = None,
         status: ImmunizationEvaluationStatusCodesCode,
         patient: Reference[Patient],
-        date_: Optional[FhirDateTime] = None,
+        date: Optional[FhirDateTime] = None,
         authority: Optional[Reference[Organization]] = None,
         targetDisease: CodeableConcept[ImmunizationEvaluationTargetDiseaseCodesCode],
         immunizationEvent: Reference[Immunization],
@@ -179,7 +179,7 @@ class ImmunizationEvaluation(FhirResourceBase):
             :param status: Indicates the current status of the evaluation of the vaccination
         administration event.
             :param patient: The individual for whom the evaluation is being done.
-            :param date_: The date the evaluation of the vaccine administration event was performed.
+            :param date: The date the evaluation of the vaccine administration event was performed.
             :param authority: Indicates the authority who published the protocol (e.g. ACIP).
             :param targetDisease: The vaccine preventable disease the dose is being evaluated against.
             :param immunizationEvent: The vaccine administration event being evaluated.
@@ -208,7 +208,7 @@ class ImmunizationEvaluation(FhirResourceBase):
             identifier=identifier,
             status=status,
             patient=patient,
-            date_=date_,
+            date=date,
             authority=authority,
             targetDisease=targetDisease,
             immunizationEvent=immunizationEvent,

@@ -25,7 +25,7 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for action
-    # date_ (dateTime)
+    # date (dateTime)
     # author (Reference)
     from spark_auto_mapper_fhir.complex_types.reference import Reference
 
@@ -50,7 +50,7 @@ class DetectedIssueMitigation(FhirBackboneElementBase):
         extension: Optional[FhirList[ExtensionBase]] = None,
         modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         action: CodeableConcept[DetectedIssueMitigationActionCode],
-        date_: Optional[FhirDateTime] = None,
+        date: Optional[FhirDateTime] = None,
         author: Optional[Reference[Union[Practitioner, PractitionerRole]]] = None,
     ) -> None:
         """
@@ -79,7 +79,7 @@ class DetectedIssueMitigation(FhirBackboneElementBase):
         itself).
             :param action: Describes the action that was taken or the observation that was made that
         reduces/eliminates the risk associated with the identified issue.
-            :param date_: Indicates when the mitigating action was documented.
+            :param date: Indicates when the mitigating action was documented.
             :param author: Identifies the practitioner who determined the mitigation and takes
         responsibility for the mitigation step occurring.
         """
@@ -88,6 +88,6 @@ class DetectedIssueMitigation(FhirBackboneElementBase):
             extension=extension,
             modifierExtension=modifierExtension,
             action=action,
-            date_=date_,
+            date=date,
             author=author,
         )
