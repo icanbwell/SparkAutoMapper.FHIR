@@ -70,7 +70,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.group import Group
     from spark_auto_mapper_fhir.resources.device import Device
 
-    # date (instant)
+    # date_ (instant)
     from spark_auto_mapper_fhir.fhir_types.instant import FhirInstant
 
     # author (Reference)
@@ -142,7 +142,7 @@ class DocumentReference(FhirResourceBase):
         subject: Optional[
             Reference[Union[Patient, Practitioner, Group, Device]]
         ] = None,
-        date: Optional[FhirInstant] = None,
+        date_: Optional[FhirInstant] = None,
         author: Optional[
             FhirList[
                 Reference[
@@ -231,7 +231,7 @@ class DocumentReference(FhirResourceBase):
         (patient or healthcare practitioner), a device (e.g. a machine) or even a
         group of subjects (such as a document about a herd of farm animals, or a set
         of patients that share a common exposure).
-            :param date: When the document reference was created.
+            :param date_: When the document reference was created.
             :param author: Identifies who is responsible for adding the information to the document.
             :param authenticator: Which person or organization authenticates that this document is valid.
             :param custodian: Identifies the organization or group who is responsible for ongoing
@@ -265,7 +265,7 @@ class DocumentReference(FhirResourceBase):
             type_=type_,
             category=category,
             subject=subject,
-            date=date,
+            date_=date_,
             author=author,
             authenticator=authenticator,
             custodian=custodian,

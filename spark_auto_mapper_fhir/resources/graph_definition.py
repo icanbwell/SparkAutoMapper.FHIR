@@ -42,7 +42,7 @@ if TYPE_CHECKING:
     )
 
     # experimental (boolean)
-    # date (dateTime)
+    # date_ (dateTime)
     # publisher (string)
     # contact (ContactDetail)
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
@@ -104,7 +104,7 @@ class GraphDefinition(FhirResourceBase):
         name: FhirString,
         status: PublicationStatusCode,
         experimental: Optional[FhirBoolean] = None,
-        date: Optional[FhirDateTime] = None,
+        date_: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,
         contact: Optional[FhirList[ContactDetail]] = None,
         description: Optional[FhirMarkdown] = None,
@@ -181,7 +181,7 @@ class GraphDefinition(FhirResourceBase):
             :param experimental: A Boolean value to indicate that this graph definition is authored for testing
         purposes (or education/evaluation/marketing) and is not intended to be used
         for genuine usage.
-            :param date: The date  (and optionally time) when the graph definition was published. The
+            :param date_: The date  (and optionally time) when the graph definition was published. The
         date must change when the business version changes and it must change if the
         status code changes. In addition, it should change when the substantive
         content of the graph definition changes.
@@ -219,7 +219,7 @@ class GraphDefinition(FhirResourceBase):
             name=name,
             status=status,
             experimental=experimental,
-            date=date,
+            date_=date_,
             publisher=publisher,
             contact=contact,
             description=description,

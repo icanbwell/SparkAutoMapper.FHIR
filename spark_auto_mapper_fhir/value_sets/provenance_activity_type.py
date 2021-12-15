@@ -23,12 +23,6 @@ class ProvenanceActivityTypeCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/CodeSystem/v3-DataOperation
-    """
-    codeset_v3_DataOperation: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-ActCode
     """
     codeset_v3_ActCode: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -37,6 +31,12 @@ class ProvenanceActivityTypeCode(GenericTypeCode):
     """
     codeset_v3_DocumentCompletion: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion"
+    )
+    """
+    http://terminology.hl7.org/CodeSystem/v3-DataOperation
+    """
+    codeset_v3_DataOperation: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
     )
     """
     http://terminology.hl7.org/CodeSystem/v3-ParticipationType

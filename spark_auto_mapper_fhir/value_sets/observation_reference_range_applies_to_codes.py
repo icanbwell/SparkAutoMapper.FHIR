@@ -20,13 +20,13 @@ class ObservationReferenceRangeAppliesToCodesCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://snomed.info/sct
-    """
-    codeset_sct: FhirUri = "http://snomed.info/sct"
-    """
     http://terminology.hl7.org/CodeSystem/v3-Race
     """
     codeset_v3_Race: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-Race"
+    """
+    http://snomed.info/sct
+    """
+    codeset_sct: FhirUri = "http://snomed.info/sct"
 
 
 class ObservationReferenceRangeAppliesToCodesCodeValues:

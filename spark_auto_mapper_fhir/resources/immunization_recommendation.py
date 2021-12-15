@@ -42,7 +42,7 @@ if TYPE_CHECKING:
     # Imports for References for patient
     from spark_auto_mapper_fhir.resources.patient import Patient
 
-    # date (dateTime)
+    # date_ (dateTime)
     # authority (Reference)
     # Imports for References for authority
     from spark_auto_mapper_fhir.resources.organization import Organization
@@ -78,7 +78,7 @@ class ImmunizationRecommendation(FhirResourceBase):
         modifierExtension: Optional[FhirList[ExtensionBase]] = None,
         identifier: Optional[FhirList[Identifier]] = None,
         patient: Reference[Patient],
-        date: FhirDateTime,
+        date_: FhirDateTime,
         authority: Optional[Reference[Organization]] = None,
         recommendation: FhirList[ImmunizationRecommendationRecommendation],
     ) -> None:
@@ -126,7 +126,7 @@ class ImmunizationRecommendation(FhirResourceBase):
         itself).
             :param identifier: A unique identifier assigned to this particular recommendation record.
             :param patient: The patient the recommendation(s) are for.
-            :param date: The date the immunization recommendation(s) were created.
+            :param date_: The date the immunization recommendation(s) were created.
             :param authority: Indicates the authority who published the protocol (e.g. ACIP).
             :param recommendation: Vaccine administration recommendations.
         """
@@ -142,7 +142,7 @@ class ImmunizationRecommendation(FhirResourceBase):
             modifierExtension=modifierExtension,
             identifier=identifier,
             patient=patient,
-            date=date,
+            date_=date_,
             authority=authority,
             recommendation=recommendation,
         )

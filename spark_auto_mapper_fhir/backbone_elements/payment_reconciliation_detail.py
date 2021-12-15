@@ -42,7 +42,7 @@ if TYPE_CHECKING:
 
     # response (Reference)
     # Imports for References for response
-    # date (date)
+    # date_ (date)
     # responsible (Reference)
     # Imports for References for responsible
     # payee (Reference)
@@ -74,7 +74,7 @@ class PaymentReconciliationDetail(FhirBackboneElementBase):
             Reference[Union[Practitioner, PractitionerRole, Organization]]
         ] = None,
         response: Optional[Reference[Resource]] = None,
-        date: Optional[FhirDate] = None,
+        date_: Optional[FhirDate] = None,
         responsible: Optional[Reference[PractitionerRole]] = None,
         payee: Optional[
             Reference[Union[Practitioner, PractitionerRole, Organization]]
@@ -110,7 +110,7 @@ class PaymentReconciliationDetail(FhirBackboneElementBase):
             :param request: A resource, such as a Claim, the evaluation of which could lead to payment.
             :param submitter: The party which submitted the claim or financial transaction.
             :param response: A resource, such as a ClaimResponse, which contains a commitment to payment.
-            :param date: The date from the response resource containing a commitment to pay.
+            :param date_: The date from the response resource containing a commitment to pay.
             :param responsible: A reference to the individual who is responsible for inquiries regarding the
         response and its payment.
             :param payee: The party which is receiving the payment.
@@ -126,7 +126,7 @@ class PaymentReconciliationDetail(FhirBackboneElementBase):
             request=request,
             submitter=submitter,
             response=response,
-            date=date,
+            date_=date_,
             responsible=responsible,
             payee=payee,
             amount=amount,

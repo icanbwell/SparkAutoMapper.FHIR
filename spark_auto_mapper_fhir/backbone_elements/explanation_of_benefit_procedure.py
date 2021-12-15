@@ -28,7 +28,7 @@ if TYPE_CHECKING:
     )
 
     # End Import for CodeableConcept for type_
-    # date (dateTime)
+    # date_ (dateTime)
     # procedureCodeableConcept (CodeableConcept)
     # End Import for References for procedureCodeableConcept
     # Import for CodeableConcept for procedureCodeableConcept
@@ -67,7 +67,7 @@ class ExplanationOfBenefitProcedure(FhirBackboneElementBase):
         type_: Optional[
             FhirList[CodeableConcept[ExampleProcedureTypeCodesCode]]
         ] = None,
-        date: Optional[FhirDateTime] = None,
+        date_: Optional[FhirDateTime] = None,
         procedureCodeableConcept: Optional[
             CodeableConcept[ICD_10ProcedureCodesCode]
         ] = None,
@@ -100,7 +100,7 @@ class ExplanationOfBenefitProcedure(FhirBackboneElementBase):
         itself).
             :param sequence: A number to uniquely identify procedure entries.
             :param type_: When the condition was observed or the relative ranking.
-            :param date: Date and optionally time the procedure was performed.
+            :param date_: Date and optionally time the procedure was performed.
             :param procedureCodeableConcept: None
             :param procedureReference: None
             :param udi: Unique Device Identifiers associated with this line item.
@@ -111,7 +111,7 @@ class ExplanationOfBenefitProcedure(FhirBackboneElementBase):
             modifierExtension=modifierExtension,
             sequence=sequence,
             type_=type_,
-            date=date,
+            date_=date_,
             procedureCodeableConcept=procedureCodeableConcept,
             procedureReference=procedureReference,
             udi=udi,

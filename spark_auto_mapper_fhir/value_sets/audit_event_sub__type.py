@@ -20,13 +20,13 @@ class AuditEventSub_TypeCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://dicom.nema.org/resources/ontology/DCM
-    """
-    codeset_DCM: FhirUri = "http://dicom.nema.org/resources/ontology/DCM"
-    """
     http://hl7.org/fhir/restful-interaction
     """
     codeset_restful_interaction: FhirUri = "http://hl7.org/fhir/restful-interaction"
+    """
+    http://dicom.nema.org/resources/ontology/DCM
+    """
+    codeset_DCM: FhirUri = "http://dicom.nema.org/resources/ontology/DCM"
 
 
 class AuditEventSub_TypeCodeValues:

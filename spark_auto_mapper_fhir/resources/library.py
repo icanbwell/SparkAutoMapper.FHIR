@@ -66,7 +66,7 @@ if TYPE_CHECKING:
     # Imports for References for subjectReference
     from spark_auto_mapper_fhir.resources.group import Group
 
-    # date (dateTime)
+    # date_ (dateTime)
     # publisher (string)
     # contact (ContactDetail)
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
@@ -152,7 +152,7 @@ class Library(FhirResourceBase):
         type_: CodeableConcept[LibraryTypeCode],
         subjectCodeableConcept: Optional[CodeableConcept[SubjectTypeCode]] = None,
         subjectReference: Optional[Reference[Group]] = None,
-        date: Optional[FhirDateTime] = None,
+        date_: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,
         contact: Optional[FhirList[ContactDetail]] = None,
         description: Optional[FhirMarkdown] = None,
@@ -254,7 +254,7 @@ class Library(FhirResourceBase):
         Asset Collection, or Module Definition.
             :param subjectCodeableConcept: None
             :param subjectReference: None
-            :param date: The date  (and optionally time) when the library was published. The date must
+            :param date_: The date  (and optionally time) when the library was published. The date must
         change when the business version changes and it must change if the status code
         changes. In addition, it should change when the substantive content of the
         library changes.
@@ -322,7 +322,7 @@ class Library(FhirResourceBase):
             type_=type_,
             subjectCodeableConcept=subjectCodeableConcept,
             subjectReference=subjectReference,
-            date=date,
+            date_=date_,
             publisher=publisher,
             contact=contact,
             description=description,

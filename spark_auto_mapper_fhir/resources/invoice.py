@@ -58,7 +58,7 @@ if TYPE_CHECKING:
     from spark_auto_mapper_fhir.resources.organization import Organization
     from spark_auto_mapper_fhir.resources.related_person import RelatedPerson
 
-    # date (dateTime)
+    # date_ (dateTime)
     # participant (Invoice.Participant)
     from spark_auto_mapper_fhir.backbone_elements.invoice_participant import (
         InvoiceParticipant,
@@ -122,7 +122,7 @@ class Invoice(FhirResourceBase):
         recipient: Optional[
             Reference[Union[Organization, Patient, RelatedPerson]]
         ] = None,
-        date: Optional[FhirDateTime] = None,
+        date_: Optional[FhirDateTime] = None,
         participant: Optional[FhirList[InvoiceParticipant]] = None,
         issuer: Optional[Reference[Organization]] = None,
         account: Optional[Reference[Account]] = None,
@@ -185,7 +185,7 @@ class Invoice(FhirResourceBase):
             :param subject: The individual or set of individuals receiving the goods and services billed
         in this invoice.
             :param recipient: The individual or Organization responsible for balancing of this invoice.
-            :param date: Date/time(s) of when this Invoice was posted.
+            :param date_: Date/time(s) of when this Invoice was posted.
             :param participant: Indicates who or what performed or participated in the charged service.
             :param issuer: The organizationissuing the Invoice.
             :param account: Account which is supposed to be balanced with this Invoice.
@@ -217,7 +217,7 @@ class Invoice(FhirResourceBase):
             type_=type_,
             subject=subject,
             recipient=recipient,
-            date=date,
+            date_=date_,
             participant=participant,
             issuer=issuer,
             account=account,

@@ -46,7 +46,7 @@ if TYPE_CHECKING:
     )
 
     # experimental (boolean)
-    # date (dateTime)
+    # date_ (dateTime)
     # publisher (string)
     # contact (ContactDetail)
     from spark_auto_mapper_fhir.complex_types.contact_detail import ContactDetail
@@ -112,7 +112,7 @@ class ValueSet(FhirResourceBase):
         title: Optional[FhirString] = None,
         status: PublicationStatusCode,
         experimental: Optional[FhirBoolean] = None,
-        date: Optional[FhirDateTime] = None,
+        date_: Optional[FhirDateTime] = None,
         publisher: Optional[FhirString] = None,
         contact: Optional[FhirList[ContactDetail]] = None,
         description: Optional[FhirMarkdown] = None,
@@ -196,7 +196,7 @@ class ValueSet(FhirResourceBase):
             :param experimental: A Boolean value to indicate that this value set is authored for testing
         purposes (or education/evaluation/marketing) and is not intended to be used
         for genuine usage.
-            :param date: The date (and optionally time) when the value set was created or revised (e.g.
+            :param date_: The date (and optionally time) when the value set was created or revised (e.g.
         the 'content logical definition').
             :param publisher: The name of the organization or individual that published the value set.
             :param contact: Contact details to assist a user in finding and communicating with the
@@ -242,7 +242,7 @@ class ValueSet(FhirResourceBase):
             title=title,
             status=status,
             experimental=experimental,
-            date=date,
+            date_=date_,
             publisher=publisher,
             contact=contact,
             description=description,
