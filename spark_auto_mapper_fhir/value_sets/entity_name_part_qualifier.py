@@ -20,16 +20,16 @@ class EntityNamePartQualifierCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
-    http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifier
-    """
-    codeset_v3_EntityNamePartQualifier: FhirUri = (
-        "http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifier"
-    )
-    """
     http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2
     """
     codeset_v3_EntityNamePartQualifierR2: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2"
+    )
+    """
+    http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifier
+    """
+    codeset_v3_EntityNamePartQualifier: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifier"
     )
 
 

@@ -6,7 +6,9 @@ from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.extensions.custom.base_extension_item import (
+    BaseExtensionItem,
+)
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 from spark_fhir_schemas.r4.complex_types.annotation import AnnotationSchema
@@ -46,7 +48,7 @@ class Annotation(FhirComplexTypeBase):
         self,
         *,
         id_: Optional[FhirString] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None,
+        extension: Optional[FhirList[BaseExtensionItem]] = None,
         authorReference: Optional[
             Reference[Union[Practitioner, Patient, RelatedPerson, Organization]]
         ] = None,

@@ -6,7 +6,9 @@ from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.extensions.custom.base_extension_item import (
+    BaseExtensionItem,
+)
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
@@ -56,7 +58,7 @@ class Meta(FhirComplexTypeBase):
         self,
         *,
         id_: Optional[FhirString] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None,
+        extension: Optional[FhirList[BaseExtensionItem]] = None,
         versionId: Optional[FhirId] = None,
         lastUpdated: Optional[FhirInstant] = None,
         source: Optional[FhirUri] = None,

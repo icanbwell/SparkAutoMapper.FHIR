@@ -19,7 +19,7 @@ def import_submodules(
     results = {}
     errors = {}
     # noinspection Mypy
-    for loader, name, is_pkg in pkgutil.walk_packages(package.__path__):  # type: ignore
+    for loader, name, is_pkg in pkgutil.walk_packages(package.__path__):
         full_name = package.__name__ + "." + name
         try:
             results[full_name] = importlib.import_module(full_name)
