@@ -14,7 +14,7 @@ from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 {% if fhir_entity.cleaned_name != "Meta" %}
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 {% endif %}
-from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.extensions.custom.base_extension_item import BaseExtensionItem
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
@@ -118,7 +118,7 @@ class {{fhir_entity.cleaned_name}}(FhirComplexTypeBase):
                 {{ 'FhirList[' -}}
             {% endif -%}
             {% if property.cleaned_type == "Extension" %}
-            {{ 'ExtensionBase' -}}
+            {{ 'BaseExtensionItem' -}}
             {% else %}
             {{ property.cleaned_type | replace(".","") -}}
             {%  endif %}
