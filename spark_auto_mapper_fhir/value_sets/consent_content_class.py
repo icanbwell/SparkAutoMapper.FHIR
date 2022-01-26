@@ -24,13 +24,13 @@ class ConsentContentClassCode(GenericTypeCode):
     """
     codeset_resource_types: FhirUri = "http://hl7.org/fhir/resource-types"
     """
-    urn:ietf:rfc:3986
-    """
-    codeset_urn_ietf_rfc_3986: FhirUri = "urn:ietf:rfc:3986"
-    """
     urn:ietf:bcp:13
     """
     codeset_urn_ietf_bcp_13: FhirUri = "urn:ietf:bcp:13"
+    """
+    urn:ietf:rfc:3986
+    """
+    codeset_urn_ietf_rfc_3986: FhirUri = "urn:ietf:rfc:3986"
 
 
 class ConsentContentClassCodeValues:

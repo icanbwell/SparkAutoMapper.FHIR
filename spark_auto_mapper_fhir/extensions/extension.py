@@ -12,6 +12,9 @@ from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
+from spark_auto_mapper_fhir.extensions.custom.base_extension_item import (
+    BaseExtensionItem,
+)
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_fhir_schemas.r4.complex_types.extension import ExtensionSchema
@@ -183,7 +186,7 @@ class Extension(ExtensionBase):
         self,
         *,
         id_: Optional[FhirString] = None,
-        extension: Optional[FhirList[ExtensionBase]] = None,
+        extension: Optional[FhirList[BaseExtensionItem]] = None,
         url: Optional[FhirUri] = None,
         valueBase64Binary: Optional[FhirBase64Binary] = None,
         valueBoolean: Optional[FhirBoolean] = None,
