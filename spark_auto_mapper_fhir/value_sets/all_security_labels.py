@@ -25,15 +25,15 @@ class AllSecurityLabelsCode(GenericTypeCode):
         "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
     )
     """
-    http://terminology.hl7.org/CodeSystem/v3-ActCode
-    """
-    codeset_v3_ActCode: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
-    """
     http://terminology.hl7.org/CodeSystem/v3-Confidentiality
     """
     codeset_v3_Confidentiality: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
     )
+    """
+    http://terminology.hl7.org/CodeSystem/v3-ActCode
+    """
+    codeset_v3_ActCode: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
     """
     http://terminology.hl7.org/CodeSystem/v3-ActUSPrivacyLaw
     """
