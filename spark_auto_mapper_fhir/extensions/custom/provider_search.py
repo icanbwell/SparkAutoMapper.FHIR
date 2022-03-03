@@ -22,12 +22,13 @@ class ProviderSearchExtension(ExtensionBase):
     # noinspection PyPep8Naming
     def __init__(
         self,
+        *,
+        id_: Optional[FhirId] = None,
         forSystem: ProviderSearchSystemExtensionItem,
         searchCharacteristic: Optional[
             FhirList[SearchCharacteristicExtensionItem]
         ] = None,
         availabilityScore: Optional[AvailabilityScoreExtensionItem] = None,
-        id_: Optional[FhirId] = None,
     ) -> None:
         """
 
@@ -38,8 +39,8 @@ class ProviderSearchExtension(ExtensionBase):
         """
 
         super().__init__(
-            url=ProviderSearchExtension.codeset,
             id_=id_,
+            url=ProviderSearchExtension.codeset,
             extension=[availabilityScore, searchCharacteristic, forSystem],
         )
 

@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, Any
 
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
@@ -21,7 +21,7 @@ class BaseExtensionItem(ExtensionBase):
     def __init__(
         self,
         *,
-        id_: Optional[FhirString] = None,
+        id_: Optional[FhirId] = None,
         url: Optional[FhirUri] = None,
         valueBoolean: Optional[FhirBoolean] = None,
         valueCode: Optional[GenericTypeCode] = None,
@@ -37,6 +37,7 @@ class BaseExtensionItem(ExtensionBase):
         valueUri: Optional[FhirUri] = None,
         valueUrl: Optional[FhirUrl] = None,
         include_null_properties: bool = True,
+        **kwargs: Any  # allow additional properties
     ) -> None:
         super().__init__(
             id_=id_,
@@ -55,5 +56,6 @@ class BaseExtensionItem(ExtensionBase):
             valueUnsignedInt=valueUnsignedInt,
             valueUri=valueUri,
             valueUrl=valueUrl,
+            **kwargs
         )
         super().include_null_properties(include_null_properties=include_null_properties)
