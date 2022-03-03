@@ -19,7 +19,6 @@ from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_fhir_schemas.r4.complex_types.extension import ExtensionSchema
 
-
 if TYPE_CHECKING:
     pass
     # id_ (string)
@@ -185,7 +184,7 @@ class Extension(ExtensionBase):
     def __init__(
         self,
         *,
-        id_: Optional[FhirString] = None,
+        id_: Optional[FhirId] = None,
         extension: Optional[FhirList[BaseExtensionItem]] = None,
         url: Optional[FhirUri] = None,
         valueBase64Binary: Optional[FhirBase64Binary] = None,
