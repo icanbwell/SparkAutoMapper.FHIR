@@ -1,7 +1,7 @@
 from typing import Optional
 
-from spark_auto_mapper_fhir.extensions.custom.base_extension_item import (
-    BaseExtensionItem,
+from spark_auto_mapper_fhir.extensions.custom.nested_extension_item import (
+    NestedExtensionItem,
 )
 from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
@@ -9,7 +9,7 @@ from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
 
 # noinspection SpellCheckingInspection
-class EmpiProcessingStatusExtensionItem(BaseExtensionItem):
+class EmpiProcessingStatusExtensionItem(NestedExtensionItem):
     # noinspection PyPep8Naming
     def __init__(
         self,

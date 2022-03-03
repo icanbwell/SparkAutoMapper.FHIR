@@ -16,7 +16,12 @@ from spark_auto_mapper_fhir.fhir_types.url import FhirUrl
 from spark_auto_mapper_fhir.value_sets.generic_type import GenericTypeCode
 
 
-class BaseExtensionItem(ExtensionBase):
+class NestedExtensionItem(ExtensionBase):
+    """
+    All nested extensions MUST derive from this class so the default properties are available.  Otherwise, Spark
+    complains that some properties are not present in the data frame
+    """
+
     # noinspection PyPep8Naming
     def __init__(
         self,
@@ -58,4 +63,6 @@ class BaseExtensionItem(ExtensionBase):
             valueUrl=valueUrl,
             **kwargs
         )
+        # must set this to true so all null properties are available in the data frame otherwise
+        #   Spark will complain
         super().include_null_properties(include_null_properties=include_null_properties)

@@ -7,8 +7,8 @@ from spark_auto_mapper_fhir.fhir_types.date_time import FhirDateTime
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
-from spark_auto_mapper_fhir.extensions.custom.base_extension_item import (
-    BaseExtensionItem,
+from spark_auto_mapper_fhir.extensions.custom.nested_extension_item import (
+    NestedExtensionItem,
 )
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
@@ -58,7 +58,7 @@ class TriggerDefinition(FhirComplexTypeBase):
         self,
         *,
         id_: Optional[FhirString] = None,
-        extension: Optional[FhirList[BaseExtensionItem]] = None,
+        extension: Optional[FhirList[NestedExtensionItem]] = None,
         type_: TriggerTypeCode,
         name: Optional[FhirString] = None,
         timingTiming: Optional[Timing] = None,
