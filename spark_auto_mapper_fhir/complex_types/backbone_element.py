@@ -5,8 +5,8 @@ from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
-from spark_auto_mapper_fhir.extensions.custom.base_extension_item import (
-    BaseExtensionItem,
+from spark_auto_mapper_fhir.extensions.custom.nested_extension_item import (
+    NestedExtensionItem,
 )
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
@@ -34,8 +34,8 @@ class BackboneElement(FhirComplexTypeBase):
         self,
         *,
         id_: Optional[FhirString] = None,
-        extension: Optional[FhirList[BaseExtensionItem]] = None,
-        modifierExtension: Optional[FhirList[BaseExtensionItem]] = None,
+        extension: Optional[FhirList[NestedExtensionItem]] = None,
+        modifierExtension: Optional[FhirList[NestedExtensionItem]] = None,
     ) -> None:
         """
             Base definition for all elements that are defined inside a resource - but not

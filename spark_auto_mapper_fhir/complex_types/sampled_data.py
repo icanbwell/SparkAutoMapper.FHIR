@@ -5,8 +5,8 @@ from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
 from spark_auto_mapper_fhir.fhir_types.string import FhirString
 
-from spark_auto_mapper_fhir.extensions.custom.base_extension_item import (
-    BaseExtensionItem,
+from spark_auto_mapper_fhir.extensions.custom.nested_extension_item import (
+    NestedExtensionItem,
 )
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
@@ -47,7 +47,7 @@ class SampledData(FhirComplexTypeBase):
         self,
         *,
         id_: Optional[FhirString] = None,
-        extension: Optional[FhirList[BaseExtensionItem]] = None,
+        extension: Optional[FhirList[NestedExtensionItem]] = None,
         origin: Quantity,
         period: FhirDecimal,
         factor: Optional[FhirDecimal] = None,
