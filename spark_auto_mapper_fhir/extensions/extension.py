@@ -305,7 +305,9 @@ class Extension(ExtensionBase):
         # set the schema on any nested extensions so each item in the list looks the same to Spark
         if extension is not None:
             extension.set_children_schema(
-                ExtensionSchema.get_schema(include_extension=True)
+                ExtensionSchema.get_schema(
+                    include_extension=True, extension_fields=None
+                )
             )
 
         super().__init__(
