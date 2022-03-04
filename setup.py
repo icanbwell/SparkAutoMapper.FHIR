@@ -54,7 +54,13 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/imranq2/SparkAutoMapper.FHIR",
     packages=find_packages(),
-    install_requires=[],
+    install_requires=[
+        "logger",
+        "pyspark==3.1.1",
+        "sparkautomapper>=0.2.57",
+        "sparkfhirschemas>=0.1.36",
+        "deprecated",
+    ],
     classifiers=[
         "Development Status :: 4 - Beta",
         "Programming Language :: Python :: 3",
