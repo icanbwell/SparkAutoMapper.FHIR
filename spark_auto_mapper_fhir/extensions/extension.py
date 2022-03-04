@@ -301,6 +301,13 @@ class Extension(ExtensionBase):
             :param valueDosage: None
             :param valueMeta: None
         """
+
+        # set the schema on any nested extensions so each item in the list looks the same to Spark
+        if extension is not None:
+            extension.set_children_schema(
+                ExtensionSchema.get_schema(include_extension=True)
+            )
+
         super().__init__(
             id_=id_,
             extension=extension,

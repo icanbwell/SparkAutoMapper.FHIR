@@ -41,6 +41,7 @@ update: down Pipfile.lock setup-pre-commit  ## Updates all the packages using Pi
 .PHONY:tests
 tests: up
 	docker-compose run --rm --name sam_fhir dev pytest tests
+
 .PHONY:continuous_integration
 continuous_integration: run-pre-commit
 	docker-compose run --rm --name sam_fhir dev python setup.py install && \
