@@ -40,8 +40,8 @@ class ProviderSearchExtension(ExtensionBase):
 
         super().__init__(
             id_=id_,
-            url=ProviderSearchExtension.codeset,
             extension=[availabilityScore, searchCharacteristic, forSystem],
+            url=ProviderSearchExtension.codeset,
         )
 
     # noinspection PyMethodParameters

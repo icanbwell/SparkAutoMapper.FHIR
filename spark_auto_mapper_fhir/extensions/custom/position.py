@@ -11,12 +11,12 @@ from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 class PositionExtension(ExtensionBase):
     # noinspection PyPep8Naming
     def __init__(
-        self,
-        *,
-        id_: Optional[FhirId] = None,
-        longitude: FhirDecimal,
-        latitude: FhirDecimal,
-        altitude: Optional[FhirDecimal] = None,
+            self,
+            *,
+            id_: Optional[FhirId] = None,
+            longitude: FhirDecimal,
+            latitude: FhirDecimal,
+            altitude: Optional[FhirDecimal] = None,
     ) -> None:
         """
         Position Extension type in FHIR
@@ -40,7 +40,7 @@ class PositionExtension(ExtensionBase):
                 )
             )
         super().__init__(
-            id_=id_, url=self.__class__.codeset, extension=FhirList(position_extensions)
+            id_=id_, extension=FhirList(position_extensions), url=self.__class__.codeset
         )
 
     # noinspection PyMethodParameters

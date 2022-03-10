@@ -13,11 +13,11 @@ from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 class InsurancePlanExtension(ExtensionBase):
     # noinspection PyPep8Naming
     def __init__(
-        self,
-        *,
-        id_: Optional[FhirId] = None,
-        url: Optional[FhirUri] = None,
-        extension: Optional[FhirList[InsurancePlanItemExtension]] = None,
+            self,
+            *,
+            id_: Optional[FhirId] = None,
+            url: Optional[FhirUri] = None,
+            extension: Optional[FhirList[InsurancePlanItemExtension]] = None,
     ) -> None:
         """
         InsurancePlanExtension Extension type in FHIR
@@ -27,7 +27,7 @@ class InsurancePlanExtension(ExtensionBase):
         :param extension:
         """
         super().__init__(
-            id_=id_, url=url or InsurancePlanExtension.codeset, extension=extension
+            id_=id_, extension=extension, url=url or InsurancePlanExtension.codeset
         )
 
     # noinspection PyMethodParameters
