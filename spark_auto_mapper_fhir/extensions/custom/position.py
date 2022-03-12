@@ -40,7 +40,7 @@ class PositionExtension(ExtensionBase):
                 )
             )
         super().__init__(
-            id_=id_, url=self.__class__.codeset, extension=FhirList(position_extensions)
+            id_=id_, extension=FhirList(position_extensions), url=self.__class__.codeset
         )
 
     # noinspection PyMethodParameters

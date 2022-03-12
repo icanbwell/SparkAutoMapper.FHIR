@@ -1,5 +1,5 @@
 from datetime import date, datetime
-from typing import Optional
+from typing import Optional, List, Union
 
 from pyspark.sql import DataFrame, Column
 from pyspark.sql.functions import lit
@@ -30,3 +30,9 @@ class FhirValueSetBase(AutoMapperDataTypeBase):
             )
 
         raise ValueError(f"value: {self.value} is not str or AutoMapperDataTypeBase")
+
+    @property
+    def children(
+        self,
+    ) -> Union[AutoMapperDataTypeBase, List[AutoMapperDataTypeBase]]:
+        return self.value if isinstance(self.value, AutoMapperDataTypeBase) else []

@@ -48,8 +48,8 @@ class EmpiProcessingStatusExtension(ExtensionBase):
         self.extensions = processing_status_extensions
         super().__init__(
             id_=id_,
-            url=self.__class__.codeset,
             extension=FhirList(processing_status_extensions),
+            url=self.__class__.codeset,
         )
 
     # noinspection PyMethodParameters
