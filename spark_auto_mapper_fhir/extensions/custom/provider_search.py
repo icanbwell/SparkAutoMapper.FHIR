@@ -6,7 +6,7 @@ from spark_auto_mapper_fhir.extensions.custom.provider_search_availability_score
 from spark_auto_mapper_fhir.extensions.custom.provider_search_characteristic import (
     SearchCharacteristicExtensionItem,
 )
-from spark_auto_mapper_fhir.extensions.custom.provider_search_system import (
+from spark_auto_mapper_fhir.extensions.custom.provider_search_system_item import (
     ProviderSearchSystemExtensionItem,
 )
 
