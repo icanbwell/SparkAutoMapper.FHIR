@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import List, Optional, TYPE_CHECKING, Union
 
 from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.list import FhirList
@@ -54,6 +54,8 @@ class Element(FhirComplexTypeBase):
         )
 
     def get_schema(
-        self, include_extension: bool
+        self, include_extension: bool, extension_fields: Optional[List[str]] = None
     ) -> Optional[Union[StructType, DataType]]:
-        return ElementSchema.get_schema(include_extension=include_extension)
+        return ElementSchema.get_schema(
+            include_extension=include_extension, extension_fields=extension_fields
+        )

@@ -125,12 +125,13 @@ class {{fhir_entity.cleaned_name}}(FhirResourceBase):
         )
 
     def get_schema(
-        self, include_extension: bool
+        self, include_extension: bool,
+        extension_fields: Optional[List[str]] = None
     ) -> Optional[Union[StructType, DataType]]:
 {% if fhir_entity.cleaned_name in ["DomainResource", "Resource"] %}
         return None
 {% elif fhir_entity.cleaned_name == "List_" %}
-        return ListSchema.get_schema(include_extension=include_extension)
+        return ListSchema.get_schema(include_extension=include_extension,extension_fields=extension_fields)
 {% else %}
-        return {{ fhir_entity.cleaned_name }}Schema.get_schema(include_extension=include_extension)
+        return {{ fhir_entity.cleaned_name }}Schema.get_schema(include_extension=include_extension,extension_fields=extension_fields)
 {% endif %}

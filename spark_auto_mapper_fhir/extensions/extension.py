@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import List, Optional, TYPE_CHECKING, Union
 
 from pyspark.sql.types import StructType, DataType
 from spark_auto_mapper_fhir.fhir_types.boolean import FhirBoolean
@@ -18,6 +18,7 @@ from spark_auto_mapper_fhir.extensions.custom.nested_extension_item import (
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_fhir_schemas.r4.complex_types.extension import ExtensionSchema
+
 
 if TYPE_CHECKING:
     pass
@@ -184,7 +185,7 @@ class Extension(ExtensionBase):
     def __init__(
         self,
         *,
-        id_: Optional[FhirId] = None,
+        id_: Optional[FhirString] = None,
         extension: Optional[FhirList[NestedExtensionItem]] = None,
         url: Optional[FhirUri] = None,
         valueBase64Binary: Optional[FhirBase64Binary] = None,
@@ -301,15 +302,6 @@ class Extension(ExtensionBase):
             :param valueDosage: None
             :param valueMeta: None
         """
-
-        # set the schema on any nested extensions so each item in the list looks the same to Spark
-        if extension is not None:
-            extension.set_children_schema(
-                ExtensionSchema.get_schema(
-                    include_extension=True, extension_fields=None
-                )
-            )
-
         super().__init__(
             id_=id_,
             extension=extension,
@@ -367,6 +359,8 @@ class Extension(ExtensionBase):
         )
 
     def get_schema(
-        self, include_extension: bool
+        self, include_extension: bool, extension_fields: Optional[List[str]] = None
     ) -> Optional[Union[StructType, DataType]]:
-        return ExtensionSchema.get_schema(include_extension=include_extension)
+        return ExtensionSchema.get_schema(
+            include_extension=include_extension, extension_fields=extension_fields
+        )
