@@ -40,7 +40,7 @@ class NewPatientsExtension(ExtensionBase):
         super().__init__(
             url=NewPatientsExtension.codeset,
             id_=id_,
-            extension=[acceptingPatients, fromNetwork, characteristics],
+            extension=FhirList([acceptingPatients, fromNetwork, characteristics]),
         )
 
     # noinspection PyMethodParameters
