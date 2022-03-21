@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Optional, Union
+from typing import Optional, Union, List
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
@@ -33,6 +33,6 @@ class ResourceContainer(FhirResourceBase):
         )
 
     def get_schema(
-        self, include_extension: bool
+        self, include_extension: bool, extension_fields: Optional[List[str]] = None
     ) -> Optional[Union[StructType, DataType]]:
         return None
