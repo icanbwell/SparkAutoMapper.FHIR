@@ -16,7 +16,7 @@ pip install sparkautomapper.fhir
 ```python
 from spark_auto_mapper.automappers.automapper import AutoMapper
 from spark_auto_mapper.helpers.automapper_helpers import AutoMapperHelpers as A
-mapper = AutoMapperFhir(
+mapper = AutoMapper(
     view="members",
     source_view="patients",
     keys=["member_id"]
