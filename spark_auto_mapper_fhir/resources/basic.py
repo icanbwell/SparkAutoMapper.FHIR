@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing import Optional, TYPE_CHECKING, Union
+from typing import List, Optional, TYPE_CHECKING, Union
 
 # noinspection PyPackageRequirements
 from pyspark.sql.types import StructType, DataType
@@ -165,6 +165,8 @@ class Basic(FhirResourceBase):
         )
 
     def get_schema(
-        self, include_extension: bool
+        self, include_extension: bool, extension_fields: Optional[List[str]] = None
     ) -> Optional[Union[StructType, DataType]]:
-        return BasicSchema.get_schema(include_extension=include_extension)
+        return BasicSchema.get_schema(
+            include_extension=include_extension, extension_fields=extension_fields
+        )

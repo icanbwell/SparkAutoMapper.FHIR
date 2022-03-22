@@ -6,6 +6,8 @@ services:
       dockerfile: spark.Dockerfile
       context: .
     volumes:
-      - ./:/SparkAutoMapper.FHIR/
+    - ./:/SparkAutoMapper.FHIR/
+    # ----- uncomment the below to get the code from local folders instead of pypi ----
+#    - ../SparkAutoMapper/spark_auto_mapper:/opt/project/spark_auto_mapper
     container_name: sam_fhir_dev
     working_dir: /SparkAutoMapper.FHIR

@@ -6,8 +6,8 @@ name = "pypi"
 [packages]
 logger = "*"
 pyspark = "==3.1.1" # should match the version of spark we use for testing
-sparkautomapper = ">=1.0.3"
-sparkfhirschemas = ">=0.1.36"
+sparkautomapper = ">=1.0.6"
+sparkfhirschemas = ">=0.1.37"
 deprecated = "*"
 
 [dev-packages]
@@ -17,7 +17,7 @@ twine=">=3.8.0"
 pre-commit=">=2.17.0"
 autoflake=">=1.4"
 flake8 = ">=4.0.1"
-mypy = ">=0.931"
+mypy = ">=0.941"
 pytest = ">=7.0.1"
 black = ">=22.1.0"
 importlib-metadata = ">=4.0.1"

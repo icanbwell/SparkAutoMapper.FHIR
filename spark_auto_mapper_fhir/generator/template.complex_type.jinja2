@@ -15,7 +15,7 @@ from spark_auto_mapper_fhir.fhir_types.uri import FhirUri
 from spark_auto_mapper_fhir.complex_types.meta import Meta
 {% endif %}
 from spark_auto_mapper_fhir.extensions.extension_base import ExtensionBase
-from spark_auto_mapper_fhir.extensions.custom.base_extension_item import BaseExtensionItem
+from spark_auto_mapper_fhir.extensions.custom.nested_extension_item import NestedExtensionItem
 from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
@@ -119,7 +119,7 @@ class {{fhir_entity.cleaned_name}}(FhirComplexTypeBase):
                 {{ 'FhirList[' -}}
             {% endif -%}
             {% if property.cleaned_type == "Extension" %}
-            {{ 'BaseExtensionItem' -}}
+            {{ 'NestedExtensionItem' -}}
             {% else %}
             {{ property.cleaned_type | replace(".","") -}}
             {%  endif %}
@@ -161,10 +161,11 @@ class {{fhir_entity.cleaned_name}}(FhirComplexTypeBase):
         )
 
     def get_schema(
-        self, include_extension: bool
+        self, include_extension: bool,
+        extension_fields: Optional[List[str]] = None
     ) -> Optional[Union[StructType, DataType]]:
     {% if fhir_entity.cleaned_name in ["BackboneElement"] %}
         return None
     {% else %}
-        return {{ fhir_entity.fhir_name | replace(".","_") }}Schema.get_schema(include_extension=include_extension)
+        return {{ fhir_entity.fhir_name | replace(".","_") }}Schema.get_schema(include_extension=include_extension,extension_fields=extension_fields)
     {% endif %}

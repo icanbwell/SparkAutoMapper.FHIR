@@ -21,25 +21,25 @@ class ContextOfUseValueSetCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
+    http://terminology.hl7.org/CodeSystem/v3-ActCode
+    """
+    codeset_v3_ActCode: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+    """
     urn:iso:std:iso:3166
     """
     codeset_urn_iso_std_iso_3166: FhirUri = "urn:iso:std:iso:3166"
     """
-    http://snomed.info/sct
+    http://nucc.org/provider-taxonomy
     """
-    codeset_sct: FhirUri = "http://snomed.info/sct"
-    """
-    http://terminology.hl7.org/CodeSystem/v3-ActCode
-    """
-    codeset_v3_ActCode: FhirUri = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+    codeset_provider_taxonomy: FhirUri = "http://nucc.org/provider-taxonomy"
     """
     http://unstats.un.org/unsd/methods/m49/m49.htm
     """
     codeset_m49_htm: FhirUri = "http://unstats.un.org/unsd/methods/m49/m49.htm"
     """
-    http://nucc.org/provider-taxonomy
+    http://snomed.info/sct
     """
-    codeset_provider_taxonomy: FhirUri = "http://nucc.org/provider-taxonomy"
+    codeset_sct: FhirUri = "http://snomed.info/sct"
 
 
 class ContextOfUseValueSetCodeValues:
