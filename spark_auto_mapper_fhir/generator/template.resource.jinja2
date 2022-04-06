@@ -75,6 +75,7 @@ class {{fhir_entity.cleaned_name}}(FhirResourceBase):
     def __init__(
         self,
         *,
+        use_date_for: Optional[List[str]] = None,
     {% for property in fhir_entity.properties %}
         {{ property.name -}} {{ ': ' -}}
             {% if property.optional -%}
@@ -124,6 +125,7 @@ class {{fhir_entity.cleaned_name}}(FhirResourceBase):
         {% endfor %}
         )
 
+        self.use_date_for = use_date_for
     def get_schema(
         self, include_extension: bool,
         extension_fields: Optional[List[str]] = None
@@ -131,7 +133,7 @@ class {{fhir_entity.cleaned_name}}(FhirResourceBase):
 {% if fhir_entity.cleaned_name in ["DomainResource", "Resource"] %}
         return None
 {% elif fhir_entity.cleaned_name == "List_" %}
-        return ListSchema.get_schema(include_extension=include_extension,extension_fields=extension_fields)
+        return ListSchema.get_schema(include_extension=include_extension,extension_fields=extension_fields,use_date_for=self.use_date_for)
 {% else %}
-        return {{ fhir_entity.cleaned_name }}Schema.get_schema(include_extension=include_extension,extension_fields=extension_fields)
+        return {{ fhir_entity.cleaned_name }}Schema.get_schema(include_extension=include_extension,extension_fields=extension_fields,use_date_for=self.use_date_for)
 {% endif %}

@@ -38,6 +38,7 @@ class Money(FhirComplexTypeBase):
     def __init__(
         self,
         *,
+        use_date_for: Optional[List[str]] = None,
         id_: Optional[FhirString] = None,
         extension: Optional[FhirList[NestedExtensionItem]] = None,
         value: Optional[FhirDecimal] = None,
@@ -63,10 +64,13 @@ class Money(FhirComplexTypeBase):
             value=value,
             currency=currency,
         )
+        self.use_date_for = use_date_for
 
     def get_schema(
         self, include_extension: bool, extension_fields: Optional[List[str]] = None
     ) -> Optional[Union[StructType, DataType]]:
         return MoneySchema.get_schema(
-            include_extension=include_extension, extension_fields=extension_fields
+            include_extension=include_extension,
+            extension_fields=extension_fields,
+            use_date_for=self.use_date_for,
         )

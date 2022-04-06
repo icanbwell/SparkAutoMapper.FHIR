@@ -19,15 +19,15 @@ class Yes_or_No_or_Don_tKnowCode(GenericTypeCode):
         super().__init__(value=value)
 
     """
+    http://terminology.hl7.org/ValueSet/v2-0136
+    """
+    codeset_v2_0136: FhirUri = "http://terminology.hl7.org/ValueSet/v2-0136"
+    """
     http://terminology.hl7.org/CodeSystem/data-absent-reason
     """
     codeset_data_absent_reason: FhirUri = (
         "http://terminology.hl7.org/CodeSystem/data-absent-reason"
     )
-    """
-    http://terminology.hl7.org/ValueSet/v2-0136
-    """
-    codeset_v2_0136: FhirUri = "http://terminology.hl7.org/ValueSet/v2-0136"
 
 
 class Yes_or_No_or_Don_tKnowCodeValues:

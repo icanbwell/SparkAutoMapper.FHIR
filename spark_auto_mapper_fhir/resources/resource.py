@@ -31,6 +31,7 @@ class Resource(FhirResourceBase):
     def __init__(
         self,
         *,
+        use_date_for: Optional[List[str]] = None,
         id_: Optional[FhirId] = None,
         meta: Optional[Meta] = None,
         implicitRules: Optional[FhirUri] = None,
@@ -57,6 +58,8 @@ class Resource(FhirResourceBase):
             implicitRules=implicitRules,
             language=language,
         )
+
+        self.use_date_for = use_date_for
 
     def get_schema(
         self, include_extension: bool, extension_fields: Optional[List[str]] = None
