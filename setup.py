@@ -58,7 +58,7 @@ setup(
         "logger",
         "pyspark>=3.1.1",
         "sparkautomapper>=1.0.9",
-        "sparkfhirschemas>=1.0.5",
+        "sparkfhirschemas>=1.0.6",
         "deprecated",
     ],
     classifiers=[
