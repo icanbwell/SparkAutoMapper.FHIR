@@ -38,10 +38,6 @@ update: down Pipfile.lock setup-pre-commit  ## Updates all the packages using Pi
 	make devdocker && \
 	make pipenv-setup
 
-.PHONY:install-local
-install-local:
-	docker-compose run --rm --name spf_pipenv dev pipenv install --editable ../SparkFhirSchemas
-
 .PHONY:tests
 tests: up
 	docker-compose run --rm --name sam_fhir dev pytest tests
