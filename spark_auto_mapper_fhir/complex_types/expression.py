@@ -44,6 +44,7 @@ class Expression(FhirComplexTypeBase):
     def __init__(
         self,
         *,
+        use_date_for: Optional[List[str]] = None,
         id_: Optional[FhirString] = None,
         extension: Optional[FhirList[NestedExtensionItem]] = None,
         description: Optional[FhirString] = None,
@@ -82,10 +83,13 @@ class Expression(FhirComplexTypeBase):
             expression=expression,
             reference=reference,
         )
+        self.use_date_for = use_date_for
 
     def get_schema(
         self, include_extension: bool, extension_fields: Optional[List[str]] = None
     ) -> Optional[Union[StructType, DataType]]:
         return ExpressionSchema.get_schema(
-            include_extension=include_extension, extension_fields=extension_fields
+            include_extension=include_extension,
+            extension_fields=extension_fields,
+            use_date_for=self.use_date_for,
         )

@@ -103,6 +103,7 @@ class {{fhir_entity.cleaned_name}}(FhirComplexTypeBase):
     def __init__(
         self,
         *,
+        use_date_for: Optional[List[str]] = None,
     {% for property in fhir_entity.properties %}
         {% if fhir_entity.cleaned_name == "CodeableConcept" and property.name == "coding" %}
         coding: Optional[FhirList[Coding[_T]]] = None,
@@ -159,7 +160,7 @@ class {{fhir_entity.cleaned_name}}(FhirComplexTypeBase):
             {{ property.name }}={{ property.name }},
         {% endfor %}
         )
-
+        self.use_date_for = use_date_for
     def get_schema(
         self, include_extension: bool,
         extension_fields: Optional[List[str]] = None
@@ -167,5 +168,5 @@ class {{fhir_entity.cleaned_name}}(FhirComplexTypeBase):
     {% if fhir_entity.cleaned_name in ["BackboneElement"] %}
         return None
     {% else %}
-        return {{ fhir_entity.fhir_name | replace(".","_") }}Schema.get_schema(include_extension=include_extension,extension_fields=extension_fields)
+        return {{ fhir_entity.fhir_name | replace(".","_") }}Schema.get_schema(include_extension=include_extension,extension_fields=extension_fields,use_date_for=self.use_date_for)
     {% endif %}

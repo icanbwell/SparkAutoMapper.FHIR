@@ -40,6 +40,7 @@ class Age(FhirComplexTypeBase):
     def __init__(
         self,
         *,
+        use_date_for: Optional[List[str]] = None,
         value: Optional[FhirDecimal] = None,
         comparator: Optional[QuantityComparatorCode] = None,
         unit: Optional[FhirString] = None,
@@ -67,10 +68,13 @@ class Age(FhirComplexTypeBase):
             system=system,
             code=code,
         )
+        self.use_date_for = use_date_for
 
     def get_schema(
         self, include_extension: bool, extension_fields: Optional[List[str]] = None
     ) -> Optional[Union[StructType, DataType]]:
         return AgeSchema.get_schema(
-            include_extension=include_extension, extension_fields=extension_fields
+            include_extension=include_extension,
+            extension_fields=extension_fields,
+            use_date_for=self.use_date_for,
         )

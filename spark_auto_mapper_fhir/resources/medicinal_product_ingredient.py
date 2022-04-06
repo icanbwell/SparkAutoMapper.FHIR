@@ -75,6 +75,7 @@ class MedicinalProductIngredient(FhirResourceBase):
     def __init__(
         self,
         *,
+        use_date_for: Optional[List[str]] = None,
         id_: Optional[FhirId] = None,
         meta: Optional[Meta] = None,
         implicitRules: Optional[FhirUri] = None,
@@ -160,9 +161,13 @@ class MedicinalProductIngredient(FhirResourceBase):
             substance=substance,
         )
 
+        self.use_date_for = use_date_for
+
     def get_schema(
         self, include_extension: bool, extension_fields: Optional[List[str]] = None
     ) -> Optional[Union[StructType, DataType]]:
         return MedicinalProductIngredientSchema.get_schema(
-            include_extension=include_extension, extension_fields=extension_fields
+            include_extension=include_extension,
+            extension_fields=extension_fields,
+            use_date_for=self.use_date_for,
         )

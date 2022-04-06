@@ -33,6 +33,7 @@ class BackboneElement(FhirComplexTypeBase):
     def __init__(
         self,
         *,
+        use_date_for: Optional[List[str]] = None,
         id_: Optional[FhirString] = None,
         extension: Optional[FhirList[NestedExtensionItem]] = None,
         modifierExtension: Optional[FhirList[NestedExtensionItem]] = None,
@@ -68,6 +69,7 @@ class BackboneElement(FhirComplexTypeBase):
             extension=extension,
             modifierExtension=modifierExtension,
         )
+        self.use_date_for = use_date_for
 
     def get_schema(
         self, include_extension: bool, extension_fields: Optional[List[str]] = None
