@@ -160,3 +160,6 @@ dmypy.json
 **/.DS_Store
 /.idea/
 /out.txt
+
+# temp files for tests
+/tests/**/temp/
