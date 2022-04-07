@@ -20,9 +20,19 @@ class SearchCharacteristicCodeValues:
     Resource populateS in front-end search results
     """
 
-    IncludeInSearch = SearchCharacteristicCode("searchable")
+    Searchable = SearchCharacteristicCode("searchable")
 
     """
     Resource is available for appointment creations
     """
     Bookable = SearchCharacteristicCode("bookable")
+
+    """
+    Resource is available for appointment creations
+    """
+    NotBookable = SearchCharacteristicCode("not-bookable")
+
+    """
+    Resource is available for appointment creations
+    """
+    NotSearchable = SearchCharacteristicCode("hide-from-search")
