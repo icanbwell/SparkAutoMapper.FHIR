@@ -13,7 +13,10 @@ class FhirValueSetBase(AutoMapperDataTypeBase):
         self.value: AutoMapperTextInputType = value
 
     def get_column_spec(
-        self, source_df: Optional[DataFrame], current_column: Optional[Column]
+        self,
+        source_df: Optional[DataFrame],
+        current_column: Optional[Column],
+        parent_columns: Optional[List[Column]],
     ) -> Column:
         if (
             isinstance(self.value, str)
@@ -26,7 +29,9 @@ class FhirValueSetBase(AutoMapperDataTypeBase):
 
         if isinstance(self.value, AutoMapperDataTypeBase):
             return self.value.get_column_spec(
-                source_df=source_df, current_column=current_column
+                source_df=source_df,
+                current_column=current_column,
+                parent_columns=parent_columns,
             )
 
         raise ValueError(f"value: {self.value} is not str or AutoMapperDataTypeBase")

@@ -1,4 +1,4 @@
-from typing import Union, Optional
+from typing import Union, Optional, List
 
 from pyspark.sql import DataFrame, Column
 from pyspark.sql.functions import round
@@ -17,11 +17,16 @@ class FhirDecimal(AutoMapperTextLikeBase):
         self.column: Union[AutoMapperDataTypeColumn, AutoMapperTextLikeBase] = column
 
     def get_column_spec(
-        self, source_df: Optional[DataFrame], current_column: Optional[Column]
+        self,
+        source_df: Optional[DataFrame],
+        current_column: Optional[Column],
+        parent_columns: Optional[List[Column]],
     ) -> Column:
         column_spec = round(
             self.column.get_column_spec(
-                source_df=source_df, current_column=current_column
+                source_df=source_df,
+                current_column=current_column,
+                parent_columns=parent_columns,
             ).cast("float"),
             6,
         )
