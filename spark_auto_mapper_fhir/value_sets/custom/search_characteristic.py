@@ -30,6 +30,16 @@ class SearchCharacteristicCodeValues:
     """
     Resource is available for appointment creations
     """
+    BookablePhone = SearchCharacteristicCode("bookable-phone")
+
+    """
+    Resource is available for appointment creations
+    """
+    BookableOnline = SearchCharacteristicCode("bookable-online")
+
+    """
+    Resource is available for appointment creations
+    """
     NotBookable = SearchCharacteristicCode("not-bookable")
 
     """
