@@ -6,8 +6,8 @@ name = "pypi"
 [packages]
 logger = "*"
 pyspark = ">=3.1.1"
-sparkautomapper = ">=1.0.16.a1"
-sparkfhirschemas = ">=1.0.7.a1"
+sparkautomapper = ">=1.0.17"
+sparkfhirschemas = ">=1.0.12"
 deprecated = "*"
 
 [dev-packages]
@@ -30,7 +30,7 @@ jinja2=">=3.0.3"
 pycln=">=1.2.4"
 lxml = ">=4.6.3"
 pipenv-setup = ">=3.2.0"
-sparkdataframecomparer = "==1.0.5.a2"
+sparkdataframecomparer = ">=1.0.7"
 py4j = "==0.10.9.5" # https://spark.apache.org/docs/latest/api/python/getting_started/install.html#dependencies
 pyspark="==3.3.0"  # should match the version of spark we use for testing
 
