@@ -18,6 +18,7 @@ def test_auto_mapper_fhir_reference(spark_session: SparkSession) -> None:
         [
             (1, "Qureshi"),
             (2, "Vidal"),
+            (3, "Duke"),
         ],
         ["member_id", "last_name"],
     ).createOrReplaceTempView("patients")
@@ -34,7 +35,15 @@ def test_auto_mapper_fhir_reference(spark_session: SparkSession) -> None:
         patient=Patient(
             id_=FhirId(A.column("last_name")),
             managingOrganization=Reference(
-                reference=FhirReference("Organization", A.column("last_name"))
+                reference=FhirReference(
+                    "Organization",
+                    A.if_regex(
+                        A.column("member_id"),
+                        "[1-2]",
+                        A.column("last_name"),
+                        A.concat(A.column("last_name"), "|test"),
+                    ),
+                )
             ),
         )
     )
@@ -61,4 +70,11 @@ def test_auto_mapper_fhir_reference(spark_session: SparkSession) -> None:
         .selectExpr("patient.managingOrganization.reference")
         .collect()[0][0]
         == "Organization/Vidal"
+    )
+
+    assert (
+        result_df.where("member_id == 3")
+        .selectExpr("patient.managingOrganization.reference")
+        .collect()[0][0]
+        == "Organization/Duke|test"
     )

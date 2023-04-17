@@ -6,4 +6,5 @@ RUN apt-get update && \
 COPY ${project_root}/Pipfile* ./
 RUN pipenv sync --dev --system
 WORKDIR /sourcecode
+RUN git config --global --add safe.directory /sourcecode
 CMD pre-commit run --all-files

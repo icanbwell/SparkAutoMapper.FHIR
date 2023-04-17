@@ -11,10 +11,15 @@ class FhirId(AutoMapperTextLikeBase):
     Cleans up the text for an id column
     """
 
-    def __init__(self, column: Union[AutoMapperDataTypeColumn, AutoMapperTextLikeBase]):
+    def __init__(
+        self,
+        column: Union[AutoMapperDataTypeColumn, AutoMapperTextLikeBase],
+        is_reference: Optional[bool] = False,
+    ):
         super().__init__()
 
         self.column: Union[AutoMapperDataTypeColumn, AutoMapperTextLikeBase] = column
+        self.is_reference = is_reference
 
     def get_column_spec(
         self,
@@ -30,7 +35,9 @@ class FhirId(AutoMapperTextLikeBase):
                     current_column=current_column,
                     parent_columns=parent_columns,
                 ),
-                pattern=r"[^A-Za-z0-9\-\.]",
+                pattern=r"[^A-Za-z0-9\|\-\.]"
+                if self.is_reference
+                else r"[^A-Za-z0-9\-\.]",
                 replacement="-",
             ),
             0,
