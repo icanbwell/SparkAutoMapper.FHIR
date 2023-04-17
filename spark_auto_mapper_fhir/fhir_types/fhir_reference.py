@@ -25,7 +25,7 @@ class FhirReference(AutoMapperTextLikeBase):
         assert "/" not in resource
         self.resource: str = resource
         self.column: Union[AutoMapperDataTypeColumn, AutoMapperTextLikeBase] = FhirId(
-            column, isReference=True
+            column, is_reference=True
         )
 
     def get_column_spec(
