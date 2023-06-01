@@ -41,6 +41,6 @@ class FhirId(AutoMapperTextLikeBase):
                 replacement="-",
             ),
             0,
-            1024*1024,
+            1024 * 1024,
         )
         return column_spec
