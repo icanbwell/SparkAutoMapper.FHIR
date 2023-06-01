@@ -59,7 +59,9 @@ def test_auto_mapper_fhir_patient_resource(spark_session: SparkSession) -> None:
     # Assert
     assert len(sql_expressions) == 5
     assert str(sql_expressions["id"]) == str(
-        substring(regexp_replace(col("b.member_id"), r"[^A-Za-z0-9\-\.]", "-"), 0, 63)
+        substring(
+            regexp_replace(col("b.member_id"), r"[^A-Za-z0-9\-\.]", "-"), 0, 1024 * 1024
+        )
         .cast("string")
         .alias("id")
     )

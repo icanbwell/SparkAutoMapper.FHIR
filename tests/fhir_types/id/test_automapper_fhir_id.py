@@ -16,6 +16,7 @@ def test_auto_mapper_fhir_id(spark_session: SparkSession) -> None:
         [
             (1, "Qureshi- / &&"),
             (2, " Vidal. "),
+            (3, "BWELL-ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz"),
         ],
         ["member_id", "last_name"],
     ).createOrReplaceTempView("patients")
@@ -48,4 +49,8 @@ def test_auto_mapper_fhir_id(spark_session: SparkSession) -> None:
     assert (
         result_df.where("member_id == 2").selectExpr("patient.id").collect()[0][0]
         == "-Vidal.-"
+    )
+    assert (
+        result_df.where("member_id == 3").selectExpr("patient.id").collect()[0][0]
+        == "BWELL-ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz"
     )
