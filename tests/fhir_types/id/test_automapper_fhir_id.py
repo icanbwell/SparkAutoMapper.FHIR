@@ -51,6 +51,6 @@ def test_auto_mapper_fhir_id(spark_session: SparkSession) -> None:
         == "-Vidal.-"
     )
     assert (
-        result_df.where("member_id == 3").selectExpr("patient.id").collect()[0][0]
-        == "BWELL-ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz"
+            result_df.where("member_id == 3").selectExpr("patient.id").collect()[0][0]
+            == "BWELL-ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz"
     )
