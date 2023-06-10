@@ -15,11 +15,13 @@ class FhirId(AutoMapperTextLikeBase):
         self,
         column: Union[AutoMapperDataTypeColumn, AutoMapperTextLikeBase],
         is_reference: Optional[bool] = False,
+        use_long_id: Optional[bool] = False,
     ):
         super().__init__()
 
         self.column: Union[AutoMapperDataTypeColumn, AutoMapperTextLikeBase] = column
         self.is_reference = is_reference
+        self.use_long_id = use_long_id
 
     def get_column_spec(
         self,
@@ -41,6 +43,6 @@ class FhirId(AutoMapperTextLikeBase):
                 replacement="-",
             ),
             0,
-            63,
+            1024 * 1024 if (self.use_long_id) else 63,
         )
         return column_spec
