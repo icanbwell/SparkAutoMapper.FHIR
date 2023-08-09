@@ -56,8 +56,8 @@ setup(
     packages=find_packages(),
     install_requires=[
         "logger",
-        "pyspark>=3.1.1",
-        "sparkautomapper>=1.0.17",
+        "pyspark==3.3.0",
+        "sparkautomapper>=2.0.1",
         "sparkfhirschemas>=1.0.12",
         "deprecated",
     ],
