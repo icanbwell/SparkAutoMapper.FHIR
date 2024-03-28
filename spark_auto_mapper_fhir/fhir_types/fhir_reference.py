@@ -19,6 +19,7 @@ class FhirReference(AutoMapperTextLikeBase):
         resource: str,
         column: Union[AutoMapperDataTypeColumn, AutoMapperTextLikeBase],
         use_long_id: Optional[bool] = False,
+        reference_pattern: str = "",
     ):
         super().__init__()
 
@@ -26,8 +27,14 @@ class FhirReference(AutoMapperTextLikeBase):
         assert "/" not in resource
         self.resource: str = resource
         self.use_long_id = use_long_id
+        reference_pattern = (
+            r"[^A-Za-z0-9\|\-\.]" if not reference_pattern else reference_pattern
+        )
         self.column: Union[AutoMapperDataTypeColumn, AutoMapperTextLikeBase] = FhirId(
-            column, is_reference=True, use_long_id=self.use_long_id
+            column,
+            is_reference=True,
+            use_long_id=self.use_long_id,
+            reference_pattern=reference_pattern,
         )
 
     def get_column_spec(
