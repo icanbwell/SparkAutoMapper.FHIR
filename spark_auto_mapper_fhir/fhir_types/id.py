@@ -18,6 +18,13 @@ class FhirId(AutoMapperTextLikeBase):
         use_long_id: Optional[bool] = False,
         reference_pattern: str = "",
     ):
+        """
+        :param column: (obj) The column used to create the ID.
+        :param is_reference: (bool) Indicates if the ID is being created for a reference or not.
+        :param use_long_id: (bool) Indicates whether to use a long ID. If set to false, it will limit the ID to
+         63 characters; otherwise, it will be 1024*1024 characters.
+        :param reference_pattern: (str) The reference pattern to be applied to the column value.
+        """
         super().__init__()
 
         self.column: Union[AutoMapperDataTypeColumn, AutoMapperTextLikeBase] = column
