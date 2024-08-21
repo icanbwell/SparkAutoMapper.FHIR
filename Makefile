@@ -14,11 +14,11 @@ init: devdocker up setup-pre-commit  ## Initializes the local developer environm
 
 .PHONY: up
 up: Pipfile.lock
-	docker-compose up --build -d --remove-orphans
+	docker compose up --build -d --remove-orphans
 
 .PHONY: down
 down:
-	docker-compose down
+	docker compose down
 
 .PHONY:clean-pre-commit
 clean-pre-commit: ## removes pre-commit hook
@@ -34,22 +34,22 @@ run-pre-commit: setup-pre-commit
 
 .PHONY:update
 update: down Pipfile.lock setup-pre-commit  ## Updates all the packages using Pipfile
-	docker-compose run --rm --name spf_pipenv dev pipenv sync --dev && \
+	docker compose run --rm --name spf_pipenv dev pipenv sync --dev && \
 	make devdocker && \
 	make pipenv-setup
 
 .PHONY:tests
 tests: up
-	docker-compose run --rm --name sam_fhir dev pytest tests
+	docker compose run --rm --name sam_fhir dev pytest tests
 
 .PHONY:continuous_integration
 continuous_integration: run-pre-commit
-	docker-compose run --rm --name sam_fhir dev python setup.py install && \
+	docker compose run --rm --name sam_fhir dev python setup.py install && \
     pytest tests
 
 .PHONY: sphinx-html
 sphinx-html:
-	docker-compose run --rm --name sam_fhir dev make -C docsrc html
+	docker compose run --rm --name sam_fhir dev make -C docsrc html
 	@echo "copy html to docs... why? https://github.com/sphinx-doc/sphinx/issues/3382#issuecomment-470772316"
 	@rm -rf docs
 	@mkdir docs
@@ -58,11 +58,11 @@ sphinx-html:
 
 .PHONY:classes-debug
 classes-debug:
-	docker-compose run --rm --name sam_fhir dev python3 spark_auto_mapper_fhir/generator/generate_classes.py > out.txt
+	docker compose run --rm --name sam_fhir dev python3 spark_auto_mapper_fhir/generator/generate_classes.py > out.txt
 
 .PHONY:classes
 classes:
-	docker-compose run --rm --name sam_fhir dev python3 spark_auto_mapper_fhir/generator/generate_classes.py && \
+	docker compose run --rm --name sam_fhir dev python3 spark_auto_mapper_fhir/generator/generate_classes.py && \
 	make run-pre-commit
 
 .PHONY:pipenv-setup
