@@ -4,7 +4,7 @@ RUN apt-get update && \
     apt-get install -y git && \
     pip install pipenv
 
-COPY ${project_root}/Pipfile* ./
+COPY Pipfile* ./
 
 RUN pipenv sync --dev --system --extra-pip-args="--prefer-binary"
 
