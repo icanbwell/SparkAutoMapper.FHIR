@@ -41,14 +41,14 @@ class FhirId(AutoMapperTextLikeBase):
         # https://hl7.org/FHIR/datatypes.html#id
         column_spec = substring(
             regexp_replace(
-                str=self.column.get_column_spec(
+                string=self.column.get_column_spec(
                     source_df=source_df,
                     current_column=current_column,
                     parent_columns=parent_columns,
                 ),
-                pattern=self.reference_pattern
-                if self.is_reference
-                else r"[^A-Za-z0-9\-\.]",
+                pattern=(
+                    self.reference_pattern if self.is_reference else r"[^A-Za-z0-9\-\.]"
+                ),
                 replacement="-",
             ),
             0,

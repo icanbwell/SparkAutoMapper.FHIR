@@ -12,7 +12,9 @@ class AcceptingPatientsCode(GenericTypeCode):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    codeset: FhirUri = "https://build.fhir.org/ig/HL7/davinci-pdex-plan-net/CodeSystem-AcceptingPatientsCS.html"
+    codeset: FhirUri = (
+        "https://build.fhir.org/ig/HL7/davinci-pdex-plan-net/CodeSystem-AcceptingPatientsCS.html"
+    )
 
 
 class AcceptingPatientsCodeValues:

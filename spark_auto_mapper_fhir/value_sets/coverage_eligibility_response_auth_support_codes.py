@@ -21,7 +21,9 @@ class CoverageEligibilityResponseAuthSupportCodesCode(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/coverageeligibilityresponse-ex-auth-support
     """
-    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/coverageeligibilityresponse-ex-auth-support"
+    codeset: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/coverageeligibilityresponse-ex-auth-support"
+    )
 
 
 class CoverageEligibilityResponseAuthSupportCodesCodeValues:

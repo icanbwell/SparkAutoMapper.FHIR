@@ -102,7 +102,7 @@ def test_auto_mapper_hir_period_uses_date(spark_session: SparkSession) -> None:
                         type_=FhirList(
                             A.field("type").select(  # type: ignore
                                 CodeableConcept(
-                                    coding=FhirList(  # type: ignore
+                                    coding=FhirList(
                                         A.field("coding").select(  # type: ignore
                                             Coding(
                                                 system=A.field("system"),

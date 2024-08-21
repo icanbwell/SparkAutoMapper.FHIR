@@ -12,7 +12,9 @@ class SearchCharacteristicCode(GenericTypeCode):
     def __init__(self, value: AutoMapperTextInputType):
         super().__init__(value=value)
 
-    codeset: FhirUri = "https://raw.githubusercontent.com/imranq2/SparkAutoMapper.FHIR/main/ValueSet/search_characteristic"
+    codeset: FhirUri = (
+        "https://raw.githubusercontent.com/imranq2/SparkAutoMapper.FHIR/main/ValueSet/search_characteristic"
+    )
 
 
 class SearchCharacteristicCodeValues:
