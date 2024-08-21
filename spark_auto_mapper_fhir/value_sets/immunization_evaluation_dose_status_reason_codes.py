@@ -25,7 +25,9 @@ class ImmunizationEvaluationDoseStatusReasonCodesCode(GenericTypeCode):
     """
     http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status-reason
     """
-    codeset: FhirUri = "http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status-reason"
+    codeset: FhirUri = (
+        "http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status-reason"
+    )
 
 
 class ImmunizationEvaluationDoseStatusReasonCodesCodeValues:

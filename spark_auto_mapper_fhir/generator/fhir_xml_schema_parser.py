@@ -330,9 +330,9 @@ class FhirXmlSchemaParser:
     def process_types_for_codeable_concepts(
         fhir_entities: List[FhirEntity], value_sets: List[FhirValueSet]
     ) -> None:
-        codeable_types: List[
-            FhirCodeableType
-        ] = FhirXmlSchemaParser.get_types_for_codeable_concepts()
+        codeable_types: List[FhirCodeableType] = (
+            FhirXmlSchemaParser.get_types_for_codeable_concepts()
+        )
         codeable_type: FhirCodeableType
         for codeable_type in codeable_types:
             name_parts: List[str] = codeable_type.path.split(".")
@@ -468,9 +468,9 @@ class FhirXmlSchemaParser:
 
     @staticmethod
     def process_types_for_references(fhir_entities: List[FhirEntity]) -> None:
-        references: List[
-            FhirReferenceType
-        ] = FhirXmlSchemaParser.get_types_for_references()
+        references: List[FhirReferenceType] = (
+            FhirXmlSchemaParser.get_types_for_references()
+        )
         reference: FhirReferenceType
         for reference in references:
             name_parts: List[str] = reference.path.split(".")
@@ -541,17 +541,21 @@ class FhirXmlSchemaParser:
                     fhir_property.reference_target_resources = [
                         SmartName(
                             name=c,
-                            cleaned_name=FhirXmlSchemaParser.cleaned_type_mapping[c]
-                            if c in FhirXmlSchemaParser.cleaned_type_mapping
-                            else c,
+                            cleaned_name=(
+                                FhirXmlSchemaParser.cleaned_type_mapping[c]
+                                if c in FhirXmlSchemaParser.cleaned_type_mapping
+                                else c
+                            ),
                             snake_case_name=FhirXmlSchemaParser.camel_to_snake(c),
                         )
                         for c in reference.target_resources
                     ]
                     fhir_property.reference_target_resources_names = [
-                        FhirXmlSchemaParser.cleaned_type_mapping[c.name]
-                        if c.name in FhirXmlSchemaParser.cleaned_type_mapping
-                        else c.name
+                        (
+                            FhirXmlSchemaParser.cleaned_type_mapping[c.name]
+                            if c.name in FhirXmlSchemaParser.cleaned_type_mapping
+                            else c.name
+                        )
                         for c in fhir_property.reference_target_resources
                     ]
 
@@ -647,12 +651,16 @@ class FhirXmlSchemaParser:
                     documentation=documentation_entries,
                     properties=fhir_properties,
                     is_back_bone_element="." in entity_type if entity_type else False,
-                    base_type=inner_complex_type.get("base")
-                    if hasattr(inner_complex_type, "base")
-                    else None,
-                    base_type_list=[inner_complex_type.get("base")]
-                    if hasattr(inner_complex_type, "base")
-                    else [],
+                    base_type=(
+                        inner_complex_type.get("base")
+                        if hasattr(inner_complex_type, "base")
+                        else None
+                    ),
+                    base_type_list=(
+                        [inner_complex_type.get("base")]
+                        if hasattr(inner_complex_type, "base")
+                        else []
+                    ),
                     source=str(resource_xsd_file.parts[-1]),
                 )
                 fhir_entities.append(fhir_entity)
@@ -740,12 +748,18 @@ class FhirXmlSchemaParser:
                         fhir_name=property_name,
                         name=FhirXmlSchemaParser.fix_python_keywords(property_name),
                         type_=property_type,
-                        cleaned_type=cleaned_type
-                        if cleaned_type not in FhirXmlSchemaParser.cleaned_type_mapping
-                        else FhirXmlSchemaParser.cleaned_type_mapping[cleaned_type],
-                        type_snake_case=FhirXmlSchemaParser.camel_to_snake(cleaned_type)
-                        if cleaned_type not in FhirXmlSchemaParser.cleaned_type_mapping
-                        else FhirXmlSchemaParser.camel_to_snake(cleaned_type),
+                        cleaned_type=(
+                            cleaned_type
+                            if cleaned_type
+                            not in FhirXmlSchemaParser.cleaned_type_mapping
+                            else FhirXmlSchemaParser.cleaned_type_mapping[cleaned_type]
+                        ),
+                        type_snake_case=(
+                            FhirXmlSchemaParser.camel_to_snake(cleaned_type)
+                            if cleaned_type
+                            not in FhirXmlSchemaParser.cleaned_type_mapping
+                            else FhirXmlSchemaParser.camel_to_snake(cleaned_type)
+                        ),
                         optional=optional,
                         is_list=is_list,
                         documentation=[property_documentation],
@@ -967,7 +981,9 @@ class FhirXmlSchemaParser:
                             binding: ObjectifiedElement
                             for binding in bindings:
                                 extension_code_list = binding["extension"]
-                                url: str = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
+                                url: str = (
+                                    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
+                                )
                                 value_set_url = (
                                     binding["valueSet"].get("value")
                                     if hasattr(binding, "valueSet")
@@ -1004,13 +1020,13 @@ class FhirXmlSchemaParser:
 
         fhir_value_sets: List[FhirValueSet] = []
 
-        fhir_v3_code_systems: List[
-            FhirValueSet
-        ] = FhirXmlSchemaParser.get_v3_code_systems(data_dir)
+        fhir_v3_code_systems: List[FhirValueSet] = (
+            FhirXmlSchemaParser.get_v3_code_systems(data_dir)
+        )
 
-        fhir_v2_code_systems: List[
-            FhirValueSet
-        ] = FhirXmlSchemaParser.get_v2_code_systems(data_dir)
+        fhir_v2_code_systems: List[FhirValueSet] = (
+            FhirXmlSchemaParser.get_v2_code_systems(data_dir)
+        )
 
         value_sets_file: Path = (
             data_dir.joinpath("xsd")
@@ -1215,9 +1231,11 @@ class FhirXmlSchemaParser:
             value_set: ObjectifiedElement = (
                 value_set_entry_resource["ValueSet"]
                 if is_value_set
-                else value_set_entry_resource["CodeSystem"]
-                if is_code_system
-                else value_set_entry["resource"]
+                else (
+                    value_set_entry_resource["CodeSystem"]
+                    if is_code_system
+                    else value_set_entry["resource"]
+                )
             )
             id_: str = value_set["id"].get("value")
             fhir_name: str = value_set["name"].get("value")
@@ -1281,9 +1299,11 @@ class FhirXmlSchemaParser:
             value_set = (
                 value_set_entry_resource["ValueSet"]
                 if is_value_set
-                else value_set_entry_resource["CodeSystem"]
-                if is_code_system
-                else value_set_entry["resource"]
+                else (
+                    value_set_entry_resource["CodeSystem"]
+                    if is_code_system
+                    else value_set_entry["resource"]
+                )
             )
             id_ = value_set["id"].get("value")
             url = value_set["url"].get("value")
@@ -1364,9 +1384,11 @@ class FhirXmlSchemaParser:
             value_set: ObjectifiedElement = (
                 value_set_entry_resource.ValueSet
                 if is_value_set
-                else value_set_entry_resource.CodeSystem
-                if is_code_system
-                else value_set_entry_resource
+                else (
+                    value_set_entry_resource.CodeSystem
+                    if is_code_system
+                    else value_set_entry_resource
+                )
             )
             id_: str = value_set.id.get("value")
             fhir_name: str = value_set.name.get("value")
