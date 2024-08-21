@@ -1,6 +1,3 @@
-# noinspection Mypy
-from typing import Any
-
 from setuptools import setup, find_packages
 from os import path, getcwd
 
@@ -19,28 +16,6 @@ except IOError:
     raise
 
 
-def fix_setuptools() -> None:
-    """Work around bugs in setuptools.
-
-    Some versions of setuptools are broken and raise SandboxViolation for normal
-    operations in a virtualenv. We therefore disable the sandbox to avoid these
-    issues.
-    """
-    try:
-        from setuptools.sandbox import DirectorySandbox
-
-        # noinspection PyUnusedLocal
-        def violation(operation: Any, *args: Any, **_: Any) -> None:
-            print("SandboxViolation: %s" % (args,))
-
-        DirectorySandbox._violation = violation
-    except ImportError:
-        pass
-
-
-# Fix bugs in setuptools.
-fix_setuptools()
-
 # classifiers list is here: https://pypi.org/classifiers/
 
 # create the package setup
@@ -52,7 +27,7 @@ setup(
     description="FHIR extensions for SparkAutoMapper",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/imranq2/SparkAutoMapper.FHIR",
+    url="https://github.com/icanbwell/SparkAutoMapper.FHIR",
     packages=find_packages(),
     install_requires=[
         "py4j==0.10.9.7",
@@ -67,7 +42,7 @@ setup(
         "License :: OSI Approved :: Apache Software License",
         "Operating System :: OS Independent",
     ],
-    python_requires=">=3.6,<4",
+    python_requires=">=3.10",
     dependency_links=[],
     include_package_data=True,
     zip_safe=False,
