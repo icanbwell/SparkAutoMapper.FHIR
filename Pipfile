@@ -37,7 +37,7 @@ sphinx-rtd-theme="==0.5.2"
 myst-parser="==0.15.1"
 xmlschema=">=1.6.4"
 jinja2=">=3.0.3"
-pycln=">=1.2.4"
+pycln=">=2.4.0"
 lxml = ">=4.6.3"
 sparkdataframecomparer = "==2.0.4"
 
