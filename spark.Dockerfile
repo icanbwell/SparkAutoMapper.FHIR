@@ -1,4 +1,4 @@
-FROM imranq2/helix.spark:3.3.0.31-slim
+FROM imranq2/helix.spark:3.5.1.3-slim
 # https://github.com/icanbwell/helix.spark
 USER root
 
@@ -9,7 +9,7 @@ COPY Pipfile* /SparkAutoMapper.FHIR/
 WORKDIR /SparkAutoMapper.FHIR
 
 RUN df -h # for space monitoring
-RUN pipenv sync --dev --system
+# RUN pipenv sync --dev --system --extra-pip-args="--prefer-binary"
 
 # COPY ./jars/* /opt/bitnami/spark/jars/
 # COPY ./conf/* /opt/bitnami/spark/conf/

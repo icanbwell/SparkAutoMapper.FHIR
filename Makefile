@@ -3,7 +3,7 @@ LANG=en_US.utf-8
 export LANG
 
 Pipfile.lock: Pipfile
-	docker-compose run --rm --name sam dev pipenv lock --dev
+	docker compose run --rm --name sam dev sh -c "rm -f Pipfile.lock && pipenv lock --dev"
 
 .PHONY:devdocker
 devdocker: ## Builds the docker for dev
@@ -66,5 +66,15 @@ classes:
 	make run-pre-commit
 
 .PHONY:pipenv-setup
-pipenv-setup:devdocker ## Brings up the bash shell in dev docker
-	docker-compose run --rm --name sam_fhir dev pipenv-setup sync --pipfile
+pipenv-setup:devdocker ## Run pipenv-setup to update setup.py with latest dependencies
+	docker compose run --rm --name spark_pipeline_framework dev sh -c "pipenv run pipenv install --skip-lock --categories \"pipenvsetup\" && pipenv run pipenv-setup sync --pipfile" && \
+	make run-pre-commit
+
+
+.PHONY:shell
+shell:devdocker ## Brings up the bash shell in dev docker
+	docker compose run --rm --name sam_shell dev /bin/bash
+
+.PHONY:build
+build: ## Builds the docker for dev
+	docker compose build --progress=plain --parallel
