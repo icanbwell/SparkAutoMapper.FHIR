@@ -32,8 +32,8 @@ setup(
     install_requires=[
         "py4j==0.10.9.7",
         "pyspark==3.5.1",
-        "sparkautomapper>=3.0.0",
-        "sparkfhirschemas>=2.0.0",
+        "sparkautomapper>=3.0.1",
+        "sparkfhirschemas>=2.0.2",
         "deprecated",
     ],
     classifiers=[
