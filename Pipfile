@@ -8,8 +8,8 @@ name = "pypi"
 py4j="==0.10.9.7" # https://spark.apache.org/docs/latest/api/python/getting_started/install.html#dependencies
 # pyspark is needed for working with Spark
 pyspark="==3.5.1"  # should match the version of spark we use for testing
-sparkautomapper = ">=3.0.0"
-sparkfhirschemas = ">=2.0.0"
+sparkautomapper = ">=3.0.1"
+sparkfhirschemas = ">=2.0.2"
 deprecated = "*"
 
 [dev-packages]
@@ -31,15 +31,21 @@ pytest = ">=8.2.2"
 black = ">=24.4.2"
 # importlib-metadata is needed for working with metadata
 importlib-metadata = ">=5.2.0"
+# Sphinx is needed for generating documentation
 Sphinx="==4.1.2"
-sphinx-autoapi="==1.8.4"
-sphinx-rtd-theme="==0.5.2"
-myst-parser="==0.15.1"
+# sphinx-autoapi is needed for generating API documentation
+sphinx-autoapi="==2.0.0"
+# sphinx-rtd-theme is needed for the Read the Docs theme
+sphinx-rtd-theme="==1.0.0"
+# myst-parser is needed for parsing Markdown
+myst-parser="==0.17.2"
+
 xmlschema=">=1.6.4"
 jinja2=">=3.0.3"
 pycln=">=2.4.0"
 lxml = ">=4.6.3"
-sparkdataframecomparer = "==2.0.4"
+
+sparkdataframecomparer = "==2.0.6"
 
 # These dependencies are required for pipenv-setup.  They conflict with ones above, so we install these
 # only when running pipenv-setup
