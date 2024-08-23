@@ -3,22 +3,24 @@ LANG=en_US.utf-8
 export LANG
 
 Pipfile.lock: Pipfile
-	docker compose run --rm --name sam dev sh -c "rm -f Pipfile.lock && pipenv lock --dev"
+	docker compose run --rm --name sam_fhir dev sh -c "rm -f Pipfile.lock && pipenv lock --dev"
 
 .PHONY:devdocker
 devdocker: ## Builds the docker for dev
-	docker compose build
+	docker compose build --no-cache
 
 .PHONY:init
 init: devdocker up setup-pre-commit  ## Initializes the local developer environment
 
 .PHONY: up
 up: Pipfile.lock
-	docker compose up --build -d --remove-orphans
+	docker compose up --build -d
 
 .PHONY: down
-down:
-	docker compose down
+down: ## Brings down all the services in docker-compose
+	export DOCKER_CLIENT_TIMEOUT=300 && export COMPOSE_HTTP_TIMEOUT=300
+	docker compose down --remove-orphans && \
+	docker system prune -f
 
 .PHONY:clean-pre-commit
 clean-pre-commit: ## removes pre-commit hook
@@ -34,13 +36,13 @@ run-pre-commit: setup-pre-commit
 
 .PHONY:update
 update: down Pipfile.lock setup-pre-commit  ## Updates all the packages using Pipfile
-	docker compose run --rm --name spf_pipenv dev pipenv sync --dev && \
-	make devdocker && \
-	make pipenv-setup
+	docker compose run --rm --name sam_fhir_pipenv dev pipenv sync --dev && \
+	make pipenv-setup && \
+	make devdocker
 
 .PHONY:tests
 tests: up
-	docker compose run --rm --name sam_fhir dev pytest tests
+	docker compose run --rm --name sam_fhir_tests dev pytest tests
 
 .PHONY:continuous_integration
 continuous_integration: run-pre-commit
@@ -67,13 +69,13 @@ classes:
 
 .PHONY:pipenv-setup
 pipenv-setup:devdocker ## Run pipenv-setup to update setup.py with latest dependencies
-	docker compose run --rm --name spark_pipeline_framework dev sh -c "pipenv run pipenv install --skip-lock --categories \"pipenvsetup\" && pipenv run pipenv-setup sync --pipfile" && \
+	docker compose run --rm --name sam_fhir dev sh -c "pipenv run pipenv install --skip-lock --categories \"pipenvsetup\" && pipenv run pipenv-setup sync --pipfile" && \
 	make run-pre-commit
 
 
 .PHONY:shell
 shell:devdocker ## Brings up the bash shell in dev docker
-	docker compose run --rm --name sam_shell dev /bin/bash
+	docker compose run --rm --name sam_fhir_shell dev /bin/bash
 
 .PHONY:build
 build: ## Builds the docker for dev
