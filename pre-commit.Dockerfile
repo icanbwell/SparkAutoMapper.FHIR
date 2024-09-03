@@ -1,8 +1,7 @@
-FROM python:3.12-slim
+FROM public.ecr.aws/docker/library/python:3.12-alpine
 
-RUN apt-get update && \
-    apt-get install -y git && \
-    pip install pipenv
+RUN apk add --no-cache git py3-pip rust cargo && \
+    pip install pipenv pre-commit
 
 COPY Pipfile* ./
 
