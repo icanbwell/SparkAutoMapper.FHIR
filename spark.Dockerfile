@@ -26,11 +26,8 @@ RUN mkdir -p /fhir && chmod 777 /fhir
 RUN mkdir -p /.local/share/virtualenvs && chmod 777 /.local/share/virtualenvs
 # USER 1001
 
-# Run as non-root user
+USER root
 # Change ownership of the directory and its subdirectories
-RUN chown -R 185:185 /sam_fhir
-
-# Set permissions to allow writing (read, write, execute for owner)
-RUN chmod -R 755 /sam_fhir
+RUN chown -R spark:spark /sam_fhir && chmod -R 777 /sam_fhir && ls -ld /sam_fhir
 # https://spark.apache.org/docs/latest/running-on-kubernetes.html#user-identity
-USER 185
+USER spark
