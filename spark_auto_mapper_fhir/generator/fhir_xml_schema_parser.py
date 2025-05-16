@@ -654,11 +654,13 @@ class FhirXmlSchemaParser:
                     base_type=(
                         inner_complex_type.get("base")
                         if hasattr(inner_complex_type, "base")
+                        and type(inner_complex_type) == Dict
                         else None
                     ),
                     base_type_list=(
-                        [inner_complex_type.get("base")]
+                        [inner_complex_type.get("base")]  # type: ignore
                         if hasattr(inner_complex_type, "base")
+                        and type(inner_complex_type) == Dict
                         else []
                     ),
                     source=str(resource_xsd_file.parts[-1]),
@@ -1003,9 +1005,13 @@ class FhirXmlSchemaParser:
                                     ].get("value")
                                     fhir_codeable_types.append(
                                         FhirCodeableType(
-                                            path=snapshot_element["path"].get("value"),
+                                            path=(
+                                                snapshot_element["path"].get("value")
+                                                if snapshot_element["path"] is not None
+                                                else ""
+                                            ),
                                             codeable_type=codeable_type,
-                                            codeable_type_url=value_set_url,
+                                            codeable_type_url=value_set_url or "",
                                             is_codeable_concept=type_["code"].get(
                                                 "value"
                                             )
@@ -1136,7 +1142,7 @@ class FhirXmlSchemaParser:
                         cleaned_name=FhirXmlSchemaParser.clean_name(name) + "Code",
                         concepts=fhir_concepts,
                         url=url,
-                        value_set_url=value_set_url,
+                        value_set_url=value_set_url or "",
                         value_set_url_list=value_set_url_list or {url},
                         documentation=description,
                         source="valuesets.xml",
