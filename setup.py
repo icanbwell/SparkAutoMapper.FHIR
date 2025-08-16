@@ -29,8 +29,8 @@ setup(
     url="https://github.com/icanbwell/SparkAutoMapper.FHIR",
     packages=find_packages(),
     install_requires=[
-        "sparkautomapper==3.0.3",
-        "sparkfhirschemas==2.0.3",
+        "sparkautomapper==3.0.4",
+        "sparkfhirschemas==2.0.4",
         "deprecated",
     ],
     extras_require={

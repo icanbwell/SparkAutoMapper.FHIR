@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "0a8664f4bf48fc53fa834db0a21f168e4a10eec9ec5fee54a0062c84986cb86e"
+            "sha256": "0b5a6f4d630b317161b3cbe7319550ac6ba3bbe652a3701943c0a28a9be4333c"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -111,20 +111,6 @@
             "markers": "python_version >= '3.11'",
             "version": "==2.3.2"
         },
-        "py4j": {
-            "hashes": [
-                "sha256:0b6e5315bb3ada5cf62ac651d107bb2ebc02def3dee9d9548e3baac644ea8dbb",
-                "sha256:85defdfd2b2376eb3abf5ca6474b51ab7e0de341c75a02f46dc9b5976f5a5c1b"
-            ],
-            "version": "==0.10.9.7"
-        },
-        "pyspark": {
-            "hashes": [
-                "sha256:6effc9ce98edf231f4d683fd14f7270629bf8458c628d6a2620ded4bb34f3cb9"
-            ],
-            "markers": "python_version >= '3.8'",
-            "version": "==3.5.5"
-        },
         "spark": {
             "hashes": [
                 "sha256:df499b57d30178c6d32dbda2af188b9833a261a70ccd262126ed7b415d9e36d1"
@@ -133,29 +119,29 @@
         },
         "sparkautomapper": {
             "hashes": [
-                "sha256:5374a27bf28c8b14fe49a73d0e735959c5ea21aa4e31cd8fc5710560a6cfe4d9",
-                "sha256:eb962d290ea962f1edef79b243046dd1bee9181e63200e77ccc4ea5336b3d8a7"
+                "sha256:b4c1e0f67ef715a7eae2d9f3f01e639e3f08ad3b1fa8cb70ea2876bc11260793",
+                "sha256:d110ad06772a961711d5722f6cff8455d66afc8df1bd09340b95c002fc0ced40"
             ],
             "index": "pypi",
             "markers": "python_version >= '3'",
-            "version": "==3.0.3"
+            "version": "==3.0.4"
         },
         "sparkdataframecomparer": {
             "hashes": [
-                "sha256:1ab3faf0dacd3882c6130c81eca47c4c9062c97d516d00a7bf0cb14104c4aba2",
-                "sha256:986fc75408b2cbf80c1565481ab5ae12b96552839da265e7ce398c173f41adce"
+                "sha256:6ab998fbb540c007010855c5b07807a11b5025cbdab1684a8aa89c0ad547cd04",
+                "sha256:7fd42da20b8900154912454abc6c0d7efa0c297efcd68b55108e92eb0cd3c2ac"
             ],
             "markers": "python_version >= '3'",
-            "version": "==2.0.14"
+            "version": "==2.0.16"
         },
         "sparkfhirschemas": {
             "hashes": [
-                "sha256:1066f32ca5b987436a0df711e3afab1adb9255fece9d64d3fc37404d48071bc9",
-                "sha256:799a5a4a9fb4e7d34f7a982e61f0ded3b703936d810a84e739657be4bcc1db65"
+                "sha256:2a306c1b6d193609dd2185345e1a6dcfa194c3af05762df7f405f1493c130e55",
+                "sha256:b1802a3514ba62673b83a6c2bd64d658045401cc8aaaca182e626c87faa5c9d4"
             ],
             "index": "pypi",
             "markers": "python_version >= '3'",
-            "version": "==2.0.3"
+            "version": "==2.0.4"
         },
         "wrapt": {
             "hashes": [
@@ -550,11 +536,11 @@
         },
         "elementpath": {
             "hashes": [
-                "sha256:61040ca014769d507ce19d26521a4bf1c64d2bd0776466e45030dbfe181f7062",
-                "sha256:8c93540556f743835b3c682a7bdb2d97371ee1e151430ff35498b59f2c14e5a0"
+                "sha256:75d6f31c614d57e50eb749fc50806e3102880cd1f6552da3f2265f8eb8d3bbc6",
+                "sha256:85ed93565d6e94aefa160b12f36b12cbe4be6bf9bbde06b80f2c5c94829a25fb"
             ],
             "markers": "python_version >= '3.9'",
-            "version": "==5.0.3"
+            "version": "==5.0.4"
         },
         "filelock": {
             "hashes": [
@@ -1269,11 +1255,11 @@
         },
         "sparkdataframecomparer": {
             "hashes": [
-                "sha256:1ab3faf0dacd3882c6130c81eca47c4c9062c97d516d00a7bf0cb14104c4aba2",
-                "sha256:986fc75408b2cbf80c1565481ab5ae12b96552839da265e7ce398c173f41adce"
+                "sha256:6ab998fbb540c007010855c5b07807a11b5025cbdab1684a8aa89c0ad547cd04",
+                "sha256:7fd42da20b8900154912454abc6c0d7efa0c297efcd68b55108e92eb0cd3c2ac"
             ],
             "markers": "python_version >= '3'",
-            "version": "==2.0.14"
+            "version": "==2.0.16"
         },
         "sphinx": {
             "hashes": [

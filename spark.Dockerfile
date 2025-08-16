@@ -5,11 +5,11 @@ USER root
 ENV PYTHONPATH=/sam_fhir
 ENV CLASSPATH=/sam_fhir/jars:$CLASSPATH
 
-COPY Pipfile* /sam_fhir/
+COPY Pipfile Pipfile.lock  /sam_fhir/
 WORKDIR /sam_fhir
 
 RUN df -h # for space monitoring
-RUN pipenv sync --dev --system --categories spark --extra-pip-args="--prefer-binary"
+RUN pipenv sync --system --dev --extra-pip-args="--prefer-binary"
 
 # COPY ./jars/* /opt/bitnami/spark/jars/
 # COPY ./conf/* /opt/bitnami/spark/conf/
