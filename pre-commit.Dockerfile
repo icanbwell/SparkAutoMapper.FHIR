@@ -5,7 +5,7 @@ RUN apk add --no-cache git py3-pip rust cargo && \
 
 COPY Pipfile* ./
 
-RUN pipenv sync --dev --system --extra-pip-args="--prefer-binary"
+RUN pipenv sync --dev --system --categories spark --extra-pip-args="--prefer-binary"
 
 WORKDIR /sourcecode
 RUN git config --global --add safe.directory /sourcecode

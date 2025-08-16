@@ -15,7 +15,6 @@ try:
 except IOError:
     raise
 
-
 # classifiers list is here: https://pypi.org/classifiers/
 
 # create the package setup
@@ -30,12 +29,16 @@ setup(
     url="https://github.com/icanbwell/SparkAutoMapper.FHIR",
     packages=find_packages(),
     install_requires=[
-        "py4j==0.10.9.7",
-        "pyspark==3.5.5",
         "sparkautomapper==3.0.3",
         "sparkfhirschemas==2.0.3",
         "deprecated",
     ],
+    extras_require={
+        "spark": [
+            "py4j==0.10.9.7",
+            "pyspark==3.5.5",
+        ]
+    },
     classifiers=[
         "Development Status :: 4 - Beta",
         "Programming Language :: Python :: 3",
