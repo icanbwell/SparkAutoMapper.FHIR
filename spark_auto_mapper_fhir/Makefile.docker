@@ -21,8 +21,8 @@ helm:
 
 .PHONY:helmchart
 helmchart:
-	helm repo add apache-spark https://github.com/apache/spark/tree/master/resource-managers/kubernetes/docker/src/main/dockerfiles/spark
-	helm install my-release apache-spark/spark
+	helm repo add bitnami https://charts.bitnami.com/bitnami
+	helm install my-release bitnami/spark
 
 .PHONY:up
 up:
