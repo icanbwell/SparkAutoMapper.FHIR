@@ -27,6 +27,8 @@ jobs:
         run: make run-pre-commit
 
       # setup and install everything and run tests
+      - name: Permission setup for non root user
+        run: sudo chown -R 185:185 ${{ github.workspace }}
       - name: up
         run: make up
       - name: tests
