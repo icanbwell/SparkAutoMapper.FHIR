@@ -16,6 +16,8 @@ jobs:
     steps:
       # Checks-out your repository
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -25,6 +27,8 @@ jobs:
         run: make run-pre-commit
 
       # setup and install everything and run tests
+      - name: Permission setup for non root user
+        run: sudo chown -R 185:185 ${{ github.workspace }}
       - name: up
         run: make up
       - name: tests
