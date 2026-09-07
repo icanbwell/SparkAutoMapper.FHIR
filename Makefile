@@ -2,19 +2,38 @@ LANG=en_US.utf-8
 
 export LANG
 
+# AWS profile used to reach the services account (856965016623) ECR, which hosts the
+# helix.spark base image used by spark.Dockerfile.  Run `aws sso login --profile
+# services` first.  pre-commit.Dockerfile stays on public.ecr.aws and needs no
+# credentials, so `run-pre-commit` deliberately does NOT depend on this.
+AWS_SERVICES_PROFILE ?= services
+AWS_SERVICES_REGISTRY = 856965016623.dkr.ecr.us-east-1.amazonaws.com
+
+## Logs docker in to the private ECR that hosts our base images.
+## No-op under CI, where the workflow does the login via OIDC role assumption
+## (a named local SSO profile does not exist on a GitHub runner).
+.PHONY: ecr-login
+ecr-login:
+	@if [ -n "$$CI" ]; then \
+		echo "CI detected - ECR login is handled by the workflow, skipping"; \
+	else \
+		aws ecr get-login-password --region us-east-1 --profile $(AWS_SERVICES_PROFILE) \
+			| docker login --username AWS --password-stdin $(AWS_SERVICES_REGISTRY); \
+	fi
+
 Pipfile.lock: Pipfile
 	docker compose run --rm --name sam_fhir dev \
 		/bin/bash -lc 'pipenv lock --clear --dev'
 
 .PHONY:devdocker
-devdocker: ## Builds the docker for dev
+devdocker: ecr-login ## Builds the docker for dev
 	docker compose build --no-cache
 
 .PHONY:init
 init: devdocker up setup-pre-commit  ## Initializes the local developer environment
 
 .PHONY: up
-up: Pipfile.lock
+up: ecr-login Pipfile.lock
 	docker compose up --build -d
 
 .PHONY: down
@@ -79,5 +98,5 @@ shell:devdocker ## Brings up the bash shell in dev docker
 	docker compose run --rm --name sam_fhir_shell dev /bin/bash
 
 .PHONY:build
-build: ## Builds the docker for dev
+build: ecr-login ## Builds the docker for dev
 	docker compose build --progress=plain --parallel

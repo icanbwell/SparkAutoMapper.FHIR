@@ -13,6 +13,11 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: read
+      # required for aws-actions/configure-aws-credentials to request an OIDC token
+      id-token: write
+
     steps:
       # Checks-out your repository
       - uses: actions/checkout@v4
@@ -22,9 +27,34 @@ jobs:
         with:
           python-version: '3.12'
 
-
+      # pre-commit.Dockerfile stays on public.ecr.aws, so this step needs no registry
+      # credentials and deliberately runs BEFORE the ECR login below.  Lint/format
+      # feedback therefore still works even while the ECR prerequisites are unmet.
       - name: pre-commit
         run: make run-pre-commit
+
+      # spark.Dockerfile pulls helix.spark from the services-account private ECR
+      # (CIE-8032), so docker must be logged in there before `make up` builds it.
+      #
+      # PREREQUISITE - NOT YET PROVISIONED.  helix.pipelines does this from a
+      # self-hosted `runs-on: main` runner, which is not available to a PUBLIC repo.
+      # For this to work a human must add a GitHub OIDC trust policy on
+      # arn:aws:iam::856965016623:role/services-k8s-service-account-github-actions-runner
+      # (or, preferably, a new pull-only role) scoped to
+      # repo:icanbwell/SparkAutoMapper.FHIR.  Until then these two steps fail and
+      # `make up` / `make tests` cannot pull the base image.
+      - name: AWS Credentials (services account, for helix.spark base image pull)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: us-east-1
+          role-to-assume: arn:aws:iam::856965016623:role/services-k8s-service-account-github-actions-runner
+          role-session-name: ${{ github.run_id }}-services
+          role-duration-seconds: 3600
+
+      - name: Login to Amazon ECR (services)
+        uses: aws-actions/amazon-ecr-login@v2
+        with:
+          skip-logout: true
 
       # setup and install everything and run tests
       - name: Permission setup for non root user
