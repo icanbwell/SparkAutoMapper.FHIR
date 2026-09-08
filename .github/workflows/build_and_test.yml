@@ -13,11 +13,6 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: read
-      # required for aws-actions/configure-aws-credentials to request an OIDC token
-      id-token: write
-
     steps:
       # Checks-out your repository
       - uses: actions/checkout@v4
@@ -33,23 +28,22 @@ jobs:
       - name: pre-commit
         run: make run-pre-commit
 
-      # spark.Dockerfile pulls helix.spark from the services-account private ECR
-      # (CIE-8032), so docker must be logged in there before `make up` builds it.
+      # The helix.spark base image lives in the private services-account ECR
+      # (CIE-8032), so docker must authenticate before any build. This repo is PUBLIC
+      # and runs on GitHub-hosted runners, so it has no ambient AWS identity the way
+      # helix.pipelines does (that relies on its self-hosted runner's IRSA role).
+      # We therefore use a dedicated read-only IAM user's access key, matching the
+      # pattern helix.pipelines already uses for the dev account.
       #
-      # PREREQUISITE - NOT YET PROVISIONED.  helix.pipelines does this from a
-      # self-hosted `runs-on: main` runner, which is not available to a PUBLIC repo.
-      # For this to work a human must add a GitHub OIDC trust policy on
-      # arn:aws:iam::856965016623:role/services-k8s-service-account-github-actions-runner
-      # (or, preferably, a new pull-only role) scoped to
-      # repo:icanbwell/SparkAutoMapper.FHIR.  Until then these two steps fail and
-      # `make up` / `make tests` cannot pull the base image.
+      # PREREQUISITE: the SERVICES_ECR_ACCESS_KEY_ID / SERVICES_ECR_SECRET_ACCESS_KEY
+      # org secrets must be scoped to this repo. Fork pull requests receive no secrets,
+      # so external-contributor PRs cannot build these images.
       - name: AWS Credentials (services account, for helix.spark base image pull)
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: us-east-1
-          role-to-assume: ${{ vars.AWS_SERVICES_ECR_ROLE_ARN }}
-          role-session-name: ${{ github.run_id }}-services
-          role-duration-seconds: 3600
+          aws-access-key-id: ${{ secrets.SERVICES_ECR_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.SERVICES_ECR_SECRET_ACCESS_KEY }}
 
       - name: Login to Amazon ECR (services)
         uses: aws-actions/amazon-ecr-login@v2
