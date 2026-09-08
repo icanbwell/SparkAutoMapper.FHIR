@@ -1,9 +1,5 @@
-FROM 856965016623.dkr.ecr.us-east-1.amazonaws.com/helix.spark:3.5.5.0-slim
+FROM imranq2/helix.spark:3.5.5.0-slim
 # https://github.com/icanbwell/helix.spark
-# Pulled from the services-account private ECR per CIE-8032 (the icanbwell/helix.spark
-# Docker Hub repo is now private).  The 3.5.5.0 tag is dictated by the pyspark==3.5.5
-# pin in Pipfile - the Python and JVM halves of Spark must match - so do NOT change the
-# tag here without changing that pin.  Requires `make ecr-login` locally.
 USER root
 
 ENV PYTHONPATH=/sam_fhir

@@ -21,26 +21,7 @@ Run ```make package```
 
 
 # Developer Setup
-
-`spark.Dockerfile` pulls its `helix.spark` base image from b.well's private
-services-account ECR (`856965016623.dkr.ecr.us-east-1.amazonaws.com`), so the dev/test
-container needs AWS access. Log in first:
-
-```
-aws sso login --profile services
-make ecr-login
-```
-
-`make up`, `make devdocker` and `make build` depend on `ecr-login`, so it also runs
-automatically. Override the profile name with `AWS_SERVICES_PROFILE=<name>` if yours
-differs.
-
-`make run-pre-commit` needs **no** AWS access — `pre-commit.Dockerfile` stays on
-`public.ecr.aws`, so linting and formatting still work for forks and outside
-contributors. Running the Spark test suite (`make up` / `make tests`) does require
-b.well AWS access.
-
-Then run ```make devsetup```
+Run ```make devsetup```
 
 Install following PyCharm plugins:
 1. MyPy: https://plugins.jetbrains.com/plugin/11086-mypy
