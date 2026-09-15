@@ -6,7 +6,8 @@ BRANCH=$(shell git rev-parse --abbrev-ref HEAD)
 VERSION=$(shell cat VERSION)
 GIT_HASH=${CIRCLE_SHA1}
 SPARK_VER=4.2.0
-HADOOP_VER=3.4
+# Spark 4.x only publishes a single "hadoop3" variant (no minor version)
+HADOOP_VER=3
 
 .PHONY:sdkman
 sdkman:
@@ -35,7 +36,7 @@ wget:
 
 .PHONY:download_spark
 download_spark:
-	sudo curl -o ${TMPDIR}/spark-$(SPARK_VER)-bin-hadoop$(HADOOP_VER).tgz http://archive.apache.org/dist/spark/spark-$(SPARK_VER)/spark-$(SPARK_VER)-bin-hadoop$(HADOOP_VER).tgz && \
+	sudo curl -fL -o ${TMPDIR}/spark-$(SPARK_VER)-bin-hadoop$(HADOOP_VER).tgz http://archive.apache.org/dist/spark/spark-$(SPARK_VER)/spark-$(SPARK_VER)-bin-hadoop$(HADOOP_VER).tgz && \
 	sudo mkdir -p /usr/local/opt/spark && \
 	sudo rm -r /usr/local/opt/spark/ && \
 	sudo mkdir -p /usr/local/opt/spark && \
