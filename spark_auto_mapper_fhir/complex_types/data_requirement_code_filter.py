@@ -14,7 +14,6 @@ from spark_fhir_schemas.r4.complex_types.datarequirement_codefilter import (
     DataRequirement_CodeFilterSchema,
 )
 
-
 if TYPE_CHECKING:
     pass
     # id_ (string)

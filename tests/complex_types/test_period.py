@@ -129,7 +129,7 @@ def test_auto_mapper_hir_period_uses_date(spark_session: SparkSession) -> None:
     assert isinstance(mapper, AutoMapper)
     result_df: DataFrame = mapper.transform(df=df)
     assert result_df
-    fhir_encounters_df = df.sql_ctx.table("fhir_encounters")
+    fhir_encounters_df = df.sparkSession.table("fhir_encounters")
     assert isinstance(
         fhir_encounters_df.select(fhir_encounters_df.period.start).collect()[0][0],
         datetime.date,

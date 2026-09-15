@@ -16,7 +16,6 @@ from spark_fhir_schemas.r4.complex_types.triggerdefinition import (
     TriggerDefinitionSchema,
 )
 
-
 if TYPE_CHECKING:
     pass
     # id_ (string)

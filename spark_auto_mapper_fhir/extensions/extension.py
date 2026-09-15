@@ -19,7 +19,6 @@ from spark_auto_mapper_fhir.fhir_types.id import FhirId
 
 from spark_fhir_schemas.r4.complex_types.extension import ExtensionSchema
 
-
 if TYPE_CHECKING:
     pass
     # id_ (string)

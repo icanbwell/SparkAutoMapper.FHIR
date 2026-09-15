@@ -15,7 +15,6 @@ from spark_fhir_schemas.r4.complex_types.datarequirement_datefilter import (
     DataRequirement_DateFilterSchema,
 )
 
-
 if TYPE_CHECKING:
     pass
     # id_ (string)

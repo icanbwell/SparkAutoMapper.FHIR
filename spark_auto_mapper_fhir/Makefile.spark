@@ -5,8 +5,9 @@ export LANG
 BRANCH=$(shell git rev-parse --abbrev-ref HEAD)
 VERSION=$(shell cat VERSION)
 GIT_HASH=${CIRCLE_SHA1}
-SPARK_VER=3.1.1
-HADOOP_VER=3.2
+SPARK_VER=4.2.0
+# Spark 4.x only publishes a single "hadoop3" variant (no minor version)
+HADOOP_VER=3
 
 .PHONY:sdkman
 sdkman:
@@ -16,12 +17,12 @@ sdkman:
 .PHONY:java
 java:
 	source "$(HOME)/.sdkman/bin/sdkman-init.sh" && \
-	sdk install java 11.0.8.hs-adpt || echo "java installed"
+	sdk install java 17.0.13-tem || echo "java installed"
 
 .PHONY:scala
 scala:
 	source "$(HOME)/.sdkman/bin/sdkman-init.sh" && \
-	sdk install scala 2.12.12 || echo "scala installed"
+	sdk install scala 2.13.15 || echo "scala installed"
 
 .PHONY:brew
 brew:
@@ -35,7 +36,7 @@ wget:
 
 .PHONY:download_spark
 download_spark:
-	sudo curl -o ${TMPDIR}/spark-$(SPARK_VER)-bin-hadoop$(HADOOP_VER).tgz http://archive.apache.org/dist/spark/spark-$(SPARK_VER)/spark-$(SPARK_VER)-bin-hadoop$(HADOOP_VER).tgz && \
+	sudo curl -fL -o ${TMPDIR}/spark-$(SPARK_VER)-bin-hadoop$(HADOOP_VER).tgz http://archive.apache.org/dist/spark/spark-$(SPARK_VER)/spark-$(SPARK_VER)-bin-hadoop$(HADOOP_VER).tgz && \
 	sudo mkdir -p /usr/local/opt/spark && \
 	sudo rm -r /usr/local/opt/spark/ && \
 	sudo mkdir -p /usr/local/opt/spark && \

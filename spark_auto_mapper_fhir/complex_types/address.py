@@ -12,7 +12,6 @@ from spark_auto_mapper_fhir.extensions.custom.nested_extension_item import (
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 from spark_fhir_schemas.r4.complex_types.address import AddressSchema
 
-
 if TYPE_CHECKING:
     pass
     # id_ (string)

@@ -14,7 +14,6 @@ from spark_fhir_schemas.r4.complex_types.datarequirement_sort import (
     DataRequirement_SortSchema,
 )
 
-
 if TYPE_CHECKING:
     pass
     # id_ (string)

@@ -14,7 +14,6 @@ from spark_auto_mapper_fhir.fhir_types.id import FhirId
 from spark_auto_mapper_fhir.base_types.fhir_complex_type_base import FhirComplexTypeBase
 from spark_fhir_schemas.r4.complex_types.meta import MetaSchema
 
-
 if TYPE_CHECKING:
     pass
     # id_ (string)
