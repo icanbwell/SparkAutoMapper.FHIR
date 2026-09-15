@@ -15,7 +15,6 @@ from spark_fhir_schemas.r4.complex_types.parameterdefinition import (
     ParameterDefinitionSchema,
 )
 
-
 if TYPE_CHECKING:
     pass
     # id_ (string)
