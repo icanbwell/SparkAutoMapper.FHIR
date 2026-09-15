@@ -29,14 +29,13 @@ setup(
     url="https://github.com/icanbwell/SparkAutoMapper.FHIR",
     packages=find_packages(),
     install_requires=[
-        "sparkautomapper==3.0.4",
+        "sparkautomapper==3.0.7",
         "sparkfhirschemas==2.0.4",
         "deprecated",
     ],
     extras_require={
         "spark": [
-            "py4j==0.10.9.7",
-            "pyspark==3.5.5",
+            "pyspark==4.2.0",
         ]
     },
     classifiers=[
