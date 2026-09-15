@@ -16,7 +16,7 @@ sdkman:
 .PHONY:java
 java:
 	source "$(HOME)/.sdkman/bin/sdkman-init.sh" && \
-	sdk install java 11.0.8.hs-adpt || echo "java installed"
+	sdk install java 17.0.13-tem || echo "java installed"
 
 .PHONY:scala
 scala:
